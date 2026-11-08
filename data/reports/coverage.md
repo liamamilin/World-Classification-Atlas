@@ -1,10 +1,10 @@
 # 来源与采集覆盖
 
-核查日期：2026-11-08。来源核实与下载状态独立。
+核查日期：2026-11-09。来源核实与下载状态独立。
 
 登记 50 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-30 个采集任务，28 个已锁定且通过格式检查，涉及 7 个来源；8 个资源可解析。
+40 个采集任务，38 个已锁定且通过格式检查，涉及 7 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
@@ -58,6 +58,16 @@
 | nace-reuse-policy | Rev.2.1 | format_checked_only | 未统计 | — |
 | isic4-nace2-correspondence | Rev.4 | format_checked_only; economy: {'status': 'correspondence_parsed', 'rows': 996} | 未统计 | — |
 | isic4-nace2-change-history | Rev.4 | format_checked_only | 未统计 | — |
+| nace2-download-list-20261109 | Rev.2 | format_checked_only | 未统计 | — |
+| nace2-nace21-correspondence-20260831 | Rev.2 | format_checked_only; economy: {'status': 'published_reverse_correspondence_parsed', 'rows': 1598} | 未统计 | — |
+| nace-showvoc-catalog-20261109 | Rev.2.1 | format_checked_only | 未统计 | — |
+| nace2-cellar-selected-notes-20261109 | Rev.2 | format_checked_only; economy: {'status': 'selected_RDF_component_parsed', 'nodes': 22} | 未统计 | — |
+| nace2-cellar-isic4-predicates-20261109 | Rev.2 | format_checked_only; economy: {'status': 'publisher_SKOS_predicates_preserved', 'predicates': {'closeMatch': 996}} | 未统计 | — |
+| nace-cellar-correspondence-schemes-20261109 | Rev.2.1 | format_checked_only; economy: {'status': 'bounded_direct_correspondence_audit', 'finding': 'not_observed_in_audited_cellar_snapshot'} | 未统计 | — |
+| nace-cellar-current-mapping-targets-20261109 | Rev.2.1 | format_checked_only; economy: {'status': 'bounded_direct_correspondence_audit', 'finding': 'not_observed_in_audited_cellar_snapshot'} | 未统计 | — |
+| nace-cellar-current-positive-control-20261109 | Rev.2.1 | format_checked_only; economy: {'status': 'bounded_direct_correspondence_audit', 'finding': 'not_observed_in_audited_cellar_snapshot'} | 未统计 | — |
+| nace-cellar-nace2-isic4-xkos-20261109 | Rev.2 | format_checked_only; economy: {'status': 'official_direct_XKOS_correspondence_parsed', 'associations': 996} | 未统计 | — |
+| nace-cellar-current-incoming-isic-20261109 | Rev.2.1 | format_checked_only; economy: {'status': 'bounded_direct_correspondence_audit', 'finding': 'not_observed_in_audited_cellar_snapshot'} | 未统计 | — |
 
 经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 
@@ -68,7 +78,8 @@
 其中3个活动只审定Rev.5当前范围；7条待审来源关联与已审绑定分别索引，1个待审目录提案不计入已审节点。CPC产品说明和主要行业对应仅作旁证，见 [边界核查](isic-boundary-review.json)。
 
 家具多源研究另见 [NACE/ISIC实测](furniture-alignment.json)，状态：passed。
-NACE Rev.2.1完整解析1047节点；家具分支11节点，含2个沿用身份及9个新身份；9条有界跨体系研究关系、14条官方行独立审查、1条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
+NACE Rev.2.1完整解析1047节点；家具分支18节点，含2个沿用身份及16个新身份；14条有界跨体系研究关系、35条官方行独立审查、7条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
+新增旧NACE2→ISIC4直接官方XKOS桥996条，发布者closeMatch保持独立；与UNSD有995对代码事实一致，46.6→466/465差异保留。当前NACE2.1–ISIC5审计有1047节点阳性对照，未观察到直接关系；不把空结果称为官方无对应。旧陶瓷家具的明确活动分配已审，历史候选保留；部件旧版与工序细类仍待审。
 
 节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。
 
@@ -76,7 +87,7 @@ NACE Rev.2.1完整解析1047节点；家具分支11节点，含2个沿用身份�
 
 - ISIC: 再分发适用条款待逐文件确认。 [官方入口](https://unstats.un.org/unsd/classifications/econ/)
 - NAICS: 公开再分发许可待核实。 [官方入口](https://www.census.gov/naics/)
-- NACE: 未在已核查的Eurostat/UNSD下载入口发现NACE Rev.2.1与ISIC Rev.5直接对应表；不以版本链传递当作官方直接对应。；本轮只研究家具分支；全体系对应与非家具定义未逐项审查。。 [官方入口](https://ec.europa.eu/eurostat/web/nace/)
+- NACE: 当前NACE2.1与ISIC5直接官方对应在已审计Cellar命名图及下载清单未观察到；保留开放，不把空结果解释为官方无对应。；家具表面处理在旧31.01/31.09的对应表与定义陈述不同；材料细类、旧部件范围继续待审。陶瓷家具部分已按明确官方活动分配审定，旧卫生洁具整类冲突仍保留。；官方NACE2–ISIC4两来源在46.6→466/465存在一对代码差异；原值及2011更改历史均保留。；本轮仍为家具与边界活动的局部整理，非全NACE或全经济活动融合。。 [官方入口](https://ec.europa.eu/eurostat/web/nace/)
 - GBT4754: 公开再分发许可待核实；官方映射及精确端点版本待核实。 [官方入口](https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html)
 - UN_CPC: 再分发适用条款待逐文件确认。 [官方入口](https://unstats.un.org/unsd/classifications/econ/)
 - HS: 公开再分发许可待核实。 [官方入口](https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx)

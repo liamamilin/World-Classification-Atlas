@@ -17,11 +17,14 @@ from .isic_priority import resolve_claim
 from .normalize import qa
 from .registry import read_json, write_json
 from .xlsx import read_workbook
+from .furniture_followup import (ASSETS as FOLLOWUP_ASSETS, PLAN as FOLLOWUP_PLAN,
+                                sources as followup_sources, extend_plan, supports_binding)
 
 NACE_ASSETS = ("nace21-download-list", "nace21-notes-20260930", "nace21-nace2-correspondence",
                "nace21-manual-2026", "nace2-manual-2008", "nace-reuse-policy",
                "isic4-nace2-correspondence", "isic4-nace2-change-history")
-REQUIRED = NACE_ASSETS + ("isic4-database", "isic5-notes-20260819", "isic4-isic5-correspondence")
+BASE_REQUIRED = NACE_ASSETS + ("isic4-database", "isic5-notes-20260819", "isic4-isic5-correspondence")
+REQUIRED = BASE_REQUIRED + FOLLOWUP_ASSETS
 PLAN = "data/research/furniture-review.json"
 BASE = "data/research/isic-expanded-review.json"
 LOCAL = "data/local/economy/furniture"
@@ -125,13 +128,13 @@ def nace2_selected(pages):
 def topology(edges):
     outgoing, incoming = defaultdict(set), defaultdict(set)
     for e in edges:
-        if e["to"] is not None:
+        if e["from"] is not None and e["to"] is not None:
             outgoing[e["from"]].add(e["to"])
             incoming[e["to"]].add(e["from"])
     for e in edges:
         a, b = len(outgoing[e["from"]]), len(incoming[e["to"]])
         e.update(from_degree=a, to_degree=b,
-                 topology="no_correspondence" if e["to"] is None else ("one" if b == 1 else "many") + "_to_" + ("one" if a == 1 else "many"),
+                 topology="no_correspondence" if e["from"] is None or e["to"] is None else ("one" if b == 1 else "many") + "_to_" + ("one" if a == 1 else "many"),
                  allocation_weight=None, relation=None, status="not_reviewed")
     return edges
 
@@ -203,7 +206,7 @@ def extract(root, resources):
 
 
 def validate_slice(activity, claims, documents):
-    if activity["status"] != "reviewed_bounded_activity":
+    if activity["status"] not in ("reviewed_bounded_activity", "reviewed_current_multisource_activity"):
         raise ValueError("unreviewed activity cannot enter directory")
     keys = set()
     for binding in activity["source_bindings"]:
@@ -213,10 +216,16 @@ def validate_slice(activity, claims, documents):
         if key in keys or binding["relation"] != "broadMatch":
             raise ValueError("activity binding must be unique and point to a broader source class")
         keys.add(key)
-        if not any(claims[c]["document"] == key and claims[c]["role"] == "inclusion" for c in binding["claim_ids"]):
+        if not supports_binding(binding, claims, documents, activity):
             raise ValueError("activity binding lacks direct source inclusion evidence")
-    if not {"ISIC:Rev.4", "ISIC:Rev.5", "NACE:Rev.2.1"} <= {k.rsplit(":", 1)[0] for k in keys}:
+    editions = {k.rsplit(":", 1)[0] for k in keys}
+    if activity["status"] == "reviewed_bounded_activity" and not {"ISIC:Rev.4", "ISIC:Rev.5", "NACE:Rev.2.1"} <= editions:
         raise ValueError("bounded multisource activity needs both ISIC editions and current NACE")
+    if activity["status"] == "reviewed_current_multisource_activity":
+        pending_editions = {b["node_id"].rsplit(":", 1)[0] for b in activity.get("candidate_source_bindings", [])}
+        if (editions != {"ISIC:Rev.5", "NACE:Rev.2.1"} or not {"ISIC:Rev.4", "NACE:Rev.2"} <= pending_editions
+                or activity.get("historical_scope_status") != "both_legacy_editions_pending"):
+            raise ValueError("current multisource activity must retain both historical gaps")
     for candidate in activity.get("candidate_source_bindings", []):
         if candidate["relation"] is not None or candidate["node_id"] in keys or candidate["node_id"] not in documents:
             raise ValueError("pending binding cannot become approved")
@@ -237,16 +246,29 @@ def build(root, resources):
     assets, old, new, current, previous, pdfs, cross, legacy, isic_edges, errata = extract(root, resources)
     plan = read_json(root / PLAN)
     observed = {rid: asset["evidence"]["sha256"] for rid, asset in assets.items()}
-    if plan["reviewed_input_sha256"] != observed or plan["base_identity_registry_sha256"] != sha256((root / BASE).read_bytes()):
+    if plan["reviewed_input_sha256"] != {rid: observed[rid] for rid in BASE_REQUIRED} or plan["base_identity_registry_sha256"] != sha256((root / BASE).read_bytes()):
         raise ValueError("reviewed input/identity registry changed; review must be renewed")
+    extra = followup_sources(root, assets, old, current, cross, legacy)
+    plan = extend_plan(root, plan)
+    if plan["followup_metadata"]["reviewed_input_sha256"] != {rid: observed[rid] for rid in FOLLOWUP_ASSETS}:
+        raise ValueError("follow-up reviewed source bytes changed")
+    if plan["comparison_decisions"]["observed_expected_differences"] != extra["statistics"]["xkos_unsd_pair_differences"]:
+        raise ValueError("official source disagreement differs from reviewed comparison")
     documents = {n["id"]: n for n in old + new + current + previous}
+    documents.update({n["id"]: n for n in extra["nodes"]})
+    for n in extra["nodes"]:
+        documents.setdefault(n["canonical_node_id"], {**n, "id": n["canonical_node_id"]})
     documents.update({f"{rid}:page:{p['evidence']['pdf_page']}": p for rid, pages in pdfs.items() for p in pages})
-    documents.update({e["id"]: e for e in cross + legacy})
+    all_official = cross + legacy + extra["reverse"] + extra["xkos"] + isic_edges
+    documents.update({e["id"]: e for e in all_official})
     claims, dossiers = {}, []
     for claim in plan["claims"]:
         if claim["id"] in claims:
             raise ValueError("duplicate evidence ID")
         resolved, selected = resolve_claim(claim, documents)
+        source_row = documents[claim["document"]].get("field_result_rows", {}).get(claim["field"])
+        if source_row is not None:
+            resolved["evidence"] = {**resolved["evidence"], "field_result_row": source_row}
         claims[claim["id"]] = resolved
         dossiers.append({**resolved, "selected_text": selected})
     activities = {a["id"]: a for a in plan["activities"]}
@@ -254,9 +276,13 @@ def build(root, resources):
         raise ValueError("duplicate activity ID")
     for activity in activities.values():
         validate_slice(activity, claims, documents)
-    official = {e["id"]: e for e in cross + legacy}
+    official = {e["id"]: e for e in all_official}
     reviewed = []
+    reviewed_ids = set()
     for decision in plan["official_reviews"]:
+        if decision["mapping_id"] in reviewed_ids:
+            raise ValueError("duplicate official review; retain a follow-up history instead")
+        reviewed_ids.add(decision["mapping_id"])
         edge = official[decision["mapping_id"]]
         if decision["relation"] not in (None, "relatedMatch") or (decision["status"].startswith("held") and decision["relation"] is not None):
             raise ValueError("branch review cannot upgrade correspondence to whole-class equivalence")
@@ -264,7 +290,9 @@ def build(root, resources):
             raise ValueError("official row review missing evidence")
         reviewed.append({"mapping_id": edge["id"], "from": edge["from"], "to": edge["to"],
                          "evidence": edge["evidence"], "topology": edge["topology"],
-                         "publisher_partial_flags": edge.get("publisher_partial_flags"), "review": decision})
+                         "publisher_partial_flags": edge.get("publisher_partial_flags"),
+                         "publisher_relation": edge.get("publisher_relation"), "publisher_predicate": edge.get("publisher_predicate"),
+                         "gsim_ids": edge.get("gsim_ids"), "review": decision})
     branch_edges = [e for e in cross if e["from"] == "NACE:Rev.2.1:31.00"]
     if {e["id"] for e in branch_edges} - {e["mapping_id"] for e in reviewed}:
         raise ValueError("incoming NACE furniture rows missing individual review")
@@ -280,15 +308,18 @@ def build(root, resources):
         if any(b["relation"] not in ("relatedMatch", None) for b in node["additional_source_bindings"]):
             raise ValueError("partial anchor alignment cannot upgrade to whole-class equivalence")
     directory_qa = checked_qa([{**n, "code": n["id"], "definition": n.get("atlas_scope")} for n in nodes])
-    reverse, candidates = defaultdict(list), defaultdict(list)
+    reverse, candidates, history = defaultdict(list), defaultdict(list), defaultdict(list)
     for n in nodes:
         for b in n.get("source_bindings", []) + n.get("additional_source_bindings", []):
             reverse[b["node_id"]].append({"atlas_id": n["id"], "relation_atlas_to_source": b["relation"]})
         for b in n.get("candidate_source_bindings", []):
             candidates[b["node_id"]].append({"atlas_id": n["id"], "relation": None, "status": b["status"]})
+        for b in n.get("binding_history", []):
+            history[b["node_id"]].append({"atlas_id": n["id"], **b})
     directory = {"scheme_id": SCHEME, "classification_object": "economic activities", "status": "bounded_multisource_research",
                  "binding_direction": "Atlas to source", "hierarchy_scope": "parents apply only in this scheme; original source and base directory paths retained independently",
                  "concepts": nodes, "source_to_atlas": dict(reverse), "source_to_candidates": dict(candidates),
+                 "source_to_binding_history": dict(history), "direct_correspondence_audit": extra["statistics"]["direct_correspondence_audit"],
                  "claims": list(claims.values()), "issues": plan["issues"], "research_mappings": mappings,
                  "official_reviews": reviewed}
     local = root / LOCAL
@@ -299,8 +330,19 @@ def build(root, resources):
     # EU text is reusable with attribution; UNSD original definitions remain local.
     write_jsonl(root / "data/normalized/NACE/Rev.2.1/notes-20260930.jsonl", current)
     write_jsonl(root / "data/normalized/NACE/Rev.2.1/correspondence-to-Rev.2.jsonl", cross)
+    for name, value in (("cellar-selected-notes-20261109", extra["nodes"]),
+                        ("correspondence-to-Rev.2.1-20260831", extra["reverse"]),
+                        ("cellar-direct-isic4-20261109", extra["xkos"])):
+        write_jsonl(local / (name + ".jsonl"), value)
+        write_jsonl(root / ("data/normalized/NACE/Rev.2/" + name + ".jsonl"), value)
     write_json(local / "evidence-dossiers.json", dossiers)
-    source_nodes = {n["id"]: n for n in old + new + current + previous}
+    source_nodes = {n["id"]: dict(n) for n in old + new + current + previous}
+    for n in extra["nodes"]:
+        key = n["canonical_node_id"]
+        if key in source_nodes:
+            source_nodes[key].setdefault("alternate_components", []).append(n)
+        else:
+            source_nodes[key] = {**n, "id": key, "component_document_id": n["id"]}
     wanted = {b["node_id"] for n in nodes for b in n.get("source_bindings", []) + n.get("candidate_source_bindings", []) + n.get("additional_source_bindings", [])}
     wanted.update("NACE:Rev.2:" + c for c in ("31.01", "31.02", "31.03", "31.09"))
     pending = list(wanted)
@@ -325,11 +367,15 @@ def build(root, resources):
              "pdf_pages": {rid: len(pages) for rid, pages in pdfs.items()},
              "official_tables": {"nace21_to_nace2_rows": len(cross), "nace_levels": dict(Counter(e["level"] for e in cross)),
                                  "isic4_to_nace2_rows": len(legacy), "furniture_current_incoming_rows": len(branch_edges),
-                                 "individually_reviewed_rows": len(reviewed)},
+                                 "individually_reviewed_rows": len(reviewed),
+                                 "reviews_by_resource": dict(Counter(e["evidence"]["resource_id"] for e in reviewed))},
+             "followup_sources": extra["statistics"], "binding_history_records": sum(len(v) for v in history.values()),
              "furniture_leaves": {"NACE:Rev.2.1": ["31.00"], "NACE:Rev.2": ["31.01", "31.02", "31.03", "31.09"],
                                    "ISIC:Rev.4": ["3100"], "ISIC:Rev.5": ["3101", "3102"]},
              "directory": directory_qa, "reused_ids": len(plan["anchors"]), "new_ids": len(nodes) - len(plan["anchors"]),
              "bounded_activities": len(activities), "approved_bindings": sum(len(v) for v in reverse.values()),
+             "activity_review_status": dict(Counter(a["status"] for a in activities.values())),
+             "approved_isic5_source_levels": dict(Counter("group" if len(b["node_id"].split(":")[-1]) == 3 else "class" for a in activities.values() for b in a["source_bindings"] if b["node_id"].startswith("ISIC:Rev.5:"))),
              "candidate_bindings": sum(len(v) for v in candidates.values()), "evidence_claims": len(claims),
              "research_mappings": len(mappings), "issues": plan["issues"],
              "isic_furniture_official_rows": [{k: e[k] for k in ("from_code", "to_code", "topology", "gsim_ids", "evidence")} for e in isic_branch],
@@ -337,7 +383,8 @@ def build(root, resources):
              "affected_isic_material_2026_notes": [e["code"] for e in errata if e["code"] in ("C", "23", "239", "2393", "2395", "2396")],
              "reproducibility": {"python": sys.version.split()[0], "pdftotext": subprocess.check_output(["pdftotext", "-v"], stderr=subprocess.STDOUT).decode().splitlines()[0],
                                  "review_sha256": sha256((root / PLAN).read_bytes()), "base_identity_sha256": sha256((root / BASE).read_bytes()),
-                                 "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("furniture.py", "furniture_view.html", "isic.py", "isic_priority.py", "xlsx.py", "normalize.py")}},
+                                 "followup_review": plan["followup_metadata"],
+                                 "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("furniture.py", "furniture_followup.py", "furniture_view.html", "isic.py", "isic_priority.py", "xlsx.py", "normalize.py")}},
              "limits": ["No direct official NACE2.1-ISIC5 crosswalk found at checked endpoints; research edges are not transitive official edges.",
                         "Every furniture leaf has scoped research coverage; complete class equivalence remains unapproved.",
                         "NACE2 extraction is selected, not a full old scheme; no real-world entities or allocation weights."]}
@@ -361,14 +408,15 @@ def run(root, resources):
 
 
 def reproduce(root, resources):
-    result = {"status": "failed", "method": "fresh directory; pinned raw assets, manifests and two research inputs only; no network", "files": []}
+    result = {"status": "failed", "method": "fresh directory; pinned raw assets, manifests, query texts and three research inputs only; no network", "files": []}
     try:
         if run(root, resources):
             raise ValueError("baseline failed")
         assets = get_assets(root, resources, REQUIRED)
         with tempfile.TemporaryDirectory(prefix="atlas-furniture-repro-") as folder:
             target = Path(folder)
-            for rel in (PLAN, BASE, "data/resources.lock.json"):
+            queries = [a["resource"]["query_file"] for a in assets.values() if a["resource"].get("query_file")]
+            for rel in [PLAN, BASE, FOLLOWUP_PLAN, "data/resources.lock.json"] + queries:
                 path = target / rel
                 path.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(root / rel, path)
@@ -380,7 +428,8 @@ def reproduce(root, resources):
             if run(target, resources):
                 raise ValueError("clean rebuild failed")
             paths = [p.relative_to(target) for p in (target / LOCAL).rglob("*") if p.is_file()]
-            paths += [Path(PUBLIC), Path(REPORT), Path("data/normalized/NACE/Rev.2.1/notes-20260930.jsonl"), Path("data/normalized/NACE/Rev.2.1/correspondence-to-Rev.2.jsonl")]
+            paths += [Path(PUBLIC), Path(REPORT)]
+            paths += [p.relative_to(target) for p in (target / "data/normalized/NACE").rglob("*") if p.is_file()]
             for rel in sorted(paths):
                 a, b = sha256((root / rel).read_bytes()), sha256((target / rel).read_bytes())
                 result["files"].append({"path": str(rel), "sha256": b, "identical": a == b})

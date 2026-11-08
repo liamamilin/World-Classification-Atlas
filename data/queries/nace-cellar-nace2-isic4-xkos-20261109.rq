@@ -1,0 +1,1 @@
+SELECT ?association ?p ?o WHERE { GRAPH <http://data.europa.eu/ux2/nace2/nace2> { <http://data.europa.eu/ux2/nace2/NACE2_ISIC4> <http://rdf-vocabulary.ddialliance.org/xkos#madeOf> ?association . ?association ?p ?o } FILTER(!isLiteral(?o) || LANG(?o)="en" || LANG(?o)="") } ORDER BY ?association ?p ?o

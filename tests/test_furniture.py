@@ -107,8 +107,9 @@ class FurnitureResearchTests(unittest.TestCase):
         rows = self.plan['official_reviews']
         self.assertEqual(len(rows),14)
         index=read_json(ROOT / 'data/atlas/economy/furniture-directory.json')
-        self.assertIn('NACE:Rev.2:23.42',index['source_to_candidates'])
-        self.assertNotIn('NACE:Rev.2:23.42',index['source_to_atlas'])
+        self.assertIn('NACE:Rev.2:23.42',index['source_to_atlas'])
+        self.assertNotIn('NACE:Rev.2:23.42',index['source_to_candidates'])
+        self.assertEqual(index['source_to_binding_history']['NACE:Rev.2:23.42'][0]['previous_binding']['relation'],None)
         for code in ('31.01','31.02','31.03','31.09'):
             self.assertIn('NACE:Rev.2:'+code,index['source_to_atlas'])
 

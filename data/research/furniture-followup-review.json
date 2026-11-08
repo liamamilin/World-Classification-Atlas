@@ -1,0 +1,1068 @@
+{
+  "parent_review_sha256": "928548f48b8ccfaab16d4a558aa58b8508bf8f5785dc27a1e95a087f3bcc055d",
+  "reviewed_on": "2026-11-09",
+  "reviewer": "Codex",
+  "reviewed_input_sha256": {
+    "nace2-download-list-20261109": "5f56913345eb7ee538b525f98023ee575993c2012ecd458bc90f25c15e158a85",
+    "nace2-nace21-correspondence-20260831": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+    "nace-showvoc-catalog-20261109": "0eb2273a5cdec5ff5a61791a3bb403f590e0173992a345d41c2bc8befbc1e51d",
+    "nace2-cellar-selected-notes-20261109": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+    "nace2-cellar-isic4-predicates-20261109": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+    "nace-cellar-correspondence-schemes-20261109": "c2eda8bfcfb607c9d8f347277cc1ba922f60a5695dee7bb81205515246948ff8",
+    "nace-cellar-current-mapping-targets-20261109": "0b99073b0d4331d885e63e7c4b03d96c4115171e91a6c4243f4ac1f62624df5f",
+    "nace-cellar-current-positive-control-20261109": "2971c1731598bbbbb5cfdc40c7d801a3fd86a01b396c8c46ff1d5060bf3793b8",
+    "nace-cellar-nace2-isic4-xkos-20261109": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+    "nace-cellar-current-incoming-isic-20261109": "6acf2493944f74fe96bb2cabbf77364437dd70911b91261b39c773baa31048d5"
+  },
+  "claims": [
+    {
+      "id": "FF001",
+      "document": "ISIC:Rev.4:3100",
+      "field": "notes.inclusion",
+      "start": 1001,
+      "end": 1085,
+      "field_sha256": "73f539fc3c0aaabe7271dad64e4329e787dfaa25a8af92cf28a5bd597d4a0877",
+      "text_sha256": "8c9ba354a7840180626233600f39c31260b6fa492b56047295dbb96daeadda78",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF002",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes_also",
+      "start": 77,
+      "end": 161,
+      "field_sha256": "a5164854b738e9370732aae682c513f3a1ed73035e96f57e85d8bc07e6333c6a",
+      "text_sha256": "8c9ba354a7840180626233600f39c31260b6fa492b56047295dbb96daeadda78",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF003",
+      "document": "NACE:Rev.2:31.09@cellar-20261109",
+      "field": "notes.includes_also",
+      "start": 79,
+      "end": 163,
+      "field_sha256": "300ec3ebe4d7356b933999da635da8bbae8e72a0fb046b082c7458a132f33816",
+      "text_sha256": "8c9ba354a7840180626233600f39c31260b6fa492b56047295dbb96daeadda78",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF004",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.includes_also",
+      "start": 116,
+      "end": 189,
+      "field_sha256": "1513c65a8ac8fd53cc8f5587d96b7276e1ed66979a14ed0d7cfe08022222578b",
+      "text_sha256": "33444a3d900b435f58c100a83b240aa7498d09ce62bdce35ebc2d33d4804dc99",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF005",
+      "document": "ISIC:Rev.4:3100",
+      "field": "notes.inclusion",
+      "start": 949,
+      "end": 997,
+      "field_sha256": "73f539fc3c0aaabe7271dad64e4329e787dfaa25a8af92cf28a5bd597d4a0877",
+      "text_sha256": "2f70a202c02e3e2c6804fd40e31371ccfaf819c2a40b86dcca3c7ed51b16e8e9",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF006",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes_also",
+      "start": 27,
+      "end": 75,
+      "field_sha256": "a5164854b738e9370732aae682c513f3a1ed73035e96f57e85d8bc07e6333c6a",
+      "text_sha256": "2f70a202c02e3e2c6804fd40e31371ccfaf819c2a40b86dcca3c7ed51b16e8e9",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF007",
+      "document": "NACE:Rev.2:31.09@cellar-20261109",
+      "field": "notes.includes_also",
+      "start": 28,
+      "end": 76,
+      "field_sha256": "300ec3ebe4d7356b933999da635da8bbae8e72a0fb046b082c7458a132f33816",
+      "text_sha256": "2f70a202c02e3e2c6804fd40e31371ccfaf819c2a40b86dcca3c7ed51b16e8e9",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF008",
+      "document": "ISIC:Rev.4:9524",
+      "field": "notes.inclusion",
+      "start": 24,
+      "end": 137,
+      "field_sha256": "d8dc284fd582d4022f9c5e1280da3259aae2d8f5e6a27aa75c98011c950b4ef6",
+      "text_sha256": "f032783939452461bda333d894834f64bb179e54a4999aba93a4c3040cebed87",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF009",
+      "document": "ISIC:Rev.5:9524",
+      "field": "notes.includes",
+      "start": 23,
+      "end": 136,
+      "field_sha256": "76a2b52ac32d15f76579550357be4670c012e2caf3fbf467bff4ab2639729ab8",
+      "text_sha256": "f032783939452461bda333d894834f64bb179e54a4999aba93a4c3040cebed87",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF010",
+      "document": "NACE:Rev.2:95.24@cellar-20261109",
+      "field": "notes.includes",
+      "start": 23,
+      "end": 136,
+      "field_sha256": "542ad0087ee70ac8e21d07295d6ee1f4bf24717ffdc4a5fa72f3006d37c74c26",
+      "text_sha256": "f032783939452461bda333d894834f64bb179e54a4999aba93a4c3040cebed87",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF011",
+      "document": "NACE:Rev.2.1:95.24",
+      "field": "notes.includes",
+      "start": 23,
+      "end": 126,
+      "field_sha256": "1012f32a7b08c21f327d5d2c989cb0b45b2eee70611b48b52d1fdc131e71c0a0",
+      "text_sha256": "b4d9a582d13e8f03f2e7517cac54a55d3afa60483d3b91330a5e15c39e920ab8",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF012",
+      "document": "ISIC:Rev.4:4330",
+      "field": "notes.inclusion",
+      "start": 282,
+      "end": 353,
+      "field_sha256": "3374487518a617fc6fcfee17dd38c1bd4b8eb5c7e30a1a02ba2fa152e0693e68",
+      "text_sha256": "5a6506db4c541ff4135046600a4494666963917d9eae01b88a11fd98c08eacdb",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF013",
+      "document": "ISIC:Rev.5:4330",
+      "field": "notes.includes",
+      "start": 279,
+      "end": 350,
+      "field_sha256": "fbdc6cbbcb183fc0fb202ae13305cf68f2ea6e1ca4d8aaf5a361b9d7ad4ea2b3",
+      "text_sha256": "5a6506db4c541ff4135046600a4494666963917d9eae01b88a11fd98c08eacdb",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF014",
+      "document": "NACE:Rev.2:43.32@cellar-20261109",
+      "field": "notes.includes",
+      "start": 141,
+      "end": 232,
+      "field_sha256": "bb3f1540ad3758ead4f7f165c87ac41d60f2cf2ca240ac97871524da20786ff3",
+      "text_sha256": "95b50e7bd305ab48270e2b8434ed58365837be82184b439c90b4cdade6f33e8e",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF015",
+      "document": "NACE:Rev.2.1:43.32",
+      "field": "notes.includes",
+      "start": 141,
+      "end": 224,
+      "field_sha256": "023f48a37675d42ba65142522ecbd7f5a9b7ed1b442289bb81132e8a507f5b7f",
+      "text_sha256": "d3f3e1fa30294c3767dd7020124718b68b5e69d6c3a287425c99dc375fafa001",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF016",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes",
+      "start": 1044,
+      "end": 1093,
+      "field_sha256": "70501c3e5f241b0207f06a6e1665027efd930d2d11bedd2b918650f1db594066",
+      "text_sha256": "ffdbb8842c7be578b8576e32063f8be721deee947edfb6e754c2753cb6982276",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF017",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.includes",
+      "start": 66,
+      "end": 261,
+      "field_sha256": "d3c41be6cbd3433830f45a6cab415f5a3d431a5db7bb16cb418c9e92469605b1",
+      "text_sha256": "09c711d03705555b873d4ea07618e6ec116fd1e9ce85015190f398fa18944ca7",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF018",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.excludes",
+      "start": 101,
+      "end": 200,
+      "field_sha256": "b9e081324ea91b0c2aa08d6256d338cfbc7ae274a130920c9360b76be951a0c9",
+      "text_sha256": "a5d1298ca714043d232799ed92b4b2eff9c7e0a18848d8324e8efcd0f3b95c3b",
+      "role": "exclusion"
+    },
+    {
+      "id": "FF019",
+      "document": "urn:atlas:mapping:b5b9b228-574a-5fce-ae81-c044f97ab9e8",
+      "field": "common_content",
+      "start": 0,
+      "end": 41,
+      "field_sha256": "05d4ca1b5dff2ef61b2323bb70d81012d565a207894988fcc9821f7d189a2b3e",
+      "text_sha256": "05d4ca1b5dff2ef61b2323bb70d81012d565a207894988fcc9821f7d189a2b3e",
+      "role": "official_activity_allocation",
+      "allocated_node_id": "NACE:Rev.2:23.42",
+      "activity_key": "ceramic"
+    },
+    {
+      "id": "FF020",
+      "document": "NACE:Rev.2:31.09@cellar-20261109",
+      "field": "notes.excludes",
+      "start": 101,
+      "end": 182,
+      "field_sha256": "ea29219a7325636c7939baec07558649efe25233349e2825db5f3eae22e0a250",
+      "text_sha256": "5e32e4fc0a237c752b3ddad9e8a90b792946159421135d41057d1e55bf235d1a",
+      "role": "exclusion"
+    },
+    {
+      "id": "FF021",
+      "document": "ISIC:Rev.4:2392",
+      "field": "notes.inclusion",
+      "start": 364,
+      "end": 404,
+      "field_sha256": "8312b0acb984aa04ae3d053285fae4877639f783c9bc1cc362353f6dffe617e9",
+      "text_sha256": "98b0aacf5ac3d080955b5acec99c47ecf293b00068d46c8727971a51a72c0392",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF022",
+      "document": "NACE:Rev.2:23.42@cellar-20261109",
+      "field": "notes.includes",
+      "start": 117,
+      "end": 154,
+      "field_sha256": "e4e286bad5447244f0e6599fa6becae54254e7d88ce68993b1cdd954da1f7d0e",
+      "text_sha256": "0bef51dc2df59d9567dfdd2bbedae1f9a6d2f97885ae81f53fb473fae24aa871",
+      "role": "inclusion"
+    },
+    {
+      "id": "FF023",
+      "document": "urn:atlas:mapping:b5b9b228-574a-5fce-ae81-c044f97ab9e8",
+      "field": "common_content",
+      "start": 0,
+      "end": 41,
+      "field_sha256": "05d4ca1b5dff2ef61b2323bb70d81012d565a207894988fcc9821f7d189a2b3e",
+      "text_sha256": "05d4ca1b5dff2ef61b2323bb70d81012d565a207894988fcc9821f7d189a2b3e",
+      "role": "official_correspondence"
+    },
+    {
+      "id": "FF024",
+      "document": "urn:atlas:mapping:ef3cc97a-908f-5486-84d8-52c4093762a6",
+      "field": "common_content",
+      "start": 0,
+      "end": 42,
+      "field_sha256": "0eec73ecefda4d1586b788e9f6ba66d6b22ee03a6431cdc150498d89b089e514",
+      "text_sha256": "0eec73ecefda4d1586b788e9f6ba66d6b22ee03a6431cdc150498d89b089e514",
+      "role": "official_correspondence"
+    },
+    {
+      "id": "FF025",
+      "document": "urn:atlas:mapping:a797d09b-9a0e-51eb-9742-7459ca7fda7e",
+      "field": "common_content",
+      "start": 0,
+      "end": 39,
+      "field_sha256": "3f72e286f7b28ca6caebee76def5f1f134a246137455504c06f4461cc4e736c7",
+      "text_sha256": "3f72e286f7b28ca6caebee76def5f1f134a246137455504c06f4461cc4e736c7",
+      "role": "official_correspondence"
+    },
+    {
+      "id": "FF026",
+      "document": "urn:atlas:mapping:3ba894bb-e60b-5b9d-9ee5-8d232b0e55b6",
+      "field": "common_content",
+      "start": 0,
+      "end": 34,
+      "field_sha256": "fd6dd252e040768bc88958671e4f9c60fa689a27b955f47c2477f2b280b69430",
+      "text_sha256": "fd6dd252e040768bc88958671e4f9c60fa689a27b955f47c2477f2b280b69430",
+      "role": "official_correspondence"
+    },
+    {
+      "id": "FF027",
+      "document": "urn:atlas:mapping:99a627b0-c344-52c2-b5e0-643795fd45d6",
+      "field": "common_content",
+      "start": 0,
+      "end": 52,
+      "field_sha256": "7483db17a8129a8e58b15cf9bdb02f0d759b47063bf85cd5d34c2365191535f8",
+      "text_sha256": "7483db17a8129a8e58b15cf9bdb02f0d759b47063bf85cd5d34c2365191535f8",
+      "role": "official_correspondence"
+    },
+    {
+      "id": "FF028",
+      "document": "urn:atlas:mapping:f72d3ac3-252a-5de8-8c7c-317340d63cba",
+      "field": "common_content",
+      "start": 0,
+      "end": 255,
+      "field_sha256": "3da8c3dd674f6e9e7ebc209419a98b4d5ebf8c965d44f7f443212a7c32cafc29",
+      "text_sha256": "3da8c3dd674f6e9e7ebc209419a98b4d5ebf8c965d44f7f443212a7c32cafc29",
+      "role": "official_correspondence"
+    },
+    {
+      "id": "FF029",
+      "document": "NACE:Rev.2:31@cellar-20261109",
+      "field": "notes.includes",
+      "start": 0,
+      "end": 124,
+      "field_sha256": "2c3ab306a6d2fe47adab1aacdac125b72ab80152455b510522ab5f6ad0b7e6b2",
+      "text_sha256": "2627c5643487b37bf9b263c39176635e380257d71fd313f731b62a36ddc814cc",
+      "role": "legacy_scope_context",
+      "rationale": "旧家具分支的宽泛研究上下文，不当作明确部件包含条款。"
+    }
+  ],
+  "navigation": [
+    {
+      "id": "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807",
+      "kind": "atlas_navigation",
+      "atlas_label": "新家具制造工序与专用部件",
+      "atlas_scope": "区分新家具表面处理、首次软包与可识别的家具部件制造；不把维修、现场固定安装混为制造。组级证据不自动拆派到材料类。",
+      "parents": [
+        "urn:atlas:concept:c782f471-4434-5d5a-9ea8-bbced9673dce"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:789db488-47df-5c5a-9766-8f87d5ed59a0",
+      "kind": "atlas_navigation",
+      "atlas_label": "家具维修与固定安装边界",
+      "atlas_scope": "与家具制造并列的活动对照：使用后家具翻修与固定式厨房家具现场安装；不声称属于制造业来源上级。",
+      "parents": []
+    }
+  ],
+  "activities": [
+    {
+      "id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+      "key": "new-furniture-surface-finishing",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "新制非矿物家具喷涂、涂漆与抛光",
+      "atlas_scope": "限定新制家具的喷涂、涂漆和法式抛光工序，排除石、混凝土、陶瓷家具及使用后家具表面翻修；不涵盖独立原木制品的一切处理。ISIC5只批准310组范围，材料类分配继续待审。",
+      "parents": [
+        "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF001"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF002"
+          ],
+          "source_level": "group",
+          "allocation_status": "reviewed_at_group_only"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.09",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF003"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF004"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:3101",
+          "relation": null,
+          "claim_ids": [
+            "FF002",
+            "F002"
+          ],
+          "status": "pending_material_scope_split",
+          "scope_limit": "仅木制家具部分，不能把全部工序活动等同于3101。"
+        },
+        {
+          "node_id": "ISIC:Rev.5:3102",
+          "relation": null,
+          "claim_ids": [
+            "FF002",
+            "F003"
+          ],
+          "status": "pending_material_scope_split",
+          "scope_limit": "仅其他家具部分，不能把全部工序活动等同于3102。"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.01",
+          "relation": null,
+          "claim_ids": [
+            "F029"
+          ],
+          "status": "publisher_statement_conflicts_with_legacy_definition",
+          "scope_limit": "对应表将表面处理列入旧31.01，旧说明直接包含在31.09；保留竞争解释，不批准旧31.01绑定。"
+        }
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+      "key": "initial-upholstery-new-chairs",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "新制椅及座椅首次软包",
+      "atlas_scope": "限定新制非矿物椅、座椅的首次软包工序；排除旧家具重新软包与修复。当前ISIC材料类归属未由本活动整体确定，保留310组级范围。",
+      "parents": [
+        "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF005"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF006"
+          ],
+          "source_level": "group",
+          "allocation_status": "reviewed_at_group_only"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.09",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF007"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF004",
+            "F004"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:3101",
+          "relation": null,
+          "claim_ids": [
+            "FF006",
+            "F002"
+          ],
+          "status": "pending_material_scope_split",
+          "scope_limit": "仅木制家具部分，不能把全部工序活动等同于3101。"
+        },
+        {
+          "node_id": "ISIC:Rev.5:3102",
+          "relation": null,
+          "claim_ids": [
+            "FF006",
+            "F003"
+          ],
+          "status": "pending_material_scope_split",
+          "scope_limit": "仅其他家具部分，不能把全部工序活动等同于3102。"
+        }
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:03187e29-de4c-5c3f-85fe-6db8d46e1aad",
+      "key": "recognisable-wooden-furniture-parts",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_current_multisource_activity",
+      "atlas_label": "可识别木制家具部件制造（当前范围）",
+      "atlas_scope": "限定可识别为家具整体部件的木制专用部件制造；排除非家具通用木制品、不可识别为家具部件的线条、独立玻璃/石/混凝土板材、安装与维修。只批准两套当前体系证据；两套旧版归属继续待审。",
+      "parents": [
+        "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF016"
+          ],
+          "source_level": "group"
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF017"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": null,
+          "claim_ids": [
+            "F001"
+          ],
+          "status": "pending_legacy_parts_scope",
+          "scope_limit": "旧类有家具制造总述，未据此补造明确部件条款。"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.0",
+          "relation": null,
+          "claim_ids": [
+            "FF029"
+          ],
+          "status": "pending_legacy_parts_scope",
+          "scope_limit": "保留旧家具组作为研究范围，不用当前条款倒推旧组定义。"
+        }
+      ],
+      "historical_scope_status": "both_legacy_editions_pending"
+    },
+    {
+      "id": "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6",
+      "key": "furniture-reupholstery-refinishing",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "使用后家具重新软包与表面翻修",
+      "atlas_scope": "限定已有家具及家居陈设的重新软包和表面翻修，包括办公家具；排除新家具首次软包/表面制造工序及固定厨房家具现场安装。",
+      "parents": [
+        "urn:atlas:concept:789db488-47df-5c5a-9766-8f87d5ed59a0"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:9524",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF008"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:9524",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF009"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2:95.24",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF010"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:95.24",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF011"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "id": "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5",
+      "key": "fitted-kitchen-installation",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "固定式厨房家具现场安装",
+      "atlas_scope": "限定固定式厨房家具在建筑现场的安装活动；排除家具制造、家具维修和可独立摆放家具的简单组装，不把全部4330建筑完工活动归为家具安装。",
+      "parents": [
+        "urn:atlas:concept:789db488-47df-5c5a-9766-8f87d5ed59a0"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:4330",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF012"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:4330",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF013"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2:43.32",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF014"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:43.32",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF015"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    }
+  ],
+  "official_reviews": [
+    {
+      "mapping_id": "urn:atlas:mapping:b5b9b228-574a-5fce-ae81-c044f97ab9e8",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF023"
+      ],
+      "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:ef3cc97a-908f-5486-84d8-52c4093762a6",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF024"
+      ],
+      "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:a797d09b-9a0e-51eb-9742-7459ca7fda7e",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF025"
+      ],
+      "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:42d35c5b-0e30-5a86-a83b-7ee49c2c0a7b",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F013"
+      ],
+      "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:3ba894bb-e60b-5b9d-9ee5-8d232b0e55b6",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF026"
+      ],
+      "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:99a627b0-c344-52c2-b5e0-643795fd45d6",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF027"
+      ],
+      "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:f72d3ac3-252a-5de8-8c7c-317340d63cba",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF028"
+      ],
+      "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:10b212f6-9cb0-5fa6-bf98-6445950b03d8",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF019"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:26fbaaa5-0479-5d9a-bcf7-83450ae5174c",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F017"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:1127eff1-75c9-5156-b0bd-59e727fa6723",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F016"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:29393451-9264-5526-a96d-a78231e6997b",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F013"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:72074f2f-109b-57f8-a23e-41edca4128e1",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F012"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:5e71d094-e43d-5cfe-811d-eb538a0b7d7e",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F014"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:91505942-598e-53ae-a267-4b84ad0073b9",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F015"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:d88c7488-0acd-558f-bb9b-1e9fc100149e",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF014"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:142a8a86-9ec8-59d4-84d9-dbfadd97aeb7",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF010"
+      ],
+      "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:17726393-4331-512f-81ed-5334413f5a7e",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF012"
+      ],
+      "rationale": "仅审定重新软包/翻修或固定厨房安装共同活动；原part标志及完整建筑/维修剩余范围保留。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:42bcaea3-9295-5691-bf90-780711ae0014",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "FF008"
+      ],
+      "rationale": "仅审定重新软包/翻修或固定厨房安装共同活动；原part标志及完整建筑/维修剩余范围保留。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:2c44ef00-2f3b-5c5e-a988-567cafc294b7",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F006",
+        "F007"
+      ],
+      "activity_ids": [
+        "urn:atlas:concept:953444c4-dddf-55cc-be13-9ab1fb231965"
+      ],
+      "rationale": "仅审定材料家具活动的共同范围；2393的2026卫生洁具更新与完整类分配未据此解决，其他原始GSIM和拆分语义保留。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:04afaf5c-2779-53cc-a2fd-d9dacebb2ccc",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F010",
+        "F011"
+      ],
+      "activity_ids": [
+        "urn:atlas:concept:c72ff127-cb99-5780-9fe4-b57c518f50ff"
+      ],
+      "rationale": "仅审定材料家具活动的共同范围；2393的2026卫生洁具更新与完整类分配未据此解决，其他原始GSIM和拆分语义保留。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:c791641a-35a8-516e-ae08-fae7fee9eff7",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "claim_ids": [
+        "F008",
+        "F009"
+      ],
+      "activity_ids": [
+        "urn:atlas:concept:25b63788-e272-5383-8e9f-d75e40436686"
+      ],
+      "rationale": "仅审定材料家具活动的共同范围；2393的2026卫生洁具更新与完整类分配未据此解决，其他原始GSIM和拆分语义保留。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex"
+    }
+  ],
+  "research_mappings": [
+    {
+      "id": "urn:atlas:mapping:afd2fbf0-b038-5fdd-a061-63938e1cccfc",
+      "from": "ISIC:Rev.4:4330",
+      "to": "NACE:Rev.2.1:43.32",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    },
+    {
+      "id": "urn:atlas:mapping:5bdd5162-317a-5cff-98d7-d40de78b507a",
+      "from": "ISIC:Rev.4:9524",
+      "to": "NACE:Rev.2.1:95.24",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    },
+    {
+      "id": "urn:atlas:mapping:54bc2a85-6f81-57e7-a8f9-e34397c251d3",
+      "from": "ISIC:Rev.5:310",
+      "to": "NACE:Rev.2.1:31.00",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+        "urn:atlas:concept:03187e29-de4c-5c3f-85fe-6db8d46e1aad"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    },
+    {
+      "id": "urn:atlas:mapping:816718d4-8ca2-570d-8a7b-a96ade02f4b0",
+      "from": "ISIC:Rev.5:4330",
+      "to": "NACE:Rev.2.1:43.32",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    },
+    {
+      "id": "urn:atlas:mapping:9a188bc5-fa52-5c96-a930-85a2d625b19e",
+      "from": "ISIC:Rev.5:9524",
+      "to": "NACE:Rev.2.1:95.24",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    }
+  ],
+  "research_mapping_followups": [
+    {
+      "mapping_id": "urn:atlas:mapping:2c9aecf8-58f3-5596-a8da-0b3184f24530",
+      "additional_activity_ids": [
+        "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4"
+      ]
+    }
+  ],
+  "binding_decisions": [
+    {
+      "id": "FURN-CERAMIC-BOUNDED-ALLOCATION-20261109",
+      "atlas_id": "urn:atlas:concept:953444c4-dddf-55cc-be13-9ab1fb231965",
+      "node_id": "NACE:Rev.2:23.42",
+      "previous_binding_sha256": "ef1fcfaccf20e51b33717b8749648cb7255bb8e29443793ba9cc7085720523ba",
+      "binding": {
+        "node_id": "NACE:Rev.2:23.42",
+        "relation": "broadMatch",
+        "claim_ids": [
+          "FF019",
+          "FF020"
+        ],
+        "basis": "explicit_official_crosswalk_activity_allocation"
+      },
+      "rationale": "新增官方旧→新表333行明确把旧23.42的陶瓷家具活动分配到31.00，与已存当前→旧表及旧31.09排除指向一致。只批准陶瓷家具这个部分；不冒称旧23.42原包含条款直接列出家具，不批准卫生洁具整类等价。"
+    }
+  ],
+  "issue_followups": [
+    {
+      "issue_id": "FURN-DIRECT-CROSSWALK",
+      "status": "open",
+      "claim_ids": [],
+      "audit_refs": [
+        "nace-cellar-correspondence-schemes-20261109",
+        "nace-cellar-current-mapping-targets-20261109",
+        "nace-cellar-current-incoming-isic-20261109",
+        "nace-cellar-current-positive-control-20261109"
+      ],
+      "finding": "补齐Cellar命名图的对应目录、出向命名空间、入向ISIC查询及1047节点阳性对照。当前直接NACE2.1–ISIC5关系未观察到；另采到真实NACE2→ISIC4官方直接表。",
+      "remaining": "当前版直接官方对应的发布仍待核查；空查询不是官方无对应声明，不能组成跨版官方等价。"
+    },
+    {
+      "issue_id": "FURN-FINISHING",
+      "status": "partially_addressed",
+      "claim_ids": [
+        "FF001",
+        "FF002",
+        "FF003",
+        "FF004",
+        "FF005",
+        "FF006",
+        "FF007",
+        "F029"
+      ],
+      "finding": "两套旧版与两套当前版支持新家具表面工序和首次软包；ISIC5在310组直接列项，故批准组级绑定。旧NACE RDF与2008手册均明确31.09；相反分配到31.01的对应表内容保留为候选。",
+      "remaining": "泛材料工序没有强制拆到3101/3102；旧31.01与31.09的发布者陈述差异未获更正。"
+    },
+    {
+      "issue_id": "FURN-CERAMIC-OLD",
+      "status": "partially_addressed",
+      "claim_ids": [
+        "FF019",
+        "FF020",
+        "FF022",
+        "FF021",
+        "F039"
+      ],
+      "finding": "以新增官方旧→新表明确活动分配及旧31.09排除指向，批准旧23.42中的陶瓷家具部分；历史候选、原理由和本轮转换决定全部保留。",
+      "remaining": "旧23.42没有直接陶瓷家具包含条款的事实仍保留；ISIC4 2392/2393卫生洁具范围与NACE2整类对应冲突未解决。"
+    },
+    {
+      "issue_id": "FURN-NACE-ISIC-GENERALITY",
+      "status": "partially_addressed",
+      "claim_ids": [
+        "F036",
+        "F037",
+        "FF002"
+      ],
+      "finding": "完整直接旧版桥已采到；发布者全用closeMatch，不等同于整类或上级等价。当前家具材料范围差异由原始定义逐条保留。",
+      "remaining": "通用方法描述不能覆盖具体家具/材料边界，当前NACE2.1–ISIC5直接表仍缺。"
+    },
+    {
+      "issue_id": "FURN-PARTS-RESIDUAL",
+      "status": "partially_addressed",
+      "claim_ids": [
+        "FF016",
+        "FF017",
+        "FF018",
+        "FF008",
+        "FF009",
+        "FF012",
+        "FF013"
+      ],
+      "finding": "新增当前两源的可识别木制家具部件范围，旧版保留待审；维修及固定安装另作与制造并列的边界节点，不与首次制造处理混淆。",
+      "remaining": "旧部件分配、全部板材/部件及材料工序边界仍未全审。"
+    }
+  ],
+  "new_issues": [
+    {
+      "id": "NACE2-ISIC4-46.6-DISAGREEMENT",
+      "status": "conflict_retained",
+      "claim_ids": [],
+      "finding": "995对代码事实一致；Eurostat RDF把NACE2 46.6连到ISIC4 466，UNSD表为465。已有2011-12-09更改历史明确将该组由466更正为465；两个来源原字节、谓词与行仍独立保留。此差异不在家具分支。",
+      "next_action": "等待Eurostat修订或明确说明，不回写RDF，不改变未审批发活动绑定。",
+      "evidence_resources": [
+        "nace-cellar-nace2-isic4-xkos-20261109",
+        "nace2-cellar-isic4-predicates-20261109",
+        "isic4-nace2-correspondence",
+        "isic4-nace2-change-history"
+      ]
+    }
+  ],
+  "comparison_decisions": {
+    "observed_expected_differences": {
+      "only_eurostat": [
+        [
+          "NACE:Rev.2:46.6",
+          "ISIC:Rev.4:466"
+        ]
+      ],
+      "only_unsd": [
+        [
+          "NACE:Rev.2:46.6",
+          "ISIC:Rev.4:465"
+        ]
+      ],
+      "common_pairs": 995,
+      "resolution": "publisher_variants_retained_no_automatic_reconciliation"
+    },
+    "decision": "retain_both_publisher_statements; 2011 correction supports UNSD, not an automatic rewrite of Eurostat; no furniture impact"
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "resource_id": "nace-cellar-current-mapping-targets-20261109",
+  "source_id": "NACE",
+  "edition": "Rev.2.1",
+  "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fp+%28REPLACE%28STR%28%3Fo%29%2C%22%2F%5B%5E%2F%5D%2A%24%22%2C%22%22%29+AS+%3FtargetNamespace%29+WHERE+%7B+GRAPH+%3Fg+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+%7D+%7D+ORDER+BY+%3Fp+%3FtargetNamespace&format=application%2Fsparql-results%2Bjson",
+  "attempted_at": "2026-11-08T16:10:55.650486+00:00",
+  "final_url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fp+%28REPLACE%28STR%28%3Fo%29%2C%22%2F%5B%5E%2F%5D%2A%24%22%2C%22%22%29+AS+%3FtargetNamespace%29+WHERE+%7B+GRAPH+%3Fg+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+%7D+%7D+ORDER+BY+%3Fp+%3FtargetNamespace&format=application%2Fsparql-results%2Bjson",
+  "http_status": 200,
+  "content_type": "application/sparql-results+json",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "0b99073b0d4331d885e63e7c4b03d96c4115171e91a6c4243f4ac1f62624df5f",
+  "bytes": 307,
+  "path": "data/raw/NACE/Rev.2.1/nace-cellar-current-mapping-targets-20261109/0b99073b0d4331d885e63e7c4b03d96c4115171e91a6c4243f4ac1f62624df5f/nace-cellar-current-mapping-targets-20261109.json",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "Eurostat reuse policy (attribution and changes required)",
+    "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+  },
+  "role": "official_sparql_result",
+  "language": "en",
+  "format": "json",
+  "publication_date": null,
+  "robots": {
+    "url": "https://publications.europa.eu/robots.txt",
+    "result": "fetched",
+    "allowed": true
+  }
+}

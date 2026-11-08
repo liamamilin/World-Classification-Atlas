@@ -1,0 +1,4 @@
+
+{ "head": { "link": [], "vars": ["p", "targetNamespace"] },
+  "results": { "distinct": false, "ordered": true, "bindings": [
+    { "p": { "type": "uri", "value": "http://www.w3.org/2004/02/skos/core#closeMatch" }	, "targetNamespace": { "type": "literal", "value": "http://data.europa.eu/ux2/nace2" }} ] } }

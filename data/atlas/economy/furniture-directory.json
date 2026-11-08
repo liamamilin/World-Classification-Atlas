@@ -22,6 +22,22 @@
       ]
     },
     {
+      "id": "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807",
+      "kind": "atlas_navigation",
+      "atlas_label": "新家具制造工序与专用部件",
+      "atlas_scope": "区分新家具表面处理、首次软包与可识别的家具部件制造；不把维修、现场固定安装混为制造。组级证据不自动拆派到材料类。",
+      "parents": [
+        "urn:atlas:concept:c782f471-4434-5d5a-9ea8-bbced9673dce"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:789db488-47df-5c5a-9766-8f87d5ed59a0",
+      "kind": "atlas_navigation",
+      "atlas_label": "家具维修与固定安装边界",
+      "atlas_scope": "与家具制造并列的活动对照：使用后家具翻修与固定式厨房家具现场安装；不声称属于制造业来源上级。",
+      "parents": []
+    },
+    {
       "id": "urn:atlas:concept:85278e17-1dc0-5780-a0d1-c373ec39e6cf",
       "kind": "reused_reviewed_scope_anchor",
       "base_rev5_code": "3101",
@@ -136,21 +152,42 @@
           "claim_ids": [
             "F005"
           ]
+        },
+        {
+          "node_id": "NACE:Rev.2:23.42",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF019",
+            "FF020"
+          ],
+          "basis": "explicit_official_crosswalk_activity_allocation"
         }
       ],
       "scope_basis": "Atlas-authored bounded intersection of cited same-object activity scopes; not an official subcode",
       "reviewer": "Codex",
       "reviewed_on": "2026-11-08",
-      "candidate_source_bindings": [
+      "candidate_source_bindings": [],
+      "binding_history": [
         {
           "node_id": "NACE:Rev.2:23.42",
-          "relation": null,
-          "status": "pending_old_definition_confirmation",
-          "issue_id": "FURN-CERAMIC-OLD",
+          "previous_binding": {
+            "node_id": "NACE:Rev.2:23.42",
+            "relation": null,
+            "status": "pending_old_definition_confirmation",
+            "issue_id": "FURN-CERAMIC-OLD",
+            "claim_ids": [
+              "F034",
+              "F026"
+            ]
+          },
+          "decision_id": "FURN-CERAMIC-BOUNDED-ALLOCATION-20261109",
+          "status": "approved_bounded_allocation",
           "claim_ids": [
-            "F034",
-            "F026"
-          ]
+            "FF019",
+            "FF020"
+          ],
+          "reason": "新增官方旧→新表333行明确把旧23.42的陶瓷家具活动分配到31.00，与已存当前→旧表及旧31.09排除指向一致。只批准陶瓷家具这个部分；不冒称旧23.42原包含条款直接列出家具，不批准卫生洁具整类等价。",
+          "recorded_on": "2026-11-09"
         }
       ]
     },
@@ -423,6 +460,292 @@
       "scope_basis": "Atlas-authored bounded intersection of cited same-object activity scopes; not an official subcode",
       "reviewer": "Codex",
       "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+      "key": "new-furniture-surface-finishing",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "新制非矿物家具喷涂、涂漆与抛光",
+      "atlas_scope": "限定新制家具的喷涂、涂漆和法式抛光工序，排除石、混凝土、陶瓷家具及使用后家具表面翻修；不涵盖独立原木制品的一切处理。ISIC5只批准310组范围，材料类分配继续待审。",
+      "parents": [
+        "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF001"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF002"
+          ],
+          "source_level": "group",
+          "allocation_status": "reviewed_at_group_only"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.09",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF003"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF004"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:3101",
+          "relation": null,
+          "claim_ids": [
+            "FF002",
+            "F002"
+          ],
+          "status": "pending_material_scope_split",
+          "scope_limit": "仅木制家具部分，不能把全部工序活动等同于3101。"
+        },
+        {
+          "node_id": "ISIC:Rev.5:3102",
+          "relation": null,
+          "claim_ids": [
+            "FF002",
+            "F003"
+          ],
+          "status": "pending_material_scope_split",
+          "scope_limit": "仅其他家具部分，不能把全部工序活动等同于3102。"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.01",
+          "relation": null,
+          "claim_ids": [
+            "F029"
+          ],
+          "status": "publisher_statement_conflicts_with_legacy_definition",
+          "scope_limit": "对应表将表面处理列入旧31.01，旧说明直接包含在31.09；保留竞争解释，不批准旧31.01绑定。"
+        }
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+      "key": "initial-upholstery-new-chairs",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "新制椅及座椅首次软包",
+      "atlas_scope": "限定新制非矿物椅、座椅的首次软包工序；排除旧家具重新软包与修复。当前ISIC材料类归属未由本活动整体确定，保留310组级范围。",
+      "parents": [
+        "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF005"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF006"
+          ],
+          "source_level": "group",
+          "allocation_status": "reviewed_at_group_only"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.09",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF007"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF004",
+            "F004"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:3101",
+          "relation": null,
+          "claim_ids": [
+            "FF006",
+            "F002"
+          ],
+          "status": "pending_material_scope_split",
+          "scope_limit": "仅木制家具部分，不能把全部工序活动等同于3101。"
+        },
+        {
+          "node_id": "ISIC:Rev.5:3102",
+          "relation": null,
+          "claim_ids": [
+            "FF006",
+            "F003"
+          ],
+          "status": "pending_material_scope_split",
+          "scope_limit": "仅其他家具部分，不能把全部工序活动等同于3102。"
+        }
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:03187e29-de4c-5c3f-85fe-6db8d46e1aad",
+      "key": "recognisable-wooden-furniture-parts",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_current_multisource_activity",
+      "atlas_label": "可识别木制家具部件制造（当前范围）",
+      "atlas_scope": "限定可识别为家具整体部件的木制专用部件制造；排除非家具通用木制品、不可识别为家具部件的线条、独立玻璃/石/混凝土板材、安装与维修。只批准两套当前体系证据；两套旧版归属继续待审。",
+      "parents": [
+        "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF016"
+          ],
+          "source_level": "group"
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF017"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": null,
+          "claim_ids": [
+            "F001"
+          ],
+          "status": "pending_legacy_parts_scope",
+          "scope_limit": "旧类有家具制造总述，未据此补造明确部件条款。"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.0",
+          "relation": null,
+          "claim_ids": [
+            "FF029"
+          ],
+          "status": "pending_legacy_parts_scope",
+          "scope_limit": "保留旧家具组作为研究范围，不用当前条款倒推旧组定义。"
+        }
+      ],
+      "historical_scope_status": "both_legacy_editions_pending"
+    },
+    {
+      "id": "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6",
+      "key": "furniture-reupholstery-refinishing",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "使用后家具重新软包与表面翻修",
+      "atlas_scope": "限定已有家具及家居陈设的重新软包和表面翻修，包括办公家具；排除新家具首次软包/表面制造工序及固定厨房家具现场安装。",
+      "parents": [
+        "urn:atlas:concept:789db488-47df-5c5a-9766-8f87d5ed59a0"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:9524",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF008"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:9524",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF009"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2:95.24",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF010"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:95.24",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF011"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "id": "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5",
+      "key": "fitted-kitchen-installation",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "固定式厨房家具现场安装",
+      "atlas_scope": "限定固定式厨房家具在建筑现场的安装活动；排除家具制造、家具维修和可独立摆放家具的简单组装，不把全部4330建筑完工活动归为家具安装。",
+      "parents": [
+        "urn:atlas:concept:789db488-47df-5c5a-9766-8f87d5ed59a0"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:4330",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF012"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:4330",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF013"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2:43.32",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF014"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:43.32",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF015"
+          ]
+        }
+      ],
+      "scope_basis": "Explicit same-object activity evidence; source group/class levels retained; not an official subcode",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
     }
   ],
   "source_to_atlas": {
@@ -459,6 +782,14 @@
       },
       {
         "atlas_id": "urn:atlas:concept:ac8321b5-2927-55b1-a95d-fde77a6bfb90",
+        "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
         "relation_atlas_to_source": "broadMatch"
       }
     ],
@@ -498,6 +829,18 @@
       {
         "atlas_id": "urn:atlas:concept:ac8321b5-2927-55b1-a95d-fde77a6bfb90",
         "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+        "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:03187e29-de4c-5c3f-85fe-6db8d46e1aad",
+        "relation_atlas_to_source": "broadMatch"
       }
     ],
     "ISIC:Rev.5:3102": [
@@ -525,6 +868,12 @@
       }
     ],
     "ISIC:Rev.5:2393": [
+      {
+        "atlas_id": "urn:atlas:concept:953444c4-dddf-55cc-be13-9ab1fb231965",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "NACE:Rev.2:23.42": [
       {
         "atlas_id": "urn:atlas:concept:953444c4-dddf-55cc-be13-9ab1fb231965",
         "relation_atlas_to_source": "broadMatch"
@@ -588,17 +937,207 @@
       {
         "atlas_id": "urn:atlas:concept:ac8321b5-2927-55b1-a95d-fde77a6bfb90",
         "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "ISIC:Rev.5:310": [
+      {
+        "atlas_id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+        "relation_atlas_to_source": "broadMatch"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:03187e29-de4c-5c3f-85fe-6db8d46e1aad",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "ISIC:Rev.4:9524": [
+      {
+        "atlas_id": "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "ISIC:Rev.5:9524": [
+      {
+        "atlas_id": "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "NACE:Rev.2:95.24": [
+      {
+        "atlas_id": "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "NACE:Rev.2.1:95.24": [
+      {
+        "atlas_id": "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "ISIC:Rev.4:4330": [
+      {
+        "atlas_id": "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "ISIC:Rev.5:4330": [
+      {
+        "atlas_id": "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "NACE:Rev.2:43.32": [
+      {
+        "atlas_id": "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5",
+        "relation_atlas_to_source": "broadMatch"
+      }
+    ],
+    "NACE:Rev.2.1:43.32": [
+      {
+        "atlas_id": "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5",
+        "relation_atlas_to_source": "broadMatch"
       }
     ]
   },
   "source_to_candidates": {
+    "ISIC:Rev.5:3101": [
+      {
+        "atlas_id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "relation": null,
+        "status": "pending_material_scope_split"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+        "relation": null,
+        "status": "pending_material_scope_split"
+      }
+    ],
+    "ISIC:Rev.5:3102": [
+      {
+        "atlas_id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "relation": null,
+        "status": "pending_material_scope_split"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+        "relation": null,
+        "status": "pending_material_scope_split"
+      }
+    ],
+    "NACE:Rev.2:31.01": [
+      {
+        "atlas_id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "relation": null,
+        "status": "publisher_statement_conflicts_with_legacy_definition"
+      }
+    ],
+    "ISIC:Rev.4:3100": [
+      {
+        "atlas_id": "urn:atlas:concept:03187e29-de4c-5c3f-85fe-6db8d46e1aad",
+        "relation": null,
+        "status": "pending_legacy_parts_scope"
+      }
+    ],
+    "NACE:Rev.2:31.0": [
+      {
+        "atlas_id": "urn:atlas:concept:03187e29-de4c-5c3f-85fe-6db8d46e1aad",
+        "relation": null,
+        "status": "pending_legacy_parts_scope"
+      }
+    ]
+  },
+  "source_to_binding_history": {
     "NACE:Rev.2:23.42": [
       {
         "atlas_id": "urn:atlas:concept:953444c4-dddf-55cc-be13-9ab1fb231965",
-        "relation": null,
-        "status": "pending_old_definition_confirmation"
+        "node_id": "NACE:Rev.2:23.42",
+        "previous_binding": {
+          "node_id": "NACE:Rev.2:23.42",
+          "relation": null,
+          "status": "pending_old_definition_confirmation",
+          "issue_id": "FURN-CERAMIC-OLD",
+          "claim_ids": [
+            "F034",
+            "F026"
+          ]
+        },
+        "decision_id": "FURN-CERAMIC-BOUNDED-ALLOCATION-20261109",
+        "status": "approved_bounded_allocation",
+        "claim_ids": [
+          "FF019",
+          "FF020"
+        ],
+        "reason": "新增官方旧→新表333行明确把旧23.42的陶瓷家具活动分配到31.00，与已存当前→旧表及旧31.09排除指向一致。只批准陶瓷家具这个部分；不冒称旧23.42原包含条款直接列出家具，不批准卫生洁具整类等价。",
+        "recorded_on": "2026-11-09"
       }
     ]
+  },
+  "direct_correspondence_audit": {
+    "status": "not_observed_in_audited_cellar_snapshot",
+    "classification_editions": [
+      "NACE Rev.2.1",
+      "ISIC Rev.5"
+    ],
+    "positive_control_current_nodes": 1047,
+    "catalogue_public_datasets": 256,
+    "catalogue_isic_datasets": [],
+    "correspondence_inventory_rows": 58,
+    "distinct_tables_comparing_both_nace_editions": 25,
+    "current_tables": [
+      "http://data.europa.eu/p6d/nace_aggregates/SA_NACE21",
+      "http://data.europa.eu/ux2/nace2.1/MIG_NACE2.1",
+      "http://data.europa.eu/ux2/nace2.1/NACE2.1_NACE2",
+      "http://data.europa.eu/ux2/nace2.1/SPACE_NACE2.1_NACE2",
+      "http://data.europa.eu/ux2/nace2/NACE2_NACE2.1",
+      "http://data.europa.eu/ux2/nace2/SPACE_NACE2_NACE2.1"
+    ],
+    "outgoing_mapping_target_namespaces": [
+      "http://data.europa.eu/ux2/nace2"
+    ],
+    "incoming_isic_rows": 0,
+    "current_isic_table_rows": 0,
+    "evidence": [
+      {
+        "resource_id": "nace-cellar-correspondence-schemes-20261109",
+        "edition": "Rev.2.1",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fg+%3Ftable+%3Fscheme+%3Fother+WHERE+%7B+VALUES+%3Fscheme+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+GRAPH+%3Fg+%7B+%3Ftable+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23compares%3E+%3Fscheme+%3B+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23compares%3E+%3Fother+%7D+%7D+ORDER+BY+%3Fg+%3Ftable+%3Fscheme+%3Fother&format=application%2Fsparql-results%2Bjson",
+        "sha256": "c2eda8bfcfb607c9d8f347277cc1ba922f60a5695dee7bb81205515246948ff8",
+        "publication_date": null
+      },
+      {
+        "resource_id": "nace-cellar-current-mapping-targets-20261109",
+        "edition": "Rev.2.1",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fp+%28REPLACE%28STR%28%3Fo%29%2C%22%2F%5B%5E%2F%5D%2A%24%22%2C%22%22%29+AS+%3FtargetNamespace%29+WHERE+%7B+GRAPH+%3Fg+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+%7D+%7D+ORDER+BY+%3Fp+%3FtargetNamespace&format=application%2Fsparql-results%2Bjson",
+        "sha256": "0b99073b0d4331d885e63e7c4b03d96c4115171e91a6c4243f4ac1f62624df5f",
+        "publication_date": null
+      },
+      {
+        "resource_id": "nace-cellar-current-incoming-isic-20261109",
+        "edition": "Rev.2.1",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fg+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7B+%3Fo+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+GRAPH+%3Fg+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28REGEX%28STR%28%3Fs%29%2C+%22isic%22%2C+%22i%22%29%29+%7D+ORDER+BY+%3Fg+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "6acf2493944f74fe96bb2cabbf77364437dd70911b91261b39c773baa31048d5",
+        "publication_date": null
+      },
+      {
+        "resource_id": "nace-cellar-current-positive-control-20261109",
+        "edition": "Rev.2.1",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%28COUNT%28DISTINCT+%3Fs%29+AS+%3Fcount%29+WHERE+%7B+GRAPH+%3Fg+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+%7D&format=application%2Fsparql-results%2Bjson",
+        "sha256": "2971c1731598bbbbb5cfdc40c7d801a3fd86a01b396c8c46ff1d5060bf3793b8",
+        "publication_date": null
+      }
+    ],
+    "limits": "Finite observed Cellar graphs and publication catalogue; not a publisher statement that no direct table exists anywhere. Empty result alone is never official no-correspondence."
   },
   "claims": [
     {
@@ -1429,6 +1968,658 @@
         "table": "tblTitles_English_ISICRev4",
         "key": "2393"
       }
+    },
+    {
+      "id": "FF001",
+      "document": "ISIC:Rev.4:3100",
+      "field": "notes.inclusion",
+      "start": 1001,
+      "end": 1085,
+      "field_sha256": "73f539fc3c0aaabe7271dad64e4329e787dfaa25a8af92cf28a5bd597d4a0877",
+      "text_sha256": "8c9ba354a7840180626233600f39c31260b6fa492b56047295dbb96daeadda78",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "3100"
+      }
+    },
+    {
+      "id": "FF002",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes_also",
+      "start": 77,
+      "end": 161,
+      "field_sha256": "a5164854b738e9370732aae682c513f3a1ed73035e96f57e85d8bc07e6333c6a",
+      "text_sha256": "8c9ba354a7840180626233600f39c31260b6fa492b56047295dbb96daeadda78",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 299,
+        "range": "A299:G299"
+      }
+    },
+    {
+      "id": "FF003",
+      "document": "NACE:Rev.2:31.09@cellar-20261109",
+      "field": "notes.includes_also",
+      "start": 79,
+      "end": 163,
+      "field_sha256": "300ec3ebe4d7356b933999da635da8bbae8e72a0fb046b082c7458a132f33816",
+      "text_sha256": "8c9ba354a7840180626233600f39c31260b6fa492b56047295dbb96daeadda78",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-cellar-selected-notes-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FC%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F23%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F234%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F236%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F237%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2342%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2369%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2370%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F31%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F310%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3101%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3102%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3103%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3109%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FS%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F95%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F952%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F9524%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FF%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F43%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F433%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F4332%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23notation%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broader%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23versionInfo%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23coreContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23additionalContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23exclusionNote%3E+%7D+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+        "publication_date": null,
+        "subject_uri": "http://data.europa.eu/ux2/nace2/3109",
+        "result_rows": [
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83
+        ],
+        "field_result_row": 76
+      }
+    },
+    {
+      "id": "FF004",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.includes_also",
+      "start": 116,
+      "end": 189,
+      "field_sha256": "1513c65a8ac8fd53cc8f5587d96b7276e1ed66979a14ed0d7cfe08022222578b",
+      "text_sha256": "33444a3d900b435f58c100a83b240aa7498d09ce62bdce35ebc2d33d4804dc99",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace21-notes-20260930",
+        "edition": "Rev.2.1",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+        "sha256": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 409
+      }
+    },
+    {
+      "id": "FF005",
+      "document": "ISIC:Rev.4:3100",
+      "field": "notes.inclusion",
+      "start": 949,
+      "end": 997,
+      "field_sha256": "73f539fc3c0aaabe7271dad64e4329e787dfaa25a8af92cf28a5bd597d4a0877",
+      "text_sha256": "2f70a202c02e3e2c6804fd40e31371ccfaf819c2a40b86dcca3c7ed51b16e8e9",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "3100"
+      }
+    },
+    {
+      "id": "FF006",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes_also",
+      "start": 27,
+      "end": 75,
+      "field_sha256": "a5164854b738e9370732aae682c513f3a1ed73035e96f57e85d8bc07e6333c6a",
+      "text_sha256": "2f70a202c02e3e2c6804fd40e31371ccfaf819c2a40b86dcca3c7ed51b16e8e9",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 299,
+        "range": "A299:G299"
+      }
+    },
+    {
+      "id": "FF007",
+      "document": "NACE:Rev.2:31.09@cellar-20261109",
+      "field": "notes.includes_also",
+      "start": 28,
+      "end": 76,
+      "field_sha256": "300ec3ebe4d7356b933999da635da8bbae8e72a0fb046b082c7458a132f33816",
+      "text_sha256": "2f70a202c02e3e2c6804fd40e31371ccfaf819c2a40b86dcca3c7ed51b16e8e9",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-cellar-selected-notes-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FC%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F23%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F234%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F236%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F237%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2342%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2369%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2370%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F31%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F310%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3101%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3102%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3103%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3109%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FS%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F95%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F952%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F9524%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FF%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F43%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F433%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F4332%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23notation%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broader%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23versionInfo%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23coreContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23additionalContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23exclusionNote%3E+%7D+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+        "publication_date": null,
+        "subject_uri": "http://data.europa.eu/ux2/nace2/3109",
+        "result_rows": [
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83
+        ],
+        "field_result_row": 76
+      }
+    },
+    {
+      "id": "FF008",
+      "document": "ISIC:Rev.4:9524",
+      "field": "notes.inclusion",
+      "start": 24,
+      "end": 137,
+      "field_sha256": "d8dc284fd582d4022f9c5e1280da3259aae2d8f5e6a27aa75c98011c950b4ef6",
+      "text_sha256": "f032783939452461bda333d894834f64bb179e54a4999aba93a4c3040cebed87",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "9524"
+      }
+    },
+    {
+      "id": "FF009",
+      "document": "ISIC:Rev.5:9524",
+      "field": "notes.includes",
+      "start": 23,
+      "end": 136,
+      "field_sha256": "76a2b52ac32d15f76579550357be4670c012e2caf3fbf467bff4ab2639729ab8",
+      "text_sha256": "f032783939452461bda333d894834f64bb179e54a4999aba93a4c3040cebed87",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 799,
+        "range": "A799:G799"
+      }
+    },
+    {
+      "id": "FF010",
+      "document": "NACE:Rev.2:95.24@cellar-20261109",
+      "field": "notes.includes",
+      "start": 23,
+      "end": 136,
+      "field_sha256": "542ad0087ee70ac8e21d07295d6ee1f4bf24717ffdc4a5fa72f3006d37c74c26",
+      "text_sha256": "f032783939452461bda333d894834f64bb179e54a4999aba93a4c3040cebed87",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-cellar-selected-notes-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FC%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F23%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F234%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F236%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F237%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2342%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2369%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2370%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F31%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F310%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3101%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3102%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3103%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3109%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FS%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F95%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F952%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F9524%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FF%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F43%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F433%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F4332%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23notation%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broader%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23versionInfo%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23coreContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23additionalContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23exclusionNote%3E+%7D+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+        "publication_date": null,
+        "subject_uri": "http://data.europa.eu/ux2/nace2/9524",
+        "result_rows": [
+          117,
+          118,
+          119,
+          120,
+          121,
+          122
+        ],
+        "field_result_row": 117
+      }
+    },
+    {
+      "id": "FF011",
+      "document": "NACE:Rev.2.1:95.24",
+      "field": "notes.includes",
+      "start": 23,
+      "end": 126,
+      "field_sha256": "1012f32a7b08c21f327d5d2c989cb0b45b2eee70611b48b52d1fdc131e71c0a0",
+      "text_sha256": "b4d9a582d13e8f03f2e7517cac54a55d3afa60483d3b91330a5e15c39e920ab8",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace21-notes-20260930",
+        "edition": "Rev.2.1",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+        "sha256": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 1014
+      }
+    },
+    {
+      "id": "FF012",
+      "document": "ISIC:Rev.4:4330",
+      "field": "notes.inclusion",
+      "start": 282,
+      "end": 353,
+      "field_sha256": "3374487518a617fc6fcfee17dd38c1bd4b8eb5c7e30a1a02ba2fa152e0693e68",
+      "text_sha256": "5a6506db4c541ff4135046600a4494666963917d9eae01b88a11fd98c08eacdb",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "4330"
+      }
+    },
+    {
+      "id": "FF013",
+      "document": "ISIC:Rev.5:4330",
+      "field": "notes.includes",
+      "start": 279,
+      "end": 350,
+      "field_sha256": "fbdc6cbbcb183fc0fb202ae13305cf68f2ea6e1ca4d8aaf5a361b9d7ad4ea2b3",
+      "text_sha256": "5a6506db4c541ff4135046600a4494666963917d9eae01b88a11fd98c08eacdb",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 377,
+        "range": "A377:G377"
+      }
+    },
+    {
+      "id": "FF014",
+      "document": "NACE:Rev.2:43.32@cellar-20261109",
+      "field": "notes.includes",
+      "start": 141,
+      "end": 232,
+      "field_sha256": "bb3f1540ad3758ead4f7f165c87ac41d60f2cf2ca240ac97871524da20786ff3",
+      "text_sha256": "95b50e7bd305ab48270e2b8434ed58365837be82184b439c90b4cdade6f33e8e",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-cellar-selected-notes-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FC%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F23%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F234%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F236%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F237%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2342%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2369%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2370%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F31%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F310%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3101%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3102%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3103%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3109%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FS%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F95%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F952%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F9524%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FF%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F43%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F433%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F4332%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23notation%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broader%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23versionInfo%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23coreContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23additionalContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23exclusionNote%3E+%7D+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+        "publication_date": null,
+        "subject_uri": "http://data.europa.eu/ux2/nace2/4332",
+        "result_rows": [
+          96,
+          97,
+          98,
+          99,
+          100,
+          101,
+          102
+        ],
+        "field_result_row": 96
+      }
+    },
+    {
+      "id": "FF015",
+      "document": "NACE:Rev.2.1:43.32",
+      "field": "notes.includes",
+      "start": 141,
+      "end": 224,
+      "field_sha256": "023f48a37675d42ba65142522ecbd7f5a9b7ed1b442289bb81132e8a507f5b7f",
+      "text_sha256": "d3f3e1fa30294c3767dd7020124718b68b5e69d6c3a287425c99dc375fafa001",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace21-notes-20260930",
+        "edition": "Rev.2.1",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+        "sha256": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 506
+      }
+    },
+    {
+      "id": "FF016",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes",
+      "start": 1044,
+      "end": 1093,
+      "field_sha256": "70501c3e5f241b0207f06a6e1665027efd930d2d11bedd2b918650f1db594066",
+      "text_sha256": "ffdbb8842c7be578b8576e32063f8be721deee947edfb6e754c2753cb6982276",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 299,
+        "range": "A299:G299"
+      }
+    },
+    {
+      "id": "FF017",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.includes",
+      "start": 66,
+      "end": 261,
+      "field_sha256": "d3c41be6cbd3433830f45a6cab415f5a3d431a5db7bb16cb418c9e92469605b1",
+      "text_sha256": "09c711d03705555b873d4ea07618e6ec116fd1e9ce85015190f398fa18944ca7",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace21-notes-20260930",
+        "edition": "Rev.2.1",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+        "sha256": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 409
+      }
+    },
+    {
+      "id": "FF018",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.excludes",
+      "start": 101,
+      "end": 200,
+      "field_sha256": "b9e081324ea91b0c2aa08d6256d338cfbc7ae274a130920c9360b76be951a0c9",
+      "text_sha256": "a5d1298ca714043d232799ed92b4b2eff9c7e0a18848d8324e8efcd0f3b95c3b",
+      "role": "exclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace21-notes-20260930",
+        "edition": "Rev.2.1",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+        "sha256": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 409
+      }
+    },
+    {
+      "id": "FF019",
+      "document": "urn:atlas:mapping:b5b9b228-574a-5fce-ae81-c044f97ab9e8",
+      "field": "common_content",
+      "start": 0,
+      "end": 41,
+      "field_sha256": "05d4ca1b5dff2ef61b2323bb70d81012d565a207894988fcc9821f7d189a2b3e",
+      "text_sha256": "05d4ca1b5dff2ef61b2323bb70d81012d565a207894988fcc9821f7d189a2b3e",
+      "role": "official_activity_allocation",
+      "allocated_node_id": "NACE:Rev.2:23.42",
+      "activity_key": "ceramic",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 333
+      }
+    },
+    {
+      "id": "FF020",
+      "document": "NACE:Rev.2:31.09@cellar-20261109",
+      "field": "notes.excludes",
+      "start": 101,
+      "end": 182,
+      "field_sha256": "ea29219a7325636c7939baec07558649efe25233349e2825db5f3eae22e0a250",
+      "text_sha256": "5e32e4fc0a237c752b3ddad9e8a90b792946159421135d41057d1e55bf235d1a",
+      "role": "exclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-cellar-selected-notes-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FC%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F23%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F234%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F236%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F237%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2342%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2369%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2370%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F31%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F310%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3101%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3102%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3103%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3109%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FS%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F95%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F952%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F9524%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FF%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F43%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F433%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F4332%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23notation%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broader%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23versionInfo%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23coreContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23additionalContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23exclusionNote%3E+%7D+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+        "publication_date": null,
+        "subject_uri": "http://data.europa.eu/ux2/nace2/3109",
+        "result_rows": [
+          76,
+          77,
+          78,
+          79,
+          80,
+          81,
+          82,
+          83
+        ],
+        "field_result_row": 78
+      }
+    },
+    {
+      "id": "FF021",
+      "document": "ISIC:Rev.4:2392",
+      "field": "notes.inclusion",
+      "start": 364,
+      "end": 404,
+      "field_sha256": "8312b0acb984aa04ae3d053285fae4877639f783c9bc1cc362353f6dffe617e9",
+      "text_sha256": "98b0aacf5ac3d080955b5acec99c47ecf293b00068d46c8727971a51a72c0392",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "2392"
+      }
+    },
+    {
+      "id": "FF022",
+      "document": "NACE:Rev.2:23.42@cellar-20261109",
+      "field": "notes.includes",
+      "start": 117,
+      "end": 154,
+      "field_sha256": "e4e286bad5447244f0e6599fa6becae54254e7d88ce68993b1cdd954da1f7d0e",
+      "text_sha256": "0bef51dc2df59d9567dfdd2bbedae1f9a6d2f97885ae81f53fb473fae24aa871",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-cellar-selected-notes-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FC%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F23%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F234%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F236%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F237%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2342%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2369%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2370%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F31%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F310%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3101%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3102%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3103%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3109%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FS%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F95%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F952%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F9524%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FF%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F43%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F433%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F4332%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23notation%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broader%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23versionInfo%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23coreContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23additionalContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23exclusionNote%3E+%7D+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+        "publication_date": null,
+        "subject_uri": "http://data.europa.eu/ux2/nace2/2342",
+        "result_rows": [
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20
+        ],
+        "field_result_row": 14
+      }
+    },
+    {
+      "id": "FF023",
+      "document": "urn:atlas:mapping:b5b9b228-574a-5fce-ae81-c044f97ab9e8",
+      "field": "common_content",
+      "start": 0,
+      "end": 41,
+      "field_sha256": "05d4ca1b5dff2ef61b2323bb70d81012d565a207894988fcc9821f7d189a2b3e",
+      "text_sha256": "05d4ca1b5dff2ef61b2323bb70d81012d565a207894988fcc9821f7d189a2b3e",
+      "role": "official_correspondence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 333
+      }
+    },
+    {
+      "id": "FF024",
+      "document": "urn:atlas:mapping:ef3cc97a-908f-5486-84d8-52c4093762a6",
+      "field": "common_content",
+      "start": 0,
+      "end": 42,
+      "field_sha256": "0eec73ecefda4d1586b788e9f6ba66d6b22ee03a6431cdc150498d89b089e514",
+      "text_sha256": "0eec73ecefda4d1586b788e9f6ba66d6b22ee03a6431cdc150498d89b089e514",
+      "role": "official_correspondence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 348
+      }
+    },
+    {
+      "id": "FF025",
+      "document": "urn:atlas:mapping:a797d09b-9a0e-51eb-9742-7459ca7fda7e",
+      "field": "common_content",
+      "start": 0,
+      "end": 39,
+      "field_sha256": "3f72e286f7b28ca6caebee76def5f1f134a246137455504c06f4461cc4e736c7",
+      "text_sha256": "3f72e286f7b28ca6caebee76def5f1f134a246137455504c06f4461cc4e736c7",
+      "role": "official_correspondence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 351
+      }
+    },
+    {
+      "id": "FF026",
+      "document": "urn:atlas:mapping:3ba894bb-e60b-5b9d-9ee5-8d232b0e55b6",
+      "field": "common_content",
+      "start": 0,
+      "end": 34,
+      "field_sha256": "fd6dd252e040768bc88958671e4f9c60fa689a27b955f47c2477f2b280b69430",
+      "text_sha256": "fd6dd252e040768bc88958671e4f9c60fa689a27b955f47c2477f2b280b69430",
+      "role": "official_correspondence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 543
+      }
+    },
+    {
+      "id": "FF027",
+      "document": "urn:atlas:mapping:99a627b0-c344-52c2-b5e0-643795fd45d6",
+      "field": "common_content",
+      "start": 0,
+      "end": 52,
+      "field_sha256": "7483db17a8129a8e58b15cf9bdb02f0d759b47063bf85cd5d34c2365191535f8",
+      "text_sha256": "7483db17a8129a8e58b15cf9bdb02f0d759b47063bf85cd5d34c2365191535f8",
+      "role": "official_correspondence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 544
+      }
+    },
+    {
+      "id": "FF028",
+      "document": "urn:atlas:mapping:f72d3ac3-252a-5de8-8c7c-317340d63cba",
+      "field": "common_content",
+      "start": 0,
+      "end": 255,
+      "field_sha256": "3da8c3dd674f6e9e7ebc209419a98b4d5ebf8c965d44f7f443212a7c32cafc29",
+      "text_sha256": "3da8c3dd674f6e9e7ebc209419a98b4d5ebf8c965d44f7f443212a7c32cafc29",
+      "role": "official_correspondence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 545
+      }
+    },
+    {
+      "id": "FF029",
+      "document": "NACE:Rev.2:31@cellar-20261109",
+      "field": "notes.includes",
+      "start": 0,
+      "end": 124,
+      "field_sha256": "2c3ab306a6d2fe47adab1aacdac125b72ab80152455b510522ab5f6ad0b7e6b2",
+      "text_sha256": "2627c5643487b37bf9b263c39176635e380257d71fd313f731b62a36ddc814cc",
+      "role": "legacy_scope_context",
+      "rationale": "旧家具分支的宽泛研究上下文，不当作明确部件包含条款。",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "nace2-cellar-selected-notes-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FC%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F23%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F234%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F236%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F237%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2342%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2369%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2370%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F31%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F310%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3101%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3102%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3103%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3109%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FS%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F95%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F952%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F9524%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FF%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F43%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F433%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F4332%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23notation%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broader%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23versionInfo%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23coreContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23additionalContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23exclusionNote%3E+%7D+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+        "publication_date": null,
+        "subject_uri": "http://data.europa.eu/ux2/nace2/31",
+        "result_rows": [
+          44,
+          45,
+          46,
+          47,
+          48,
+          49
+        ],
+        "field_result_row": 44
+      }
     }
   ],
   "issues": [
@@ -1437,17 +2628,67 @@
       "status": "open",
       "claim_ids": [],
       "finding": "核查Eurostat NACE对应入口、ShowVoc实际下载清单及UNSD经济分类入口；未发现NACE2.1-ISIC5直接表。已采到NACE2.1→2与ISIC4→NACE2。",
-      "next_action": "继续核查官方直接对应的发布时间/版本；本轮研究边保留Atlas身份，不能用版本链自动批准。"
+      "next_action": "继续核查官方直接对应的发布时间/版本；本轮研究边保留Atlas身份，不能用版本链自动批准。",
+      "history": [
+        {
+          "id": "FURN-DIRECT-CROSSWALK",
+          "status": "open",
+          "claim_ids": [],
+          "finding": "核查Eurostat NACE对应入口、ShowVoc实际下载清单及UNSD经济分类入口；未发现NACE2.1-ISIC5直接表。已采到NACE2.1→2与ISIC4→NACE2。",
+          "next_action": "继续核查官方直接对应的发布时间/版本；本轮研究边保留Atlas身份，不能用版本链自动批准。"
+        }
+      ],
+      "followup": {
+        "issue_id": "FURN-DIRECT-CROSSWALK",
+        "status": "open",
+        "claim_ids": [],
+        "audit_refs": [
+          "nace-cellar-correspondence-schemes-20261109",
+          "nace-cellar-current-mapping-targets-20261109",
+          "nace-cellar-current-incoming-isic-20261109",
+          "nace-cellar-current-positive-control-20261109"
+        ],
+        "finding": "补齐Cellar命名图的对应目录、出向命名空间、入向ISIC查询及1047节点阳性对照。当前直接NACE2.1–ISIC5关系未观察到；另采到真实NACE2→ISIC4官方直接表。",
+        "remaining": "当前版直接官方对应的发布仍待核查；空查询不是官方无对应声明，不能组成跨版官方等价。"
+      }
     },
     {
       "id": "FURN-FINISHING",
-      "status": "open",
+      "status": "partially_addressed",
       "claim_ids": [
         "F033",
         "F029"
       ],
       "finding": "当前对应表31.00→旧31.01共同内容列家具表面处理；2008手册把该活动列在31.09。两份原文并存，不重写历史分配。",
-      "next_action": "取得更正说明或旧版补充索引；暂不建立表面处理跨版已审子节点。"
+      "next_action": "取得更正说明或旧版补充索引；暂不建立表面处理跨版已审子节点。",
+      "history": [
+        {
+          "id": "FURN-FINISHING",
+          "status": "open",
+          "claim_ids": [
+            "F033",
+            "F029"
+          ],
+          "finding": "当前对应表31.00→旧31.01共同内容列家具表面处理；2008手册把该活动列在31.09。两份原文并存，不重写历史分配。",
+          "next_action": "取得更正说明或旧版补充索引；暂不建立表面处理跨版已审子节点。"
+        }
+      ],
+      "followup": {
+        "issue_id": "FURN-FINISHING",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "FF001",
+          "FF002",
+          "FF003",
+          "FF004",
+          "FF005",
+          "FF006",
+          "FF007",
+          "F029"
+        ],
+        "finding": "两套旧版与两套当前版支持新家具表面工序和首次软包；ISIC5在310组直接列项，故批准组级绑定。旧NACE RDF与2008手册均明确31.09；相反分配到31.01的对应表内容保留为候选。",
+        "remaining": "泛材料工序没有强制拆到3101/3102；旧31.01与31.09的发布者陈述差异未获更正。"
+      }
     },
     {
       "id": "FURN-CERAMIC-OLD",
@@ -1460,11 +2701,39 @@
         "F039"
       ],
       "finding": "官方对应表和旧31.09排除指向23.42，但2008的23.42未直接列出陶瓷家具。两版ISIC2393及当前NACE31.00直接支持陶瓷家具；旧NACE绑定继续待审。 另有UNSD旧对应2393→NACE23.42（原part标志1/0），但旧ISIC2393明确把卫生洁具排到2392；整类包含/等价同样不能据表格批准。2026当前2393已包含卫生洁具，不倒写旧版。",
-      "next_action": "核查旧NACE索引或官方释义；不把旧23.42整个卫生洁具类合并到家具。"
+      "next_action": "核查旧NACE索引或官方释义；不把旧23.42整个卫生洁具类合并到家具。",
+      "history": [
+        {
+          "id": "FURN-CERAMIC-OLD",
+          "status": "partially_addressed",
+          "claim_ids": [
+            "F034",
+            "F006",
+            "F007",
+            "F005",
+            "F039"
+          ],
+          "finding": "官方对应表和旧31.09排除指向23.42，但2008的23.42未直接列出陶瓷家具。两版ISIC2393及当前NACE31.00直接支持陶瓷家具；旧NACE绑定继续待审。 另有UNSD旧对应2393→NACE23.42（原part标志1/0），但旧ISIC2393明确把卫生洁具排到2392；整类包含/等价同样不能据表格批准。2026当前2393已包含卫生洁具，不倒写旧版。",
+          "next_action": "核查旧NACE索引或官方释义；不把旧23.42整个卫生洁具类合并到家具。"
+        }
+      ],
+      "followup": {
+        "issue_id": "FURN-CERAMIC-OLD",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "FF019",
+          "FF020",
+          "FF022",
+          "FF021",
+          "F039"
+        ],
+        "finding": "以新增官方旧→新表明确活动分配及旧31.09排除指向，批准旧23.42中的陶瓷家具部分；历史候选、原理由和本轮转换决定全部保留。",
+        "remaining": "旧23.42没有直接陶瓷家具包含条款的事实仍保留；ISIC4 2392/2393卫生洁具范围与NACE2整类对应冲突未解决。"
+      }
     },
     {
       "id": "FURN-NACE-ISIC-GENERALITY",
-      "status": "open",
+      "status": "partially_addressed",
       "claim_ids": [
         "F036",
         "F037",
@@ -1472,17 +2741,82 @@
         "F003"
       ],
       "finding": "手册通用方法称前两级相同，但当前NACE31明确含三种矿物家具，两版ISIC家具类明确排到23分支。以实际条款保留范围差异，通用描述不能替代逐项对应。",
-      "next_action": "查找家具特例的官方直接解释或修订对照；不声称NACE31.00等于ISIC3101+3102。"
+      "next_action": "查找家具特例的官方直接解释或修订对照；不声称NACE31.00等于ISIC3101+3102。",
+      "history": [
+        {
+          "id": "FURN-NACE-ISIC-GENERALITY",
+          "status": "open",
+          "claim_ids": [
+            "F036",
+            "F037",
+            "F002",
+            "F003"
+          ],
+          "finding": "手册通用方法称前两级相同，但当前NACE31明确含三种矿物家具，两版ISIC家具类明确排到23分支。以实际条款保留范围差异，通用描述不能替代逐项对应。",
+          "next_action": "查找家具特例的官方直接解释或修订对照；不声称NACE31.00等于ISIC3101+3102。"
+        }
+      ],
+      "followup": {
+        "issue_id": "FURN-NACE-ISIC-GENERALITY",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "F036",
+          "F037",
+          "FF002"
+        ],
+        "finding": "完整直接旧版桥已采到；发布者全用closeMatch，不等同于整类或上级等价。当前家具材料范围差异由原始定义逐条保留。",
+        "remaining": "通用方法描述不能覆盖具体家具/材料边界，当前NACE2.1–ISIC5直接表仍缺。"
+      }
     },
     {
       "id": "FURN-PARTS-RESIDUAL",
-      "status": "open",
+      "status": "partially_addressed",
       "claim_ids": [
         "F035",
         "F004"
       ],
       "finding": "家具部件与玻璃、石、陶瓷等独立板材存在边界；本轮七个活动只研究成品家具或床垫，未审完整类所有部件和表面处理。",
-      "next_action": "在材料、工序及成品范围上逐项核对；不强制清空待审范围。"
+      "next_action": "在材料、工序及成品范围上逐项核对；不强制清空待审范围。",
+      "history": [
+        {
+          "id": "FURN-PARTS-RESIDUAL",
+          "status": "open",
+          "claim_ids": [
+            "F035",
+            "F004"
+          ],
+          "finding": "家具部件与玻璃、石、陶瓷等独立板材存在边界；本轮七个活动只研究成品家具或床垫，未审完整类所有部件和表面处理。",
+          "next_action": "在材料、工序及成品范围上逐项核对；不强制清空待审范围。"
+        }
+      ],
+      "followup": {
+        "issue_id": "FURN-PARTS-RESIDUAL",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "FF016",
+          "FF017",
+          "FF018",
+          "FF008",
+          "FF009",
+          "FF012",
+          "FF013"
+        ],
+        "finding": "新增当前两源的可识别木制家具部件范围，旧版保留待审；维修及固定安装另作与制造并列的边界节点，不与首次制造处理混淆。",
+        "remaining": "旧部件分配、全部板材/部件及材料工序边界仍未全审。"
+      }
+    },
+    {
+      "id": "NACE2-ISIC4-46.6-DISAGREEMENT",
+      "status": "conflict_retained",
+      "claim_ids": [],
+      "finding": "995对代码事实一致；Eurostat RDF把NACE2 46.6连到ISIC4 466，UNSD表为465。已有2011-12-09更改历史明确将该组由466更正为465；两个来源原字节、谓词与行仍独立保留。此差异不在家具分支。",
+      "next_action": "等待Eurostat修订或明确说明，不回写RDF，不改变未审批发活动绑定。",
+      "evidence_resources": [
+        "nace-cellar-nace2-isic4-xkos-20261109",
+        "nace2-cellar-isic4-predicates-20261109",
+        "isic4-nace2-correspondence",
+        "isic4-nace2-change-history"
+      ]
     }
   ],
   "research_mappings": [
@@ -1538,12 +2872,33 @@
       "status": "reviewed_scoped_overlap",
       "activity_ids": [
         "urn:atlas:concept:6ab04405-74ec-5b8f-8897-3b5de79e1a97",
-        "urn:atlas:concept:fad1b940-a9dd-5a93-b756-656a232c5f88",
         "urn:atlas:concept:90302d7d-ca54-5ef9-897a-1e27cf3da742",
-        "urn:atlas:concept:ac8321b5-2927-55b1-a95d-fde77a6bfb90"
+        "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+        "urn:atlas:concept:ac8321b5-2927-55b1-a95d-fde77a6bfb90",
+        "urn:atlas:concept:fad1b940-a9dd-5a93-b756-656a232c5f88",
+        "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73"
       ],
       "allocation_weight": null,
-      "rationale": "两端明确包含相同的有界家具制造活动；不以NACE跨版与ISIC跨版链条传递为官方直接对应，保留材料排除和剩余范围。"
+      "rationale": "两端明确包含相同的有界家具制造活动；不以NACE跨版与ISIC跨版链条传递为官方直接对应，保留材料排除和剩余范围。",
+      "history": [
+        {
+          "id": "urn:atlas:mapping:2c9aecf8-58f3-5596-a8da-0b3184f24530",
+          "from": "ISIC:Rev.4:3100",
+          "to": "NACE:Rev.2.1:31.00",
+          "origin": "atlas_research",
+          "official_mapping_id": null,
+          "relation": "relatedMatch",
+          "status": "reviewed_scoped_overlap",
+          "activity_ids": [
+            "urn:atlas:concept:6ab04405-74ec-5b8f-8897-3b5de79e1a97",
+            "urn:atlas:concept:fad1b940-a9dd-5a93-b756-656a232c5f88",
+            "urn:atlas:concept:90302d7d-ca54-5ef9-897a-1e27cf3da742",
+            "urn:atlas:concept:ac8321b5-2927-55b1-a95d-fde77a6bfb90"
+          ],
+          "allocation_weight": null,
+          "rationale": "两端明确包含相同的有界家具制造活动；不以NACE跨版与ISIC跨版链条传递为官方直接对应，保留材料排除和剩余范围。"
+        }
+      ]
     },
     {
       "id": "urn:atlas:mapping:841923b9-5fb8-50e7-b8a4-33049991dcba",
@@ -1616,6 +2971,78 @@
       ],
       "allocation_weight": null,
       "rationale": "两端明确包含相同的有界家具制造活动；不以NACE跨版与ISIC跨版链条传递为官方直接对应，保留材料排除和剩余范围。"
+    },
+    {
+      "id": "urn:atlas:mapping:afd2fbf0-b038-5fdd-a061-63938e1cccfc",
+      "from": "ISIC:Rev.4:4330",
+      "to": "NACE:Rev.2.1:43.32",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    },
+    {
+      "id": "urn:atlas:mapping:5bdd5162-317a-5cff-98d7-d40de78b507a",
+      "from": "ISIC:Rev.4:9524",
+      "to": "NACE:Rev.2.1:95.24",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    },
+    {
+      "id": "urn:atlas:mapping:54bc2a85-6f81-57e7-a8f9-e34397c251d3",
+      "from": "ISIC:Rev.5:310",
+      "to": "NACE:Rev.2.1:31.00",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+        "urn:atlas:concept:a60871c8-0358-52b9-92de-cef4ebb4fba4",
+        "urn:atlas:concept:03187e29-de4c-5c3f-85fe-6db8d46e1aad"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    },
+    {
+      "id": "urn:atlas:mapping:816718d4-8ca2-570d-8a7b-a96ade02f4b0",
+      "from": "ISIC:Rev.5:4330",
+      "to": "NACE:Rev.2.1:43.32",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:820e0983-889a-57d8-a9b7-8d7ba35109d5"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
+    },
+    {
+      "id": "urn:atlas:mapping:9a188bc5-fa52-5c96-a930-85a2d625b19e",
+      "from": "ISIC:Rev.5:9524",
+      "to": "NACE:Rev.2.1:95.24",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:a87fc980-3ff0-516a-aadd-257f2252a9e6"
+      ],
+      "allocation_weight": null,
+      "rationale": "直接选段支持两端相同的有界活动；组级证据保留组级，当前部件不补造旧版范围；不是多表传递出的官方对应。"
     }
   ],
   "official_reviews": [
@@ -1634,6 +3061,9 @@
       },
       "topology": "many_to_many",
       "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:008534b5-0a6d-574e-adba-e751e5e915d5",
         "status": "reviewed_scoped_correspondence",
@@ -1662,6 +3092,9 @@
       },
       "topology": "many_to_many",
       "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:9f72790a-b8b2-54dd-b082-426e341433d6",
         "status": "reviewed_scoped_correspondence",
@@ -1690,6 +3123,9 @@
       },
       "topology": "many_to_many",
       "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:18f02d75-8d4a-5faa-8537-2d785986d4ff",
         "status": "reviewed_scoped_correspondence",
@@ -1718,6 +3154,9 @@
       },
       "topology": "one_to_many",
       "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:f2e84ca4-4b69-5477-babd-f5438fd29125",
         "status": "reviewed_scoped_correspondence",
@@ -1746,6 +3185,9 @@
       },
       "topology": "one_to_many",
       "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:359263b1-dd88-5833-a423-a6a3fd8f2f12",
         "status": "reviewed_scoped_correspondence",
@@ -1774,6 +3216,9 @@
       },
       "topology": "one_to_many",
       "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:6e722cc1-d573-5678-b088-6cf6126aa71e",
         "status": "reviewed_scoped_correspondence",
@@ -1802,6 +3247,9 @@
       },
       "topology": "one_to_many",
       "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:0b68f45d-16df-5d6c-9001-6067a87f6d41",
         "status": "reviewed_scoped_correspondence",
@@ -1832,6 +3280,9 @@
         "ISIC4part": "1",
         "NACE2part": "0"
       },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:b401862d-e4ac-56fc-a549-7f0ca41ca0ac",
         "status": "reviewed_scoped_correspondence",
@@ -1861,6 +3312,9 @@
         "ISIC4part": "1",
         "NACE2part": "0"
       },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:fef6c3e8-35c7-53d0-ace0-d37c16d5a3b5",
         "status": "reviewed_scoped_correspondence",
@@ -1890,6 +3344,9 @@
         "ISIC4part": "0",
         "NACE2part": "0"
       },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:c1390771-c7e5-59c4-92d4-af1eab96f05c",
         "status": "reviewed_scoped_correspondence",
@@ -1919,6 +3376,9 @@
         "ISIC4part": "1",
         "NACE2part": "0"
       },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:ad0a8011-d924-5cd5-b2a4-a147df79fa1b",
         "status": "reviewed_scoped_correspondence",
@@ -1948,6 +3408,9 @@
         "ISIC4part": "1",
         "NACE2part": "0"
       },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:ae6a9459-0304-5b59-b6de-75d350eb4ece",
         "status": "reviewed_scoped_correspondence",
@@ -1977,6 +3440,9 @@
         "ISIC4part": "1",
         "NACE2part": "0"
       },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:c3672793-8275-5ae1-93b0-e3928c6549a1",
         "status": "reviewed_scoped_correspondence",
@@ -2006,6 +3472,9 @@
         "ISIC4part": "1",
         "NACE2part": "0"
       },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
       "review": {
         "mapping_id": "urn:atlas:mapping:b71b1b8a-4eb0-5a6d-a802-782650a05681",
         "status": "reviewed_scoped_correspondence",
@@ -2014,6 +3483,916 @@
           "F015"
         ],
         "rationale": "按原表方向和part字段保留范围；只审查家具活动相关，未把整个ISIC材料类或家具总类与NACE细类合并。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:b5b9b228-574a-5fce-ae81-c044f97ab9e8",
+      "from": "NACE:Rev.2:23.42",
+      "to": "NACE:Rev.2.1:31.00",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 333
+      },
+      "topology": "many_to_many",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:b5b9b228-574a-5fce-ae81-c044f97ab9e8",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF023"
+        ],
+        "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:ef3cc97a-908f-5486-84d8-52c4093762a6",
+      "from": "NACE:Rev.2:23.69",
+      "to": "NACE:Rev.2.1:31.00",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 348
+      },
+      "topology": "many_to_many",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:ef3cc97a-908f-5486-84d8-52c4093762a6",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF024"
+        ],
+        "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:a797d09b-9a0e-51eb-9742-7459ca7fda7e",
+      "from": "NACE:Rev.2:23.70",
+      "to": "NACE:Rev.2.1:31.00",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 351
+      },
+      "topology": "many_to_many",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:a797d09b-9a0e-51eb-9742-7459ca7fda7e",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF025"
+        ],
+        "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:42d35c5b-0e30-5a86-a83b-7ee49c2c0a7b",
+      "from": "NACE:Rev.2:31.01",
+      "to": "NACE:Rev.2.1:31.00",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 542
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:42d35c5b-0e30-5a86-a83b-7ee49c2c0a7b",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F013"
+        ],
+        "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:3ba894bb-e60b-5b9d-9ee5-8d232b0e55b6",
+      "from": "NACE:Rev.2:31.02",
+      "to": "NACE:Rev.2.1:31.00",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 543
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:3ba894bb-e60b-5b9d-9ee5-8d232b0e55b6",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF026"
+        ],
+        "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:99a627b0-c344-52c2-b5e0-643795fd45d6",
+      "from": "NACE:Rev.2:31.03",
+      "to": "NACE:Rev.2.1:31.00",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 544
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:99a627b0-c344-52c2-b5e0-643795fd45d6",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF027"
+        ],
+        "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:f72d3ac3-252a-5de8-8c7c-317340d63cba",
+      "from": "NACE:Rev.2:31.09",
+      "to": "NACE:Rev.2.1:31.00",
+      "evidence": {
+        "resource_id": "nace2-nace21-correspondence-20260831",
+        "edition": "Rev.2",
+        "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+        "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "publication_date": null,
+        "sheet": "Sheet0",
+        "row": 545
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:f72d3ac3-252a-5de8-8c7c-317340d63cba",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF028"
+        ],
+        "rationale": "原方向旧→新保留，三种矿物家具只是活动部分转入，四个家具类合并；31.01共同内容原为空，不补写范围。只批准明确共同活动相关，非整类等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:10b212f6-9cb0-5fa6-bf98-6445950b03d8",
+      "from": "NACE:Rev.2:23.42",
+      "to": "ISIC:Rev.4:2393",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_252",
+        "result_rows": [
+          513,
+          514,
+          515
+        ]
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 249
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/2342"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/2393"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:10b212f6-9cb0-5fa6-bf98-6445950b03d8",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF019"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:26fbaaa5-0479-5d9a-bcf7-83450ae5174c",
+      "from": "NACE:Rev.2:23.69",
+      "to": "ISIC:Rev.4:2395",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_265",
+        "result_rows": [
+          555,
+          556,
+          557
+        ]
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 262
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/2369"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/2395"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:26fbaaa5-0479-5d9a-bcf7-83450ae5174c",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F017"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:1127eff1-75c9-5156-b0bd-59e727fa6723",
+      "from": "NACE:Rev.2:23.70",
+      "to": "ISIC:Rev.4:2396",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_267",
+        "result_rows": [
+          561,
+          562,
+          563
+        ]
+      },
+      "topology": "one_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 264
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/2370"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/2396"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:1127eff1-75c9-5156-b0bd-59e727fa6723",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F016"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:29393451-9264-5526-a96d-a78231e6997b",
+      "from": "NACE:Rev.2:31.01",
+      "to": "ISIC:Rev.4:3100",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_406",
+        "result_rows": [
+          1026,
+          1027,
+          1028
+        ]
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 403
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/3101"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/3100"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:29393451-9264-5526-a96d-a78231e6997b",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F013"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:72074f2f-109b-57f8-a23e-41edca4128e1",
+      "from": "NACE:Rev.2:31.02",
+      "to": "ISIC:Rev.4:3100",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_407",
+        "result_rows": [
+          1029,
+          1030,
+          1031
+        ]
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 404
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/3102"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/3100"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:72074f2f-109b-57f8-a23e-41edca4128e1",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F012"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:5e71d094-e43d-5cfe-811d-eb538a0b7d7e",
+      "from": "NACE:Rev.2:31.03",
+      "to": "ISIC:Rev.4:3100",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_408",
+        "result_rows": [
+          1032,
+          1033,
+          1034
+        ]
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 405
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/3103"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/3100"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:5e71d094-e43d-5cfe-811d-eb538a0b7d7e",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F014"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:91505942-598e-53ae-a267-4b84ad0073b9",
+      "from": "NACE:Rev.2:31.09",
+      "to": "ISIC:Rev.4:3100",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_409",
+        "result_rows": [
+          1035,
+          1036,
+          1037
+        ]
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 406
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/3109"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/3100"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:91505942-598e-53ae-a267-4b84ad0073b9",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F015"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:d88c7488-0acd-558f-bb9b-1e9fc100149e",
+      "from": "NACE:Rev.2:43.32",
+      "to": "ISIC:Rev.4:4330",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_499",
+        "result_rows": [
+          1332,
+          1333,
+          1334
+        ]
+      },
+      "topology": "many_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 493
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/4332"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/4330"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:d88c7488-0acd-558f-bb9b-1e9fc100149e",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF014"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:142a8a86-9ec8-59d4-84d9-dbfadd97aeb7",
+      "from": "NACE:Rev.2:95.24",
+      "to": "ISIC:Rev.4:9524",
+      "evidence": {
+        "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+        "edition": "Rev.2",
+        "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+        "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "publication_date": null,
+        "association_uri": "http://data.europa.eu/ux2/nace2/NACE2_ISIC4_974",
+        "result_rows": [
+          2916,
+          2917,
+          2918
+        ]
+      },
+      "topology": "one_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": "closeMatch",
+      "publisher_predicate": {
+        "predicate_uri": "http://www.w3.org/2004/02/skos/core#closeMatch",
+        "relation": "closeMatch",
+        "evidence": {
+          "resource_id": "nace2-cellar-isic4-predicates-20261109",
+          "edition": "Rev.2",
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "publication_date": null,
+          "result_row": 955
+        },
+        "original_row": {
+          "s": {
+            "type": "uri",
+            "value": "http://data.europa.eu/ux2/nace2/9524"
+          },
+          "p": {
+            "type": "uri",
+            "value": "http://www.w3.org/2004/02/skos/core#closeMatch"
+          },
+          "o": {
+            "type": "uri",
+            "value": "https://unstats.un.org/classifications/ISIC/rev4/9524"
+          }
+        }
+      },
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:142a8a86-9ec8-59d4-84d9-dbfadd97aeb7",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF010"
+        ],
+        "rationale": "发布者996条SKOS关系均为closeMatch，原语义、URI、XKOS关联及方向保留。Atlas仅批准家具相关有界活动关联；不把closeMatch或逆向part标志升级为整类包含/等价。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:17726393-4331-512f-81ed-5334413f5a7e",
+      "from": "ISIC:Rev.4:4330",
+      "to": "NACE:Rev.2:43.32",
+      "evidence": {
+        "resource_id": "isic4-nace2-correspondence",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+        "sha256": "fd5283a539afecfb36aad2ad3023787c333a133458463592d681c30d1a15a101",
+        "publication_date": null,
+        "line": 500
+      },
+      "topology": "one_to_many",
+      "publisher_partial_flags": {
+        "ISIC4part": "1",
+        "NACE2part": "0"
+      },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:17726393-4331-512f-81ed-5334413f5a7e",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF012"
+        ],
+        "rationale": "仅审定重新软包/翻修或固定厨房安装共同活动；原part标志及完整建筑/维修剩余范围保留。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:42bcaea3-9295-5691-bf90-780711ae0014",
+      "from": "ISIC:Rev.4:9524",
+      "to": "NACE:Rev.2:95.24",
+      "evidence": {
+        "resource_id": "isic4-nace2-correspondence",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+        "sha256": "fd5283a539afecfb36aad2ad3023787c333a133458463592d681c30d1a15a101",
+        "publication_date": null,
+        "line": 975
+      },
+      "topology": "one_to_one",
+      "publisher_partial_flags": {
+        "ISIC4part": "0",
+        "NACE2part": "0"
+      },
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": null,
+      "review": {
+        "mapping_id": "urn:atlas:mapping:42bcaea3-9295-5691-bf90-780711ae0014",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "FF008"
+        ],
+        "rationale": "仅审定重新软包/翻修或固定厨房安装共同活动；原part标志及完整建筑/维修剩余范围保留。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:2c44ef00-2f3b-5c5e-a988-567cafc294b7",
+      "from": "ISIC:Rev.4:2393",
+      "to": "ISIC:Rev.5:2393",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 124,
+        "range": "A124:H124"
+      },
+      "topology": "one_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": [],
+      "review": {
+        "mapping_id": "urn:atlas:mapping:2c44ef00-2f3b-5c5e-a988-567cafc294b7",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F006",
+          "F007"
+        ],
+        "activity_ids": [
+          "urn:atlas:concept:953444c4-dddf-55cc-be13-9ab1fb231965"
+        ],
+        "rationale": "仅审定材料家具活动的共同范围；2393的2026卫生洁具更新与完整类分配未据此解决，其他原始GSIM和拆分语义保留。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:04afaf5c-2779-53cc-a2fd-d9dacebb2ccc",
+      "from": "ISIC:Rev.4:2395",
+      "to": "ISIC:Rev.5:2395",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 126,
+        "range": "A126:H126"
+      },
+      "topology": "one_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": [],
+      "review": {
+        "mapping_id": "urn:atlas:mapping:04afaf5c-2779-53cc-a2fd-d9dacebb2ccc",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F010",
+          "F011"
+        ],
+        "activity_ids": [
+          "urn:atlas:concept:c72ff127-cb99-5780-9fe4-b57c518f50ff"
+        ],
+        "rationale": "仅审定材料家具活动的共同范围；2393的2026卫生洁具更新与完整类分配未据此解决，其他原始GSIM和拆分语义保留。",
+        "whole_class_relation_status": "not_approved",
+        "reviewer": "Codex"
+      }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:c791641a-35a8-516e-ae08-fae7fee9eff7",
+      "from": "ISIC:Rev.4:2396",
+      "to": "ISIC:Rev.5:2396",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 127,
+        "range": "A127:H127"
+      },
+      "topology": "one_to_one",
+      "publisher_partial_flags": null,
+      "publisher_relation": null,
+      "publisher_predicate": null,
+      "gsim_ids": [],
+      "review": {
+        "mapping_id": "urn:atlas:mapping:c791641a-35a8-516e-ae08-fae7fee9eff7",
+        "status": "reviewed_scoped_correspondence",
+        "relation": "relatedMatch",
+        "claim_ids": [
+          "F008",
+          "F009"
+        ],
+        "activity_ids": [
+          "urn:atlas:concept:25b63788-e272-5383-8e9f-d75e40436686"
+        ],
+        "rationale": "仅审定材料家具活动的共同范围；2393的2026卫生洁具更新与完整类分配未据此解决，其他原始GSIM和拆分语义保留。",
         "whole_class_relation_status": "not_approved",
         "reviewer": "Codex"
       }

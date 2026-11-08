@@ -1,0 +1,1 @@
+SELECT DISTINCT ?g ?table ?scheme ?other WHERE { VALUES ?scheme { <http://data.europa.eu/ux2/nace2/nace2> <http://data.europa.eu/ux2/nace2.1/nace2.1> } GRAPH ?g { ?table <http://rdf-vocabulary.ddialliance.org/xkos#compares> ?scheme ; <http://rdf-vocabulary.ddialliance.org/xkos#compares> ?other } } ORDER BY ?g ?table ?scheme ?other

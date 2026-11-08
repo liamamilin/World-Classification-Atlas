@@ -1,0 +1,1 @@
+SELECT (COUNT(DISTINCT ?s) AS ?count) WHERE { GRAPH ?g { ?s <http://www.w3.org/2004/02/skos/core#inScheme> <http://data.europa.eu/ux2/nace2.1/nace2.1> } }

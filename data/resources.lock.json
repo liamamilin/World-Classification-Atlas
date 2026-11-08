@@ -166,5 +166,65 @@
     "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/Change%20history.txt",
     "source_id": "ISIC",
     "edition": "Rev.4"
+  },
+  "nace2-download-list-20261109": {
+    "sha256": "5f56913345eb7ee538b525f98023ee575993c2012ecd458bc90f25c15e158a85",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getDownloadInfoList?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2",
+    "source_id": "NACE",
+    "edition": "Rev.2"
+  },
+  "nace2-nace21-correspondence-20260831": {
+    "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+    "source_id": "NACE",
+    "edition": "Rev.2"
+  },
+  "nace-showvoc-catalog-20261109": {
+    "sha256": "0eb2273a5cdec5ff5a61791a3bb403f590e0173992a345d41c2bc8befbc1e51d",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Projects/listProjects?consumer=SYSTEM",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "nace2-cellar-selected-notes-20261109": {
+    "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+    "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fs+%3Fp+%3Fo+WHERE+%7B+VALUES+%3Fs+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FC%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F23%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F234%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F236%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F237%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2342%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2369%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F2370%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F31%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F310%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3101%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3102%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3103%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F3109%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FS%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F95%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F952%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F9524%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FF%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F43%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F433%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2F4332%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23notation%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broader%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23prefLabel%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2002%2F07%2Fowl%23versionInfo%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23coreContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23additionalContentNote%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23exclusionNote%3E+%7D+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+    "source_id": "NACE",
+    "edition": "Rev.2"
+  },
+  "nace2-cellar-isic4-predicates-20261109": {
+    "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+    "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+    "source_id": "NACE",
+    "edition": "Rev.2"
+  },
+  "nace-cellar-correspondence-schemes-20261109": {
+    "sha256": "c2eda8bfcfb607c9d8f347277cc1ba922f60a5695dee7bb81205515246948ff8",
+    "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fg+%3Ftable+%3Fscheme+%3Fother+WHERE+%7B+VALUES+%3Fscheme+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+GRAPH+%3Fg+%7B+%3Ftable+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23compares%3E+%3Fscheme+%3B+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23compares%3E+%3Fother+%7D+%7D+ORDER+BY+%3Fg+%3Ftable+%3Fscheme+%3Fother&format=application%2Fsparql-results%2Bjson",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "nace-cellar-current-mapping-targets-20261109": {
+    "sha256": "0b99073b0d4331d885e63e7c4b03d96c4115171e91a6c4243f4ac1f62624df5f",
+    "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fp+%28REPLACE%28STR%28%3Fo%29%2C%22%2F%5B%5E%2F%5D%2A%24%22%2C%22%22%29+AS+%3FtargetNamespace%29+WHERE+%7B+GRAPH+%3Fg+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+%7D+%7D+ORDER+BY+%3Fp+%3FtargetNamespace&format=application%2Fsparql-results%2Bjson",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "nace-cellar-current-positive-control-20261109": {
+    "sha256": "2971c1731598bbbbb5cfdc40c7d801a3fd86a01b396c8c46ff1d5060bf3793b8",
+    "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%28COUNT%28DISTINCT+%3Fs%29+AS+%3Fcount%29+WHERE+%7B+GRAPH+%3Fg+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+%7D&format=application%2Fsparql-results%2Bjson",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "nace-cellar-nace2-isic4-xkos-20261109": {
+    "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+    "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+    "source_id": "NACE",
+    "edition": "Rev.2"
+  },
+  "nace-cellar-current-incoming-isic-20261109": {
+    "sha256": "6acf2493944f74fe96bb2cabbf77364437dd70911b91261b39c773baa31048d5",
+    "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fg+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7B+%3Fo+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+GRAPH+%3Fg+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28REGEX%28STR%28%3Fs%29%2C+%22isic%22%2C+%22i%22%29%29+%7D+ORDER+BY+%3Fg+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
   }
 }

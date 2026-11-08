@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "review_date": "2026-11-08",
+  "review_date": "2026-11-09",
   "scope": "Classification schemes only; domains are navigation; no real-world instance links.",
   "domains": [
     {
@@ -291,13 +291,18 @@
       ],
       "official_url": "https://ec.europa.eu/eurostat/web/nace/",
       "verification_status": "partially_verified",
-      "checked_on": "2026-11-08",
+      "checked_on": "2026-11-09",
       "editions": [
         {
           "id": "Rev.2",
           "label": "NACE Rev.2 (2008 manual)",
           "status": "confirmed_available",
-          "latest_claim": false
+          "latest_claim": false,
+          "evidence_components": [
+            "nace2-manual-2008",
+            "nace2-nace21-correspondence-20260831",
+            "nace2-cellar-selected-notes-20261109"
+          ]
         },
         {
           "id": "Rev.2.1",
@@ -378,6 +383,22 @@
             "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE_Rev.2.1_NACE_Rev.2_+CorrespondenceTable.xlsx",
             "status": "downloaded_and_parsed",
             "semantics": "Published direction preserved; 1598 rows across four levels, one explicit no-correspondence row. Furniture 31.00 has seven old class counterparts; three material transfers are partial scopes."
+          },
+          {
+            "from_edition": "NACE Rev.2",
+            "to_edition": "NACE Rev.2.1",
+            "resource_id": "nace2-nace21-correspondence-20260831",
+            "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+            "status": "downloaded_and_parsed",
+            "semantics": "Actual published reverse direction; 1598 rows. Blank source/level for unmatched46.89 and its G=1 preserved. No reverse table generated from another table."
+          },
+          {
+            "from_edition": "NACE Rev.2",
+            "to_edition": "ISIC Rev.4",
+            "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+            "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+            "status": "downloaded_and_parsed",
+            "semantics": "996 official direct XKOS associations, independently observed SKOS closeMatch predicates; 995 code pairs agree with UNSD, group46.6 differs (Eurostat466, UNSD465). No exactMatch conversion."
           }
         ]
       },
@@ -421,11 +442,23 @@
             "official_mappings"
           ],
           "finding": "Public Download service returns official file inventory; 2026-09-30 notes and 2026-09-29 correspondence upload timestamps are dissemination-component timestamps, not new classification revisions."
+        },
+        {
+          "url": "https://cros.ec.europa.eu/book-page/sparql-queries-user-guide",
+          "method": "official_documentation_and_pinned_named_graph_queries",
+          "fields": [
+            "official_mappings",
+            "download",
+            "editions"
+          ],
+          "finding": "Correct dotless item IRIs and full scheme IRIs verified. Old NACE2–ISIC4 direct table parsed; current mapping audit has a 1047-node positive control, complete outgoing namespaces, incoming ISIC query and XKOS table inventory. No current ISIC5 direct relation observed in this defined snapshot."
         }
       ],
       "unresolved": [
-        "未在已核查的Eurostat/UNSD下载入口发现NACE Rev.2.1与ISIC Rev.5直接对应表；不以版本链传递当作官方直接对应。",
-        "本轮只研究家具分支；全体系对应与非家具定义未逐项审查。"
+        "当前NACE2.1与ISIC5直接官方对应在已审计Cellar命名图及下载清单未观察到；保留开放，不把空结果解释为官方无对应。",
+        "家具表面处理在旧31.01/31.09的对应表与定义陈述不同；材料细类、旧部件范围继续待审。陶瓷家具部分已按明确官方活动分配审定，旧卫生洁具整类冲突仍保留。",
+        "官方NACE2–ISIC4两来源在46.6→466/465存在一对代码差异；原值及2011更改历史均保留。",
+        "本轮仍为家具与边界活动的局部整理，非全NACE或全经济活动融合。"
       ]
     },
     {

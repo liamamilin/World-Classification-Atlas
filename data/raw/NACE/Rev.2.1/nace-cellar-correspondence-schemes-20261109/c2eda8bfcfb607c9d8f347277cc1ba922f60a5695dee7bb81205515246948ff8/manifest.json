@@ -1,0 +1,31 @@
+{
+  "resource_id": "nace-cellar-correspondence-schemes-20261109",
+  "source_id": "NACE",
+  "edition": "Rev.2.1",
+  "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fg+%3Ftable+%3Fscheme+%3Fother+WHERE+%7B+VALUES+%3Fscheme+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+GRAPH+%3Fg+%7B+%3Ftable+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23compares%3E+%3Fscheme+%3B+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23compares%3E+%3Fother+%7D+%7D+ORDER+BY+%3Fg+%3Ftable+%3Fscheme+%3Fother&format=application%2Fsparql-results%2Bjson",
+  "attempted_at": "2026-11-08T16:10:53.559835+00:00",
+  "final_url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fg+%3Ftable+%3Fscheme+%3Fother+WHERE+%7B+VALUES+%3Fscheme+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+GRAPH+%3Fg+%7B+%3Ftable+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23compares%3E+%3Fscheme+%3B+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23compares%3E+%3Fother+%7D+%7D+ORDER+BY+%3Fg+%3Ftable+%3Fscheme+%3Fother&format=application%2Fsparql-results%2Bjson",
+  "http_status": 200,
+  "content_type": "application/sparql-results+json",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "c2eda8bfcfb607c9d8f347277cc1ba922f60a5695dee7bb81205515246948ff8",
+  "bytes": 19469,
+  "path": "data/raw/NACE/Rev.2.1/nace-cellar-correspondence-schemes-20261109/c2eda8bfcfb607c9d8f347277cc1ba922f60a5695dee7bb81205515246948ff8/nace-cellar-correspondence-schemes-20261109.json",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "Eurostat reuse policy (attribution and changes required)",
+    "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+  },
+  "role": "official_sparql_result",
+  "language": "en",
+  "format": "json",
+  "publication_date": null,
+  "robots": {
+    "url": "https://publications.europa.eu/robots.txt",
+    "result": "fetched",
+    "allowed": true
+  }
+}

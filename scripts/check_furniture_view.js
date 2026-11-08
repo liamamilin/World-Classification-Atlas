@@ -8,19 +8,20 @@ class Element {
   appendChild(child){this.children.push(child);return child;}
   replaceChildren(...children){this.children=[...children];}
 }
-const elements=new Map(['data','scheme','search','tree','detail','stats','issues'].map(k=>[k,new Element(k)]));
+const elements=new Map(['data','scheme','search','tree','detail','stats','issues','audit'].map(k=>[k,new Element(k)]));
 elements.get('data').textContent=payload;elements.get('scheme').value='atlas';
 const context={document:{getElementById:id=>elements.get(id),createElement:tag=>new Element(tag)}};
 vm.runInNewContext(code,context);
 const text=n=>[n.textContent,...n.children.map(text)].join(' ');
 const view=context.furnitureView;
-assert.equal(elements.get('tree').children.length,11,'complete own branch tree');
+assert.equal(elements.get('tree').children.length,18,'complete own branch trees');
 const ceramic=view.data.directory.concepts.find(n=>n.key==='ceramic');
 view.show(ceramic);
 assert.match(text(elements.get('detail')),/NACE:Rev.2.1:31.00/);
 assert.match(text(elements.get('detail')),/ISIC:Rev.4:2393/);
 assert.match(text(elements.get('detail')),/ISIC:Rev.5:2393/);
-assert.match(text(elements.get('detail')),/待审来源.*NACE:Rev.2:23.42/);
+assert.match(text(elements.get('detail')),/历史绑定.*NACE:Rev.2:23.42/);
+assert.match(text(elements.get('detail')),/官方对应表的具体活动分配/);
 assert.match(text(elements.get('detail')),/field_sha256/);
 view.show(view.data.sources.find(n=>n.id==='NACE:Rev.2.1:31.00'));
 assert.match(text(elements.get('detail')),/官方行及独立审查/);
@@ -32,4 +33,16 @@ assert.match(text(elements.get('tree')),/31.0/);
 assert.match(text(elements.get('tree')),/Manufacturing/);
 assert.match(text(elements.get('issues')),/FURN-FINISHING/);
 assert.match(text(elements.get('issues')),/FURN-DIRECT-CROSSWALK/);
+assert.match(text(elements.get('issues')),/NACE2-ISIC4-46.6-DISAGREEMENT/);
+assert.match(text(elements.get('audit')),/1047/);
+const surface=view.data.directory.concepts.find(n=>n.key==='new-furniture-surface-finishing');
+view.show(surface);
+assert.match(text(elements.get('detail')),/组级证据/);
+assert.match(text(elements.get('detail')),/待审来源.*NACE:Rev.2:31.01/);
+const parts=view.data.directory.concepts.find(n=>n.key==='recognisable-wooden-furniture-parts');
+view.show(parts);
+assert.match(text(elements.get('detail')),/仅当前两套体系已审/);
+assert.match(text(elements.get('detail')),/pending_legacy_parts_scope/);
+view.show(view.data.sources.find(n=>n.id==='NACE:Rev.2:31.09'));
+assert.match(text(elements.get('detail')),/独立说明组件/);
 console.log('Passed: furniture source trees, stable own IDs, directional bindings, evidence hashes, candidate separation, official/research distinction and conflicts. Visual layout not tested.');

@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "method": "fresh directory; pinned raw assets, manifests and two research inputs only; no network",
+  "method": "fresh directory; pinned raw assets, manifests, query texts and three research inputs only; no network",
   "files": [
     {
       "path": "data/atlas/economy/furniture-directory.json",
-      "sha256": "ecd84843c775eadf4c22ba33b7d7e3651508d5ac19d2b892b362d1c739513bd0",
+      "sha256": "d6f5616f2c81a4c117883eecfac3e29844d655d51665a050c5641a71fa2fdabd",
       "identical": true
     },
     {
@@ -13,13 +13,28 @@
       "identical": true
     },
     {
+      "path": "data/local/economy/furniture/cellar-direct-isic4-20261109.jsonl",
+      "sha256": "6aae436fa03c8309ee98b00e50e6418d32e68f48f7cfdb3267f915964f53bf5f",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/cellar-selected-notes-20261109.jsonl",
+      "sha256": "4e3f1ae4be1012bdfd795b770adaf7c5834b2ce69fa8c1706a14d6305613d2bf",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/correspondence-to-Rev.2.1-20260831.jsonl",
+      "sha256": "09aa139bd9fee17c49a81ecdc766d84028a2de9417bd02a1e1194116db321b2a",
+      "identical": true
+    },
+    {
       "path": "data/local/economy/furniture/evidence-dossiers.json",
-      "sha256": "4895aa3dc0b5fb3e18f93b8ca8854afa93583c8ea40d80d56714250aaf624e4f",
+      "sha256": "b3e17ce0cc1d2054d13feea7b8f7c5e9c29135ec5004b76fde3a456630eb6578",
       "identical": true
     },
     {
       "path": "data/local/economy/furniture/index.html",
-      "sha256": "5df9925ccc9de0f23145d1efca3e77eba56b0fbd00925291cb4967953486f358",
+      "sha256": "854717181561a1d930f7ff11dce080a270ec56453b9b2b9de211b14dffb1713c",
       "identical": true
     },
     {
@@ -59,7 +74,22 @@
     },
     {
       "path": "data/local/economy/furniture/source-branches.json",
-      "sha256": "8724f66efd0c4f616ff12ede1d95cc10e902cd35b231d9697b1944b794dd300d",
+      "sha256": "133a9d81506e34d11a9573c11916d262fd64e2c6781f1def400f97b73581dbe0",
+      "identical": true
+    },
+    {
+      "path": "data/normalized/NACE/Rev.2/cellar-direct-isic4-20261109.jsonl",
+      "sha256": "6aae436fa03c8309ee98b00e50e6418d32e68f48f7cfdb3267f915964f53bf5f",
+      "identical": true
+    },
+    {
+      "path": "data/normalized/NACE/Rev.2/cellar-selected-notes-20261109.jsonl",
+      "sha256": "4e3f1ae4be1012bdfd795b770adaf7c5834b2ce69fa8c1706a14d6305613d2bf",
+      "identical": true
+    },
+    {
+      "path": "data/normalized/NACE/Rev.2/correspondence-to-Rev.2.1-20260831.jsonl",
+      "sha256": "09aa139bd9fee17c49a81ecdc766d84028a2de9417bd02a1e1194116db321b2a",
       "identical": true
     },
     {
@@ -74,10 +104,10 @@
     },
     {
       "path": "data/reports/furniture-alignment.json",
-      "sha256": "e25b02bf32701813bd3c78ae1b8bbda4d5d018dac7f4f04a64428ae7e155a518",
+      "sha256": "d192ba1782201999b6a51f6a1d24d4b0e0c90bf043a6838ed030330a47a6296e",
       "identical": true
     }
   ],
-  "compared_files": 15,
-  "identical_files": 15
+  "compared_files": 21,
+  "identical_files": 21
 }

@@ -1,0 +1,50 @@
+{
+  "recorded_on": "2026-11-09",
+  "timezone": "Asia/Shanghai",
+  "exact_probe_timestamps": "not_recorded; immutable acquisitions retain UTC times",
+  "observations": [
+    {
+      "id": "DOTTED-URI-EMPTY",
+      "method": "official_Cellar_SPARQL_GET",
+      "outcome": "HTTP200_empty_results",
+      "query_examples": [
+        "http://data.europa.eu/ux2/nace2/23.42",
+        "http://data.europa.eu/ux2/nace2.1/31.00"
+      ],
+      "resolution": "Actual source item IRIs are dotless (2342/3100); early empty results discarded as absence evidence. Final queries use named graphs, correct scheme URIs and 1047-node positive control."
+    },
+    {
+      "id": "BROAD-SCAN-TIMEOUT",
+      "method": "HTTPClient_timeout_25_seconds_limited_retry",
+      "outcome": "TimeoutError",
+      "resolution": "Replaced broad prefix scan with exact URI/graph/known-scheme queries; no result was treated as a negative finding."
+    },
+    {
+      "id": "SHOWVOC-SPARQL-502",
+      "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/SPARQL/evaluateQuery",
+      "method": "GET_read_only_query",
+      "outcome": "HTTP502",
+      "resolution": "Official Cellar endpoint documented by Eurostat succeeded; no credentials, login or restrictions bypassed."
+    },
+    {
+      "id": "CIRCABC-ARCHIVE-PAGE",
+      "url": "https://circabc.europa.eu/ui/group/c1b49c83-24a7-4ff2-951c-621ac0a89fd8/library/579984e5-610d-4adb-af35-a16e014a3cd9",
+      "method": "web_page_reader",
+      "outcome": "HTTP404",
+      "resolution": "No archive absence claim; obtained primary legacy notes through official Cellar."
+    },
+    {
+      "id": "REVERSE-EMPTY-SOURCE",
+      "resource_id": "nace2-nace21-correspondence-20260831",
+      "sheet": "Sheet0",
+      "row": 2,
+      "outcome": "Initial strict parser rejected blank Level; observed G=1 also differs from source graph degree0",
+      "resolution": "Preserve null source and null source level, target_level4, original G1; mark count check not applicable to a missing source. Regression test added."
+    },
+    {
+      "id": "OFFICIAL-CODE-PAIR-DIFFERENCE",
+      "outcome": "Initial all-pairs agreement assertion failed",
+      "resolution": "Both actual publisher variants retained and explicit comparison review frozen; Eurostat46.6→466 versus UNSD46.6→465. All995 common pairs remain separate from semantic approval."
+    }
+  ]
+}

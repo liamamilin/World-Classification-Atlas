@@ -542,5 +542,149 @@
     "bytes": 242,
     "status": "format_checked_only",
     "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
+    "resource_id": "nace2-download-list-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2",
+    "role": "official_download_inventory",
+    "sha256": "5f56913345eb7ee538b525f98023ee575993c2012ecd458bc90f25c15e158a85",
+    "path": "data/raw/NACE/Rev.2/nace2-download-list-20261109/5f56913345eb7ee538b525f98023ee575993c2012ecd458bc90f25c15e158a85/nace2-download-list-20261109.json",
+    "bytes": 3019,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
+    "resource_id": "nace2-nace21-correspondence-20260831",
+    "source_id": "NACE",
+    "edition": "Rev.2",
+    "role": "official_correspondence",
+    "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+    "path": "data/raw/NACE/Rev.2/nace2-nace21-correspondence-20260831/a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd/nace2-nace21-correspondence-20260831.xlsx",
+    "bytes": 143261,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "published_reverse_correspondence_parsed",
+      "rows": 1598
+    }
+  },
+  {
+    "resource_id": "nace-showvoc-catalog-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "official_public_dataset_inventory",
+    "sha256": "0eb2273a5cdec5ff5a61791a3bb403f590e0173992a345d41c2bc8befbc1e51d",
+    "path": "data/local/raw/NACE/Rev.2.1/nace-showvoc-catalog-20261109/0eb2273a5cdec5ff5a61791a3bb403f590e0173992a345d41c2bc8befbc1e51d/nace-showvoc-catalog-20261109.json",
+    "bytes": 1155655,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
+    "resource_id": "nace2-cellar-selected-notes-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2",
+    "role": "official_sparql_result",
+    "sha256": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+    "path": "data/raw/NACE/Rev.2/nace2-cellar-selected-notes-20261109/06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf/nace2-cellar-selected-notes-20261109.json",
+    "bytes": 47837,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "selected_RDF_component_parsed",
+      "nodes": 22
+    }
+  },
+  {
+    "resource_id": "nace2-cellar-isic4-predicates-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2",
+    "role": "official_sparql_result",
+    "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+    "path": "data/raw/NACE/Rev.2/nace2-cellar-isic4-predicates-20261109/9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758/nace2-cellar-isic4-predicates-20261109.json",
+    "bytes": 253079,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "publisher_SKOS_predicates_preserved",
+      "predicates": {
+        "closeMatch": 996
+      }
+    }
+  },
+  {
+    "resource_id": "nace-cellar-correspondence-schemes-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "official_sparql_result",
+    "sha256": "c2eda8bfcfb607c9d8f347277cc1ba922f60a5695dee7bb81205515246948ff8",
+    "path": "data/raw/NACE/Rev.2.1/nace-cellar-correspondence-schemes-20261109/c2eda8bfcfb607c9d8f347277cc1ba922f60a5695dee7bb81205515246948ff8/nace-cellar-correspondence-schemes-20261109.json",
+    "bytes": 19469,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "bounded_direct_correspondence_audit",
+      "finding": "not_observed_in_audited_cellar_snapshot"
+    }
+  },
+  {
+    "resource_id": "nace-cellar-current-mapping-targets-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "official_sparql_result",
+    "sha256": "0b99073b0d4331d885e63e7c4b03d96c4115171e91a6c4243f4ac1f62624df5f",
+    "path": "data/raw/NACE/Rev.2.1/nace-cellar-current-mapping-targets-20261109/0b99073b0d4331d885e63e7c4b03d96c4115171e91a6c4243f4ac1f62624df5f/nace-cellar-current-mapping-targets-20261109.json",
+    "bytes": 307,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "bounded_direct_correspondence_audit",
+      "finding": "not_observed_in_audited_cellar_snapshot"
+    }
+  },
+  {
+    "resource_id": "nace-cellar-current-positive-control-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "official_sparql_result",
+    "sha256": "2971c1731598bbbbb5cfdc40c7d801a3fd86a01b396c8c46ff1d5060bf3793b8",
+    "path": "data/raw/NACE/Rev.2.1/nace-cellar-current-positive-control-20261109/2971c1731598bbbbb5cfdc40c7d801a3fd86a01b396c8c46ff1d5060bf3793b8/nace-cellar-current-positive-control-20261109.json",
+    "bytes": 227,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "bounded_direct_correspondence_audit",
+      "finding": "not_observed_in_audited_cellar_snapshot"
+    }
+  },
+  {
+    "resource_id": "nace-cellar-nace2-isic4-xkos-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2",
+    "role": "official_sparql_result",
+    "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+    "path": "data/raw/NACE/Rev.2/nace-cellar-nace2-isic4-xkos-20261109/ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2/nace-cellar-nace2-isic4-xkos-20261109.json",
+    "bytes": 835974,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "official_direct_XKOS_correspondence_parsed",
+      "associations": 996
+    }
+  },
+  {
+    "resource_id": "nace-cellar-current-incoming-isic-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "official_sparql_result",
+    "sha256": "6acf2493944f74fe96bb2cabbf77364437dd70911b91261b39c773baa31048d5",
+    "path": "data/raw/NACE/Rev.2.1/nace-cellar-current-incoming-isic-20261109/6acf2493944f74fe96bb2cabbf77364437dd70911b91261b39c773baa31048d5/nace-cellar-current-incoming-isic-20261109.json",
+    "bytes": 127,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "bounded_direct_correspondence_audit",
+      "finding": "not_observed_in_audited_cellar_snapshot"
+    }
   }
 ]
