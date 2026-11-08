@@ -8,6 +8,23 @@ from .registry import read_json, write_json
 
 def build(root, registry, resources):
     integrity = inspect(root, resources)
+    economy_path = root / "data/reports/isic-economy.json"
+    economy = read_json(economy_path) if economy_path.exists() else None
+    if economy and economy.get("status") == "passed":
+        pins = read_json(root / "data/resources.lock.json")
+        local = {r["resource_id"]: r for r in integrity}
+        if any(local.get(e["resource_id"], {}).get("status") in ("failed", "not_downloaded") for e in economy["inputs"]):
+            economy = {"status": "inputs_not_available_locally", "note": "Collect and run economy to reproduce this research locally."}
+        elif any(pins.get(e["resource_id"], {}).get("sha256") != e["sha256"] for e in economy["inputs"]):
+            economy = {"status": "stale", "note": "Run economy again after input pins changed."}
+        else:
+            stages = {"isic4-database": {"status": "notes_parsed", "nodes": economy["rev4"]["node_count"]},
+                      "isic5-notes-20260819": {"status": "notes_parsed", "nodes": economy["rev5"]["node_count"]},
+                      "isic4-isic5-correspondence": {"status": "correspondence_parsed", "rows": economy["correspondence"]["rows"]}}
+            stages.update({p["resource_id"]: {"status": "text_extracted", "pages": p["pages"]} for p in economy["pdfs"]})
+            for row in integrity:
+                if row["resource_id"] in stages:
+                    row["domain_stage"] = stages[row["resource_id"]]
     snapshots = [r for r in integrity if r.get("sha256") and r["status"] != "failed"]
     parsed = [r for r in integrity if r["status"] == "parsed"]
     source_ids = {r["source_id"] for r in snapshots}
@@ -26,6 +43,9 @@ def build(root, registry, resources):
                "planned_resources": len(resources), "pinned_resources": len(snapshots),
                "sources_with_local_files": len(source_ids), "parsed_resources": len(parsed),
                "resource_status": dict(Counter(r["status"] for r in integrity)),
+               "economic_activity_research": ({"status": economy["status"], "report": "data/reports/isic-economy.json",
+                                                "curation": economy.get("curation"), "correspondence": economy.get("correspondence")}
+                                               if economy else None),
                "counts_note": "Counts are per resource, not deduplicated global concepts. O*NET CSV and CTDL overlap. No Atlas fusion or instance links.",
                "resources": integrity}
     reports = root / "data/reports"
@@ -42,7 +62,10 @@ def build(root, registry, resources):
     lines += ["", "## 文件实测", "", "| 资源 | 版本 | 状态 | 节点/层级分布 | 定义 |", "|---|---|---|---|---:|"]
     for r in integrity:
         count = f"{r['node_count']} / {r['levels']}" if "node_count" in r else "未统计"
-        lines.append(f"| {r['resource_id']} | {r['edition']} | {r['status']} | {count} | {r.get('definitions', '—')} |")
+        stage = f"; economy: {r['domain_stage']}" if r.get("domain_stage") else ""
+        lines.append(f"| {r['resource_id']} | {r['edition']} | {r['status']}{stage} | {count} | {r.get('definitions', '—')} |")
+    if economy:
+        lines += ["", "经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。"]
     lines += ["", "节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。",
               "", "## 未决项（逐来源）", ""]
     for s in registry["sources"]:

@@ -36,6 +36,7 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 - [来源注册表、采集工具与复现命令](docs/07-REGISTRY-AND-REPRODUCTION.md)
 - [实测采集与领域覆盖](data/reports/coverage.md)
 - [2026-11-08 执行记录、失败与未决问题](docs/08-EXECUTION-REPORT-2026-11-08.md)
+- [ISIC 定义、注释、官方对应与经济活动研究](docs/09-ISIC-ECONOMIC-ACTIVITIES.md)
 - [原始分类体系候选清单（机器可读）](data/source-candidates.csv)
 - [Codex 项目协作说明](AGENTS.md)
 
@@ -43,7 +44,9 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 
 已在原始 38 条候选之外建立可持续维护的 [50 个来源的结构化登记](data/registry/sources.json)，覆盖 15 个导航领域，并单独保存从 UNSD Family 发现的 149 条候选。核实程度、资料是否下载、是否解析分别记录，未决事实保留为空，不将全部登记称为核实完成。
 
-已实现 Python 标准库采集、内容寻址快照、版本/URL/哈希锁定、许可分流、变化检测、源结构解析、QA 和可搜索的本地来源浏览视图。真实采集覆盖 6 个来源、10 个文件，8 个资源可解析；其中 O*NET 原始及解析数据依 CC BY 4.0 入库，其余再分发未确认的资料留在被 Git 忽略的本地目录。详细条数、权限限制和失败见覆盖报告。
+已实现内容寻址采集、版本/URL/哈希锁定、许可分流、变化检测、源结构解析、QA 和本地来源浏览。真实采集覆盖 6 个来源、16 个文件。基础适配器可解析8个结构资源；经济活动专项另解析两版ISIC完整注释和605行官方对应。O*NET 原始及解析数据依 CC BY 4.0 入库；UNSD完整资料和衍生说明因再分发条件未确认仍留在本地。
+
+ISIC Rev.4 的419个类、Rev.5 的463个类均有官方说明；原始层级、五项Rev.4数据库更正、50项Rev.5注释更新、拆分/合并/转移、部分对应和发布者问号都可追溯。14个案例已研究，形成3个稳定研究概念和6条双向来源关联；完整自有统一目录仍在逐领域整理中。
 
 ```sh
 python3 -m atlas_sources validate
@@ -54,6 +57,14 @@ python3 -m unittest discover -s tests -v
 open data/reports/registry.html
 ```
 
-尚未进行自有目录融合或现实实体关联。后续按已取得合法本地快照的分类对象逐领域研究，保留原始目录和官方对应表的语义差异。
+经济活动专项复现（固定依赖和 Poppler 说明见上方研究文档）：
+
+```sh
+python3 -m pip install -r requirements-isic.txt --target data/local/deps
+python3 -m atlas_sources economy
+open data/local/economy/isic/index.html
+```
+
+未开发现实实体关联或需求理论。后续继续按明确分类对象和合法本地快照逐领域整理，保留原始目录、版本及映射的语义差异。
 
 仓库：<https://github.com/liamamilin/World-Classification-Atlas>

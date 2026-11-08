@@ -1,5 +1,7 @@
 # 2026-11-08 执行记录
 
+本文件保留上一轮来源注册与采集的历史快照；接续的经济活动研究结果见 `09-ISIC-ECONOMIC-ACTIVITIES.md`。
+
 ## 已完成的能力与证据
 
 启动时工作目录为空；按用户确认的 `git@github.com:liamamilin/World-Classification-Atlas.git` 克隆，基线为 `8c4aae5`。已在实现前阅读 README、AGENTS 和全部 01–06 文档。原始候选 CSV 与原始方案文档均保留。

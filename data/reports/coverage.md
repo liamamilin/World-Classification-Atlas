@@ -4,7 +4,7 @@
 
 登记 50 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-12 个采集任务，10 个已锁定且通过格式检查，涉及 6 个来源；8 个资源可解析。
+18 个采集任务，16 个已锁定且通过格式检查，涉及 6 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
@@ -34,12 +34,20 @@
 | cofog1999-structure | 1999 | parsed | 188 / {1: 10, 2: 69, 3: 109} | 0 |
 | copni1999-structure | 1999 | parsed | 65 / {1: 9, 2: 26, 3: 30} | 0 |
 | icatus-portal-structure | portal-undated | format_checked_only | 未统计 | — |
-| isic4-isic5-correspondence | Rev.5 | format_checked_only | 未统计 | — |
+| isic4-isic5-correspondence | Rev.5 | format_checked_only; economy: {'status': 'correspondence_parsed', 'rows': 605} | 未统计 | — |
 | onet31-occupations | 31.0 | parsed | 1016 / {1: 1016} | 1016 |
 | onet31-content-model | 31.0 | parsed | 3006 / {1: 6, 2: 18, 3: 70, 4: 333, 5: 121, 6: 371, 7: 2087} | 587 |
 | onet2019-taxonomy | SOC2019-snapshot-2026-11-08 | parsed | 1016 / {1: 1016} | 1016 |
 | unspsc-current-workbook | unverified-version | blocked_rights | 未统计 | — |
 | snomed-international | authorization-required | blocked_rights | 未统计 | — |
+| isic4-manual-2008 | Rev.4 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 307} | 未统计 | — |
+| isic4-database | Rev.4 | format_checked_only; economy: {'status': 'notes_parsed', 'nodes': 766} | 未统计 | — |
+| isic5-notes-20260819 | Rev.5 | format_checked_only; economy: {'status': 'notes_parsed', 'nodes': 830} | 未统计 | — |
+| isic5-white-cover-2026 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 335} | 未统计 | — |
+| isic5-errata-2026 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 66} | 未统计 | — |
+| isic4-isic5-technical-note-20241025 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 1} | 未统计 | — |
+
+经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 
 节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。
 

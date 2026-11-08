@@ -38,6 +38,8 @@ def check_payload(data, resource):
                 raise ValueError("not an XLSX package")
     elif resource["format"] in ("json", "jsonld"):
         json.loads(data)
+    elif resource["format"] == "pdf" and not data.startswith(b"%PDF-"):
+        raise ValueError("not a PDF payload")
     elif resource["format"] in ("csv", "tsv", "txt"):
         data.decode(resource["encoding"], errors="strict")
 

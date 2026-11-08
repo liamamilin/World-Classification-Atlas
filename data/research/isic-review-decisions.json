@@ -1,0 +1,143 @@
+{
+  "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+  "classification_object": "economic activities",
+  "status": "research_curation_subset",
+  "scope": "Reviewed cross-version source alignment, not a complete unified catalogue.",
+  "policy": "Only explicit official no-change/virtual-change evidence with unique bidirectional correspondence and no source/errata issues can enter reviewed concept groups. No real-world instance links.",
+  "cases": [
+    {
+      "id": "ISIC4-0111-ISIC5-0111",
+      "from_code": "0111",
+      "to_code": "0111",
+      "decision": "accept_official_equivalence",
+      "rationale": "官方对应为无变化，双向均唯一，未列入本次勘误影响范围。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "atlas_concept_id": "urn:atlas:concept:298d6664-b438-5516-bc5d-f839d11d711f"
+    },
+    {
+      "id": "ISIC4-4661-ISIC5-4671",
+      "from_code": "4661",
+      "to_code": "4671",
+      "decision": "accept_official_equivalence",
+      "rationale": "官方仅标记代码变化，GSIM 将其归为范围不变的虚拟变化；双向均唯一。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "atlas_concept_id": "urn:atlas:concept:5411e1ce-3b48-55ce-8562-4e788c44b234"
+    },
+    {
+      "id": "ISIC4-1512-ISIC5-1512",
+      "from_code": "1512",
+      "to_code": "1512",
+      "decision": "accept_official_equivalence",
+      "rationale": "官方仅标记名称变化，GSIM 将其归为范围不变的虚拟变化；双向均唯一。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "atlas_concept_id": "urn:atlas:concept:18b5b244-5861-54bb-a1e2-dc47b9e50718"
+    },
+    {
+      "id": "ISIC4-0130-ISIC5-0130",
+      "from_code": "0130",
+      "to_code": "0130",
+      "decision": "hold",
+      "rationale": "带节字母代码异常，数值端点可定位；保留原始异常并待审。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-0170-ISIC5-0170",
+      "from_code": "0170",
+      "to_code": "0170",
+      "decision": "hold",
+      "rationale": "带节字母代码异常，不能静默修正来源。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-0128-ISIC5-0113",
+      "from_code": "0128",
+      "to_code": "0113",
+      "decision": "hold",
+      "rationale": "活动转移到既有类，存在部分范围关系，不能建立等价概念。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-0113-ISIC5-0113",
+      "from_code": "0113",
+      "to_code": "0113",
+      "decision": "hold",
+      "rationale": "本行GSIM虽为空，但目标类接收其他来源活动；不能单独据空白或同码确证等价。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-2610-ISIC5-2611",
+      "from_code": "2610",
+      "to_code": "2611",
+      "decision": "hold",
+      "rationale": "分解到新类；该边仅代表旧类的一部分，未提供分配比例。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-2610-ISIC5-2619",
+      "from_code": "2610",
+      "to_code": "2619",
+      "decision": "hold",
+      "rationale": "与另一拆分去向共同保留，不能只选择一个新类替代旧类。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-0311-ISIC5-0330",
+      "from_code": "0311",
+      "to_code": "0330",
+      "decision": "hold",
+      "rationale": "原类继续存在、部分活动分出；保留split-off语义。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-4510-ISIC5-4790",
+      "from_code": "4510",
+      "to_code": "4790",
+      "decision": "hold",
+      "rationale": "拆分与合并并存的多对多关系，且后续注释受更新影响。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-9511-ISIC5-9510",
+      "from_code": "9511",
+      "to_code": "9510",
+      "decision": "hold",
+      "rationale": "拆分和合并同时出现，不能将旧类与新类直接等同；2026注释另有变化。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-8522-ISIC5-8532",
+      "from_code": "8522",
+      "to_code": "8532",
+      "decision": "hold",
+      "rationale": "发布者GSIM原文含问号；保持不确定，不能去掉问号后确证。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ISIC4-8522-ISIC5-8533",
+      "from_code": "8522",
+      "to_code": "8533",
+      "decision": "hold",
+      "rationale": "同一原类还有另一拆出去向，保持完整对应上下文。",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    }
+  ],
+  "reviewed_input_sha256": {
+    "isic4-isic5-correspondence": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+    "isic5-notes-20260819": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+    "isic4-database": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4"
+  }
+}

@@ -17,6 +17,7 @@ def main():
     sub.add_parser("report")
     sub.add_parser("discover")
     sub.add_parser("audit")
+    sub.add_parser("economy", help="enrich ISIC4/5 and parse official correspondence into local research outputs")
     args = parser.parse_args()
     root = args.root.resolve()
     errors = validate(root)
@@ -50,6 +51,9 @@ def main():
     if args.command == "audit":
         from .audit import audit
         return audit(root, registry)
+    if args.command == "economy":
+        from .isic import run
+        return run(root, resources)
     return 0
 
 

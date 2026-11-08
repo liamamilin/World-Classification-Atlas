@@ -134,7 +134,7 @@
     "format": "xlsx",
     "role": "official_correspondence",
     "language": "en",
-    "publication_date": null,
+    "publication_date": "2025-01-17",
     "encoding": "utf-8-sig",
     "parser": null,
     "expected_rows": null,
@@ -249,6 +249,132 @@
       "redistribute": false,
       "license": "Affiliate license required",
       "evidence_url": "https://www.snomed.org/get-snomed"
+    }
+  },
+  {
+    "id": "isic4-manual-2008",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_publication_English.pdf",
+    "filename": "isic4-manual-2008.pdf",
+    "format": "pdf",
+    "role": "manual_and_explanatory_notes",
+    "language": "en",
+    "publication_date": "2008",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "isic4-database",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+    "filename": "isic4-database.zip",
+    "format": "zip",
+    "role": "official_database",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "isic5-notes-20260819",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+    "filename": "isic5-notes-20260819.xlsx",
+    "format": "xlsx",
+    "role": "structure_and_explanatory_notes",
+    "language": "en",
+    "publication_date": "2026-08-19",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "isic5-white-cover-2026",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC_Rev5_Publication-white_cover_version.pdf",
+    "filename": "isic5-white-cover-2026.pdf",
+    "format": "pdf",
+    "role": "manual_white_cover",
+    "language": "en",
+    "publication_date": "2026",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "isic5-errata-2026",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/Errata_for_the_Explanatory_Notes_of_the_ISICRev5_-_2026.pdf",
+    "filename": "isic5-errata-2026.pdf",
+    "format": "pdf",
+    "role": "official_errata",
+    "language": "en",
+    "publication_date": "2026",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "isic4-isic5-technical-note-20241025",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Meetings/UNCEISC2024_2nd/Session_6_Bk_2_Technical_Note.pdf",
+    "filename": "isic4-isic5-technical-note-20241025.pdf",
+    "format": "pdf",
+    "role": "correspondence_methodology",
+    "language": "en",
+    "publication_date": "2024-10-25",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
     }
   }
 ]

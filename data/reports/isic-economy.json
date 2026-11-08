@@ -1,0 +1,276 @@
+{
+  "status": "passed",
+  "domain": "01-economy",
+  "classification_object": "economic activities",
+  "inputs": [
+    {
+      "resource_id": "isic4-structure",
+      "edition": "Rev.4",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_structure.Txt",
+      "sha256": "18b645efc5a0b001fda5852cfd0690eb579011651e405631e50cb2d271ee2cc6",
+      "publication_date": null
+    },
+    {
+      "resource_id": "isic5-structure",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_5_english_structure.csv",
+      "sha256": "fc408f57bd3a4f33c35a4f384ec0010283dd72774892c8d48ae1330a8caeb57f",
+      "publication_date": null
+    },
+    {
+      "resource_id": "isic4-database",
+      "edition": "Rev.4",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+      "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+      "publication_date": null
+    },
+    {
+      "resource_id": "isic4-manual-2008",
+      "edition": "Rev.4",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_publication_English.pdf",
+      "sha256": "ef36c082df9bb6232627945e2f092130bccdd8f319a9c55c55c75e6bf51342fe",
+      "publication_date": "2008"
+    },
+    {
+      "resource_id": "isic5-notes-20260819",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+      "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+      "publication_date": "2026-08-19"
+    },
+    {
+      "resource_id": "isic5-white-cover-2026",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC_Rev5_Publication-white_cover_version.pdf",
+      "sha256": "df116f2bdc0beb16fc135fd2417a3d865bfb3e8bd3b4da19d3b16370ee8f7b11",
+      "publication_date": "2026"
+    },
+    {
+      "resource_id": "isic5-errata-2026",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/Errata_for_the_Explanatory_Notes_of_the_ISICRev5_-_2026.pdf",
+      "sha256": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
+      "publication_date": "2026"
+    },
+    {
+      "resource_id": "isic4-isic5-correspondence",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+      "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+      "publication_date": "2025-01-17"
+    },
+    {
+      "resource_id": "isic4-isic5-technical-note-20241025",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Meetings/UNCEISC2024_2nd/Session_6_Bk_2_Technical_Note.pdf",
+      "sha256": "187b5e1ac06e9755b673e1d4609efd61905a944be3d13ae6f756db29862f0970",
+      "publication_date": "2024-10-25"
+    }
+  ],
+  "rev4": {
+    "node_count": 766,
+    "unique_codes": 766,
+    "duplicate_codes": [],
+    "edge_count": 745,
+    "orphan_parents": [],
+    "self_links": [],
+    "cycles": [],
+    "levels": {
+      "1": 21,
+      "2": 88,
+      "3": 238,
+      "4": 419
+    },
+    "roots": 21,
+    "leaves": 419,
+    "definitions": 764,
+    "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+    "polyhierarchy_nodes": 0,
+    "label_differences_from_structure": [],
+    "missing_note_codes": [
+      "089",
+      "T"
+    ]
+  },
+  "rev5": {
+    "node_count": 830,
+    "unique_codes": 830,
+    "duplicate_codes": [],
+    "edge_count": 808,
+    "orphan_parents": [],
+    "self_links": [],
+    "cycles": [],
+    "levels": {
+      "1": 22,
+      "2": 87,
+      "3": 258,
+      "4": 463
+    },
+    "roots": 22,
+    "leaves": 463,
+    "definitions": 830,
+    "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+    "polyhierarchy_nodes": 0,
+    "label_differences_from_structure": [],
+    "missing_note_codes": []
+  },
+  "correspondence": {
+    "rows": 605,
+    "unique_pairs": 605,
+    "rev4_classes": 419,
+    "rev5_classes": 463,
+    "topology": {
+      "one_to_one": 286,
+      "many_to_one": 17,
+      "one_to_many": 123,
+      "many_to_many": 179
+    },
+    "gsim_ids": {
+      "RC5": 20,
+      "VC1": 31,
+      "VC2": 57,
+      "RC4.2": 179,
+      "RC4.1": 68,
+      "RC3.1": 44,
+      "RC3.2": 81
+    },
+    "publisher_question_rows": [
+      530
+    ],
+    "qualified_identifier_issue_rows": [
+      19,
+      33
+    ],
+    "blank_gsim_with_multiple_correspondences": [
+      4,
+      25,
+      115,
+      136,
+      466
+    ],
+    "decision_status": {
+      "official_scope_equivalence_candidate": 248,
+      "review_topology_without_gsim": 3,
+      "review_real_change": 182,
+      "review_source_identifier": 2,
+      "review_2026_notes": 169,
+      "review_publisher_question": 1
+    }
+  },
+  "rev5_errata_records": 50,
+  "rev5_errata_codes": [
+    "014",
+    "0141",
+    "0729",
+    "0910",
+    "1050",
+    "1079",
+    "1105",
+    "1312",
+    "1313",
+    "1392",
+    "1399",
+    "1629",
+    "2011",
+    "2022",
+    "2220",
+    "2392",
+    "2393",
+    "2420",
+    "2620",
+    "2630",
+    "2670",
+    "2680",
+    "2811",
+    "3030",
+    "3230",
+    "3530",
+    "3830",
+    "F",
+    "4100",
+    "4649",
+    "4672",
+    "4679",
+    "47",
+    "471",
+    "4730",
+    "4740",
+    "4762",
+    "4773",
+    "5221",
+    "5222",
+    "6619",
+    "6810",
+    "7110",
+    "7499",
+    "8299",
+    "8430",
+    "8699",
+    "9510",
+    "9623",
+    "9630"
+  ],
+  "curation": {
+    "reviewed_cases": 14,
+    "reviewed_concepts": 3,
+    "source_bindings": 6,
+    "held_cases": 11
+  },
+  "rev4_readme_corrections": {
+    "3830_exclusion_removes_metal_qualifier": true,
+    "1313_removes_silk_screen_printing": true,
+    "1811_includes_direct_textile_printing": true,
+    "51_uses_repair_in_exclusion": true,
+    "3315_factory_rebuilding_refers_3011": true
+  },
+  "reproducibility": {
+    "python": "3.10.13",
+    "packages": {
+      "access-parser": "0.0.6",
+      "construct": "2.10.70",
+      "tabulate": "0.10.0"
+    },
+    "parser_sha256": {
+      "isic.py": "8ea57449b65050656fdab0ead216c90340eabb24c7a9f1b1e10b911026f0f0e9",
+      "xlsx.py": "c23f6876d392538ff6621a4ae04cb4070a880621b2bdf5eb8189af945115d4eb",
+      "normalize.py": "a3f60df71eca8916a492ebc9fbc715eb254a35362d146f6f35406680a58f1192"
+    },
+    "review_decisions_sha256": "4b70c73367d86a67a40eb0cdcc8c0df23797a328b7dbdb8c2e52ba9e81fc22e4"
+  },
+  "pdfs": [
+    {
+      "resource_id": "isic4-manual-2008",
+      "pages": 307,
+      "text_sha256": "eb386794702e9a71cbda4358f553c578b94bcac57dd726dad767b230ac746dbf",
+      "extractor": "pdftotext version 26.04.0"
+    },
+    {
+      "resource_id": "isic5-white-cover-2026",
+      "pages": 335,
+      "text_sha256": "2684b564e62fe5cf8d8343a3d47c08984e3cc1f7792368c0d94898e3f50c64dc",
+      "extractor": "pdftotext version 26.04.0"
+    },
+    {
+      "resource_id": "isic5-errata-2026",
+      "pages": 66,
+      "text_sha256": "80aec85061407082de8a825f0fd7a1697e36fb61b725ed53b944ebd5d6399430",
+      "extractor": "pdftotext version 26.04.0"
+    },
+    {
+      "resource_id": "isic4-isic5-technical-note-20241025",
+      "pages": 1,
+      "text_sha256": "2c802c695e418a64770680b5af8e2ba49030f29c0d4569a6d82848ad5c29c5ef",
+      "extractor": "pdftotext version 26.04.0"
+    }
+  ],
+  "outputs": {
+    "local_directory": "data/local/economy/isic"
+  },
+  "automatic_concept_merges": 0,
+  "limits": [
+    "UN raw data and full derived notes/mappings are local-only pending redistribution rights.",
+    "Mapping GSIM is a 2025 historical statement; affected 2026 notes require review.",
+    "SKOS relations are directional research candidates, not approved concept merges.",
+    "No allocation weights or mappings above class level are invented."
+  ]
+}

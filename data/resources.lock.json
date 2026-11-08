@@ -58,5 +58,41 @@
     "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_5_english_structure.csv",
     "source_id": "ISIC",
     "edition": "Rev.5"
+  },
+  "isic4-manual-2008": {
+    "sha256": "ef36c082df9bb6232627945e2f092130bccdd8f319a9c55c55c75e6bf51342fe",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_publication_English.pdf",
+    "source_id": "ISIC",
+    "edition": "Rev.4"
+  },
+  "isic4-database": {
+    "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+    "source_id": "ISIC",
+    "edition": "Rev.4"
+  },
+  "isic5-notes-20260819": {
+    "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
+  },
+  "isic5-white-cover-2026": {
+    "sha256": "df116f2bdc0beb16fc135fd2417a3d865bfb3e8bd3b4da19d3b16370ee8f7b11",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC_Rev5_Publication-white_cover_version.pdf",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
+  },
+  "isic5-errata-2026": {
+    "sha256": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/Errata_for_the_Explanatory_Notes_of_the_ISICRev5_-_2026.pdf",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
+  },
+  "isic4-isic5-technical-note-20241025": {
+    "sha256": "187b5e1ac06e9755b673e1d4609efd61905a944be3d13ae6f756db29862f0970",
+    "url": "https://unstats.un.org/unsd/classifications/Meetings/UNCEISC2024_2nd/Session_6_Bk_2_Technical_Note.pdf",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
   }
 }

@@ -1,0 +1,4 @@
+# Only the optional ISIC4 .mdb adapter requires these packages.
+access-parser==0.0.6
+construct==2.10.70
+tabulate==0.10.0

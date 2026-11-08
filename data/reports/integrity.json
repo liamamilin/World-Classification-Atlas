@@ -173,7 +173,11 @@
     "path": "data/local/raw/ISIC/Rev.5/isic4-isic5-correspondence/59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415/isic4-isic5-correspondence.xlsx",
     "bytes": 69575,
     "status": "format_checked_only",
-    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "correspondence_parsed",
+      "rows": 605
+    }
   },
   {
     "resource_id": "onet31-occupations",
@@ -278,5 +282,95 @@
     "edition": "authorization-required",
     "role": "licensed_release",
     "status": "blocked_rights"
+  },
+  {
+    "resource_id": "isic4-manual-2008",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "role": "manual_and_explanatory_notes",
+    "sha256": "ef36c082df9bb6232627945e2f092130bccdd8f319a9c55c55c75e6bf51342fe",
+    "path": "data/local/raw/ISIC/Rev.4/isic4-manual-2008/ef36c082df9bb6232627945e2f092130bccdd8f319a9c55c55c75e6bf51342fe/isic4-manual-2008.pdf",
+    "bytes": 1104973,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "text_extracted",
+      "pages": 307
+    }
+  },
+  {
+    "resource_id": "isic4-database",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "role": "official_database",
+    "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+    "path": "data/local/raw/ISIC/Rev.4/isic4-database/24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4/isic4-database.zip",
+    "bytes": 216516,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "notes_parsed",
+      "nodes": 766
+    }
+  },
+  {
+    "resource_id": "isic5-notes-20260819",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "role": "structure_and_explanatory_notes",
+    "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+    "path": "data/local/raw/ISIC/Rev.5/isic5-notes-20260819/e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa/isic5-notes-20260819.xlsx",
+    "bytes": 276814,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "notes_parsed",
+      "nodes": 830
+    }
+  },
+  {
+    "resource_id": "isic5-white-cover-2026",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "role": "manual_white_cover",
+    "sha256": "df116f2bdc0beb16fc135fd2417a3d865bfb3e8bd3b4da19d3b16370ee8f7b11",
+    "path": "data/local/raw/ISIC/Rev.5/isic5-white-cover-2026/df116f2bdc0beb16fc135fd2417a3d865bfb3e8bd3b4da19d3b16370ee8f7b11/isic5-white-cover-2026.pdf",
+    "bytes": 2716413,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "text_extracted",
+      "pages": 335
+    }
+  },
+  {
+    "resource_id": "isic5-errata-2026",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "role": "official_errata",
+    "sha256": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
+    "path": "data/local/raw/ISIC/Rev.5/isic5-errata-2026/63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d/isic5-errata-2026.pdf",
+    "bytes": 518370,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "text_extracted",
+      "pages": 66
+    }
+  },
+  {
+    "resource_id": "isic4-isic5-technical-note-20241025",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "role": "correspondence_methodology",
+    "sha256": "187b5e1ac06e9755b673e1d4609efd61905a944be3d13ae6f756db29862f0970",
+    "path": "data/local/raw/ISIC/Rev.5/isic4-isic5-technical-note-20241025/187b5e1ac06e9755b673e1d4609efd61905a944be3d13ae6f756db29862f0970/isic4-isic5-technical-note-20241025.pdf",
+    "bytes": 108320,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "text_extracted",
+      "pages": 1
+    }
   }
 ]

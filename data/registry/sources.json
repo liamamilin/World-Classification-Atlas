@@ -129,11 +129,11 @@
         "status": "official_entry_verified",
         "items": [
           {
-            "from_edition": "ISIC Rev.4",
-            "to_edition": "ISIC Rev.5",
-            "url": "https://unstats.un.org/unsd/classifications/econ/",
-            "status": "official_entry_verified",
-            "semantics": "官方 Excel；部分、拆分、合并不能自动视为 exact。"
+            "from_edition": "ISIC Rev.4 (official database with corrections)",
+            "to_edition": "ISIC Rev.5 (2024 notes basis; later 2026 amendments reviewed separately)",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "status": "official_file_parsed",
+            "semantics": "605类级对应；保留GSIM、拆分、合并、transfer、问号、范围和原始单元格。不自动合并概念。"
           }
         ]
       },
@@ -158,11 +158,40 @@
             "license"
           ],
           "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "method": "official_file_parsed",
+          "fields": [
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "830个节点；50条注释修订。A列为带节代码，B列实际为父代码，表头未清楚说明。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+          "method": "official_file_parsed",
+          "fields": [
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "766节点、764项非空说明，随包Readme列出2009—2011五项更正；空说明089和T保留。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "method": "official_file_parsed",
+          "fields": [
+            "official_mappings"
+          ],
+          "finding": "605行，覆盖419个Rev.4类和463个Rev.5类。保留GSIM复合类型、2025-01-17技术说明、原始单元格、双向基数和不确定标记。"
         }
       ],
       "unresolved": [
         "再分发适用条款待逐文件确认"
-      ]
+      ],
+      "local_research_report": "data/reports/isic-economy.json"
     },
     {
       "id": "NAICS",

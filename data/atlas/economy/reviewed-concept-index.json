@@ -1,0 +1,106 @@
+{
+  "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+  "classification_object": "economic activities",
+  "status": "reviewed_research_subset_not_complete_catalogue",
+  "concepts": [
+    {
+      "id": "urn:atlas:concept:298d6664-b438-5516-bc5d-f839d11d711f",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:0111",
+          "relation": "exactMatch"
+        },
+        {
+          "node_id": "ISIC:Rev.5:0111",
+          "relation": "exactMatch"
+        }
+      ],
+      "decision_id": "ISIC4-0111-ISIC5-0111",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 2,
+        "range": "A2:H2"
+      },
+      "status": "source_evidence_reviewed_research_concept"
+    },
+    {
+      "id": "urn:atlas:concept:5411e1ce-3b48-55ce-8562-4e788c44b234",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:4661",
+          "relation": "exactMatch"
+        },
+        {
+          "node_id": "ISIC:Rev.5:4671",
+          "relation": "exactMatch"
+        }
+      ],
+      "decision_id": "ISIC4-4661-ISIC5-4671",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 260,
+        "range": "A260:H260"
+      },
+      "status": "source_evidence_reviewed_research_concept"
+    },
+    {
+      "id": "urn:atlas:concept:18b5b244-5861-54bb-a1e2-dc47b9e50718",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1512",
+          "relation": "exactMatch"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1512",
+          "relation": "exactMatch"
+        }
+      ],
+      "decision_id": "ISIC4-1512-ISIC5-1512",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 93,
+        "range": "A93:H93"
+      },
+      "status": "source_evidence_reviewed_research_concept"
+    }
+  ],
+  "source_to_atlas": {
+    "ISIC:Rev.4:0111": [
+      "urn:atlas:concept:298d6664-b438-5516-bc5d-f839d11d711f"
+    ],
+    "ISIC:Rev.5:0111": [
+      "urn:atlas:concept:298d6664-b438-5516-bc5d-f839d11d711f"
+    ],
+    "ISIC:Rev.4:4661": [
+      "urn:atlas:concept:5411e1ce-3b48-55ce-8562-4e788c44b234"
+    ],
+    "ISIC:Rev.5:4671": [
+      "urn:atlas:concept:5411e1ce-3b48-55ce-8562-4e788c44b234"
+    ],
+    "ISIC:Rev.4:1512": [
+      "urn:atlas:concept:18b5b244-5861-54bb-a1e2-dc47b9e50718"
+    ],
+    "ISIC:Rev.5:1512": [
+      "urn:atlas:concept:18b5b244-5861-54bb-a1e2-dc47b9e50718"
+    ]
+  },
+  "labels_and_definitions": "Resolved from local source snapshots; not republished while source rights remain unresolved."
+}
