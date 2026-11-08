@@ -329,6 +329,21 @@
     }
   },
   {
+    "resource_id": "isic5-notes-20240311",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "role": "historical_explanatory_notes",
+    "sha256": "b9ef4ac00d3b1736a5d7068e437babaa0105dd02ad70a86c11c9905878271ae8",
+    "path": "data/local/raw/ISIC/Rev.5/isic5-notes-20240311/b9ef4ac00d3b1736a5d7068e437babaa0105dd02ad70a86c11c9905878271ae8/isic5-notes-20240311.pdf",
+    "bytes": 1548776,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "historical_note_clauses_reviewed",
+      "pages": 293
+    }
+  },
+  {
     "resource_id": "isic5-white-cover-2026",
     "source_id": "ISIC",
     "edition": "Rev.5",
@@ -503,7 +518,7 @@
     "note": "No semantic adapter; no node counts or edition confirmation inferred.",
     "domain_stage": {
       "status": "selected_branch_notes_parsed",
-      "nodes": 14
+      "nodes": 17
     }
   },
   {

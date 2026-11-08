@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "method": "fresh directory; pinned raw assets, manifests, query texts and three research inputs only; no network",
+  "method": "fresh directory; pinned raw assets, manifests, query texts and four research inputs only; no network",
   "files": [
     {
       "path": "data/atlas/economy/furniture-directory.json",
-      "sha256": "d6f5616f2c81a4c117883eecfac3e29844d655d51665a050c5641a71fa2fdabd",
+      "sha256": "492f108d3bdbe6c902902362b57b3b075886fe331c2c65181858b58c25c9baac",
       "identical": true
     },
     {
@@ -29,12 +29,12 @@
     },
     {
       "path": "data/local/economy/furniture/evidence-dossiers.json",
-      "sha256": "b3e17ce0cc1d2054d13feea7b8f7c5e9c29135ec5004b76fde3a456630eb6578",
+      "sha256": "1d69682a7a06f28db31e94d81db98387f23c9595788ee54eae23e584564dc643",
       "identical": true
     },
     {
       "path": "data/local/economy/furniture/index.html",
-      "sha256": "854717181561a1d930f7ff11dce080a270ec56453b9b2b9de211b14dffb1713c",
+      "sha256": "7c07a4baaab8db6b31cedf1dcfcd417d755ddbdb0453924537cba105c99b4a76",
       "identical": true
     },
     {
@@ -48,13 +48,18 @@
       "identical": true
     },
     {
+      "path": "data/local/economy/furniture/material-boundary-source-evidence.json",
+      "sha256": "d892c74cfd61e12d30a90172e2c076e4b9896cf47fef21300e8b88e5b563e7c8",
+      "identical": true
+    },
+    {
       "path": "data/local/economy/furniture/nace2-manual-2008-pages.jsonl",
       "sha256": "e4017662e9bfef9c3a8f6100b31c4d90bcf679cff553c1558fefcb8c29e8baa4",
       "identical": true
     },
     {
       "path": "data/local/economy/furniture/nace2-selected-nodes.jsonl",
-      "sha256": "890f4c300ebb72123e4b5cbb2377e36a623db52be149aaa6c26e9098b8f48e33",
+      "sha256": "720c5260f4ef13b4f8d1e09a6ef93628c4f57a2127bf0aee9a36fa46505deb70",
       "identical": true
     },
     {
@@ -74,7 +79,7 @@
     },
     {
       "path": "data/local/economy/furniture/source-branches.json",
-      "sha256": "133a9d81506e34d11a9573c11916d262fd64e2c6781f1def400f97b73581dbe0",
+      "sha256": "757f36a50090057d0b9f6bb4b8fc13d51e0dafd2ec22eebfcaf76c4470ab2748",
       "identical": true
     },
     {
@@ -104,10 +109,10 @@
     },
     {
       "path": "data/reports/furniture-alignment.json",
-      "sha256": "d192ba1782201999b6a51f6a1d24d4b0e0c90bf043a6838ed030330a47a6296e",
+      "sha256": "7a5b496853e140779fdcadd23d5d37aeb1d0dc5819f8f30b1629cc51ed402a0b",
       "identical": true
     }
   ],
-  "compared_files": 21,
-  "identical_files": 21
+  "compared_files": 22,
+  "identical_files": 22
 }

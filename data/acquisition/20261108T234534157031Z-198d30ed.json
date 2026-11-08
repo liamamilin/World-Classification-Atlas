@@ -1,0 +1,18 @@
+[
+  {
+    "resource_id": "isic5-notes-20240311",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC5_Exp_Notes_11Mar2024.pdf",
+    "attempted_at": "2026-11-08T23:45:27.855502+00:00",
+    "sha256": "b9ef4ac00d3b1736a5d7068e437babaa0105dd02ad70a86c11c9905878271ae8",
+    "path": "data/local/raw/ISIC/Rev.5/isic5-notes-20240311/b9ef4ac00d3b1736a5d7068e437babaa0105dd02ad70a86c11c9905878271ae8/isic5-notes-20240311.pdf",
+    "bytes": 1548776,
+    "final_url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC5_Exp_Notes_11Mar2024.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "etag": "\"02d5683c773da1:0\"",
+    "last_modified": "Mon, 11 Mar 2024 15:19:30 GMT",
+    "status": "downloaded"
+  }
+]

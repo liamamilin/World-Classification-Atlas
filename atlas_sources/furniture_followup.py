@@ -233,11 +233,7 @@ def sources(root, assets, old, current, forward, legacy):
     return {"nodes": nodes, "reverse": reverse, "xkos": xkos, "statistics": stats}
 
 
-def extend_plan(root, original):
-    followup = read_json(root / PLAN)
-    if sha256((root / "data/research/furniture-review.json").read_bytes()) != followup["parent_review_sha256"]:
-        raise ValueError("parent furniture review changed")
-    result = copy.deepcopy(original)
+def append_review_entries(result, followup):
     for key in ("claims", "navigation", "activities", "official_reviews", "research_mappings"):
         identity = "mapping_id" if key == "official_reviews" else "id"
         known = {x[identity] for x in result[key]}
@@ -246,6 +242,34 @@ def extend_plan(root, original):
                 raise ValueError("follow-up tries to replace existing stable identity/review")
             result[key].append(copy.deepcopy(item))
             known.add(item[identity])
+
+
+def update_issues(result, followup):
+    issues = {i["id"]: i for i in result["issues"]}
+    for update in followup["issue_followups"]:
+        issue = issues[update["issue_id"]]
+        issue.setdefault("history", []).append({k: copy.deepcopy(v) for k, v in issue.items() if k != "history"})
+        issue.update(status=update["status"], followup=copy.deepcopy(update))
+    for issue in followup.get("new_issues", []):
+        if issue["id"] in issues:
+            raise ValueError("follow-up issue replaces previous issue")
+        result["issues"].append(copy.deepcopy(issue))
+        issues[issue["id"]] = issue
+
+
+def add_mapping_scopes(result, followup):
+    for update in followup.get("research_mapping_followups", []):
+        mapping = next(m for m in result["research_mappings"] if m["id"] == update["mapping_id"])
+        mapping.setdefault("history", []).append({k: copy.deepcopy(v) for k, v in mapping.items() if k != "history"})
+        mapping["activity_ids"] = sorted(set(mapping["activity_ids"] + update["additional_activity_ids"]))
+
+
+def extend_plan(root, original):
+    followup = read_json(root / PLAN)
+    if sha256((root / "data/research/furniture-review.json").read_bytes()) != followup["parent_review_sha256"]:
+        raise ValueError("parent furniture review changed")
+    result = copy.deepcopy(original)
+    append_review_entries(result, followup)
     by_id = {a["id"]: a for a in result["activities"]}
     for update in followup.get("binding_decisions", []):
         activity = by_id[update["atlas_id"]]
@@ -257,21 +281,9 @@ def extend_plan(root, original):
                   "reason": update["rationale"], "recorded_on": followup["reviewed_on"]})
         activity["candidate_source_bindings"].remove(old)
         activity["source_bindings"].append(copy.deepcopy(update["binding"]))
-    issues = {i["id"]: i for i in result["issues"]}
-    for update in followup["issue_followups"]:
-        issue = issues[update["issue_id"]]
-        issue.setdefault("history", []).append({k: copy.deepcopy(v) for k, v in issue.items() if k != "history"})
-        issue.update(status=update["status"], followup=copy.deepcopy(update))
-    for issue in followup.get("new_issues", []):
-        if issue["id"] in issues:
-            raise ValueError("follow-up issue replaces previous issue")
-        result["issues"].append(copy.deepcopy(issue))
-        issues[issue["id"]] = issue
+    update_issues(result, followup)
     result["comparison_decisions"] = followup["comparison_decisions"]
-    for update in followup.get("research_mapping_followups", []):
-        mapping = next(m for m in result["research_mappings"] if m["id"] == update["mapping_id"])
-        mapping.setdefault("history", []).append({k: copy.deepcopy(v) for k, v in mapping.items() if k != "history"})
-        mapping["activity_ids"] = sorted(set(mapping["activity_ids"] + update["additional_activity_ids"]))
+    add_mapping_scopes(result, followup)
     result["followup_metadata"] = {"reviewed_input_sha256": followup["reviewed_input_sha256"], "review_sha256": sha256((root / PLAN).read_bytes()),
                                    "parent_review_sha256": followup["parent_review_sha256"], "reviewed_on": followup["reviewed_on"]}
     return result

@@ -226,5 +226,11 @@
     "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fg+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7B+%3Fo+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2.1%2Fnace2.1%3E+%7D+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+GRAPH+%3Fg+%7B+%3Fs+%3Fp+%3Fo+%7D+FILTER%28REGEX%28STR%28%3Fs%29%2C+%22isic%22%2C+%22i%22%29%29+%7D+ORDER+BY+%3Fg+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
     "source_id": "NACE",
     "edition": "Rev.2.1"
+  },
+  "isic5-notes-20240311": {
+    "sha256": "b9ef4ac00d3b1736a5d7068e437babaa0105dd02ad70a86c11c9905878271ae8",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC5_Exp_Notes_11Mar2024.pdf",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
   }
 }

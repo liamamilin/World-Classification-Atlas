@@ -4,7 +4,7 @@
 
 登记 50 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-40 个采集任务，38 个已锁定且通过格式检查，涉及 7 个来源；8 个资源可解析。
+41 个采集任务，39 个已锁定且通过格式检查，涉及 7 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
@@ -43,6 +43,7 @@
 | isic4-manual-2008 | Rev.4 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 307} | 未统计 | — |
 | isic4-database | Rev.4 | format_checked_only; economy: {'status': 'notes_parsed', 'nodes': 766} | 未统计 | — |
 | isic5-notes-20260819 | Rev.5 | format_checked_only; economy: {'status': 'notes_parsed', 'nodes': 830} | 未统计 | — |
+| isic5-notes-20240311 | Rev.5 | format_checked_only; economy: {'status': 'historical_note_clauses_reviewed', 'pages': 293} | 未统计 | — |
 | isic5-white-cover-2026 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 335} | 未统计 | — |
 | isic5-errata-2026 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 66} | 未统计 | — |
 | isic4-isic5-technical-note-20241025 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 1} | 未统计 | — |
@@ -54,7 +55,7 @@
 | nace21-notes-20260930 | Rev.2.1 | format_checked_only; economy: {'status': 'structure_and_notes_parsed', 'nodes': 1047} | 未统计 | — |
 | nace21-nace2-correspondence | Rev.2.1 | format_checked_only; economy: {'status': 'correspondence_parsed', 'rows': 1598} | 未统计 | — |
 | nace21-manual-2026 | Rev.2.1 | format_checked_only; economy: {'status': 'text_extracted_and_selected_clauses_reviewed'} | 未统计 | — |
-| nace2-manual-2008 | Rev.2 | format_checked_only; economy: {'status': 'selected_branch_notes_parsed', 'nodes': 14} | 未统计 | — |
+| nace2-manual-2008 | Rev.2 | format_checked_only; economy: {'status': 'selected_branch_notes_parsed', 'nodes': 17} | 未统计 | — |
 | nace-reuse-policy | Rev.2.1 | format_checked_only | 未统计 | — |
 | isic4-nace2-correspondence | Rev.4 | format_checked_only; economy: {'status': 'correspondence_parsed', 'rows': 996} | 未统计 | — |
 | isic4-nace2-change-history | Rev.4 | format_checked_only | 未统计 | — |
@@ -78,8 +79,9 @@
 其中3个活动只审定Rev.5当前范围；7条待审来源关联与已审绑定分别索引，1个待审目录提案不计入已审节点。CPC产品说明和主要行业对应仅作旁证，见 [边界核查](isic-boundary-review.json)。
 
 家具多源研究另见 [NACE/ISIC实测](furniture-alignment.json)，状态：passed。
-NACE Rev.2.1完整解析1047节点；家具分支18节点，含2个沿用身份及16个新身份；14条有界跨体系研究关系、35条官方行独立审查、7条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
-新增旧NACE2→ISIC4直接官方XKOS桥996条，发布者closeMatch保持独立；与UNSD有995对代码事实一致，46.6→466/465差异保留。当前NACE2.1–ISIC5审计有1047节点阳性对照，未观察到直接关系；不把空结果称为官方无对应。旧陶瓷家具的明确活动分配已审，历史候选保留；部件旧版与工序细类仍待审。
+NACE Rev.2.1完整解析1047节点；家具分支24节点，含2个沿用身份及22个新身份；19条有界跨体系研究关系、44条官方行独立审查、8条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
+新增旧NACE2→ISIC4直接官方XKOS桥996条，发布者closeMatch保持独立；与UNSD有995对代码事实一致，46.6→466/465差异保留。当前NACE2.1–ISIC5审计有1047节点阳性对照，未观察到直接关系。
+家具材料边界新增5项活动和37条证据。在3份固定官方表中核实卫生洁具缺行，单独登记定义支持的研究对应。旧ISIC部件候选、独立处理及整类冲突继续待审。
 
 节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。
 

@@ -138,8 +138,9 @@ class AuditAndReviewTests(unittest.TestCase):
 
     def test_current_parts_cannot_silently_gain_a_legacy_approval(self):
         followup = read_json(ROOT / PLAN)
+        original = read_json(ROOT / "data/research/furniture-review.json")
         a = copy.deepcopy(next(a for a in followup["activities"] if a["status"] == "reviewed_current_multisource_activity"))
-        claims = {c["id"]: c for c in followup["claims"]}
+        claims = {c["id"]: c for c in original["claims"] + followup["claims"]}
         docs = {b["node_id"]: {"source_id": b["node_id"].split(":")[0]} for b in a["source_bindings"] + a["candidate_source_bindings"]}
         validate_slice(a, claims, docs)
         a["candidate_source_bindings"].pop()

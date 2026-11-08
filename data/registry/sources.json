@@ -78,7 +78,7 @@
       ],
       "official_url": "https://unstats.un.org/unsd/classifications/econ/",
       "verification_status": "partially_verified",
-      "checked_on": "2026-11-08",
+      "checked_on": "2026-11-09",
       "editions": [
         {
           "id": "Rev.5",
@@ -168,6 +168,15 @@
             "download"
           ],
           "finding": "830个节点；50条注释修订。A列为带节代码，B列实际为父代码，表头未清楚说明。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC5_Exp_Notes_11Mar2024.pdf",
+          "method": "official_file_parsed",
+          "fields": [
+            "editions",
+            "download"
+          ],
+          "finding": "293页原版说明已锁定，与2026年更新工作簿并列。第71–72页记录2393卫生洁具的原始冲突，第113页保留家具工序的组级说明。"
         },
         {
           "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",

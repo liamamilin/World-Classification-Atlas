@@ -19,12 +19,13 @@ from .registry import read_json, write_json
 from .xlsx import read_workbook
 from .furniture_followup import (ASSETS as FOLLOWUP_ASSETS, PLAN as FOLLOWUP_PLAN,
                                 sources as followup_sources, extend_plan, supports_binding)
+from . import furniture_materials as materials
 
 NACE_ASSETS = ("nace21-download-list", "nace21-notes-20260930", "nace21-nace2-correspondence",
                "nace21-manual-2026", "nace2-manual-2008", "nace-reuse-policy",
                "isic4-nace2-correspondence", "isic4-nace2-change-history")
 BASE_REQUIRED = NACE_ASSETS + ("isic4-database", "isic5-notes-20260819", "isic4-isic5-correspondence")
-REQUIRED = BASE_REQUIRED + FOLLOWUP_ASSETS
+REQUIRED = BASE_REQUIRED + FOLLOWUP_ASSETS + materials.ASSETS
 PLAN = "data/research/furniture-review.json"
 BASE = "data/research/isic-expanded-review.json"
 LOCAL = "data/local/economy/furniture"
@@ -90,8 +91,8 @@ def pdf_pages(asset):
 
 
 def nace2_selected(pages):
-    # Only the bounded branch and its three incoming material classes, with ancestors.
-    wanted = {"23", "23.4", "23.6", "23.7", "23.42", "23.69", "23.70",
+    # Selected furniture and adjacent material classes, with ancestors.
+    wanted = {"23", "23.3", "23.31", "23.32", "23.4", "23.6", "23.7", "23.42", "23.69", "23.70",
               "31", "31.0", "31.01", "31.02", "31.03", "31.09"}
     result = []
     heading = re.compile(r"^[ \t]*(\d{2}(?:\.\d{1,2})?)[ \t]+([^\n]+)", re.M)
@@ -205,8 +206,9 @@ def extract(root, resources):
     return assets, old, new, current, previous, pdfs, cross, legacy, isic_edges, errata
 
 
-def validate_slice(activity, claims, documents):
-    if activity["status"] not in ("reviewed_bounded_activity", "reviewed_current_multisource_activity"):
+def validate_slice(activity, claims, documents, activities=None):
+    if activity["status"] not in ("reviewed_bounded_activity", "reviewed_current_multisource_activity",
+                                  "reviewed_with_legacy_gap"):
         raise ValueError("unreviewed activity cannot enter directory")
     keys = set()
     for binding in activity["source_bindings"]:
@@ -216,19 +218,30 @@ def validate_slice(activity, claims, documents):
         if key in keys or binding["relation"] != "broadMatch":
             raise ValueError("activity binding must be unique and point to a broader source class")
         keys.add(key)
-        if not supports_binding(binding, claims, documents, activity):
+        if binding.get("basis") == materials.BASIS:
+            if not materials.supports_material_slice(binding, claims, documents, activity, activities or {}):
+                raise ValueError("material class binding lacks bounded group process and class scope")
+        elif not supports_binding(binding, claims, documents, activity):
             raise ValueError("activity binding lacks direct source inclusion evidence")
     editions = {k.rsplit(":", 1)[0] for k in keys}
+    pending_editions = {b["node_id"].rsplit(":", 1)[0] for b in activity.get("candidate_source_bindings", [])}
     if activity["status"] == "reviewed_bounded_activity" and not {"ISIC:Rev.4", "ISIC:Rev.5", "NACE:Rev.2.1"} <= editions:
         raise ValueError("bounded multisource activity needs both ISIC editions and current NACE")
     if activity["status"] == "reviewed_current_multisource_activity":
-        pending_editions = {b["node_id"].rsplit(":", 1)[0] for b in activity.get("candidate_source_bindings", [])}
         if (editions != {"ISIC:Rev.5", "NACE:Rev.2.1"} or not {"ISIC:Rev.4", "NACE:Rev.2"} <= pending_editions
                 or activity.get("historical_scope_status") != "both_legacy_editions_pending"):
             raise ValueError("current multisource activity must retain both historical gaps")
+    if activity["status"] == "reviewed_with_legacy_gap":
+        current, legacy = {"ISIC:Rev.5", "NACE:Rev.2.1"}, {"ISIC:Rev.4", "NACE:Rev.2"}
+        gap = legacy - editions
+        if (not current <= editions or len(gap) != 1 or not gap <= pending_editions
+                or activity["historical_scope_status"] != {"pending_editions": sorted(gap)}):
+            raise ValueError("historical gap must remain an explicit pending edition")
     for candidate in activity.get("candidate_source_bindings", []):
         if candidate["relation"] is not None or candidate["node_id"] in keys or candidate["node_id"] not in documents:
             raise ValueError("pending binding cannot become approved")
+        if not candidate["claim_ids"] or any(c not in claims for c in candidate["claim_ids"]):
+            raise ValueError("pending binding lacks evidence")
 
 
 def validate_research_mapping(mapping, activities):
@@ -254,11 +267,15 @@ def build(root, resources):
         raise ValueError("follow-up reviewed source bytes changed")
     if plan["comparison_decisions"]["observed_expected_differences"] != extra["statistics"]["xkos_unsd_pair_differences"]:
         raise ValueError("official source disagreement differs from reviewed comparison")
+    plan, material_review = materials.extend_plan(root, plan, observed)
     documents = {n["id"]: n for n in old + new + current + previous}
     documents.update({n["id"]: n for n in extra["nodes"]})
     for n in extra["nodes"]:
         documents.setdefault(n["canonical_node_id"], {**n, "id": n["canonical_node_id"]})
     documents.update({f"{rid}:page:{p['evidence']['pdf_page']}": p for rid, pages in pdfs.items() for p in pages})
+    material_pages = {rid: pdf_pages(assets[rid]) for rid in materials.ASSETS}
+    material_docs, product = materials.evidence_documents(material_pages, errata, old)
+    documents.update(material_docs)
     all_official = cross + legacy + extra["reverse"] + extra["xkos"] + isic_edges
     documents.update({e["id"]: e for e in all_official})
     claims, dossiers = {}, []
@@ -275,10 +292,14 @@ def build(root, resources):
     if len(activities) != len(plan["activities"]):
         raise ValueError("duplicate activity ID")
     for activity in activities.values():
-        validate_slice(activity, claims, documents)
+        validate_slice(activity, claims, documents, activities)
+        for c in activity.get("boundary_claim_ids", []) + [c for r in activity.get("scope_followups", []) for c in r["claim_ids"]]:
+            if c not in claims:
+                raise ValueError("activity scope review missing evidence")
     official = {e["id"]: e for e in all_official}
     reviewed = []
     reviewed_ids = set()
+    material_review_ids = {r["mapping_id"] for r in material_review["official_reviews"]}
     for decision in plan["official_reviews"]:
         if decision["mapping_id"] in reviewed_ids:
             raise ValueError("duplicate official review; retain a follow-up history instead")
@@ -288,6 +309,10 @@ def build(root, resources):
             raise ValueError("branch review cannot upgrade correspondence to whole-class equivalence")
         if not decision["claim_ids"] or any(c not in claims for c in decision["claim_ids"]):
             raise ValueError("official row review missing evidence")
+        if decision["mapping_id"] in material_review_ids:
+            materials.check_scoped_review(decision, edge, activities, claims)
+        for followup in decision.get("scope_followups", []):
+            materials.check_scoped_review(followup, edge, activities, claims)
         reviewed.append({"mapping_id": edge["id"], "from": edge["from"], "to": edge["to"],
                          "evidence": edge["evidence"], "topology": edge["topology"],
                          "publisher_partial_flags": edge.get("publisher_partial_flags"),
@@ -300,6 +325,8 @@ def build(root, resources):
     for mapping in plan["research_mappings"]:
         validate_research_mapping(mapping, activities)
         mappings.append(mapping)
+    comparisons = materials.check_comparisons(material_review["comparisons"], all_official, assets,
+                                               {m["id"]: m for m in mappings}, claims)
     ids = read_json(root / BASE)["atlas_identities"]
     nodes = plan["navigation"] + plan["anchors"] + plan["activities"]
     for node in plan["anchors"]:
@@ -321,7 +348,8 @@ def build(root, resources):
                  "concepts": nodes, "source_to_atlas": dict(reverse), "source_to_candidates": dict(candidates),
                  "source_to_binding_history": dict(history), "direct_correspondence_audit": extra["statistics"]["direct_correspondence_audit"],
                  "claims": list(claims.values()), "issues": plan["issues"], "research_mappings": mappings,
-                 "official_reviews": reviewed}
+                 "official_reviews": reviewed, "official_pair_comparisons": comparisons,
+                 "auxiliary_product_references": [product]}
     local = root / LOCAL
     write_json(root / PUBLIC, directory)
     for filename, value in (("nace21-nodes.jsonl", current), ("nace2-selected-nodes.jsonl", previous),
@@ -336,6 +364,16 @@ def build(root, resources):
         write_jsonl(local / (name + ".jsonl"), value)
         write_jsonl(root / ("data/normalized/NACE/Rev.2/" + name + ".jsonl"), value)
     write_json(local / "evidence-dossiers.json", dossiers)
+    selected_material_docs = {c["document"]: material_docs[c["document"]]
+                              for c in claims.values() if c["document"] in material_docs}
+    material_edge_ids = {e["id"] for c in comparisons for e in c["adjacent_rows"]}
+    material_edge_ids.update(r["mapping_id"] for r in material_review["official_reviews"]
+                             + material_review["official_review_followups"])
+    write_json(local / "material-boundary-source-evidence.json", {
+        "historical_and_auxiliary_documents": selected_material_docs,
+        "auxiliary_product_reference": product,
+        "publisher_rows": [e for e in all_official if e["id"] in material_edge_ids],
+    })
     source_nodes = {n["id"]: dict(n) for n in old + new + current + previous}
     for n in extra["nodes"]:
         key = n["canonical_node_id"]
@@ -345,6 +383,8 @@ def build(root, resources):
             source_nodes[key] = {**n, "id": key, "component_document_id": n["id"]}
     wanted = {b["node_id"] for n in nodes for b in n.get("source_bindings", []) + n.get("candidate_source_bindings", []) + n.get("additional_source_bindings", [])}
     wanted.update("NACE:Rev.2:" + c for c in ("31.01", "31.02", "31.03", "31.09"))
+    wanted.update(c["document"] for c in material_review["claims"] if c["document"] in source_nodes)
+    wanted.update(b for c in comparisons for e in c["adjacent_rows"] for b in (e["from"], e["to"]))
     pending = list(wanted)
     while pending:
         key = pending.pop()
@@ -365,6 +405,12 @@ def build(root, resources):
              "nace21_class_definitions": sum(bool(n["definition"]) for n in current if n["level"] == 4),
              "branch_source_nodes": dict(Counter(n["source_id"] + ":" + n["edition"] for n in branch_nodes)),
              "pdf_pages": {rid: len(pages) for rid, pages in pdfs.items()},
+             "material_boundaries": {"new_activities": len(material_review["activities"]),
+                                     "new_claims": len(material_review["claims"]),
+                                     "additional_official_scope_reviews": len(material_review["official_review_followups"]),
+                                     "official_pair_comparisons": comparisons,
+                                     "auxiliary_product_references": [product],
+                                     "pdf_pages": {rid: len(pages) for rid, pages in material_pages.items()}},
              "official_tables": {"nace21_to_nace2_rows": len(cross), "nace_levels": dict(Counter(e["level"] for e in cross)),
                                  "isic4_to_nace2_rows": len(legacy), "furniture_current_incoming_rows": len(branch_edges),
                                  "individually_reviewed_rows": len(reviewed),
@@ -384,7 +430,8 @@ def build(root, resources):
              "reproducibility": {"python": sys.version.split()[0], "pdftotext": subprocess.check_output(["pdftotext", "-v"], stderr=subprocess.STDOUT).decode().splitlines()[0],
                                  "review_sha256": sha256((root / PLAN).read_bytes()), "base_identity_sha256": sha256((root / BASE).read_bytes()),
                                  "followup_review": plan["followup_metadata"],
-                                 "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("furniture.py", "furniture_followup.py", "furniture_view.html", "isic.py", "isic_priority.py", "xlsx.py", "normalize.py")}},
+                                 "material_boundary_review": plan["material_boundary_review"],
+                                 "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("furniture.py", "furniture_followup.py", "furniture_materials.py", "furniture_view.html", "isic.py", "isic_boundaries.py", "isic_priority.py", "xlsx.py", "normalize.py")}},
              "limits": ["No direct official NACE2.1-ISIC5 crosswalk found at checked endpoints; research edges are not transitive official edges.",
                         "Every furniture leaf has scoped research coverage; complete class equivalence remains unapproved.",
                         "NACE2 extraction is selected, not a full old scheme; no real-world entities or allocation weights."]}
@@ -408,7 +455,7 @@ def run(root, resources):
 
 
 def reproduce(root, resources):
-    result = {"status": "failed", "method": "fresh directory; pinned raw assets, manifests, query texts and three research inputs only; no network", "files": []}
+    result = {"status": "failed", "method": "fresh directory; pinned raw assets, manifests, query texts and four research inputs only; no network", "files": []}
     try:
         if run(root, resources):
             raise ValueError("baseline failed")
@@ -416,7 +463,7 @@ def reproduce(root, resources):
         with tempfile.TemporaryDirectory(prefix="atlas-furniture-repro-") as folder:
             target = Path(folder)
             queries = [a["resource"]["query_file"] for a in assets.values() if a["resource"].get("query_file")]
-            for rel in [PLAN, BASE, FOLLOWUP_PLAN, "data/resources.lock.json"] + queries:
+            for rel in [PLAN, BASE, FOLLOWUP_PLAN, materials.PLAN, "data/resources.lock.json"] + queries:
                 path = target / rel
                 path.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(root / rel, path)

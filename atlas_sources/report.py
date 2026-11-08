@@ -53,6 +53,9 @@ def build(root, registry, resources):
                 for rid in ("nace-cellar-correspondence-schemes-20261109", "nace-cellar-current-mapping-targets-20261109",
                             "nace-cellar-current-incoming-isic-20261109", "nace-cellar-current-positive-control-20261109"):
                     stages[rid] = {"status": "bounded_direct_correspondence_audit", "finding": followup["direct_correspondence_audit"]["status"]}
+            if furniture.get("material_boundaries"):
+                stages["isic5-notes-20240311"] = {"status": "historical_note_clauses_reviewed",
+                    "pages": furniture["material_boundaries"]["pdf_pages"]["isic5-notes-20240311"]}
             for row in integrity:
                 if row["resource_id"] in stages:
                     row["domain_stage"] = stages[row["resource_id"]]
@@ -80,7 +83,7 @@ def build(root, registry, resources):
                                                 "correspondence": economy.get("correspondence")}
                                                if economy else None),
                "counts_note": "Counts are per resource, not global concepts. O*NET CSV/CTDL overlap. ISIC has a separately counted reviewed subset; no instance links.",
-               "furniture_multisource_research": ({k: furniture[k] for k in ("status", "nace21", "official_tables", "directory", "reused_ids", "new_ids", "bounded_activities", "evidence_claims", "research_mappings", "candidate_bindings", "followup_sources", "activity_review_status", "binding_history_records", "approved_isic5_source_levels") if k in furniture} if furniture else None),
+               "furniture_multisource_research": ({k: furniture[k] for k in ("status", "nace21", "official_tables", "directory", "reused_ids", "new_ids", "bounded_activities", "evidence_claims", "research_mappings", "candidate_bindings", "followup_sources", "activity_review_status", "binding_history_records", "approved_isic5_source_levels", "material_boundaries") if k in furniture} if furniture else None),
                "resources": integrity}
     reports = root / "data/reports"
     write_json(reports / "coverage.json", summary)
@@ -126,8 +129,12 @@ def build(root, registry, resources):
                 focused = furniture["followup_sources"]
                 lines += [f"新增旧NACE2→ISIC4直接官方XKOS桥{focused['xkos_nace2_to_isic4_associations']}条，发布者closeMatch保持独立；"
                           f"与UNSD有{focused['xkos_unsd_pair_differences']['common_pairs']}对代码事实一致，46.6→466/465差异保留。"
-                          "当前NACE2.1–ISIC5审计有1047节点阳性对照，未观察到直接关系；不把空结果称为官方无对应。"
-                          "旧陶瓷家具的明确活动分配已审，历史候选保留；部件旧版与工序细类仍待审。"]
+                          "当前NACE2.1–ISIC5审计有1047节点阳性对照，未观察到直接关系。"]
+            if furniture.get("material_boundaries"):
+                material = furniture["material_boundaries"]
+                lines += [f"家具材料边界新增{material['new_activities']}项活动和{material['new_claims']}条证据。"
+                          f"在{len(material['official_pair_comparisons'])}份固定官方表中核实卫生洁具缺行，单独登记定义支持的研究对应。"
+                          "旧ISIC部件候选、独立处理及整类冲突继续待审。"]
     lines += ["", "节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。",
               "", "## 未决项（逐来源）", ""]
     for s in registry["sources"]:
