@@ -118,5 +118,53 @@
     "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
     "source_id": "UN_CPC",
     "edition": "2.1"
+  },
+  "nace21-download-list": {
+    "sha256": "9ac085205d2af56b0347b7ab1c65550920af6979f5ec3f9900afb6a98b044698",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getDownloadInfoList?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "nace21-notes-20260930": {
+    "sha256": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "nace21-nace2-correspondence": {
+    "sha256": "2ceee6c855731842c7933a897a9400756fe23c4416b00176631236053b704ac2",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE_Rev.2.1_NACE_Rev.2_+CorrespondenceTable.xlsx",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "nace21-manual-2026": {
+    "sha256": "3cd7bc5d1dcc60c3e0ecaefa732ad2d30d87d009abf5b1b823632e12a8dd0cd4",
+    "url": "https://ec.europa.eu/eurostat/documents/3859598/24236479/KS-01-26-047-EN-N.pdf",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "nace2-manual-2008": {
+    "sha256": "452982566cfcb4ee4f0e20d19395cb9c81726828b3bce48fdf4a0c7efc3a2302",
+    "url": "https://ec.europa.eu/eurostat/documents/3859598/5902521/KS-RA-07-015-EN.PDF.pdf/dd5443f5-b886-40e4-920d-9df03590ff91?t=1414781457000",
+    "source_id": "NACE",
+    "edition": "Rev.2"
+  },
+  "nace-reuse-policy": {
+    "sha256": "87324bd393d88bd5c69652e73eec8791e966935fbf92a2b01054a2b5b7d67d26",
+    "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "isic4-nace2-correspondence": {
+    "sha256": "fd5283a539afecfb36aad2ad3023787c333a133458463592d681c30d1a15a101",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+    "source_id": "ISIC",
+    "edition": "Rev.4"
+  },
+  "isic4-nace2-change-history": {
+    "sha256": "94d6fa07aae5795c9a7604712d83283ad7398cd04716c1147549e3d61c1c847f",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/Change%20history.txt",
+    "source_id": "ISIC",
+    "edition": "Rev.4"
   }
 }

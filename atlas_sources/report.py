@@ -29,6 +29,24 @@ def build(root, registry, resources):
                 if row["resource_id"] in stages:
                     row["domain_stage"] = stages[row["resource_id"]]
     snapshots = [r for r in integrity if r.get("sha256") and r["status"] != "failed"]
+    furniture_path = root / "data/reports/furniture-alignment.json"
+    furniture = read_json(furniture_path) if furniture_path.exists() else None
+    if furniture and furniture.get("status") == "passed":
+        pins = read_json(root / "data/resources.lock.json")
+        local = {r["resource_id"]: r for r in integrity}
+        if any(local.get(e["resource_id"], {}).get("status") in ("failed", "not_downloaded") for e in furniture["inputs"]):
+            furniture = {"status": "inputs_not_available_locally"}
+        elif any(pins.get(e["resource_id"], {}).get("sha256") != e["sha256"] for e in furniture["inputs"]):
+            furniture = {"status": "stale"}
+        else:
+            stages = {"nace21-notes-20260930": {"status": "structure_and_notes_parsed", "nodes": furniture["nace21"]["node_count"]},
+                      "nace21-nace2-correspondence": {"status": "correspondence_parsed", "rows": furniture["official_tables"]["nace21_to_nace2_rows"]},
+                      "isic4-nace2-correspondence": {"status": "correspondence_parsed", "rows": furniture["official_tables"]["isic4_to_nace2_rows"]},
+                      "nace2-manual-2008": {"status": "selected_branch_notes_parsed", "nodes": furniture["nace2_selected"]["node_count"]},
+                      "nace21-manual-2026": {"status": "text_extracted_and_selected_clauses_reviewed"}}
+            for row in integrity:
+                if row["resource_id"] in stages:
+                    row["domain_stage"] = stages[row["resource_id"]]
     parsed = [r for r in integrity if r["status"] == "parsed"]
     source_ids = {r["source_id"] for r in snapshots}
     domains = []
@@ -53,6 +71,7 @@ def build(root, registry, resources):
                                                 "correspondence": economy.get("correspondence")}
                                                if economy else None),
                "counts_note": "Counts are per resource, not global concepts. O*NET CSV/CTDL overlap. ISIC has a separately counted reviewed subset; no instance links.",
+               "furniture_multisource_research": ({k: furniture[k] for k in ("status", "nace21", "official_tables", "directory", "reused_ids", "new_ids", "bounded_activities", "evidence_claims", "research_mappings", "candidate_bindings") if k in furniture} if furniture else None),
                "resources": integrity}
     reports = root / "data/reports"
     write_json(reports / "coverage.json", summary)
@@ -88,6 +107,12 @@ def build(root, registry, resources):
                           f"{review.get('candidate_source_bindings', 0)}条待审来源关联与已审绑定分别索引，"
                           f"{review.get('held_directory_proposals', 0)}个待审目录提案不计入已审节点。"
                           "CPC产品说明和主要行业对应仅作旁证，见 [边界核查](isic-boundary-review.json)。"]
+    if furniture:
+        lines += ["", "家具多源研究另见 [NACE/ISIC实测](furniture-alignment.json)，状态：" + furniture["status"] + "。"]
+        if furniture.get("status") == "passed":
+            lines += [f"NACE Rev.2.1完整解析{furniture['nace21']['node_count']}节点；家具分支{furniture['directory']['node_count']}节点，含{furniture['reused_ids']}个沿用身份及{furniture['new_ids']}个新身份；"
+                      f"{furniture['research_mappings']}条有界跨体系研究关系、{furniture['official_tables']['individually_reviewed_rows']}条官方行独立审查、{furniture['candidate_bindings']}条待审来源绑定。"
+                      "原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。"]
     lines += ["", "节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。",
               "", "## 未决项（逐来源）", ""]
     for s in registry["sources"]:

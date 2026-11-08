@@ -1,0 +1,31 @@
+{
+  "resource_id": "nace21-notes-20260930",
+  "source_id": "NACE",
+  "edition": "Rev.2.1",
+  "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+  "attempted_at": "2026-11-08T15:35:07.374240+00:00",
+  "final_url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+  "http_status": 200,
+  "content_type": null,
+  "etag": null,
+  "last_modified": null,
+  "sha256": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+  "bytes": 211513,
+  "path": "data/raw/NACE/Rev.2.1/nace21-notes-20260930/9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442/nace21-notes-20260930.xlsx",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "Eurostat reuse policy (attribution and changes required)",
+    "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+  },
+  "role": "structure_and_explanatory_notes",
+  "language": "en",
+  "format": "xlsx",
+  "publication_date": null,
+  "robots": {
+    "url": "https://showvoc.op.europa.eu/robots.txt",
+    "result": "HTTP 404; no robots rules",
+    "allowed": true
+  }
+}

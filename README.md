@@ -40,6 +40,7 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 - [ISIC 拆分、合并、2026 勘误审查与目录扩展实测](docs/10-ISIC-REVIEW-AND-DIRECTORY.md)
 - [植物奶、食用冰、纺织和核燃料的条款核查与补充对应](docs/11-ISIC-PRIORITY-ALLOCATIONS.md)
 - [水冰、口罩、碳织物的旧版边界与竞争来源核查](docs/12-ISIC-BOUNDARY-FOLLOWUPS.md)
+- [家具制造：NACE与ISIC同对象多源整理](docs/13-FURNITURE-MULTISOURCE-ALIGNMENT.md)
 - [原始分类体系候选清单（机器可读）](data/source-candidates.csv)
 - [Codex 项目协作说明](AGENTS.md)
 
@@ -47,7 +48,7 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 
 已在原始 38 条候选之外建立可持续维护的 [50 个来源的结构化登记](data/registry/sources.json)，覆盖 15 个导航领域，并单独保存从 UNSD Family 发现的 149 条候选。核实程度、资料是否下载、是否解析分别记录，未决事实保留为空，不将全部登记称为核实完成。
 
-已实现内容寻址采集、版本/URL/哈希锁定、许可分流、变化检测、源结构解析、QA 和本地来源浏览。真实采集覆盖 6 个来源、20 个文件，登记22个资源任务。基础适配器可解析8个结构资源；经济活动专项另解析两版ISIC完整注释和605行官方对应，并选取CPC产品说明作边界旁证。O*NET 原始及解析数据依 CC BY 4.0 入库；UNSD完整资料和衍生说明因再分发条件未确认仍留在本地。
+已实现内容寻址采集、版本/URL/哈希锁定、许可分流、变化检测、源结构解析、QA 和本地来源浏览。真实采集覆盖 7 个来源、28 个文件，登记30个资源任务。基础适配器可解析8个结构资源；经济活动专项另解析两版ISIC完整注释和605行官方对应，并选取CPC产品说明作边界旁证。O*NET 原始及解析数据依 CC BY 4.0 入库；UNSD完整资料和衍生说明因再分发条件未确认仍留在本地。
 
 ISIC Rev.4 的419个类、Rev.5 的463个类均有官方说明；原始层级、五项Rev.4数据库更正、50项Rev.5注释更新、拆分/合并/转移、部分对应和发布者问号都可追溯。现有161条官方对应行的逐条审查记录，其中141条批准当前关系、20条审后暂缓，其余444条保留待审。已审关系含107条相关、22条窄向、9条宽向和3条等价。另有6条独立的Atlas活动证据补充关系和2条待审补充候选，未修改605行官方表。
 
@@ -70,6 +71,15 @@ python3 -m atlas_sources economy
 python3 -m atlas_sources reproduce-economy
 node scripts/check_economy_view.js
 open data/local/economy/isic/index.html
+```
+
+家具制造已接入NACE Rev.2.1，核实2026说明手册、Eurostat复用许可与真实官方下载。完整解析1047个当前源节点和1598行NACE跨版对应，另解析996行ISIC4→NACE2官方对应；只对家具相关14行逐项研究。NACE当前家具类包括石、混凝土及陶瓷家具，不能直接等同于两个ISIC5家具类。新增独立家具研究目录11节点（2个复用身份、9个新身份），7个有界活动、9条跨体系研究关系、39条定位证据；5个问题和1条旧NACE陶瓷家具候选绑定继续待审。此前263节点目录及其稳定ID独立保留。
+
+```sh
+python3 -m atlas_sources furniture
+python3 -m atlas_sources reproduce-furniture
+node scripts/check_furniture_view.js
+open data/local/economy/furniture/index.html
 ```
 
 未开发现实实体关联或需求理论。后续继续按明确分类对象和合法本地快照逐领域整理，保留原始目录、版本及映射的语义差异。

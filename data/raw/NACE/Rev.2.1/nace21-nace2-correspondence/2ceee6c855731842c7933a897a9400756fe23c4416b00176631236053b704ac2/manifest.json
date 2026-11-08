@@ -1,0 +1,31 @@
+{
+  "resource_id": "nace21-nace2-correspondence",
+  "source_id": "NACE",
+  "edition": "Rev.2.1",
+  "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE_Rev.2.1_NACE_Rev.2_+CorrespondenceTable.xlsx",
+  "attempted_at": "2026-11-08T15:35:10.711200+00:00",
+  "final_url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE_Rev.2.1_NACE_Rev.2_+CorrespondenceTable.xlsx",
+  "http_status": 200,
+  "content_type": null,
+  "etag": null,
+  "last_modified": null,
+  "sha256": "2ceee6c855731842c7933a897a9400756fe23c4416b00176631236053b704ac2",
+  "bytes": 204677,
+  "path": "data/raw/NACE/Rev.2.1/nace21-nace2-correspondence/2ceee6c855731842c7933a897a9400756fe23c4416b00176631236053b704ac2/nace21-nace2-correspondence.xlsx",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "Eurostat reuse policy (attribution and changes required)",
+    "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+  },
+  "role": "official_correspondence",
+  "language": "en",
+  "format": "xlsx",
+  "publication_date": null,
+  "robots": {
+    "url": "https://showvoc.op.europa.eu/robots.txt",
+    "result": "HTTP 404; no robots rules",
+    "allowed": true
+  }
+}

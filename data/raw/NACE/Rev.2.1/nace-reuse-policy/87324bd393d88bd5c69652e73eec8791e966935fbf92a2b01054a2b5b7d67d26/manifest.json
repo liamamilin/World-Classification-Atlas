@@ -1,0 +1,31 @@
+{
+  "resource_id": "nace-reuse-policy",
+  "source_id": "NACE",
+  "edition": "Rev.2.1",
+  "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+  "attempted_at": "2026-11-08T15:35:40.341134+00:00",
+  "final_url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+  "http_status": 200,
+  "content_type": "text/html;charset=UTF-8",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "87324bd393d88bd5c69652e73eec8791e966935fbf92a2b01054a2b5b7d67d26",
+  "bytes": 177790,
+  "path": "data/raw/NACE/Rev.2.1/nace-reuse-policy/87324bd393d88bd5c69652e73eec8791e966935fbf92a2b01054a2b5b7d67d26/nace-reuse-policy.html",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "Eurostat reuse policy (attribution and changes required)",
+    "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+  },
+  "role": "reuse_policy",
+  "language": "en",
+  "format": "html",
+  "publication_date": null,
+  "robots": {
+    "url": "https://ec.europa.eu/robots.txt",
+    "result": "fetched",
+    "allowed": true
+  }
+}

@@ -294,10 +294,19 @@
       "checked_on": "2026-11-08",
       "editions": [
         {
-          "id": "Rev.2.1",
-          "label": "Rev.2.1",
+          "id": "Rev.2",
+          "label": "NACE Rev.2 (2008 manual)",
           "status": "confirmed_available",
           "latest_claim": false
+        },
+        {
+          "id": "Rev.2.1",
+          "label": "NACE Rev.2.1; 2026 explanatory manual",
+          "status": "confirmed_current_on_check_date",
+          "latest_claim": true,
+          "applies_from": "2025-01-01",
+          "manual_publication_date": "2026-09-17",
+          "manual_is_new_revision": false
         }
       ],
       "hierarchy": {
@@ -308,31 +317,45 @@
           "group",
           "class"
         ],
-        "status": "verified_description",
-        "counts": null
+        "status": "verified_from_structure_fields",
+        "counts": {
+          "Rev.2.1": {
+            "nodes": 1047,
+            "levels": [
+              22,
+              87,
+              287,
+              651
+            ],
+            "origin": "observed_pinned_notes_2026-09-30",
+            "publisher_count_independently_checked": false
+          }
+        }
       },
       "download": {
         "landing_url": "https://ec.europa.eu/eurostat/web/nace/",
         "formats": [
           "pdf",
+          "xlsx",
+          "tsv",
           "linked data"
         ],
-        "status": "official_entry_verified"
+        "status": "official_downloads_verified"
       },
       "license": {
-        "name": null,
-        "url": null,
-        "access": "public_metadata",
-        "download": null,
-        "local_processing": null,
-        "redistribute": null,
-        "derivatives": null,
-        "attribution": null,
-        "status": "pending",
-        "note": "逐文件核实；公开网页不等于开放许可。"
+        "name": "EU reuse policy; CC BY 4.0 for 2026 manual text",
+        "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+        "access": "public",
+        "download": true,
+        "local_processing": true,
+        "redistribute": true,
+        "derivatives": true,
+        "attribution": "Source: European Commission, Eurostat; identify changes; Eurostat is not responsible for Atlas modifications.",
+        "status": "verified_with_asset_exceptions",
+        "note": "2026 manual physical page 4 explicitly CC BY 4.0; third-party cover image excluded. Complete PDFs kept local; classification text and Eurostat download tables may be redistributed with attribution under the Eurostat reuse policy. Not a licence claim for UNSD files."
       },
       "official_mappings": {
-        "status": "official_entry_verified",
+        "status": "selected_official_tables_parsed",
         "items": [
           {
             "from_edition": "NACE Rev.2",
@@ -340,6 +363,21 @@
             "url": "https://ec.europa.eu/eurostat/web/nace/correspondence-tables",
             "status": "official_entry_verified",
             "semantics": "官方对应入口；活动迁移可能部分对应。"
+          },
+          {
+            "from_edition": "ISIC Rev.4",
+            "to_edition": "NACE Rev.2",
+            "url": "https://unstats.un.org/unsd/classifications/Econ",
+            "status": "official_download_entry_verified",
+            "semantics": "UNSD distributed crosswalk; preserve partial indicators and original direction."
+          },
+          {
+            "from_edition": "NACE Rev.2.1",
+            "to_edition": "NACE Rev.2",
+            "resource_id": "nace21-nace2-correspondence",
+            "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE_Rev.2.1_NACE_Rev.2_+CorrespondenceTable.xlsx",
+            "status": "downloaded_and_parsed",
+            "semantics": "Published direction preserved; 1598 rows across four levels, one explicit no-correspondence row. Furniture 31.00 has seven old class counterparts; three material transfers are partial scopes."
           }
         ]
       },
@@ -356,10 +394,38 @@
             "download"
           ],
           "finding": "Rev.2.1 从 2025 开始用于欧洲统计；2026 手册版不是新分类 revision。RAMON 旧入口失效。"
+        },
+        {
+          "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "Eurostat metadata/publication reuse authorised with source and modification acknowledgement; asset-specific exceptions checked."
+        },
+        {
+          "url": "https://ec.europa.eu/eurostat/web/products-manuals-and-guidelines/w/ks-01-26-047",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "download"
+          ],
+          "finding": "2026-09-17 manual of Rev.2.1, manuscript July 2026, DOI 10.2785/3034037; not a new NACE revision."
+        },
+        {
+          "url": "https://showvoc.op.europa.eu/#/datasets/ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29/downloads",
+          "method": "official_download_inventory_and_pinned_workbooks",
+          "fields": [
+            "download",
+            "hierarchy",
+            "official_mappings"
+          ],
+          "finding": "Public Download service returns official file inventory; 2026-09-30 notes and 2026-09-29 correspondence upload timestamps are dissemination-component timestamps, not new classification revisions."
         }
       ],
       "unresolved": [
-        "公开再分发许可待核实"
+        "未在已核查的Eurostat/UNSD下载入口发现NACE Rev.2.1与ISIC Rev.5直接对应表；不以版本链传递当作官方直接对应。",
+        "本轮只研究家具分支；全体系对应与非家具定义未逐项审查。"
       ]
     },
     {

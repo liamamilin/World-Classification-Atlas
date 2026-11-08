@@ -435,5 +435,112 @@
       "trade_template_rows_not_expanded": 72,
       "use": "auxiliary product evidence; not an economic-activity scheme or equivalence"
     }
+  },
+  {
+    "resource_id": "nace21-download-list",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "official_download_inventory",
+    "sha256": "9ac085205d2af56b0347b7ab1c65550920af6979f5ec3f9900afb6a98b044698",
+    "path": "data/raw/NACE/Rev.2.1/nace21-download-list/9ac085205d2af56b0347b7ab1c65550920af6979f5ec3f9900afb6a98b044698/nace21-download-list.json",
+    "bytes": 3812,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
+    "resource_id": "nace21-notes-20260930",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "structure_and_explanatory_notes",
+    "sha256": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+    "path": "data/raw/NACE/Rev.2.1/nace21-notes-20260930/9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442/nace21-notes-20260930.xlsx",
+    "bytes": 211513,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "structure_and_notes_parsed",
+      "nodes": 1047
+    }
+  },
+  {
+    "resource_id": "nace21-nace2-correspondence",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "official_correspondence",
+    "sha256": "2ceee6c855731842c7933a897a9400756fe23c4416b00176631236053b704ac2",
+    "path": "data/raw/NACE/Rev.2.1/nace21-nace2-correspondence/2ceee6c855731842c7933a897a9400756fe23c4416b00176631236053b704ac2/nace21-nace2-correspondence.xlsx",
+    "bytes": 204677,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "correspondence_parsed",
+      "rows": 1598
+    }
+  },
+  {
+    "resource_id": "nace21-manual-2026",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "manual",
+    "sha256": "3cd7bc5d1dcc60c3e0ecaefa732ad2d30d87d009abf5b1b823632e12a8dd0cd4",
+    "path": "data/local/raw/NACE/Rev.2.1/nace21-manual-2026/3cd7bc5d1dcc60c3e0ecaefa732ad2d30d87d009abf5b1b823632e12a8dd0cd4/nace21-manual-2026.pdf",
+    "bytes": 8613519,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "text_extracted_and_selected_clauses_reviewed"
+    }
+  },
+  {
+    "resource_id": "nace2-manual-2008",
+    "source_id": "NACE",
+    "edition": "Rev.2",
+    "role": "manual",
+    "sha256": "452982566cfcb4ee4f0e20d19395cb9c81726828b3bce48fdf4a0c7efc3a2302",
+    "path": "data/local/raw/NACE/Rev.2/nace2-manual-2008/452982566cfcb4ee4f0e20d19395cb9c81726828b3bce48fdf4a0c7efc3a2302/nace2-manual-2008.pdf",
+    "bytes": 5908141,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "selected_branch_notes_parsed",
+      "nodes": 14
+    }
+  },
+  {
+    "resource_id": "nace-reuse-policy",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "reuse_policy",
+    "sha256": "87324bd393d88bd5c69652e73eec8791e966935fbf92a2b01054a2b5b7d67d26",
+    "path": "data/raw/NACE/Rev.2.1/nace-reuse-policy/87324bd393d88bd5c69652e73eec8791e966935fbf92a2b01054a2b5b7d67d26/nace-reuse-policy.html",
+    "bytes": 177790,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
+    "resource_id": "isic4-nace2-correspondence",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "role": "official_correspondence",
+    "sha256": "fd5283a539afecfb36aad2ad3023787c333a133458463592d681c30d1a15a101",
+    "path": "data/local/raw/ISIC/Rev.4/isic4-nace2-correspondence/fd5283a539afecfb36aad2ad3023787c333a133458463592d681c30d1a15a101/isic4-nace2-correspondence.txt",
+    "bytes": 18838,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "correspondence_parsed",
+      "rows": 996
+    }
+  },
+  {
+    "resource_id": "isic4-nace2-change-history",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "role": "correspondence_change_history",
+    "sha256": "94d6fa07aae5795c9a7604712d83283ad7398cd04716c1147549e3d61c1c847f",
+    "path": "data/local/raw/ISIC/Rev.4/isic4-nace2-change-history/94d6fa07aae5795c9a7604712d83283ad7398cd04716c1147549e3d61c1c847f/isic4-nace2-change-history.txt",
+    "bytes": 242,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
   }
 ]

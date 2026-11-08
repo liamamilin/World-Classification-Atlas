@@ -4,11 +4,11 @@
 
 登记 50 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-22 个采集任务，20 个已锁定且通过格式检查，涉及 6 个来源；8 个资源可解析。
+30 个采集任务，28 个已锁定且通过格式检查，涉及 7 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
-| 01-economy 经济与行业 | 5 | 1 | 1 |
+| 01-economy 经济与行业 | 5 | 2 | 1 |
 | 02-products 产品与服务 | 9 | 1 | 1 |
 | 03-consumption 消费与支出 | 4 | 2 | 2 |
 | 04-knowledge 学科与知识 | 6 | 0 | 0 |
@@ -50,6 +50,14 @@
 | cpc3-notes-20250630 | 3.0 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 534} | 未统计 | — |
 | cpc21-readme-20250403 | 2.1 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 1} | 未统计 | — |
 | cpc21-notes-20250403 | 2.1 | format_checked_only; economy: {'status': 'selected_auxiliary_product_evidence', 'main_sheet_code_rows': 4144, 'selected_subclasses': 7, 'trade_template_rows_not_expanded': 72, 'use': 'auxiliary product evidence; not an economic-activity scheme or equivalence'} | 未统计 | — |
+| nace21-download-list | Rev.2.1 | format_checked_only | 未统计 | — |
+| nace21-notes-20260930 | Rev.2.1 | format_checked_only; economy: {'status': 'structure_and_notes_parsed', 'nodes': 1047} | 未统计 | — |
+| nace21-nace2-correspondence | Rev.2.1 | format_checked_only; economy: {'status': 'correspondence_parsed', 'rows': 1598} | 未统计 | — |
+| nace21-manual-2026 | Rev.2.1 | format_checked_only; economy: {'status': 'text_extracted_and_selected_clauses_reviewed'} | 未统计 | — |
+| nace2-manual-2008 | Rev.2 | format_checked_only; economy: {'status': 'selected_branch_notes_parsed', 'nodes': 14} | 未统计 | — |
+| nace-reuse-policy | Rev.2.1 | format_checked_only | 未统计 | — |
+| isic4-nace2-correspondence | Rev.4 | format_checked_only; economy: {'status': 'correspondence_parsed', 'rows': 996} | 未统计 | — |
+| isic4-nace2-change-history | Rev.4 | format_checked_only | 未统计 | — |
 
 经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 
@@ -59,13 +67,16 @@
 
 其中3个活动只审定Rev.5当前范围；7条待审来源关联与已审绑定分别索引，1个待审目录提案不计入已审节点。CPC产品说明和主要行业对应仅作旁证，见 [边界核查](isic-boundary-review.json)。
 
+家具多源研究另见 [NACE/ISIC实测](furniture-alignment.json)，状态：passed。
+NACE Rev.2.1完整解析1047节点；家具分支11节点，含2个沿用身份及9个新身份；9条有界跨体系研究关系、14条官方行独立审查、1条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
+
 节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。
 
 ## 未决项（逐来源）
 
 - ISIC: 再分发适用条款待逐文件确认。 [官方入口](https://unstats.un.org/unsd/classifications/econ/)
 - NAICS: 公开再分发许可待核实。 [官方入口](https://www.census.gov/naics/)
-- NACE: 公开再分发许可待核实。 [官方入口](https://ec.europa.eu/eurostat/web/nace/)
+- NACE: 未在已核查的Eurostat/UNSD下载入口发现NACE Rev.2.1与ISIC Rev.5直接对应表；不以版本链传递当作官方直接对应。；本轮只研究家具分支；全体系对应与非家具定义未逐项审查。。 [官方入口](https://ec.europa.eu/eurostat/web/nace/)
 - GBT4754: 公开再分发许可待核实；官方映射及精确端点版本待核实。 [官方入口](https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html)
 - UN_CPC: 再分发适用条款待逐文件确认。 [官方入口](https://unstats.un.org/unsd/classifications/econ/)
 - HS: 公开再分发许可待核实。 [官方入口](https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx)

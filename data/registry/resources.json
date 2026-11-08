@@ -469,5 +469,173 @@
         "reason": "实测XLSX主表只有代码、标题、包含和排除列；选取的CPC-ISIC行业对应来自PDF手册。首次manifest保留原登记，不改写原字节或采集历史。"
       }
     ]
+  },
+  {
+    "id": "nace21-download-list",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getDownloadInfoList?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29",
+    "filename": "nace21-download-list.json",
+    "format": "json",
+    "role": "official_download_inventory",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "Eurostat reuse policy (attribution and changes required)",
+      "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+    }
+  },
+  {
+    "id": "nace21-notes-20260930",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE+Rev.+2.1+Explanatory+Notes.xlsx",
+    "filename": "nace21-notes-20260930.xlsx",
+    "format": "xlsx",
+    "role": "structure_and_explanatory_notes",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "Eurostat reuse policy (attribution and changes required)",
+      "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+    }
+  },
+  {
+    "id": "nace21-nace2-correspondence",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE_Rev.2.1_NACE_Rev.2_+CorrespondenceTable.xlsx",
+    "filename": "nace21-nace2-correspondence.xlsx",
+    "format": "xlsx",
+    "role": "official_correspondence",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "Eurostat reuse policy (attribution and changes required)",
+      "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+    }
+  },
+  {
+    "id": "nace21-manual-2026",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "url": "https://ec.europa.eu/eurostat/documents/3859598/24236479/KS-01-26-047-EN-N.pdf",
+    "filename": "nace21-manual-2026.pdf",
+    "format": "pdf",
+    "role": "manual",
+    "language": "en",
+    "publication_date": "2026-09-17",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "Local processing; full PDF includes third-party cover exception",
+      "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+    }
+  },
+  {
+    "id": "nace2-manual-2008",
+    "source_id": "NACE",
+    "edition": "Rev.2",
+    "url": "https://ec.europa.eu/eurostat/documents/3859598/5902521/KS-RA-07-015-EN.PDF.pdf/dd5443f5-b886-40e4-920d-9df03590ff91?t=1414781457000",
+    "filename": "nace2-manual-2008.pdf",
+    "format": "pdf",
+    "role": "manual",
+    "language": "en",
+    "publication_date": "2008-07-10",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "Local processing; full PDF includes third-party cover exception",
+      "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+    }
+  },
+  {
+    "id": "nace-reuse-policy",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+    "filename": "nace-reuse-policy.html",
+    "format": "html",
+    "role": "reuse_policy",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "Eurostat reuse policy (attribution and changes required)",
+      "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+    }
+  },
+  {
+    "id": "isic4-nace2-correspondence",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+    "filename": "isic4-nace2-correspondence.txt",
+    "format": "txt",
+    "role": "official_correspondence",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ"
+    }
+  },
+  {
+    "id": "isic4-nace2-change-history",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/Change%20history.txt",
+    "filename": "isic4-nace2-change-history.txt",
+    "format": "txt",
+    "role": "correspondence_change_history",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ"
+    }
   }
 ]

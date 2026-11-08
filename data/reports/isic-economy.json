@@ -374,7 +374,7 @@
       "tabulate": "0.10.0"
     },
     "parser_sha256": {
-      "isic.py": "e2605434c1329be3165c055ae35129b4873e6a094462961cb64de8022e787f75",
+      "isic.py": "a44cfdb15f5dc2c4d3899b417d02773202ee1e0f0be34958b5a5a562e634a426",
       "isic_review.py": "499e9d9a0aaf446deaa64eb482b1bdb25b57867066f6cda83b64b99bdc31ee91",
       "isic_priority.py": "c82f8758119023bd1d570157b78bb577978caa873e113d3798a615bc44b3c430",
       "isic_boundaries.py": "003be7ca8c42c216ef8ffe82b779866e7bc0aceeb641f8e383e9cad53141d838",

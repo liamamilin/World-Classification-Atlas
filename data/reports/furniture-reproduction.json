@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "method": "fresh directory; pinned raw assets, manifests and two research inputs only; no network",
+  "files": [
+    {
+      "path": "data/atlas/economy/furniture-directory.json",
+      "sha256": "ecd84843c775eadf4c22ba33b7d7e3651508d5ac19d2b892b362d1c739513bd0",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/ISIC4_english.mdb",
+      "sha256": "1e053c4d068203e0a1317a5c0076fd51a253093043f1eefbfb546257f8bd5456",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/evidence-dossiers.json",
+      "sha256": "4895aa3dc0b5fb3e18f93b8ca8854afa93583c8ea40d80d56714250aaf624e4f",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/index.html",
+      "sha256": "5df9925ccc9de0f23145d1efca3e77eba56b0fbd00925291cb4967953486f358",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/isic-furniture-official-rows.json",
+      "sha256": "b54651b1e44331c61b32f9bb4c067b874b362b7306467e28577cd58d8c1007ec",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/isic4-nace2-correspondence.jsonl",
+      "sha256": "fb1ddd1c3e513430c5c7b3dc2e05240cc7992a0cf3cc455e3abcae143a2015f8",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/nace2-manual-2008-pages.jsonl",
+      "sha256": "e4017662e9bfef9c3a8f6100b31c4d90bcf679cff553c1558fefcb8c29e8baa4",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/nace2-selected-nodes.jsonl",
+      "sha256": "890f4c300ebb72123e4b5cbb2377e36a623db52be149aaa6c26e9098b8f48e33",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/nace21-manual-2026-pages.jsonl",
+      "sha256": "60c06c5cd8167790a96f28ffda30dd0cb276357033c0ec8e268dddf34d7b629a",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/nace21-nace2-correspondence.jsonl",
+      "sha256": "242ab3fee7fbaf191a9f2abf5abbdb4c16a2298b442cd14c852fe4f1b59f8869",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/nace21-nodes.jsonl",
+      "sha256": "4e307e0435c0bdda0f03bcf535380a66cb0e3020d13c599be477b2722d68baaf",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/source-branches.json",
+      "sha256": "8724f66efd0c4f616ff12ede1d95cc10e902cd35b231d9697b1944b794dd300d",
+      "identical": true
+    },
+    {
+      "path": "data/normalized/NACE/Rev.2.1/correspondence-to-Rev.2.jsonl",
+      "sha256": "242ab3fee7fbaf191a9f2abf5abbdb4c16a2298b442cd14c852fe4f1b59f8869",
+      "identical": true
+    },
+    {
+      "path": "data/normalized/NACE/Rev.2.1/notes-20260930.jsonl",
+      "sha256": "4e307e0435c0bdda0f03bcf535380a66cb0e3020d13c599be477b2722d68baaf",
+      "identical": true
+    },
+    {
+      "path": "data/reports/furniture-alignment.json",
+      "sha256": "e25b02bf32701813bd3c78ae1b8bbda4d5d018dac7f4f04a64428ae7e155a518",
+      "identical": true
+    }
+  ],
+  "compared_files": 15,
+  "identical_files": 15
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>家具制造 · NACE / ISIC 多源研究</title>
+<style>
+body{font:15px/1.6 system-ui,sans-serif;color:#20323b;background:#f5f7f7;margin:0}header{padding:22px 28px;background:#183c49;color:white}h1{margin:0;font-size:25px}main{padding:22px;max-width:1500px;margin:auto}label{display:inline-block;margin:0 16px 14px 0}input,select{padding:8px;border:1px solid #a8bac0;border-radius:5px;font:inherit}.grid{display:grid;grid-template-columns:360px 1fr;gap:20px}section{background:white;border:1px solid #d6e0e1;border-radius:7px;padding:18px}button{display:block;text-align:left;background:#eef4f5;border:1px solid #d2dfe2;border-radius:4px;padding:7px 10px;margin:4px 0;cursor:pointer;color:#174d61;font:inherit}button:hover,button[aria-pressed=true]{background:#d7e9ed}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6f6;padding:12px;font:13px/1.5 ui-monospace,monospace}small{color:#56717a}h2{font-size:20px}h3{font-size:16px}summary{cursor:pointer}details{margin:9px 0;border-bottom:1px solid #dce5e7;padding-bottom:9px}.pending{color:#865407}.badge{display:inline-block;padding:2px 7px;background:#e1eeee;border-radius:4px}.note{max-width:1000px}a{color:#166581}@media(max-width:800px){.grid{grid-template-columns:1fr}main{padding:12px}}
+</style>
+<header><h1>家具制造 · 同对象多源对齐</h1><p class="note">NACE Rev.2.1 / Rev.2 与 ISIC Rev.4 / Rev.5。原始目录独立保留；Atlas 的范围限定关系与官方对应分别展示。</p></header>
+<main><p id="stats"></p><label>目录 <select id="scheme"><option value="atlas">Atlas 家具研究目录</option><option value="NACE:Rev.2.1">NACE Rev.2.1（分支）</option><option value="NACE:Rev.2">NACE Rev.2（选取）</option><option value="ISIC:Rev.5">ISIC Rev.5（分支）</option><option value="ISIC:Rev.4">ISIC Rev.4（分支）</option></select></label><label>搜索 <input id="search" placeholder="代码、名称、范围或定义"></label>
+<div class="grid"><section><h2>目录层级</h2><p><small>源路径不因整理而改写。Atlas 路径只适用于本研究目录；复用ID保留原目录引用。</small></p><div id="tree"></div></section><section id="detail"><p>选择节点查看定义、来源和证据。</p></section></div>
+<section style="margin-top:20px"><h2>冲突与待审</h2><div id="issues"></div></section>
+<p><small>Source: European Commission, Eurostat, NACE Rev.2.1 (2026), DOI 10.2785/3034037；来源格式由 Atlas 转换，中文范围及关系是 Atlas 研究，Eurostat 不对这些修改负责。完整 UNSD 说明与本地证据仅作本地研究；没有现实实体关联。此文件可离线使用。</small></p></main>
+<script type="application/json" id="data">__FURNITURE_DATA__</script>
+<script>
+'use strict';
+const D=JSON.parse(document.getElementById('data').textContent);
+const $=id=>document.getElementById(id), source=new Map(D.sources.map(n=>[n.id,n])), evidence=new Map(D.evidence.map(c=>[c.id,c]));
+function el(tag,text,parent){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(parent)parent.appendChild(n);return n}
+function json(value,parent){el('pre',JSON.stringify(value,null,2),parent)}
+function claim(id,parent){const c=evidence.get(id);if(!c)return;const box=el('details',undefined,parent);el('summary',`${id} · ${c.document} · ${c.role}`,box);el('pre',c.selected_text,box);json({field:c.field,start:c.start,end:c.end,evidence:c.evidence,field_sha256:c.field_sha256,text_sha256:c.text_sha256},box)}
+function show(n){const box=$('detail');box.replaceChildren();el('h2',n.atlas_label||`${n.code} ${n.label}`,box);el('small',n.id,box);el('p',n.atlas_scope||n.definition||'该层无独立说明；不以子类说明补写。',box);json({kind:n.kind,source_id:n.source_id,edition:n.edition,parents:n.parents,base_directory:n.base_directory,base_parent_ids:n.base_parent_ids,evidence:n.evidence},box);
+if(n.notes){el('h3','原始说明字段',box);json(n.notes,box)}
+for(const b of (n.source_bindings||[]).concat(n.additional_source_bindings||[])){el('h3',`Atlas → ${b.node_id} · ${b.relation||'仅导航'}`,box);if(source.has(b.node_id)){const s=source.get(b.node_id);el('button',`查看源 ${s.code} ${s.label}`,box).onclick=()=>show(s)}if(b.scope_limit)el('p',b.scope_limit,box);for(const c of b.claim_ids||[])claim(c,box)}
+for(const b of n.candidate_source_bindings||[]){el('h3',`待审来源 · ${b.node_id} · 未批准关系`,box).className='pending';json(b,box);for(const c of b.claim_ids||[])claim(c,box)}
+if(n.source_id){el('h3','反查 Atlas 已审绑定',box);for(const b of D.directory.source_to_atlas[n.id]||[]){const a=D.directory.concepts.find(x=>x.id===b.atlas_id);el('button',`${a.atlas_label} · Atlas → 源 ${b.relation_atlas_to_source}`,box).onclick=()=>show(a)}for(const b of D.directory.source_to_candidates[n.id]||[])el('p',`待审反查 ${b.atlas_id} · ${b.status}`,box).className='pending'}
+const related=D.official.filter(e=>e.from===n.id||e.to===n.id);if(related.length){el('h3','官方行及独立审查',box);for(const e of related){const d=el('details',undefined,box);el('summary',`${e.from} → ${e.to} · ${e.review.relation}`,d);json(e,d);for(const c of e.review.claim_ids)claim(c,d)}}
+const research=D.directory.research_mappings.filter(e=>e.from===n.id||e.to===n.id);if(research.length){el('h3','Atlas 活动范围研究对应（非官方表）',box);json(research,box)}}
+function render(){const scheme=$('scheme').value,q=$('search').value.toLowerCase();let nodes=scheme==='atlas'?D.directory.concepts:D.sources.filter(n=>n.id.startsWith(scheme+':'));const byId=new Map(nodes.map(n=>[n.id,n]));const parents=n=>scheme==='atlas'?n.parents:n.parents.map(p=>scheme+':'+p);const visible=new Set(nodes.filter(n=>JSON.stringify(n).toLowerCase().includes(q)).map(n=>n.id));for(const id of Array.from(visible)){let todo=[id];while(todo.length){for(const p of parents(byId.get(todo.pop()))){if(!visible.has(p)&&byId.has(p)){visible.add(p);todo.push(p)}}}}const tree=$('tree');tree.replaceChildren();function branch(n,depth){if(!visible.has(n.id))return;const b=el('button',n.atlas_label||`${n.code} ${n.label}`,tree);b.style.marginLeft=`${depth*14}px`;b.onclick=()=>show(n);for(const c of nodes.filter(c=>parents(c).includes(n.id)))branch(c,depth+1)}for(const n of nodes.filter(n=>!parents(n).length))branch(n,0);if(!visible.size)el('p','没有匹配节点。',tree)}
+$('stats').textContent=`${D.stats.nace21.node_count} 个当前 NACE 源节点已解析；本研究目录 ${D.stats.directory.node_count} 节点（${D.stats.reused_ids} 个复用ID，${D.stats.new_ids} 个新ID）；${D.stats.evidence_claims} 条证据，${D.stats.research_mappings} 条有界跨体系研究对应。`;
+for(const issue of D.directory.issues){const d=el('details',undefined,$('issues'));el('summary',`${issue.id} · ${issue.status}`,d);el('p',issue.finding,d);el('p',issue.next_action,d);for(const c of issue.claim_ids)claim(c,d)}
+$('scheme').onchange=render;$('search').oninput=render;render();
+globalThis.furnitureView={data:D,show,render};
+</script></html>

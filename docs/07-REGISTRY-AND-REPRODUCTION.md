@@ -93,3 +93,5 @@ node scripts/check_economy_view.js
 ```
 
 `reproduce-economy`先验证基线，再在无任何既有派生结果的临时目录内，仅用锁定原件、manifest和四份审查输入重建，比较全部35个专项输出的SHA-256，写`data/reports/isic-reproduction.json`。临时目录退出后删除；不联网，不复制既有派生结果。使用同一Python/Access/Poppler环境；这验证相同环境的确定性，不表示任意依赖版本都逐字节相同。`check_economy_view.js`为生成HTML的离线DOM模拟，不声称浏览器视觉验收。
+
+家具分支新增NACE接入及同对象研究，详见[13](13-FURNITURE-MULTISOURCE-ALIGNMENT.md)。`furniture`从11个锁定原件重建，不依赖已有ISIC派生文件；`reproduce-furniture`只复制原件、manifest、锁及家具审查/既有身份两份输入，在新临时目录中比较15个产物。`data/normalized/NACE/`按Eurostat许可公开保存转换后的源结构和对应，完整PDF因第三方封面例外继续本地保存。当前目录探索分别见两个本地HTML；没有用家具目录替换263节点的既有ISIC研究目录。

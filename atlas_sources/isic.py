@@ -29,10 +29,10 @@ def stable_id(kind, value):
     return f"urn:atlas:{kind}:" + str(uuid.uuid5(NAMESPACE, value))
 
 
-def get_assets(root, resources):
+def get_assets(root, resources, required=REQUIRED):
     lock = read_json(root / "data/resources.lock.json")
     assets = {}
-    for rid in REQUIRED:
+    for rid in required:
         r = next(r for r in resources if r["id"] == rid)
         pin = lock[rid]
         path = snapshot_dir(root, r, pin["sha256"]) / r["filename"]
