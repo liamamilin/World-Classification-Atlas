@@ -9,7 +9,7 @@
     },
     {
       "path": "data/atlas/economy/reviewed-directory-index.json",
-      "sha256": "b981c12807d0a234c059715679053f3e426f293a7f1c653167a44aaccf6f77b2",
+      "sha256": "6dde153e2d78685039461cc2c9adea3915713a7e3b0ed0ffc20a7b5af8135290",
       "identical": true
     },
     {
@@ -29,37 +29,42 @@
     },
     {
       "path": "data/local/economy/isic/errata-review-dossiers.json",
-      "sha256": "65c87909b89b9b128ddcee1d41ebbadd12e8ea5c0fd1e133811e3f8370ac90f1",
+      "sha256": "369e63476f74b05c15edb46daed4c19d078be19ed6652240ee7eac8b2a1a2da3",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/index.html",
-      "sha256": "c604622283fe99425b632bde6d3609647d3e7d2bb952def7f63324b3a58a577a",
+      "sha256": "441c28c5ba89406682ba32ef9eeaa97481e69a553a65162a83c60d89602a0e5d",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/isic4-isic5-technical-note-20241025-pages.jsonl",
-      "sha256": "409aeef1f8fcce0385b3fe54a059e5ce7f47db06ec43b71f9c4e6089950d8a83",
+      "sha256": "43e121ee919737320fc49f1fd88c156d60ff7b69655de9fb257313a5796d2964",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/isic4-manual-2008-pages.jsonl",
-      "sha256": "4d4f0d63d16e967f5c5e6e0569b18701f0353c7242010f358d917c5c78f7b12a",
+      "sha256": "b0beca1779390dfa6e214caf5e1e079f8eb9446e2ae3d77227648a7f1cf082d9",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/isic5-errata-2026-pages.jsonl",
-      "sha256": "7c22403611be51318ee7a5edad39d54737b484f6cddba8a4cad6f477e2610a4f",
+      "sha256": "31ab017b83c061a439ee1fe574f3468b23ef92e756ead8a2ad9de99824d65bdc",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/isic5-white-cover-2026-pages.jsonl",
-      "sha256": "886d8d7e22348b9456d941d4ce5f5142bf7e26fb633bfbdc9dd732d7c83503e0",
+      "sha256": "34659a3195cd87570203fa9c0daf59cffb53823ca5d60cb502aed2db6f35c790",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/mapping-review-queue.json",
-      "sha256": "ff5f7764957de638343d2aabd36c61228d1373b1e850dfa179a7a084bc616043",
+      "sha256": "509cea9b6bb48641c28ac5c854f6865a2497c7e55f75b1f48ac18fbcf08b51b5",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/priority-evidence-dossiers.json",
+      "sha256": "d0cd85dec25157b73614ea8f73bc24558fd17f9de16880a2e565533afc761f88",
       "identical": true
     },
     {
@@ -89,7 +94,7 @@
     },
     {
       "path": "data/local/economy/isic/review-dossiers.json",
-      "sha256": "7730e5c46d620237659302663816030e771199df1550a17558d1dadd1a5971f1",
+      "sha256": "31303d2af064f6c2da890b40477e38d015a7d59d7ccf169ed66c019651539158",
       "identical": true
     },
     {
@@ -99,12 +104,12 @@
     },
     {
       "path": "data/local/economy/isic/reviewed-directory.json",
-      "sha256": "d947d0bb33b9b9cc92253197f487a5ee429a8499978ec046a0727339dff48476",
+      "sha256": "a4a093e7bf9abd8445c949801483ded9fddb9fc654f9e4d146778e5096c7bbd8",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/reviewed-source-to-atlas.json",
-      "sha256": "c63e58ff4cab3394aac1dc665b3a77a3fe78d5cc05cd3432d906e8b2f694bc2d",
+      "sha256": "ed344aa66ab2ca25c0e132432e0224dde187e6d7aee689e8448e66bf778568e4",
       "identical": true
     },
     {
@@ -114,12 +119,17 @@
     },
     {
       "path": "data/reports/isic-economy.json",
-      "sha256": "3c05347a654f966cf4c88d0b5ed08e64f7ceedb5b28f118ba35cc04317d58aff",
+      "sha256": "c6af6f75931a3a82b67ed7f8327dd1f00cbd3baaac1042d07451b272564eb887",
       "identical": true
     },
     {
       "path": "data/reports/isic-expanded-review.json",
-      "sha256": "1c0e2b792307a357af7bcb14786630a95179a32c9b6b7782caed1f0666f55787",
+      "sha256": "126ca410b26a5cebc9c56eba78dd2cf180c1d0564ad133061627e4b8861b4ea4",
+      "identical": true
+    },
+    {
+      "path": "data/reports/isic-priority-review.json",
+      "sha256": "de0b124285b79d3242b283a6317437455f28a369b82d44377fae19117e75db44",
       "identical": true
     },
     {
@@ -128,6 +138,6 @@
       "identical": true
     }
   ],
-  "compared_files": 25,
-  "identical_files": 25
+  "compared_files": 27,
+  "identical_files": 27
 }

@@ -219,46 +219,48 @@
   "expanded_review": {
     "connected_components": 336,
     "nontrivial_components": 50,
-    "reviewed_cohorts": 38,
-    "reviewed_cases": 143,
-    "reviewed_nontrivial_components": 36,
+    "reviewed_cohorts": 50,
+    "reviewed_cases": 158,
+    "reviewed_nontrivial_components": 38,
     "mapping_status": {
-      "reviewed_current_relation": 123,
-      "not_reviewed": 462,
+      "reviewed_current_relation": 138,
+      "not_reviewed": 447,
       "held_after_review": 20
     },
     "reviewed_relations": {
       "exactMatch": 3,
       "broadMatch": 9,
-      "relatedMatch": 89,
+      "relatedMatch": 104,
       "narrowMatch": 22
     },
-    "reviewed_rev4_classes": 64,
-    "reviewed_rev5_classes": 93,
-    "directory_nodes": 195,
+    "reviewed_rev4_classes": 77,
+    "reviewed_rev5_classes": 107,
+    "directory_nodes": 248,
     "directory_kinds": {
-      "source_derived_navigation": 102,
-      "reviewed_activity": 93
+      "source_derived_navigation": 118,
+      "reviewed_activity": 107,
+      "reviewed_activity_slice": 23
     },
-    "reviewed_source_bindings": 216,
-    "navigation_bindings": 102,
+    "reviewed_source_bindings": 297,
+    "navigation_bindings": 118,
     "directory_integrity": {
-      "node_count": 195,
-      "unique_codes": 195,
+      "node_count": 248,
+      "unique_codes": 248,
       "duplicate_codes": [],
-      "edge_count": 178,
+      "edge_count": 231,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 17,
-        "2": 27,
-        "3": 58,
-        "4": 93
+        "2": 33,
+        "3": 68,
+        "4": 107,
+        "5": 23
       },
       "roots": 17,
-      "leaves": 93,
-      "definitions": 195,
+      "leaves": 116,
+      "definitions": 248,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
@@ -271,8 +273,46 @@
       "different_word_sequence": 3,
       "current_repeats_updated_twice": 1
     },
-    "unresolved_issues": 18,
-    "queue_rows": 605
+    "issues_by_status": {
+      "resolved_for_research": 1,
+      "open": 17,
+      "addressed_in_research": 2,
+      "partially_addressed": 1
+    },
+    "unresolved_issues": 20,
+    "queue_rows": 605,
+    "supplemental_mapping_status": {
+      "accepted_scoped_overlap": 6,
+      "held_after_research": 2
+    },
+    "priority_review": {
+      "claims": 96,
+      "bounded_activities": 23,
+      "official_rows_reviewed": 15,
+      "complete_historical_components": 12,
+      "nontrivial_historical_components": 2,
+      "mapping_origin_status": {
+        "official_row_review:accepted_scoped_overlap": 15,
+        "atlas_research_supplement:accepted_scoped_overlap": 6,
+        "atlas_research_supplement:held_after_research": 2
+      },
+      "errata_findings": 11,
+      "issue_followups": 4
+    }
+  },
+  "priority_review": {
+    "claims": 96,
+    "bounded_activities": 23,
+    "official_rows_reviewed": 15,
+    "complete_historical_components": 12,
+    "nontrivial_historical_components": 2,
+    "mapping_origin_status": {
+      "official_row_review:accepted_scoped_overlap": 15,
+      "atlas_research_supplement:accepted_scoped_overlap": 6,
+      "atlas_research_supplement:held_after_research": 2
+    },
+    "errata_findings": 11,
+    "issue_followups": 4
   },
   "rev4_readme_corrections": {
     "3830_exclusion_removes_metal_qualifier": true,
@@ -289,13 +329,15 @@
       "tabulate": "0.10.0"
     },
     "parser_sha256": {
-      "isic.py": "b8745d118d38a726422004c6c2443e2f6bbc984a46356b2e56ef52f113f4b969",
-      "isic_review.py": "a4e61c3b250ee33ecb6cff14e1a9d7e24bcbeecef5ead3938664c26e86d498df",
+      "isic.py": "c2dbcce1dc27fa9338bb0b0690bfb078eed2e87eb45cc56eb652d7277a7502d3",
+      "isic_review.py": "f197baddf3148275598d4433c8dcdc79a2ec944e856ef07f09dc9a07938798c7",
+      "isic_priority.py": "02d381c4a6eff3492564c0c6890575aac920df71fb67d98686c4a7762d1a7e6d",
       "xlsx.py": "c23f6876d392538ff6621a4ae04cb4070a880621b2bdf5eb8189af945115d4eb",
       "normalize.py": "a3f60df71eca8916a492ebc9fbc715eb254a35362d146f6f35406680a58f1192"
     },
     "review_decisions_sha256": "4b70c73367d86a67a40eb0cdcc8c0df23797a328b7dbdb8c2e52ba9e81fc22e4",
-    "expanded_review_sha256": "72da016a2b5367dfad13e5d732fa0f783b350524ca2a38d8440045ed75a5f538"
+    "expanded_review_sha256": "72da016a2b5367dfad13e5d732fa0f783b350524ca2a38d8440045ed75a5f538",
+    "priority_review_sha256": "830e2652ce8b9b11d8d1d7d852278a3b8688bcdd2f9fb4b640bb1f017604a223"
   },
   "pdfs": [
     {

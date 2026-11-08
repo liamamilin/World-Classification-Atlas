@@ -45,6 +45,7 @@ def build(root, registry, resources):
                "resource_status": dict(Counter(r["status"] for r in integrity)),
                "economic_activity_research": ({"status": economy["status"], "report": "data/reports/isic-economy.json",
                                                 "curation": economy.get("curation"), "expanded_review": economy.get("expanded_review"),
+                                                "priority_review": economy.get("priority_review"),
                                                 "correspondence": economy.get("correspondence")}
                                                if economy else None),
                "counts_note": "Counts are per resource, not global concepts. O*NET CSV/CTDL overlap. ISIC has a separately counted reviewed subset; no instance links.",
@@ -69,9 +70,16 @@ def build(root, registry, resources):
         lines += ["", "经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。"]
         if economy.get("expanded_review"):
             review = economy["expanded_review"]
-            lines += ["", f"经济活动局部目录：{review['reviewed_rev5_classes']} 个已审活动、{review['directory_kinds']['source_derived_navigation']} 个仅作导航的上级；"
+            lines += ["", f"经济活动局部目录：{review['reviewed_rev5_classes']} 个已审类范围锚点、{review['directory_kinds']['source_derived_navigation']} 个仅作导航的上级；"
                       f"{review['mapping_status']['reviewed_current_relation']} 条已审当前关系。所有605行仍保留原始版本和审查队列，"
                       "详见 [扩展审查](isic-expanded-review.json)。上级导航不计作已审语义覆盖。"]
+            if economy.get("priority_review"):
+                focused = economy["priority_review"]
+                lines += ["", f"植物奶/食用冰/纺织/核燃料专项：{focused['bounded_activities']} 个Atlas自有活动子节点，"
+                          f"{focused['official_rows_reviewed']} 条官方行的活动范围审查；另有"
+                          f"{review['supplemental_mapping_status'].get('accepted_scoped_overlap', 0)} 条已审研究补充和"
+                          f"{review['supplemental_mapping_status'].get('held_after_research', 0)} 条待审研究候选。"
+                          "补充关系独立于官方表，见 [优先问题证据报告](isic-priority-review.json)。"]
     lines += ["", "节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。",
               "", "## 未决项（逐来源）", ""]
     for s in registry["sources"]:

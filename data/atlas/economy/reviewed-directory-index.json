@@ -1001,6 +1001,306 @@
       "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
     },
     {
+      "id": "urn:atlas:concept:fca2a628-ce4b-5cff-be98-26a283e4e225",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:10",
+      "parents": [
+        "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:10",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 90,
+          "range": "A90:G90"
+        },
+        "scope_sha256": "729f7fe167a64fb2f6524d60460d77105309b7b221b5a626d1ce2c28701c299f"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:10",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 90,
+            "range": "A90:G90"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:db27e435-9e2a-54a5-9cff-511f57d40b97",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:105",
+      "parents": [
+        "urn:atlas:concept:fca2a628-ce4b-5cff-be98-26a283e4e225"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:105",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 99,
+          "range": "A99:G99"
+        },
+        "scope_sha256": "60ae693c4aed8e61bcae168b256060635ce5bf73fa3d7031f55c3cbd4b7eeee4"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:105",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 99,
+            "range": "A99:G99"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:71d637cb-da6c-58d3-9008-d0f5d96ae5bb",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1050",
+      "parents": [
+        "urn:atlas:concept:db27e435-9e2a-54a5-9cff-511f57d40b97"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1050",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 100,
+          "range": "A100:G100"
+        },
+        "scope_sha256": "9829812408e8dd66cafc3c1679c082634b73fa50b5872aaaeb7aabbc60112685"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1050",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 100,
+            "range": "A100:G100"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1050",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:16fd6595-0b37-5b1c-80ba-0756e76e2a10",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 64,
+            "range": "A64:H64"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:fc1beb22-525c-5b19-a0a9-4bb1085bc3ba",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:107",
+      "parents": [
+        "urn:atlas:concept:fca2a628-ce4b-5cff-be98-26a283e4e225"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:107",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 104,
+          "range": "A104:G104"
+        },
+        "scope_sha256": "1a0130fe38bf4ac3f41cc3b3f4d44dfab036120e17233aaacd772dfc970eb323"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:107",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 104,
+            "range": "A104:G104"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:b7664d51-918e-50c7-bcf3-4d33552b7736",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1076",
+      "parents": [
+        "urn:atlas:concept:fc1beb22-525c-5b19-a0a9-4bb1085bc3ba"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1076",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 110,
+          "range": "A110:G110"
+        },
+        "scope_sha256": "9ab4b9de9e443193614e8c76d78e0bfc5f8e1f934c174604ea9a33aa0d538385"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1076",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 110,
+            "range": "A110:G110"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1079",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:cf30aacb-35a6-585c-b855-83969eb80544",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 72,
+            "range": "A72:H72"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:0f2fceff-4a8d-58c3-8578-5a92f32c7913",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1079",
+      "parents": [
+        "urn:atlas:concept:fc1beb22-525c-5b19-a0a9-4bb1085bc3ba"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1079",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 111,
+          "range": "A111:G111"
+        },
+        "scope_sha256": "a02ee71ce422e40dec98164d0562b4e2da11864b8a1d38fa852e5c99151dc20f"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1079",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 111,
+            "range": "A111:G111"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1079",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:06d83693-8ef9-567c-a769-952c99416356",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 73,
+            "range": "A73:H73"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
       "id": "urn:atlas:concept:663f90e4-cac2-55df-bab7-ffc2806cf907",
       "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
       "kind": "source_derived_navigation",
@@ -1201,6 +1501,483 @@
       "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
     },
     {
+      "id": "urn:atlas:concept:987385d6-4a09-5011-9163-deac08188408",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1105",
+      "parents": [
+        "urn:atlas:concept:926ba6c2-4160-5919-b33d-f1fe6de5e2b9"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1105",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 120,
+          "range": "A120:G120"
+        },
+        "scope_sha256": "501757b4a6b3f6c80f5e9d95e89c8c696383f7c9c4bc2080ce5c89928f327719"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1105",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 120,
+            "range": "A120:G120"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1104",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:3841d30b-d3ba-5368-a283-b032b1297019",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 79,
+            "range": "A79:H79"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1079",
+          "relation": "relatedMatch",
+          "role": "atlas_research_supplement",
+          "review_mapping_id": "urn:atlas:mapping:a36201b1-26f0-5d91-be00-bd6906e5539d",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1079"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:176963f4-20ab-5831-a834-64a8c0865060",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:13",
+      "parents": [
+        "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:13",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 124,
+          "range": "A124:G124"
+        },
+        "scope_sha256": "a1168cce83ad43f1b94c449b714815ecc9a295d5f4d392e72e529f867d6a73db"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:13",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 124,
+            "range": "A124:G124"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:800af076-e152-550d-825e-7dd459faa582",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:131",
+      "parents": [
+        "urn:atlas:concept:176963f4-20ab-5831-a834-64a8c0865060"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:131",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 125,
+          "range": "A125:G125"
+        },
+        "scope_sha256": "7ec51434bd758c2f5c75580425f180fcccc81aa3b66b5a1159b8c3503393f1f4"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:131",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 125,
+            "range": "A125:G125"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:9120ff27-1cee-5d95-a0c2-411c8fbc9e92",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1312",
+      "parents": [
+        "urn:atlas:concept:800af076-e152-550d-825e-7dd459faa582"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1312",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 127,
+          "range": "A127:G127"
+        },
+        "scope_sha256": "6dd8a5c1e9dcacb72975c0f0ee8cdb2849fe0a2e6f93b514e0986d6918986e74"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1312",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 127,
+            "range": "A127:G127"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1312",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:191b5514-cd6d-50a8-a3c5-13fad2191794",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 82,
+            "range": "A82:H82"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:b5c0049f-9dae-5197-a145-e953b83cba03",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1313",
+      "parents": [
+        "urn:atlas:concept:800af076-e152-550d-825e-7dd459faa582"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1313",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 128,
+          "range": "A128:G128"
+        },
+        "scope_sha256": "d409efe72bb2423b982ab65c5942c72bf0cd7c44aff1be8896a0dd7cb6b876bd"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1313",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 128,
+            "range": "A128:G128"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1313",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:6b320b25-0e00-5f16-8a05-13d99d203dfa",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 83,
+            "range": "A83:H83"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1811",
+          "relation": "relatedMatch",
+          "role": "atlas_research_supplement",
+          "review_mapping_id": "urn:atlas:mapping:4d306339-acd9-50c9-bc03-955e359d8f9a",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1811"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:4bb82964-28c8-5d41-8594-edd1ec25491f",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:139",
+      "parents": [
+        "urn:atlas:concept:176963f4-20ab-5831-a834-64a8c0865060"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:139",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 129,
+          "range": "A129:G129"
+        },
+        "scope_sha256": "a5ffca43f4c082cc9ffd5cdf68594ad09c9c38b6b41fbbcf3647722bf965bd6c"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:139",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 129,
+            "range": "A129:G129"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:e31640f9-12d8-541c-aa0d-0016ce6797dc",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1392",
+      "parents": [
+        "urn:atlas:concept:4bb82964-28c8-5d41-8594-edd1ec25491f"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1392",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 131,
+          "range": "A131:G131"
+        },
+        "scope_sha256": "0b856fdec3edcb59ca55a70ea361e05e197cbdb9d899293476acdcc7aabdbfc5"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1392",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 131,
+            "range": "A131:G131"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:5d0b22df-19d1-5e96-8f63-83260c09b7a3",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 85,
+            "range": "A85:H85"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1399",
+      "parents": [
+        "urn:atlas:concept:4bb82964-28c8-5d41-8594-edd1ec25491f"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1399",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 134,
+          "range": "A134:G134"
+        },
+        "scope_sha256": "d3df4ad49d0ffe489be9b64993406e99c84bab1a43e000f530c6f2a8dd1bd1f9"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1399",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1399",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:c3d5b865-6d3e-5faf-a415-64b6fc99dc0c",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 88,
+            "range": "A88:H88"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "relation": "relatedMatch",
+          "role": "atlas_research_supplement",
+          "review_mapping_id": "urn:atlas:mapping:8ea9d796-7fcc-5975-b739-8405ab5dd3a8",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1392"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1312",
+          "relation": "relatedMatch",
+          "role": "atlas_research_supplement",
+          "review_mapping_id": "urn:atlas:mapping:5b0f0872-d158-5a1c-91ea-7fc18ab5fbea",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 127,
+            "range": "A127:G127"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
       "id": "urn:atlas:concept:f29e9ef5-3898-51a1-bbff-8de8a7f5754b",
       "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
       "kind": "source_derived_navigation",
@@ -1337,6 +2114,721 @@
             "sheet": "ISIC4-5",
             "row": 93,
             "range": "A93:H93"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:ad4ba56d-9068-5916-9e80-172b42f2cc2a",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:18",
+      "parents": [
+        "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:18",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 161,
+          "range": "A161:G161"
+        },
+        "scope_sha256": "4a5ed85f671764d7c3cc8c316f5a943959d5478c6a4cb019ec0a38391caadba7"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:18",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 161,
+            "range": "A161:G161"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:a1d109ae-63e4-5a7b-a577-0e320f7e207d",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:181",
+      "parents": [
+        "urn:atlas:concept:ad4ba56d-9068-5916-9e80-172b42f2cc2a"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:181",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 162,
+          "range": "A162:G162"
+        },
+        "scope_sha256": "d6ece7775405b1f78a1b1aa7545a13875a755ce7f8bd44b8b24cb8d310dbb3fe"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:181",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 162,
+            "range": "A162:G162"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:053bbcfb-65a6-5555-9550-1771c24ff8dc",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:1811",
+      "parents": [
+        "urn:atlas:concept:a1d109ae-63e4-5a7b-a577-0e320f7e207d"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:1811",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 163,
+          "range": "A163:G163"
+        },
+        "scope_sha256": "48165a597a6c75d362132c1cdde633b880e31c64286bf8357b8be3ffb066b14d"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:1811",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 163,
+            "range": "A163:G163"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1811",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:c4829b00-1c80-5da7-8656-b6fa9dae2e7f",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 103,
+            "range": "A103:H103"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:19040cf1-2305-5d41-ae49-dd723fc6566b",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:20",
+      "parents": [
+        "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:20",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 172,
+          "range": "A172:G172"
+        },
+        "scope_sha256": "bb0bc99c7e39c90f6942dddff359306b3dcb3b6070079767b67c3a2cc8348f62"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:20",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 172,
+            "range": "A172:G172"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:151e665f-4983-5952-b690-8e1ddaca1181",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:201",
+      "parents": [
+        "urn:atlas:concept:19040cf1-2305-5d41-ae49-dd723fc6566b"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:201",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 173,
+          "range": "A173:G173"
+        },
+        "scope_sha256": "54597ee11441761aa431ac5c41ad389be585f2673eb73e656d2d113efd4e4fb0"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:201",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 173,
+            "range": "A173:G173"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:c754016a-745c-5819-b4af-7926c862e9d9",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:2011",
+      "parents": [
+        "urn:atlas:concept:151e665f-4983-5952-b690-8e1ddaca1181"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:2011",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 174,
+          "range": "A174:G174"
+        },
+        "scope_sha256": "090182d53de3c1f476e681869a32e14d567e43d6021e00680f7057e0516713d6"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:2011",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 174,
+            "range": "A174:G174"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:2011",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:347991e9-f8ff-5c41-a7ce-9c3ea7ed3809",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 108,
+            "range": "A108:H108"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:c67013db-0a0d-5eb0-a731-adbe3dbae3ad",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:202",
+      "parents": [
+        "urn:atlas:concept:19040cf1-2305-5d41-ae49-dd723fc6566b"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:202",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 177,
+          "range": "A177:G177"
+        },
+        "scope_sha256": "ae4dd0c05fded59b06fa5cd24b091bfeea62ac49dd0d166698554b1d741e72ad"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:202",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 177,
+            "range": "A177:G177"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:8aceba6e-6319-5cf9-a8b7-4760339200aa",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:2029",
+      "parents": [
+        "urn:atlas:concept:c67013db-0a0d-5eb0-a731-adbe3dbae3ad"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:2029",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 181,
+          "range": "A181:G181"
+        },
+        "scope_sha256": "3fd3da5298202f686f3e79028c648063e3f91f766968ee598dfb78d0f4faae90"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:2029",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 181,
+            "range": "A181:G181"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:2011",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:e0d47a48-a00c-5635-8938-78eae6625692",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 109,
+            "range": "A109:H109"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:2029",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:ac69aa2e-0a8a-5352-b6e6-3bda29060b9e",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 115,
+            "range": "A115:H115"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:cadb858a-0ee3-5d57-bb8a-a7b4c8611f81",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:23",
+      "parents": [
+        "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:23",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 193,
+          "range": "A193:G193"
+        },
+        "scope_sha256": "924861f9688ff82345148eb97f248a3091cde1b485530adb84cdd3a0e9a830c7"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:23",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 193,
+            "range": "A193:G193"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:c64b6bf9-158a-5026-906a-07f5034c6da3",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:239",
+      "parents": [
+        "urn:atlas:concept:cadb858a-0ee3-5d57-bb8a-a7b4c8611f81"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:239",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 196,
+          "range": "A196:G196"
+        },
+        "scope_sha256": "af4d1a6af70ba9254ed59c118ce61c24939e58ebe542a248862c3d6c691ac272"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:239",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 196,
+            "range": "A196:G196"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:d6257b66-907f-5aff-94c0-0afe9950e9aa",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:2399",
+      "parents": [
+        "urn:atlas:concept:c64b6bf9-158a-5026-906a-07f5034c6da3"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:2399",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 203,
+          "range": "A203:G203"
+        },
+        "scope_sha256": "9b461db3bddab6162ba969d2f30143902d4d7bb208cd52c8fc06ceedfd4ecce3"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:2399",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 203,
+            "range": "A203:G203"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:2399",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:787d0c28-9254-5213-a54f-05e79c0eeef0",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 128,
+            "range": "A128:H128"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:1312",
+          "relation": "relatedMatch",
+          "role": "atlas_research_supplement",
+          "review_mapping_id": "urn:atlas:mapping:4ab123f8-2604-5fd1-9169-3b9de7d2ea2a",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 127,
+            "range": "A127:G127"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:6d5f05da-8918-5c28-8957-fc73d2fd59e7",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:24",
+      "parents": [
+        "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:24",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 204,
+          "range": "A204:G204"
+        },
+        "scope_sha256": "86d806bacf5abac7fbc780531c4e4cdb986f10af5fd72e64eb343bdda77c6ec5"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:24",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 204,
+            "range": "A204:G204"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:4087b04c-c155-55b6-947c-e3e186fcf23c",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:242",
+      "parents": [
+        "urn:atlas:concept:6d5f05da-8918-5c28-8957-fc73d2fd59e7"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:242",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 207,
+          "range": "A207:G207"
+        },
+        "scope_sha256": "6b06f8477aaf93d7a85f7eba86b3b4c0a40e33cbe559dcfd34407fb04cb17731"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:242",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 207,
+            "range": "A207:G207"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:efa37654-b19e-59e2-adc3-cec67c682adc",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:2420",
+      "parents": [
+        "urn:atlas:concept:4087b04c-c155-55b6-947c-e3e186fcf23c"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:2420",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 208,
+          "range": "A208:G208"
+        },
+        "scope_sha256": "69f34d82179b4a5a93a7f0416e05cbee12607441310a010d5a88d9f1fb4ba22e"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:2420",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 208,
+            "range": "A208:G208"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:2420",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:be19fc12-b88f-58aa-ae78-39a183684d20",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 130,
+            "range": "A130:H130"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:2011",
+          "relation": "relatedMatch",
+          "role": "atlas_research_supplement",
+          "review_mapping_id": "urn:atlas:mapping:5023444e-eb7b-54c5-967f-855d93cf631e",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2011"
           }
         }
       ],
@@ -2095,6 +3587,106 @@
             "sheet": "ISIC4-5",
             "row": 207,
             "range": "A207:H207"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:a7f95590-7955-552e-ba0b-71ece50b4694",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "source_derived_navigation",
+      "anchor_source_id": "ISIC:Rev.5:353",
+      "parents": [
+        "urn:atlas:concept:597f7c51-e1c9-55af-b04d-4427d4274d79"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:353",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 334,
+          "range": "A334:G334"
+        },
+        "scope_sha256": "7ab9381fb01ca73c8a95b89a62087d3815ee3b338f6897f093c23c9ed7784000"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:353",
+          "relation": null,
+          "role": "navigation_spine_only",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 334,
+            "range": "A334:G334"
+          }
+        }
+      ],
+      "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:2b66624b-2285-595e-8664-2e216da5be86",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity",
+      "anchor_source_id": "ISIC:Rev.5:3530",
+      "parents": [
+        "urn:atlas:concept:a7f95590-7955-552e-ba0b-71ece50b4694"
+      ],
+      "parent_basis": "selected_Rev5_source_navigation_not_cross_edition_parent_equivalence",
+      "scope_basis": {
+        "node_id": "ISIC:Rev.5:3530",
+        "evidence": {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 335,
+          "range": "A335:G335"
+        },
+        "scope_sha256": "f3b80f090c83e4c6074ab64e5a962bbc763f85bef86f340434b70813c2f4a2d5"
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:3530",
+          "relation": "exactMatch",
+          "role": "reviewed_scope_anchor",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 335,
+            "range": "A335:G335"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.4:3530",
+          "relation": "relatedMatch",
+          "role": "reviewed_mapping",
+          "review_mapping_id": "urn:atlas:mapping:0eb6b2df-bce1-50b7-bf6b-70c6654e60a2",
+          "evidence": {
+            "resource_id": "isic4-isic5-correspondence",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "publication_date": "2025-01-17",
+            "sheet": "ISIC4-5",
+            "row": 209,
+            "range": "A209:H209"
           }
         }
       ],
@@ -10127,6 +11719,1325 @@
         }
       ],
       "scope_limit": "Rev5 anchored research subset; no claim of complete source coverage"
+    },
+    {
+      "id": "urn:atlas:concept:ab79f5d2-6f27-5e11-8538-18d9efe87fa5",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1105",
+      "parents": [
+        "urn:atlas:concept:987385d6-4a09-5011-9163-deac08188408"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:ab79f5d2-6f27-5e11-8538-18d9efe87fa5",
+        "claim_ids": [
+          "C001",
+          "C002",
+          "C048"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1079",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C001"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1079"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1105",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C002",
+            "C048"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 120,
+            "range": "A120:G120"
+          }
+        }
+      ],
+      "atlas_label": "植物奶饮料制造",
+      "atlas_scope": "制造作为非乳奶饮用的植物来源饮料；不含乳基饮料、奶酪替代品或植物原料本身的生产。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:ad59199d-85b4-55d6-91d1-cbe6b1e29246",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1079",
+      "parents": [
+        "urn:atlas:concept:0f2fceff-4a8d-58c3-8578-5a92f32c7913"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:ad59199d-85b4-55d6-91d1-cbe6b1e29246",
+        "claim_ids": [
+          "C003",
+          "C004"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1079",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C003"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1079"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1079",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C004"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 111,
+            "range": "A111:G111"
+          }
+        }
+      ],
+      "atlas_label": "奶酪替代品制造",
+      "atlas_scope": "制造非乳奶酪替代品；与植物奶饮料分别保留。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:88f8a64c-6e56-5ceb-9079-e900ff47b8a4",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1076",
+      "parents": [
+        "urn:atlas:concept:b7664d51-918e-50c7-bcf3-4d33552b7736"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:88f8a64c-6e56-5ceb-9079-e900ff47b8a4",
+        "claim_ids": [
+          "C005",
+          "C006"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1079",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C005"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1079"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1076",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C006"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 110,
+            "range": "A110:G110"
+          }
+        }
+      ],
+      "atlas_label": "咖啡脱咖啡因与烘焙",
+      "atlas_scope": "咖啡脱咖啡因及烘焙加工；不包括咖啡种植或现场饮品服务。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:04790416-3136-57da-9907-7cb86521cf26",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1050",
+      "parents": [
+        "urn:atlas:concept:71d637cb-da6c-58d3-9008-d0f5d96ae5bb"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:04790416-3136-57da-9907-7cb86521cf26",
+        "claim_ids": [
+          "C007",
+          "C008"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1050",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C007"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1050"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1050",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C008"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 100,
+            "range": "A100:G100"
+          }
+        }
+      ],
+      "atlas_label": "液态奶处理",
+      "atlas_scope": "制造经巴氏消毒、灭菌、均质或超高温处理的液态奶；不含原奶生产及植物奶。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:4ea445f2-8b44-53e7-b979-677a4fe83f22",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1050",
+      "parents": [
+        "urn:atlas:concept:71d637cb-da6c-58d3-9008-d0f5d96ae5bb"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:4ea445f2-8b44-53e7-b979-677a4fe83f22",
+        "claim_ids": [
+          "C009",
+          "C010"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1050",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C009"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1050"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1050",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C010"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 100,
+            "range": "A100:G100"
+          }
+        }
+      ],
+      "atlas_label": "冰淇淋及雪葩制造",
+      "atlas_scope": "制造冰淇淋及雪葩等冷冻食品；本节点不用于确定无调味直接食用水冰的旧版归属。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:d65a2f04-9a43-5ffc-8771-1e13991b0340",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:3530",
+      "parents": [
+        "urn:atlas:concept:2b66624b-2285-595e-8664-2e216da5be86"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:d65a2f04-9a43-5ffc-8771-1e13991b0340",
+        "claim_ids": [
+          "C011",
+          "C012"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3530",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C011"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "3530"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:3530",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C012"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 335,
+            "range": "A335:G335"
+          }
+        }
+      ],
+      "atlas_label": "冷却用途水冰生产",
+      "atlas_scope": "从天然水生产用于冷却的冰；不把给食品保冷等同于直接食用冰。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:9b572c50-2eb8-5f93-8e84-296591c042e6",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1399",
+      "parents": [
+        "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:9b572c50-2eb8-5f93-8e84-296591c042e6",
+        "claim_ids": [
+          "C013",
+          "C014"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C013"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1392"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1399",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C014"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          }
+        }
+      ],
+      "atlas_label": "纺织降落伞制造",
+      "atlas_scope": "制造纺织材料降落伞；不包含航空器制造。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:1a447b7c-3e41-5a18-a39a-860e852e697c",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1399",
+      "parents": [
+        "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:1a447b7c-3e41-5a18-a39a-860e852e697c",
+        "claim_ids": [
+          "C015",
+          "C016"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C015"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1392"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1399",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C016"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          }
+        }
+      ],
+      "atlas_label": "纺织篷布和帐篷制造",
+      "atlas_scope": "制造纺织篷布和帐篷；不扩展为所有露营产品制造。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:7f6aaede-627f-5246-885d-9660929dd18d",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1392",
+      "parents": [
+        "urn:atlas:concept:e31640f9-12d8-541c-aa0d-0016ce6797dc"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:7f6aaede-627f-5246-885d-9660929dd18d",
+        "claim_ids": [
+          "C017",
+          "C018"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C017"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1392"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1392",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C018"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 131,
+            "range": "A131:G131"
+          }
+        }
+      ],
+      "atlas_label": "纺织救生衣制造",
+      "atlas_scope": "制造纺织救生衣；不把2026同列增加的救生圈或其他安全设备全部视为已审。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:90da8a1b-74ee-5156-836a-a099f844c27c",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1312",
+      "parents": [
+        "urn:atlas:concept:9120ff27-1cee-5d95-a0c2-411c8fbc9e92"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:90da8a1b-74ee-5156-836a-a099f844c27c",
+        "claim_ids": [
+          "C019",
+          "C020"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1312",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C019"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1312"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1312",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C020"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 127,
+            "range": "A127:G127"
+          }
+        }
+      ],
+      "atlas_label": "棉型宽幅织物织造",
+      "atlas_scope": "织造棉型宽幅织物；不包含针织、非织造、玻纤或碳纤维织物。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:49c46bbc-c94a-5c18-b677-20021fb767d0",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1399",
+      "parents": [
+        "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:49c46bbc-c94a-5c18-b677-20021fb767d0",
+        "claim_ids": [
+          "C021",
+          "C022"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1312",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C022"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1312"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1399",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C021"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          }
+        }
+      ],
+      "atlas_label": "玻纤织物织造",
+      "atlas_scope": "织造玻璃纤维织物；当前归属由1312明确排除至1399证明，不把玻璃纤维本体制造并入。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:89e4f6ba-eb22-5cb4-9615-639db3d7c890",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:2399",
+      "parents": [
+        "urn:atlas:concept:d6257b66-907f-5aff-94c0-0afe9950e9aa"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:89e4f6ba-eb22-5cb4-9615-639db3d7c890",
+        "claim_ids": [
+          "C023",
+          "C024"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1312",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C024"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1312"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:2399",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C023"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 203,
+            "range": "A203:G203"
+          }
+        }
+      ],
+      "atlas_label": "非电气用途碳纤维织物织造",
+      "atlas_scope": "织造用于非电气用途的碳纤维织物；保留旧1312与旧2399列项重叠问题，不主张旧范围互斥。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:d7e9c8a2-0106-5759-9fdb-76206585e0f8",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1313",
+      "parents": [
+        "urn:atlas:concept:b5c0049f-9dae-5197-a145-e953b83cba03"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:d7e9c8a2-0106-5759-9fdb-76206585e0f8",
+        "claim_ids": [
+          "C025",
+          "C026"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1313",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C025"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1313"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1313",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C026"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 128,
+            "range": "A128:G128"
+          }
+        }
+      ],
+      "atlas_label": "纺织品漂白染色",
+      "atlas_scope": "对纺织纤维、纱线、织物和纺织制品漂白染色；不据此包含全部印花。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:7bcc5d1b-8eaf-5b4e-aa89-e242ff17f57b",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1313",
+      "parents": [
+        "urn:atlas:concept:b5c0049f-9dae-5197-a145-e953b83cba03"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:7bcc5d1b-8eaf-5b4e-aa89-e242ff17f57b",
+        "claim_ids": [
+          "C027",
+          "C028",
+          "C045"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1811",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C027"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1811"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1313",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C028",
+            "C045"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 128,
+            "range": "A128:G128"
+          }
+        }
+      ],
+      "atlas_label": "纺织制造中间工序印花",
+      "atlas_scope": "作为纺织制造中间工序的织物印花；与非中间工序直接印刷分开。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:00622ce7-bebb-552c-a97e-8c1ea131b759",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1811",
+      "parents": [
+        "urn:atlas:concept:053bbcfb-65a6-5555-9550-1771c24ff8dc"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:00622ce7-bebb-552c-a97e-8c1ea131b759",
+        "claim_ids": [
+          "C029",
+          "C030",
+          "C046"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1811",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C029"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1811"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1811",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C030",
+            "C046"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 163,
+            "range": "A163:G163"
+          }
+        }
+      ],
+      "atlas_label": "非中间工序纺织品直接印刷",
+      "atlas_scope": "直接印到纺织品且不属于纺织制造中间工序的印刷；当前1313排除至1811作边界。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:74680745-b0dc-55d2-9482-ae708be8eaf3",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:2011",
+      "parents": [
+        "urn:atlas:concept:c754016a-745c-5819-b4af-7926c862e9d9"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:74680745-b0dc-55d2-9482-ae708be8eaf3",
+        "claim_ids": [
+          "C031",
+          "C032"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:2011",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C031"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2011"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:2011",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C032"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 174,
+            "range": "A174:G174"
+          }
+        }
+      ],
+      "atlas_label": "铀钍矿富集",
+      "atlas_scope": "对铀和钍矿进行富集；不扩展为整个核燃料周期，燃料元件制造另列。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:4403c5fa-343d-5807-aef2-00df829c16ca",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:2420",
+      "parents": [
+        "urn:atlas:concept:efa37654-b19e-59e2-adc3-cec67c682adc"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:4403c5fa-343d-5807-aef2-00df829c16ca",
+        "claim_ids": [
+          "C033",
+          "C034"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:2011",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C033"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2011"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:2420",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C034"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 208,
+            "range": "A208:G208"
+          }
+        }
+      ],
+      "atlas_label": "核反应堆燃料元件制造",
+      "atlas_scope": "制造核反应堆燃料元件；保留与铀钍矿富集、铀金属冶炼的独立活动边界。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:7815f6bc-fc2e-5cce-8f71-f10dadf6f0e2",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:2420",
+      "parents": [
+        "urn:atlas:concept:efa37654-b19e-59e2-adc3-cec67c682adc"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:7815f6bc-fc2e-5cce-8f71-f10dadf6f0e2",
+        "claim_ids": [
+          "C035",
+          "C036"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:2420",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C035"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2420"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:2420",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C036"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 208,
+            "range": "A208:G208"
+          }
+        }
+      ],
+      "atlas_label": "天然铀金属冶炼精炼",
+      "atlas_scope": "天然铀金属冶炼和精炼；不包括核燃料元件制造的全部加工活动。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:e066ca01-a777-5205-817b-19f215976f80",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:2029",
+      "parents": [
+        "urn:atlas:concept:8aceba6e-6319-5cf9-a8b7-4760339200aa"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:e066ca01-a777-5205-817b-19f215976f80",
+        "claim_ids": [
+          "C037",
+          "C038"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:2029",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C037"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2029"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:2029",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C038"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 181,
+            "range": "A181:G181"
+          }
+        }
+      ],
+      "atlas_label": "胶黏剂制造",
+      "atlas_scope": "制造胶及配制黏合剂，包括橡胶基胶黏剂；不包含所有基本化学品。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:a4c619fd-571c-5408-b764-a2a527b29c40",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:2029",
+      "parents": [
+        "urn:atlas:concept:8aceba6e-6319-5cf9-a8b7-4760339200aa"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:a4c619fd-571c-5408-b764-a2a527b29c40",
+        "claim_ids": [
+          "C039",
+          "C040",
+          "C052"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:2011",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C039"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2011"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:2029",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C040",
+            "C052"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 181,
+            "range": "A181:G181"
+          }
+        }
+      ],
+      "atlas_label": "发酵生物乙醇燃料制造",
+      "atlas_scope": "由糖、玉米等发酵制取作为燃料的乙醇；不扩展为所有化学品或所有生物燃料。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:201106f0-d9b4-5fc0-83d4-9a5d1d4b4605",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1105",
+      "parents": [
+        "urn:atlas:concept:987385d6-4a09-5011-9163-deac08188408"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:201106f0-d9b4-5fc0-83d4-9a5d1d4b4605",
+        "claim_ids": [
+          "C041",
+          "C042"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1104",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C041"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1104"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1105",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C042"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 120,
+            "range": "A120:G120"
+          }
+        }
+      ],
+      "atlas_label": "瓶装矿泉水生产",
+      "atlas_scope": "生产瓶装天然矿泉水；不含植物奶或其他饮料。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:0beae3f5-0067-5771-89c0-f828769d0486",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:2399",
+      "parents": [
+        "urn:atlas:concept:d6257b66-907f-5aff-94c0-0afe9950e9aa"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:0beae3f5-0067-5771-89c0-f828769d0486",
+        "claim_ids": [
+          "C043",
+          "C044"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:2399",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C043"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2399"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:2399",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C044"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 203,
+            "range": "A203:G203"
+          }
+        }
+      ],
+      "atlas_label": "非电气用途碳纤维制造",
+      "atlas_scope": "制造非电极及非电气应用的碳纤维；与织造碳纤维织物的旧源交叠另存。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
+    },
+    {
+      "id": "urn:atlas:concept:87ed4ac9-453c-531a-8230-3fd7f4508088",
+      "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+      "kind": "reviewed_activity_slice",
+      "anchor_source_id": "ISIC:Rev.5:1399",
+      "parents": [
+        "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0"
+      ],
+      "parent_basis": "Atlas-authored bounded activity under cited Rev5 class; not an official subcode",
+      "scope_basis": {
+        "activity_id": "urn:atlas:concept:87ed4ac9-453c-531a-8230-3fd7f4508088",
+        "claim_ids": [
+          "C093",
+          "C094"
+        ]
+      },
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1399",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C093"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1399"
+          }
+        },
+        {
+          "node_id": "ISIC:Rev.5:1399",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "C094"
+          ],
+          "role": "bounded_activity_evidence",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          }
+        }
+      ],
+      "atlas_label": "窄幅织物织造",
+      "atlas_scope": "织造窄幅织物；不扩展为其他未明列技术纺织品。",
+      "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"
     }
   ],
   "source_to_atlas": {
@@ -10349,6 +13260,117 @@
         "role": "reviewed_scope_anchor"
       }
     ],
+    "ISIC:Rev.5:10": [
+      {
+        "atlas_id": "urn:atlas:concept:fca2a628-ce4b-5cff-be98-26a283e4e225",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:105": [
+      {
+        "atlas_id": "urn:atlas:concept:db27e435-9e2a-54a5-9cff-511f57d40b97",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:1050": [
+      {
+        "atlas_id": "urn:atlas:concept:71d637cb-da6c-58d3-9008-d0f5d96ae5bb",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:04790416-3136-57da-9907-7cb86521cf26",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:4ea445f2-8b44-53e7-b979-677a4fe83f22",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:1050": [
+      {
+        "atlas_id": "urn:atlas:concept:71d637cb-da6c-58d3-9008-d0f5d96ae5bb",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:04790416-3136-57da-9907-7cb86521cf26",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:4ea445f2-8b44-53e7-b979-677a4fe83f22",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:107": [
+      {
+        "atlas_id": "urn:atlas:concept:fc1beb22-525c-5b19-a0a9-4bb1085bc3ba",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:1076": [
+      {
+        "atlas_id": "urn:atlas:concept:b7664d51-918e-50c7-bcf3-4d33552b7736",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:88f8a64c-6e56-5ceb-9079-e900ff47b8a4",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:1079": [
+      {
+        "atlas_id": "urn:atlas:concept:b7664d51-918e-50c7-bcf3-4d33552b7736",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:0f2fceff-4a8d-58c3-8578-5a92f32c7913",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:987385d6-4a09-5011-9163-deac08188408",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "atlas_research_supplement"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:ab79f5d2-6f27-5e11-8538-18d9efe87fa5",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:ad59199d-85b4-55d6-91d1-cbe6b1e29246",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:88f8a64c-6e56-5ceb-9079-e900ff47b8a4",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:1079": [
+      {
+        "atlas_id": "urn:atlas:concept:0f2fceff-4a8d-58c3-8578-5a92f32c7913",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:ad59199d-85b4-55d6-91d1-cbe6b1e29246",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
     "ISIC:Rev.5:11": [
       {
         "atlas_id": "urn:atlas:concept:663f90e4-cac2-55df-bab7-ffc2806cf907",
@@ -10389,6 +13411,229 @@
         "role": "reviewed_scope_anchor"
       }
     ],
+    "ISIC:Rev.5:1105": [
+      {
+        "atlas_id": "urn:atlas:concept:987385d6-4a09-5011-9163-deac08188408",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:ab79f5d2-6f27-5e11-8538-18d9efe87fa5",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:201106f0-d9b4-5fc0-83d4-9a5d1d4b4605",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:1104": [
+      {
+        "atlas_id": "urn:atlas:concept:987385d6-4a09-5011-9163-deac08188408",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:201106f0-d9b4-5fc0-83d4-9a5d1d4b4605",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:13": [
+      {
+        "atlas_id": "urn:atlas:concept:176963f4-20ab-5831-a834-64a8c0865060",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:131": [
+      {
+        "atlas_id": "urn:atlas:concept:800af076-e152-550d-825e-7dd459faa582",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:1312": [
+      {
+        "atlas_id": "urn:atlas:concept:9120ff27-1cee-5d95-a0c2-411c8fbc9e92",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:90da8a1b-74ee-5156-836a-a099f844c27c",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:1312": [
+      {
+        "atlas_id": "urn:atlas:concept:9120ff27-1cee-5d95-a0c2-411c8fbc9e92",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "atlas_research_supplement"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:d6257b66-907f-5aff-94c0-0afe9950e9aa",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "atlas_research_supplement"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:90da8a1b-74ee-5156-836a-a099f844c27c",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:49c46bbc-c94a-5c18-b677-20021fb767d0",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:89e4f6ba-eb22-5cb4-9615-639db3d7c890",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:1313": [
+      {
+        "atlas_id": "urn:atlas:concept:b5c0049f-9dae-5197-a145-e953b83cba03",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:d7e9c8a2-0106-5759-9fdb-76206585e0f8",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:7bcc5d1b-8eaf-5b4e-aa89-e242ff17f57b",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:1313": [
+      {
+        "atlas_id": "urn:atlas:concept:b5c0049f-9dae-5197-a145-e953b83cba03",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:d7e9c8a2-0106-5759-9fdb-76206585e0f8",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:1811": [
+      {
+        "atlas_id": "urn:atlas:concept:b5c0049f-9dae-5197-a145-e953b83cba03",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "atlas_research_supplement"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:053bbcfb-65a6-5555-9550-1771c24ff8dc",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:7bcc5d1b-8eaf-5b4e-aa89-e242ff17f57b",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:00622ce7-bebb-552c-a97e-8c1ea131b759",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:139": [
+      {
+        "atlas_id": "urn:atlas:concept:4bb82964-28c8-5d41-8594-edd1ec25491f",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:1392": [
+      {
+        "atlas_id": "urn:atlas:concept:e31640f9-12d8-541c-aa0d-0016ce6797dc",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:7f6aaede-627f-5246-885d-9660929dd18d",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:1392": [
+      {
+        "atlas_id": "urn:atlas:concept:e31640f9-12d8-541c-aa0d-0016ce6797dc",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "atlas_research_supplement"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:9b572c50-2eb8-5f93-8e84-296591c042e6",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:1a447b7c-3e41-5a18-a39a-860e852e697c",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:7f6aaede-627f-5246-885d-9660929dd18d",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:1399": [
+      {
+        "atlas_id": "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:9b572c50-2eb8-5f93-8e84-296591c042e6",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:1a447b7c-3e41-5a18-a39a-860e852e697c",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:49c46bbc-c94a-5c18-b677-20021fb767d0",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:87ed4ac9-453c-531a-8230-3fd7f4508088",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:1399": [
+      {
+        "atlas_id": "urn:atlas:concept:42f9589a-c8b5-5c9b-9a3a-ed2ab26c4ea0",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:87ed4ac9-453c-531a-8230-3fd7f4508088",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
     "ISIC:Rev.5:15": [
       {
         "atlas_id": "urn:atlas:concept:f29e9ef5-3898-51a1-bbff-8de8a7f5754b",
@@ -10415,6 +13660,212 @@
         "atlas_id": "urn:atlas:concept:18b5b244-5861-54bb-a1e2-dc47b9e50718",
         "relation_atlas_to_source": "exactMatch",
         "role": "reviewed_mapping"
+      }
+    ],
+    "ISIC:Rev.5:18": [
+      {
+        "atlas_id": "urn:atlas:concept:ad4ba56d-9068-5916-9e80-172b42f2cc2a",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:181": [
+      {
+        "atlas_id": "urn:atlas:concept:a1d109ae-63e4-5a7b-a577-0e320f7e207d",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:1811": [
+      {
+        "atlas_id": "urn:atlas:concept:053bbcfb-65a6-5555-9550-1771c24ff8dc",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:00622ce7-bebb-552c-a97e-8c1ea131b759",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:20": [
+      {
+        "atlas_id": "urn:atlas:concept:19040cf1-2305-5d41-ae49-dd723fc6566b",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:201": [
+      {
+        "atlas_id": "urn:atlas:concept:151e665f-4983-5952-b690-8e1ddaca1181",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:2011": [
+      {
+        "atlas_id": "urn:atlas:concept:c754016a-745c-5819-b4af-7926c862e9d9",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:74680745-b0dc-55d2-9482-ae708be8eaf3",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:2011": [
+      {
+        "atlas_id": "urn:atlas:concept:c754016a-745c-5819-b4af-7926c862e9d9",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:8aceba6e-6319-5cf9-a8b7-4760339200aa",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:efa37654-b19e-59e2-adc3-cec67c682adc",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "atlas_research_supplement"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:74680745-b0dc-55d2-9482-ae708be8eaf3",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:4403c5fa-343d-5807-aef2-00df829c16ca",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:a4c619fd-571c-5408-b764-a2a527b29c40",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:202": [
+      {
+        "atlas_id": "urn:atlas:concept:c67013db-0a0d-5eb0-a731-adbe3dbae3ad",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:2029": [
+      {
+        "atlas_id": "urn:atlas:concept:8aceba6e-6319-5cf9-a8b7-4760339200aa",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:e066ca01-a777-5205-817b-19f215976f80",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:a4c619fd-571c-5408-b764-a2a527b29c40",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:2029": [
+      {
+        "atlas_id": "urn:atlas:concept:8aceba6e-6319-5cf9-a8b7-4760339200aa",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:e066ca01-a777-5205-817b-19f215976f80",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:23": [
+      {
+        "atlas_id": "urn:atlas:concept:cadb858a-0ee3-5d57-bb8a-a7b4c8611f81",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:239": [
+      {
+        "atlas_id": "urn:atlas:concept:c64b6bf9-158a-5026-906a-07f5034c6da3",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:2399": [
+      {
+        "atlas_id": "urn:atlas:concept:d6257b66-907f-5aff-94c0-0afe9950e9aa",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:89e4f6ba-eb22-5cb4-9615-639db3d7c890",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:0beae3f5-0067-5771-89c0-f828769d0486",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:2399": [
+      {
+        "atlas_id": "urn:atlas:concept:d6257b66-907f-5aff-94c0-0afe9950e9aa",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:0beae3f5-0067-5771-89c0-f828769d0486",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.5:24": [
+      {
+        "atlas_id": "urn:atlas:concept:6d5f05da-8918-5c28-8957-fc73d2fd59e7",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:242": [
+      {
+        "atlas_id": "urn:atlas:concept:4087b04c-c155-55b6-947c-e3e186fcf23c",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:2420": [
+      {
+        "atlas_id": "urn:atlas:concept:efa37654-b19e-59e2-adc3-cec67c682adc",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:4403c5fa-343d-5807-aef2-00df829c16ca",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:7815f6bc-fc2e-5cce-8f71-f10dadf6f0e2",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:2420": [
+      {
+        "atlas_id": "urn:atlas:concept:efa37654-b19e-59e2-adc3-cec67c682adc",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:7815f6bc-fc2e-5cce-8f71-f10dadf6f0e2",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
       }
     ],
     "ISIC:Rev.5:26": [
@@ -10578,6 +14029,37 @@
         "atlas_id": "urn:atlas:concept:feb74ff6-0f61-5dc2-8a69-db0dfa13c7a0",
         "relation_atlas_to_source": "relatedMatch",
         "role": "reviewed_mapping"
+      }
+    ],
+    "ISIC:Rev.5:353": [
+      {
+        "atlas_id": "urn:atlas:concept:a7f95590-7955-552e-ba0b-71ece50b4694",
+        "relation_atlas_to_source": null,
+        "role": "navigation_spine_only"
+      }
+    ],
+    "ISIC:Rev.5:3530": [
+      {
+        "atlas_id": "urn:atlas:concept:2b66624b-2285-595e-8664-2e216da5be86",
+        "relation_atlas_to_source": "exactMatch",
+        "role": "reviewed_scope_anchor"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:d65a2f04-9a43-5ffc-8771-1e13991b0340",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
+      }
+    ],
+    "ISIC:Rev.4:3530": [
+      {
+        "atlas_id": "urn:atlas:concept:2b66624b-2285-595e-8664-2e216da5be86",
+        "relation_atlas_to_source": "relatedMatch",
+        "role": "reviewed_mapping"
+      },
+      {
+        "atlas_id": "urn:atlas:concept:d65a2f04-9a43-5ffc-8771-1e13991b0340",
+        "relation_atlas_to_source": "broadMatch",
+        "role": "bounded_activity_evidence"
       }
     ],
     "ISIC:Rev.5:354": [
@@ -12242,46 +15724,48 @@
   "statistics": {
     "connected_components": 336,
     "nontrivial_components": 50,
-    "reviewed_cohorts": 38,
-    "reviewed_cases": 143,
-    "reviewed_nontrivial_components": 36,
+    "reviewed_cohorts": 50,
+    "reviewed_cases": 158,
+    "reviewed_nontrivial_components": 38,
     "mapping_status": {
-      "reviewed_current_relation": 123,
-      "not_reviewed": 462,
+      "reviewed_current_relation": 138,
+      "not_reviewed": 447,
       "held_after_review": 20
     },
     "reviewed_relations": {
       "exactMatch": 3,
       "broadMatch": 9,
-      "relatedMatch": 89,
+      "relatedMatch": 104,
       "narrowMatch": 22
     },
-    "reviewed_rev4_classes": 64,
-    "reviewed_rev5_classes": 93,
-    "directory_nodes": 195,
+    "reviewed_rev4_classes": 77,
+    "reviewed_rev5_classes": 107,
+    "directory_nodes": 248,
     "directory_kinds": {
-      "source_derived_navigation": 102,
-      "reviewed_activity": 93
+      "source_derived_navigation": 118,
+      "reviewed_activity": 107,
+      "reviewed_activity_slice": 23
     },
-    "reviewed_source_bindings": 216,
-    "navigation_bindings": 102,
+    "reviewed_source_bindings": 297,
+    "navigation_bindings": 118,
     "directory_integrity": {
-      "node_count": 195,
-      "unique_codes": 195,
+      "node_count": 248,
+      "unique_codes": 248,
       "duplicate_codes": [],
-      "edge_count": 178,
+      "edge_count": 231,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 17,
-        "2": 27,
-        "3": 58,
-        "4": 93
+        "2": 33,
+        "3": 68,
+        "4": 107,
+        "5": 23
       },
       "roots": 17,
-      "leaves": 93,
-      "definitions": 195,
+      "leaves": 116,
+      "definitions": 248,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
@@ -12294,8 +15778,32 @@
       "different_word_sequence": 3,
       "current_repeats_updated_twice": 1
     },
-    "unresolved_issues": 18,
-    "queue_rows": 605
+    "issues_by_status": {
+      "resolved_for_research": 1,
+      "open": 17,
+      "addressed_in_research": 2,
+      "partially_addressed": 1
+    },
+    "unresolved_issues": 20,
+    "queue_rows": 605,
+    "supplemental_mapping_status": {
+      "accepted_scoped_overlap": 6,
+      "held_after_research": 2
+    },
+    "priority_review": {
+      "claims": 96,
+      "bounded_activities": 23,
+      "official_rows_reviewed": 15,
+      "complete_historical_components": 12,
+      "nontrivial_historical_components": 2,
+      "mapping_origin_status": {
+        "official_row_review:accepted_scoped_overlap": 15,
+        "atlas_research_supplement:accepted_scoped_overlap": 6,
+        "atlas_research_supplement:held_after_research": 2
+      },
+      "errata_findings": 11,
+      "issue_followups": 4
+    }
   },
   "labels_and_definitions": "Resolved locally from pinned source snapshots; redistribution rights unresolved."
 }

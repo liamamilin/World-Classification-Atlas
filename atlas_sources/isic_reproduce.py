@@ -17,7 +17,7 @@ def reproduce(root, resources):
         with tempfile.TemporaryDirectory(prefix="atlas-isic-repro-") as temp:
             target = Path(temp)
             for relative in ("data/resources.lock.json", "data/research/isic-review-decisions.json",
-                             "data/research/isic-expanded-review.json"):
+                             "data/research/isic-expanded-review.json", "data/research/isic-priority-review.json"):
                 dest = target / relative
                 dest.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(root / relative, dest)

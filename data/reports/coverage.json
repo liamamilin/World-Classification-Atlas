@@ -186,46 +186,48 @@
     "expanded_review": {
       "connected_components": 336,
       "nontrivial_components": 50,
-      "reviewed_cohorts": 38,
-      "reviewed_cases": 143,
-      "reviewed_nontrivial_components": 36,
+      "reviewed_cohorts": 50,
+      "reviewed_cases": 158,
+      "reviewed_nontrivial_components": 38,
       "mapping_status": {
-        "reviewed_current_relation": 123,
-        "not_reviewed": 462,
+        "reviewed_current_relation": 138,
+        "not_reviewed": 447,
         "held_after_review": 20
       },
       "reviewed_relations": {
         "exactMatch": 3,
         "broadMatch": 9,
-        "relatedMatch": 89,
+        "relatedMatch": 104,
         "narrowMatch": 22
       },
-      "reviewed_rev4_classes": 64,
-      "reviewed_rev5_classes": 93,
-      "directory_nodes": 195,
+      "reviewed_rev4_classes": 77,
+      "reviewed_rev5_classes": 107,
+      "directory_nodes": 248,
       "directory_kinds": {
-        "source_derived_navigation": 102,
-        "reviewed_activity": 93
+        "source_derived_navigation": 118,
+        "reviewed_activity": 107,
+        "reviewed_activity_slice": 23
       },
-      "reviewed_source_bindings": 216,
-      "navigation_bindings": 102,
+      "reviewed_source_bindings": 297,
+      "navigation_bindings": 118,
       "directory_integrity": {
-        "node_count": 195,
-        "unique_codes": 195,
+        "node_count": 248,
+        "unique_codes": 248,
         "duplicate_codes": [],
-        "edge_count": 178,
+        "edge_count": 231,
         "orphan_parents": [],
         "self_links": [],
         "cycles": [],
         "levels": {
           "1": 17,
-          "2": 27,
-          "3": 58,
-          "4": 93
+          "2": 33,
+          "3": 68,
+          "4": 107,
+          "5": 23
         },
         "roots": 17,
-        "leaves": 93,
-        "definitions": 195,
+        "leaves": 116,
+        "definitions": 248,
         "deprecated_or_alias_status": "not_supplied_by_these_adapters",
         "polyhierarchy_nodes": 0
       },
@@ -238,8 +240,46 @@
         "different_word_sequence": 3,
         "current_repeats_updated_twice": 1
       },
-      "unresolved_issues": 18,
-      "queue_rows": 605
+      "issues_by_status": {
+        "resolved_for_research": 1,
+        "open": 17,
+        "addressed_in_research": 2,
+        "partially_addressed": 1
+      },
+      "unresolved_issues": 20,
+      "queue_rows": 605,
+      "supplemental_mapping_status": {
+        "accepted_scoped_overlap": 6,
+        "held_after_research": 2
+      },
+      "priority_review": {
+        "claims": 96,
+        "bounded_activities": 23,
+        "official_rows_reviewed": 15,
+        "complete_historical_components": 12,
+        "nontrivial_historical_components": 2,
+        "mapping_origin_status": {
+          "official_row_review:accepted_scoped_overlap": 15,
+          "atlas_research_supplement:accepted_scoped_overlap": 6,
+          "atlas_research_supplement:held_after_research": 2
+        },
+        "errata_findings": 11,
+        "issue_followups": 4
+      }
+    },
+    "priority_review": {
+      "claims": 96,
+      "bounded_activities": 23,
+      "official_rows_reviewed": 15,
+      "complete_historical_components": 12,
+      "nontrivial_historical_components": 2,
+      "mapping_origin_status": {
+        "official_row_review:accepted_scoped_overlap": 15,
+        "atlas_research_supplement:accepted_scoped_overlap": 6,
+        "atlas_research_supplement:held_after_research": 2
+      },
+      "errata_findings": 11,
+      "issue_followups": 4
     },
     "correspondence": {
       "rows": 605,

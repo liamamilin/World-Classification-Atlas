@@ -2,46 +2,48 @@
   "statistics": {
     "connected_components": 336,
     "nontrivial_components": 50,
-    "reviewed_cohorts": 38,
-    "reviewed_cases": 143,
-    "reviewed_nontrivial_components": 36,
+    "reviewed_cohorts": 50,
+    "reviewed_cases": 158,
+    "reviewed_nontrivial_components": 38,
     "mapping_status": {
-      "reviewed_current_relation": 123,
-      "not_reviewed": 462,
+      "reviewed_current_relation": 138,
+      "not_reviewed": 447,
       "held_after_review": 20
     },
     "reviewed_relations": {
       "exactMatch": 3,
       "broadMatch": 9,
-      "relatedMatch": 89,
+      "relatedMatch": 104,
       "narrowMatch": 22
     },
-    "reviewed_rev4_classes": 64,
-    "reviewed_rev5_classes": 93,
-    "directory_nodes": 195,
+    "reviewed_rev4_classes": 77,
+    "reviewed_rev5_classes": 107,
+    "directory_nodes": 248,
     "directory_kinds": {
-      "source_derived_navigation": 102,
-      "reviewed_activity": 93
+      "source_derived_navigation": 118,
+      "reviewed_activity": 107,
+      "reviewed_activity_slice": 23
     },
-    "reviewed_source_bindings": 216,
-    "navigation_bindings": 102,
+    "reviewed_source_bindings": 297,
+    "navigation_bindings": 118,
     "directory_integrity": {
-      "node_count": 195,
-      "unique_codes": 195,
+      "node_count": 248,
+      "unique_codes": 248,
       "duplicate_codes": [],
-      "edge_count": 178,
+      "edge_count": 231,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 17,
-        "2": 27,
-        "3": 58,
-        "4": 93
+        "2": 33,
+        "3": 68,
+        "4": 107,
+        "5": 23
       },
       "roots": 17,
-      "leaves": 93,
-      "definitions": 195,
+      "leaves": 116,
+      "definitions": 248,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
@@ -54,8 +56,32 @@
       "different_word_sequence": 3,
       "current_repeats_updated_twice": 1
     },
-    "unresolved_issues": 18,
-    "queue_rows": 605
+    "issues_by_status": {
+      "resolved_for_research": 1,
+      "open": 17,
+      "addressed_in_research": 2,
+      "partially_addressed": 1
+    },
+    "unresolved_issues": 20,
+    "queue_rows": 605,
+    "supplemental_mapping_status": {
+      "accepted_scoped_overlap": 6,
+      "held_after_research": 2
+    },
+    "priority_review": {
+      "claims": 96,
+      "bounded_activities": 23,
+      "official_rows_reviewed": 15,
+      "complete_historical_components": 12,
+      "nontrivial_historical_components": 2,
+      "mapping_origin_status": {
+        "official_row_review:accepted_scoped_overlap": 15,
+        "atlas_research_supplement:accepted_scoped_overlap": 6,
+        "atlas_research_supplement:held_after_research": 2
+      },
+      "errata_findings": 11,
+      "issue_followups": 4
+    }
   },
   "cohorts": [
     {
@@ -2026,6 +2052,467 @@
       "previous_decision": null
     },
     {
+      "mapping_id": "urn:atlas:mapping:16fd6595-0b37-5b1c-80ba-0756e76e2a10",
+      "from_code": "1050",
+      "to_code": "1050",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "1050"
+      ],
+      "issue_ids": [
+        "ALLOCATION-PLANT-MILK",
+        "ALLOCATION-EDIBLE-WATER-ICE"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 64,
+        "range": "A64:H64"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:04790416-3136-57da-9907-7cb86521cf26",
+        "urn:atlas:concept:4ea445f2-8b44-53e7-b979-677a4fe83f22"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:0e41ec55-39e2-56a5-877f-1d2d109cf48a",
+        "from_code": "1050",
+        "to_code": "1050",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:04790416-3136-57da-9907-7cb86521cf26",
+          "urn:atlas:concept:4ea445f2-8b44-53e7-b979-677a4fe83f22"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C007",
+            "document": "ISIC:Rev.4:1050",
+            "field": "notes.inclusion",
+            "start": 22,
+            "end": 120,
+            "field_sha256": "447fdf1e171a19170bd581f9e276e9a5fe6665f8cb3a11f2b156cf8bc955e340",
+            "text_sha256": "8c3545dae8cfdae820bdbba69762449a99d26e87ce115ab35c2fe65e712f941a",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1050"
+            }
+          },
+          {
+            "id": "C008",
+            "document": "ISIC:Rev.5:1050",
+            "field": "notes.includes",
+            "start": 21,
+            "end": 119,
+            "field_sha256": "68f24818781e4d5d607b91987ae4f03cb454b4043651745e64214f72d88ef338",
+            "text_sha256": "8c3545dae8cfdae820bdbba69762449a99d26e87ce115ab35c2fe65e712f941a",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 100,
+              "range": "A100:G100"
+            }
+          },
+          {
+            "id": "C009",
+            "document": "ISIC:Rev.4:1050",
+            "field": "notes.inclusion",
+            "start": 503,
+            "end": 565,
+            "field_sha256": "447fdf1e171a19170bd581f9e276e9a5fe6665f8cb3a11f2b156cf8bc955e340",
+            "text_sha256": "ae36ca47e59667d3eefda30416c56c2c8d553792838a62ffaa44203e0848c696",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1050"
+            }
+          },
+          {
+            "id": "C010",
+            "document": "ISIC:Rev.5:1050",
+            "field": "notes.includes_also",
+            "start": 54,
+            "end": 116,
+            "field_sha256": "59e21f8d417cf57c5dfda9e330f2c61a74b6a6c44a672959fdbb4709814d37ff",
+            "text_sha256": "ae36ca47e59667d3eefda30416c56c2c8d553792838a62ffaa44203e0848c696",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 100,
+              "range": "A100:G100"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:16fd6595-0b37-5b1c-80ba-0756e76e2a10",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 64,
+          "range": "A64:H64"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1050",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1050"
+          },
+          "scope_sha256": "8f090c4085b216433e3d5e76b167e70cbdf19a62a77a1db3c83ce4322b143d59"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1050",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 100,
+            "range": "A100:G100"
+          },
+          "scope_sha256": "9829812408e8dd66cafc3c1679c082634b73fa50b5872aaaeb7aabbc60112685"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-1050"
+      ],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:cf30aacb-35a6-585c-b855-83969eb80544",
+      "from_code": "1079",
+      "to_code": "1076",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "narrowMatch",
+      "source_status": "review_real_change",
+      "topology": "one_to_many",
+      "gsim_ids": [
+        "RC4.2"
+      ],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [],
+      "issue_ids": [
+        "ALLOCATION-PLANT-MILK"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 72,
+        "range": "A72:H72"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:88f8a64c-6e56-5ceb-9079-e900ff47b8a4"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:483ad69d-f61e-5278-9d66-504453aeac73",
+        "from_code": "1079",
+        "to_code": "1076",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:88f8a64c-6e56-5ceb-9079-e900ff47b8a4"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C005",
+            "document": "ISIC:Rev.4:1079",
+            "field": "notes.inclusion",
+            "start": 22,
+            "end": 61,
+            "field_sha256": "c5f16fa6234e2e4caece661c5b6b9077bb3bd80bdfa2c43bc179d5041429fab3",
+            "text_sha256": "6025a5bb12fb378f0d741515da8d081df915a6127969132e2785a07fe2390e93",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1079"
+            }
+          },
+          {
+            "id": "C006",
+            "document": "ISIC:Rev.5:1076",
+            "field": "notes.includes",
+            "start": 21,
+            "end": 60,
+            "field_sha256": "fd57dfad913e45ed44f7391bff8247c4725845c6cf15f4f74c5396641f6915b5",
+            "text_sha256": "6025a5bb12fb378f0d741515da8d081df915a6127969132e2785a07fe2390e93",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 110,
+              "range": "A110:G110"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:cf30aacb-35a6-585c-b855-83969eb80544",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 72,
+          "range": "A72:H72"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1079",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1079"
+          },
+          "scope_sha256": "890124c97ec5eeac3c23db7f18e888d8a2256c77c62132135280a27bda87bda2"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1076",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 110,
+            "range": "A110:G110"
+          },
+          "scope_sha256": "9ab4b9de9e443193614e8c76d78e0bfc5f8e1f934c174604ea9a33aa0d538385"
+        }
+      ],
+      "errata_review_refs": [],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:06d83693-8ef9-567c-a769-952c99416356",
+      "from_code": "1079",
+      "to_code": "1079",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "narrowMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_many",
+      "gsim_ids": [
+        "RC4.2"
+      ],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "1079"
+      ],
+      "issue_ids": [
+        "ALLOCATION-PLANT-MILK"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 73,
+        "range": "A73:H73"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:ad59199d-85b4-55d6-91d1-cbe6b1e29246"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:88070624-ff11-503a-95b6-7f197f3110b5",
+        "from_code": "1079",
+        "to_code": "1079",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:ad59199d-85b4-55d6-91d1-cbe6b1e29246"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C003",
+            "document": "ISIC:Rev.4:1079",
+            "field": "notes.inclusion",
+            "start": 975,
+            "end": 1029,
+            "field_sha256": "c5f16fa6234e2e4caece661c5b6b9077bb3bd80bdfa2c43bc179d5041429fab3",
+            "text_sha256": "e2dfca47be93bbc0e5e4079fa55e6dabbacea7460b1afcee6a0450e30457d75e",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1079"
+            }
+          },
+          {
+            "id": "C004",
+            "document": "ISIC:Rev.5:1079",
+            "field": "notes.includes_also",
+            "start": 217,
+            "end": 252,
+            "field_sha256": "ea2ebf43b3423f1232bf5d9ca01c3456083331418cc38f47b0d484385c6d6406",
+            "text_sha256": "adb543fdda0f7aefe3f66a1bd689f6c42b0631a1fba41b82f1492a08d6159b5c",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 111,
+              "range": "A111:G111"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:06d83693-8ef9-567c-a769-952c99416356",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 73,
+          "range": "A73:H73"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1079",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1079"
+          },
+          "scope_sha256": "890124c97ec5eeac3c23db7f18e888d8a2256c77c62132135280a27bda87bda2"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1079",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 111,
+            "range": "A111:G111"
+          },
+          "scope_sha256": "a02ee71ce422e40dec98164d0562b4e2da11864b8a1d38fa852e5c99151dc20f"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-1079"
+      ],
+      "previous_decision": null
+    },
+    {
       "mapping_id": "urn:atlas:mapping:bc498cb7-b0bf-5874-917a-14fc1af9536b",
       "from_code": "1103",
       "to_code": "1103",
@@ -2164,6 +2651,704 @@
       "previous_decision": null
     },
     {
+      "mapping_id": "urn:atlas:mapping:3841d30b-d3ba-5368-a283-b032b1297019",
+      "from_code": "1104",
+      "to_code": "1105",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_one",
+      "gsim_ids": [
+        "VC1",
+        "VC2"
+      ],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "1105"
+      ],
+      "issue_ids": [
+        "TEXT-2026-1105",
+        "ALLOCATION-PLANT-MILK"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 79,
+        "range": "A79:H79"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:201106f0-d9b4-5fc0-83d4-9a5d1d4b4605"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:7ea51cc0-dd00-5b68-8d04-716895449dfa",
+        "from_code": "1104",
+        "to_code": "1105",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:201106f0-d9b4-5fc0-83d4-9a5d1d4b4605"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C041",
+            "document": "ISIC:Rev.4:1104",
+            "field": "notes.inclusion",
+            "start": 100,
+            "end": 163,
+            "field_sha256": "387e6e0aee79e2109ff9c8f4ea1ea43875a33d1efcb26c7e0bfd454b6727d7be",
+            "text_sha256": "4488d80107694d7b29e83482f4cbd3b300b500bb4f91fb38b6e6cc581bc22e05",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1104"
+            }
+          },
+          {
+            "id": "C042",
+            "document": "ISIC:Rev.5:1105",
+            "field": "notes.includes",
+            "start": 97,
+            "end": 160,
+            "field_sha256": "9b37fc97ebb76535778e77ea8ec048b7fa05eb4dffb521ce860fa1d718b39359",
+            "text_sha256": "4488d80107694d7b29e83482f4cbd3b300b500bb4f91fb38b6e6cc581bc22e05",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 120,
+              "range": "A120:G120"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:3841d30b-d3ba-5368-a283-b032b1297019",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 79,
+          "range": "A79:H79"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1104",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1104"
+          },
+          "scope_sha256": "9a6947f70b630a1e28522e0fe349e2eda0906c17dbdbe7e61558a72c68822626"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1105",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 120,
+            "range": "A120:G120"
+          },
+          "scope_sha256": "501757b4a6b3f6c80f5e9d95e89c8c696383f7c9c4bc2080ce5c89928f327719"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-1105"
+      ],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:191b5514-cd6d-50a8-a3c5-13fad2191794",
+      "from_code": "1312",
+      "to_code": "1312",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "1312"
+      ],
+      "issue_ids": [
+        "SCOPE-OLD-CARBON-TEXTILES"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 82,
+        "range": "A82:H82"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:90da8a1b-74ee-5156-836a-a099f844c27c"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:aeccc457-9d53-55fa-90a6-4f099cfdd9ce",
+        "from_code": "1312",
+        "to_code": "1312",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:90da8a1b-74ee-5156-836a-a099f844c27c"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C019",
+            "document": "ISIC:Rev.4:1312",
+            "field": "notes.inclusion",
+            "start": 22,
+            "end": 169,
+            "field_sha256": "4c0e015aaa764251306cf511e95880b8a0cef6c4f8c8f942dafeead5f7ebab2d",
+            "text_sha256": "5bc0807fe4ec3903383b0c974c2383990e65ec42d24cbdce7b594837661964cd",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1312"
+            }
+          },
+          {
+            "id": "C020",
+            "document": "ISIC:Rev.5:1312",
+            "field": "notes.includes",
+            "start": 256,
+            "end": 424,
+            "field_sha256": "aa09ddfb022ee598d871edd16e273005105e73c92262998c513e31eb32ea1e71",
+            "text_sha256": "ed9e7f9bb93385a172720e873342ccdb58bd0c05d21a9dde7d015e508af6bf63",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 127,
+              "range": "A127:G127"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:191b5514-cd6d-50a8-a3c5-13fad2191794",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 82,
+          "range": "A82:H82"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1312",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1312"
+          },
+          "scope_sha256": "f118198f5d7ce625959eaef720e107ba39a2568a851c3f1b83ae84845b02742e"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1312",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 127,
+            "range": "A127:G127"
+          },
+          "scope_sha256": "6dd8a5c1e9dcacb72975c0f0ee8cdb2849fe0a2e6f93b514e0986d6918986e74"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-1312"
+      ],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:6b320b25-0e00-5f16-8a05-13d99d203dfa",
+      "from_code": "1313",
+      "to_code": "1313",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "1313"
+      ],
+      "issue_ids": [],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 83,
+        "range": "A83:H83"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:d7e9c8a2-0106-5759-9fdb-76206585e0f8"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:c154bad5-0b25-5a68-8abe-9dac1f088e88",
+        "from_code": "1313",
+        "to_code": "1313",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:d7e9c8a2-0106-5759-9fdb-76206585e0f8"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C025",
+            "document": "ISIC:Rev.4:1313",
+            "field": "notes.inclusion",
+            "start": 22,
+            "end": 126,
+            "field_sha256": "cf42b02f6302a91b52cfa2e3a346ce7fc24dcf36586170ca552b833ea7e2eb46",
+            "text_sha256": "0b2af94642c7a9868891a53afca9c20c0c6b0101c0b0a9e0c088a0e37e9e860a",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1313"
+            }
+          },
+          {
+            "id": "C026",
+            "document": "ISIC:Rev.5:1313",
+            "field": "notes.includes",
+            "start": 141,
+            "end": 245,
+            "field_sha256": "563ae323fae3b961a0f23ee9409e4d703d3f6cab6367cf3479026e806a8f98fa",
+            "text_sha256": "b91b30c5c76df943c99019520614730a423eb91ed8a1b2329e92a50580d0c234",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 128,
+              "range": "A128:G128"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:6b320b25-0e00-5f16-8a05-13d99d203dfa",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 83,
+          "range": "A83:H83"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1313",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1313"
+          },
+          "scope_sha256": "9ade47531f386a1162536c6e7396571299b32af957cc9847335c9c4f8542bc1c"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1313",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 128,
+            "range": "A128:G128"
+          },
+          "scope_sha256": "d409efe72bb2423b982ab65c5942c72bf0cd7c44aff1be8896a0dd7cb6b876bd"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-1313"
+      ],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:5d0b22df-19d1-5e96-8f63-83260c09b7a3",
+      "from_code": "1392",
+      "to_code": "1392",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "1392"
+      ],
+      "issue_ids": [
+        "ALLOCATION-TEXTILES"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 85,
+        "range": "A85:H85"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:7f6aaede-627f-5246-885d-9660929dd18d"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:376bcc2c-bc60-58e7-b21b-6295db3525f7",
+        "from_code": "1392",
+        "to_code": "1392",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:7f6aaede-627f-5246-885d-9660929dd18d"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C017",
+            "document": "ISIC:Rev.4:1392",
+            "field": "notes.inclusion",
+            "start": 535,
+            "end": 612,
+            "field_sha256": "91632d4f9820e3c63ab2e244bad5e7eeb7f041f6dafaa95837ea3ffc6d89056e",
+            "text_sha256": "fd2f49a62f53c31e12a561911774d3898187b284afec11a2f144112610fcdacc",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1392"
+            }
+          },
+          {
+            "id": "C018",
+            "document": "ISIC:Rev.5:1392",
+            "field": "notes.includes",
+            "start": 502,
+            "end": 531,
+            "field_sha256": "7517095a8c2b968bd0e90f4717a9e61f5158d1e21468412375f5539e99dd075d",
+            "text_sha256": "638844d4694f419efdaaeff950bd7d3501a09e820049b64ea77da04775ea2db8",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 131,
+              "range": "A131:G131"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:5d0b22df-19d1-5e96-8f63-83260c09b7a3",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 85,
+          "range": "A85:H85"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1392"
+          },
+          "scope_sha256": "e23e0af156710f36bf3c3048b76b693d6e9119442199edbc433909bb99838665"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1392",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 131,
+            "range": "A131:G131"
+          },
+          "scope_sha256": "0b856fdec3edcb59ca55a70ea361e05e197cbdb9d899293476acdcc7aabdbfc5"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-1392"
+      ],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:c3d5b865-6d3e-5faf-a415-64b6fc99dc0c",
+      "from_code": "1399",
+      "to_code": "1399",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "1399"
+      ],
+      "issue_ids": [
+        "ALLOCATION-TEXTILES",
+        "ALLOCATION-TEXTILE-MASKS"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 88,
+        "range": "A88:H88"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:87ed4ac9-453c-531a-8230-3fd7f4508088"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:c45680c4-d2df-59d5-8f01-a2c444b412bd",
+        "from_code": "1399",
+        "to_code": "1399",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:87ed4ac9-453c-531a-8230-3fd7f4508088"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C093",
+            "document": "ISIC:Rev.4:1399",
+            "field": "notes.inclusion",
+            "start": 243,
+            "end": 365,
+            "field_sha256": "afd2a298a3d71449057dbc4d3760bb342653c7eef9694bb1dd7eb19c6aae56b6",
+            "text_sha256": "b9d83711157d67893a48ea7618e53cc87b6e0eb598e34e442127431789cf1896",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1399"
+            }
+          },
+          {
+            "id": "C094",
+            "document": "ISIC:Rev.5:1399",
+            "field": "notes.includes",
+            "start": 432,
+            "end": 554,
+            "field_sha256": "e10f4864d246046d864ee9f28f0d798106cb93f6acea764709ffaa9a13cfd737",
+            "text_sha256": "b9d83711157d67893a48ea7618e53cc87b6e0eb598e34e442127431789cf1896",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 134,
+              "range": "A134:G134"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:c3d5b865-6d3e-5faf-a415-64b6fc99dc0c",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 88,
+          "range": "A88:H88"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1399",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1399"
+          },
+          "scope_sha256": "a3050577aea2becc49f649348ad0fd31198e1b666ee8ab5ab2938203ed2c080d"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1399",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          },
+          "scope_sha256": "d3df4ad49d0ffe489be9b64993406e99c84bab1a43e000f530c6f2a8dd1bd1f9"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-1399"
+      ],
+      "previous_decision": null
+    },
+    {
       "mapping_id": "urn:atlas:mapping:54673eee-956c-5dd8-84f1-8677b08295bb",
       "from_code": "1512",
       "to_code": "1512",
@@ -2262,6 +3447,868 @@
           "range": "A93:H93"
         }
       }
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:c4829b00-1c80-5da7-8656-b6fa9dae2e7f",
+      "from_code": "1811",
+      "to_code": "1811",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "official_scope_equivalence_candidate",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [],
+      "issue_ids": [],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 103,
+        "range": "A103:H103"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:00622ce7-bebb-552c-a97e-8c1ea131b759"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:b2c50d96-7c24-5b75-a34d-296f2845fc81",
+        "from_code": "1811",
+        "to_code": "1811",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:00622ce7-bebb-552c-a97e-8c1ea131b759"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C029",
+            "document": "ISIC:Rev.4:1811",
+            "field": "notes.inclusion",
+            "start": 590,
+            "end": 665,
+            "field_sha256": "e945fff29c9e7fd5d27097be6a3925af9de0dd7a7048dfcbe9f700785659904e",
+            "text_sha256": "9e02991215ae540c5f6af7f94de26fc9dae62651c7ea45e96e7a0f8484b09a22",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1811"
+            }
+          },
+          {
+            "id": "C030",
+            "document": "ISIC:Rev.5:1811",
+            "field": "notes.includes",
+            "start": 588,
+            "end": 663,
+            "field_sha256": "c2abb187fb6d8e0caae51135ea0c503923be4b821f97987dfcd56936e29f72de",
+            "text_sha256": "9e02991215ae540c5f6af7f94de26fc9dae62651c7ea45e96e7a0f8484b09a22",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 163,
+              "range": "A163:G163"
+            }
+          },
+          {
+            "id": "C046",
+            "document": "ISIC:Rev.5:1313",
+            "field": "notes.excludes",
+            "start": 21,
+            "end": 164,
+            "field_sha256": "284ab4f985011274451f5f6b8d846f13a57494fe6c5b4955755bdc9e43144aa8",
+            "text_sha256": "6ab73a0a2a7872e80fd05415d4a23cac084b70b5622253526ec6bdb86992d173",
+            "role": "exclusion_to_target",
+            "target_node_id": "ISIC:Rev.5:1811",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 128,
+              "range": "A128:G128"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:c4829b00-1c80-5da7-8656-b6fa9dae2e7f",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 103,
+          "range": "A103:H103"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:1811",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1811"
+          },
+          "scope_sha256": "d0cd3864d5e2b6fdb7d2d2beb147a5c3c874ea18bff927a3c7aff81bf832ce40"
+        },
+        {
+          "node_id": "ISIC:Rev.5:1811",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 163,
+            "range": "A163:G163"
+          },
+          "scope_sha256": "48165a597a6c75d362132c1cdde633b880e31c64286bf8357b8be3ffb066b14d"
+        }
+      ],
+      "errata_review_refs": [],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:347991e9-f8ff-5c41-a7ce-9c3ea7ed3809",
+      "from_code": "2011",
+      "to_code": "2011",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "narrowMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_many",
+      "gsim_ids": [
+        "RC5"
+      ],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "2011"
+      ],
+      "issue_ids": [
+        "ALLOCATION-NUCLEAR"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 108,
+        "range": "A108:H108"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:74680745-b0dc-55d2-9482-ae708be8eaf3"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:1f106ea3-3ca6-55b2-9e06-35e21cfb7939",
+        "from_code": "2011",
+        "to_code": "2011",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:74680745-b0dc-55d2-9482-ae708be8eaf3"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C031",
+            "document": "ISIC:Rev.4:2011",
+            "field": "notes.inclusion",
+            "start": 1596,
+            "end": 1689,
+            "field_sha256": "1d8a39853fced06216513693eb066bc3e800467b416f25c14ec3d1103908a0c7",
+            "text_sha256": "587143e51f4f0e6c340f504b408d3a127ea6eab8ba446c7d0fb0968afc912d88",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "2011"
+            }
+          },
+          {
+            "id": "C032",
+            "document": "ISIC:Rev.5:2011",
+            "field": "notes.includes_also",
+            "start": 284,
+            "end": 324,
+            "field_sha256": "795e8ec379623445ce743043c302e3cd753caccd48abbdbf0ad73dc5df1e639e",
+            "text_sha256": "4e7fe17e2e74cc3540c34d679016dd0da7ce8c01b225f09d9fd747f4dda59073",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 174,
+              "range": "A174:G174"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:347991e9-f8ff-5c41-a7ce-9c3ea7ed3809",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 108,
+          "range": "A108:H108"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:2011",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2011"
+          },
+          "scope_sha256": "0ae7b475d85e96bdcc9da88635fdfe83623f3c961072362968d41a521a065b39"
+        },
+        {
+          "node_id": "ISIC:Rev.5:2011",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 174,
+            "range": "A174:G174"
+          },
+          "scope_sha256": "090182d53de3c1f476e681869a32e14d567e43d6021e00680f7057e0516713d6"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-2011"
+      ],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:e0d47a48-a00c-5635-8938-78eae6625692",
+      "from_code": "2011",
+      "to_code": "2029",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "relatedMatch",
+      "source_status": "review_real_change",
+      "topology": "many_to_many",
+      "gsim_ids": [
+        "RC5"
+      ],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [],
+      "issue_ids": [
+        "ALLOCATION-NUCLEAR"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 109,
+        "range": "A109:H109"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:a4c619fd-571c-5408-b764-a2a527b29c40"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:2625d232-5fd5-55fa-9347-a52176a60ebf",
+        "from_code": "2011",
+        "to_code": "2029",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:a4c619fd-571c-5408-b764-a2a527b29c40"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C039",
+            "document": "ISIC:Rev.4:2011",
+            "field": "notes.inclusion",
+            "start": 1202,
+            "end": 1276,
+            "field_sha256": "1d8a39853fced06216513693eb066bc3e800467b416f25c14ec3d1103908a0c7",
+            "text_sha256": "261c9794ec836318e2e8bf8401db169757af131f62d97d47d8b6ee612ffa8563",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "2011"
+            }
+          },
+          {
+            "id": "C040",
+            "document": "ISIC:Rev.5:2029",
+            "field": "notes.includes_also",
+            "start": 26,
+            "end": 51,
+            "field_sha256": "30b331d5063ee3ececefd12f799b12bfb45290b0518fc65b2525d3c378cdec92",
+            "text_sha256": "d8180b4c512409b0e3a75bdbafda63152f9ddd9428e6a35e00d9658b7d05ab0e",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 181,
+              "range": "A181:G181"
+            }
+          },
+          {
+            "id": "C052",
+            "document": "ISIC:Rev.5:2011",
+            "field": "notes.excludes",
+            "start": 936,
+            "end": 1000,
+            "field_sha256": "8a1394f0c7c81eb42f32f039b438b57e8746dfd1c189515403ac03d6d498136f",
+            "text_sha256": "967aec79c7e41f806468ddc31660124ca128e1e6df32829033e05edd286892e6",
+            "role": "exclusion_to_target",
+            "target_node_id": "ISIC:Rev.5:2029",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 174,
+              "range": "A174:G174"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:e0d47a48-a00c-5635-8938-78eae6625692",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 109,
+          "range": "A109:H109"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:2011",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2011"
+          },
+          "scope_sha256": "0ae7b475d85e96bdcc9da88635fdfe83623f3c961072362968d41a521a065b39"
+        },
+        {
+          "node_id": "ISIC:Rev.5:2029",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 181,
+            "range": "A181:G181"
+          },
+          "scope_sha256": "3fd3da5298202f686f3e79028c648063e3f91f766968ee598dfb78d0f4faae90"
+        }
+      ],
+      "errata_review_refs": [],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:ac69aa2e-0a8a-5352-b6e6-3bda29060b9e",
+      "from_code": "2029",
+      "to_code": "2029",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "broadMatch",
+      "source_status": "review_topology_without_gsim",
+      "topology": "many_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [],
+      "issue_ids": [],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 115,
+        "range": "A115:H115"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:e066ca01-a777-5205-817b-19f215976f80"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:ff10fb6c-f53c-55ff-9c81-d9e563b970de",
+        "from_code": "2029",
+        "to_code": "2029",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:e066ca01-a777-5205-817b-19f215976f80"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C037",
+            "document": "ISIC:Rev.4:2029",
+            "field": "notes.inclusion",
+            "start": 176,
+            "end": 295,
+            "field_sha256": "683de254df8140de199741a82261af7a6df5aed74ed708d56a8a165441498e33",
+            "text_sha256": "10a3d7e70d15e0e52aa330000a19097982a0ffe093ab1e0cc4c00611913215e3",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "2029"
+            }
+          },
+          {
+            "id": "C038",
+            "document": "ISIC:Rev.5:2029",
+            "field": "notes.includes",
+            "start": 219,
+            "end": 308,
+            "field_sha256": "64542c9dc06fbea5f77c45bbca8c5a0ce149b16bb2f9ab7b5aa44eed9da60885",
+            "text_sha256": "b0af9973eb9fbcf5281bd9f68aa7aac0620356bfc30f9f14984e1b49f5cc872b",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 181,
+              "range": "A181:G181"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:ac69aa2e-0a8a-5352-b6e6-3bda29060b9e",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 115,
+          "range": "A115:H115"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:2029",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2029"
+          },
+          "scope_sha256": "125b25de6f4adfd58a01ae3d71650c1c6e088eced2785ac3c1806f8186050d3b"
+        },
+        {
+          "node_id": "ISIC:Rev.5:2029",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 181,
+            "range": "A181:G181"
+          },
+          "scope_sha256": "3fd3da5298202f686f3e79028c648063e3f91f766968ee598dfb78d0f4faae90"
+        }
+      ],
+      "errata_review_refs": [],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:787d0c28-9254-5213-a54f-05e79c0eeef0",
+      "from_code": "2399",
+      "to_code": "2399",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "official_scope_equivalence_candidate",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [],
+      "issue_ids": [
+        "SCOPE-OLD-CARBON-TEXTILES"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 128,
+        "range": "A128:H128"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:0beae3f5-0067-5771-89c0-f828769d0486"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:4b519a23-5caf-529c-9215-08dd7bd7abb4",
+        "from_code": "2399",
+        "to_code": "2399",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:0beae3f5-0067-5771-89c0-f828769d0486"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C043",
+            "document": "ISIC:Rev.4:2399",
+            "field": "notes.inclusion",
+            "start": 782,
+            "end": 871,
+            "field_sha256": "4f84f46dc3834050e13cbb65e6fc38ea75ace51f434868891d1270e164e2f22a",
+            "text_sha256": "0eae6886bf3a0f45ee394b68b189db2466699cad84e703e208caa7b1a7319953",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "2399"
+            }
+          },
+          {
+            "id": "C044",
+            "document": "ISIC:Rev.5:2399",
+            "field": "notes.includes",
+            "start": 1044,
+            "end": 1148,
+            "field_sha256": "08eee7cca504758411992937c45e372d822c22a67ba93891ceb0821621d9f589",
+            "text_sha256": "33f78932f49a547cac3d1e9bfea6128e6864f1bef1fc254c818c339095961a49",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 203,
+              "range": "A203:G203"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:787d0c28-9254-5213-a54f-05e79c0eeef0",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 128,
+          "range": "A128:H128"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:2399",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2399"
+          },
+          "scope_sha256": "1a6b286e304bd2b3b64073ae27e4a4d2adca1b27dac0f732b7181c37b3436a7d"
+        },
+        {
+          "node_id": "ISIC:Rev.5:2399",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 203,
+            "range": "A203:G203"
+          },
+          "scope_sha256": "9b461db3bddab6162ba969d2f30143902d4d7bb208cd52c8fc06ceedfd4ecce3"
+        }
+      ],
+      "errata_review_refs": [],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:be19fc12-b88f-58aa-ae78-39a183684d20",
+      "from_code": "2420",
+      "to_code": "2420",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "2420"
+      ],
+      "issue_ids": [
+        "ALLOCATION-NUCLEAR"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 130,
+        "range": "A130:H130"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:7815f6bc-fc2e-5cce-8f71-f10dadf6f0e2"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:6c51b14f-62d3-5b84-b31a-a4c830ae7c2b",
+        "from_code": "2420",
+        "to_code": "2420",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:7815f6bc-fc2e-5cce-8f71-f10dadf6f0e2"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C035",
+            "document": "ISIC:Rev.4:2420",
+            "field": "notes.inclusion",
+            "start": 1519,
+            "end": 1553,
+            "field_sha256": "ebdc62b441ce6dc1250e3fe3a6dec1c06128fddd88fba8e026f51c70bd8f7d46",
+            "text_sha256": "7820f749fa4354db85ecb8a342d53aef219319978311c334ef28444b17040141",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "2420"
+            }
+          },
+          {
+            "id": "C036",
+            "document": "ISIC:Rev.5:2420",
+            "field": "notes.includes",
+            "start": 1891,
+            "end": 1933,
+            "field_sha256": "a306b9ff2149547d16b44da9af6ae20f7c667ac6b81facfd80f4006b0b9796a5",
+            "text_sha256": "2aff3b26db01107c87e3b943bdb2a8b0d055782bd70a72e06d5d1ab04ffebf92",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 208,
+              "range": "A208:G208"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:be19fc12-b88f-58aa-ae78-39a183684d20",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 130,
+          "range": "A130:H130"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:2420",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2420"
+          },
+          "scope_sha256": "3c63eef6a5cd7c09a0810a1376f55533137afc19df720cb4fd171613459f4413"
+        },
+        {
+          "node_id": "ISIC:Rev.5:2420",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 208,
+            "range": "A208:G208"
+          },
+          "scope_sha256": "69f34d82179b4a5a93a7f0416e05cbee12607441310a010d5a88d9f1fb4ba22e"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-2420"
+      ],
+      "previous_decision": null
     },
     {
       "mapping_id": "urn:atlas:mapping:b72da2c4-249d-5048-a7db-cf981f79f496",
@@ -3013,6 +5060,145 @@
         }
       ],
       "errata_review_refs": [],
+      "previous_decision": null
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:0eb6b2df-bce1-50b7-bf6b-70c6654e60a2",
+      "from_code": "3530",
+      "to_code": "3530",
+      "status": "reviewed_current_relation",
+      "reviewed_relation_rev4_to_rev5": "relatedMatch",
+      "official_candidate": "exactMatch",
+      "source_status": "review_2026_notes",
+      "topology": "one_to_one",
+      "gsim_ids": [],
+      "allocation_weight": null,
+      "unresolved_2026_codes": [
+        "3530"
+      ],
+      "issue_ids": [
+        "ALLOCATION-EDIBLE-WATER-ICE"
+      ],
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 209,
+        "range": "A209:H209"
+      },
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "activity_ids": [
+        "urn:atlas:concept:d65a2f04-9a43-5ffc-8771-1e13991b0340"
+      ],
+      "review": {
+        "id": "urn:atlas:mapping:73cd6fd1-e605-5048-8f6c-afba0668626b",
+        "from_code": "3530",
+        "to_code": "3530",
+        "origin": "official_row_review",
+        "status": "reviewed_current_relation",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:d65a2f04-9a43-5ffc-8771-1e13991b0340"
+        ],
+        "claim_ids": [],
+        "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+        "allocation_weight": null,
+        "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+        "claim_evidence": [
+          {
+            "id": "C011",
+            "document": "ISIC:Rev.4:3530",
+            "field": "notes.inclusion",
+            "start": 240,
+            "end": 320,
+            "field_sha256": "9c464caaf09b5e76dab24d3e959528de956b3bf037245e5df69a74041104036a",
+            "text_sha256": "be21cb61abd4554e287d4c7c625b49e26dd1debf770ebc59a0a2e7c092f3a1c5",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "3530"
+            }
+          },
+          {
+            "id": "C012",
+            "document": "ISIC:Rev.5:3530",
+            "field": "notes.includes",
+            "start": 272,
+            "end": 331,
+            "field_sha256": "69b1faf179a99fb7c1143e28124316f6807b8ee5d9d20ac259e42a8ac86c0fb4",
+            "text_sha256": "6feff127a4c4585ed96734a107f7639c074a6908602f1a549c997f53ef09bfac",
+            "role": "inclusion",
+            "offset_unit": "unicode_codepoints_in_parsed_original_field",
+            "evidence": {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 335,
+              "range": "A335:G335"
+            }
+          }
+        ],
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "official_mapping_id": "urn:atlas:mapping:0eb6b2df-bce1-50b7-bf6b-70c6654e60a2",
+        "evidence": {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 209,
+          "range": "A209:H209"
+        },
+        "cohort_id": "priority-activity-evidence",
+        "scope_limited": true,
+        "previous_expanded_decision": null
+      },
+      "scope_evidence": [
+        {
+          "node_id": "ISIC:Rev.4:3530",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "3530"
+          },
+          "scope_sha256": "6b85ea43fc3d25a5238bd26e74ab39e519012c04653d62b654797d2f5e5a5eae"
+        },
+        {
+          "node_id": "ISIC:Rev.5:3530",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 335,
+            "range": "A335:G335"
+          },
+          "scope_sha256": "f3b80f090c83e4c6074ab64e5a962bbc763f85bef86f340434b70813c2f4a2d5"
+        }
+      ],
+      "errata_review_refs": [
+        "ISIC5-2026-3530"
+      ],
       "previous_decision": null
     },
     {
@@ -11382,7 +13568,17 @@
           },
           "scope_sha256": "8f090c4085b216433e3d5e76b167e70cbdf19a62a77a1db3c83ce4322b143d59"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "1050",
+        "status": "bounded_allocations_reviewed_residuals_open",
+        "rationale": "植物奶排除目的改1105；冰淇淋/雪葩仅合并列项。与旧1050保留食品活动、旧1079植物奶活动分别核对。",
+        "claim_ids": [
+          "C053",
+          "C054",
+          "C055"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-1079",
@@ -11448,7 +13644,17 @@
           },
           "scope_sha256": "9a6947f70b630a1e28522e0fe349e2eda0906c17dbdbe7e61558a72c68822626"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "1079",
+        "status": "bounded_allocations_reviewed_official_gap_open",
+        "rationale": "2026删非乳奶而奶酪替代品仍在1079；旧1079到1105缺边已以Atlas活动证据补充，未称官方行。",
+        "claim_ids": [
+          "C056",
+          "C057",
+          "C058"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-1105",
@@ -11500,7 +13706,17 @@
           },
           "scope_sha256": "9a6947f70b630a1e28522e0fe349e2eda0906c17dbdbe7e61558a72c68822626"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "1105",
+        "status": "bounded_allocations_reviewed_text_difference_retained",
+        "rationale": "植物饮料主表比Notes/手册多例项，通用范围和1050/1079交叉说明一致；食用冰仍按1050/3530区分。",
+        "claim_ids": [
+          "C059",
+          "C060",
+          "C061"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-1312",
@@ -11552,7 +13768,17 @@
           },
           "scope_sha256": "f118198f5d7ce625959eaef720e107ba39a2568a851c3f1b83ae84845b02742e"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "1312",
+        "status": "bounded_allocations_reviewed_residuals_open",
+        "rationale": "2026删除玻璃原料例项以消除与已有1399排除矛盾；旧1312明确玻纤织物、当前排至1399，碳织物另排2399。",
+        "claim_ids": [
+          "C065",
+          "C066",
+          "C067"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-1313",
@@ -11604,7 +13830,17 @@
           },
           "scope_sha256": "9ade47531f386a1162536c6e7396571299b32af957cc9847335c9c4f8542bc1c"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "1313",
+        "status": "reference_correction_reviewed_not_whole_class_equivalence",
+        "rationale": "中间工序印花在2024说明已存在，2026将非中间印刷/激光排除码1812改1811；旧MDB更正版不含印花，旧1811明确直接纺织品印刷。",
+        "claim_ids": [
+          "C068",
+          "C069",
+          "C070"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-1392",
@@ -11656,7 +13892,17 @@
           },
           "scope_sha256": "e23e0af156710f36bf3c3048b76b693d6e9119442199edbc433909bb99838665"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "1392",
+        "status": "bounded_allocations_reviewed_residuals_open",
+        "rationale": "2026重组清洁布并明列救生衣救生带；旧1392已列救生衣。降落伞和帐篷在2024新1399已出现，不能将跨版转移都归因于2026。",
+        "claim_ids": [
+          "C071",
+          "C072",
+          "C073"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-1399",
@@ -11708,7 +13954,17 @@
           },
           "scope_sha256": "a3050577aea2becc49f649348ad0fd31198e1b666ee8ab5ab2938203ed2c080d"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "1399",
+        "status": "partially_reviewed_masks_pending",
+        "rationale": "2026加充气床垫及防护口罩排3250；降落伞帐篷在2024已包含。旧口罩材料/功能归属仍不足，不强配旧1399。",
+        "claim_ids": [
+          "C074",
+          "C075",
+          "C076"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-1629",
@@ -11812,7 +14068,17 @@
           },
           "scope_sha256": "0ae7b475d85e96bdcc9da88635fdfe83623f3c961072362968d41a521a065b39"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "2011",
+        "status": "bounded_allocations_reviewed_official_gap_open",
+        "rationale": "2026从2011删除燃料元件但保留铀钍矿富集；旧2011燃料元件到新2420是活动证据补充，非整核燃料周期合并。",
+        "claim_ids": [
+          "C080",
+          "C081",
+          "C082"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-2022",
@@ -12072,7 +14338,17 @@
           },
           "scope_sha256": "3c63eef6a5cd7c09a0810a1376f55533137afc19df720cb4fd171613459f4413"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "2420",
+        "status": "bounded_allocations_reviewed_official_gap_open",
+        "rationale": "2026在已有核燃料加工下明确铀金属/化合物及燃料元件步骤；旧2420铀冶炼保留，旧2011元件制造另作部分补充。",
+        "claim_ids": [
+          "C083",
+          "C084",
+          "C085"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-2620",
@@ -12384,7 +14660,17 @@
           },
           "scope_sha256": "fa5eb2384e18c50b364adb02c04215285482fac26fde505ed9b218aeb1a4916f"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "3030",
+        "status": "reference_destination_reviewed",
+        "rationale": "2026降落伞排除目的修正为1399，可作纺织去向佐证；航空器整类范围仍另待审。",
+        "claim_ids": [
+          "C077",
+          "C078",
+          "C079"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-3230",
@@ -12488,7 +14774,17 @@
           },
           "scope_sha256": "6b85ea43fc3d25a5238bd26e74ab39e519012c04653d62b654797d2f5e5a5eae"
         }
-      ]
+      ],
+      "priority_finding": {
+        "code": "3530",
+        "status": "partially_reviewed_water_ice_pending",
+        "rationale": "2024已排食用冰1050，2026增加冷却用途限定；旧3530食用/非食用制冰与旧1050食品冰之间的无调味水冰边界待发布者澄清。",
+        "claim_ids": [
+          "C062",
+          "C063",
+          "C064"
+        ]
+      }
     },
     {
       "id": "ISIC5-2026-3830",
@@ -13930,7 +16226,7 @@
   "issues": [
     {
       "id": "TEXT-2026-1105",
-      "status": "open",
+      "status": "resolved_for_research",
       "kind": "publisher_text_disagreement",
       "rev4_codes": [],
       "rev5_codes": [
@@ -13959,7 +16255,54 @@
         }
       ],
       "reviewer": "Codex source-evidence review",
-      "reviewed_on": "2026-11-08"
+      "reviewed_on": "2026-11-08",
+      "history": [
+        {
+          "id": "TEXT-2026-1105",
+          "status": "open",
+          "kind": "publisher_text_disagreement",
+          "rev4_codes": [],
+          "rev5_codes": [
+            "1105"
+          ],
+          "rationale": "当前主表额外列植物奶例项；Notes更新文字未列，两个文本均保留，不替发布者选择。",
+          "evidence": [
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "Notes",
+              "row": 16
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 120,
+              "range": "A120:G120"
+            }
+          ],
+          "reviewer": "Codex source-evidence review",
+          "reviewed_on": "2026-11-08"
+        }
+      ],
+      "followup": {
+        "issue_id": "TEXT-2026-1105",
+        "status": "resolved_for_research",
+        "rationale": "差异为非穷尽植物饮料例项；Notes和手册保留豆类示例，主表增加其他植物来源；1050植物奶明确排1105且1079更新理由指向1105。研究采用共同范围，不去掉原文差异。",
+        "activity_ids": [
+          "urn:atlas:concept:ab79f5d2-6f27-5e11-8538-18d9efe87fa5"
+        ],
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08"
+      }
     },
     {
       "id": "TEXT-2026-4649",
@@ -14321,7 +16664,7 @@
     },
     {
       "id": "ALLOCATION-PLANT-MILK",
-      "status": "open",
+      "status": "addressed_in_research",
       "kind": "possible_allocation_gap_requires_research",
       "rev4_codes": [
         "1079",
@@ -14396,11 +16739,105 @@
         }
       ],
       "reviewer": "Codex source-evidence review",
-      "reviewed_on": "2026-11-08"
+      "reviewed_on": "2026-11-08",
+      "history": [
+        {
+          "id": "ALLOCATION-PLANT-MILK",
+          "status": "open",
+          "kind": "possible_allocation_gap_requires_research",
+          "rev4_codes": [
+            "1079",
+            "1104"
+          ],
+          "rev5_codes": [
+            "1050",
+            "1079",
+            "1105"
+          ],
+          "rationale": "2026从1079删非乳奶归1105，历史旧1079去向未列1105。作为可能需更新的活动级分配，不能伪造新官方行。",
+          "evidence": [
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 72,
+              "range": "A72:H72"
+            },
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 73,
+              "range": "A73:H73"
+            },
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 79,
+              "range": "A79:H79"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 100,
+              "range": "A100:G100"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 111,
+              "range": "A111:G111"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 120,
+              "range": "A120:G120"
+            }
+          ],
+          "reviewer": "Codex source-evidence review",
+          "reviewed_on": "2026-11-08"
+        }
+      ],
+      "followup": {
+        "issue_id": "ALLOCATION-PLANT-MILK",
+        "status": "addressed_in_research",
+        "rationale": "旧1079非乳奶与当前1105植物饮料已有三向佐证，新增范围限定的Atlas研究补充；官方对应缺行仍待发布者更新。",
+        "activity_ids": [
+          "urn:atlas:concept:ab79f5d2-6f27-5e11-8538-18d9efe87fa5",
+          "urn:atlas:concept:ad59199d-85b4-55d6-91d1-cbe6b1e29246"
+        ],
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08"
+      }
     },
     {
       "id": "ALLOCATION-TEXTILES",
-      "status": "open",
+      "status": "partially_addressed",
       "kind": "possible_allocation_gap_requires_research",
       "rev4_codes": [
         "1392",
@@ -14486,7 +16923,115 @@
         }
       ],
       "reviewer": "Codex source-evidence review",
-      "reviewed_on": "2026-11-08"
+      "reviewed_on": "2026-11-08",
+      "history": [
+        {
+          "id": "ALLOCATION-TEXTILES",
+          "status": "open",
+          "kind": "possible_allocation_gap_requires_research",
+          "rev4_codes": [
+            "1392",
+            "1399",
+            "3030"
+          ],
+          "rev5_codes": [
+            "1392",
+            "1399",
+            "3030"
+          ],
+          "rationale": "降落伞及露营等当前1399与旧1392边界不同；仅单一历史对应不足以说明全部移动。",
+          "evidence": [
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 85,
+              "range": "A85:H85"
+            },
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 88,
+              "range": "A88:H88"
+            },
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 181,
+              "range": "A181:H181"
+            },
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 182,
+              "range": "A182:H182"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 131,
+              "range": "A131:G131"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 134,
+              "range": "A134:G134"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 291,
+              "range": "A291:G291"
+            }
+          ],
+          "reviewer": "Codex source-evidence review",
+          "reviewed_on": "2026-11-08"
+        }
+      ],
+      "followup": {
+        "issue_id": "ALLOCATION-TEXTILES",
+        "status": "partially_addressed",
+        "rationale": "已补降落伞、帐篷、玻纤及非电气碳织物活动证据，区分2024已有变化和2026补丁；口罩、充气床垫及其他制成品边界继续待审。",
+        "activity_ids": [
+          "urn:atlas:concept:9b572c50-2eb8-5f93-8e84-296591c042e6",
+          "urn:atlas:concept:1a447b7c-3e41-5a18-a39a-860e852e697c",
+          "urn:atlas:concept:7f6aaede-627f-5246-885d-9660929dd18d",
+          "urn:atlas:concept:49c46bbc-c94a-5c18-b677-20021fb767d0",
+          "urn:atlas:concept:89e4f6ba-eb22-5cb4-9615-639db3d7c890"
+        ],
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08"
+      }
     },
     {
       "id": "ALLOCATION-ALARMS",
@@ -14537,7 +17082,7 @@
     },
     {
       "id": "ALLOCATION-NUCLEAR",
-      "status": "open",
+      "status": "addressed_in_research",
       "kind": "possible_allocation_gap_requires_research",
       "rev4_codes": [
         "2011",
@@ -14601,7 +17146,91 @@
         }
       ],
       "reviewer": "Codex source-evidence review",
-      "reviewed_on": "2026-11-08"
+      "reviewed_on": "2026-11-08",
+      "history": [
+        {
+          "id": "ALLOCATION-NUCLEAR",
+          "status": "open",
+          "kind": "possible_allocation_gap_requires_research",
+          "rev4_codes": [
+            "2011",
+            "2420"
+          ],
+          "rev5_codes": [
+            "2011",
+            "2420"
+          ],
+          "rationale": "核燃料元件跨化学与有色金属边界的勘误需与活动级来源联合核实。",
+          "evidence": [
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 108,
+              "range": "A108:H108"
+            },
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 109,
+              "range": "A109:H109"
+            },
+            {
+              "resource_id": "isic4-isic5-correspondence",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+              "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+              "publication_date": "2025-01-17",
+              "sheet": "ISIC4-5",
+              "row": 130,
+              "range": "A130:H130"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 174,
+              "range": "A174:G174"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 208,
+              "range": "A208:G208"
+            }
+          ],
+          "reviewer": "Codex source-evidence review",
+          "reviewed_on": "2026-11-08"
+        }
+      ],
+      "followup": {
+        "issue_id": "ALLOCATION-NUCLEAR",
+        "status": "addressed_in_research",
+        "rationale": "燃料元件制造由旧2011到新2420的范围补充可证，富集继续2011、铀冶炼继续2420；不把核燃料全周期强并，官方缺行状态保留。",
+        "activity_ids": [
+          "urn:atlas:concept:74680745-b0dc-55d2-9482-ae708be8eaf3",
+          "urn:atlas:concept:4403c5fa-343d-5807-aef2-00df829c16ca",
+          "urn:atlas:concept:7815f6bc-fc2e-5cce-8f71-f10dadf6f0e2"
+        ],
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08"
+      }
     },
     {
       "id": "ALLOCATION-SURVEY",
@@ -15141,6 +17770,830 @@
       ],
       "reviewer": "Codex source-evidence review",
       "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ALLOCATION-EDIBLE-WATER-ICE",
+      "status": "open",
+      "kind": "bounded_activity_allocation_pending",
+      "rev4_codes": [
+        "1050",
+        "3530"
+      ],
+      "rev5_codes": [
+        "1050",
+        "3530"
+      ],
+      "rationale": "冰淇淋/雪葩与冷却水冰已分别映射；无调味直接食用水冰的旧1050/3530边界尚未得到唯一分配依据。",
+      "claim_ids": [
+        "C047",
+        "C095",
+        "C096"
+      ],
+      "evidence": [
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 335,
+          "range": "A335:G335"
+        },
+        {
+          "resource_id": "isic4-database",
+          "edition": "Rev.4",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+          "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+          "publication_date": null,
+          "table": "tblTitles_English_ISICRev4",
+          "key": "3530"
+        },
+        {
+          "resource_id": "isic4-database",
+          "edition": "Rev.4",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+          "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+          "publication_date": null,
+          "table": "tblTitles_English_ISICRev4",
+          "key": "1050"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ALLOCATION-TEXTILE-MASKS",
+      "status": "open",
+      "kind": "bounded_activity_allocation_pending",
+      "rev4_codes": [
+        "1399",
+        "3250"
+      ],
+      "rev5_codes": [
+        "1399",
+        "3250"
+      ],
+      "rationale": "防护口罩当前明确3250，旧来源未明列相同活动，保留候选待审。",
+      "claim_ids": [
+        "C050",
+        "C051"
+      ],
+      "evidence": [
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 134,
+          "range": "A134:G134"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 313,
+          "range": "A313:G313"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "SCOPE-OLD-CARBON-TEXTILES",
+      "status": "open",
+      "kind": "bounded_activity_allocation_pending",
+      "rev4_codes": [
+        "1312",
+        "2399"
+      ],
+      "rev5_codes": [
+        "1312",
+        "2399"
+      ],
+      "rationale": "旧1312明确碳织物，旧2399又列非电气碳纤维及产品，存在旧源范围重叠；补充关联保留两者，不能推断排他性或分配权重。",
+      "claim_ids": [
+        "C023",
+        "C024",
+        "C043"
+      ],
+      "evidence": [
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 127,
+          "range": "A127:G127"
+        },
+        {
+          "resource_id": "isic4-database",
+          "edition": "Rev.4",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+          "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+          "publication_date": null,
+          "table": "tblTitles_English_ISICRev4",
+          "key": "1312"
+        },
+        {
+          "resource_id": "isic4-database",
+          "edition": "Rev.4",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+          "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+          "publication_date": null,
+          "table": "tblTitles_English_ISICRev4",
+          "key": "2399"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    }
+  ],
+  "supplemental_mappings": [
+    {
+      "id": "urn:atlas:mapping:a36201b1-26f0-5d91-be00-bd6906e5539d",
+      "from_code": "1079",
+      "to_code": "1105",
+      "origin": "atlas_research_supplement",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:ab79f5d2-6f27-5e11-8538-18d9efe87fa5"
+      ],
+      "claim_ids": [],
+      "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "C001",
+          "document": "ISIC:Rev.4:1079",
+          "field": "notes.inclusion",
+          "start": 975,
+          "end": 1029,
+          "field_sha256": "c5f16fa6234e2e4caece661c5b6b9077bb3bd80bdfa2c43bc179d5041429fab3",
+          "text_sha256": "e2dfca47be93bbc0e5e4079fa55e6dabbacea7460b1afcee6a0450e30457d75e",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1079"
+          }
+        },
+        {
+          "id": "C002",
+          "document": "ISIC:Rev.5:1105",
+          "field": "notes.includes",
+          "start": 302,
+          "end": 478,
+          "field_sha256": "9b37fc97ebb76535778e77ea8ec048b7fa05eb4dffb521ce860fa1d718b39359",
+          "text_sha256": "8ab487cc17ad8eeee7981e06a11b9d9b95d50cb2d55d3f6373431ccb153dcbc5",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 120,
+            "range": "A120:G120"
+          }
+        },
+        {
+          "id": "C048",
+          "document": "ISIC:Rev.5:1050",
+          "field": "notes.excludes",
+          "start": 401,
+          "end": 462,
+          "field_sha256": "fc556ae8b57df6b9de89be6ff642153f32a7e7662254daf30c555785519e9a0e",
+          "text_sha256": "8e216de3746f5cd96d2e105c505c8ce8a0245a60b38c74f0c5f49e3b7c5f0f35",
+          "role": "exclusion_to_target",
+          "target_node_id": "ISIC:Rev.5:1105",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 100,
+            "range": "A100:G100"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": null,
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "1079"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:8ea9d796-7fcc-5975-b739-8405ab5dd3a8",
+      "from_code": "1392",
+      "to_code": "1399",
+      "origin": "atlas_research_supplement",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:9b572c50-2eb8-5f93-8e84-296591c042e6",
+        "urn:atlas:concept:1a447b7c-3e41-5a18-a39a-860e852e697c"
+      ],
+      "claim_ids": [],
+      "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "C013",
+          "document": "ISIC:Rev.4:1392",
+          "field": "notes.inclusion",
+          "start": 535,
+          "end": 612,
+          "field_sha256": "91632d4f9820e3c63ab2e244bad5e7eeb7f041f6dafaa95837ea3ffc6d89056e",
+          "text_sha256": "fd2f49a62f53c31e12a561911774d3898187b284afec11a2f144112610fcdacc",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1392"
+          }
+        },
+        {
+          "id": "C014",
+          "document": "ISIC:Rev.5:1399",
+          "field": "notes.includes",
+          "start": 1729,
+          "end": 1886,
+          "field_sha256": "e10f4864d246046d864ee9f28f0d798106cb93f6acea764709ffaa9a13cfd737",
+          "text_sha256": "f486dfed7c7274593f29a82b9d8fd82eb9964312b8d3de0b563ea4a976c7c6b5",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          }
+        },
+        {
+          "id": "C015",
+          "document": "ISIC:Rev.4:1392",
+          "field": "notes.inclusion",
+          "start": 397,
+          "end": 500,
+          "field_sha256": "91632d4f9820e3c63ab2e244bad5e7eeb7f041f6dafaa95837ea3ffc6d89056e",
+          "text_sha256": "6628432d342e0e814d6067853b6a5d5e49b0b93b13f396bf23148391455ee541",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1392"
+          }
+        },
+        {
+          "id": "C016",
+          "document": "ISIC:Rev.5:1399",
+          "field": "notes.includes",
+          "start": 1729,
+          "end": 1886,
+          "field_sha256": "e10f4864d246046d864ee9f28f0d798106cb93f6acea764709ffaa9a13cfd737",
+          "text_sha256": "f486dfed7c7274593f29a82b9d8fd82eb9964312b8d3de0b563ea4a976c7c6b5",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": null,
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "1392"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:5b0f0872-d158-5a1c-91ea-7fc18ab5fbea",
+      "from_code": "1312",
+      "to_code": "1399",
+      "origin": "atlas_research_supplement",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:49c46bbc-c94a-5c18-b677-20021fb767d0"
+      ],
+      "claim_ids": [],
+      "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "C021",
+          "document": "ISIC:Rev.5:1312",
+          "field": "notes.excludes",
+          "start": 395,
+          "end": 445,
+          "field_sha256": "cc5049eb73f89e842a76d39094d92a830067fb81287261f7468b770481be1c3f",
+          "text_sha256": "0ceec933c1caf1e3e1f52b84e9ceca0d5a54fb752a75df9e6115ae5b78693f0e",
+          "role": "exclusion_to_target",
+          "target_node_id": "ISIC:Rev.5:1399",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 127,
+            "range": "A127:G127"
+          }
+        },
+        {
+          "id": "C022",
+          "document": "ISIC:Rev.4:1312",
+          "field": "notes.inclusion",
+          "start": 384,
+          "end": 430,
+          "field_sha256": "4c0e015aaa764251306cf511e95880b8a0cef6c4f8c8f942dafeead5f7ebab2d",
+          "text_sha256": "b27e0644cf965b12557dcb9e1d0b9bc98b2ec1501f42aec8da4a156afa66aee3",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1312"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": null,
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 127,
+        "range": "A127:G127"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:4ab123f8-2604-5fd1-9169-3b9de7d2ea2a",
+      "from_code": "1312",
+      "to_code": "2399",
+      "origin": "atlas_research_supplement",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:89e4f6ba-eb22-5cb4-9615-639db3d7c890"
+      ],
+      "claim_ids": [],
+      "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "C023",
+          "document": "ISIC:Rev.5:1312",
+          "field": "notes.excludes",
+          "start": 446,
+          "end": 545,
+          "field_sha256": "cc5049eb73f89e842a76d39094d92a830067fb81287261f7468b770481be1c3f",
+          "text_sha256": "c429f5822b26ac9272add3c58ec946a63bcd43d15a356ad39f8f19530af404a2",
+          "role": "exclusion_to_target",
+          "target_node_id": "ISIC:Rev.5:2399",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 127,
+            "range": "A127:G127"
+          }
+        },
+        {
+          "id": "C024",
+          "document": "ISIC:Rev.4:1312",
+          "field": "notes.inclusion",
+          "start": 432,
+          "end": 491,
+          "field_sha256": "4c0e015aaa764251306cf511e95880b8a0cef6c4f8c8f942dafeead5f7ebab2d",
+          "text_sha256": "99ce73d81fd434b2ed83cc4b09b750f62b445caf7f78dcc9796dea20a1cd5fc6",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1312"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": null,
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 127,
+        "range": "A127:G127"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:4d306339-acd9-50c9-bc03-955e359d8f9a",
+      "from_code": "1811",
+      "to_code": "1313",
+      "origin": "atlas_research_supplement",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:7bcc5d1b-8eaf-5b4e-aa89-e242ff17f57b"
+      ],
+      "claim_ids": [],
+      "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "C027",
+          "document": "ISIC:Rev.4:1811",
+          "field": "notes.inclusion",
+          "start": 590,
+          "end": 665,
+          "field_sha256": "e945fff29c9e7fd5d27097be6a3925af9de0dd7a7048dfcbe9f700785659904e",
+          "text_sha256": "9e02991215ae540c5f6af7f94de26fc9dae62651c7ea45e96e7a0f8484b09a22",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1811"
+          }
+        },
+        {
+          "id": "C028",
+          "document": "ISIC:Rev.5:1313",
+          "field": "notes.includes_also",
+          "start": 161,
+          "end": 244,
+          "field_sha256": "0a9327d884d842d18d5af98a0edc076c72ba6f5f95fe00cdbe515344489c6725",
+          "text_sha256": "964a51d1a65ad31f97486084dde617d1d878202aa107c8d4ede079069dc23a28",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 128,
+            "range": "A128:G128"
+          }
+        },
+        {
+          "id": "C045",
+          "document": "ISIC:Rev.5:1811",
+          "field": "notes.excludes",
+          "start": 21,
+          "end": 114,
+          "field_sha256": "bf4b802e4f48a140f59d907da7a2de0668d23e4dd0b77d7565dc1d80b48c11ad",
+          "text_sha256": "d2ee4e23cf01f9319ab640268aca4f6363bfcbf300abdff5bacab5c041518b3b",
+          "role": "exclusion_to_target",
+          "target_node_id": "ISIC:Rev.5:1313",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 163,
+            "range": "A163:G163"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": null,
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "1811"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:5023444e-eb7b-54c5-967f-855d93cf631e",
+      "from_code": "2011",
+      "to_code": "2420",
+      "origin": "atlas_research_supplement",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:4403c5fa-343d-5807-aef2-00df829c16ca"
+      ],
+      "claim_ids": [],
+      "rationale": "仅依据列出的同一活动及边界说明确认关联；保留该类其他部分和2026未决范围，不宣称整类等价或完整包含。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "C033",
+          "document": "ISIC:Rev.4:2011",
+          "field": "notes.inclusion",
+          "start": 1596,
+          "end": 1689,
+          "field_sha256": "1d8a39853fced06216513693eb066bc3e800467b416f25c14ec3d1103908a0c7",
+          "text_sha256": "587143e51f4f0e6c340f504b408d3a127ea6eab8ba446c7d0fb0968afc912d88",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2011"
+          }
+        },
+        {
+          "id": "C034",
+          "document": "ISIC:Rev.5:2420",
+          "field": "notes.includes",
+          "start": 1934,
+          "end": 1984,
+          "field_sha256": "a306b9ff2149547d16b44da9af6ae20f7c667ac6b81facfd80f4006b0b9796a5",
+          "text_sha256": "a616c5a79b7f7c9bd7a75966697765f1bec2bcb9b83c8f1221297b574bdd6785",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 208,
+            "range": "A208:G208"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": null,
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "2011"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:5165769a-3648-5f9e-aa42-02af2f288d41",
+      "from_code": "3530",
+      "to_code": "1050",
+      "origin": "atlas_research_supplement",
+      "status": "held_after_research",
+      "relation": null,
+      "activity_ids": [],
+      "claim_ids": [
+        "C047",
+        "C095",
+        "C096"
+      ],
+      "rationale": "旧3530含食用和非食用冰，旧1050也含食用冰食品；新3530排食用冰1050，尚不能证明所有旧食用用途水冰转入1050。保留无调味直接食用冰候选，冷却食品的冰不据此转移。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "C047",
+          "document": "ISIC:Rev.5:3530",
+          "field": "notes.excludes",
+          "start": 21,
+          "end": 60,
+          "field_sha256": "8f891bc330cb871bfe8e8be3a3fb1dda913da56e5903dec137c553e181fd0a43",
+          "text_sha256": "c2b699a88b14699801b8dedd482b8bc26162b9a9b34ebba2ed3dbd2002ebe023",
+          "role": "exclusion_to_target",
+          "target_node_id": "ISIC:Rev.5:1050",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 335,
+            "range": "A335:G335"
+          }
+        },
+        {
+          "id": "C095",
+          "document": "ISIC:Rev.4:3530",
+          "field": "notes.inclusion",
+          "start": 240,
+          "end": 320,
+          "field_sha256": "9c464caaf09b5e76dab24d3e959528de956b3bf037245e5df69a74041104036a",
+          "text_sha256": "be21cb61abd4554e287d4c7c625b49e26dd1debf770ebc59a0a2e7c092f3a1c5",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "3530"
+          }
+        },
+        {
+          "id": "C096",
+          "document": "ISIC:Rev.4:1050",
+          "field": "notes.inclusion",
+          "start": 503,
+          "end": 565,
+          "field_sha256": "447fdf1e171a19170bd581f9e276e9a5fe6665f8cb3a11f2b156cf8bc955e340",
+          "text_sha256": "ae36ca47e59667d3eefda30416c56c2c8d553792838a62ffaa44203e0848c696",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "1050"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": null,
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 335,
+        "range": "A335:G335"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:0af2f7e6-16f5-5d83-9ef1-952e0ee37cc9",
+      "from_code": "1399",
+      "to_code": "3250",
+      "origin": "atlas_research_supplement",
+      "status": "held_after_research",
+      "relation": null,
+      "activity_ids": [],
+      "claim_ids": [
+        "C050",
+        "C051"
+      ],
+      "rationale": "当前防护口罩明确3250，但旧1399没有明确口罩列项，旧医疗器械与纺织材料功能边界未核清；不能只因2026新增排除补造已审旧对应。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "C050",
+          "document": "ISIC:Rev.5:1399",
+          "field": "notes.excludes",
+          "start": 548,
+          "end": 636,
+          "field_sha256": "20ceb3efd99d55b8234b21d29669a41f64e1bc83960acea2cc86251a50b271c7",
+          "text_sha256": "635a23ab87a0f9b38094f4558414058b80f25c1d39d3807fdc9d65ff16a2f308",
+          "role": "exclusion_to_target",
+          "target_node_id": "ISIC:Rev.5:3250",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 134,
+            "range": "A134:G134"
+          }
+        },
+        {
+          "id": "C051",
+          "document": "ISIC:Rev.5:3250",
+          "field": "notes.includes",
+          "start": 505,
+          "end": 581,
+          "field_sha256": "6ffe3471765f7d3cec7d75b8cf593011feae991f8109753157dc387dacf9bd38",
+          "text_sha256": "8b725e8342c1d26be4d3f4f076f16426f67dc404af1ccf50330dd930f77ae2a7",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 313,
+            "range": "A313:G313"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": null,
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 134,
+        "range": "A134:G134"
+      }
     }
   ]
 }
