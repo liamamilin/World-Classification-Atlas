@@ -16,11 +16,13 @@ from .registry import read_json, write_json
 from .xlsx import read_workbook
 from .isic_review import review
 from .isic_priority import research
+from .isic_boundaries import auxiliary
 
 NAMESPACE = uuid.UUID("b61f81d8-409b-4faf-8c02-62311fc6b833")
 REQUIRED = ("isic4-structure", "isic5-structure", "isic4-database", "isic4-manual-2008",
             "isic5-notes-20260819", "isic5-white-cover-2026", "isic5-errata-2026",
-            "isic4-isic5-correspondence", "isic4-isic5-technical-note-20241025")
+            "isic4-isic5-correspondence", "isic4-isic5-technical-note-20241025",
+            "cpc21-manual-2015", "cpc21-notes-20250403", "cpc21-readme-20250403", "cpc3-notes-20250630")
 
 
 def stable_id(kind, value):
@@ -355,7 +357,8 @@ def run(root, resources):
             write_jsonl(output / (rid + "-pages.jsonl"), pdf_documents[rid])
             pdfs.append({"resource_id": rid, "pages": len(pages), "text_sha256": sha256(data), "extractor": tool_version})
         reviewed, concepts = curate(root, edges, old, new)
-        priority = research(root, old, new, errata, edges, pdf_documents)
+        auxiliary_documents, auxiliary_stats = auxiliary(root, assets, pdf_documents, old)
+        priority = research(root, old, new, errata, edges, pdf_documents, auxiliary_documents)
         expanded = review(root, edges, old, new, errata, reviewed, concepts, priority)
         # Full source text and complete derived correspondence stay local while redistribution is unresolved.
         write_jsonl(output / "rev4-nodes.jsonl", old)
@@ -397,13 +400,15 @@ def run(root, resources):
                               "source_bindings": len(reverse_index), "held_cases": sum(c["decision"] == "hold" for c in reviewed["cases"])},
                  "expanded_review": expanded["statistics"],
                  "priority_review": priority["statistics"],
+                 "auxiliary_product_evidence": auxiliary_stats,
                  "rev4_readme_corrections": database["readme_correction_checks"],
                  "reproducibility": {"python": sys.version.split()[0],
                                      "packages": {p: version(p) for p in ("access-parser", "construct", "tabulate")},
-                                     "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("isic.py", "isic_review.py", "isic_priority.py", "xlsx.py", "normalize.py")},
+                                     "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("isic.py", "isic_review.py", "isic_priority.py", "isic_boundaries.py", "xlsx.py", "normalize.py")},
                                      "review_decisions_sha256": sha256((root / "data/research/isic-review-decisions.json").read_bytes()),
                                      "expanded_review_sha256": sha256((root / "data/research/isic-expanded-review.json").read_bytes()),
-                                     "priority_review_sha256": sha256((root / "data/research/isic-priority-review.json").read_bytes())},
+                                     "priority_review_sha256": sha256((root / "data/research/isic-priority-review.json").read_bytes()),
+                                     "boundary_review_sha256": sha256((root / "data/research/isic-boundary-review.json").read_bytes())},
                  "pdfs": pdfs, "outputs": {"local_directory": str(output.relative_to(root))},
                  "automatic_concept_merges": 0,
                  "limits": ["UN raw data and full derived notes/mappings are local-only pending redistribution rights.",

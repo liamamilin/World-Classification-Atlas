@@ -1,0 +1,34 @@
+[
+  {
+    "resource_id": "cpc21-readme-20250403",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_ReadMe.pdf",
+    "attempted_at": "2026-11-08T14:51:59.250240+00:00",
+    "sha256": "61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb",
+    "path": "data/local/raw/UN_CPC/2.1/cpc21-readme-20250403/61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb/cpc21-readme-20250403.pdf",
+    "bytes": 73448,
+    "final_url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_ReadMe.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "etag": "\"9317c55f3f7db1:0\"",
+    "last_modified": "Fri, 18 Jul 2025 14:48:28 GMT",
+    "status": "downloaded"
+  },
+  {
+    "resource_id": "cpc21-notes-20250403",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+    "attempted_at": "2026-11-08T14:52:04.746332+00:00",
+    "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+    "path": "data/local/raw/UN_CPC/2.1/cpc21-notes-20250403/95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2/cpc21-notes-20250403.xlsx",
+    "bytes": 329146,
+    "final_url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+    "http_status": 200,
+    "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+    "etag": "\"d24dbe9f3f7db1:0\"",
+    "last_modified": "Fri, 18 Jul 2025 14:48:35 GMT",
+    "status": "downloaded"
+  }
+]

@@ -467,6 +467,12 @@
           "label": "3.0",
           "status": "confirmed_available",
           "latest_claim": false
+        },
+        {
+          "id": "2.1",
+          "label": "CPC Version 2.1 (2015 manual)",
+          "status": "confirmed_available",
+          "latest_claim": false
         }
       ],
       "hierarchy": {
@@ -511,6 +517,13 @@
             "url": "https://unstats.un.org/unsd/classifications/Econ",
             "status": "official_entry_verified",
             "semantics": "官方资源及 CPC Correspondences 入口；各表版本待定位。"
+          },
+          {
+            "from_edition": "CPC2.1",
+            "to_edition": "ISIC Rev.4 / HS references (legacy table labels and corrected notes preserved)",
+            "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+            "status": "official_publication_available",
+            "semantics": "手册表内官方对应列；HS2007打印标签及HS2012更正说明分别保留。不证明产品和行业概念等价，不自动生成跨ISIC版本关系。"
           }
         ]
       },
@@ -535,6 +548,26 @@
             "license"
           ],
           "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+          "method": "official_publication_and_correspondence_review",
+          "fields": [
+            "editions",
+            "official_mappings",
+            "download"
+          ],
+          "finding": "CPC2.1官方手册含产品说明及ISIC4、HS2007对应列；仅用作旧版活动范围的旁证，不把产品目录与经济活动合并。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_ReadMe.pdf",
+          "method": "official_correction_notice_review",
+          "fields": [
+            "editions",
+            "download",
+            "official_mappings"
+          ],
+          "finding": "2025-04-03 Readme要求优先使用更新的XLSX；保留2015 PDF但不称其为已含更正，HS2007/2012引用差异单独处理。"
         }
       ],
       "unresolved": [

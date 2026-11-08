@@ -8,7 +8,11 @@
     "isic5-notes-20260819": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
     "isic4-database": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
     "isic5-white-cover-2026": "df116f2bdc0beb16fc135fd2417a3d865bfb3e8bd3b4da19d3b16370ee8f7b11",
-    "isic5-errata-2026": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d"
+    "isic5-errata-2026": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
+    "cpc21-manual-2015": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+    "cpc21-notes-20250403": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+    "cpc21-readme-20250403": "61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb",
+    "cpc3-notes-20250630": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1"
   },
   "policy": "Clause evidence establishes bounded activities; class mappings remain associations. Supplements are Atlas research, never publisher rows.",
   "activities": [
@@ -335,7 +339,22 @@
       ],
       "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
       "reviewer": "Codex source-evidence review",
-      "reviewed_on": "2026-11-08"
+      "reviewed_on": "2026-11-08",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:2399",
+          "relation": null,
+          "status": "unresolved_competing_source",
+          "claim_ids": [
+            "B033",
+            "B034",
+            "B012",
+            "B005",
+            "B015"
+          ],
+          "rationale": "旧2399及CPC37990提供宽范围及主要生产行业旁证，但旧1312明确织造；保留竞争来源，不批准排他分配。"
+        }
+      ]
     },
     {
       "id": "urn:atlas:concept:d7e9c8a2-0106-5759-9fdb-76206585e0f8",
@@ -636,6 +655,250 @@
       "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
       "reviewer": "Codex source-evidence review",
       "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "urn:atlas:concept:0f963583-3cf4-5ac3-9494-6f47520b975b",
+      "key": "woven-aramid-fabrics",
+      "label": "芳纶织物织造",
+      "scope": "织造芳纶纱线织物；不因旧版同列碳和芳纶而把两种纤维的当前去向视为相同。",
+      "status": "accepted_bounded_activity",
+      "historical_scope_status": "bounded_cross_version_evidence",
+      "parent_rev5_code": "1312",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1312",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B019"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:1312",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B020"
+          ]
+        }
+      ],
+      "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "urn:atlas:concept:20b98595-48e0-56e8-a79e-46cc0cb0aec8",
+      "key": "electrical-carbon-electrodes",
+      "label": "电气用途碳及石墨电极制造",
+      "scope": "制造电气用途的碳和石墨电极；不包括非电气碳纤维织造。",
+      "status": "accepted_bounded_activity",
+      "historical_scope_status": "bounded_cross_version_evidence",
+      "parent_rev5_code": "2790",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:2790",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B021"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:2790",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B022"
+          ]
+        }
+      ],
+      "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "urn:atlas:concept:fe1dc42d-6178-561d-8b86-f1e5d9369d49",
+      "key": "surgical-drapes",
+      "label": "手术铺单制造",
+      "scope": "制造手术铺单；本活动不据医疗用品大类名称推断旧版防护口罩归属。",
+      "status": "accepted_bounded_activity",
+      "historical_scope_status": "bounded_cross_version_evidence",
+      "parent_rev5_code": "3250",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3250",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B023"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:3250",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B024"
+          ]
+        }
+      ],
+      "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "urn:atlas:concept:2d8f93f0-e65b-5d3d-b8e0-2e4fec16709b",
+      "key": "metal-safety-headgear",
+      "label": "金属安全头具制造",
+      "scope": "制造金属安全头具；与口罩、呼吸器及纺织面罩分别研究。",
+      "status": "accepted_bounded_activity",
+      "historical_scope_status": "bounded_cross_version_evidence",
+      "parent_rev5_code": "3290",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3290",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B025"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:3290",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B026"
+          ]
+        }
+      ],
+      "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "urn:atlas:concept:63e2abf5-ffc0-50a7-b5d0-82e8a44c661f",
+      "key": "current-surgical-masks",
+      "label": "外科口罩制造（Rev.5范围）",
+      "scope": "仅登记Rev.5明列的外科口罩制造范围；没有已批准的Rev.4来源绑定。",
+      "status": "accepted_current_activity",
+      "historical_scope_status": "unresolved_no_approved_Rev4_binding",
+      "parent_rev5_code": "3250",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:3250",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B027"
+          ]
+        }
+      ],
+      "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "relation": null,
+          "status": "unresolved_scope_hypothesis",
+          "claim_ids": [
+            "B030",
+            "B010",
+            "B004"
+          ],
+          "rationale": "一般制成纺织品及6307的旁证，不明确证明医用/过滤口罩属于该旧类。"
+        },
+        {
+          "node_id": "ISIC:Rev.4:3250",
+          "relation": null,
+          "status": "unresolved_scope_hypothesis",
+          "claim_ids": [
+            "B031",
+            "B006"
+          ],
+          "rationale": "旧医疗用品术语未明列同一口罩；CPC呼吸器类别又明确排除简单面罩，不能跨产品推理补齐。"
+        }
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:f9c09487-c6cc-58b0-a12d-13f4c1cf55b8",
+      "key": "current-ffp2-masks",
+      "label": "FFP2防护口罩制造（Rev.5范围）",
+      "scope": "仅登记Rev.5明列的FFP2防护口罩制造范围；不与旧版防毒面具或CPC呼吸器产品等同。",
+      "status": "accepted_current_activity",
+      "historical_scope_status": "unresolved_no_approved_Rev4_binding",
+      "parent_rev5_code": "3250",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:3250",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B028"
+          ]
+        }
+      ],
+      "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "relation": null,
+          "status": "unresolved_scope_hypothesis",
+          "claim_ids": [
+            "B030",
+            "B010",
+            "B004"
+          ],
+          "rationale": "一般制成纺织品及6307的旁证，不明确证明医用/过滤口罩属于该旧类。"
+        },
+        {
+          "node_id": "ISIC:Rev.4:3250",
+          "relation": null,
+          "status": "unresolved_scope_hypothesis",
+          "claim_ids": [
+            "B031",
+            "B006"
+          ],
+          "rationale": "旧医疗用品术语未明列同一口罩；CPC呼吸器类别又明确排除简单面罩，不能跨产品推理补齐。"
+        }
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:88f1570f-432e-56c4-af43-6cf164312fae",
+      "key": "current-ffp3-masks",
+      "label": "FFP3防护口罩制造（Rev.5范围）",
+      "scope": "仅登记Rev.5明列的FFP3防护口罩制造范围；旧版材料、功能及工业来源仍待核实。",
+      "status": "accepted_current_activity",
+      "historical_scope_status": "unresolved_no_approved_Rev4_binding",
+      "parent_rev5_code": "3250",
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.5:3250",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "B029"
+          ]
+        }
+      ],
+      "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "candidate_source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:1392",
+          "relation": null,
+          "status": "unresolved_scope_hypothesis",
+          "claim_ids": [
+            "B030",
+            "B010",
+            "B004"
+          ],
+          "rationale": "一般制成纺织品及6307的旁证，不明确证明医用/过滤口罩属于该旧类。"
+        },
+        {
+          "node_id": "ISIC:Rev.4:3250",
+          "relation": null,
+          "status": "unresolved_scope_hypothesis",
+          "claim_ids": [
+            "B031",
+            "B006"
+          ],
+          "rationale": "旧医疗用品术语未明列同一口罩；CPC呼吸器类别又明确排除简单面罩，不能跨产品推理补齐。"
+        }
+      ]
     }
   ],
   "mappings": [
@@ -2311,12 +2574,156 @@
       "claim_ids": [
         "C047",
         "C095",
-        "C096"
+        "C096",
+        "B001",
+        "B002",
+        "B003",
+        "B008",
+        "B009",
+        "B018"
       ],
-      "rationale": "旧3530含食用和非食用冰，旧1050也含食用冰食品；新3530排食用冰1050，尚不能证明所有旧食用用途水冰转入1050。保留无调味直接食用冰候选，冷却食品的冰不据此转移。",
+      "rationale": "新增CPC证据区分人工冻结水17400（主要行业3530）与食品冰22270/HS2105（1050）；是否直接食用及无调味不能仅凭食用冰字样改派。旧3530食用用途明确，但新1050/3530无调味水冰仍待唯一解释。",
+      "history": [
+        {
+          "id": "urn:atlas:mapping:5165769a-3648-5f9e-aa42-02af2f288d41",
+          "from_code": "3530",
+          "to_code": "1050",
+          "origin": "atlas_research_supplement",
+          "status": "held_after_research",
+          "relation": null,
+          "activity_ids": [],
+          "claim_ids": [
+            "C047",
+            "C095",
+            "C096"
+          ],
+          "rationale": "旧3530含食用和非食用冰，旧1050也含食用冰食品；新3530排食用冰1050，尚不能证明所有旧食用用途水冰转入1050。保留无调味直接食用冰候选，冷却食品的冰不据此转移。"
+        }
+      ],
+      "boundary_status": "held_with_discriminating_evidence",
       "allocation_weight": null,
       "scope_limit": "only the enumerated activities; no full-class allocation assertion",
       "claim_evidence": [
+        {
+          "id": "B001",
+          "document": "CPC:2.1:17400",
+          "field": "notes.includes",
+          "start": 47,
+          "end": 74,
+          "field_sha256": "4fc9a0f18ee6329263527406874ea50a6d5c86b6e67c225f4411b1957300ca71",
+          "text_sha256": "5cd1c5c7d6ac8cc4c36dd50cbd8d1d699dabb51aa06d51a162342722b2ed1bac",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-notes-20250403",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+            "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+            "publication_date": "2025-04-03",
+            "sheet": "CPC2.1",
+            "row": 512,
+            "range": "A512:D512"
+          }
+        },
+        {
+          "id": "B002",
+          "document": "CPC:2.1:17400",
+          "field": "notes.excludes",
+          "start": 32,
+          "end": 55,
+          "field_sha256": "56cf497c3a5b46df165ee4d033c2de535fa0680b1428c1f03da4f961835b7d13",
+          "text_sha256": "5170897fece7fcc07280a08ee5b6c193548bc54cf093f6574b725bcd4c7c1272",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-notes-20250403",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+            "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+            "publication_date": "2025-04-03",
+            "sheet": "CPC2.1",
+            "row": 512,
+            "range": "A512:D512"
+          }
+        },
+        {
+          "id": "B003",
+          "document": "CPC:2.1:22270",
+          "field": "notes.includes",
+          "start": 0,
+          "end": 89,
+          "field_sha256": "d61cd388bc7f4b801a739cf8ff1329efdc9962629ab2b64549f04f290e0ef043",
+          "text_sha256": "d61cd388bc7f4b801a739cf8ff1329efdc9962629ab2b64549f04f290e0ef043",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-notes-20250403",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+            "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+            "publication_date": "2025-04-03",
+            "sheet": "CPC2.1",
+            "row": 765,
+            "range": "A765:D765"
+          }
+        },
+        {
+          "id": "B008",
+          "document": "pdf:cpc21-manual-2015:56",
+          "field": "text",
+          "start": 1785,
+          "end": 1905,
+          "field_sha256": "f80ceee3fd364dd2b48c048df2cf23255a6567d64f749cc5e3e5e91ff5b99ec0",
+          "text_sha256": "9e156a1e92ac48df27fae711986da462626198bca0350ff613f15f46a7dd71c9",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-manual-2015",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+            "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+            "publication_date": null,
+            "pdf_page": 56
+          }
+        },
+        {
+          "id": "B009",
+          "document": "pdf:cpc21-manual-2015:62",
+          "field": "text",
+          "start": 5103,
+          "end": 5224,
+          "field_sha256": "24bb102a63935f0d7eadcbec42c1ca8816550f0fc3dc4fe93fecfbfd64b77d9a",
+          "text_sha256": "1145ea9c61881b7bbff120a1fb606110dc7cf17b919a134e29dfe19fa3603363",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-manual-2015",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+            "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+            "publication_date": null,
+            "pdf_page": 62
+          }
+        },
+        {
+          "id": "B018",
+          "document": "pdf:cpc3-notes-20250630:63",
+          "field": "text",
+          "start": 326,
+          "end": 349,
+          "field_sha256": "bf58357466000969fa441692417aac01defd9ae0f889672110c75ee58a33219b",
+          "text_sha256": "5170897fece7fcc07280a08ee5b6c193548bc54cf093f6574b725bcd4c7c1272",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc3-notes-20250630",
+            "edition": "3.0",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+            "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+            "publication_date": "2025-06-30",
+            "pdf_page": 63
+          }
+        },
         {
           "id": "C047",
           "document": "ISIC:Rev.5:3530",
@@ -2384,14 +2791,14 @@
       "reviewed_on": "2026-11-08",
       "official_mapping_id": null,
       "evidence": {
-        "resource_id": "isic5-notes-20260819",
-        "edition": "Rev.5",
-        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
-        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
-        "publication_date": "2026-08-19",
-        "sheet": "ISIC5",
-        "row": 335,
-        "range": "A335:G335"
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 512,
+        "range": "A512:D512"
       }
     },
     {
@@ -2404,12 +2811,132 @@
       "activity_ids": [],
       "claim_ids": [
         "C050",
-        "C051"
+        "C051",
+        "B006",
+        "B013",
+        "B010",
+        "B016",
+        "B032"
       ],
-      "rationale": "当前防护口罩明确3250，但旧1399没有明确口罩列项，旧医疗器械与纺织材料功能边界未核清；不能只因2026新增排除补造已审旧对应。",
+      "rationale": "CPC48160的呼吸器/防毒面具不含无机械部件且无可换滤芯的简单面罩；旧3290又列防毒面具。1399到3250仍无同一口罩的旧端直接依据，保留候选；增加Rev.5当前口罩范围而不补造旧绑定。",
+      "history": [
+        {
+          "id": "urn:atlas:mapping:0af2f7e6-16f5-5d83-9ef1-952e0ee37cc9",
+          "from_code": "1399",
+          "to_code": "3250",
+          "origin": "atlas_research_supplement",
+          "status": "held_after_research",
+          "relation": null,
+          "activity_ids": [],
+          "claim_ids": [
+            "C050",
+            "C051"
+          ],
+          "rationale": "当前防护口罩明确3250，但旧1399没有明确口罩列项，旧医疗器械与纺织材料功能边界未核清；不能只因2026新增排除补造已审旧对应。"
+        }
+      ],
+      "boundary_status": "held_with_discriminating_evidence",
       "allocation_weight": null,
       "scope_limit": "only the enumerated activities; no full-class allocation assertion",
       "claim_evidence": [
+        {
+          "id": "B006",
+          "document": "CPC:2.1:48160",
+          "field": "label",
+          "start": 0,
+          "end": 329,
+          "field_sha256": "0c93c76943361b5db2d10fe4669f7096999ce4a462249df03b826dba606b7fc3",
+          "text_sha256": "0c93c76943361b5db2d10fe4669f7096999ce4a462249df03b826dba606b7fc3",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-notes-20250403",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+            "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+            "publication_date": "2025-04-03",
+            "sheet": "CPC2.1",
+            "row": 2529,
+            "range": "A2529:D2529"
+          }
+        },
+        {
+          "id": "B010",
+          "document": "pdf:cpc21-manual-2015:68",
+          "field": "text",
+          "start": 3038,
+          "end": 3162,
+          "field_sha256": "2080989a81add234846508ae02240dd3e2fffff71b0f50330626d5ab7e45d81e",
+          "text_sha256": "9b0d5d648b271e934e5ac2df0b9e3a756b7bad23bd1e063d1d2314763f43e578",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-manual-2015",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+            "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+            "publication_date": null,
+            "pdf_page": 68
+          }
+        },
+        {
+          "id": "B013",
+          "document": "pdf:cpc21-manual-2015:114",
+          "field": "text",
+          "start": 2179,
+          "end": 2299,
+          "field_sha256": "402b97716df1bd258cf6db8605c2b6bd0cbbbab993676ffbe00687e88cde4d98",
+          "text_sha256": "733e12587e5cb5ea35835578ac3a451f0698ebcf1826b2fc92a21abbdfb0b50e",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-manual-2015",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+            "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+            "publication_date": null,
+            "pdf_page": 114
+          }
+        },
+        {
+          "id": "B016",
+          "document": "pdf:cpc21-manual-2015:32",
+          "field": "text",
+          "start": 2113,
+          "end": 2210,
+          "field_sha256": "ddf00d010affbeeb17eb54acb9433a53665edac8dd5923b9fa6007e4eb00f42a",
+          "text_sha256": "b57c0353aaf17c99e90e870a44fa2e16c59ee7d87a6d8241fe4999d5b79cfb01",
+          "role": "auxiliary_product_evidence",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "cpc21-manual-2015",
+            "edition": "2.1",
+            "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+            "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+            "publication_date": null,
+            "pdf_page": 32
+          }
+        },
+        {
+          "id": "B032",
+          "document": "ISIC:Rev.4:3290",
+          "field": "notes.inclusion",
+          "start": 566,
+          "end": 592,
+          "field_sha256": "2ace6a5554816191bcbd46a8139f5dcc64199707dafbb065d9a88792a7bcf0f4",
+          "text_sha256": "912fd1ebbb3f3268b38cce3b27987797e9e937e022d88cc2797f25074be7b4b1",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "3290"
+          }
+        },
         {
           "id": "C050",
           "document": "ISIC:Rev.5:1399",
@@ -2458,14 +2985,227 @@
       "reviewed_on": "2026-11-08",
       "official_mapping_id": null,
       "evidence": {
-        "resource_id": "isic5-notes-20260819",
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 2529,
+        "range": "A2529:D2529"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:09c347ad-d473-5e66-b1b1-3cfc44ee1f48",
+      "from_code": "2790",
+      "to_code": "2790",
+      "origin": "official_row_review",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:20b98595-48e0-56e8-a79e-46cc0cb0aec8"
+      ],
+      "claim_ids": [],
+      "rationale": "只按直接列入两版的具体活动确认关联；口罩及其他未明范围继续保留，不推整类等价。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "B021",
+          "document": "ISIC:Rev.4:2790",
+          "field": "notes.inclusion",
+          "start": 862,
+          "end": 971,
+          "field_sha256": "5ed62361536478f87add9c0f6076bb4a0b571bf47f343fc0519863fefe7a79a2",
+          "text_sha256": "69847f6c25693339d5c86634b8cfa50006b9c714644041acd235b26133bb5b2d",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "2790"
+          }
+        },
+        {
+          "id": "B022",
+          "document": "ISIC:Rev.5:2790",
+          "field": "notes.includes",
+          "start": 899,
+          "end": 1008,
+          "field_sha256": "2182bb12b5b85a0d3d0290d73ef65e8439756cbb7b79b1971028cb7349904f23",
+          "text_sha256": "69847f6c25693339d5c86634b8cfa50006b9c714644041acd235b26133bb5b2d",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 257,
+            "range": "A257:G257"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": "urn:atlas:mapping:7dfe130d-6650-53e0-a5a6-59398a94a7a0",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
         "edition": "Rev.5",
-        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
-        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
-        "publication_date": "2026-08-19",
-        "sheet": "ISIC5",
-        "row": 134,
-        "range": "A134:G134"
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 158,
+        "range": "A158:H158"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:378a14ad-6fe5-5ed4-a527-900f6889d5ab",
+      "from_code": "3250",
+      "to_code": "3250",
+      "origin": "official_row_review",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:fe1dc42d-6178-561d-8b86-f1e5d9369d49"
+      ],
+      "claim_ids": [],
+      "rationale": "只按直接列入两版的具体活动确认关联；口罩及其他未明范围继续保留，不推整类等价。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "B023",
+          "document": "ISIC:Rev.4:3250",
+          "field": "notes.inclusion",
+          "start": 449,
+          "end": 511,
+          "field_sha256": "28bd3e34f97032d2abce855e6451906d17a6140f93607de17a291e4e90ddc0cd",
+          "text_sha256": "5d00a116e711ff6d4bfa0ff057ef359ac0a2b3a87e7f812528965144b42a01e2",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "3250"
+          }
+        },
+        {
+          "id": "B024",
+          "document": "ISIC:Rev.5:3250",
+          "field": "notes.includes",
+          "start": 443,
+          "end": 504,
+          "field_sha256": "6ffe3471765f7d3cec7d75b8cf593011feae991f8109753157dc387dacf9bd38",
+          "text_sha256": "6b5af0e80dc3af0988729c47eccb25262bdcea5cffd433af668e93a286414bf8",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 313,
+            "range": "A313:G313"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": "urn:atlas:mapping:7b69d91c-458d-5d76-b959-0f009fba19eb",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 194,
+        "range": "A194:H194"
+      }
+    },
+    {
+      "id": "urn:atlas:mapping:18d489a1-cedd-54b2-8c56-0dee0f805b07",
+      "from_code": "3290",
+      "to_code": "3290",
+      "origin": "official_row_review",
+      "status": "accepted_scoped_overlap",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:2d8f93f0-e65b-5d3d-b8e0-2e4fec16709b"
+      ],
+      "claim_ids": [],
+      "rationale": "只按直接列入两版的具体活动确认关联；口罩及其他未明范围继续保留，不推整类等价。",
+      "allocation_weight": null,
+      "scope_limit": "only the enumerated activities; no full-class allocation assertion",
+      "claim_evidence": [
+        {
+          "id": "B025",
+          "document": "ISIC:Rev.4:3290",
+          "field": "notes.inclusion",
+          "start": 407,
+          "end": 485,
+          "field_sha256": "2ace6a5554816191bcbd46a8139f5dcc64199707dafbb065d9a88792a7bcf0f4",
+          "text_sha256": "7ea35574b43fc7fa0c73c2adfaac797fe4b2fdc64321471e6b778fa071e973e1",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic4-database",
+            "edition": "Rev.4",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+            "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+            "publication_date": null,
+            "table": "tblTitles_English_ISICRev4",
+            "key": "3290"
+          }
+        },
+        {
+          "id": "B026",
+          "document": "ISIC:Rev.5:3290",
+          "field": "notes.includes",
+          "start": 400,
+          "end": 478,
+          "field_sha256": "4abb4ea9d85d4384dbd64080be855851c3cd86cd1d668afc7b3cf8b15a1e31bd",
+          "text_sha256": "7ea35574b43fc7fa0c73c2adfaac797fe4b2fdc64321471e6b778fa071e973e1",
+          "role": "inclusion",
+          "offset_unit": "unicode_codepoints_in_parsed_original_field",
+          "evidence": {
+            "resource_id": "isic5-notes-20260819",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+            "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+            "publication_date": "2026-08-19",
+            "sheet": "ISIC5",
+            "row": 315,
+            "range": "A315:G315"
+          }
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "official_mapping_id": "urn:atlas:mapping:92f5105e-04f4-5e11-adad-f961fcff3cf7",
+      "evidence": {
+        "resource_id": "isic4-isic5-correspondence",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+        "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "publication_date": "2025-01-17",
+        "sheet": "ISIC4-5",
+        "row": 195,
+        "range": "A195:H195"
       }
     }
   ],
@@ -2650,7 +3390,7 @@
   "new_issues": [
     {
       "id": "ALLOCATION-EDIBLE-WATER-ICE",
-      "status": "open",
+      "status": "partially_addressed",
       "kind": "bounded_activity_allocation_pending",
       "rev4_codes": [
         "1050",
@@ -2664,7 +3404,13 @@
       "claim_ids": [
         "C047",
         "C095",
-        "C096"
+        "C096",
+        "B001",
+        "B002",
+        "B003",
+        "B008",
+        "B009",
+        "B018"
       ],
       "evidence": [
         {
@@ -2694,14 +3440,138 @@
           "publication_date": null,
           "table": "tblTitles_English_ISICRev4",
           "key": "1050"
+        },
+        {
+          "resource_id": "cpc21-notes-20250403",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+          "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+          "publication_date": "2025-04-03",
+          "sheet": "CPC2.1",
+          "row": 512,
+          "range": "A512:D512"
+        },
+        {
+          "resource_id": "cpc21-notes-20250403",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+          "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+          "publication_date": "2025-04-03",
+          "sheet": "CPC2.1",
+          "row": 512,
+          "range": "A512:D512"
+        },
+        {
+          "resource_id": "cpc21-notes-20250403",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+          "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+          "publication_date": "2025-04-03",
+          "sheet": "CPC2.1",
+          "row": 765,
+          "range": "A765:D765"
+        },
+        {
+          "resource_id": "cpc21-manual-2015",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+          "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+          "publication_date": null,
+          "pdf_page": 56
+        },
+        {
+          "resource_id": "cpc21-manual-2015",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+          "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+          "publication_date": null,
+          "pdf_page": 62
+        },
+        {
+          "resource_id": "cpc3-notes-20250630",
+          "edition": "3.0",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+          "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+          "publication_date": "2025-06-30",
+          "pdf_page": 63
         }
       ],
       "reviewer": "Codex source-evidence review",
-      "reviewed_on": "2026-11-08"
+      "reviewed_on": "2026-11-08",
+      "history": [
+        {
+          "id": "ALLOCATION-EDIBLE-WATER-ICE",
+          "status": "open",
+          "kind": "bounded_activity_allocation_pending",
+          "rev4_codes": [
+            "1050",
+            "3530"
+          ],
+          "rev5_codes": [
+            "1050",
+            "3530"
+          ],
+          "rationale": "冰淇淋/雪葩与冷却水冰已分别映射；无调味直接食用水冰的旧1050/3530边界尚未得到唯一分配依据。",
+          "claim_ids": [
+            "C047",
+            "C095",
+            "C096"
+          ],
+          "evidence": [
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 335,
+              "range": "A335:G335"
+            },
+            {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "3530"
+            },
+            {
+              "resource_id": "isic4-database",
+              "edition": "Rev.4",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+              "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+              "publication_date": null,
+              "table": "tblTitles_English_ISICRev4",
+              "key": "1050"
+            }
+          ],
+          "reviewer": "Codex source-evidence review",
+          "reviewed_on": "2026-11-08"
+        }
+      ],
+      "followup": {
+        "issue_id": "ALLOCATION-EDIBLE-WATER-ICE",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "B001",
+          "B002",
+          "B003",
+          "B008",
+          "B009",
+          "B018"
+        ],
+        "rationale": "产品证据明确水冰与食品冰分组，仍不能证明无调味直接食用水冰跨版改派；保留目录提案和两种当前范围候选。",
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewed_on": "2026-11-08",
+        "reviewer": "Codex source-evidence review"
+      }
     },
     {
       "id": "ALLOCATION-TEXTILE-MASKS",
-      "status": "open",
+      "status": "partially_addressed",
       "kind": "bounded_activity_allocation_pending",
       "rev4_codes": [
         "1399",
@@ -2714,7 +3584,12 @@
       "rationale": "防护口罩当前明确3250，旧来源未明列相同活动，保留候选待审。",
       "claim_ids": [
         "C050",
-        "C051"
+        "C051",
+        "B006",
+        "B013",
+        "B010",
+        "B016",
+        "B032"
       ],
       "evidence": [
         {
@@ -2736,14 +3611,117 @@
           "sheet": "ISIC5",
           "row": 313,
           "range": "A313:G313"
+        },
+        {
+          "resource_id": "cpc21-notes-20250403",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+          "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+          "publication_date": "2025-04-03",
+          "sheet": "CPC2.1",
+          "row": 2529,
+          "range": "A2529:D2529"
+        },
+        {
+          "resource_id": "cpc21-manual-2015",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+          "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+          "publication_date": null,
+          "pdf_page": 114
+        },
+        {
+          "resource_id": "cpc21-manual-2015",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+          "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+          "publication_date": null,
+          "pdf_page": 68
+        },
+        {
+          "resource_id": "cpc21-manual-2015",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+          "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+          "publication_date": null,
+          "pdf_page": 32
+        },
+        {
+          "resource_id": "isic4-database",
+          "edition": "Rev.4",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+          "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+          "publication_date": null,
+          "table": "tblTitles_English_ISICRev4",
+          "key": "3290"
         }
       ],
       "reviewer": "Codex source-evidence review",
-      "reviewed_on": "2026-11-08"
+      "reviewed_on": "2026-11-08",
+      "history": [
+        {
+          "id": "ALLOCATION-TEXTILE-MASKS",
+          "status": "open",
+          "kind": "bounded_activity_allocation_pending",
+          "rev4_codes": [
+            "1399",
+            "3250"
+          ],
+          "rev5_codes": [
+            "1399",
+            "3250"
+          ],
+          "rationale": "防护口罩当前明确3250，旧来源未明列相同活动，保留候选待审。",
+          "claim_ids": [
+            "C050",
+            "C051"
+          ],
+          "evidence": [
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 134,
+              "range": "A134:G134"
+            },
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 313,
+              "range": "A313:G313"
+            }
+          ],
+          "reviewer": "Codex source-evidence review",
+          "reviewed_on": "2026-11-08"
+        }
+      ],
+      "followup": {
+        "issue_id": "ALLOCATION-TEXTILE-MASKS",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "B006",
+          "B013",
+          "B010",
+          "B016",
+          "B032"
+        ],
+        "rationale": "明确区分简单面罩、过滤口罩、外科口罩和呼吸器；当前三类口罩可登记，旧源关系继续待审，产品主要行业对应不转成同一活动证明。",
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewed_on": "2026-11-08",
+        "reviewer": "Codex source-evidence review"
+      }
     },
     {
       "id": "SCOPE-OLD-CARBON-TEXTILES",
-      "status": "open",
+      "status": "partially_addressed",
       "kind": "bounded_activity_allocation_pending",
       "rev4_codes": [
         "1312",
@@ -2757,7 +3735,11 @@
       "claim_ids": [
         "C023",
         "C024",
-        "C043"
+        "C043",
+        "B033",
+        "B034",
+        "B012",
+        "B015"
       ],
       "evidence": [
         {
@@ -2787,10 +3769,94 @@
           "publication_date": null,
           "table": "tblTitles_English_ISICRev4",
           "key": "2399"
+        },
+        {
+          "resource_id": "isic4-database",
+          "edition": "Rev.4",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+          "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+          "publication_date": null,
+          "table": "tblTitles_English_ISICRev4",
+          "key": "2399"
+        },
+        {
+          "resource_id": "isic4-database",
+          "edition": "Rev.4",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+          "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+          "publication_date": null,
+          "table": "tblTitles_English_ISICRev4",
+          "key": "1312"
+        },
+        {
+          "resource_id": "cpc21-manual-2015",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+          "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+          "publication_date": null,
+          "pdf_page": 87
+        },
+        {
+          "resource_id": "cpc21-manual-2015",
+          "edition": "2.1",
+          "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+          "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+          "publication_date": null,
+          "pdf_page": 32
         }
       ],
       "reviewer": "Codex source-evidence review",
-      "reviewed_on": "2026-11-08"
+      "reviewed_on": "2026-11-08",
+      "history": [
+        {
+          "id": "SCOPE-OLD-CARBON-TEXTILES",
+          "status": "open",
+          "kind": "bounded_activity_allocation_pending",
+          "rev4_codes": [
+            "1312",
+            "2399"
+          ],
+          "rev5_codes": [
+            "1312",
+            "2399"
+          ],
+          "rationale": "旧1312明确碳织物，旧2399又列非电气碳纤维及产品，存在旧源范围重叠；补充关联保留两者，不能推断排他性或分配权重。",
+          "claim_ids": [
+            "C023",
+            "C024",
+            "C043"
+          ],
+          "evidence": [
+            {
+              "resource_id": "isic5-notes-20260819",
+              "edition": "Rev.5",
+              "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+              "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+              "publication_date": "2026-08-19",
+              "sheet": "ISIC5",
+              "row": 127,
+              "range": "A127:G127"
+            }
+          ],
+          "reviewer": "Codex source-evidence review",
+          "reviewed_on": "2026-11-08"
+        }
+      ],
+      "followup": {
+        "issue_id": "SCOPE-OLD-CARBON-TEXTILES",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "B033",
+          "B034",
+          "B012",
+          "B015"
+        ],
+        "rationale": "旧专门织造与宽泛碳制品列项同时保留；CPC只说明主要生产行业，不能消除旧1312/2399交叠。非电气织物增加待审2399来源；电气电极和芳纶范围单独确认。",
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewed_on": "2026-11-08",
+        "reviewer": "Codex source-evidence review"
+      }
     }
   ],
   "atlas_identities": {
@@ -2828,7 +3894,473 @@
     "353": "urn:atlas:concept:a7f95590-7955-552e-ba0b-71ece50b4694",
     "3530": "urn:atlas:concept:2b66624b-2285-595e-8664-2e216da5be86",
     "C": "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339",
-    "D": "urn:atlas:concept:db1cd0d8-cd73-5df5-bb71-382bc633cc84"
+    "D": "urn:atlas:concept:db1cd0d8-cd73-5df5-bb71-382bc633cc84",
+    "27": "urn:atlas:concept:122f5abc-a3a7-51ea-8773-a6537cf3279c",
+    "279": "urn:atlas:concept:8e8780ca-d4ae-5b34-9a90-af14cf1e87ee",
+    "2790": "urn:atlas:concept:e662b9b5-825b-5ed6-8283-ecf9bf865950",
+    "32": "urn:atlas:concept:b988e705-5120-5194-a4a3-807271301c68",
+    "325": "urn:atlas:concept:dded343d-5673-519d-b8fc-3c450068ffb6",
+    "3250": "urn:atlas:concept:76373d7c-31e5-5812-ae2e-1e19bc73e042",
+    "329": "urn:atlas:concept:ff10da80-e83e-53e2-bae8-56c7aad9bbb7",
+    "3290": "urn:atlas:concept:87213c8a-8c29-5a2b-b6fe-1612d0e7650e"
+  },
+  "directory_proposals": [
+    {
+      "id": "urn:atlas:concept:a069b429-1983-589d-be3b-0607e6e841b4",
+      "label": "无调味直接食用水冰制造",
+      "scope": "不含调味、加糖、乳基冰淇淋或雪葩；目前不确定当前活动类应如何适用。",
+      "status": "held_after_research",
+      "source_bindings": [],
+      "candidate_parent_source_ids": [
+        "ISIC:Rev.5:1050",
+        "ISIC:Rev.5:3530"
+      ],
+      "claim_ids": [
+        "B001",
+        "B002",
+        "B003",
+        "B008",
+        "B009",
+        "B018"
+      ],
+      "rationale": "只作为待审目录提案，不计入已审活动，不以CPC产品与行业主要对应替代活动分配。"
+    }
+  ],
+  "boundary_followup": {
+    "parent_priority_sha256": "830e2652ce8b9b11d8d1d7d852278a3b8688bcdd2f9fb4b640bb1f017604a223",
+    "reviewed_input_sha256": {
+      "cpc21-manual-2015": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+      "cpc21-notes-20250403": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+      "cpc21-readme-20250403": "61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb",
+      "cpc3-notes-20250630": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1"
+    },
+    "reviewer": "Codex source-evidence review",
+    "reviewed_on": "2026-11-08",
+    "activities": [
+      {
+        "id": "urn:atlas:concept:0f963583-3cf4-5ac3-9494-6f47520b975b",
+        "key": "woven-aramid-fabrics",
+        "label": "芳纶织物织造",
+        "scope": "织造芳纶纱线织物；不因旧版同列碳和芳纶而把两种纤维的当前去向视为相同。",
+        "status": "accepted_bounded_activity",
+        "historical_scope_status": "bounded_cross_version_evidence",
+        "parent_rev5_code": "1312",
+        "source_bindings": [
+          {
+            "node_id": "ISIC:Rev.4:1312",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B019"
+            ]
+          },
+          {
+            "node_id": "ISIC:Rev.5:1312",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B020"
+            ]
+          }
+        ],
+        "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08"
+      },
+      {
+        "id": "urn:atlas:concept:20b98595-48e0-56e8-a79e-46cc0cb0aec8",
+        "key": "electrical-carbon-electrodes",
+        "label": "电气用途碳及石墨电极制造",
+        "scope": "制造电气用途的碳和石墨电极；不包括非电气碳纤维织造。",
+        "status": "accepted_bounded_activity",
+        "historical_scope_status": "bounded_cross_version_evidence",
+        "parent_rev5_code": "2790",
+        "source_bindings": [
+          {
+            "node_id": "ISIC:Rev.4:2790",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B021"
+            ]
+          },
+          {
+            "node_id": "ISIC:Rev.5:2790",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B022"
+            ]
+          }
+        ],
+        "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08"
+      },
+      {
+        "id": "urn:atlas:concept:fe1dc42d-6178-561d-8b86-f1e5d9369d49",
+        "key": "surgical-drapes",
+        "label": "手术铺单制造",
+        "scope": "制造手术铺单；本活动不据医疗用品大类名称推断旧版防护口罩归属。",
+        "status": "accepted_bounded_activity",
+        "historical_scope_status": "bounded_cross_version_evidence",
+        "parent_rev5_code": "3250",
+        "source_bindings": [
+          {
+            "node_id": "ISIC:Rev.4:3250",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B023"
+            ]
+          },
+          {
+            "node_id": "ISIC:Rev.5:3250",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B024"
+            ]
+          }
+        ],
+        "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08"
+      },
+      {
+        "id": "urn:atlas:concept:2d8f93f0-e65b-5d3d-b8e0-2e4fec16709b",
+        "key": "metal-safety-headgear",
+        "label": "金属安全头具制造",
+        "scope": "制造金属安全头具；与口罩、呼吸器及纺织面罩分别研究。",
+        "status": "accepted_bounded_activity",
+        "historical_scope_status": "bounded_cross_version_evidence",
+        "parent_rev5_code": "3290",
+        "source_bindings": [
+          {
+            "node_id": "ISIC:Rev.4:3290",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B025"
+            ]
+          },
+          {
+            "node_id": "ISIC:Rev.5:3290",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B026"
+            ]
+          }
+        ],
+        "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08"
+      },
+      {
+        "id": "urn:atlas:concept:63e2abf5-ffc0-50a7-b5d0-82e8a44c661f",
+        "key": "current-surgical-masks",
+        "label": "外科口罩制造（Rev.5范围）",
+        "scope": "仅登记Rev.5明列的外科口罩制造范围；没有已批准的Rev.4来源绑定。",
+        "status": "accepted_current_activity",
+        "historical_scope_status": "unresolved_no_approved_Rev4_binding",
+        "parent_rev5_code": "3250",
+        "source_bindings": [
+          {
+            "node_id": "ISIC:Rev.5:3250",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B027"
+            ]
+          }
+        ],
+        "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "candidate_source_bindings": [
+          {
+            "node_id": "ISIC:Rev.4:1392",
+            "relation": null,
+            "status": "unresolved_scope_hypothesis",
+            "claim_ids": [
+              "B030",
+              "B010",
+              "B004"
+            ],
+            "rationale": "一般制成纺织品及6307的旁证，不明确证明医用/过滤口罩属于该旧类。"
+          },
+          {
+            "node_id": "ISIC:Rev.4:3250",
+            "relation": null,
+            "status": "unresolved_scope_hypothesis",
+            "claim_ids": [
+              "B031",
+              "B006"
+            ],
+            "rationale": "旧医疗用品术语未明列同一口罩；CPC呼吸器类别又明确排除简单面罩，不能跨产品推理补齐。"
+          }
+        ]
+      },
+      {
+        "id": "urn:atlas:concept:f9c09487-c6cc-58b0-a12d-13f4c1cf55b8",
+        "key": "current-ffp2-masks",
+        "label": "FFP2防护口罩制造（Rev.5范围）",
+        "scope": "仅登记Rev.5明列的FFP2防护口罩制造范围；不与旧版防毒面具或CPC呼吸器产品等同。",
+        "status": "accepted_current_activity",
+        "historical_scope_status": "unresolved_no_approved_Rev4_binding",
+        "parent_rev5_code": "3250",
+        "source_bindings": [
+          {
+            "node_id": "ISIC:Rev.5:3250",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B028"
+            ]
+          }
+        ],
+        "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "candidate_source_bindings": [
+          {
+            "node_id": "ISIC:Rev.4:1392",
+            "relation": null,
+            "status": "unresolved_scope_hypothesis",
+            "claim_ids": [
+              "B030",
+              "B010",
+              "B004"
+            ],
+            "rationale": "一般制成纺织品及6307的旁证，不明确证明医用/过滤口罩属于该旧类。"
+          },
+          {
+            "node_id": "ISIC:Rev.4:3250",
+            "relation": null,
+            "status": "unresolved_scope_hypothesis",
+            "claim_ids": [
+              "B031",
+              "B006"
+            ],
+            "rationale": "旧医疗用品术语未明列同一口罩；CPC呼吸器类别又明确排除简单面罩，不能跨产品推理补齐。"
+          }
+        ]
+      },
+      {
+        "id": "urn:atlas:concept:88f1570f-432e-56c4-af43-6cf164312fae",
+        "key": "current-ffp3-masks",
+        "label": "FFP3防护口罩制造（Rev.5范围）",
+        "scope": "仅登记Rev.5明列的FFP3防护口罩制造范围；旧版材料、功能及工业来源仍待核实。",
+        "status": "accepted_current_activity",
+        "historical_scope_status": "unresolved_no_approved_Rev4_binding",
+        "parent_rev5_code": "3250",
+        "source_bindings": [
+          {
+            "node_id": "ISIC:Rev.5:3250",
+            "relation": "broadMatch",
+            "claim_ids": [
+              "B029"
+            ]
+          }
+        ],
+        "scope_origin": "Atlas authored bounded activity; not a publisher subcode",
+        "reviewer": "Codex source-evidence review",
+        "reviewed_on": "2026-11-08",
+        "candidate_source_bindings": [
+          {
+            "node_id": "ISIC:Rev.4:1392",
+            "relation": null,
+            "status": "unresolved_scope_hypothesis",
+            "claim_ids": [
+              "B030",
+              "B010",
+              "B004"
+            ],
+            "rationale": "一般制成纺织品及6307的旁证，不明确证明医用/过滤口罩属于该旧类。"
+          },
+          {
+            "node_id": "ISIC:Rev.4:3250",
+            "relation": null,
+            "status": "unresolved_scope_hypothesis",
+            "claim_ids": [
+              "B031",
+              "B006"
+            ],
+            "rationale": "旧医疗用品术语未明列同一口罩；CPC呼吸器类别又明确排除简单面罩，不能跨产品推理补齐。"
+          }
+        ]
+      }
+    ],
+    "activity_followups": [
+      {
+        "activity_id": "urn:atlas:concept:89e4f6ba-eb22-5cb4-9615-639db3d7c890",
+        "candidate_source_bindings": [
+          {
+            "node_id": "ISIC:Rev.4:2399",
+            "relation": null,
+            "status": "unresolved_competing_source",
+            "claim_ids": [
+              "B033",
+              "B034",
+              "B012",
+              "B005",
+              "B015"
+            ],
+            "rationale": "旧2399及CPC37990提供宽范围及主要生产行业旁证，但旧1312明确织造；保留竞争来源，不批准排他分配。"
+          }
+        ]
+      }
+    ],
+    "mappings": [
+      {
+        "id": "urn:atlas:mapping:09c347ad-d473-5e66-b1b1-3cfc44ee1f48",
+        "from_code": "2790",
+        "to_code": "2790",
+        "origin": "official_row_review",
+        "status": "accepted_scoped_overlap",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:20b98595-48e0-56e8-a79e-46cc0cb0aec8"
+        ],
+        "claim_ids": [],
+        "rationale": "只按直接列入两版的具体活动确认关联；口罩及其他未明范围继续保留，不推整类等价。"
+      },
+      {
+        "id": "urn:atlas:mapping:378a14ad-6fe5-5ed4-a527-900f6889d5ab",
+        "from_code": "3250",
+        "to_code": "3250",
+        "origin": "official_row_review",
+        "status": "accepted_scoped_overlap",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:fe1dc42d-6178-561d-8b86-f1e5d9369d49"
+        ],
+        "claim_ids": [],
+        "rationale": "只按直接列入两版的具体活动确认关联；口罩及其他未明范围继续保留，不推整类等价。"
+      },
+      {
+        "id": "urn:atlas:mapping:18d489a1-cedd-54b2-8c56-0dee0f805b07",
+        "from_code": "3290",
+        "to_code": "3290",
+        "origin": "official_row_review",
+        "status": "accepted_scoped_overlap",
+        "relation": "relatedMatch",
+        "activity_ids": [
+          "urn:atlas:concept:2d8f93f0-e65b-5d3d-b8e0-2e4fec16709b"
+        ],
+        "claim_ids": [],
+        "rationale": "只按直接列入两版的具体活动确认关联；口罩及其他未明范围继续保留，不推整类等价。"
+      }
+    ],
+    "mapping_followups": [
+      {
+        "mapping_id": "urn:atlas:mapping:5165769a-3648-5f9e-aa42-02af2f288d41",
+        "status": "held_with_discriminating_evidence",
+        "claim_ids": [
+          "B001",
+          "B002",
+          "B003",
+          "B008",
+          "B009",
+          "B018"
+        ],
+        "rationale": "新增CPC证据区分人工冻结水17400（主要行业3530）与食品冰22270/HS2105（1050）；是否直接食用及无调味不能仅凭食用冰字样改派。旧3530食用用途明确，但新1050/3530无调味水冰仍待唯一解释。"
+      },
+      {
+        "mapping_id": "urn:atlas:mapping:0af2f7e6-16f5-5d83-9ef1-952e0ee37cc9",
+        "status": "held_with_discriminating_evidence",
+        "claim_ids": [
+          "B006",
+          "B013",
+          "B010",
+          "B016",
+          "B032"
+        ],
+        "rationale": "CPC48160的呼吸器/防毒面具不含无机械部件且无可换滤芯的简单面罩；旧3290又列防毒面具。1399到3250仍无同一口罩的旧端直接依据，保留候选；增加Rev.5当前口罩范围而不补造旧绑定。"
+      }
+    ],
+    "issue_followups": [
+      {
+        "issue_id": "ALLOCATION-EDIBLE-WATER-ICE",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "B001",
+          "B002",
+          "B003",
+          "B008",
+          "B009",
+          "B018"
+        ],
+        "rationale": "产品证据明确水冰与食品冰分组，仍不能证明无调味直接食用水冰跨版改派；保留目录提案和两种当前范围候选。",
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewed_on": "2026-11-08",
+        "reviewer": "Codex source-evidence review"
+      },
+      {
+        "issue_id": "ALLOCATION-TEXTILE-MASKS",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "B006",
+          "B013",
+          "B010",
+          "B016",
+          "B032"
+        ],
+        "rationale": "明确区分简单面罩、过滤口罩、外科口罩和呼吸器；当前三类口罩可登记，旧源关系继续待审，产品主要行业对应不转成同一活动证明。",
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewed_on": "2026-11-08",
+        "reviewer": "Codex source-evidence review"
+      },
+      {
+        "issue_id": "SCOPE-OLD-CARBON-TEXTILES",
+        "status": "partially_addressed",
+        "claim_ids": [
+          "B033",
+          "B034",
+          "B012",
+          "B015"
+        ],
+        "rationale": "旧专门织造与宽泛碳制品列项同时保留；CPC只说明主要生产行业，不能消除旧1312/2399交叠。非电气织物增加待审2399来源；电气电极和芳纶范围单独确认。",
+        "publisher_resolution": "not_obtained",
+        "official_crosswalk_changed": false,
+        "reviewed_on": "2026-11-08",
+        "reviewer": "Codex source-evidence review"
+      }
+    ],
+    "directory_proposals": [
+      {
+        "id": "urn:atlas:concept:a069b429-1983-589d-be3b-0607e6e841b4",
+        "label": "无调味直接食用水冰制造",
+        "scope": "不含调味、加糖、乳基冰淇淋或雪葩；目前不确定当前活动类应如何适用。",
+        "status": "held_after_research",
+        "source_bindings": [],
+        "candidate_parent_source_ids": [
+          "ISIC:Rev.5:1050",
+          "ISIC:Rev.5:3530"
+        ],
+        "claim_ids": [
+          "B001",
+          "B002",
+          "B003",
+          "B008",
+          "B009",
+          "B018"
+        ],
+        "rationale": "只作为待审目录提案，不计入已审活动，不以CPC产品与行业主要对应替代活动分配。"
+      }
+    ],
+    "atlas_identities": {
+      "13": "urn:atlas:concept:176963f4-20ab-5831-a834-64a8c0865060",
+      "131": "urn:atlas:concept:800af076-e152-550d-825e-7dd459faa582",
+      "1312": "urn:atlas:concept:9120ff27-1cee-5d95-a0c2-411c8fbc9e92",
+      "27": "urn:atlas:concept:122f5abc-a3a7-51ea-8773-a6537cf3279c",
+      "279": "urn:atlas:concept:8e8780ca-d4ae-5b34-9a90-af14cf1e87ee",
+      "2790": "urn:atlas:concept:e662b9b5-825b-5ed6-8283-ecf9bf865950",
+      "32": "urn:atlas:concept:b988e705-5120-5194-a4a3-807271301c68",
+      "325": "urn:atlas:concept:dded343d-5673-519d-b8fc-3c450068ffb6",
+      "3250": "urn:atlas:concept:76373d7c-31e5-5812-ae2e-1e19bc73e042",
+      "329": "urn:atlas:concept:ff10da80-e83e-53e2-bae8-56c7aad9bbb7",
+      "3290": "urn:atlas:concept:87213c8a-8c29-5a2b-b6fe-1612d0e7650e",
+      "C": "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339"
+    },
+    "limits": [
+      "CPC codes classify products, not activities; never copied into the economic-activity tree.",
+      "Industry-of-origin references are predominant producer links, not one-to-one or exclusive allocation.",
+      "Three current-only mask activities have no approved Rev.4 binding."
+    ]
   },
   "claims": [
     {
@@ -4783,16 +6315,703 @@
         "table": "tblTitles_English_ISICRev4",
         "key": "1050"
       }
+    },
+    {
+      "id": "B001",
+      "document": "CPC:2.1:17400",
+      "field": "notes.includes",
+      "start": 47,
+      "end": 74,
+      "field_sha256": "4fc9a0f18ee6329263527406874ea50a6d5c86b6e67c225f4411b1957300ca71",
+      "text_sha256": "5cd1c5c7d6ac8cc4c36dd50cbd8d1d699dabb51aa06d51a162342722b2ed1bac",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 512,
+        "range": "A512:D512"
+      }
+    },
+    {
+      "id": "B002",
+      "document": "CPC:2.1:17400",
+      "field": "notes.excludes",
+      "start": 32,
+      "end": 55,
+      "field_sha256": "56cf497c3a5b46df165ee4d033c2de535fa0680b1428c1f03da4f961835b7d13",
+      "text_sha256": "5170897fece7fcc07280a08ee5b6c193548bc54cf093f6574b725bcd4c7c1272",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 512,
+        "range": "A512:D512"
+      }
+    },
+    {
+      "id": "B003",
+      "document": "CPC:2.1:22270",
+      "field": "notes.includes",
+      "start": 0,
+      "end": 89,
+      "field_sha256": "d61cd388bc7f4b801a739cf8ff1329efdc9962629ab2b64549f04f290e0ef043",
+      "text_sha256": "d61cd388bc7f4b801a739cf8ff1329efdc9962629ab2b64549f04f290e0ef043",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 765,
+        "range": "A765:D765"
+      }
+    },
+    {
+      "id": "B004",
+      "document": "CPC:2.1:27190",
+      "field": "notes.includes",
+      "start": 0,
+      "end": 89,
+      "field_sha256": "4e1102b5defaadd35ff4ad39dbdc46097f1bd02647232ebb82f20b556df1c23f",
+      "text_sha256": "4e1102b5defaadd35ff4ad39dbdc46097f1bd02647232ebb82f20b556df1c23f",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 1031,
+        "range": "A1031:D1031"
+      }
+    },
+    {
+      "id": "B005",
+      "document": "CPC:2.1:37990",
+      "field": "notes.includes",
+      "start": 0,
+      "end": 114,
+      "field_sha256": "2d8a50d7e677526bfbf6edcaac0990b6ede854b9290e977a47e2ece21a1349ae",
+      "text_sha256": "2d8a50d7e677526bfbf6edcaac0990b6ede854b9290e977a47e2ece21a1349ae",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 1687,
+        "range": "A1687:D1687"
+      }
+    },
+    {
+      "id": "B006",
+      "document": "CPC:2.1:48160",
+      "field": "label",
+      "start": 0,
+      "end": 329,
+      "field_sha256": "0c93c76943361b5db2d10fe4669f7096999ce4a462249df03b826dba606b7fc3",
+      "text_sha256": "0c93c76943361b5db2d10fe4669f7096999ce4a462249df03b826dba606b7fc3",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 2529,
+        "range": "A2529:D2529"
+      }
+    },
+    {
+      "id": "B007",
+      "document": "CPC:2.1:46950",
+      "field": "label",
+      "start": 0,
+      "end": 150,
+      "field_sha256": "a6c415977a5e6f08473e62e727141965747f2e2c315fb6bfaa9f338ef161fd49",
+      "text_sha256": "a6c415977a5e6f08473e62e727141965747f2e2c315fb6bfaa9f338ef161fd49",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-notes-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+        "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+        "publication_date": "2025-04-03",
+        "sheet": "CPC2.1",
+        "row": 2433,
+        "range": "A2433:D2433"
+      }
+    },
+    {
+      "id": "B008",
+      "document": "pdf:cpc21-manual-2015:56",
+      "field": "text",
+      "start": 1785,
+      "end": 1905,
+      "field_sha256": "f80ceee3fd364dd2b48c048df2cf23255a6567d64f749cc5e3e5e91ff5b99ec0",
+      "text_sha256": "9e156a1e92ac48df27fae711986da462626198bca0350ff613f15f46a7dd71c9",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 56
+      }
+    },
+    {
+      "id": "B009",
+      "document": "pdf:cpc21-manual-2015:62",
+      "field": "text",
+      "start": 5103,
+      "end": 5224,
+      "field_sha256": "24bb102a63935f0d7eadcbec42c1ca8816550f0fc3dc4fe93fecfbfd64b77d9a",
+      "text_sha256": "1145ea9c61881b7bbff120a1fb606110dc7cf17b919a134e29dfe19fa3603363",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 62
+      }
+    },
+    {
+      "id": "B010",
+      "document": "pdf:cpc21-manual-2015:68",
+      "field": "text",
+      "start": 3038,
+      "end": 3162,
+      "field_sha256": "2080989a81add234846508ae02240dd3e2fffff71b0f50330626d5ab7e45d81e",
+      "text_sha256": "9b0d5d648b271e934e5ac2df0b9e3a756b7bad23bd1e063d1d2314763f43e578",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 68
+      }
+    },
+    {
+      "id": "B011",
+      "document": "pdf:cpc21-manual-2015:68",
+      "field": "text",
+      "start": 941,
+      "end": 1065,
+      "field_sha256": "2080989a81add234846508ae02240dd3e2fffff71b0f50330626d5ab7e45d81e",
+      "text_sha256": "d16d0762439b2f829af2c74b2de1ed368e19ef3f7829d4841f53d23f2e8bbc56",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 68
+      }
+    },
+    {
+      "id": "B012",
+      "document": "pdf:cpc21-manual-2015:87",
+      "field": "text",
+      "start": 2742,
+      "end": 2859,
+      "field_sha256": "de86e4bda1b3946cfd3b7e776fc416f2131189a0ac39fe1d72a6f9990b873d62",
+      "text_sha256": "43597654dc580ecff93da7e06ff278930046de051e2c02f0203feb424bebb8fe",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 87
+      }
+    },
+    {
+      "id": "B013",
+      "document": "pdf:cpc21-manual-2015:114",
+      "field": "text",
+      "start": 2179,
+      "end": 2299,
+      "field_sha256": "402b97716df1bd258cf6db8605c2b6bd0cbbbab993676ffbe00687e88cde4d98",
+      "text_sha256": "733e12587e5cb5ea35835578ac3a451f0698ebcf1826b2fc92a21abbdfb0b50e",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 114
+      }
+    },
+    {
+      "id": "B014",
+      "document": "pdf:cpc21-manual-2015:111",
+      "field": "text",
+      "start": 3883,
+      "end": 3996,
+      "field_sha256": "d0c5e94aa92a94e661d737988c3f57548be3be565d57a025f8028a0ed8d1ccf2",
+      "text_sha256": "c7bcb6c74d452f04663ec6da1c191633f8e7d7f8145d5483486429722381c36f",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 111
+      }
+    },
+    {
+      "id": "B015",
+      "document": "pdf:cpc21-manual-2015:32",
+      "field": "text",
+      "start": 1724,
+      "end": 1820,
+      "field_sha256": "ddf00d010affbeeb17eb54acb9433a53665edac8dd5923b9fa6007e4eb00f42a",
+      "text_sha256": "391b7a711b4f0e2e28b9a461734d570ec355ad10fd54db38bac5d0a07bf071b9",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 32
+      }
+    },
+    {
+      "id": "B016",
+      "document": "pdf:cpc21-manual-2015:32",
+      "field": "text",
+      "start": 2113,
+      "end": 2210,
+      "field_sha256": "ddf00d010affbeeb17eb54acb9433a53665edac8dd5923b9fa6007e4eb00f42a",
+      "text_sha256": "b57c0353aaf17c99e90e870a44fa2e16c59ee7d87a6d8241fe4999d5b79cfb01",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 32
+      }
+    },
+    {
+      "id": "B017",
+      "document": "pdf:cpc21-readme-20250403:1",
+      "field": "text",
+      "start": 378,
+      "end": 459,
+      "field_sha256": "25a87c22324e6736411095a596e7cc06a65e0bdd4f9a80ff5bceaf20ddbd2bfc",
+      "text_sha256": "f2f2480a3dcb1f822f5350bcba07c65bdd94723235bc54c03663cd3eaec5333c",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc21-readme-20250403",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_ReadMe.pdf",
+        "sha256": "61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb",
+        "publication_date": "2025-04-03",
+        "pdf_page": 1
+      }
+    },
+    {
+      "id": "B018",
+      "document": "pdf:cpc3-notes-20250630:63",
+      "field": "text",
+      "start": 326,
+      "end": 349,
+      "field_sha256": "bf58357466000969fa441692417aac01defd9ae0f889672110c75ee58a33219b",
+      "text_sha256": "5170897fece7fcc07280a08ee5b6c193548bc54cf093f6574b725bcd4c7c1272",
+      "role": "auxiliary_product_evidence",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "cpc3-notes-20250630",
+        "edition": "3.0",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+        "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+        "publication_date": "2025-06-30",
+        "pdf_page": 63
+      }
+    },
+    {
+      "id": "B019",
+      "document": "ISIC:Rev.4:1312",
+      "field": "notes.inclusion",
+      "start": 432,
+      "end": 491,
+      "field_sha256": "4c0e015aaa764251306cf511e95880b8a0cef6c4f8c8f942dafeead5f7ebab2d",
+      "text_sha256": "99ce73d81fd434b2ed83cc4b09b750f62b445caf7f78dcc9796dea20a1cd5fc6",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "1312"
+      }
+    },
+    {
+      "id": "B020",
+      "document": "ISIC:Rev.5:1312",
+      "field": "notes.includes_also",
+      "start": 103,
+      "end": 151,
+      "field_sha256": "204112024559ce21f0929dd86c46b4b9d6959af79377de7f12583a62d4855814",
+      "text_sha256": "dc937bd3c992619e7b60ee33a85c831f71fbf5ee5924f965ee4516a17cf7d3f5",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 127,
+        "range": "A127:G127"
+      }
+    },
+    {
+      "id": "B021",
+      "document": "ISIC:Rev.4:2790",
+      "field": "notes.inclusion",
+      "start": 862,
+      "end": 971,
+      "field_sha256": "5ed62361536478f87add9c0f6076bb4a0b571bf47f343fc0519863fefe7a79a2",
+      "text_sha256": "69847f6c25693339d5c86634b8cfa50006b9c714644041acd235b26133bb5b2d",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "2790"
+      }
+    },
+    {
+      "id": "B022",
+      "document": "ISIC:Rev.5:2790",
+      "field": "notes.includes",
+      "start": 899,
+      "end": 1008,
+      "field_sha256": "2182bb12b5b85a0d3d0290d73ef65e8439756cbb7b79b1971028cb7349904f23",
+      "text_sha256": "69847f6c25693339d5c86634b8cfa50006b9c714644041acd235b26133bb5b2d",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 257,
+        "range": "A257:G257"
+      }
+    },
+    {
+      "id": "B023",
+      "document": "ISIC:Rev.4:3250",
+      "field": "notes.inclusion",
+      "start": 449,
+      "end": 511,
+      "field_sha256": "28bd3e34f97032d2abce855e6451906d17a6140f93607de17a291e4e90ddc0cd",
+      "text_sha256": "5d00a116e711ff6d4bfa0ff057ef359ac0a2b3a87e7f812528965144b42a01e2",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "3250"
+      }
+    },
+    {
+      "id": "B024",
+      "document": "ISIC:Rev.5:3250",
+      "field": "notes.includes",
+      "start": 443,
+      "end": 504,
+      "field_sha256": "6ffe3471765f7d3cec7d75b8cf593011feae991f8109753157dc387dacf9bd38",
+      "text_sha256": "6b5af0e80dc3af0988729c47eccb25262bdcea5cffd433af668e93a286414bf8",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 313,
+        "range": "A313:G313"
+      }
+    },
+    {
+      "id": "B025",
+      "document": "ISIC:Rev.4:3290",
+      "field": "notes.inclusion",
+      "start": 407,
+      "end": 485,
+      "field_sha256": "2ace6a5554816191bcbd46a8139f5dcc64199707dafbb065d9a88792a7bcf0f4",
+      "text_sha256": "7ea35574b43fc7fa0c73c2adfaac797fe4b2fdc64321471e6b778fa071e973e1",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "3290"
+      }
+    },
+    {
+      "id": "B026",
+      "document": "ISIC:Rev.5:3290",
+      "field": "notes.includes",
+      "start": 400,
+      "end": 478,
+      "field_sha256": "4abb4ea9d85d4384dbd64080be855851c3cd86cd1d668afc7b3cf8b15a1e31bd",
+      "text_sha256": "7ea35574b43fc7fa0c73c2adfaac797fe4b2fdc64321471e6b778fa071e973e1",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 315,
+        "range": "A315:G315"
+      }
+    },
+    {
+      "id": "B027",
+      "document": "ISIC:Rev.5:3250",
+      "field": "notes.includes",
+      "start": 505,
+      "end": 581,
+      "field_sha256": "6ffe3471765f7d3cec7d75b8cf593011feae991f8109753157dc387dacf9bd38",
+      "text_sha256": "8b725e8342c1d26be4d3f4f076f16426f67dc404af1ccf50330dd930f77ae2a7",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 313,
+        "range": "A313:G313"
+      }
+    },
+    {
+      "id": "B028",
+      "document": "ISIC:Rev.5:3250",
+      "field": "notes.includes",
+      "start": 505,
+      "end": 581,
+      "field_sha256": "6ffe3471765f7d3cec7d75b8cf593011feae991f8109753157dc387dacf9bd38",
+      "text_sha256": "8b725e8342c1d26be4d3f4f076f16426f67dc404af1ccf50330dd930f77ae2a7",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 313,
+        "range": "A313:G313"
+      }
+    },
+    {
+      "id": "B029",
+      "document": "ISIC:Rev.5:3250",
+      "field": "notes.includes",
+      "start": 505,
+      "end": 581,
+      "field_sha256": "6ffe3471765f7d3cec7d75b8cf593011feae991f8109753157dc387dacf9bd38",
+      "text_sha256": "8b725e8342c1d26be4d3f4f076f16426f67dc404af1ccf50330dd930f77ae2a7",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic5-notes-20260819",
+        "edition": "Rev.5",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+        "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "publication_date": "2026-08-19",
+        "sheet": "ISIC5",
+        "row": 313,
+        "range": "A313:G313"
+      }
+    },
+    {
+      "id": "B030",
+      "document": "ISIC:Rev.4:1392",
+      "field": "notes.inclusion",
+      "start": 22,
+      "end": 124,
+      "field_sha256": "91632d4f9820e3c63ab2e244bad5e7eeb7f041f6dafaa95837ea3ffc6d89056e",
+      "text_sha256": "91d95f2c4657f9941a72a3e1f2f6c1791685372f2e9ae3cf5f7741152f4c3c90",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "1392"
+      }
+    },
+    {
+      "id": "B031",
+      "document": "ISIC:Rev.4:3250",
+      "field": "notes.inclusion",
+      "start": 449,
+      "end": 511,
+      "field_sha256": "28bd3e34f97032d2abce855e6451906d17a6140f93607de17a291e4e90ddc0cd",
+      "text_sha256": "5d00a116e711ff6d4bfa0ff057ef359ac0a2b3a87e7f812528965144b42a01e2",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "3250"
+      }
+    },
+    {
+      "id": "B032",
+      "document": "ISIC:Rev.4:3290",
+      "field": "notes.inclusion",
+      "start": 566,
+      "end": 592,
+      "field_sha256": "2ace6a5554816191bcbd46a8139f5dcc64199707dafbb065d9a88792a7bcf0f4",
+      "text_sha256": "912fd1ebbb3f3268b38cce3b27987797e9e937e022d88cc2797f25074be7b4b1",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "3290"
+      }
+    },
+    {
+      "id": "B033",
+      "document": "ISIC:Rev.4:2399",
+      "field": "notes.inclusion",
+      "start": 782,
+      "end": 871,
+      "field_sha256": "4f84f46dc3834050e13cbb65e6fc38ea75ace51f434868891d1270e164e2f22a",
+      "text_sha256": "0eae6886bf3a0f45ee394b68b189db2466699cad84e703e208caa7b1a7319953",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "2399"
+      }
+    },
+    {
+      "id": "B034",
+      "document": "ISIC:Rev.4:1312",
+      "field": "notes.inclusion",
+      "start": 432,
+      "end": 491,
+      "field_sha256": "4c0e015aaa764251306cf511e95880b8a0cef6c4f8c8f942dafeead5f7ebab2d",
+      "text_sha256": "99ce73d81fd434b2ed83cc4b09b750f62b445caf7f78dcc9796dea20a1cd5fc6",
+      "role": "inclusion",
+      "offset_unit": "unicode_codepoints_in_parsed_original_field",
+      "evidence": {
+        "resource_id": "isic4-database",
+        "edition": "Rev.4",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_database.zip",
+        "sha256": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "publication_date": null,
+        "table": "tblTitles_English_ISICRev4",
+        "key": "1312"
+      }
     }
   ],
   "statistics": {
-    "claims": 96,
-    "bounded_activities": 23,
-    "official_rows_reviewed": 15,
-    "complete_historical_components": 12,
+    "claims": 130,
+    "bounded_activities": 30,
+    "activity_review_status": {
+      "accepted_bounded_activity": 27,
+      "accepted_current_activity": 3
+    },
+    "official_rows_reviewed": 18,
+    "complete_historical_components": 15,
     "nontrivial_historical_components": 2,
     "mapping_origin_status": {
-      "official_row_review:accepted_scoped_overlap": 15,
+      "official_row_review:accepted_scoped_overlap": 18,
       "atlas_research_supplement:accepted_scoped_overlap": 6,
       "atlas_research_supplement:held_after_research": 2
     },

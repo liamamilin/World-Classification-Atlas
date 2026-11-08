@@ -4,7 +4,7 @@
 
 登记 50 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-18 个采集任务，16 个已锁定且通过格式检查，涉及 6 个来源；8 个资源可解析。
+22 个采集任务，20 个已锁定且通过格式检查，涉及 6 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
@@ -46,12 +46,18 @@
 | isic5-white-cover-2026 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 335} | 未统计 | — |
 | isic5-errata-2026 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 66} | 未统计 | — |
 | isic4-isic5-technical-note-20241025 | Rev.5 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 1} | 未统计 | — |
+| cpc21-manual-2015 | 2.1 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 618} | 未统计 | — |
+| cpc3-notes-20250630 | 3.0 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 534} | 未统计 | — |
+| cpc21-readme-20250403 | 2.1 | format_checked_only; economy: {'status': 'text_extracted', 'pages': 1} | 未统计 | — |
+| cpc21-notes-20250403 | 2.1 | format_checked_only; economy: {'status': 'selected_auxiliary_product_evidence', 'main_sheet_code_rows': 4144, 'selected_subclasses': 7, 'trade_template_rows_not_expanded': 72, 'use': 'auxiliary product evidence; not an economic-activity scheme or equivalence'} | 未统计 | — |
 
 经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 
-经济活动局部目录：107 个已审类范围锚点、118 个仅作导航的上级；138 条已审当前关系。所有605行仍保留原始版本和审查队列，详见 [扩展审查](isic-expanded-review.json)。上级导航不计作已审语义覆盖。
+经济活动局部目录：110 个已审类范围锚点、123 个仅作导航的上级；141 条已审当前关系。所有605行仍保留原始版本和审查队列，详见 [扩展审查](isic-expanded-review.json)。上级导航不计作已审语义覆盖。
 
-植物奶/食用冰/纺织/核燃料专项：23 个Atlas自有活动子节点，15 条官方行的活动范围审查；另有6 条已审研究补充和2 条待审研究候选。补充关系独立于官方表，见 [优先问题证据报告](isic-priority-review.json)。
+植物奶/食用冰/纺织/核燃料专项：30 个Atlas自有活动子节点，18 条官方行的活动范围审查；另有6 条已审研究补充和2 条待审研究候选。补充关系独立于官方表，见 [优先问题证据报告](isic-priority-review.json)。
+
+其中3个活动只审定Rev.5当前范围；7条待审来源关联与已审绑定分别索引，1个待审目录提案不计入已审节点。CPC产品说明和主要行业对应仅作旁证，见 [边界核查](isic-boundary-review.json)。
 
 节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。
 

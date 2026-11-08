@@ -372,5 +372,68 @@
       "status": "text_extracted",
       "pages": 1
     }
+  },
+  {
+    "resource_id": "cpc21-manual-2015",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "role": "manual_with_correspondence",
+    "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+    "path": "data/local/raw/UN_CPC/2.1/cpc21-manual-2015/f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f/cpc21-manual-2015.pdf",
+    "bytes": 5246612,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "text_extracted",
+      "pages": 618
+    }
+  },
+  {
+    "resource_id": "cpc3-notes-20250630",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "role": "explanatory_notes",
+    "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+    "path": "data/local/raw/UN_CPC/3.0/cpc3-notes-20250630/c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1/cpc3-notes-20250630.pdf",
+    "bytes": 2528601,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "text_extracted",
+      "pages": 534
+    }
+  },
+  {
+    "resource_id": "cpc21-readme-20250403",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "role": "corrections_notice",
+    "sha256": "61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb",
+    "path": "data/local/raw/UN_CPC/2.1/cpc21-readme-20250403/61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb/cpc21-readme-20250403.pdf",
+    "bytes": 73448,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "text_extracted",
+      "pages": 1
+    }
+  },
+  {
+    "resource_id": "cpc21-notes-20250403",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "role": "structure_and_explanatory_notes",
+    "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+    "path": "data/local/raw/UN_CPC/2.1/cpc21-notes-20250403/95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2/cpc21-notes-20250403.xlsx",
+    "bytes": 329146,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "selected_auxiliary_product_evidence",
+      "main_sheet_code_rows": 4144,
+      "selected_subclasses": 7,
+      "trade_template_rows_not_expanded": 72,
+      "use": "auxiliary product evidence; not an economic-activity scheme or equivalence"
+    }
   }
 ]

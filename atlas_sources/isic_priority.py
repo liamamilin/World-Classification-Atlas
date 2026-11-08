@@ -35,9 +35,11 @@ def resolve_claim(claim, documents):
 
 
 def validate_activity(activity, claims):
-    if activity["status"] != "accepted_bounded_activity":
+    if activity["status"] not in ("accepted_bounded_activity", "accepted_current_activity"):
         raise ValueError("only explicitly accepted bounded activities enter the directory")
     for binding in activity["source_bindings"]:
+        if not binding["node_id"].startswith(("ISIC:Rev.4:", "ISIC:Rev.5:")):
+            raise ValueError("product evidence cannot become an activity source binding")
         if binding["relation"] != "broadMatch":
             raise ValueError("an activity slice cannot be promoted to whole source-class equivalence")
         refs = [claims[c] for c in binding["claim_ids"]]
@@ -49,6 +51,10 @@ def validate_activity(activity, claims):
             raise ValueError(f"activity binding lacks source inclusion/allocation evidence: {activity['key']}")
     if not any(b["node_id"] == "ISIC:Rev.5:" + activity["parent_rev5_code"] for b in activity["source_bindings"]):
         raise ValueError("activity parent must be a cited current source class")
+    editions = {b["node_id"].split(":")[1] for b in activity["source_bindings"]}
+    expected = {"Rev.5"} if activity["status"] == "accepted_current_activity" else {"Rev.4", "Rev.5"}
+    if editions != expected:
+        raise ValueError("activity edition claims differ from its reviewed status")
 
 
 def validate_mapping(mapping, activities, official):
@@ -74,11 +80,14 @@ def validate_mapping(mapping, activities, official):
         raise ValueError("bounded evidence cannot remove a publisher question or identifier anomaly")
 
 
-def research(root, old, new, errata, edges, pdf_documents):
+def research(root, old, new, errata, edges, pdf_documents, auxiliary_documents=None):
     plan = read_json(root / "data/research/isic-priority-review.json")
+    from .isic_boundaries import extend_plan
+    plan = extend_plan(root, plan)
     documents = {n["id"]: n for n in old + new}
     documents.update({"erratum:" + n["code"]: n for n in errata})
     documents.update({f"pdf:{rid}:{p['pdf_page']}": p for rid, pages in pdf_documents.items() for p in pages})
+    documents.update(auxiliary_documents or {})
     observed = {d["evidence"]["resource_id"]: d["evidence"]["sha256"] for d in documents.values()}
     observed[edges[0]["evidence"]["resource_id"]] = edges[0]["evidence"]["sha256"]
     required_pins = {rows[0]["evidence"]["resource_id"] for rows in (old, new, edges)}
@@ -99,8 +108,12 @@ def research(root, old, new, errata, edges, pdf_documents):
         raise ValueError("duplicate bounded activity identity")
     for activity in activities.values():
         validate_activity(activity, claims)
-        if not {b["node_id"].split(":")[1] for b in activity["source_bindings"]} == {"Rev.4", "Rev.5"}:
-            raise ValueError("bounded cross-version activity requires both editions")
+        for binding in activity.get("candidate_source_bindings", []):
+            if (binding["relation"] is not None or binding["node_id"] not in documents or not binding["claim_ids"]
+                    or not binding["node_id"].startswith(("ISIC:Rev.4:", "ISIC:Rev.5:"))):
+                raise ValueError("candidate source cannot expose an approved relation or lack evidence")
+            if set(binding["claim_ids"]) - set(claims):
+                raise ValueError("unknown candidate source evidence")
     official = {(e["from_code"], e["to_code"]): e for e in edges}
     mappings, seen = [], set()
     for mapping in plan["mappings"]:
@@ -130,6 +143,7 @@ def research(root, old, new, errata, edges, pdf_documents):
         raise ValueError("priority review omitted historical companion rows")
     current = {n["code"]: n for n in new}
     anchors = {m["to_code"] for m in mappings if m["status"] == "accepted_scoped_overlap"}
+    anchors.update(a["parent_rev5_code"] for a in activities.values())
     needed = anchors | {p for code in anchors for p in ancestors(current[code], current)}
     if set(plan["atlas_identities"]) != needed:
         raise ValueError("priority identity registry differs from reviewed anchors")
@@ -149,8 +163,25 @@ def research(root, old, new, errata, edges, pdf_documents):
         if not issue["claim_ids"] or set(issue["claim_ids"]) - set(claims):
             raise ValueError("new issue lacks valid clause evidence")
         issue["evidence"] = [claims[c]["evidence"] for c in issue["claim_ids"]]
+    for proposal in plan.get("directory_proposals", []):
+        if proposal["status"] != "held_after_research" or proposal.get("source_bindings"):
+            raise ValueError("held directory proposal cannot expose approved source bindings")
+        if not proposal["claim_ids"] or set(proposal["claim_ids"]) - set(claims):
+            raise ValueError("directory proposal lacks valid evidence")
+        if any(p not in documents or not p.startswith("ISIC:Rev.5:") for p in proposal["candidate_parent_source_ids"]):
+            raise ValueError("proposal parent must be a current activity class")
+    boundary = plan.get("boundary_followup")
+    if boundary:
+        write_json(root / "data/reports/isic-boundary-review.json", {**boundary,
+                   "claims": [c for c in claims.values() if c["id"].startswith("B")],
+                   "statistics": {"claims": sum(c.startswith("B") for c in claims),
+                                  "new_activities": len(boundary["activities"]),
+                                  "current_only_activities": sum(a["status"] == "accepted_current_activity" for a in boundary["activities"]),
+                                  "official_row_reviews": len(boundary["mappings"]),
+                                  "issue_followups": len(boundary["issue_followups"])}})
     public = {**{k: v for k, v in plan.items() if k != "claims"}, "claims": list(claims.values()), "mappings": mappings,
               "statistics": {"claims": len(claims), "bounded_activities": len(activities),
+                             "activity_review_status": dict(Counter(a["status"] for a in activities.values())),
                              "official_rows_reviewed": len(reviewed_pairs), "complete_historical_components": len(groups),
                              "nontrivial_historical_components": sum(len(g) > 1 for g in groups),
                              "mapping_origin_status": dict(Counter(m["origin"] + ":" + m["status"] for m in mappings)),

@@ -376,5 +376,98 @@
       "license": "UN download terms; public redistribution unresolved",
       "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
     }
+  },
+  {
+    "id": "cpc21-manual-2015",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+    "filename": "cpc21-manual-2015.pdf",
+    "format": "pdf",
+    "role": "manual_with_correspondence",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "cpc3-notes-20250630",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+    "filename": "cpc3-notes-20250630.pdf",
+    "format": "pdf",
+    "role": "explanatory_notes",
+    "language": "en",
+    "publication_date": "2025-06-30",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "cpc21-readme-20250403",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_ReadMe.pdf",
+    "filename": "cpc21-readme-20250403.pdf",
+    "format": "pdf",
+    "role": "corrections_notice",
+    "language": "en",
+    "publication_date": "2025-04-03",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "cpc21-notes-20250403",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+    "filename": "cpc21-notes-20250403.xlsx",
+    "format": "xlsx",
+    "role": "structure_and_explanatory_notes",
+    "language": "en",
+    "publication_date": "2025-04-03",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    },
+    "metadata_corrections": [
+      {
+        "field": "role",
+        "previous": "explanatory_notes_with_correspondence",
+        "corrected": "structure_and_explanatory_notes",
+        "reviewed_on": "2026-11-08",
+        "reason": "实测XLSX主表只有代码、标题、包含和排除列；选取的CPC-ISIC行业对应来自PDF手册。首次manifest保留原登记，不改写原字节或采集历史。"
+      }
+    ]
   }
 ]

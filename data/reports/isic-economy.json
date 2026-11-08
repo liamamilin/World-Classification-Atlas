@@ -65,6 +65,34 @@
       "url": "https://unstats.un.org/unsd/classifications/Meetings/UNCEISC2024_2nd/Session_6_Bk_2_Technical_Note.pdf",
       "sha256": "187b5e1ac06e9755b673e1d4609efd61905a944be3d13ae6f756db29862f0970",
       "publication_date": "2024-10-25"
+    },
+    {
+      "resource_id": "cpc21-manual-2015",
+      "edition": "2.1",
+      "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+      "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+      "publication_date": null
+    },
+    {
+      "resource_id": "cpc21-notes-20250403",
+      "edition": "2.1",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+      "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+      "publication_date": "2025-04-03"
+    },
+    {
+      "resource_id": "cpc21-readme-20250403",
+      "edition": "2.1",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_ReadMe.pdf",
+      "sha256": "61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb",
+      "publication_date": "2025-04-03"
+    },
+    {
+      "resource_id": "cpc3-notes-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+      "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+      "publication_date": "2025-06-30"
     }
   ],
   "rev4": {
@@ -219,48 +247,51 @@
   "expanded_review": {
     "connected_components": 336,
     "nontrivial_components": 50,
-    "reviewed_cohorts": 50,
-    "reviewed_cases": 158,
+    "reviewed_cohorts": 53,
+    "reviewed_cases": 161,
     "reviewed_nontrivial_components": 38,
     "mapping_status": {
-      "reviewed_current_relation": 138,
-      "not_reviewed": 447,
+      "reviewed_current_relation": 141,
+      "not_reviewed": 444,
       "held_after_review": 20
     },
     "reviewed_relations": {
       "exactMatch": 3,
       "broadMatch": 9,
-      "relatedMatch": 104,
+      "relatedMatch": 107,
       "narrowMatch": 22
     },
-    "reviewed_rev4_classes": 77,
-    "reviewed_rev5_classes": 107,
-    "directory_nodes": 248,
+    "reviewed_rev4_classes": 80,
+    "reviewed_rev5_classes": 110,
+    "directory_nodes": 263,
     "directory_kinds": {
-      "source_derived_navigation": 118,
-      "reviewed_activity": 107,
-      "reviewed_activity_slice": 23
+      "source_derived_navigation": 123,
+      "reviewed_activity": 110,
+      "reviewed_activity_slice": 30
     },
-    "reviewed_source_bindings": 297,
-    "navigation_bindings": 118,
+    "reviewed_source_bindings": 314,
+    "navigation_bindings": 123,
+    "candidate_source_bindings": 7,
+    "current_only_activities": 3,
+    "held_directory_proposals": 1,
     "directory_integrity": {
-      "node_count": 248,
-      "unique_codes": 248,
+      "node_count": 263,
+      "unique_codes": 263,
       "duplicate_codes": [],
-      "edge_count": 231,
+      "edge_count": 246,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 17,
-        "2": 33,
-        "3": 68,
-        "4": 107,
-        "5": 23
+        "2": 35,
+        "3": 71,
+        "4": 110,
+        "5": 30
       },
       "roots": 17,
-      "leaves": 116,
-      "definitions": 248,
+      "leaves": 123,
+      "definitions": 263,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
@@ -275,9 +306,9 @@
     },
     "issues_by_status": {
       "resolved_for_research": 1,
-      "open": 17,
+      "open": 14,
       "addressed_in_research": 2,
-      "partially_addressed": 1
+      "partially_addressed": 4
     },
     "unresolved_issues": 20,
     "queue_rows": 605,
@@ -286,13 +317,17 @@
       "held_after_research": 2
     },
     "priority_review": {
-      "claims": 96,
-      "bounded_activities": 23,
-      "official_rows_reviewed": 15,
-      "complete_historical_components": 12,
+      "claims": 130,
+      "bounded_activities": 30,
+      "activity_review_status": {
+        "accepted_bounded_activity": 27,
+        "accepted_current_activity": 3
+      },
+      "official_rows_reviewed": 18,
+      "complete_historical_components": 15,
       "nontrivial_historical_components": 2,
       "mapping_origin_status": {
-        "official_row_review:accepted_scoped_overlap": 15,
+        "official_row_review:accepted_scoped_overlap": 18,
         "atlas_research_supplement:accepted_scoped_overlap": 6,
         "atlas_research_supplement:held_after_research": 2
       },
@@ -301,18 +336,28 @@
     }
   },
   "priority_review": {
-    "claims": 96,
-    "bounded_activities": 23,
-    "official_rows_reviewed": 15,
-    "complete_historical_components": 12,
+    "claims": 130,
+    "bounded_activities": 30,
+    "activity_review_status": {
+      "accepted_bounded_activity": 27,
+      "accepted_current_activity": 3
+    },
+    "official_rows_reviewed": 18,
+    "complete_historical_components": 15,
     "nontrivial_historical_components": 2,
     "mapping_origin_status": {
-      "official_row_review:accepted_scoped_overlap": 15,
+      "official_row_review:accepted_scoped_overlap": 18,
       "atlas_research_supplement:accepted_scoped_overlap": 6,
       "atlas_research_supplement:held_after_research": 2
     },
     "errata_findings": 11,
     "issue_followups": 4
+  },
+  "auxiliary_product_evidence": {
+    "main_sheet_code_rows": 4144,
+    "selected_subclasses": 7,
+    "trade_template_rows_not_expanded": 72,
+    "use": "auxiliary product evidence; not an economic-activity scheme or equivalence"
   },
   "rev4_readme_corrections": {
     "3830_exclusion_removes_metal_qualifier": true,
@@ -329,15 +374,17 @@
       "tabulate": "0.10.0"
     },
     "parser_sha256": {
-      "isic.py": "c2dbcce1dc27fa9338bb0b0690bfb078eed2e87eb45cc56eb652d7277a7502d3",
-      "isic_review.py": "f197baddf3148275598d4433c8dcdc79a2ec944e856ef07f09dc9a07938798c7",
-      "isic_priority.py": "02d381c4a6eff3492564c0c6890575aac920df71fb67d98686c4a7762d1a7e6d",
+      "isic.py": "e2605434c1329be3165c055ae35129b4873e6a094462961cb64de8022e787f75",
+      "isic_review.py": "499e9d9a0aaf446deaa64eb482b1bdb25b57867066f6cda83b64b99bdc31ee91",
+      "isic_priority.py": "c82f8758119023bd1d570157b78bb577978caa873e113d3798a615bc44b3c430",
+      "isic_boundaries.py": "003be7ca8c42c216ef8ffe82b779866e7bc0aceeb641f8e383e9cad53141d838",
       "xlsx.py": "c23f6876d392538ff6621a4ae04cb4070a880621b2bdf5eb8189af945115d4eb",
       "normalize.py": "a3f60df71eca8916a492ebc9fbc715eb254a35362d146f6f35406680a58f1192"
     },
     "review_decisions_sha256": "4b70c73367d86a67a40eb0cdcc8c0df23797a328b7dbdb8c2e52ba9e81fc22e4",
     "expanded_review_sha256": "72da016a2b5367dfad13e5d732fa0f783b350524ca2a38d8440045ed75a5f538",
-    "priority_review_sha256": "830e2652ce8b9b11d8d1d7d852278a3b8688bcdd2f9fb4b640bb1f017604a223"
+    "priority_review_sha256": "830e2652ce8b9b11d8d1d7d852278a3b8688bcdd2f9fb4b640bb1f017604a223",
+    "boundary_review_sha256": "cddb5954a8bd21bdc378d80de75231c8d730031b81beea9253e6bdd49e92dba3"
   },
   "pdfs": [
     {
@@ -362,6 +409,24 @@
       "resource_id": "isic4-isic5-technical-note-20241025",
       "pages": 1,
       "text_sha256": "2c802c695e418a64770680b5af8e2ba49030f29c0d4569a6d82848ad5c29c5ef",
+      "extractor": "pdftotext version 26.04.0"
+    },
+    {
+      "resource_id": "cpc21-manual-2015",
+      "pages": 618,
+      "text_sha256": "0cc98238ac7bead43a265c769460775511e921e92f75ce368cba0331d38ec9e9",
+      "extractor": "pdftotext version 26.04.0"
+    },
+    {
+      "resource_id": "cpc21-readme-20250403",
+      "pages": 1,
+      "text_sha256": "647e0c5ecc271747a0fa1e0611cf447b2ee0fa551f8b73b7360f9591c40568f8",
+      "extractor": "pdftotext version 26.04.0"
+    },
+    {
+      "resource_id": "cpc3-notes-20250630",
+      "pages": 534,
+      "text_sha256": "ffdd011a0e8c16b4b7c01733293bb56b3deff76e33c0e9c41ea9c2ea9d65d7ca",
       "extractor": "pdftotext version 26.04.0"
     }
   ],

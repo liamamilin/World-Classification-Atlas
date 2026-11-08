@@ -94,5 +94,29 @@
     "url": "https://unstats.un.org/unsd/classifications/Meetings/UNCEISC2024_2nd/Session_6_Bk_2_Technical_Note.pdf",
     "source_id": "ISIC",
     "edition": "Rev.5"
+  },
+  "cpc21-manual-2015": {
+    "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+    "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+    "source_id": "UN_CPC",
+    "edition": "2.1"
+  },
+  "cpc3-notes-20250630": {
+    "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+    "source_id": "UN_CPC",
+    "edition": "3.0"
+  },
+  "cpc21-readme-20250403": {
+    "sha256": "61a0f23785120c8574488677b8465e2a53ad3c3f2639ce744ba0cf2ad9979acb",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_ReadMe.pdf",
+    "source_id": "UN_CPC",
+    "edition": "2.1"
+  },
+  "cpc21-notes-20250403": {
+    "sha256": "95dcca76a0d94e281e4c3c82f53ee43331a707f9177ff5527733426189cdb7b2",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_2.1_Exp_Notes_Updated_3Apr2025.xlsx",
+    "source_id": "UN_CPC",
+    "edition": "2.1"
   }
 }

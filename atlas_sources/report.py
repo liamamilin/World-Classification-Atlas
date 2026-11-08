@@ -22,6 +22,9 @@ def build(root, registry, resources):
                       "isic5-notes-20260819": {"status": "notes_parsed", "nodes": economy["rev5"]["node_count"]},
                       "isic4-isic5-correspondence": {"status": "correspondence_parsed", "rows": economy["correspondence"]["rows"]}}
             stages.update({p["resource_id"]: {"status": "text_extracted", "pages": p["pages"]} for p in economy["pdfs"]})
+            if economy.get("auxiliary_product_evidence"):
+                stages["cpc21-notes-20250403"] = {"status": "selected_auxiliary_product_evidence",
+                    **economy["auxiliary_product_evidence"]}
             for row in integrity:
                 if row["resource_id"] in stages:
                     row["domain_stage"] = stages[row["resource_id"]]
@@ -46,6 +49,7 @@ def build(root, registry, resources):
                "economic_activity_research": ({"status": economy["status"], "report": "data/reports/isic-economy.json",
                                                 "curation": economy.get("curation"), "expanded_review": economy.get("expanded_review"),
                                                 "priority_review": economy.get("priority_review"),
+                                                "auxiliary_product_evidence": economy.get("auxiliary_product_evidence"),
                                                 "correspondence": economy.get("correspondence")}
                                                if economy else None),
                "counts_note": "Counts are per resource, not global concepts. O*NET CSV/CTDL overlap. ISIC has a separately counted reviewed subset; no instance links.",
@@ -80,6 +84,10 @@ def build(root, registry, resources):
                           f"{review['supplemental_mapping_status'].get('accepted_scoped_overlap', 0)} 条已审研究补充和"
                           f"{review['supplemental_mapping_status'].get('held_after_research', 0)} 条待审研究候选。"
                           "补充关系独立于官方表，见 [优先问题证据报告](isic-priority-review.json)。"]
+                lines += ["", f"其中{review.get('current_only_activities', 0)}个活动只审定Rev.5当前范围；"
+                          f"{review.get('candidate_source_bindings', 0)}条待审来源关联与已审绑定分别索引，"
+                          f"{review.get('held_directory_proposals', 0)}个待审目录提案不计入已审节点。"
+                          "CPC产品说明和主要行业对应仅作旁证，见 [边界核查](isic-boundary-review.json)。"]
     lines += ["", "节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。",
               "", "## 未决项（逐来源）", ""]
     for s in registry["sources"]:

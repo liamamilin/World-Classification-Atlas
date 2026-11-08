@@ -10,7 +10,7 @@ class Element {
   append(...children) { this.children.push(...children); }
   replaceChildren(...children) { this.children = [...children]; }
 }
-const elements = new Map(['data', 'edition', 'q', 'stats', 'detail', 'results', 'count'].map(id => [id, new Element(id)]));
+const elements = new Map(['data', 'edition', 'q', 'stats', 'detail', 'results', 'count', 'proposals'].map(id => [id, new Element(id)]));
 elements.get('data').textContent = payload;
 elements.get('edition').value = 'Atlas';
 const context = { document: { getElementById: id => elements.get(id), createElement: tag => new Element(tag) } };
@@ -53,3 +53,19 @@ context.select('ISIC:Rev.4:3530');
 assert.match(text(elements.get('detail')), /held_after_research/);
 assert.ok(!data.review.directory.some(n => n.atlas_label === '无调味直接食用水冰制造'), 'pending activity not promoted');
 console.log('Passed: bounded activity scope, clause evidence, separate supplement panel, unchanged official rows and held water-ice candidate.');
+const surgical = data.review.directory.find(n => n.atlas_label === '外科口罩制造（Rev.5范围）');
+assert.equal(surgical.source_bindings.length, 1);
+assert.equal(surgical.activity_review_status, 'accepted_current_activity');
+context.select(surgical.id);
+assert.match(text(elements.get('detail')), /仅Rev.5当前范围已审/);
+assert.match(text(elements.get('detail')), /待审来源/);
+assert.ok(!surgical.source_bindings.some(b => b.node_id.startsWith('ISIC:Rev.4:')));
+context.select('ISIC:Rev.4:2399');
+assert.match(text(elements.get('detail')), /待审活动来源关联/);
+const iceProposal = data.review.directory_proposals[0];
+assert.ok(!data.review.directory.some(n => n.id === iceProposal.id));
+context.select(iceProposal.id);
+assert.match(text(elements.get('detail')), /没有已批准的来源绑定/);
+assert.match(text(elements.get('detail')), /候选当前归属/);
+assert.ok(elements.get('proposals').children.length > 0);
+console.log('Passed: current-only masks, separate candidate reverse lookup, held directory proposal, no speculative old binding.');

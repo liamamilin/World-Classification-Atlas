@@ -1,0 +1,164 @@
+{
+  "statistics": {
+    "main_sheet_code_rows": 4144,
+    "selected_subclasses": 7,
+    "trade_template_rows_not_expanded": 72,
+    "use": "auxiliary product evidence; not an economic-activity scheme or equivalence"
+  },
+  "correspondences": [
+    {
+      "id": "CPC21-ISIC4:17400",
+      "product_code": "17400",
+      "industry_code": "3530",
+      "from_scheme": "CPC2.1",
+      "to_scheme": "ISIC Rev.4",
+      "origin": "official_manual_table",
+      "relation": null,
+      "semantic_equivalence": false,
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 56,
+        "line": 25,
+        "start": 1785,
+        "end": 1905,
+        "text_sha256": "9e156a1e92ac48df27fae711986da462626198bca0350ff613f15f46a7dd71c9"
+      }
+    },
+    {
+      "id": "CPC21-ISIC4:22270",
+      "product_code": "22270",
+      "industry_code": "1050",
+      "from_scheme": "CPC2.1",
+      "to_scheme": "ISIC Rev.4",
+      "origin": "official_manual_table",
+      "relation": null,
+      "semantic_equivalence": false,
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 62,
+        "line": 56,
+        "start": 5103,
+        "end": 5224,
+        "text_sha256": "1145ea9c61881b7bbff120a1fb606110dc7cf17b919a134e29dfe19fa3603363"
+      }
+    },
+    {
+      "id": "CPC21-ISIC4:26890",
+      "product_code": "26890",
+      "industry_code": "1312",
+      "from_scheme": "CPC2.1",
+      "to_scheme": "ISIC Rev.4",
+      "origin": "official_manual_table",
+      "relation": null,
+      "semantic_equivalence": false,
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 68,
+        "line": 14,
+        "start": 941,
+        "end": 1065,
+        "text_sha256": "d16d0762439b2f829af2c74b2de1ed368e19ef3f7829d4841f53d23f2e8bbc56"
+      }
+    },
+    {
+      "id": "CPC21-ISIC4:27190",
+      "product_code": "27190",
+      "industry_code": "1392",
+      "from_scheme": "CPC2.1",
+      "to_scheme": "ISIC Rev.4",
+      "origin": "official_manual_table",
+      "relation": null,
+      "semantic_equivalence": false,
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 68,
+        "line": 37,
+        "start": 3038,
+        "end": 3162,
+        "text_sha256": "9b0d5d648b271e934e5ac2df0b9e3a756b7bad23bd1e063d1d2314763f43e578"
+      }
+    },
+    {
+      "id": "CPC21-ISIC4:37990",
+      "product_code": "37990",
+      "industry_code": "2399",
+      "from_scheme": "CPC2.1",
+      "to_scheme": "ISIC Rev.4",
+      "origin": "official_manual_table",
+      "relation": null,
+      "semantic_equivalence": false,
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 87,
+        "line": 36,
+        "start": 2742,
+        "end": 2859,
+        "text_sha256": "43597654dc580ecff93da7e06ff278930046de051e2c02f0203feb424bebb8fe"
+      }
+    },
+    {
+      "id": "CPC21-ISIC4:46950",
+      "product_code": "46950",
+      "industry_code": "2790",
+      "from_scheme": "CPC2.1",
+      "to_scheme": "ISIC Rev.4",
+      "origin": "official_manual_table",
+      "relation": null,
+      "semantic_equivalence": false,
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 111,
+        "line": 51,
+        "start": 3883,
+        "end": 3996,
+        "text_sha256": "c7bcb6c74d452f04663ec6da1c191633f8e7d7f8145d5483486429722381c36f"
+      }
+    },
+    {
+      "id": "CPC21-ISIC4:48160",
+      "product_code": "48160",
+      "industry_code": "3250",
+      "from_scheme": "CPC2.1",
+      "to_scheme": "ISIC Rev.4",
+      "origin": "official_manual_table",
+      "relation": null,
+      "semantic_equivalence": false,
+      "evidence": {
+        "resource_id": "cpc21-manual-2015",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
+        "sha256": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "publication_date": null,
+        "pdf_page": 114,
+        "line": 29,
+        "start": 2179,
+        "end": 2299,
+        "text_sha256": "733e12587e5cb5ea35835578ac3a451f0698ebcf1826b2fc92a21abbdfb0b50e"
+      }
+    }
+  ]
+}

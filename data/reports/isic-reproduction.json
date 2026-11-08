@@ -9,7 +9,7 @@
     },
     {
       "path": "data/atlas/economy/reviewed-directory-index.json",
-      "sha256": "6dde153e2d78685039461cc2c9adea3915713a7e3b0ed0ffc20a7b5af8135290",
+      "sha256": "89db399c5c53eb9cf9df0655b01d0727591da91682585bdba8403ea5f387cc99",
       "identical": true
     },
     {
@@ -28,13 +28,43 @@
       "identical": true
     },
     {
+      "path": "data/local/economy/isic/cpc21-isic4-selected-correspondence.json",
+      "sha256": "fa7c1d0873d113796032c3054e20865b064c73b2b70f3dee1b227b02e1a3ab0e",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/cpc21-manual-2015-pages.jsonl",
+      "sha256": "447335b0ee1fed8953b15dd77a63e781286978bd013df6d452d8c645a1d1755a",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/cpc21-readme-20250403-pages.jsonl",
+      "sha256": "a526e109d21ea6f469ec5fd8e8f410c3719f4cc024fab4236d0c6d902619fd93",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/cpc21-selected-evidence.json",
+      "sha256": "c11741f238c3626eabe1ea044437a7c8218f8436ce16b1afe1950dce5e57ea23",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/cpc21-source-workbook.json",
+      "sha256": "52b9dbdfed46d431b180b43925ac7e7147e77d4ded022db1b696ee981bd7dcf8",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/cpc3-notes-20250630-pages.jsonl",
+      "sha256": "f5453077645ffabfe9d95e4176dd5fbff42d4da8d00a690e8aff9146948f79a7",
+      "identical": true
+    },
+    {
       "path": "data/local/economy/isic/errata-review-dossiers.json",
       "sha256": "369e63476f74b05c15edb46daed4c19d078be19ed6652240ee7eac8b2a1a2da3",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/index.html",
-      "sha256": "441c28c5ba89406682ba32ef9eeaa97481e69a553a65162a83c60d89602a0e5d",
+      "sha256": "b3bbe93c0877a1d049e3dc3f6ec8ffec38779de47610b9287ade084e720c61c5",
       "identical": true
     },
     {
@@ -59,12 +89,12 @@
     },
     {
       "path": "data/local/economy/isic/mapping-review-queue.json",
-      "sha256": "509cea9b6bb48641c28ac5c854f6865a2497c7e55f75b1f48ac18fbcf08b51b5",
+      "sha256": "9742f6b4c87eab236c759ea5569c27254bd8f0b504704f96a2d21ed340da07fb",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/priority-evidence-dossiers.json",
-      "sha256": "d0cd85dec25157b73614ea8f73bc24558fd17f9de16880a2e565533afc761f88",
+      "sha256": "9b4aaf18aadb3fe07163f52690e78eb54062c489aef65b8f082e4bc9341fb15c",
       "identical": true
     },
     {
@@ -94,7 +124,7 @@
     },
     {
       "path": "data/local/economy/isic/review-dossiers.json",
-      "sha256": "31303d2af064f6c2da890b40477e38d015a7d59d7ccf169ed66c019651539158",
+      "sha256": "424e5ed5727b3680a0913a8a14bce549036f767af7f96919a50347c565dc7032",
       "identical": true
     },
     {
@@ -104,12 +134,12 @@
     },
     {
       "path": "data/local/economy/isic/reviewed-directory.json",
-      "sha256": "a4a093e7bf9abd8445c949801483ded9fddb9fc654f9e4d146778e5096c7bbd8",
+      "sha256": "ef83ee5dfb65049753871fb7e75a04d41a3b4ab7bf081c7fd7b086bec6bd43cf",
       "identical": true
     },
     {
       "path": "data/local/economy/isic/reviewed-source-to-atlas.json",
-      "sha256": "ed344aa66ab2ca25c0e132432e0224dde187e6d7aee689e8448e66bf778568e4",
+      "sha256": "7089b25586dcc3ca85395b33553b8bf41ad740ada1d06df4a1635f8264401e78",
       "identical": true
     },
     {
@@ -118,18 +148,28 @@
       "identical": true
     },
     {
+      "path": "data/reports/cpc-boundary-evidence.json",
+      "sha256": "3cfe99a6fed3461fc4e953db14ade058769493e955cd4079f2d134ab1a333cce",
+      "identical": true
+    },
+    {
+      "path": "data/reports/isic-boundary-review.json",
+      "sha256": "150cce1ff81427a9d00ea0e283d56e6ef52d846bf7f5feca07de8739ad784c62",
+      "identical": true
+    },
+    {
       "path": "data/reports/isic-economy.json",
-      "sha256": "c6af6f75931a3a82b67ed7f8327dd1f00cbd3baaac1042d07451b272564eb887",
+      "sha256": "e8107f289901d6ebc4c41e29e1f6599449adf7cfa6dc632fd419a0a538d2ae5c",
       "identical": true
     },
     {
       "path": "data/reports/isic-expanded-review.json",
-      "sha256": "126ca410b26a5cebc9c56eba78dd2cf180c1d0564ad133061627e4b8861b4ea4",
+      "sha256": "1fe1aff113fbdcbe270a5ddf6ab350a281e6f092a0b2c3bddf70b5d2ef7d016b",
       "identical": true
     },
     {
       "path": "data/reports/isic-priority-review.json",
-      "sha256": "de0b124285b79d3242b283a6317437455f28a369b82d44377fae19117e75db44",
+      "sha256": "d1befd975ea5429e8cfc90e92b5047ddc059fcf674e33e3d1551307463558ecb",
       "identical": true
     },
     {
@@ -138,6 +178,6 @@
       "identical": true
     }
   ],
-  "compared_files": 27,
-  "identical_files": 27
+  "compared_files": 35,
+  "identical_files": 35
 }

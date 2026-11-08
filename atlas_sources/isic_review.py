@@ -243,6 +243,8 @@ def review(root, edges, old, new, errata, previous, legacy_concepts, priority=No
                             for m in supplements if m["status"] == "accepted_scoped_overlap"]
     all_approved = approved + accepted_supplements
     anchors = {c["to_code"] for c in all_approved}
+    if priority:
+        anchors.update(a["parent_rev5_code"] for a in priority["activities"])
     needed = anchors | {p for code in anchors for p in ancestors(new_by[code], new_by)}
     if set(identities) != needed or len(set(identities.values())) != len(identities):
         raise ValueError("Atlas identity registry differs from reviewed directory spine")
@@ -281,12 +283,18 @@ def review(root, edges, old, new, errata, previous, legacy_concepts, priority=No
                               "source_bindings": [{**b, "role": "bounded_activity_evidence", "evidence": (old_by if b["node_id"].startswith("ISIC:Rev.4:") else new_by)[b["node_id"].split(":")[-1]]["evidence"]} for b in activity["source_bindings"]],
                               "label": activity["label"], "definition": activity["scope"],
                               "atlas_label": activity["label"], "atlas_scope": activity["scope"],
+                              "activity_review_status": activity["status"],
+                              "historical_scope_status": activity.get("historical_scope_status", "bounded_cross_version_evidence"),
+                              "candidate_source_bindings": activity.get("candidate_source_bindings", []),
                               "scope_limit": "Atlas-authored activity slice, not equivalence to an entire official class"})
-    reverse = defaultdict(list)
+    reverse, candidates = defaultdict(list), defaultdict(list)
     for node in directory:
         for binding in node["source_bindings"]:
             reverse[binding["node_id"]].append({"atlas_id": node["id"], "relation_atlas_to_source": binding["relation"],
                                                  "role": binding["role"]})
+        for binding in node.get("candidate_source_bindings", []):
+            candidates[binding["node_id"]].append({"atlas_id": node["id"], "relation": None,
+                                                     "status": binding["status"], "claim_ids": binding["claim_ids"]})
     directory_qa = qa([{"code": n["id"], "parents": n["parents"], "definition": n["definition"]} for n in directory])
     if any(directory_qa[k] for k in ("duplicate_codes", "orphan_parents", "self_links", "cycles")):
         raise ValueError("reviewed directory integrity failed")
@@ -300,6 +308,9 @@ def review(root, edges, old, new, errata, previous, legacy_concepts, priority=No
              "directory_kinds": dict(Counter(n["kind"] for n in directory)),
              "reviewed_source_bindings": sum(b["relation"] is not None for n in directory for b in n["source_bindings"]),
              "navigation_bindings": sum(b["relation"] is None for n in directory for b in n["source_bindings"]),
+             "candidate_source_bindings": sum(len(n.get("candidate_source_bindings", [])) for n in directory),
+             "current_only_activities": sum(n.get("activity_review_status") == "accepted_current_activity" for n in directory),
+             "held_directory_proposals": len(priority.get("directory_proposals", [])) if priority else 0,
              "directory_integrity": directory_qa,
              "errata_effect": dict(Counter(e["effect"] for e in note_reviews)),
              "errata_text_agreement": dict(Counter(e["text_agreement"] for e in note_reviews)),
@@ -310,7 +321,7 @@ def review(root, edges, old, new, errata, previous, legacy_concepts, priority=No
     public_nodes = [{k: v for k, v in n.items() if k not in ("label", "definition")} for n in directory]
     public = {"scheme_id": plan["scheme_id"], "classification_object": "economic activities",
               "status": "reviewed_research_subset", "binding_direction": "Atlas to source",
-              "concepts": public_nodes, "source_to_atlas": dict(reverse), "statistics": stats,
+              "concepts": public_nodes, "source_to_atlas": dict(reverse), "source_to_candidates": dict(candidates), "statistics": stats,
               "labels_and_definitions": "Resolved locally from pinned source snapshots; redistribution rights unresolved."}
     write_json(root / "data/atlas/economy/reviewed-directory-index.json", public)
     write_json(root / "data/reports/isic-expanded-review.json", {"statistics": stats, "cohorts": cohorts,
@@ -324,4 +335,5 @@ def review(root, edges, old, new, errata, previous, legacy_concepts, priority=No
     write_json(output / "errata-review-dossiers.json", local_notes)
     return {"statistics": stats, "directory": directory, "cases": cases, "queue": queue,
             "errata_reviews": note_reviews, "issues": conflicts, "supplemental_mappings": supplements,
-            "priority_research": priority}
+            "priority_research": priority, "source_to_candidates": dict(candidates),
+            "directory_proposals": priority.get("directory_proposals", []) if priority else []}
