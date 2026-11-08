@@ -1,0 +1,39 @@
+id,domain,scheme,classification_object,official_url,verification_status
+ISIC,01-economy,ISIC,economic activities,https://unstats.un.org/unsd/classifications/,candidate
+NAICS,01-economy,NAICS,economic activities,https://www.census.gov/naics/,candidate
+NACE,01-economy,NACE,economic activities,https://ec.europa.eu/eurostat/ramon/,candidate
+GBT4754,01-economy,GB/T 4754,economic activities,https://www.stats.gov.cn/,candidate
+UN_CPC,02-products,CPC Central Product Classification,products and services,https://unstats.un.org/unsd/classifications/,candidate
+HS,02-products,HS,traded goods,https://www.wcoomd.org/,candidate
+UNSPSC,02-products,UNSPSC,procurement goods and services,https://www.undp.org/unspsc,candidate
+ECLASS,02-products,eCl@ss,products and services,https://eclass.eu/,candidate
+COICOP,03-consumption,COICOP,household consumption purpose,https://unstats.un.org/unsd/classifications/,candidate
+COFOG,03-consumption,COFOG,government functions,https://unstats.un.org/unsd/classifications/,candidate
+COPNI,03-consumption,COPNI,nonprofit purposes,https://unstats.un.org/unsd/classifications/,candidate
+FORD,04-knowledge,OECD FORD,research fields,https://www.oecd.org/,candidate
+ISCED_F,04-knowledge,ISCED-F,education fields,https://uis.unesco.org/,candidate
+LCC,04-knowledge,LCC,library subjects,https://www.loc.gov/,candidate
+DDC,04-knowledge,DDC,library subjects,https://www.oclc.org/,candidate
+ISCO,05-occupations,ISCO,occupations,https://www.ilo.org/,candidate
+ESCO,05-occupations,ESCO,occupations and skills,https://esco.ec.europa.eu/,candidate
+ONET,05-occupations,O*NET,occupations tasks and skills,https://www.onetcenter.org/database.html,candidate
+IPC,06-technology,IPC,patent invention classes,https://ipcpub.wipo.int/,candidate
+PATENT_CPC,06-technology,CPC Cooperative Patent Classification,patent invention classes,https://www.cooperativepatentclassification.org/,candidate
+ACM_CCS,06-technology,ACM CCS,computing topics,https://dl.acm.org/ccs,candidate
+ICD11,07-health,ICD-11,diseases and related conditions,https://icd.who.int/,candidate
+ICF,07-health,ICF,functioning disability and health,https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health,candidate
+ATC,07-health,ATC,medicinal substances,https://www.who.int/tools/atc-ddd-toolkit,candidate
+SNOMED,07-health,SNOMED CT,clinical terminology,https://www.snomed.org/,candidate
+COL,08-biodiversity,Catalogue of Life,taxa,https://www.catalogueoflife.org/,candidate
+GBIF,08-biodiversity,GBIF Backbone Taxonomy,taxa,https://www.gbif.org/,candidate
+NCBI_TAX,08-biodiversity,NCBI Taxonomy,taxa,https://www.ncbi.nlm.nih.gov/taxonomy,candidate
+M49,09-geography,UN M49,countries and regions,https://unstats.un.org/unsd/methodology/m49/,candidate
+ISO3166,09-geography,ISO 3166,countries and subdivisions,https://www.iso.org/,candidate
+SEEA,10-environment,SEEA,environmental accounting assets and flows,https://seea.un.org/,candidate
+FAO_LCCS,10-environment,FAO LCCS,land cover,https://www.fao.org/,candidate
+LEGAL_TOPICS,11-governance,Legal subject classification TBD,legal subjects,https://www.loc.gov/,candidate
+GETTY_AAT,12-culture,Getty AAT,art and architecture concepts,https://www.getty.edu/research/tools/vocabularies/,candidate
+ISCED,13-education,ISCED,education levels,https://uis.unesco.org/en/topic/international-standard-classification-education-isced,candidate
+SNA_SECTORS,14-organizations,SNA Institutional Sectors,institutional sectors,https://unstats.un.org/unsd/nationalaccount/,candidate
+ICNPO,14-organizations,ICNPO,nonprofit organizations,https://unstats.un.org/unsd/classifications/,candidate
+ICATUS,15-activities,ICATUS,time use activities,https://unstats.un.org/unsd/classifications/,candidate
