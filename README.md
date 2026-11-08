@@ -37,6 +37,7 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 - [实测采集与领域覆盖](data/reports/coverage.md)
 - [2026-11-08 执行记录、失败与未决问题](docs/08-EXECUTION-REPORT-2026-11-08.md)
 - [ISIC 定义、注释、官方对应与经济活动研究](docs/09-ISIC-ECONOMIC-ACTIVITIES.md)
+- [ISIC 拆分、合并、2026 勘误审查与目录扩展实测](docs/10-ISIC-REVIEW-AND-DIRECTORY.md)
 - [原始分类体系候选清单（机器可读）](data/source-candidates.csv)
 - [Codex 项目协作说明](AGENTS.md)
 
@@ -46,7 +47,9 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 
 已实现内容寻址采集、版本/URL/哈希锁定、许可分流、变化检测、源结构解析、QA 和本地来源浏览。真实采集覆盖 6 个来源、16 个文件。基础适配器可解析8个结构资源；经济活动专项另解析两版ISIC完整注释和605行官方对应。O*NET 原始及解析数据依 CC BY 4.0 入库；UNSD完整资料和衍生说明因再分发条件未确认仍留在本地。
 
-ISIC Rev.4 的419个类、Rev.5 的463个类均有官方说明；原始层级、五项Rev.4数据库更正、50项Rev.5注释更新、拆分/合并/转移、部分对应和发布者问号都可追溯。14个案例已研究，形成3个稳定研究概念和6条双向来源关联；完整自有统一目录仍在逐领域整理中。
+ISIC Rev.4 的419个类、Rev.5 的463个类均有官方说明；原始层级、五项Rev.4数据库更正、50项Rev.5注释更新、拆分/合并/转移、部分对应和发布者问号都可追溯。现有143条对应的逐条审查记录，其中123条批准当前关系、20条审后暂缓，其余462条保留待审。已审关系含89条相关、22条窄向、9条宽向和3条等价，不能混称为123条等价。
+
+自有经济活动局部目录有93个Rev.5范围锚定的已审活动、102个来源骨架导航上级，保留之前3个概念ID和逐项来源反查。已初审全部50项2026勘误：6项补丁未增加范围影响，44项仍需活动级分配研究；18项公开问题保留，包含4处主表/更新说明差异。导航上级不计入已审语义覆盖，完整统一目录仍在逐领域整理中。
 
 ```sh
 python3 -m atlas_sources validate
@@ -62,6 +65,8 @@ open data/reports/registry.html
 ```sh
 python3 -m pip install -r requirements-isic.txt --target data/local/deps
 python3 -m atlas_sources economy
+python3 -m atlas_sources reproduce-economy
+node scripts/check_economy_view.js
 open data/local/economy/isic/index.html
 ```
 

@@ -14,6 +14,7 @@ from .acquire import check_payload, sha256, snapshot_dir
 from .normalize import qa, table_nodes
 from .registry import read_json, write_json
 from .xlsx import read_workbook
+from .isic_review import review
 
 NAMESPACE = uuid.UUID("b61f81d8-409b-4faf-8c02-62311fc6b833")
 REQUIRED = ("isic4-structure", "isic5-structure", "isic4-database", "isic4-manual-2008",
@@ -339,6 +340,7 @@ def run(root, resources):
             raise ValueError("errata contains unknown codes")
         edges, crosswalk_book = parse_correspondence(assets["isic4-isic5-correspondence"], old, new, errata)
         reviewed, concepts = curate(root, edges, old, new)
+        expanded = review(root, edges, old, new, errata, reviewed, concepts)
         # Full source text and complete derived correspondence stay local while redistribution is unresolved.
         write_jsonl(output / "rev4-nodes.jsonl", old)
         write_jsonl(output / "rev5-nodes-20260819.jsonl", new)
@@ -361,7 +363,8 @@ def run(root, resources):
                     "source_to_atlas": dict(reverse_index),
                     "labels_and_definitions": "Resolved from local source snapshots; not republished while source rights remain unresolved."})
         template = (Path(__file__).parent / "economy_view.html").read_text(encoding="utf-8")
-        payload = json.dumps({"old": old, "new": new, "edges": edges, "errata": errata, "concepts": concepts}, ensure_ascii=False).replace("<", "\\u003c")
+        payload = json.dumps({"old": old, "new": new, "edges": edges, "errata": errata, "concepts": concepts,
+                              "review": expanded}, ensure_ascii=False).replace("<", "\\u003c")
         (output / "index.html").write_text(template.replace("__ECONOMY_DATA__", payload), encoding="utf-8")
         pdfs = []
         tool_version = subprocess.check_output(["pdftotext", "-v"], stderr=subprocess.STDOUT).decode().splitlines()[0]
@@ -389,11 +392,13 @@ def run(root, resources):
                  "rev5_errata_records": len(errata), "rev5_errata_codes": [r["code"] for r in errata],
                  "curation": {"reviewed_cases": reviewed["reviewed_cases"], "reviewed_concepts": len(concepts),
                               "source_bindings": len(reverse_index), "held_cases": sum(c["decision"] == "hold" for c in reviewed["cases"])},
+                 "expanded_review": expanded["statistics"],
                  "rev4_readme_corrections": database["readme_correction_checks"],
                  "reproducibility": {"python": sys.version.split()[0],
                                      "packages": {p: version(p) for p in ("access-parser", "construct", "tabulate")},
-                                     "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("isic.py", "xlsx.py", "normalize.py")},
-                                     "review_decisions_sha256": sha256((root / "data/research/isic-review-decisions.json").read_bytes())},
+                                     "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("isic.py", "isic_review.py", "xlsx.py", "normalize.py")},
+                                     "review_decisions_sha256": sha256((root / "data/research/isic-review-decisions.json").read_bytes()),
+                                     "expanded_review_sha256": sha256((root / "data/research/isic-expanded-review.json").read_bytes())},
                  "pdfs": pdfs, "outputs": {"local_directory": str(output.relative_to(root))},
                  "automatic_concept_merges": 0,
                  "limits": ["UN raw data and full derived notes/mappings are local-only pending redistribution rights.",

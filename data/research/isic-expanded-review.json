@@ -1,0 +1,3273 @@
+{
+  "scheme_id": "urn:atlas:scheme:economic-activities-alignment",
+  "classification_object": "economic activities",
+  "reviewer": "Codex source-evidence review",
+  "reviewed_on": "2026-11-08",
+  "scope": "Rev.5 scope anchors with selected reviewed Rev.4 correspondences; navigational ancestors explicitly unreviewed as cross-edition concepts",
+  "reviewed_input_sha256": {
+    "isic4-isic5-correspondence": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+    "isic5-notes-20260819": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+    "isic4-database": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4"
+  },
+  "cohorts": [
+    {
+      "id": "ISIC-COMPONENT-0113",
+      "title": "蔬菜与香料转移",
+      "rationale": "新0113明确纳入辣椒，旧0128明确包含该活动；同码0113还涉及糖用甜菜种子说明变化，保留接收与剩余范围差异。",
+      "edges": [
+        {
+          "from_code": "0113",
+          "to_code": "0113",
+          "relation": "broadMatch",
+          "rationale": "0113>0113：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "1353aa2270506f0d8d03ce5eecf52b58cd727abc6645ab834023e7e29f96498b"
+        },
+        {
+          "from_code": "0128",
+          "to_code": "0128",
+          "relation": "relatedMatch",
+          "rationale": "0128>0128：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "720f8fb70e39ee6b0683eba0a49e18e23f4a5130f4d4e992c871fa753f4ef100"
+        },
+        {
+          "from_code": "0128",
+          "to_code": "0113",
+          "relation": "relatedMatch",
+          "rationale": "0128>0113：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "8c609be4116fd37f3755e1730e5c5e5647cc720078cdfe79c974e9b67acb6fff"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-0146",
+      "title": "禽类转移",
+      "rationale": "旧0149其他鸟类中的鹌鹑转入新0146；新0146明确列入鹌鹑及蛋。014组2026寄养排除不增加本转移的范围变化；其他动物的新增排除仍不推成完整包含。",
+      "edges": [
+        {
+          "from_code": "0146",
+          "to_code": "0146",
+          "relation": "broadMatch",
+          "rationale": "0146>0146：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "70bdfd6500cdb566b7728a63338bfa25e953720f575ab9c257c799a970b2fc92"
+        },
+        {
+          "from_code": "0149",
+          "to_code": "0149",
+          "relation": "relatedMatch",
+          "rationale": "0149>0149：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "063f1bd4c8a5800c989e53ff32c021758e8b57504af6333f85f3e4330271b7fc"
+        },
+        {
+          "from_code": "0149",
+          "to_code": "0146",
+          "relation": "relatedMatch",
+          "rationale": "0149>0146：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "d72f7b275082615a075ae1c5aa194fac9300df109a293335a10b72b4f6d76ee0"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-0311",
+      "title": "渔业支持分出",
+      "rationale": "官方从四个捕捞和养殖类分出0330。新0330还明确鱼护等支持，旧0311却把巡视保护排到8423；只确认对应支持活动的相关性，不据出入度证明整类包含。",
+      "edges": [
+        {
+          "from_code": "0311",
+          "to_code": "0311",
+          "relation": "relatedMatch",
+          "rationale": "0311>0311：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "545c5ca1ad729eaf6bcc12f7b39ba917f639558e3562163126d33fbdd75f9545"
+        },
+        {
+          "from_code": "0311",
+          "to_code": "0330",
+          "relation": "relatedMatch",
+          "rationale": "0311>0330：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "77cd3bc8632e37b9f9a5e41492a24d3bccb47ba77b2386d93b17f18535581665"
+        },
+        {
+          "from_code": "0312",
+          "to_code": "0312",
+          "relation": "relatedMatch",
+          "rationale": "0312>0312：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "1d8e607db6f811552cba98d39f55e4d5ca3d732146e7d9b1f08c0a2495be78ac"
+        },
+        {
+          "from_code": "0312",
+          "to_code": "0330",
+          "relation": "relatedMatch",
+          "rationale": "0312>0330：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "1be3633982ff72b1d3c6a683fb7a886e02a738a889d5eb3dc0ff7261dcf672e4"
+        },
+        {
+          "from_code": "0321",
+          "to_code": "0321",
+          "relation": "relatedMatch",
+          "rationale": "0321>0321：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "338ffb2acecdf89b79f5810b87b9b8cf9e257bc092c3f61c87438ab40c2c43ab"
+        },
+        {
+          "from_code": "0321",
+          "to_code": "0330",
+          "relation": "relatedMatch",
+          "rationale": "0321>0330：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "e45564f281ea6714bebd5d2ffc14b7e4c63f1761ab70be255f7a9cda3cb2d255"
+        },
+        {
+          "from_code": "0322",
+          "to_code": "0322",
+          "relation": "relatedMatch",
+          "rationale": "0322>0322：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "735ffb244dba1edeaea45a9c307c2f14ea051c51bf324effb4ad55394751d36f"
+        },
+        {
+          "from_code": "0322",
+          "to_code": "0330",
+          "relation": "relatedMatch",
+          "rationale": "0322>0330：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "daff467bf978a21b83f6529862b5f8a6b878e2ec115d192d1f3604509e702770"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-1103",
+      "title": "啤酒与麦芽分出",
+      "rationale": "旧1103同时列入麦芽酒及麦芽，新1103保留啤酒，新1104明确麦芽制造并排除麦芽酒。新1104是复用码，不能与旧1104饮料类合并。",
+      "edges": [
+        {
+          "from_code": "1103",
+          "to_code": "1103",
+          "relation": "narrowMatch",
+          "rationale": "1103>1103：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "5a14ede9857ce9fce35b0003c556790499dd44cc53b02bf8616f732f35667682"
+        },
+        {
+          "from_code": "1103",
+          "to_code": "1104",
+          "relation": "narrowMatch",
+          "rationale": "1103>1104：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "fd06484fabb83de689f290859f51ab194b452601757c617a1a8cca23d72d8733"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-2610",
+      "title": "电子元件分解",
+      "rationale": "旧2610分为太阳能元件与其他元件；2619保留元件清单并明确排除2611。2611还列光伏逆变器，而旧2610排除整机，未证明其完整包含，仅保留相关。",
+      "edges": [
+        {
+          "from_code": "2610",
+          "to_code": "2611",
+          "relation": "relatedMatch",
+          "rationale": "2610>2611：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "e171f65750c31be9a4371fa34e50aa906889b8d81f4bdcd7c7c56cd7b7839085"
+        },
+        {
+          "from_code": "2610",
+          "to_code": "2619",
+          "relation": "narrowMatch",
+          "rationale": "2610>2619：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "dbee056fcc8d9275fd1bf07c64f57c87e9e6cbcd3b78975e63bf1ff748974c5c"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-3100",
+      "title": "家具材料分解",
+      "rationale": "旧3100涵盖木制及其他家具和床垫；新3101按框架或主要材料界定木制家具，3102排除木竹并包含床垫。两去向保持独立，均仅对应旧类部分。",
+      "edges": [
+        {
+          "from_code": "3100",
+          "to_code": "3101",
+          "relation": "narrowMatch",
+          "rationale": "3100>3101：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "9e6f139655d6e776026188edba0e131bafa6d5646cfa3ef88eda1fd4064e0c49"
+        },
+        {
+          "from_code": "3100",
+          "to_code": "3102",
+          "relation": "narrowMatch",
+          "rationale": "3100>3102：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "f86c7fe166c0524a0b29e83c202ac665fc8176d9ceb71f24a417e04567191250"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-3510",
+      "title": "电力分解与能源经纪汇合",
+      "rationale": "3511/3512分别对应旧3510明确的非再生及再生发电。3513新列储能和充电，3520新列储气；3540同时接收电气经纪，后三者只证实重叠而不宣称完整包含。",
+      "edges": [
+        {
+          "from_code": "3510",
+          "to_code": "3511",
+          "relation": "narrowMatch",
+          "rationale": "3510>3511：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "a2031a79bdebd037ca2b6a3c5e49d23f57faed06a09d550283906717bc1d62ff"
+        },
+        {
+          "from_code": "3510",
+          "to_code": "3512",
+          "relation": "narrowMatch",
+          "rationale": "3510>3512：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "a5129d233111acd6185a065fb98f10dda99ce6b4c6a0f95246aef4c3fdf2833b"
+        },
+        {
+          "from_code": "3510",
+          "to_code": "3513",
+          "relation": "relatedMatch",
+          "rationale": "3510>3513：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "250fcef7f1d1b9c7dea0fdd204c57c4ca797680e4d564ca6a70a44b075e07875"
+        },
+        {
+          "from_code": "3510",
+          "to_code": "3540",
+          "relation": "relatedMatch",
+          "rationale": "3510>3540：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "dd798227fadc70a16c4474aa805235137c005434e2d938a50bb66611ec8dc09f"
+        },
+        {
+          "from_code": "3520",
+          "to_code": "3520",
+          "relation": "relatedMatch",
+          "rationale": "3520>3520：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "c25a620aad2236586209013ad08afdd0052a1f32e2e85b0cbec500d3349d5b2b"
+        },
+        {
+          "from_code": "3520",
+          "to_code": "3540",
+          "relation": "relatedMatch",
+          "rationale": "3520>3540：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "56c41bc2833b6b5bc061218d11e0b0f7a5e0fd87dc65631c95c54f92857107eb"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-4311",
+      "title": "专业建筑中介分出",
+      "rationale": "七个专业建筑类分出中介进入4340；4340明确不提供所中介的施工。旧各类说明主要记施工本身，故对中介及剩余类仅保留经官方对应证明的相关关系。F上级措辞更正已单独审查。",
+      "edges": [
+        {
+          "from_code": "4311",
+          "to_code": "4311",
+          "relation": "relatedMatch",
+          "rationale": "4311>4311：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "e186a3e7b41411f8209ae28912b8448b026dd78ccb1d1dda79ad4617f5052b4b"
+        },
+        {
+          "from_code": "4311",
+          "to_code": "4340",
+          "relation": "relatedMatch",
+          "rationale": "4311>4340：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "503326a44b9f57163ff10b8edfae68d8cbbf778039dc99a7df7371524bd0f0ff"
+        },
+        {
+          "from_code": "4312",
+          "to_code": "4312",
+          "relation": "relatedMatch",
+          "rationale": "4312>4312：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "f098114f0a215afe721817112e4b1ef815d56bdd3f172c94bde074f63dfc12e4"
+        },
+        {
+          "from_code": "4312",
+          "to_code": "4340",
+          "relation": "relatedMatch",
+          "rationale": "4312>4340：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "77e8080943dfdc872c0b19ce2b825460d114a6ca72e9f264aac367855c99ac1a"
+        },
+        {
+          "from_code": "4321",
+          "to_code": "4321",
+          "relation": "relatedMatch",
+          "rationale": "4321>4321：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "05480a953e2498bdf2b2da3f9842a6b73737ef3ff584665d17815a110bdab7d9"
+        },
+        {
+          "from_code": "4321",
+          "to_code": "4340",
+          "relation": "relatedMatch",
+          "rationale": "4321>4340：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "74027d3e2f8776b54aa363ea85f245bb0408e416acabbef4d7d9182a65a18538"
+        },
+        {
+          "from_code": "4322",
+          "to_code": "4322",
+          "relation": "relatedMatch",
+          "rationale": "4322>4322：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "3b8bc4abae10f4957d274b98dc3c42dc9d01a20e0e0cbbc634755809fd7c3c12"
+        },
+        {
+          "from_code": "4322",
+          "to_code": "4340",
+          "relation": "relatedMatch",
+          "rationale": "4322>4340：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "1cabb8ffb7da28590d2896a6aadc25ccf24a02d25890fea56eac3d91a8d966f1"
+        },
+        {
+          "from_code": "4329",
+          "to_code": "4329",
+          "relation": "relatedMatch",
+          "rationale": "4329>4329：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "b345e2f3c85c67bb39da63e08985857db6d36f03fe2da7324ee4f886d4363201"
+        },
+        {
+          "from_code": "4329",
+          "to_code": "4340",
+          "relation": "relatedMatch",
+          "rationale": "4329>4340：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "9e7af3d84173e27e9ca6c2b997e21ea5d6edc24a28956309715abc829627de98"
+        },
+        {
+          "from_code": "4330",
+          "to_code": "4330",
+          "relation": "relatedMatch",
+          "rationale": "4330>4330：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "d9b3d02edb9d844944390faf5a39a5d98d8137cdfd3a1b0d5b2b1d4c74e62600"
+        },
+        {
+          "from_code": "4330",
+          "to_code": "4340",
+          "relation": "relatedMatch",
+          "rationale": "4330>4340：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "8b09e6ebab0e0807600382fbce72648ebc7a9eac5482f52d546ae288f0997b4e"
+        },
+        {
+          "from_code": "4390",
+          "to_code": "4390",
+          "relation": "relatedMatch",
+          "rationale": "4390>4390：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "f464250d024f33a71ff117a256786e92b9646b4fa08893c84ab91c6ae069223f"
+        },
+        {
+          "from_code": "4390",
+          "to_code": "4340",
+          "relation": "relatedMatch",
+          "rationale": "4390>4340：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "e77f36bb9ee6d3c6f7aaa3dff0a4c3f4d88ff551e5d14e9773b2176b37db4566"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-5310",
+      "title": "邮政快递中介分出",
+      "rationale": "官方从5310/5320分出5330；新5330明确第三方中介、订送餐平台而排除直接送餐。旧5310普遍服务义务及新平台范围不能直接视为包含。",
+      "edges": [
+        {
+          "from_code": "5310",
+          "to_code": "5310",
+          "relation": "relatedMatch",
+          "rationale": "5310>5310：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "86626c1c66a33087870ff6b5e35ced8859159c3bc6278edac102a299076b15c1"
+        },
+        {
+          "from_code": "5310",
+          "to_code": "5330",
+          "relation": "relatedMatch",
+          "rationale": "5310>5330：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "0ff0cf8c7704df56d4a9d4a9cec216fcd810f19a0a93a701caf56b2b92989f0d"
+        },
+        {
+          "from_code": "5320",
+          "to_code": "5320",
+          "relation": "relatedMatch",
+          "rationale": "5320>5320：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "38aa04a90384b238f878fab8695499c756f1e78a3cbd82e827a6adf2f8fb9533"
+        },
+        {
+          "from_code": "5320",
+          "to_code": "5330",
+          "relation": "relatedMatch",
+          "rationale": "5320>5330：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "231d1cd9e064346a72fb445ab1aa187156287ca0dc39227d67f9fa0e79d299b3"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-5510",
+      "title": "住宿对应描述冲突",
+      "rationale": "保留整个连通分量七行：5590两行描述写目的5530而目标列是5590/5540；5510描述又称既有类为新兴类。当前5540包含预约和分时交换，须先厘清分配依据。",
+      "edges": [
+        {
+          "from_code": "5510",
+          "to_code": "5510",
+          "relation": null,
+          "rationale": "5510>5510：描述冲突，保留整组待审，不分配当前关系。",
+          "reviewed_fingerprint": "25ad987c63fd4d72836b8bc5428e5ba8bd19956688f0892a0ab9ad2726e84465"
+        },
+        {
+          "from_code": "5510",
+          "to_code": "5520",
+          "relation": null,
+          "rationale": "5510>5520：描述冲突，保留整组待审，不分配当前关系。",
+          "reviewed_fingerprint": "b07dc58f1608be5f6a6d855e405d4a91c6905997e560e55a43dfbe4d3917ea26"
+        },
+        {
+          "from_code": "5510",
+          "to_code": "5540",
+          "relation": null,
+          "rationale": "5510>5540：描述冲突，保留整组待审，不分配当前关系。",
+          "reviewed_fingerprint": "e415c67dccb740525ff3e6bda99e2d84503e38a3b183cc485e76786fa609f6e4"
+        },
+        {
+          "from_code": "5520",
+          "to_code": "5530",
+          "relation": null,
+          "rationale": "5520>5530：描述冲突，保留整组待审，不分配当前关系。",
+          "reviewed_fingerprint": "0b01e2a5528781f4b8e8cd429b18bc3ffd13c701ffbef3c280e1ed282a5a8131"
+        },
+        {
+          "from_code": "5520",
+          "to_code": "5540",
+          "relation": null,
+          "rationale": "5520>5540：描述冲突，保留整组待审，不分配当前关系。",
+          "reviewed_fingerprint": "72e26bdbc2010b2ec54f113dc19c9c9580f7f93f55b9505d786e6e9822ffa2e5"
+        },
+        {
+          "from_code": "5590",
+          "to_code": "5590",
+          "relation": null,
+          "rationale": "5590>5590：描述冲突，保留整组待审，不分配当前关系。",
+          "reviewed_fingerprint": "dc603220f19efc6d5948d84245eb4fd588aea010e47608e7369ab246f717b280"
+        },
+        {
+          "from_code": "5590",
+          "to_code": "5540",
+          "relation": null,
+          "rationale": "5590>5540：描述冲突，保留整组待审，不分配当前关系。",
+          "reviewed_fingerprint": "a8d462f68fbdbc3e87b33bd5dc8f6269a8d5f326ef11786a9889aedd00a5dfbc"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-5610",
+      "title": "餐饮中介分出",
+      "rationale": "四个餐饮类分出5640；新5640明确餐厅预约但排除订送餐平台至5330。官方表支持关系，不能把所有中介当作旧餐饮服务的已证完整子集。",
+      "edges": [
+        {
+          "from_code": "5610",
+          "to_code": "5610",
+          "relation": "relatedMatch",
+          "rationale": "5610>5610：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "d9d6803d990f26f650341f8efdcae4083a149fadf6a204547606203bc04eb8be"
+        },
+        {
+          "from_code": "5610",
+          "to_code": "5640",
+          "relation": "relatedMatch",
+          "rationale": "5610>5640：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "819994832a62c0970e27995b6126635d46091012b35f5ce11c989f54a8e12a17"
+        },
+        {
+          "from_code": "5621",
+          "to_code": "5621",
+          "relation": "relatedMatch",
+          "rationale": "5621>5621：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "de9664ffc095bfa21d65047cf915ee4a6977bc6448cd252841b93210c61b1a22"
+        },
+        {
+          "from_code": "5621",
+          "to_code": "5640",
+          "relation": "relatedMatch",
+          "rationale": "5621>5640：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "3a005b54c73e0c8ca4a277902ab2c9a209df7ea66ff6c7660bdfade6586bdf79"
+        },
+        {
+          "from_code": "5629",
+          "to_code": "5629",
+          "relation": "relatedMatch",
+          "rationale": "5629>5629：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "b443cf35d545f1d8dd1f86c307007bb91b5c2a35aa02c81d7eb3e5bf4771e206"
+        },
+        {
+          "from_code": "5629",
+          "to_code": "5640",
+          "relation": "relatedMatch",
+          "rationale": "5629>5640：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "931aeca5574dd4acacf10278abac95c46b6f9b48b9d71d3742f03981b35efd5e"
+        },
+        {
+          "from_code": "5630",
+          "to_code": "5630",
+          "relation": "relatedMatch",
+          "rationale": "5630>5630：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "f11e08c403ff5a3c55cab51691d03e4e68aace5d0c70b971e046883d19735b04"
+        },
+        {
+          "from_code": "5630",
+          "to_code": "5640",
+          "relation": "relatedMatch",
+          "rationale": "5630>5640：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "2da21fc0feb883d3d9c1a265fe0b508e8e844280f8eb4fb7c75bc108fd3e5872"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-5812",
+      "title": "目录出版并入",
+      "rationale": "旧5812目录及邮寄名单、旧5819其他出版均在新5819逐项出现；新类更宽，保留两个旧类，逐条记向宽类的对应，绝不把两旧类标为等价。",
+      "edges": [
+        {
+          "from_code": "5812",
+          "to_code": "5819",
+          "relation": "broadMatch",
+          "rationale": "5812>5819：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "71e16c45578d65e012b21d92ffe16fa0d29bd63d9892f70b8027bab78948f048"
+        },
+        {
+          "from_code": "5819",
+          "to_code": "5819",
+          "relation": "broadMatch",
+          "rationale": "5819>5819：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "63e42c502c4243ad8a9d46fcdd129b07e063b142edc38a1197db3903ee74d109"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-5813",
+      "title": "报纸期刊分出",
+      "rationale": "旧5813明确同时出版报纸、期刊及节目表；新5812报纸与新5813期刊分开，出版媒介不改变此划分；旧5812另并到5819，复用码不等价。",
+      "edges": [
+        {
+          "from_code": "5813",
+          "to_code": "5812",
+          "relation": "narrowMatch",
+          "rationale": "5813>5812：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "7589eb05934a8ecbc02194baae1212b3510ec43cbde550b2ef4939b9332bda20"
+        },
+        {
+          "from_code": "5813",
+          "to_code": "5813",
+          "relation": "narrowMatch",
+          "rationale": "5813>5813：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "3642822f85ee95d81a2c13354aeb91e952b2526116c33647ae0fe7ed40f4ae7d"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-5820",
+      "title": "软件出版分解",
+      "rationale": "旧5820包括游戏、系统及应用出版；新5821/5829分别列游戏和其他软件，但加入中介和市场等条目。支持活动有重叠，完整新范围未证实包含于旧类。",
+      "edges": [
+        {
+          "from_code": "5820",
+          "to_code": "5821",
+          "relation": "relatedMatch",
+          "rationale": "5820>5821：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "0934f40266faa1ff635f60604e865c37d6cc9f23cb986001a6c27a89ba583505"
+        },
+        {
+          "from_code": "5820",
+          "to_code": "5829",
+          "relation": "relatedMatch",
+          "rationale": "5820>5829：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "0292f5f4e80eee05dd4b7d3a611ae13763734e6fab7ee41cd02469ad79f65b56"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-6110",
+      "title": "电信多对多重组",
+      "rationale": "旧有线、无线、卫星运营与转售中介重新分配到6110/6120，旧6190保留部分。当前6190仍列VOIP而6110/6120也按是否运营设施分列；保留多对多相关，不用同码推等价。",
+      "edges": [
+        {
+          "from_code": "6110",
+          "to_code": "6110",
+          "relation": "relatedMatch",
+          "rationale": "6110>6110：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "bfba4dc378f06c473becba0c772b8a872419c2415f225e4e5539a7c45b1c6813"
+        },
+        {
+          "from_code": "6110",
+          "to_code": "6120",
+          "relation": "relatedMatch",
+          "rationale": "6110>6120：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "1aed1c1187244fcad8784a95274b02c7430aa987fd89534a848fbb1808a76980"
+        },
+        {
+          "from_code": "6120",
+          "to_code": "6110",
+          "relation": "relatedMatch",
+          "rationale": "6120>6110：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "886b49eedf800de38ab05ab900a7e5ac7694567ddb8200f3577c40ecfd1bc692"
+        },
+        {
+          "from_code": "6120",
+          "to_code": "6120",
+          "relation": "relatedMatch",
+          "rationale": "6120>6120：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "edfb1c5104e22902cf6859658ea865f3e5d949fe33603b7f3f343977c8d3936e"
+        },
+        {
+          "from_code": "6130",
+          "to_code": "6110",
+          "relation": "relatedMatch",
+          "rationale": "6130>6110：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "5f6f9be8d4d7c24457cbf699ec099a36bab5ef4566e7f263971e2b0d52d41969"
+        },
+        {
+          "from_code": "6130",
+          "to_code": "6120",
+          "relation": "relatedMatch",
+          "rationale": "6130>6120：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "426943a21393394d070c6eb6a0a507a492dbcecce032a796394a9c4ede0c3a84"
+        },
+        {
+          "from_code": "6190",
+          "to_code": "6190",
+          "relation": "relatedMatch",
+          "rationale": "6190>6190：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "3e94653fc47c354e3a2a04cef57bd5a3fd1732048e4764d9f367bf5e657942d9"
+        },
+        {
+          "from_code": "6190",
+          "to_code": "6120",
+          "relation": "relatedMatch",
+          "rationale": "6190>6120：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "85a138554385977d617f8f97856d98a7caa73d6a3e736efce038ce2110e93317"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-6201",
+      "title": "程序开发分解",
+      "rationale": "旧6201软件编写、修改、测试、支持覆盖游戏及其他程序；新6211游戏开发与6219其他编程分别排除出版，并相互区分。按官方分解记录旧部分至新完整类。",
+      "edges": [
+        {
+          "from_code": "6201",
+          "to_code": "6211",
+          "relation": "narrowMatch",
+          "rationale": "6201>6211：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "5be0db2b475ad0f0fc76a75e3137b589f63f0e9a720240ad419299c9d7379af6"
+        },
+        {
+          "from_code": "6201",
+          "to_code": "6219",
+          "relation": "narrowMatch",
+          "rationale": "6201>6219：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "063b313dd9305d9b9e9b7444c00a56d14e6912536cb14acf14ac9976eec05112"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-6420",
+      "title": "控股与融资渠道分出",
+      "rationale": "官方将6420分出6422，但旧定义只明确控制股权持有，新6422为集团筹融资及内部贷款；未证实完整包含，两个对应均保留相关而非自动窄化。",
+      "edges": [
+        {
+          "from_code": "6420",
+          "to_code": "6421",
+          "relation": "relatedMatch",
+          "rationale": "6420>6421：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "562d20f7bdc407d37cb7b4a878a205914262acb935b1689c9f57dfdfb1ce5bac"
+        },
+        {
+          "from_code": "6420",
+          "to_code": "6422",
+          "relation": "relatedMatch",
+          "rationale": "6420>6422：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "8ec266c2010cdd2ed7d2da479bb365a337151374db5fd55771dfed867f3152c0"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-6430",
+      "title": "基金信托分解",
+      "rationale": "官方分出货币基金、非货币基金、信托账户。新6432包括非金融资产，新6433增非控股持股及风险公司条目；旧金融资产定义不足以证明所有新范围包含，保留相关。",
+      "edges": [
+        {
+          "from_code": "6430",
+          "to_code": "6431",
+          "relation": "relatedMatch",
+          "rationale": "6430>6431：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "3459d0285af8f94a9932e0dc30a4aea04d2a0f831b30363c96e651a6ccc7b4fc"
+        },
+        {
+          "from_code": "6430",
+          "to_code": "6432",
+          "relation": "relatedMatch",
+          "rationale": "6430>6432：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "da50cfb2583e1a9abf353e813a9c6f0b79151b2b1b8018ff807f233c583467d4"
+        },
+        {
+          "from_code": "6430",
+          "to_code": "6433",
+          "relation": "relatedMatch",
+          "rationale": "6430>6433：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "54da2b0e20a9e67ea49ea770354e6605a105faa951b3e950e70d31258fd25c99"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-6492",
+      "title": "信贷及贸易融资分出",
+      "rationale": "旧6492明确国际贸易融资和其他放贷，新6492复用为贸易融资，新6495保留其他信贷。新6492金融支持并附其他服务，6495新增并购短期融资；保守记录重叠。",
+      "edges": [
+        {
+          "from_code": "6492",
+          "to_code": "6492",
+          "relation": "relatedMatch",
+          "rationale": "6492>6492：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "91ce7a27575f831b74c3f7b33d4b9fcaf00c5c6a3a15af5709d2aa24a1803120"
+        },
+        {
+          "from_code": "6492",
+          "to_code": "6495",
+          "relation": "relatedMatch",
+          "rationale": "6492>6495：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "07fb6da9531b9c6cdc690c6ddf9793bbc533ce853ce2a514ac788f48a6d41c5f"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-6499",
+      "title": "保理证券化分出",
+      "rationale": "旧6499明确保理，新6493仅购买应收款并排除抵押融资，支持旧部分至新完整类。新6494证券化和6499加密等条目超出旧明确列举，不证明完整包含。",
+      "edges": [
+        {
+          "from_code": "6499",
+          "to_code": "6493",
+          "relation": "narrowMatch",
+          "rationale": "6499>6493：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "469f6e8415883b631e08e9a87286f4095a3092cd735dadcbd255ea6f887c88a0"
+        },
+        {
+          "from_code": "6499",
+          "to_code": "6494",
+          "relation": "relatedMatch",
+          "rationale": "6499>6494：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "c5f6e2ef2bbfdc84efc1b446fa4074d11da8e84ff00fc96967deabf6ea9b92b8"
+        },
+        {
+          "from_code": "6499",
+          "to_code": "6499",
+          "relation": "relatedMatch",
+          "rationale": "6499>6499：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "d61c0ffc4875345b2412f655b670e3afbe4baaae459b9b4b646cd776110bfc2f"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-6820",
+      "title": "房地产中介与其他代理分解",
+      "rationale": "旧6820明确买卖出租中介、管理、评估及托管；新6821中介与6829管理评估托管分列并保留法律和设施支持排除，支持旧类分解而不合并新类。",
+      "edges": [
+        {
+          "from_code": "6820",
+          "to_code": "6821",
+          "relation": "narrowMatch",
+          "rationale": "6820>6821：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "0e0be40316b38501245bb8606286807f0e4fdb43feec67781364fdc051d26da1"
+        },
+        {
+          "from_code": "6820",
+          "to_code": "6829",
+          "relation": "narrowMatch",
+          "rationale": "6820>6829：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "aaa6a9ef611516be5ce57084194bc58e066f711394f142b4eeb4921869096959"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-7020",
+      "title": "公共关系分出",
+      "rationale": "旧7020含公共关系和沟通，新7330单列；但新7330还列推广代表，7020新增职业安全咨询且双方对游说仍有不同表述。确认相关，完整范围分配待后续。",
+      "edges": [
+        {
+          "from_code": "7020",
+          "to_code": "7020",
+          "relation": "relatedMatch",
+          "rationale": "7020>7020：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "3b04f36350558429fb266657d4cb0af61447514c8e7aa21cd621ac42fc85b607"
+        },
+        {
+          "from_code": "7020",
+          "to_code": "7330",
+          "relation": "relatedMatch",
+          "rationale": "7020>7330：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "46c0f70717e70c8fed5803df9acdb894a890f4c63e0d95475246b32fa049be51"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-7710",
+      "title": "车辆租赁中介分出",
+      "rationale": "官方分出7751；新7751范围为汽车房车拖车中介及预约，新7710车辆范围也细化。旧类说明并未明确所有中介，保留相关，不据图形证明全包含。",
+      "edges": [
+        {
+          "from_code": "7710",
+          "to_code": "7710",
+          "relation": "relatedMatch",
+          "rationale": "7710>7710：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "5c96a426216c5d0a660393e056e8a8b6e127b718fba3a31814935d33cf5f3d49"
+        },
+        {
+          "from_code": "7710",
+          "to_code": "7751",
+          "relation": "relatedMatch",
+          "rationale": "7710>7751：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "c3240ca8e2fb3359c8fb17728342a739aeecaf1af136569c210465d63842fbaa"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-7721",
+      "title": "家用租赁合并及中介分出",
+      "rationale": "旧7722影音载体租赁在新7729明确保留，与旧7729合并；新7752同时服务多种有形及无形资产，不能视为任一旧类的完整子集。",
+      "edges": [
+        {
+          "from_code": "7721",
+          "to_code": "7721",
+          "relation": "relatedMatch",
+          "rationale": "7721>7721：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "29a5cd48d0624ca682676b3e4e1626066276539725c861a1e96dc7639b0d4fb1"
+        },
+        {
+          "from_code": "7721",
+          "to_code": "7752",
+          "relation": "relatedMatch",
+          "rationale": "7721>7752：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "a53195fddd20f96a40c2452cc38e6900ffe8c802da2c4e5c07f4361debc2456d"
+        },
+        {
+          "from_code": "7722",
+          "to_code": "7729",
+          "relation": "broadMatch",
+          "rationale": "7722>7729：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "9eb409082eee979a5b91131aa1a182b05a3803b6b7956566c1b55a92cb4de48c"
+        },
+        {
+          "from_code": "7729",
+          "to_code": "7729",
+          "relation": "relatedMatch",
+          "rationale": "7729>7729：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "483ef0d45b316b656002ee85fef4b57311cee50b21b81661b5830357f55199af"
+        },
+        {
+          "from_code": "7729",
+          "to_code": "7752",
+          "relation": "relatedMatch",
+          "rationale": "7729>7752：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "201608e9223626cd439434fcaa8c40eb3880f31ff439abd9c0f929fd1a0ab895"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-7820",
+      "title": "人力提供合并",
+      "rationale": "旧7820临时人力和7830较长期人力均是雇主但不监督客户现场工作；新7820两段明确保留两种供给。各旧类指向更宽新类，旧身份保持独立。",
+      "edges": [
+        {
+          "from_code": "7820",
+          "to_code": "7820",
+          "relation": "broadMatch",
+          "rationale": "7820>7820：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "310097f821be0b9e2b0b1889446ddc429d935606033107d27b77f621d3a78cf9"
+        },
+        {
+          "from_code": "7830",
+          "to_code": "7820",
+          "relation": "broadMatch",
+          "rationale": "7830>7820：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "2ae044d2f273169a8cf376a6d182e49fb13adcdd7d350bbcd36eccaa9c5642f1"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-8010",
+      "title": "安保调查合并",
+      "rationale": "旧8030调查活动在新8011明确保留，可作为更宽对应；旧8010还列测谎指纹等而新8011增加销毁和分出咨询，旧安保整范围未证明，保留相关。",
+      "edges": [
+        {
+          "from_code": "8010",
+          "to_code": "8011",
+          "relation": "relatedMatch",
+          "rationale": "8010>8011：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "329f94d3e63767935544baa1c342221374e5b584422dd07007773871b09b1c93"
+        },
+        {
+          "from_code": "8030",
+          "to_code": "8011",
+          "relation": "broadMatch",
+          "rationale": "8030>8011：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "9ef602c67731f31cc1edcc5bf89720b82659b27e0c81032e920b951358eb69b6"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-8211",
+      "title": "办公服务合并",
+      "rationale": "旧8211组合行政与新8210组合行政段落对应，新类较宽。旧8219虽有文件复制清单，但新8210既含自助复印又在打印排除中提复印，完整边界需澄清，仅记录重叠。",
+      "edges": [
+        {
+          "from_code": "8211",
+          "to_code": "8210",
+          "relation": "broadMatch",
+          "rationale": "8211>8210：旧端在新端中保留，新端范围更宽；保留其他来源。",
+          "reviewed_fingerprint": "a31999f0f67afb61c63376a085066a377ff4948909fc7c6f696b9e0e88fa3bfe"
+        },
+        {
+          "from_code": "8219",
+          "to_code": "8210",
+          "relation": "relatedMatch",
+          "rationale": "8219>8210：文件准备等活动重叠已证；新类复印包含与打印排除并列，整旧类包含未证明。",
+          "reviewed_fingerprint": "9167e9fcc37fb64a79673c0c08fb7e679ee63db9dde91bc846d3af9f4d32f978"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-8412",
+      "title": "环境监管分出",
+      "rationale": "旧8412公共福祉监管包含环境及其研发、饮水废物项目；新8412去环境，8413单列环境监管，且明确排除实际处理和自然保护区运营。两条均为旧部分。",
+      "edges": [
+        {
+          "from_code": "8412",
+          "to_code": "8412",
+          "relation": "narrowMatch",
+          "rationale": "8412>8412：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "bd8c5a8cbe70022e32377effab4b2aea1d76678dba3596946d9bcb2230fe2e7c"
+        },
+        {
+          "from_code": "8412",
+          "to_code": "8413",
+          "relation": "narrowMatch",
+          "rationale": "8412>8413：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "837107dec789c12d2f342ac3af87c1c242f85180d0f2862ced9711c838eaba16"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-8510",
+      "title": "学前与小学分出",
+      "rationale": "旧8510明确包括学前、小学和成人识字；新8510学前与8520小学分列，后者保留成人小学识字，托幼活动仍排除8890。复用码不继承旧范围。",
+      "edges": [
+        {
+          "from_code": "8510",
+          "to_code": "8510",
+          "relation": "narrowMatch",
+          "rationale": "8510>8510：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "59f7f79394005014188e92c25329a4f4f7822fbbebb53902f37ff59063eafdc4"
+        },
+        {
+          "from_code": "8510",
+          "to_code": "8520",
+          "relation": "narrowMatch",
+          "rationale": "8510>8520：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "f5dfac0521fb2f138d1508068d9463d7fb33e7fd9cfb4612c1afdccc529b3df5"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-8710",
+      "title": "住宿照护中介分出",
+      "rationale": "四个照护旧类将中介部分分到8791，新8791明确不提供所中介照护。旧源主要列实际照护设施；中介跨越四类，只证实对应相关性。",
+      "edges": [
+        {
+          "from_code": "8710",
+          "to_code": "8710",
+          "relation": "relatedMatch",
+          "rationale": "8710>8710：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "4685676102d92181497b92920c734fdf8fae604cacee317dccf0681d9dc23f93"
+        },
+        {
+          "from_code": "8710",
+          "to_code": "8791",
+          "relation": "relatedMatch",
+          "rationale": "8710>8791：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "467e89188e6a5e1877c761dded3495e357d0421ecc16c7167873d9cc74c620a7"
+        },
+        {
+          "from_code": "8720",
+          "to_code": "8720",
+          "relation": "relatedMatch",
+          "rationale": "8720>8720：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "7af1dcc6aa56b0d3aff88eb9a6036ed663755e4a0702344414f9e842335ca746"
+        },
+        {
+          "from_code": "8720",
+          "to_code": "8791",
+          "relation": "relatedMatch",
+          "rationale": "8720>8791：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "ff0f2b284561586c547008efeac1f1e40a7b8ccdafe7337e335f73578ec7991e"
+        },
+        {
+          "from_code": "8730",
+          "to_code": "8730",
+          "relation": "relatedMatch",
+          "rationale": "8730>8730：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "105acd814b49162dd4ee1236c562914e14ad854644489ac878693b5b7c4b8fee"
+        },
+        {
+          "from_code": "8730",
+          "to_code": "8791",
+          "relation": "relatedMatch",
+          "rationale": "8730>8791：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "744f12026e1edc3fb934fc7d948ce8f2bc31f59fa8fe13e259b0236f8106987c"
+        },
+        {
+          "from_code": "8790",
+          "to_code": "8791",
+          "relation": "relatedMatch",
+          "rationale": "8790>8791：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "29fc5b887e6f4faa1cc7d59a3392fac525e591b84876651528082c00e4587b0a"
+        },
+        {
+          "from_code": "8790",
+          "to_code": "8799",
+          "relation": "relatedMatch",
+          "rationale": "8790>8799：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "af91bdfcc11f9402d5c45428ef59ccd9ab8ec5564fad7648e418efefd1deda79"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-9000",
+      "title": "艺术活动分解",
+      "rationale": "旧9000创作表演设施及修复分为七类。9011文学、9012视觉创作及9031设施有明确旧范围；其他新类增加数字、影像、遗产预防保护等边界，不据单一入边证明完整包含。",
+      "edges": [
+        {
+          "from_code": "9000",
+          "to_code": "9011",
+          "relation": "narrowMatch",
+          "rationale": "9000>9011：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "3dc46271a897ce55cc091dc112b491b64670f34a063a77db403670213594a477"
+        },
+        {
+          "from_code": "9000",
+          "to_code": "9012",
+          "relation": "narrowMatch",
+          "rationale": "9000>9012：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "cb7d3d92898133ba05e72205a75ef74e082eb6c4a4b148fc9b670b94414c822c"
+        },
+        {
+          "from_code": "9000",
+          "to_code": "9013",
+          "relation": "relatedMatch",
+          "rationale": "9000>9013：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "dd8f163bc3aebbe78a9ba4d8493c7de914192c2388153c505d32e96bbcc6d266"
+        },
+        {
+          "from_code": "9000",
+          "to_code": "9020",
+          "relation": "relatedMatch",
+          "rationale": "9000>9020：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "1eef8c69ef165a7d10d96818829114bb3e9317dc4b0b569342191ec47af9cd02"
+        },
+        {
+          "from_code": "9000",
+          "to_code": "9031",
+          "relation": "narrowMatch",
+          "rationale": "9000>9031：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "959818c9a97ad9c298cb44164be4d1a6dd25234649a8ada444a3d8dba8b17631"
+        },
+        {
+          "from_code": "9000",
+          "to_code": "9039",
+          "relation": "relatedMatch",
+          "rationale": "9000>9039：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "24cf8e572a684997dea3fd6f5af926d272da8f7edd32d5c547a2127921c2f838"
+        },
+        {
+          "from_code": "9000",
+          "to_code": "9130",
+          "relation": "relatedMatch",
+          "rationale": "9000>9130：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "a4f2bdcd6641e04dc0c5bfa5da7c905cd400f150a3e3a40f7b4a74f6c3357b70"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-9101",
+      "title": "图书馆档案分出",
+      "rationale": "旧9101列图书馆和公共档案，新9111保留图书馆，新9112扩展所有档案获取、安全维护和活化。图书馆支持窄对应；档案完整范围未证实，仅相关。",
+      "edges": [
+        {
+          "from_code": "9101",
+          "to_code": "9111",
+          "relation": "narrowMatch",
+          "rationale": "9101>9111：新端为经说明核对的旧端部分；保留其余去向。",
+          "reviewed_fingerprint": "b3f4a99874b9575860df876c0452a9886caffc75b440b7955f03822aef9cc29b"
+        },
+        {
+          "from_code": "9101",
+          "to_code": "9112",
+          "relation": "relatedMatch",
+          "rationale": "9101>9112：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "06e39a0883e003fae2a67f19142904087af196c798d79808ac5ca113e96464fa"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-9102",
+      "title": "博物馆与遗址分出",
+      "rationale": "旧9102排除艺术修复；新9121纳入馆内修复，新9122增加遗产保护。因此虽官方分出，不宣称两个新类完整包含于旧类，仅保留可证重叠。",
+      "edges": [
+        {
+          "from_code": "9102",
+          "to_code": "9121",
+          "relation": "relatedMatch",
+          "rationale": "9102>9121：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "c6fdadaa389e3aadaa631a06ef4614567b1d2e749abb5908f20c3f5970398c2a"
+        },
+        {
+          "from_code": "9102",
+          "to_code": "9122",
+          "relation": "relatedMatch",
+          "rationale": "9102>9122：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "4568bf91c334c16f8a6db1bc130e83a2e3af1b61ef4542ac05f77193a4910a82"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-9103",
+      "title": "动植物园与保护区分出",
+      "rationale": "旧9103涵盖动植物园和自然保护，新9141列水族馆、9142强调保护维护。官方分出且活动相交，但新列服务的全部边界未证实，只记录相关。",
+      "edges": [
+        {
+          "from_code": "9103",
+          "to_code": "9141",
+          "relation": "relatedMatch",
+          "rationale": "9103>9141：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "62658d1d44f908105c479639d7bec28bb0f5b6c3e527c710a0bc321985d1cc4e"
+        },
+        {
+          "from_code": "9103",
+          "to_code": "9142",
+          "relation": "relatedMatch",
+          "rationale": "9103>9142：已证对应活动重叠；完整包含或等价未证实，保留部分语义。",
+          "reviewed_fingerprint": "27a28d1b9cafe0d19f0e14399d775b0cce77e3f198056006e8da0ca9b6617e3f"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-8522",
+      "title": "教育发布者问号",
+      "rationale": "8522到8532含发布者问号；同一连通分量的其他边均保留待审，不能借邻边绕过不确定项。",
+      "edges": [
+        {
+          "from_code": "8521",
+          "to_code": "8531",
+          "relation": null,
+          "rationale": "8522到8532含发布者问号；同一连通分量的其他边均保留待审，不能借邻边绕过不确定项。",
+          "reviewed_fingerprint": "4ea633a4202cf78f9738f04f77c5bf67947d5c9830ea4a17f91bdd554339ae1e"
+        },
+        {
+          "from_code": "8521",
+          "to_code": "8533",
+          "relation": null,
+          "rationale": "8522到8532含发布者问号；同一连通分量的其他边均保留待审，不能借邻边绕过不确定项。",
+          "reviewed_fingerprint": "687853369643ad995e0314bcabf84b1af87c0ce68f550d0a8437db8c35d00147"
+        },
+        {
+          "from_code": "8522",
+          "to_code": "8532",
+          "relation": null,
+          "rationale": "8522到8532含发布者问号；同一连通分量的其他边均保留待审，不能借邻边绕过不确定项。",
+          "reviewed_fingerprint": "1c84a9916884032db6fd0fce90c9bec38d6d45972dc107fd15e77a5ea981310c"
+        },
+        {
+          "from_code": "8522",
+          "to_code": "8533",
+          "relation": null,
+          "rationale": "8522到8532含发布者问号；同一连通分量的其他边均保留待审，不能借邻边绕过不确定项。",
+          "reviewed_fingerprint": "ca160ace93c974f62cf01f0f9081650ba3a5aa5d51a91f180de357b96b75ce6d"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-8549",
+      "title": "教育支持续存描述冲突",
+      "rationale": "8549/8550到8553/8559/8561/8569的完整分量保留；对应描述的续存旧码与其他行不一致，暂不审定。",
+      "edges": [
+        {
+          "from_code": "8549",
+          "to_code": "8559",
+          "relation": null,
+          "rationale": "8549/8550到8553/8559/8561/8569的完整分量保留；对应描述的续存旧码与其他行不一致，暂不审定。",
+          "reviewed_fingerprint": "6cc33fbc3377de5403c99515dc656cb24c8bed0da6da8ba4e3c7edcc8b190d88"
+        },
+        {
+          "from_code": "8549",
+          "to_code": "8553",
+          "relation": null,
+          "rationale": "8549/8550到8553/8559/8561/8569的完整分量保留；对应描述的续存旧码与其他行不一致，暂不审定。",
+          "reviewed_fingerprint": "90989b6a04fe6dc11ceef9d150b8792eb4f0cb69ba361731720175898b986200"
+        },
+        {
+          "from_code": "8549",
+          "to_code": "8561",
+          "relation": null,
+          "rationale": "8549/8550到8553/8559/8561/8569的完整分量保留；对应描述的续存旧码与其他行不一致，暂不审定。",
+          "reviewed_fingerprint": "aef839a68e1e7b4863ab5a091fb1db2d8d6d9d8f7eb1f747a74d1a335ddb769e"
+        },
+        {
+          "from_code": "8550",
+          "to_code": "8561",
+          "relation": null,
+          "rationale": "8549/8550到8553/8559/8561/8569的完整分量保留；对应描述的续存旧码与其他行不一致，暂不审定。",
+          "reviewed_fingerprint": "9b68f092502869f18570a45e037f109c0faf4f068cec59188ef8b5e645b5db47"
+        },
+        {
+          "from_code": "8550",
+          "to_code": "8569",
+          "relation": null,
+          "rationale": "8549/8550到8553/8559/8561/8569的完整分量保留；对应描述的续存旧码与其他行不一致，暂不审定。",
+          "reviewed_fingerprint": "4517501f4b813e71b1454146de206b6a557cdcf2ba6fb6df7ba410df4e4dc254"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-0130",
+      "title": "育苗历史标识异常",
+      "rationale": "四位码明确但历史带节字符串异常及其更正描述尚待核实，保留原始字符串。",
+      "edges": [
+        {
+          "from_code": "0130",
+          "to_code": "0130",
+          "relation": null,
+          "rationale": "四位码明确但历史带节字符串异常及其更正描述尚待核实，保留原始字符串。",
+          "reviewed_fingerprint": "9978922ad4072b76048d4207f7be2c8d871ca315c42cc9817f91d5e1067d2811"
+        }
+      ]
+    },
+    {
+      "id": "ISIC-COMPONENT-0170",
+      "title": "狩猎历史标识异常",
+      "rationale": "四位码明确但历史带节字符串异常及其更正描述尚待核实，保留原始字符串。",
+      "edges": [
+        {
+          "from_code": "0170",
+          "to_code": "0170",
+          "relation": null,
+          "rationale": "四位码明确但历史带节字符串异常及其更正描述尚待核实，保留原始字符串。",
+          "reviewed_fingerprint": "895ae34eb9b7a5864d17dceb4a7104f082af053b5ef0db10bbcb2c77d3f66c45"
+        }
+      ]
+    }
+  ],
+  "errata_reviews": [
+    {
+      "id": "ISIC5-2026-014",
+      "code": "014",
+      "effect": "no_additional_scope_effect",
+      "rationale": "新增加的寄养排除归0162；原2024已排农场动物寄养照护，Rev.4组014也已排动物照护和繁殖支持到0162。只解除此组勘误阻挡，不证明所有下级跨版等价。",
+      "reviewed_fingerprint": "bbb99dc8606abadeb10f02a426546886f08c204f44cfdfa6befe4b97e48f42e4",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "014"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-0141",
+      "code": "0141",
+      "effect": "allocation_review_required",
+      "rationale": "新增生乳与Rev.4一致，但当前肉用饲养表述与旧一般牛畜范围不同；不能只据新增乳条目确认整类等价。",
+      "reviewed_fingerprint": "e58001e635b98956b297d49b38dd6355c7c4527cb232d32f3b7b765b2b87eb35",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "0141"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-0729",
+      "code": "0729",
+      "effect": "allocation_review_required",
+      "rationale": "新增卤水矿物归0899；须联查旧0729与0899锂等矿物边界及是否缺少转移对应。",
+      "reviewed_fingerprint": "be7ae5d4604c8a2adac951236facd8bc6cb635b148991690c34e517576ba045c",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "0729"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-0910",
+      "code": "0910",
+      "effect": "allocation_review_required",
+      "rationale": "排除增加陆路运输限定，与5221的主表/更新表main与mine不一致相连，联查采掘现场和运输支持。",
+      "reviewed_fingerprint": "25f23e2218fd07787dd4071bfdfe547a922b8aa32bbce422b56cbe8417fe52dc",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "0910"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-1050",
+      "code": "1050",
+      "effect": "allocation_review_required",
+      "rationale": "非乳奶排除由1079转1105，食用冰归并1050；须与1079、1105、3530形成活动级分配证据。",
+      "reviewed_fingerprint": "506c33e8245a13ef5765257f7080da412ea9a39d6160dd91797bc45d77f1eed1",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "1050"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-1079",
+      "code": "1079",
+      "effect": "allocation_review_required",
+      "rationale": "删除非乳奶制造并归1105；历史旧1079只有1076/1079去向，不能补造官方1079到1105对应。",
+      "reviewed_fingerprint": "d861dbc0c7e8de30adecf97c8abf43cd8b5125d7bb00d59efc4c6837b0fd4fbd",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "1079",
+        "1104"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-1105",
+      "code": "1105",
+      "effect": "allocation_review_required",
+      "rationale": "食用冰排除变更与1050/3530关联；更新说明和主表的植物奶例项也不一致，当前整类对应继续待审。",
+      "reviewed_fingerprint": "6db5af0cfa6a92aa6faf86fd42d0da94480550c84d2db9a2ffd8479f858e02d2",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "1104"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-1312",
+      "code": "1312",
+      "effect": "allocation_review_required",
+      "rationale": "删玻璃原料例项，需判定例示清理还是玻纤纺织活动重分配，不能用文字相似度放行。",
+      "reviewed_fingerprint": "6efd4637f0e39a8ec0f318e1fe409c8055305a538a743ef23b027d99ef024be4",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "1312"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-1313",
+      "code": "1313",
+      "effect": "allocation_review_required",
+      "rationale": "排除码1812改1811，但新类保留纺织中间过程印花，Rev.4数据库已删除旧印花条目，需另查活动分配。",
+      "reviewed_fingerprint": "4acfd093c853c7dfd53e77a9365a9373a30bc53e80e6a4276a424fee0d353be6",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "1313"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-1392",
+      "code": "1392",
+      "effect": "allocation_review_required",
+      "rationale": "清洁布重组并增加救生衣；Rev.4其他制成纺织品与当前1399帐篷降落伞边界须联查，现表单行未解释所有变化。",
+      "reviewed_fingerprint": "47e5ecec3ced519572ad03e6fcace42aff278b003e74bd1e12cc9ed1035b8dca",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "1392"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-1399",
+      "code": "1399",
+      "effect": "allocation_review_required",
+      "rationale": "加入充气床垫、排防护口罩3250；与旧1392/1399、橡胶床垫边界共同待核。",
+      "reviewed_fingerprint": "c6711f2b831f7924c32fc05599dc48459f50d6b5ccb06468038d5c9ad8790215",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "1399"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-1629",
+      "code": "1629",
+      "effect": "allocation_review_required",
+      "rationale": "删木制鞋零件以消除与1520排除矛盾；需保留原冲突并确认旧活动范围，不直接视为整类等价。",
+      "reviewed_fingerprint": "f8e11ad129a67d453ab0121fe0ba74468a4a28de77b7ab0c92735b1a6a4b513e",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "1629"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2011",
+      "code": "2011",
+      "effect": "allocation_review_required",
+      "rationale": "删除核燃料元件制作归2420；核燃料链条需要跨类分配，保留旧化学品类部分对应可能性。",
+      "reviewed_fingerprint": "26570c61a146c593c33ce101efc9df81fdc3b163d49cde69c99e9eaf6928a53a",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2011"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2022",
+      "code": "2022",
+      "effect": "no_additional_scope_effect",
+      "rationale": "只删排除列表中无效词tuffs，染料颜料仍排2011；本补丁未新增分配目标或包含活动，不等于整体跨版等价审定。",
+      "reviewed_fingerprint": "0bf684b5104628ee7e5019945fd7ca44d4ed374d576bf8b9ed174cda5aa5db63",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2022"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2220",
+      "code": "2220",
+      "effect": "allocation_review_required",
+      "rationale": "删除人造石制造，需明确目前归属并联查2392/2393，不能删条后继续宣称历史整类对应不变。",
+      "reviewed_fingerprint": "a46d5ce2def01fe34cb68ec775f84491f2eb257a129a4f857e1b014bf8b67e0e",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2220"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2392",
+      "code": "2392",
+      "effect": "allocation_review_required",
+      "rationale": "移除人造石至2220排除，须与2220及其他非金属矿物类确认活动分配。",
+      "reviewed_fingerprint": "fbd5d5474b45b32b3fe9aab2d3c93c8eff0997f2c6554ee137456108653c7b74",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2392"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2393",
+      "code": "2393",
+      "effect": "allocation_review_required",
+      "rationale": "删人造石和陶瓷卫生器具排除，两个边界同时变更，需核实当前范围。",
+      "reviewed_fingerprint": "650e96ac5f9579ed4479e28f8559523bb5bb72e019b0bc12f357f060ba77d395",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2393"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2420",
+      "code": "2420",
+      "effect": "allocation_review_required",
+      "rationale": "核燃料加工新增铀金属、合金、冶炼及燃料元件步骤，与2011删除条目联动。",
+      "reviewed_fingerprint": "f06a5fbb15c5394218e82923ec2acbf416a9b39bc764776f7b19d77cb88dc54b",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2420"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2620",
+      "code": "2620",
+      "effect": "allocation_review_required",
+      "rationale": "删虚拟现实头盔归2640；旧计算机类和当前电子消费类间的跨类对应须补查。",
+      "reviewed_fingerprint": "c5964918f63cbcb66c84894e230012015b6570596117472ed2aa2e300323987d",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2620"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2630",
+      "code": "2630",
+      "effect": "allocation_review_required",
+      "rationale": "虽标排除码文字更正，Rev.4明确包含向控制站报警设备而新类排2651，实际范围可能不同，保持疑点。",
+      "reviewed_fingerprint": "1af96a155ff4dc9fb8872a7e9acd9f74b2128b6ab2b818dfd57af03fb784954f",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2630"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2670",
+      "code": "2670",
+      "effect": "allocation_review_required",
+      "rationale": "既删介质制造又改摄像和报警排除，须与2630/2640/2651/2680联查，不能视为单一错码。",
+      "reviewed_fingerprint": "19a986e7d493d188ecdc9f0da1916954449d3d5564dc8e8d4193653fdbcff8b2",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2670"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2680",
+      "code": "2680",
+      "effect": "allocation_review_required",
+      "rationale": "增加未录制限定本身似释义，但旧源另列硬盘介质，当前未明确；不能由本补丁推整类等价。",
+      "reviewed_fingerprint": "a5155aa9ac5902f37cb41d993fd520d52466ec4cb77eef9cbd231506ba4b588f",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2680"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-2811",
+      "code": "2811",
+      "effect": "allocation_review_required",
+      "rationale": "除删重复3030还增摩托发动机部件排3091，属于需要活动分配的边界。",
+      "reviewed_fingerprint": "22464d4b03d2975b1f443ba53e50899028300996bb874237cd46a91e874b061f",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "2811"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-3030",
+      "code": "3030",
+      "effect": "allocation_review_required",
+      "rationale": "降落伞排除码由1392改1399，与两纺织类范围重排联动；无人机边界也需另核。",
+      "reviewed_fingerprint": "73b3c73eb9f54be602d80de550c2aaa104bb451d492c6a9b06d493830b12eef6",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "3030"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-3230",
+      "code": "3230",
+      "effect": "allocation_review_required",
+      "rationale": "删举重金属配重排2599，需确定配重归属而非默认为原对应全部延续。",
+      "reviewed_fingerprint": "ffcc42e7e305ea2dcfcb38d53d2044262605187e63528b510f1c7aa19a6dec69",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "3230"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-3530",
+      "code": "3530",
+      "effect": "allocation_review_required",
+      "rationale": "制冰增加冷却用途限定，须联查食用冰1050和1105及旧制冰范围。",
+      "reviewed_fingerprint": "9ea8a6560d1f101d2d4cdf21f87bdbff91e4fdbd2171eeb45649df01b39cea81",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "3530"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-3830",
+      "code": "3830",
+      "effect": "allocation_review_required",
+      "rationale": "删metal与Rev.4 Readme更正一致，但当前塑料熔融制粒包含和再熔融排2013的边界仍需澄清。",
+      "reviewed_fingerprint": "e8d3c5d5f5fc348f9a69476fd09ec3c88531c2bdc9b323cd31717356fd5fa7d8",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "3830"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-F",
+      "code": "F",
+      "effect": "no_additional_scope_effect",
+      "rationale": "仅将场外fabricating统一为manufacturing，目的仍为C，原新版现场施工与场外制造边界未改；可解除此项父级阻挡，子类仍各自审查。",
+      "reviewed_fingerprint": "8b2efa6836791b8fbf78abd054c30359c1c3551b6e0c37a25e423fad8e15cfb1",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "F"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-4100",
+      "code": "4100",
+      "effect": "allocation_review_required",
+      "rationale": "明确补住宅施工，但旧房地产开发与新4100/6810多对多转移尚需整体分析，不能只看住宅例项。",
+      "reviewed_fingerprint": "04b97786eeccd4a99a3061b63b214210c3ad10cc5a1914f634bbe47053b2134d",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4100"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-4649",
+      "code": "4649",
+      "effect": "allocation_review_required",
+      "rationale": "电动自行车措辞更正之外，当前主表皮革制品另有限制服鞋条款而更新说明没有，保留双文本冲突。",
+      "reviewed_fingerprint": "dfd83e86bf2f7c0315a302bcfd148244ebf1c522394e3df5be83f811589599a0",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4649",
+        "4659"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-4672",
+      "code": "4672",
+      "effect": "allocation_review_required",
+      "rationale": "删除重复贵金属条目，但新排金条到L而旧4662黄金不带该限定，需核实金属与金融边界。",
+      "reviewed_fingerprint": "46934e3e5fc66f566ad50885b9d5dae063144c41b393101ade4576a3da03b9b5",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4662"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-4679",
+      "code": "4679",
+      "effect": "allocation_review_required",
+      "rationale": "宝石增加未加工限定及合成石，需与加工宝石批发类分配，不能当同码等价。",
+      "reviewed_fingerprint": "03b37e1bb2434fd3ad2b35c6eb5cfb910e3ffb692b86ca3e888d70ed21845cb9",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4669"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-47",
+      "code": "47",
+      "effect": "allocation_review_required",
+      "rationale": "删即时食饮自动售货机排56，影响整个零售上级，所有下级对应继续传播待审。",
+      "reviewed_fingerprint": "3cc635c4cb73b9ed5cdf2736aff7850ed02417db004c3bbb03fe1182d2d68683",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "47"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-471",
+      "code": "471",
+      "effect": "no_additional_scope_effect",
+      "rationale": "仅删外部NACE段落编号引用，未改变本条列举范围；上级47仍未解决，因此不放行零售映射。",
+      "reviewed_fingerprint": "112e7a602c522ece5107d8a48adf4d324237d56818e685d1a0f739c78e3cccf7",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "471"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-4730",
+      "code": "4730",
+      "effect": "no_additional_scope_effect",
+      "rationale": "电动车充电站增加operation一词，排除对象及3513目的未变；不解除上级47的未决范围问题。",
+      "reviewed_fingerprint": "aed85921f7f331961c42653df23950d779f36611a5d9759c542b06acf863b8f1",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4730"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-4740",
+      "code": "4740",
+      "effect": "allocation_review_required",
+      "rationale": "增零售商加注墨盒，需与旧维修及制造/零售边界联合研究，上级47亦待审。",
+      "reviewed_fingerprint": "f38ae87bd8e9e19627f9a55c2ef161212e20f534a01d079d2f049cd26a788b80",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4741",
+        "4742",
+        "4789",
+        "4791",
+        "4799"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-4762",
+      "code": "4762",
+      "effect": "no_additional_scope_effect",
+      "rationale": "e-bikes写为electric bicycles，原列举对象不变；仅此补丁释义，父级47未决仍阻挡当前映射。",
+      "reviewed_fingerprint": "98d636c880b515f88290519ee954251223fdea3eeef19c35edcbb155d56ec261",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4763",
+        "4789",
+        "4791",
+        "4799"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-4773",
+      "code": "4773",
+      "effect": "allocation_review_required",
+      "rationale": "商业画廊删归4769，主表又重复整段说明；分别保存排配问题和重复文字，不自动去重当作已修复。",
+      "reviewed_fingerprint": "0cfa84bf0035cf61793590919d9e490055e27186a73d37b55d7ae49f3d233a0d",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4773",
+        "4789"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-5221",
+      "code": "5221",
+      "effect": "allocation_review_required",
+      "rationale": "更新说明为main site、主表mine site，现场条件可能影响天然气液化分类，与0910需联合核实。",
+      "reviewed_fingerprint": "6d84540513d5ec9e8abdcdc868504857987e445703e7d6ee1816796f0f5debaa",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "5221"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-5222",
+      "code": "5222",
+      "effect": "allocation_review_required",
+      "rationale": "游艇码头排除限娱乐休闲基础设施服务，较旧全称排除可能变窄，需拆活动而非整类等价。",
+      "reviewed_fingerprint": "6284a99e942ea7a346fe66954c1e66f3fbf5f23878ff14a5ebf06d2ecad699aa",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "5222"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-6619",
+      "code": "6619",
+      "effect": "allocation_review_required",
+      "rationale": "删除加密资产金融资产条件，扩大验证挖矿列项，须与旧计算/金融服务范围核对。",
+      "reviewed_fingerprint": "6d8bef87c063c9cdc55554c834616bb73580523065153c7022569e7d1cccebff",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "6619"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-6810",
+      "code": "6810",
+      "effect": "allocation_review_required",
+      "rationale": "增改良土地分割排4290，与旧4100开发及6810自营房地产链条联查，不提前强并。",
+      "reviewed_fingerprint": "df93f9bbdaf853a2520820e2a5436b5894b2bfd0e3753a3f0b445d6082a8bb81",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "4100",
+        "6810"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-7110",
+      "code": "7110",
+      "effect": "allocation_review_required",
+      "rationale": "增工程量测算排7499，与7499删除反向排除成对记录，须保留旧7490与7110可能范围变动。",
+      "reviewed_fingerprint": "4ba13ffa8b2d66aca201ad8135e09a59113130d94dd24e5df2646ae8f654bfdf",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "7110"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-7499",
+      "code": "7499",
+      "effect": "allocation_review_required",
+      "rationale": "工程量测算及安全咨询删排/删含，分别联7499/7110与8019，不能仅按同码或旧单行批准。",
+      "reviewed_fingerprint": "4a01537b9de45cc1c880bb8d6f4eeed574bf23a57babeb0a8ff553ecef319667",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "7490"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-8299",
+      "code": "8299",
+      "effect": "allocation_review_required",
+      "rationale": "删除搬迁服务但未在本说明给出完整去向，需补证；不虚构无对应或新增官方边。",
+      "reviewed_fingerprint": "89c764ceb89027634e54e37411db0ea7f483b53c455199d522b70967c23e5f97",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "8299"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-8430",
+      "code": "8430",
+      "effect": "allocation_review_required",
+      "rationale": "产假改育儿假可能含资格范围变化，且完整新版排除有变化，不能只据词语替换放行。",
+      "reviewed_fingerprint": "6e304a9938206e4b5618e356c2f16f76b1767a6ccd7a490b63ff9284f5fb48e3",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "8430"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-8699",
+      "code": "8699",
+      "effect": "allocation_review_required",
+      "rationale": "非医疗按摩排9623，与旧8690分解和9602/9609个人服务边界联查，避免遗漏转移。",
+      "reviewed_fingerprint": "95dfe78b60f70a91f209a7fb09cdbc5a3c9233274806860fb8e1ea526ea14fbc",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "8690"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-9510",
+      "code": "9510",
+      "effect": "allocation_review_required",
+      "rationale": "虚拟现实头盔加头戴设备，与维修合并及中介分出并存，需按设备和服务边界分别核查。",
+      "reviewed_fingerprint": "8e4f260ff1affbc7eb36b5465b462af0638289448a633251b92b5bc674fcb050",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "9511",
+        "9512"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-9623",
+      "code": "9623",
+      "effect": "allocation_review_required",
+      "rationale": "明确非医疗按摩，与8699删除归属相连；旧保健按摩与个人服务去向仍待活动级核实。",
+      "reviewed_fingerprint": "55213f1fdbb95187adac07982ff87d1fc6e8a1d43910511d7a6332cd508ed534",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "9602"
+      ]
+    },
+    {
+      "id": "ISIC5-2026-9630",
+      "code": "9630",
+      "effect": "allocation_review_required",
+      "rationale": "新增遗体运输，需与旧9603及运输类确认实际范围，不能据单一去向断言所有新增活动原已覆盖。",
+      "reviewed_fingerprint": "63d29b22fe4361752e1e66e6eb2869ce8bbac6c4346d275ed64c757a30870cd8",
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08",
+      "comparison_rev4_codes": [
+        "9603"
+      ]
+    }
+  ],
+  "issues": [
+    {
+      "id": "TEXT-2026-1105",
+      "status": "open",
+      "kind": "publisher_text_disagreement",
+      "rev4_codes": [],
+      "rev5_codes": [
+        "1105"
+      ],
+      "rationale": "当前主表额外列植物奶例项；Notes更新文字未列，两个文本均保留，不替发布者选择。",
+      "evidence": [
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "Notes",
+          "row": 16
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 120,
+          "range": "A120:G120"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "TEXT-2026-4649",
+      "status": "open",
+      "kind": "publisher_text_disagreement",
+      "rev4_codes": [],
+      "rev5_codes": [
+        "4649"
+      ],
+      "rationale": "主表皮革制品附制服鞋排除，而Notes更新无该限定。",
+      "evidence": [
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "Notes",
+          "row": 39
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 393,
+          "range": "A393:G393"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "TEXT-2026-4773",
+      "status": "open",
+      "kind": "publisher_text_disagreement",
+      "rev4_codes": [],
+      "rev5_codes": [
+        "4773"
+      ],
+      "rationale": "主表将更新整段重复两次；表示问题与画廊去向问题分开。",
+      "evidence": [
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "Notes",
+          "row": 47
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 435,
+          "range": "A435:G435"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "TEXT-2026-5221",
+      "status": "open",
+      "kind": "publisher_text_disagreement",
+      "rev4_codes": [],
+      "rev5_codes": [
+        "5221"
+      ],
+      "rationale": "Notes写main site，主表写mine site；未自行改字。",
+      "evidence": [
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "Notes",
+          "row": 48
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 470,
+          "range": "A470:G470"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "CROSSWALK-5590",
+      "status": "open",
+      "kind": "description_target_conflict",
+      "rev4_codes": [
+        "5510",
+        "5520",
+        "5590"
+      ],
+      "rev5_codes": [
+        "5510",
+        "5520",
+        "5530",
+        "5540",
+        "5590"
+      ],
+      "rationale": "5590描述说分出到5530，目标列却为5590与5540；整组暂缓。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 393,
+          "range": "A393:H393"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 394,
+          "range": "A394:H394"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 395,
+          "range": "A395:H395"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 396,
+          "range": "A396:H396"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 397,
+          "range": "A397:H397"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 398,
+          "range": "A398:H398"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 399,
+          "range": "A399:H399"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "CROSSWALK-8549",
+      "status": "open",
+      "kind": "description_continuation_conflict",
+      "rev4_codes": [
+        "8549",
+        "8550"
+      ],
+      "rev5_codes": [
+        "8553",
+        "8559",
+        "8561",
+        "8569"
+      ],
+      "rationale": "8549到8561行说明称8549续为8569，与另行8550续为8569及端点关系冲突，需向发布者核对。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 535,
+          "range": "A535:H535"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 536,
+          "range": "A536:H536"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 537,
+          "range": "A537:H537"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 538,
+          "range": "A538:H538"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 539,
+          "range": "A539:H539"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "CROSSWALK-QUESTION",
+      "status": "open",
+      "kind": "publisher_question",
+      "rev4_codes": [
+        "8521",
+        "8522"
+      ],
+      "rev5_codes": [
+        "8531",
+        "8532",
+        "8533"
+      ],
+      "rationale": "8522到8532的GSIM保留问号，整个教育分量不以无问号邻边强行通过。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 528,
+          "range": "A528:H528"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 529,
+          "range": "A529:H529"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 530,
+          "range": "A530:H530"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 531,
+          "range": "A531:H531"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "CROSSWALK-QUALIFIED-ID",
+      "status": "open",
+      "kind": "historical_identifier_anomaly",
+      "rev4_codes": [
+        "0130",
+        "0170"
+      ],
+      "rev5_codes": [
+        "0130",
+        "0170"
+      ],
+      "rationale": "字母数字旧码包含额外A；四位码有明确端点，但仍保留异常和描述中的更正依据。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 19,
+          "range": "A19:H19"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 33,
+          "range": "A33:H33"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ALLOCATION-PLANT-MILK",
+      "status": "open",
+      "kind": "possible_allocation_gap_requires_research",
+      "rev4_codes": [
+        "1079",
+        "1104"
+      ],
+      "rev5_codes": [
+        "1050",
+        "1079",
+        "1105"
+      ],
+      "rationale": "2026从1079删非乳奶归1105，历史旧1079去向未列1105。作为可能需更新的活动级分配，不能伪造新官方行。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 72,
+          "range": "A72:H72"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 73,
+          "range": "A73:H73"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 79,
+          "range": "A79:H79"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 100,
+          "range": "A100:G100"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 111,
+          "range": "A111:G111"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 120,
+          "range": "A120:G120"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ALLOCATION-TEXTILES",
+      "status": "open",
+      "kind": "possible_allocation_gap_requires_research",
+      "rev4_codes": [
+        "1392",
+        "1399",
+        "3030"
+      ],
+      "rev5_codes": [
+        "1392",
+        "1399",
+        "3030"
+      ],
+      "rationale": "降落伞及露营等当前1399与旧1392边界不同；仅单一历史对应不足以说明全部移动。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 85,
+          "range": "A85:H85"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 88,
+          "range": "A88:H88"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 181,
+          "range": "A181:H181"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 182,
+          "range": "A182:H182"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 131,
+          "range": "A131:G131"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 134,
+          "range": "A134:G134"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 291,
+          "range": "A291:G291"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ALLOCATION-ALARMS",
+      "status": "open",
+      "kind": "possible_allocation_gap_requires_research",
+      "rev4_codes": [
+        "2630"
+      ],
+      "rev5_codes": [
+        "2630",
+        "2651"
+      ],
+      "rationale": "旧2630包含控制站报警而新2630排2651；即使表为空白GSIM，也不能视为完整等价。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 144,
+          "range": "A144:H144"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 231,
+          "range": "A231:G231"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 235,
+          "range": "A235:G235"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ALLOCATION-NUCLEAR",
+      "status": "open",
+      "kind": "possible_allocation_gap_requires_research",
+      "rev4_codes": [
+        "2011",
+        "2420"
+      ],
+      "rev5_codes": [
+        "2011",
+        "2420"
+      ],
+      "rationale": "核燃料元件跨化学与有色金属边界的勘误需与活动级来源联合核实。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 108,
+          "range": "A108:H108"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 109,
+          "range": "A109:H109"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 130,
+          "range": "A130:H130"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 174,
+          "range": "A174:G174"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 208,
+          "range": "A208:G208"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ALLOCATION-SURVEY",
+      "status": "open",
+      "kind": "possible_allocation_gap_requires_research",
+      "rev4_codes": [
+        "7110",
+        "7490"
+      ],
+      "rev5_codes": [
+        "7110",
+        "7499",
+        "8019"
+      ],
+      "rationale": "工程量测算与安全咨询的2026边界变动尚未反映为重新发布的对应表。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 474,
+          "range": "A474:H474"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 482,
+          "range": "A482:H482"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 483,
+          "range": "A483:H483"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 484,
+          "range": "A484:H484"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 612,
+          "range": "A612:G612"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 636,
+          "range": "A636:G636"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 668,
+          "range": "A668:G668"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "ALLOCATION-MASSAGE",
+      "status": "open",
+      "kind": "possible_allocation_gap_requires_research",
+      "rev4_codes": [
+        "8690",
+        "9602",
+        "9609"
+      ],
+      "rev5_codes": [
+        "8699",
+        "9623"
+      ],
+      "rationale": "非医疗按摩归个人服务，与旧健康活动的可能分配需补证。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 542,
+          "range": "A542:H542"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 543,
+          "range": "A543:H543"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 595,
+          "range": "A595:H595"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 596,
+          "range": "A596:H596"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 597,
+          "range": "A597:H597"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 598,
+          "range": "A598:H598"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 601,
+          "range": "A601:H601"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 602,
+          "range": "A602:H602"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 731,
+          "range": "A731:G731"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 812,
+          "range": "A812:G812"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "SCOPE-RENTAL-INTERMEDIATION",
+      "status": "open",
+      "kind": "possible_allocation_gap_requires_research",
+      "rev4_codes": [
+        "7721",
+        "7729"
+      ],
+      "rev5_codes": [
+        "7752"
+      ],
+      "rationale": "新7752包含其他有形及非金融无形资产，不能据仅两个历史入边宣称全新类由两个旧类覆盖。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 488,
+          "range": "A488:H488"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 489,
+          "range": "A489:H489"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 491,
+          "range": "A491:H491"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 492,
+          "range": "A492:H492"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 653,
+          "range": "A653:G653"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "SCOPE-CULTURAL-CONSERVATION",
+      "status": "open",
+      "kind": "possible_allocation_gap_requires_research",
+      "rev4_codes": [
+        "9000",
+        "9102"
+      ],
+      "rev5_codes": [
+        "9121",
+        "9122",
+        "9130"
+      ],
+      "rationale": "当前遗产预防保护及馆内修复超出旧9000艺术品修复与旧9102明确范围，部分对应不等于全范围包含。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 554,
+          "range": "A554:H554"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 555,
+          "range": "A555:H555"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 556,
+          "range": "A556:H556"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 557,
+          "range": "A557:H557"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 558,
+          "range": "A558:H558"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 559,
+          "range": "A559:H559"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 560,
+          "range": "A560:H560"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 563,
+          "range": "A563:H563"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 564,
+          "range": "A564:H564"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 763,
+          "range": "A763:G763"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 764,
+          "range": "A764:G764"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 766,
+          "range": "A766:G766"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "SCOPE-OFFICE-COPYING",
+      "status": "open",
+      "kind": "possible_scope_overlap_requires_research",
+      "rev4_codes": [
+        "8219"
+      ],
+      "rev5_codes": [
+        "8210"
+      ],
+      "rationale": "当前8210包含自助复印操作，但打印排除也提photocopying；旧8219复印完整范围不可由合并类型直接确认。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 510,
+          "range": "A510:H510"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 679,
+          "range": "A679:G679"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    },
+    {
+      "id": "SCOPE-TELECOM-VOIP",
+      "status": "open",
+      "kind": "possible_scope_overlap_requires_research",
+      "rev4_codes": [
+        "6110",
+        "6190"
+      ],
+      "rev5_codes": [
+        "6110",
+        "6120",
+        "6190"
+      ],
+      "rationale": "6110/6120按是否运营设施区分VOIP，6190仍一般列VOIP；保留当前文本潜在重叠，已审仅相关，不断言互斥或完整分配。",
+      "evidence": [
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 423,
+          "range": "A423:H423"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 424,
+          "range": "A424:H424"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 429,
+          "range": "A429:H429"
+        },
+        {
+          "resource_id": "isic4-isic5-correspondence",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "publication_date": "2025-01-17",
+          "sheet": "ISIC4-5",
+          "row": 430,
+          "range": "A430:H430"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 536,
+          "range": "A536:G536"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 538,
+          "range": "A538:G538"
+        },
+        {
+          "resource_id": "isic5-notes-20260819",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC5_Exp_Notes_19_Aug_2026.xlsx",
+          "sha256": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+          "publication_date": "2026-08-19",
+          "sheet": "ISIC5",
+          "row": 540,
+          "range": "A540:G540"
+        }
+      ],
+      "reviewer": "Codex source-evidence review",
+      "reviewed_on": "2026-11-08"
+    }
+  ],
+  "atlas_identities": {
+    "01": "urn:atlas:concept:04c9c855-4ce3-548c-a592-0283b7959183",
+    "011": "urn:atlas:concept:5fe3cafa-de5b-512a-92f7-a2a6c7f75b1e",
+    "0111": "urn:atlas:concept:298d6664-b438-5516-bc5d-f839d11d711f",
+    "0113": "urn:atlas:concept:56cb93e7-50c0-50fa-b0df-7bd9d7a00f9b",
+    "012": "urn:atlas:concept:859ac3de-fe17-5139-b3f6-cbd737e14005",
+    "0128": "urn:atlas:concept:f3a55bde-f0c7-5502-b217-07a0633b1915",
+    "014": "urn:atlas:concept:d94fffea-185c-58e8-83cd-f1a296b2e2a3",
+    "0146": "urn:atlas:concept:0818bb90-feaa-5410-ae8a-bd280a887fd3",
+    "0149": "urn:atlas:concept:73f79d46-b9dd-550a-b2ea-4b370fb7be8b",
+    "03": "urn:atlas:concept:3c8f93fc-912c-5327-8259-c20474e6b0be",
+    "031": "urn:atlas:concept:5695fcb7-9646-5ec6-bd0c-4d843f68aacf",
+    "0311": "urn:atlas:concept:9ab88d25-52f0-5177-ac14-b0744e150b99",
+    "0312": "urn:atlas:concept:8d9b22e6-3078-5e0f-9b68-6f86168ab839",
+    "032": "urn:atlas:concept:944d54be-3005-5bcc-9d28-90fcfd07b5eb",
+    "0321": "urn:atlas:concept:571c8099-72b6-5e02-8e9b-07c2953ba240",
+    "0322": "urn:atlas:concept:eb952368-e767-540c-9150-053a0cef38b9",
+    "033": "urn:atlas:concept:49a20e8d-e64a-509f-b2f2-99c45f82bd33",
+    "0330": "urn:atlas:concept:5b4c3506-af80-5cff-b1d3-5d4f35b15f7e",
+    "11": "urn:atlas:concept:663f90e4-cac2-55df-bab7-ffc2806cf907",
+    "110": "urn:atlas:concept:926ba6c2-4160-5919-b33d-f1fe6de5e2b9",
+    "1103": "urn:atlas:concept:19c2ef93-3423-58f9-9637-c37dfd96524b",
+    "1104": "urn:atlas:concept:34e04945-5a4b-5edd-b4bb-a1e548a2bfab",
+    "15": "urn:atlas:concept:f29e9ef5-3898-51a1-bbff-8de8a7f5754b",
+    "151": "urn:atlas:concept:5a5f8c3d-5619-538e-ab48-8edd16c287f9",
+    "1512": "urn:atlas:concept:18b5b244-5861-54bb-a1e2-dc47b9e50718",
+    "26": "urn:atlas:concept:939b11ec-31d0-5be6-a450-0784ae1f53d1",
+    "261": "urn:atlas:concept:77f23b72-074e-5176-a719-755b171f7b1d",
+    "2611": "urn:atlas:concept:94526455-08f8-5df6-ad5f-fcc23c291b7f",
+    "2619": "urn:atlas:concept:850541e0-8637-597e-90fc-5be0933a8fbc",
+    "31": "urn:atlas:concept:67c040b7-775a-5d33-9ef2-c314b359023e",
+    "310": "urn:atlas:concept:0b9f7b64-36f0-597f-b043-eb3e36accd62",
+    "3101": "urn:atlas:concept:85278e17-1dc0-5780-a0d1-c373ec39e6cf",
+    "3102": "urn:atlas:concept:ab7fe6ea-34cf-552e-8d8e-f77b3e71045c",
+    "35": "urn:atlas:concept:597f7c51-e1c9-55af-b04d-4427d4274d79",
+    "351": "urn:atlas:concept:2fd314d0-4d73-59f1-ab1c-9bfe80d24c13",
+    "3511": "urn:atlas:concept:4d4a9a7a-7ded-514f-b87f-cb2b54525b01",
+    "3512": "urn:atlas:concept:ddb2f3c8-f25e-5367-ae87-ef890aae84f7",
+    "3513": "urn:atlas:concept:d4270c7d-10ed-5d6f-a304-6b716abcde5e",
+    "352": "urn:atlas:concept:31db80e8-7317-54bb-acc1-6e515fc3f8d8",
+    "3520": "urn:atlas:concept:e2aa7491-37a7-58b0-8d73-f2a3d33f0db0",
+    "354": "urn:atlas:concept:f6e85429-c263-58bf-8bd8-54575131a9d4",
+    "3540": "urn:atlas:concept:feb74ff6-0f61-5dc2-8a69-db0dfa13c7a0",
+    "43": "urn:atlas:concept:b3f5ce5d-ef44-5a1a-b9f1-b7261bfa111c",
+    "431": "urn:atlas:concept:df401e56-d161-57da-842e-ba2a4a7ad8ae",
+    "4311": "urn:atlas:concept:dff05021-1bfa-5bdd-9800-1b76ba98c480",
+    "4312": "urn:atlas:concept:4c6c728c-a3b4-5ae7-b485-1e50ec7d151b",
+    "432": "urn:atlas:concept:9cddb471-4df1-59f4-b466-3dfb4982ad18",
+    "4321": "urn:atlas:concept:bebb5f7c-0c99-5a0c-84bf-ed4927e31f62",
+    "4322": "urn:atlas:concept:2e59b00c-7a46-5359-b0a6-af2da6c32410",
+    "4329": "urn:atlas:concept:3c3ac895-57d6-5083-8f7c-72b0520c71af",
+    "433": "urn:atlas:concept:7ba8f9b1-39c7-574b-ae45-22ac8fa5ea6e",
+    "4330": "urn:atlas:concept:92f9f6bd-5b07-5a28-a958-87ad5f5fe2b6",
+    "434": "urn:atlas:concept:80c3c849-4095-5576-8ac8-23775a099cae",
+    "4340": "urn:atlas:concept:9cf8815d-f9d1-52fd-9fa2-5a869c49e921",
+    "439": "urn:atlas:concept:e27915e9-18b5-55ba-85a9-4c89835eb780",
+    "4390": "urn:atlas:concept:46fcb4bb-a5ec-5b2d-a905-d99dee425fdb",
+    "46": "urn:atlas:concept:db2631ec-8dd2-543e-8742-038c950d0411",
+    "467": "urn:atlas:concept:4cc4db79-a4bf-5eb9-84d2-e6bb77ad3a84",
+    "4671": "urn:atlas:concept:5411e1ce-3b48-55ce-8562-4e788c44b234",
+    "53": "urn:atlas:concept:efab812a-2fd1-5fb5-9a90-3845ed3621a1",
+    "531": "urn:atlas:concept:1f21e5cc-9d14-54c1-b623-d2b479e9aabb",
+    "5310": "urn:atlas:concept:b2bbeea7-556c-5bab-989c-77be985983c0",
+    "532": "urn:atlas:concept:36db072b-aa40-5c3a-b910-a000b973f1e0",
+    "5320": "urn:atlas:concept:22debf47-27b1-5935-8819-d2c0f3d93729",
+    "533": "urn:atlas:concept:e43d67a6-9882-5b2b-aae8-255737ac98c5",
+    "5330": "urn:atlas:concept:91a1e1d2-201d-5a19-b61f-3cc1ab6debfc",
+    "56": "urn:atlas:concept:5412fd1f-3304-5b85-acdd-3f3d7560899d",
+    "561": "urn:atlas:concept:df5693d9-aaf6-5f0d-b3eb-285af652741a",
+    "5610": "urn:atlas:concept:18641ce3-622b-555c-b961-0b5d48d40d19",
+    "562": "urn:atlas:concept:9f04c61e-2a1f-5ac6-b5af-6b3f43e10fba",
+    "5621": "urn:atlas:concept:bc68ecc5-d1c2-5a6c-97e5-81400c0299ca",
+    "5629": "urn:atlas:concept:16bf64ec-6ccb-5765-a298-6c159af3e1f4",
+    "563": "urn:atlas:concept:c0ff3ff2-2138-548f-b8f1-6c8dc13924e5",
+    "5630": "urn:atlas:concept:3c8df8e2-e5f6-546e-ae4e-a080aa09df36",
+    "564": "urn:atlas:concept:6e8c73e9-fa60-5ffc-83f8-a57a7b7a639f",
+    "5640": "urn:atlas:concept:84bc3396-7d2a-5e22-a065-8b447d53afaf",
+    "58": "urn:atlas:concept:1151c4dd-b8c8-5da7-af57-d97fe5ada833",
+    "581": "urn:atlas:concept:01769e3d-1a17-5435-91aa-989f99399ca3",
+    "5812": "urn:atlas:concept:375cac57-8ffe-58bb-b0dd-ac2fdcc25b39",
+    "5813": "urn:atlas:concept:45515a93-d13f-5a49-a8a3-69d6e577ad13",
+    "5819": "urn:atlas:concept:1f9ee207-43c5-5ef6-a519-1a053a189b1d",
+    "582": "urn:atlas:concept:c48e1171-8cde-5381-b0ac-7e9634c415ba",
+    "5821": "urn:atlas:concept:0c8364fb-640a-5d01-b336-0211761d0cc7",
+    "5829": "urn:atlas:concept:f02f1a20-6ccf-5f8f-8b8f-b560ee30b350",
+    "61": "urn:atlas:concept:ac906388-723a-5470-9403-4ffe345885e2",
+    "611": "urn:atlas:concept:75f6d3a2-2318-5711-af34-e36cd2696202",
+    "6110": "urn:atlas:concept:cc32be7d-6e64-52b9-b75e-0b45e3574810",
+    "612": "urn:atlas:concept:732fe080-1e29-5a34-8276-4d7141872222",
+    "6120": "urn:atlas:concept:0e2a1a08-8f6c-5fe9-a453-af4798a5a9c6",
+    "619": "urn:atlas:concept:d4f6050a-6103-5413-89cf-3055413e56e5",
+    "6190": "urn:atlas:concept:f767b8c0-cc66-568e-ab89-037350db68f7",
+    "62": "urn:atlas:concept:3f0ded00-81c3-5aeb-82b6-363a691ba047",
+    "621": "urn:atlas:concept:bd24446f-9d88-5275-b227-2b6b3d2947a8",
+    "6211": "urn:atlas:concept:52f7ff4a-9df7-5bd6-bcb6-e208e822ad07",
+    "6219": "urn:atlas:concept:df070098-1999-5fbc-85e6-d1e8edd737bd",
+    "64": "urn:atlas:concept:a50bfd8c-33d7-5c74-9a4e-179159880dd8",
+    "642": "urn:atlas:concept:10eb4f81-aaed-5465-9a36-63a2b7a9e256",
+    "6421": "urn:atlas:concept:df3e60bd-6f52-51e7-a834-cf8e5f13686e",
+    "6422": "urn:atlas:concept:ab88da7a-d89b-57ef-8cf7-c38b9a76b80b",
+    "643": "urn:atlas:concept:9ef25edc-1c34-5d44-a7e2-f7b501f2f33b",
+    "6431": "urn:atlas:concept:23129130-761a-5650-8c21-2c3a8ce7679b",
+    "6432": "urn:atlas:concept:99f31d9a-7db2-50ba-ba8c-93aab536901b",
+    "6433": "urn:atlas:concept:d88e3ab9-3028-573e-a1fa-4815bec3bb21",
+    "649": "urn:atlas:concept:7d8e3592-c7d5-503a-b3b8-439225de4466",
+    "6492": "urn:atlas:concept:d36e2222-be1f-5528-bd90-6acbcca3b6b9",
+    "6493": "urn:atlas:concept:b4336d9c-3701-549e-ae09-87a073c79a99",
+    "6494": "urn:atlas:concept:2f3750d9-05b1-5047-8ebb-d97671c49daf",
+    "6495": "urn:atlas:concept:e0887749-75a7-5a0d-8e99-f2516eb00226",
+    "6499": "urn:atlas:concept:e4bcc9c0-7faf-51c9-8699-7bf95538c9a0",
+    "68": "urn:atlas:concept:1cf34e56-8eb4-5e78-8a1b-4ec559828842",
+    "682": "urn:atlas:concept:3c235e29-4b62-5ccb-bcab-b896c973a7a6",
+    "6821": "urn:atlas:concept:afee2db7-91a0-57f5-a50f-00d4c9a37ec9",
+    "6829": "urn:atlas:concept:fd66ee1e-53ac-59cc-8610-57d923f90895",
+    "70": "urn:atlas:concept:a6cad84b-35cd-5e6f-a148-f1922164df1d",
+    "702": "urn:atlas:concept:73cb4a7a-c6c9-5f46-99f1-b756f73af8f0",
+    "7020": "urn:atlas:concept:86a6c8ba-793d-502b-96e7-043d1d72ae91",
+    "73": "urn:atlas:concept:4c53a03d-3f25-5a32-a9b7-520872a298a3",
+    "733": "urn:atlas:concept:1b52c2c7-b38a-5fa2-94b3-b1718bf80ec7",
+    "7330": "urn:atlas:concept:c6de7634-d70d-528e-aafd-c75878d3b068",
+    "77": "urn:atlas:concept:bed43f19-b93f-58aa-8330-8333b16eccc9",
+    "771": "urn:atlas:concept:f8a266eb-0dd9-5e67-aff7-ab130f795d3f",
+    "7710": "urn:atlas:concept:28470110-e960-5f1f-9162-f8d56efbbf10",
+    "772": "urn:atlas:concept:0bf6bf86-16ac-5b52-9ab3-c2e3dae88c4b",
+    "7721": "urn:atlas:concept:d45b83e4-236f-511c-967b-3f7043158794",
+    "7729": "urn:atlas:concept:630f0288-7e17-563f-8216-efd34f7be54e",
+    "775": "urn:atlas:concept:52742430-3ad0-5012-8824-57fe0046ad61",
+    "7751": "urn:atlas:concept:9d263a08-868e-5864-957d-071fe9080b87",
+    "7752": "urn:atlas:concept:c0a66cf5-76dd-50f6-a0b2-fd696865b05a",
+    "78": "urn:atlas:concept:af6869bb-2af8-5f4c-a25f-1fa1d921d3b4",
+    "782": "urn:atlas:concept:775e6b02-c8d1-5797-9a22-987f4a973ff3",
+    "7820": "urn:atlas:concept:38021add-b1a8-57fc-8686-02c865996674",
+    "80": "urn:atlas:concept:40f1e33c-19f7-5d2f-9bee-41f370852dd7",
+    "801": "urn:atlas:concept:4237b91c-6767-503b-8ce5-ef92cb9002ec",
+    "8011": "urn:atlas:concept:d4bc3923-b1b7-58ef-9478-5388cf6a7982",
+    "82": "urn:atlas:concept:6d9ac548-2c5a-58a8-84d5-aebb58eedae4",
+    "821": "urn:atlas:concept:83cb8ff2-3033-5076-bcf6-cb37c30e2c0d",
+    "8210": "urn:atlas:concept:a3781665-7874-59f0-8a48-8bde7e0b9dbb",
+    "84": "urn:atlas:concept:07a2278f-c5ce-557b-b085-54b9887a6a12",
+    "841": "urn:atlas:concept:39a1f15e-5831-5df1-881f-f505c4551fa5",
+    "8412": "urn:atlas:concept:c4257351-ec01-5b2b-8db5-31c6acfacf14",
+    "8413": "urn:atlas:concept:053e7180-33ac-51d1-8ab2-fc5092a19cb5",
+    "85": "urn:atlas:concept:cf0acbb8-c77b-5fd7-89a0-33c51f381650",
+    "851": "urn:atlas:concept:b3d42f26-eef2-5566-ba62-45660d85d87c",
+    "8510": "urn:atlas:concept:75f723a3-62d6-51c1-8b2d-746ffbe081e4",
+    "852": "urn:atlas:concept:641b6ef5-0022-5d38-a1ca-d6ecb5469764",
+    "8520": "urn:atlas:concept:21b62963-1039-5ff3-89f7-ee6dd4784ea1",
+    "87": "urn:atlas:concept:ac0fe11e-4753-500d-bf40-356f082763bb",
+    "871": "urn:atlas:concept:32ed2468-7267-55a4-b1d3-bd0fc70fc475",
+    "8710": "urn:atlas:concept:17ebedc6-018b-5535-82d1-6035b50c3848",
+    "872": "urn:atlas:concept:fae219cf-9a9c-58d7-9929-3be1e8daa34f",
+    "8720": "urn:atlas:concept:67581b3f-1302-585d-ad1d-f1ba03c70eb2",
+    "873": "urn:atlas:concept:92b0a348-5706-5c9e-a665-aa86689dc94a",
+    "8730": "urn:atlas:concept:2eb938d3-06d6-51ef-8155-feb364823693",
+    "879": "urn:atlas:concept:90262b4b-48bf-570b-8247-865977b2863e",
+    "8791": "urn:atlas:concept:f65c3ceb-ea57-5d23-bd94-5282c972eeca",
+    "8799": "urn:atlas:concept:1669267c-5c97-5fc2-8251-ed72c28bb93a",
+    "90": "urn:atlas:concept:8a4159df-9de3-5b1c-b28c-779517b14384",
+    "901": "urn:atlas:concept:dd3ae806-98a8-59d4-b50f-5ff39ef70a11",
+    "9011": "urn:atlas:concept:32401b6c-da04-5269-979b-ec07b2e732c1",
+    "9012": "urn:atlas:concept:f6bf1356-f53b-5896-a787-d32431f3fc80",
+    "9013": "urn:atlas:concept:778277c1-8cf9-5961-805d-95646d1f16ab",
+    "902": "urn:atlas:concept:f442f23d-a71b-55c1-b4d9-0700a2ab65b4",
+    "9020": "urn:atlas:concept:a709e900-35f7-5a61-acdc-d4a890633b2e",
+    "903": "urn:atlas:concept:0a29db58-b46f-52c2-aa38-9fde026e9d1e",
+    "9031": "urn:atlas:concept:936e29a6-b51b-5a42-acae-f183ffb6a147",
+    "9039": "urn:atlas:concept:b73f1536-81f2-5355-b87b-4e17e358f95c",
+    "91": "urn:atlas:concept:54d5deba-7b58-55a6-9c68-a85155b17283",
+    "911": "urn:atlas:concept:087e05ce-6960-5fc7-8dd5-1cd9e701233b",
+    "9111": "urn:atlas:concept:414c0ff2-a140-5207-adc4-0fbfb027b70d",
+    "9112": "urn:atlas:concept:2482fd51-5bd7-50cb-887b-2c2a84d8d78f",
+    "912": "urn:atlas:concept:4be5cdd7-7a18-5229-bd87-ad369e1536a5",
+    "9121": "urn:atlas:concept:7cb6be07-8e51-5594-91d9-32103552ac9b",
+    "9122": "urn:atlas:concept:88095474-8d01-5bed-95e5-6f7a5461116d",
+    "913": "urn:atlas:concept:6d502d34-3094-5756-8b9b-f55da656c063",
+    "9130": "urn:atlas:concept:dce2bc71-45da-5580-8dce-4b253d1bb526",
+    "914": "urn:atlas:concept:b5141399-bb60-585b-9c3d-98cd0b49b1ca",
+    "9141": "urn:atlas:concept:541a5c57-ffd3-5e91-b172-9fa72ba01160",
+    "9142": "urn:atlas:concept:d51dabf8-3ab8-5d5b-b9b7-6a648d4d117d",
+    "A": "urn:atlas:concept:8f214ae9-1ffa-5b05-91ae-92a6b42e7e5e",
+    "C": "urn:atlas:concept:779f2dc8-f72a-5b34-9ae1-967e94956339",
+    "D": "urn:atlas:concept:db1cd0d8-cd73-5df5-bb71-382bc633cc84",
+    "F": "urn:atlas:concept:437ac22c-4ad8-532e-8a32-5fc1b1958fed",
+    "G": "urn:atlas:concept:cbb276b7-f6d4-50ff-877a-9e3371f86ab8",
+    "H": "urn:atlas:concept:792c088b-5e58-52ec-85b8-2c8d75cbea78",
+    "I": "urn:atlas:concept:c587d337-1797-58d1-9686-3458f9e43652",
+    "J": "urn:atlas:concept:b0d753e3-3405-54e0-b570-a3dd3eddf0f6",
+    "K": "urn:atlas:concept:839d6e85-28fc-5650-aaf9-4a10afb88900",
+    "L": "urn:atlas:concept:057a8acf-27a3-5dca-8b69-82f228685fc9",
+    "M": "urn:atlas:concept:63ce298c-9595-5100-a20c-7934a4cb963b",
+    "N": "urn:atlas:concept:9649f035-7400-5b38-a563-a8978742ef50",
+    "O": "urn:atlas:concept:cea71370-195f-5170-aa11-5eca4978ce89",
+    "P": "urn:atlas:concept:7634ff2f-abdd-5359-ba1e-517113db1dc1",
+    "Q": "urn:atlas:concept:26085fde-41b9-514e-87ba-80e1dc43dcf5",
+    "R": "urn:atlas:concept:854538c9-e21f-5056-bc92-c1c2379ac3f1",
+    "S": "urn:atlas:concept:bb58b043-c5a5-595e-826a-c3886749e1ac"
+  }
+}

@@ -216,6 +216,64 @@
     "source_bindings": 6,
     "held_cases": 11
   },
+  "expanded_review": {
+    "connected_components": 336,
+    "nontrivial_components": 50,
+    "reviewed_cohorts": 38,
+    "reviewed_cases": 143,
+    "reviewed_nontrivial_components": 36,
+    "mapping_status": {
+      "reviewed_current_relation": 123,
+      "not_reviewed": 462,
+      "held_after_review": 20
+    },
+    "reviewed_relations": {
+      "exactMatch": 3,
+      "broadMatch": 9,
+      "relatedMatch": 89,
+      "narrowMatch": 22
+    },
+    "reviewed_rev4_classes": 64,
+    "reviewed_rev5_classes": 93,
+    "directory_nodes": 195,
+    "directory_kinds": {
+      "source_derived_navigation": 102,
+      "reviewed_activity": 93
+    },
+    "reviewed_source_bindings": 216,
+    "navigation_bindings": 102,
+    "directory_integrity": {
+      "node_count": 195,
+      "unique_codes": 195,
+      "duplicate_codes": [],
+      "edge_count": 178,
+      "orphan_parents": [],
+      "self_links": [],
+      "cycles": [],
+      "levels": {
+        "1": 17,
+        "2": 27,
+        "3": 58,
+        "4": 93
+      },
+      "roots": 17,
+      "leaves": 93,
+      "definitions": 195,
+      "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+      "polyhierarchy_nodes": 0
+    },
+    "errata_effect": {
+      "no_additional_scope_effect": 6,
+      "allocation_review_required": 44
+    },
+    "errata_text_agreement": {
+      "same_word_sequence": 46,
+      "different_word_sequence": 3,
+      "current_repeats_updated_twice": 1
+    },
+    "unresolved_issues": 18,
+    "queue_rows": 605
+  },
   "rev4_readme_corrections": {
     "3830_exclusion_removes_metal_qualifier": true,
     "1313_removes_silk_screen_printing": true,
@@ -231,11 +289,13 @@
       "tabulate": "0.10.0"
     },
     "parser_sha256": {
-      "isic.py": "8ea57449b65050656fdab0ead216c90340eabb24c7a9f1b1e10b911026f0f0e9",
+      "isic.py": "b8745d118d38a726422004c6c2443e2f6bbc984a46356b2e56ef52f113f4b969",
+      "isic_review.py": "a4e61c3b250ee33ecb6cff14e1a9d7e24bcbeecef5ead3938664c26e86d498df",
       "xlsx.py": "c23f6876d392538ff6621a4ae04cb4070a880621b2bdf5eb8189af945115d4eb",
       "normalize.py": "a3f60df71eca8916a492ebc9fbc715eb254a35362d146f6f35406680a58f1192"
     },
-    "review_decisions_sha256": "4b70c73367d86a67a40eb0cdcc8c0df23797a328b7dbdb8c2e52ba9e81fc22e4"
+    "review_decisions_sha256": "4b70c73367d86a67a40eb0cdcc8c0df23797a328b7dbdb8c2e52ba9e81fc22e4",
+    "expanded_review_sha256": "72da016a2b5367dfad13e5d732fa0f783b350524ca2a38d8440045ed75a5f538"
   },
   "pdfs": [
     {

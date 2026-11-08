@@ -1,0 +1,133 @@
+{
+  "method": "fresh directory; pinned raw files, manifests and review inputs only; same runtime; no network",
+  "status": "passed",
+  "files": [
+    {
+      "path": "data/atlas/economy/reviewed-concept-index.json",
+      "sha256": "5774be7846eb5eb7bdcbfdaf32ccf9880205f862d6c304a24fa1b0e2c0110316",
+      "identical": true
+    },
+    {
+      "path": "data/atlas/economy/reviewed-directory-index.json",
+      "sha256": "b981c12807d0a234c059715679053f3e426f293a7f1c653167a44aaccf6f77b2",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/ISIC4_english.mdb",
+      "sha256": "1e053c4d068203e0a1317a5c0076fd51a253093043f1eefbfb546257f8bd5456",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/correspondence-20250117.jsonl",
+      "sha256": "d8ce178d240c6e9a828d89a9f0b0beebb38a90fd62d5db9bdfedec1f6f3651ff",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/correspondence-source-workbook.json",
+      "sha256": "c02f7ba33ce30c14d2ebec0a647fe713569c0aaeb07428c37d5a661c78e28bc4",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/errata-review-dossiers.json",
+      "sha256": "65c87909b89b9b128ddcee1d41ebbadd12e8ea5c0fd1e133811e3f8370ac90f1",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/index.html",
+      "sha256": "c604622283fe99425b632bde6d3609647d3e7d2bb952def7f63324b3a58a577a",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/isic4-isic5-technical-note-20241025-pages.jsonl",
+      "sha256": "409aeef1f8fcce0385b3fe54a059e5ce7f47db06ec43b71f9c4e6089950d8a83",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/isic4-manual-2008-pages.jsonl",
+      "sha256": "4d4f0d63d16e967f5c5e6e0569b18701f0353c7242010f358d917c5c78f7b12a",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/isic5-errata-2026-pages.jsonl",
+      "sha256": "7c22403611be51318ee7a5edad39d54737b484f6cddba8a4cad6f477e2610a4f",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/isic5-white-cover-2026-pages.jsonl",
+      "sha256": "886d8d7e22348b9456d941d4ce5f5142bf7e26fb633bfbdc9dd732d7c83503e0",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/mapping-review-queue.json",
+      "sha256": "ff5f7764957de638343d2aabd36c61228d1373b1e850dfa179a7a084bc616043",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/rev4-database-tables.json",
+      "sha256": "d422b93f34678602063337558b86043ed479edb1a4faa303f3ee52a243aa8b84",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/rev4-nodes.jsonl",
+      "sha256": "8092286dedacbcd70b2c901d348f9507d374e798595568f5077228f9acfac680",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/rev5-nodes-20260819.jsonl",
+      "sha256": "32b961c13f1145d012b99ef969c92589c9b2b54d5474cda642b41884055af018",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/rev5-note-revisions.json",
+      "sha256": "0f80f3f013fbe614758f9f5f4de8b09f522717f638f01f602b6f50d4ff9e1123",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/rev5-source-workbook.json",
+      "sha256": "00b0bb9d80f778a51f3d81de586a208334d333a047d05487b1d33bde99e18656",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/review-dossiers.json",
+      "sha256": "7730e5c46d620237659302663816030e771199df1550a17558d1dadd1a5971f1",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/reviewed-atlas-concepts.json",
+      "sha256": "4e6d8c89987cd924cf869ef7d76907dc78ba17e57776f3d609abea0a1a25cf23",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/reviewed-directory.json",
+      "sha256": "d947d0bb33b9b9cc92253197f487a5ee429a8499978ec046a0727339dff48476",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/reviewed-source-to-atlas.json",
+      "sha256": "c63e58ff4cab3394aac1dc665b3a77a3fe78d5cc05cd3432d906e8b2f694bc2d",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/isic/source-to-atlas.json",
+      "sha256": "7f3ccad8086f91c7c69490f61c3388bd042f9ccd066d8697eeb1329987f0947c",
+      "identical": true
+    },
+    {
+      "path": "data/reports/isic-economy.json",
+      "sha256": "3c05347a654f966cf4c88d0b5ed08e64f7ceedb5b28f118ba35cc04317d58aff",
+      "identical": true
+    },
+    {
+      "path": "data/reports/isic-expanded-review.json",
+      "sha256": "1c0e2b792307a357af7bcb14786630a95179a32c9b6b7782caed1f0666f55787",
+      "identical": true
+    },
+    {
+      "path": "data/reports/isic-reviewed-cases.json",
+      "sha256": "f61522c71e3f6f51ce3c79acaa1339e4e3913594b49e28482287571215605ffc",
+      "identical": true
+    }
+  ],
+  "compared_files": 25,
+  "identical_files": 25
+}

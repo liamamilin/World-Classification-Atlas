@@ -44,9 +44,10 @@ def build(root, registry, resources):
                "sources_with_local_files": len(source_ids), "parsed_resources": len(parsed),
                "resource_status": dict(Counter(r["status"] for r in integrity)),
                "economic_activity_research": ({"status": economy["status"], "report": "data/reports/isic-economy.json",
-                                                "curation": economy.get("curation"), "correspondence": economy.get("correspondence")}
+                                                "curation": economy.get("curation"), "expanded_review": economy.get("expanded_review"),
+                                                "correspondence": economy.get("correspondence")}
                                                if economy else None),
-               "counts_note": "Counts are per resource, not deduplicated global concepts. O*NET CSV and CTDL overlap. No Atlas fusion or instance links.",
+               "counts_note": "Counts are per resource, not global concepts. O*NET CSV/CTDL overlap. ISIC has a separately counted reviewed subset; no instance links.",
                "resources": integrity}
     reports = root / "data/reports"
     write_json(reports / "coverage.json", summary)
@@ -66,6 +67,11 @@ def build(root, registry, resources):
         lines.append(f"| {r['resource_id']} | {r['edition']} | {r['status']}{stage} | {count} | {r.get('definitions', '—')} |")
     if economy:
         lines += ["", "经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。"]
+        if economy.get("expanded_review"):
+            review = economy["expanded_review"]
+            lines += ["", f"经济活动局部目录：{review['reviewed_rev5_classes']} 个已审活动、{review['directory_kinds']['source_derived_navigation']} 个仅作导航的上级；"
+                      f"{review['mapping_status']['reviewed_current_relation']} 条已审当前关系。所有605行仍保留原始版本和审查队列，"
+                      "详见 [扩展审查](isic-expanded-review.json)。上级导航不计作已审语义覆盖。"]
     lines += ["", "节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。",
               "", "## 未决项（逐来源）", ""]
     for s in registry["sources"]:
