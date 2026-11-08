@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World Classification Atlas · 来源注册表</title>
+<style>
+:root{font:15px/1.6 system-ui,sans-serif;color:#163029;background:#f3f5f0}body{max-width:1250px;margin:auto;padding:30px}h1{font-size:29px;margin:0}small,.muted{color:#5b7067}header{border-bottom:2px solid #294c40;padding-bottom:20px}nav{display:flex;gap:10px;flex-wrap:wrap;margin:22px 0}input,select{padding:10px;border:1px solid #b8c7bc;border-radius:5px;background:white;font:inherit}input{flex:1;min-width:220px}article{background:white;border:1px solid #d2ddd3;border-radius:7px;margin:12px 0;padding:16px}summary{cursor:pointer;display:grid;grid-template-columns:1.7fr 1.2fr 1fr;gap:12px}strong{font-size:17px}dl{display:grid;grid-template-columns:130px 1fr;gap:8px}dt{color:#5b7067}dd{margin:0;overflow-wrap:anywhere}a{color:#146344}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f5f7f2;padding:15px;font-size:12px}#stats{padding-top:10px}.tag{font-size:12px;border-radius:4px;background:#edf1e9;padding:3px 7px;display:inline-block}button{border:0;background:#edf1e9;padding:7px;cursor:pointer}footer{margin:25px 0;color:#5b7067}@media(max-width:700px){body{padding:15px}summary{grid-template-columns:1fr}dl{grid-template-columns:1fr}dt{margin-top:8px}}
+</style>
+<header><small>WORLD CLASSIFICATION ATLAS / 来源发现与本地资料</small><h1>世界分类来源注册表</h1><div id="stats"></div><p class="muted">15 个领域用于导航。来源登记、元数据核实、资料采集与解析分别统计；不同分类对象独立保留。</p></header>
+<nav><input id="q" type="search" placeholder="搜索名称、分类对象、机构或备注" aria-label="搜索来源"><select id="domain" aria-label="筛选领域"><option value="">全部领域</option></select><select id="status" aria-label="筛选核实状态"><option value="">全部核实状态</option></select></nav>
+<div id="count" class="muted" aria-live="polite"></div><main id="list"></main><footer>官方链接及核查记录在每项详情中。未确认的信息保留为空或待核实。此视图不包含受限原始标准资料。</footer>
+<script id="data" type="application/json">__ATLAS_DATA__</script>
+<script>
+const {registry,coverage}=JSON.parse(document.getElementById('data').textContent);
+const el=id=>document.getElementById(id), make=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n};
+const labels={verified_metadata:'元数据已核实',partially_verified:'部分已核实',candidate:'候选',inaccessible:'官方端点不可访问'};
+for(const d of registry.domains){const o=make('option',d.id+' · '+d.label);o.value=d.id;el('domain').append(o)}
+for(const s of new Set(registry.sources.map(s=>s.verification_status))){const o=make('option',labels[s]);o.value=s;el('status').append(o)}
+el('stats').textContent=`核查 ${registry.review_date} · ${coverage.registered_sources} 个登记来源 · ${coverage.sources_with_local_files} 个来源有本地文件 · ${coverage.pinned_resources} 个已锁定资源 · ${coverage.parsed_resources} 个资源可解析`;
+function render(){const q=el('q').value.toLowerCase(),domain=el('domain').value,status=el('status').value;
+const rows=registry.sources.filter(s=>(!domain||s.domains.includes(domain))&&(!status||s.verification_status===status)&&JSON.stringify(s).toLowerCase().includes(q));
+el('list').replaceChildren();el('count').textContent=`显示 ${rows.length} / ${registry.sources.length} 个来源`;
+for(const s of rows){const a=make('article'),details=make('details'),head=make('summary'),title=make('div');title.append(make('strong',s.id+' · '+s.name));head.append(title,make('span',s.classification_object),make('span',labels[s.verification_status]));details.append(head);const dl=make('dl');
+const resources=coverage.resources.filter(r=>r.source_id===s.id);
+for(const [k,v] of [['发布机构',s.publisher||'待确定'],['登记版本',s.editions.map(e=>`${e.label} (${e.status})`).join('；')||'待核实'],['层级',(s.hierarchy.levels||['待核实']).join(' → ')],['许可',`${s.license.name||'待核实'}；公开再分发：${s.license.redistribute===true?'允许（须遵守署名等条件）':s.license.redistribute===false?'当前许可不允许':'未确认'}`],['本地资源',resources.map(r=>r.resource_id+'：'+r.status+(r.node_count?' / '+r.node_count+' 节点':'')).join('；')||'尚未安排采集'],['未决问题',s.unresolved.join('；')||'无已登记的元数据缺口']]){dl.append(make('dt',k),make('dd',v))}details.append(dl);
+const link=make('a','查看官方入口');link.href=s.official_url;link.target='_blank';link.rel='noopener noreferrer';details.append(link);const ev=make('details');ev.append(make('summary','查看证据、映射入口与完整登记信息'));ev.append(make('pre',JSON.stringify(s,null,2)));details.append(ev);a.append(details);el('list').append(a)}}
+for(const id of ['q','domain','status'])el(id).addEventListener('input',render);render();
+</script></html>

@@ -1,0 +1,11 @@
+{
+  "resource_id": "isic5-structure",
+  "source_id": "ISIC",
+  "edition": "Rev.5",
+  "role": "structure",
+  "sha256": "fc408f57bd3a4f33c35a4f384ec0010283dd72774892c8d48ae1330a8caeb57f",
+  "path": "data/local/raw/ISIC/Rev.5/isic5-structure/fc408f57bd3a4f33c35a4f384ec0010283dd72774892c8d48ae1330a8caeb57f/isic5-structure.csv",
+  "bytes": 45481,
+  "status": "failed",
+  "error": "ValueError: unexpected CSV headers: ['ISIC Rev 5 Code', 'ISIC Rev 5 Title']; expected ['Code', 'Description']"
+}

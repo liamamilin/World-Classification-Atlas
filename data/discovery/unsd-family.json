@@ -1,0 +1,755 @@
+{
+  "url": "https://unstats.un.org/unsd/classifications/Family/ListByName",
+  "retrieved_at": "2026-11-08T12:38:49.124914+00:00",
+  "sha256": "099696cac9312321f979d524d48083701c1855f479054cf23c463ea74a0c5399",
+  "advertised_count": 149,
+  "parsed_count": 149,
+  "note": "Discovery facts only; original portal metadata may be stale. No download/rights verification implied.",
+  "candidates": [
+    {
+      "name": "Anatomic Therapeutic Chemical Classification System with Defined Daily Doses (ATC/DDD)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Application of the International Classification of Diseases to Dentistry and Stomatology (ICD-DA) 3rd Edition",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Application of the International Classification of Diseases to Neurology (ICD-NA)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ASFIS List of Species for Fishery Statistics Purposes (ASFIS)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1018",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Assistive products for persons with disability - Classification and terminology (ISO 9999:2011)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1047",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Breeds list",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Categories of main source of drinking water",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1049",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Central Product Classification (CPC) Version 3.0",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2100",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classes of natural inputs",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2003",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification by Broad Economic Categories (BEC) Revision 5",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1068",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of balancing items",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of buildings according to the state of repair",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1055",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of buildings by type",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1048",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Business Functions",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2092",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of categories of sources and sinks of greenhouse gas emissions and removals according to the Intergovernmental Panel on Climate Change Guidelines for National Greenhouse Gas Inventories (IPCC GHG Source/Sink)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1025",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of disease/condition by Global Burden of Disease (GBD) category",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of ecosystems used in TEEB",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of environmental assets",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2001",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Environmental Protection Activities 2000 (CEPA 2000)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1009",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of environmental purposes (CEP)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2097",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Factors of Health Care Provision (ICHA-FP)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1027",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Forest Products",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1001",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of gross fixed capital formation in health systems by type of asset",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1026",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Health Care Financing Schemes (ICHA-HF)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1036",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Health Care Functions (ICHA-HC)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1035",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Health Care Providers (ICHA-HP)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1037",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of households by tenure",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1057",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of housing unit by toilet facilities",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1058",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of housing unit by water supply system",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1059",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of housing units by availability and type of bathing facilities",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1052",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of housing units by availability of a kitchen or other space reserved for cooking",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1053",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of housing units by type of ownership",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1054",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of housing units by type of solid waste disposal",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1056",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of inbound travellers",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1079",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Individual Consumption According to Purpose 2018",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2094",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of inland water bodies",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2002",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of institutional units for R&D purposes (Frascati institutional Sectors)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1038",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of land use (LU) for the agricultural census",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1003",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of livestock for the agricultural census",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1004",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of living quarters",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1060",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of machinery and equipment for the agricultural census",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1005",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of occupancy status for conventional dwellings",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1061",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of occupational injuries",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Resource Management Activities 2008 (CReMA 2008)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1008",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Resource Use and Management Activities and expenditures (CRUMA)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Revenues of Health Care Financing Schemes (ICHA-FS)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1028",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Statistical Activities, Version 2.1",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2101",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of taxes on production and on imports",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of the Functions of Government (COFOG)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/4",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of the Outlays of Producers According to Purpose (COPP)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/7",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of the Purposes of Non-Profit Institutions Serving Households (COPNI)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/6",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of tourism trips according to the main purpose",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1077",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of transactions used in a health-IEA",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of Types of Constructions (CC)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1010",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classification of use of housing unit",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1062",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classifications of beneficiaries",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Classifications of Energy Industries",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Codes for the representation of names of languages (ISO 639)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Coding System for Balance of Payments and International Investment Position (CSBPIIP)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1029",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Common International Classification of Ecosystem Services (CICES) Version 4.3",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1063",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "CPC expanded for agricultural statistics",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "CRS (Creditor Reporting System) Purpose Codes",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ECE Standard Statistical Classification of Ambient Air Quality",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ECE Standard Statistical Classification of Flora, Fauna and Biotopes",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ECE Standard Statistical Classification of Freshwater Quality for the Maintenance of Aquatic Life",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ECE Standard Statistical Classification of Marine Water Quality",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ECE Standard Statistical Classification of Wastes",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ECE Standard Statistical Classification of Water Use",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Ecosystem reporting categories",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ESSPROS Classification by Function of Social Protection",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ESSPROS General Classification of Social Benefits by Type",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "European Waste Classification for Statistics (EWC-Stat) Version 4 (2010)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1065",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Extended Balance of Payments Services Classification 2026 (EBOPS 2026)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2102",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Family status classification",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1050",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "FAO Major Fishing Areas",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1022",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Fields of Research and Development classification (FORD)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1039",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Global Forest Resources Assessment Categories (FRA)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Government Finance Statistics - Classification of Debt Liabilities and Financial Assets Corresponding to Debt Instruments by Maturity and by Type of Debt Instrument (GFS table A8.5)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1032",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Government Finance Statistics - Classification of Expenditure by Functions of Government According to Divisions and Groups (GFS table A8.6)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Government Finance Statistics - Classification of Expense (GFS table A8.2)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1033",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Government Finance Statistics - Classification of Revenue (GFS table A8.1)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1034",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Government Finance Statistics - Classifications of Flows and Stock Positions in Assets and Liabilities (GFS table A8.3)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1031",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Government Finance Statistics - Classifications of the Counterparty of Transactions and Stock Positions in Financial Assets and Liabilities by Institutional Sector (GFS table A8.4)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1030",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Harmonized Commodity Description and Coding System 2012 (HS 2012)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/32",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Health Care Products by mode of provision",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Household status classification",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1051",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "ICD-10 Classification of Mental and Behavioural Disorders",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Indicative Crop Classification for the agricultural census (ICC) Version 1.1",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1002",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification for Administrative Data on Trafficking in Persons (IC-TIP)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2099",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification for Industrial Designs under the Locarno Agreement (Locarno Classification), 10th Edition",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1012",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification for Nursing Practice (ICNP)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1024",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Activities for Time-Use Statistics 2016",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2083",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Alternative Care of Children (ICare)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2103",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Crime for Statistical Purposes (ICCS) Version 1.0",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1000",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Diseases for Oncology (ICD-O-3) 3rd Edition, 1st Revision",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Dying Places (ICP)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2104",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of External Causes of Injury (ICECI)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Functioning, Disability and Health (ICF)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/220",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Goods and Services for the Purposes of the Registration of Marks under the Nice Agreement (Nice Classification) 2016 Version of the 10th Edition",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1013",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Non-Profit Organizations (ICNPO)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2008",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Non-Tariff Measures (ICNTM)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2090",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Primary Care (ICPC-2) 2nd Edition",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Procedures in Medicine (ICPM)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Status in Employment (ICSE-18)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2098",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of the Figurative Elements of Marks (Vienna Classification) 7th Edition (VCL (7))",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1014",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Classification of Violence against Children, ICVAC",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2096",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Patent Classification (IPC-2016.01) Version 2016",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1011",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Shortlist for Hospital Morbidity Tabulation (ISHMT)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Classification of Education: Education Programmes 2011 (ISCED-P 2011)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1045",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Classification of Education: Educational Attainment 2011 (ISCED-A 2011)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1044",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Classification of Education: Fields of Education and Training 2013 (ISCED-F 2013)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1046",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Classification of Occupations 08 (ISCO-08)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1067",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Industrial Classification of All Economic Activities (ISIC) Revision 5",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2095",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Statistical Classification for Aquatic Animals and Plants (ISSCAAP)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Statistical Classification of Fishery Commodities (ISSCFC)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1023",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Statistical Classification of Fishery Vessels - Simplified Classification of Fishing Vessels by Vessel Types (ISSCFV)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1021",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Statistical Classification of Fishery Vessels by GRT Categories (ISSCFV-GRT)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1019",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Statistical Classification of Fishing Gear (ISSCFG) Revision 1",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1006",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Standard Statistical Classification of Vessels by Length Classes",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1020",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "International Statistical Classification of Diseases and Related Health Problems 10th Revision (ICD-10)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/219",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "IUCN Classification of protected areas",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2084",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "IUCN Red List Categories Version 3.1",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Land cover classification",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2005",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Land use classification",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2006",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "List of categories of tourism characteristic activities (tourism industries)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1075",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "List of categories of tourism characteristic consumption products",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1076",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Main categories of energy consumers",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Mode of Transport Classification for Trade Statistics",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "OECD classification for Micro Statistics on Household Wealth",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1015",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "OECD Regional Typology",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Priority Assistive Products List (APL)",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Protected Area Management Categories",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Resource Utilization Groups: A classification for nursing home patients, Version 4",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Standard classification of modes of transport",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1078",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Standard Country or Area Codes for Statistical Use (M49)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/12",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Standard goods classification for transport statistics (NST-2007)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1043",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Standard International Energy Product Classification, Ver. 2.0 (SIEC Ver. 2.0)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2105",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Standard International Trade Classification (SITC) Revision 4",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/28",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Supplementary classification of debt securities by maturity",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Supplementary classification of investment fund shares",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Supplementary classification of loans",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "System of National Accounts: Classification of Institutional Sectors (SNA: Classification of Institutional Sectors)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2013",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "System of National Accounts: Classifications of transactions (SNA Classifications of transactions P NP D and F codes)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2014",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "System of National Accounts: Entries Related to Stocks of Assets and Liabilities (SNA Stocks of assets and liabilities L and AN codes)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2011",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "System of National Accounts: Other Flows (SNA Other Flows K and B codes)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2012",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "Taxes according to the nature of the tax",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "UN List of Industrial Products",
+      "official_detail_url": null,
+      "verification_status": "candidate"
+    },
+    {
+      "name": "United Nations Code for Trade and Transport Locations (UN/LOCODE 2015-2) 2015-2",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1042",
+      "verification_status": "candidate"
+    },
+    {
+      "name": "United Nations Framework Classification for Fossil Energy and Mineral Reserves and Resources 2009 (UNFC-2009)",
+      "official_detail_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1040",
+      "verification_status": "candidate"
+    }
+  ]
+}

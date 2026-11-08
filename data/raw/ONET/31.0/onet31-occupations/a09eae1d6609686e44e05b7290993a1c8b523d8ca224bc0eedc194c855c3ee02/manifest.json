@@ -1,0 +1,31 @@
+{
+  "resource_id": "onet31-occupations",
+  "source_id": "ONET",
+  "edition": "31.0",
+  "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/occupation_data.csv",
+  "attempted_at": "2026-11-08T12:38:22.230913+00:00",
+  "final_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/occupation_data.csv",
+  "http_status": 200,
+  "content_type": "application/octet-stream",
+  "etag": "\"6a8d105e-416fe\"",
+  "last_modified": "Tue, 25 Aug 2026 03:47:42 GMT",
+  "sha256": "a09eae1d6609686e44e05b7290993a1c8b523d8ca224bc0eedc194c855c3ee02",
+  "bytes": 268030,
+  "path": "data/raw/ONET/31.0/onet31-occupations/a09eae1d6609686e44e05b7290993a1c8b523d8ca224bc0eedc194c855c3ee02/onet31-occupations.csv",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "CC BY 4.0",
+    "evidence_url": "https://www.onetcenter.org/license_db.html"
+  },
+  "role": "occupation_codes_and_definitions",
+  "language": "en",
+  "format": "csv",
+  "publication_date": null,
+  "robots": {
+    "url": "https://www.onetcenter.org/robots.txt",
+    "result": "fetched",
+    "allowed": true
+  }
+}

@@ -1,0 +1,18 @@
+[
+  {
+    "resource_id": "isic5-structure",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_5_english_structure.csv",
+    "attempted_at": "2026-11-08T12:39:31.961842+00:00",
+    "status": "downloaded",
+    "sha256": "fc408f57bd3a4f33c35a4f384ec0010283dd72774892c8d48ae1330a8caeb57f",
+    "path": "data/local/raw/ISIC/Rev.5/isic5-structure/fc408f57bd3a4f33c35a4f384ec0010283dd72774892c8d48ae1330a8caeb57f/isic5-structure.csv",
+    "bytes": 45481,
+    "final_url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_5_english_structure.csv",
+    "http_status": 200,
+    "content_type": "application/octet-stream",
+    "etag": "\"0fcd170cc5eda1:0\"",
+    "last_modified": "Tue, 13 Feb 2024 22:31:52 GMT"
+  }
+]

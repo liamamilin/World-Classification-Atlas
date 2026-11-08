@@ -1,0 +1,32 @@
+{
+  "resource_id": "onet2019-taxonomy",
+  "source_id": "ONET",
+  "edition": "SOC2019-snapshot-2026-11-08",
+  "url": "https://www.onetcenter.org/ctdl/graph/ce-8350d6ad-bc2a-11ef-8f5a-005056bdd76e",
+  "attempted_at": "2026-11-08T12:38:30.433246+00:00",
+  "final_url": "https://www.onetcenter.org/ctdl/graph/ce-8350d6ad-bc2a-11ef-8f5a-005056bdd76e",
+  "http_status": 200,
+  "content_type": "application/json",
+  "etag": null,
+  "last_modified": "Sun, 08 Nov 2026 12:38:32 GMT",
+  "sha256": "40e5550796d8402cc6c13da7177b401cda35b8d377933f76f181bb6dd52b82f7",
+  "bytes": 1220929,
+  "path": "data/raw/ONET/SOC2019-snapshot-2026-11-08/onet2019-taxonomy/40e5550796d8402cc6c13da7177b401cda35b8d377933f76f181bb6dd52b82f7/onet2019-taxonomy.jsonld",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "CC BY 4.0",
+    "evidence_url": "https://www.onetcenter.org/license_db.html"
+  },
+  "role": "occupation_taxonomy",
+  "language": "en",
+  "format": "jsonld",
+  "publication_date": "2025-01-16 (ceasn:dateModified in collection)",
+  "robots": {
+    "url": "https://www.onetcenter.org/robots.txt",
+    "result": "fetched",
+    "allowed": true
+  },
+  "metadata_correction": "Collection identifies O*NET-SOC2019; ceasn:dateModified=2025-01-16. Separated from database31.0 before initial implementation commit; bytes unchanged."
+}

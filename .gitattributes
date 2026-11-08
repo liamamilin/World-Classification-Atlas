@@ -1,0 +1,2 @@
+# Raw snapshots must round-trip through Git without newline normalization.
+data/raw/** -text -diff

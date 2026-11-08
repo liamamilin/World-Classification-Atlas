@@ -1,0 +1,4033 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-11-08",
+  "scope": "Classification schemes only; domains are navigation; no real-world instance links.",
+  "domains": [
+    {
+      "id": "01-economy",
+      "label": "经济与行业"
+    },
+    {
+      "id": "02-products",
+      "label": "产品与服务"
+    },
+    {
+      "id": "03-consumption",
+      "label": "消费与支出"
+    },
+    {
+      "id": "04-knowledge",
+      "label": "学科与知识"
+    },
+    {
+      "id": "05-occupations",
+      "label": "职业与技能"
+    },
+    {
+      "id": "06-technology",
+      "label": "技术与发明"
+    },
+    {
+      "id": "07-health",
+      "label": "医学与健康"
+    },
+    {
+      "id": "08-biodiversity",
+      "label": "生物与自然"
+    },
+    {
+      "id": "09-geography",
+      "label": "地理与空间"
+    },
+    {
+      "id": "10-environment",
+      "label": "环境与资源"
+    },
+    {
+      "id": "11-governance",
+      "label": "法律与公共治理"
+    },
+    {
+      "id": "12-culture",
+      "label": "文化与艺术"
+    },
+    {
+      "id": "13-education",
+      "label": "教育与培训"
+    },
+    {
+      "id": "14-organizations",
+      "label": "组织与机构"
+    },
+    {
+      "id": "15-activities",
+      "label": "人类活动与生活"
+    }
+  ],
+  "sources": [
+    {
+      "id": "ISIC",
+      "name": "International Standard Industrial Classification of All Economic Activities",
+      "aliases": [
+        "ISIC"
+      ],
+      "classification_object": "economic activities",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "01-economy"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/econ/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "Rev.5",
+          "label": "Rev.5",
+          "status": "confirmed_available",
+          "latest_claim": false
+        },
+        {
+          "id": "Rev.4",
+          "label": "Rev.4",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "class"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/econ/",
+        "formats": [
+          "csv",
+          "xlsx",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "UN download terms; public redistribution unresolved",
+        "url": "https://unstats.un.org/unsd/classifications/econ/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "United Nations Statistics Division; source scheme and edition; URL",
+        "status": "local_only_pending_redistribution",
+        "note": "官方分发结构供下载；仅本地研究/处理。未确认面向公众再分发授权；不套用data.un.org的其他站点条款。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "ISIC Rev.4",
+            "to_edition": "ISIC Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/econ/",
+            "status": "official_entry_verified",
+            "semantics": "官方 Excel；部分、拆分、合并不能自动视为 exact。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "ISIC Rev.5 结构及说明可下载；出版物仍标 forthcoming / copyediting；不等于最终出版的手册。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_download_offer_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        }
+      ],
+      "unresolved": [
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "NAICS",
+      "name": "North American Industry Classification System (United States)",
+      "aliases": [
+        "NAICS"
+      ],
+      "classification_object": "economic activities",
+      "publisher": "OMB / U.S. Census Bureau; Statistics Canada; INEGI",
+      "domains": [
+        "01-economy"
+      ],
+      "official_url": "https://www.census.gov/naics/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2022",
+          "label": "2022",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "sector",
+          "subsector",
+          "industry group",
+          "NAICS industry",
+          "national industry"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.census.gov/naics/",
+        "formats": [
+          "xlsx",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "NAICS US 2017",
+            "to_edition": "NAICS US 2022",
+            "url": "https://www.census.gov/naics/",
+            "status": "official_entry_verified",
+            "semantics": "Concordances 官方入口；端点须随资源清单复核。"
+          }
+        ]
+      },
+      "update_policy": "5-year revision cycle; 2027 proposed updates visible",
+      "evidence": [
+        {
+          "url": "https://www.census.gov/naics/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "美国 2022 分类；2027 仍为修订提案。必须区分美加墨国家细分。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实"
+      ]
+    },
+    {
+      "id": "NACE",
+      "name": "Statistical Classification of Economic Activities in the European Union",
+      "aliases": [
+        "NACE"
+      ],
+      "classification_object": "economic activities",
+      "publisher": "Eurostat / European Commission",
+      "domains": [
+        "01-economy"
+      ],
+      "official_url": "https://ec.europa.eu/eurostat/web/nace/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "Rev.2.1",
+          "label": "Rev.2.1",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "class"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://ec.europa.eu/eurostat/web/nace/",
+        "formats": [
+          "pdf",
+          "linked data"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "NACE Rev.2",
+            "to_edition": "NACE Rev.2.1",
+            "url": "https://ec.europa.eu/eurostat/web/nace/correspondence-tables",
+            "status": "official_entry_verified",
+            "semantics": "官方对应入口；活动迁移可能部分对应。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://ec.europa.eu/eurostat/web/nace/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "Rev.2.1 从 2025 开始用于欧洲统计；2026 手册版不是新分类 revision。RAMON 旧入口失效。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实"
+      ]
+    },
+    {
+      "id": "GBT4754",
+      "name": "国民经济行业分类",
+      "aliases": [
+        "GB/T 4754"
+      ],
+      "classification_object": "economic activities",
+      "publisher": "国家统计局；原国家质检总局 / 国家标准委",
+      "domains": [
+        "01-economy"
+      ],
+      "official_url": "https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2017-amendment1-2019",
+          "label": "2017-amendment1-2019",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "门类",
+          "大类",
+          "中类",
+          "小类"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html",
+        "formats": [
+          "docx"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "GB/T 4754—2017 按 2019 第1号修改单修订；附件为原始 DOCX；许可未核实。"
+        },
+        {
+          "url": "https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=A703F0E23DD165A5A1318679F312D158",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "publisher"
+          ],
+          "finding": "官方标准平台标现行并附第1号修改单。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "UN_CPC",
+      "name": "Central Product Classification",
+      "aliases": [
+        "CPC Central Product Classification"
+      ],
+      "classification_object": "products and services",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "02-products"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/econ/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "3.0",
+          "label": "3.0",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "class",
+          "subclass"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/econ/",
+        "formats": [
+          "csv",
+          "xlsx",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "UN download terms; public redistribution unresolved",
+        "url": "https://unstats.un.org/unsd/classifications/econ/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "United Nations Statistics Division; source scheme and edition; URL",
+        "status": "local_only_pending_redistribution",
+        "note": "官方分发结构供下载；仅本地研究/处理。未确认面向公众再分发授权；不套用data.un.org的其他站点条款。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "CPC versions",
+            "to_edition": "CPC / ISIC / HS",
+            "url": "https://unstats.un.org/unsd/classifications/Econ",
+            "status": "official_entry_verified",
+            "semantics": "官方资源及 CPC Correspondences 入口；各表版本待定位。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "CPC Ver.3.0，结构文件标 30Jun2025；forthcoming UN publication；不是专利 CPC。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_download_offer_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        }
+      ],
+      "unresolved": [
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "HS",
+      "name": "Harmonized Commodity Description and Coding System",
+      "aliases": [
+        "HS"
+      ],
+      "classification_object": "traded goods",
+      "publisher": "World Customs Organization",
+      "domains": [
+        "02-products"
+      ],
+      "official_url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2022",
+          "label": "2022",
+          "status": "confirmed_available",
+          "latest_claim": false
+        },
+        {
+          "id": "2028",
+          "label": "HS2028",
+          "status": "published_future_effective_2028-01-01",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "chapter",
+          "heading",
+          "subheading"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "HS2022",
+            "to_edition": "HS2028",
+            "url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
+            "status": "official_entry_verified",
+            "semantics": "官方 correlation tables，有 corrigenda；不可将部分对应自动转 exact。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "HS2022 现行；HS2028 已公布、2028-01-01 才生效；UN Comtrade 提供的摘录不等于 WCO 全套注释。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实"
+      ]
+    },
+    {
+      "id": "UNSPSC",
+      "name": "United Nations Standard Products and Services Code",
+      "aliases": [
+        "UNSPSC"
+      ],
+      "classification_object": "procurement goods and services",
+      "publisher": "United Nations Development Programme",
+      "domains": [
+        "02-products"
+      ],
+      "official_url": "https://www.undp.org/unspsc",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "unverified-version",
+          "label": "Version to be read from workbook; attachment 2026-10",
+          "status": "unverified",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "five levels (official page; names pending workbook inspection)"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.undp.org/unspsc",
+        "formats": [
+          "xlsx"
+        ],
+        "status": "official_entry_verified",
+        "file_url": "https://www.undp.org/sites/g/files/zskgke326/files/2026-10/unspsc_english.xlsx"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.undp.org/unspsc",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "UNDP 为所有者；2026-10 附件可免费下载。版本号需从工作簿核实，不能用附件月份当版本。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "明确版本待核实",
+        "五层名称及可选层级需核查原文件"
+      ]
+    },
+    {
+      "id": "ECLASS",
+      "name": "ECLASS Standard",
+      "aliases": [
+        "eCl@ss"
+      ],
+      "classification_object": "products and services with properties",
+      "publisher": "ECLASS e.V.",
+      "domains": [
+        "02-products"
+      ],
+      "official_url": "https://eclass.eu/en/eclass-standard/releases",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "16.0",
+          "label": "16.0",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://eclass.eu/en/eclass-standard/releases",
+        "formats": [
+          "csv",
+          "xml"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "ECLASS license",
+        "url": "https://eclass.eu/en/eclass-standard/licenses",
+        "access": "public_metadata",
+        "download": false,
+        "local_processing": false,
+        "redistribute": false,
+        "derivatives": false,
+        "attribution": "credit publisher, edition and source URL",
+        "status": "reviewed",
+        "note": "使用需适当 ECLASS 许可；本项目仅存元数据。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://eclass.eu/en/eclass-standard/releases",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "官网 release 页面确认16.0；属性模型和分类层级不可混写。"
+        },
+        {
+          "url": "https://eclass.eu/en/eclass-standard/licenses",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "使用需适当 ECLASS 许可；本项目仅存元数据。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "COICOP",
+      "name": "Classification of Individual Consumption According to Purpose",
+      "aliases": [
+        "COICOP"
+      ],
+      "classification_object": "household consumption purpose",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "03-consumption"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/econ/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2018",
+          "label": "2018",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "division",
+          "group",
+          "class",
+          "subclass"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/econ/",
+        "formats": [
+          "xlsx",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "UN download terms; public redistribution unresolved",
+        "url": "https://unstats.un.org/unsd/classifications/econ/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "United Nations Statistics Division; source scheme and edition; URL",
+        "status": "local_only_pending_redistribution",
+        "note": "官方分发结构供下载；仅本地研究/处理。未确认面向公众再分发授权；不套用data.un.org的其他站点条款。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "COICOP2018",
+            "to_edition": "COICOP1999",
+            "url": "https://unstats.un.org/unsd/classifications/econ/",
+            "status": "official_entry_verified",
+            "semantics": "官方 Excel 对应表与 cover note。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "2018 结构、手册及与1999对应表可用。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_download_offer_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        }
+      ],
+      "unresolved": [
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "COFOG",
+      "name": "Classification of the Functions of Government",
+      "aliases": [
+        "COFOG"
+      ],
+      "classification_object": "government functions",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "03-consumption",
+        "11-governance"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/econ/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "1999",
+          "label": "1999",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "division",
+          "group",
+          "class"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/econ/",
+        "formats": [
+          "csv",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "UN download terms; public redistribution unresolved",
+        "url": "https://unstats.un.org/unsd/classifications/econ/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "United Nations Statistics Division; source scheme and edition; URL",
+        "status": "local_only_pending_redistribution",
+        "note": "官方分发结构供下载；仅本地研究/处理。未确认面向公众再分发授权；不套用data.un.org的其他站点条款。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "官方1999 CSV结构；政府职能不同于法律主题。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_download_offer_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "COPNI",
+      "name": "Classification of the Purposes of Non-Profit Institutions Serving Households",
+      "aliases": [
+        "COPNI"
+      ],
+      "classification_object": "nonprofit expenditure purposes",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "03-consumption",
+        "14-organizations"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/econ/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "1999",
+          "label": "1999",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "division",
+          "group",
+          "class"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/econ/",
+        "formats": [
+          "csv",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "UN download terms; public redistribution unresolved",
+        "url": "https://unstats.un.org/unsd/classifications/econ/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "United Nations Statistics Division; source scheme and edition; URL",
+        "status": "local_only_pending_redistribution",
+        "note": "官方分发结构供下载；仅本地研究/处理。未确认面向公众再分发授权；不套用data.un.org的其他站点条款。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "按支出目的，不等同 ICNPO 的组织活动分类。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_download_offer_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "FORD",
+      "name": "Fields of Research and Development",
+      "aliases": [
+        "OECD FORD"
+      ],
+      "classification_object": "research fields",
+      "publisher": "OECD",
+      "domains": [
+        "04-knowledge"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1039",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2015",
+          "label": "2015",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "broad field",
+          "second-level field"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1039",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Family/Detail/1039",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "Frascati Manual 2015 Table2.2；此为明确参考版本，不声称最新。"
+        },
+        {
+          "url": "https://www.oecd.org/en/publications/frascati-manual-2015_9789264239012-en.html",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "download"
+          ],
+          "finding": "OECD 2015 手册官方发布页。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "ISCED_F",
+      "name": "ISCED Fields of Education and Training",
+      "aliases": [
+        "ISCED-F"
+      ],
+      "classification_object": "education fields",
+      "publisher": "UNESCO Institute for Statistics",
+      "domains": [
+        "04-knowledge",
+        "13-education"
+      ],
+      "official_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2013",
+          "label": "2013",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "broad field",
+          "narrow field",
+          "detailed field"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "ISCED-F2013",
+            "to_edition": "ISCED1997 fields",
+            "url": "https://unstats.un.org/unsd/classifications/Family/Detail/1046",
+            "status": "official_entry_verified",
+            "semantics": "Family 条目指向手册内对应表。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "与 ISCED 教育层次分别建目录。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实"
+      ]
+    },
+    {
+      "id": "LCC",
+      "name": "Library of Congress Classification",
+      "aliases": [
+        "LCC"
+      ],
+      "classification_object": "library subjects",
+      "publisher": "Library of Congress",
+      "domains": [
+        "04-knowledge"
+      ],
+      "official_url": "https://www.loc.gov/catdir/cpso/lcco/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.loc.gov/catdir/cpso/lcco/",
+        "formats": [
+          "pdf",
+          "doc",
+          "wpd"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.loc.gov/catdir/cpso/lcco/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "download"
+          ],
+          "finding": "公开的是 outline；完整 schedules 在订阅 Classification Web 中。不能把 outline 当完整LCC。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "明确版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "DDC",
+      "name": "Dewey Decimal Classification",
+      "aliases": [
+        "DDC"
+      ],
+      "classification_object": "library subjects",
+      "publisher": "OCLC",
+      "domains": [
+        "04-knowledge"
+      ],
+      "official_url": "https://help.oclc.org/Metadata_Services/WebDewey/WebDewey_user_guide/Get_started_with_WebDewey/About_WebDewey",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "23-with-continuous-updates",
+          "label": "23-with-continuous-updates",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://help.oclc.org/Metadata_Services/WebDewey/WebDewey_user_guide/Get_started_with_WebDewey/About_WebDewey",
+        "formats": [],
+        "status": "pending"
+      },
+      "license": {
+        "name": "OCLC subscription/license",
+        "url": "https://www.oclc.org/en/dewey/resources.html",
+        "access": "public_metadata",
+        "download": false,
+        "local_processing": false,
+        "redistribute": false,
+        "derivatives": false,
+        "attribution": "credit publisher, edition and source URL",
+        "status": "reviewed",
+        "note": "完整目录需订阅/许可；公开摘要不代表完整目录可重发布。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://help.oclc.org/Metadata_Services/WebDewey/WebDewey_user_guide/Get_started_with_WebDewey/About_WebDewey",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions"
+          ],
+          "finding": "WebDewey 包含DDC23及2011以来更新；精确订阅快照未获取。"
+        },
+        {
+          "url": "https://www.oclc.org/en/dewey/resources.html",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "完整目录需订阅/许可；公开摘要不代表完整目录可重发布。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ISCO",
+      "name": "International Standard Classification of Occupations",
+      "aliases": [
+        "ISCO"
+      ],
+      "classification_object": "occupations",
+      "publisher": "International Labour Organization",
+      "domains": [
+        "05-occupations"
+      ],
+      "official_url": "https://www.ilo.org/publications/international-standard-classification-occupations-2008-isco-08-structure",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2008",
+          "label": "2008",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "major group",
+          "sub-major group",
+          "minor group",
+          "unit group"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.ilo.org/publications/international-standard-classification-occupations-2008-isco-08-structure",
+        "formats": [
+          "pdf",
+          "xlsx",
+          "csv"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "ISCO-08",
+            "to_edition": "ISCO-88",
+            "url": "https://ilostat.ilo.org/methods/concepts-and-definitions/classification-occupation/",
+            "status": "official_entry_verified",
+            "semantics": "官方双向对应；部分对应 p 标记不可丢弃。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.ilo.org/publications/international-standard-classification-occupations-2008-isco-08-structure",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "ISCO-08；手册2012，不能当作分类版本2012。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实"
+      ]
+    },
+    {
+      "id": "ESCO",
+      "name": "European Skills, Competences, Qualifications and Occupations",
+      "aliases": [
+        "ESCO"
+      ],
+      "classification_object": "occupations; skills and competences (separate pillars)",
+      "publisher": "European Commission, DG EMPL",
+      "domains": [
+        "05-occupations",
+        "13-education"
+      ],
+      "official_url": "https://esco.ec.europa.eu/en/use-esco/download",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "1.2.1",
+          "label": "1.2.1",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://esco.ec.europa.eu/en/use-esco/download",
+        "formats": [
+          "csv",
+          "ods",
+          "rdf",
+          "ttl",
+          "xml",
+          "jsonld"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "ESCO",
+            "to_edition": "O*NET-SOC",
+            "url": "https://www.onetcenter.org/crosswalks.html",
+            "status": "official_entry_verified",
+            "semantics": "官方发布但AI辅助且人工验证；版本与匹配语义须进一步复核。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://esco.ec.europa.eu/en/use-esco/download",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "页面显示2025-12-10更新；常规批量下载需邮箱与隐私声明；此轮不代用户提交邮箱。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ONET",
+      "name": "O*NET Database and O*NET-SOC Taxonomy",
+      "aliases": [
+        "O*NET"
+      ],
+      "classification_object": "occupations; content model descriptors (separate schemes)",
+      "publisher": "U.S. Department of Labor, Employment and Training Administration / National Center for O*NET Development",
+      "domains": [
+        "05-occupations"
+      ],
+      "official_url": "https://www.onetcenter.org/database.html",
+      "verification_status": "verified_metadata",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "31.0",
+          "label": "31.0",
+          "status": "confirmed_available",
+          "latest_claim": false
+        },
+        {
+          "id": "SOC2019-snapshot-2026-11-08",
+          "label": "O*NET-SOC2019 CTDL collection (dateModified 2025-01-16; retrieved 2026-11-08)",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "SOC hierarchy (taxonomy)",
+          "variable-depth content model (separate tree)"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.onetcenter.org/database.html",
+        "formats": [
+          "csv",
+          "json",
+          "xlsx",
+          "sql",
+          "rdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "CC BY 4.0",
+        "url": "https://www.onetcenter.org/license_db.html",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": true,
+        "derivatives": true,
+        "attribution": "credit publisher, edition and source URL",
+        "status": "reviewed",
+        "note": "仅适用于官方数据库下载文件；网页、跨表文件不自动继承。原始数据不改；解析重排结构须说明。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "O*NET-SOC2019",
+            "to_edition": "SOC2018 / ESCO",
+            "url": "https://www.onetcenter.org/crosswalks.html",
+            "status": "official_entry_verified",
+            "semantics": "官方跨表入口；资源另行核查许可与端点。"
+          }
+        ]
+      },
+      "update_policy": "quarterly database updates; primary update in Q3",
+      "evidence": [
+        {
+          "url": "https://www.onetcenter.org/database.html",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "数据库31.0与 O*NET-SOC2019 是两种版本；仅采集抽象职业代码和内容模型，不采集现实雇主、职位实例。"
+        },
+        {
+          "url": "https://www.onetcenter.org/license_db.html",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "仅适用于官方数据库下载文件；网页、跨表文件不自动继承。原始数据不改；解析重排结构须说明。"
+        }
+      ],
+      "unresolved": []
+    },
+    {
+      "id": "IPC",
+      "name": "International Patent Classification",
+      "aliases": [
+        "IPC"
+      ],
+      "classification_object": "patent technology classes",
+      "publisher": "World Intellectual Property Organization",
+      "domains": [
+        "06-technology"
+      ],
+      "official_url": "https://www.wipo.int/en/web/classification-ipc",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2026.01",
+          "label": "2026.01",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "class",
+          "subclass",
+          "main group",
+          "subgroup"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.wipo.int/en/web/classification-ipc",
+        "formats": [
+          "xml",
+          "txt",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "IPC versions",
+            "to_edition": "IPC versions",
+            "url": "https://www.wipo.int/classifications/ipc/en/ITsupport/specifications/index.html",
+            "status": "official_entry_verified",
+            "semantics": "官方 Revision Concordance List。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.wipo.int/en/web/classification-ipc",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "现行2026.01；2027可有提前发布，不能以URL上年份认定现行。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实"
+      ]
+    },
+    {
+      "id": "PATENT_CPC",
+      "name": "Cooperative Patent Classification",
+      "aliases": [
+        "CPC Cooperative Patent Classification"
+      ],
+      "classification_object": "patent technology classes",
+      "publisher": "European Patent Office / United States Patent and Trademark Office",
+      "domains": [
+        "06-technology"
+      ],
+      "official_url": "https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2026.08",
+          "label": "2026.08",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk",
+        "formats": [
+          "xml",
+          "txt",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "CPC2026.08",
+            "to_edition": "IPC",
+            "url": "https://www.cooperativepatentclassification.org/cpcConcordances",
+            "status": "official_entry_verified",
+            "semantics": "官方 dynamic concordance；含XML/TXT/PDF。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "2026.08生效；与UN_CPC无关；保留点级子组与非树交叉引用。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ACM_CCS",
+      "name": "ACM Computing Classification System",
+      "aliases": [
+        "ACM CCS"
+      ],
+      "classification_object": "computing topics",
+      "publisher": "Association for Computing Machinery",
+      "domains": [
+        "04-knowledge",
+        "06-technology"
+      ],
+      "official_url": "https://dl.acm.org/ccs",
+      "verification_status": "inaccessible",
+      "checked_on": "2026-11-08",
+      "editions": [],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://dl.acm.org/ccs",
+        "formats": [],
+        "status": "pending"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://dl.acm.org/ccs",
+          "method": "official_endpoint_attempt",
+          "fields": [],
+          "finding": "官方端点实测403；未用第三方镜像冒充官方。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "明确版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ICD11",
+      "name": "International Classification of Diseases, 11th Revision",
+      "aliases": [
+        "ICD-11"
+      ],
+      "classification_object": "diseases and related health conditions",
+      "publisher": "World Health Organization",
+      "domains": [
+        "07-health"
+      ],
+      "official_url": "https://icd.who.int/browse/2026-01/mms/en",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2026-01",
+          "label": "2026-01",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://icd.who.int/browse/2026-01/mms/en",
+        "formats": [
+          "api",
+          "browser"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "WHO ICD-11 license (specific terms)",
+        "url": "https://icd.who.int/en/docs/ICD11-license.pdf",
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "credit publisher, edition and source URL",
+        "status": "reviewed",
+        "note": "必须审阅完整协议及衍生/翻译条件；此轮不复制数据。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://icd.who.int/browse/2026-01/mms/en",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "MMS线性化与Foundation多父关系须分别保留；API鉴权未办理。"
+        },
+        {
+          "url": "https://icd.who.int/en/docs/ICD11-license.pdf",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "必须审阅完整协议及衍生/翻译条件；此轮不复制数据。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实",
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "ICF",
+      "name": "International Classification of Functioning, Disability and Health",
+      "aliases": [
+        "ICF"
+      ],
+      "classification_object": "functioning; disability; environmental factors",
+      "publisher": "World Health Organization",
+      "domains": [
+        "07-health"
+      ],
+      "official_url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2001-with-updates",
+          "label": "2001-with-updates",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health",
+        "formats": [
+          "browser",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "网站含现代化browser及年度更新；确切现代版快照待确认；ICF-CY已合并回ICF。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ATC",
+      "name": "Anatomical Therapeutic Chemical Classification with DDDs",
+      "aliases": [
+        "ATC"
+      ],
+      "classification_object": "medicinal substances (not marketed product instances)",
+      "publisher": "WHO Collaborating Centre for Drug Statistics Methodology / Norwegian Institute of Public Health",
+      "domains": [
+        "07-health"
+      ],
+      "official_url": "https://atcddd.fhi.no/atc_ddd_index/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2026",
+          "label": "2026",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "anatomical main group",
+          "therapeutic subgroup",
+          "pharmacological subgroup",
+          "chemical subgroup",
+          "chemical substance"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://atcddd.fhi.no/atc_ddd_index/",
+        "formats": [
+          "browser"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "Centre copyright / disclaimer",
+        "url": "https://atcddd.fhi.no/copyright_disclaimer/",
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "credit publisher, edition and source URL",
+        "status": "reviewed",
+        "note": "禁止将在线查询可用误判为允许批量再分发；需审查订单及使用条件。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://atcddd.fhi.no/atc_ddd_index/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "页面确认ATC/DDD Index2026；电子全量获取需Order ATC Index核查。"
+        },
+        {
+          "url": "https://atcddd.fhi.no/copyright_disclaimer/",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "禁止将在线查询可用误判为允许批量再分发；需审查订单及使用条件。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "SNOMED",
+      "name": "SNOMED CT International Edition",
+      "aliases": [
+        "SNOMED CT"
+      ],
+      "classification_object": "clinical concepts",
+      "publisher": "SNOMED International",
+      "domains": [
+        "07-health"
+      ],
+      "official_url": "https://www.snomed.org/get-snomed",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "authorization-required",
+          "label": "No authorized edition selected",
+          "status": "unverified",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.snomed.org/get-snomed",
+        "formats": [
+          "RF2 (licensed release)"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "SNOMED CT Affiliate License",
+        "url": "https://www.snomed.org/get-snomed",
+        "access": "public_metadata",
+        "download": false,
+        "local_processing": false,
+        "redistribute": false,
+        "derivatives": false,
+        "attribution": "credit publisher, edition and source URL",
+        "status": "reviewed",
+        "note": "现有会话无授权；仅元数据，不绕过MLDS。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.snomed.org/get-snomed",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "download"
+          ],
+          "finding": "按地区、会员及Affiliate License办理；未取得授权和月度release包。"
+        },
+        {
+          "url": "https://www.snomed.org/get-snomed",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "现有会话无授权；仅元数据，不绕过MLDS。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "明确版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "COL",
+      "name": "Catalogue of Life",
+      "aliases": [
+        "Catalogue of Life"
+      ],
+      "classification_object": "taxonomic concepts and names (no occurrence instances)",
+      "publisher": "Catalogue of Life Foundation",
+      "domains": [
+        "08-biodiversity"
+      ],
+      "official_url": "https://www.catalogueoflife.org/data/download",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2026-10-16-XR",
+          "label": "2026-10-16-XR",
+          "status": "confirmed_available",
+          "latest_claim": false
+        },
+        {
+          "id": "2026-10-14-Base",
+          "label": "2026-10-14 Base",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "variable taxonomic ranks"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.catalogueoflife.org/data/download",
+        "formats": [
+          "ColDP",
+          "DwC-A",
+          "TextTree"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.catalogueoflife.org/data/download",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "Base2026-10-14与XR2026-10-16不同；分组下载需GBIF账号。"
+        },
+        {
+          "url": "https://www.catalogueoflife.org/about/roles",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "COL源发布模式首选CC0并支持CC BY；仍须按具体release/package检查。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "GBIF",
+      "name": "GBIF Backbone Taxonomy",
+      "aliases": [
+        "GBIF Backbone Taxonomy"
+      ],
+      "classification_object": "taxonomic concepts and synonyms (exclude occurrence records)",
+      "publisher": "GBIF Secretariat",
+      "domains": [
+        "08-biodiversity"
+      ],
+      "official_url": "https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
+      "verification_status": "inaccessible",
+      "checked_on": "2026-11-08",
+      "editions": [],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
+        "formats": [],
+        "status": "pending"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
+          "method": "official_endpoint_attempt",
+          "fields": [],
+          "finding": "官方dataset页面实测403；具体版本和license待从官方API核实。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "明确版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "NCBI_TAX",
+      "name": "NCBI Taxonomy",
+      "aliases": [
+        "NCBI Taxonomy"
+      ],
+      "classification_object": "taxonomic concepts; names and ranks (exclude sequences/individuals)",
+      "publisher": "NCBI / U.S. National Library of Medicine",
+      "domains": [
+        "08-biodiversity"
+      ],
+      "official_url": "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "variable taxonomic ranks"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/",
+        "formats": [
+          "tar.gz",
+          "dmp"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "官网taxonomy入口触发recaptcha；FTP下载目录可见。滚动taxdump需选明确archive日期，不能命名latest当版本。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "明确版本待核实"
+      ]
+    },
+    {
+      "id": "M49",
+      "name": "Standard Country or Area Codes for Statistical Use",
+      "aliases": [
+        "UN M49"
+      ],
+      "classification_object": "statistical country/area codes and region groupings",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "09-geography"
+      ],
+      "official_url": "https://unstats.un.org/unsd/methodology/m49/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "snapshot-2026-11-08",
+          "label": "snapshot-2026-11-08",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "world",
+          "region",
+          "sub-region",
+          "intermediate region (optional)",
+          "country or area"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/methodology/m49/",
+        "formats": [
+          "html",
+          "csv"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "M49 country/area",
+            "to_edition": "ISO3166 alpha-2/alpha-3",
+            "url": "https://unstats.un.org/unsd/methodology/m49/",
+            "status": "official_entry_verified",
+            "semantics": "官方表同列代码对应；不是国家实体知识图谱。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/methodology/m49/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "滚动网页，本ID为采集快照日期并非官方edition；仅分类代码不采集实体属性。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实"
+      ]
+    },
+    {
+      "id": "ISO3166",
+      "name": "ISO 3166 country and subdivision codes",
+      "aliases": [
+        "ISO 3166"
+      ],
+      "classification_object": "country/subdivision coding standards",
+      "publisher": "International Organization for Standardization / ISO 3166 MA",
+      "domains": [
+        "09-geography"
+      ],
+      "official_url": "https://www.iso.org/iso-3166-country-codes.html",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "3166-1-2020",
+          "label": "3166-1-2020",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.iso.org/iso-3166-country-codes.html",
+        "formats": [
+          "xml",
+          "csv",
+          "xls (subscription)"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "ISO country codes subscription / OBP terms",
+        "url": "https://www.iso.org/contact-iso.html",
+        "access": "public_metadata",
+        "download": false,
+        "local_processing": false,
+        "redistribute": false,
+        "derivatives": false,
+        "attribution": "credit publisher, edition and source URL",
+        "status": "reviewed",
+        "note": "现有会话无订阅。ISO说明禁止再售及进一步复制；不批量抓取OBP。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.iso.org/iso-3166-country-codes.html",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "Parts1/2/3不得混为单层树；代码在线滚动更新。"
+        },
+        {
+          "url": "https://www.iso.org/contact-iso.html",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "现有会话无订阅。ISO说明禁止再售及进一步复制；不批量抓取OBP。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "SEEA",
+      "name": "System of Environmental-Economic Accounting (framework)",
+      "aliases": [
+        "SEEA"
+      ],
+      "classification_object": "environmental accounts framework containing several classifications",
+      "publisher": "UN / European Commission / FAO / IMF / OECD / World Bank",
+      "domains": [
+        "10-environment"
+      ],
+      "official_url": "https://seea.un.org/content/seea-central-framework",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "Central-Framework-2012",
+          "label": "Central-Framework-2012",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://seea.un.org/content/seea-central-framework",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://seea.un.org/content/seea-central-framework",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "SEEA是核算框架，不是一套可直接作为树的目录；环境资产、目的、土地覆盖应拆出独立源。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实",
+        "framework_only：不得将整部手册直接解析为一个分类树"
+      ]
+    },
+    {
+      "id": "FAO_LCCS",
+      "name": "FAO Land Cover Classification System / LCML",
+      "aliases": [
+        "FAO LCCS"
+      ],
+      "classification_object": "land cover class descriptors and legends",
+      "publisher": "Food and Agriculture Organization of the United Nations",
+      "domains": [
+        "10-environment"
+      ],
+      "official_url": "https://www.fao.org/geospatial/data-and-tools/tools/land-cover-toolbox/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "LCCSv3-LCML2012",
+          "label": "LCCSv3-LCML2012",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.fao.org/geospatial/data-and-tools/tools/land-cover-toolbox/",
+        "formats": [
+          "software",
+          "documentation"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.fao.org/geospatial/data-and-tools/tools/land-cover-toolbox/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "FAO说明2023 LCHS继承LCCSv3并采用更新LCML；不是固定的一套全世界地表类型清单。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "LEGAL_TOPICS",
+      "name": "Legal subject classification (unresolved discovery placeholder)",
+      "aliases": [
+        "Legal subject classification TBD"
+      ],
+      "classification_object": "legal subjects",
+      "publisher": null,
+      "domains": [
+        "11-governance"
+      ],
+      "official_url": "https://www.loc.gov/catdir/cpso/lcco/",
+      "verification_status": "candidate",
+      "checked_on": "2026-11-08",
+      "editions": [],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.loc.gov/catdir/cpso/lcco/",
+        "formats": [],
+        "status": "pending"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.loc.gov/catdir/cpso/lcco/",
+          "method": "official_page_review",
+          "fields": [],
+          "finding": "核查发现原始候选过于笼统；LCC K可作为法律馆藏主题的线索。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "明确版本待核实",
+        "原始层级待文件或手册核实",
+        "具体发布者待确定"
+      ]
+    },
+    {
+      "id": "GETTY_AAT",
+      "name": "Art & Architecture Thesaurus",
+      "aliases": [
+        "Getty AAT"
+      ],
+      "classification_object": "art and architecture concepts (exclude artist/object instances)",
+      "publisher": "J. Paul Getty Trust / Getty Research Institute",
+      "domains": [
+        "12-culture"
+      ],
+      "official_url": "https://www.getty.edu/research-conservation/tools-databases/vocabularies/data-services/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "snapshot-2026-11-08",
+          "label": "snapshot-2026-11-08",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "facets",
+          "hierarchies",
+          "polyhierarchical concepts"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.getty.edu/research-conservation/tools-databases/vocabularies/data-services/",
+        "formats": [
+          "json",
+          "rdf",
+          "ttl",
+          "nt"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "ODC-By 1.0",
+        "url": "https://www.getty.edu/research-conservation/tools-databases/vocabularies/data-services/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": true,
+        "derivatives": true,
+        "attribution": "credit publisher, edition and source URL",
+        "status": "reviewed",
+        "note": "Getty明确所有Vocabulary数据ODC-By1.0；须保留Getty及适当贡献者署名；网页本身不继承数据库许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.getty.edu/research-conservation/tools-databases/vocabularies/data-services/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "月度LOD；旧XML/关系表已停更，存档截至2026-01-30；不采集ULAN人物和CONA对象实例。"
+        },
+        {
+          "url": "https://www.getty.edu/research-conservation/tools-databases/vocabularies/data-services/",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "Getty明确所有Vocabulary数据ODC-By1.0；须保留Getty及适当贡献者署名；网页本身不继承数据库许可。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "ISCED",
+      "name": "International Standard Classification of Education",
+      "aliases": [
+        "ISCED"
+      ],
+      "classification_object": "education programmes and attainment levels (parallel schemes)",
+      "publisher": "UNESCO Institute for Statistics",
+      "domains": [
+        "13-education"
+      ],
+      "official_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2011",
+          "label": "2011",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "level",
+          "category",
+          "sub-category"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "区分ISCED-P与ISCED-A；不下载实际学校或国家项目实例。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "SNA_SECTORS",
+      "name": "SNA institutional sectors",
+      "aliases": [
+        "SNA Institutional Sectors"
+      ],
+      "classification_object": "institutional sectors and subsectors",
+      "publisher": "Intersecretariat Working Group on National Accounts",
+      "domains": [
+        "14-organizations",
+        "01-economy"
+      ],
+      "official_url": "https://unstats.un.org/unsd/econstats/national-accounts/sna2025",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2025-pre-edit",
+          "label": "2025-pre-edit",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/econstats/national-accounts/sna2025",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/econstats/national-accounts/sna2025",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "2025 SNA已通过；手册标pre-edit；部门表5.1可有控制权等不同分解，不硬化成唯一树。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ICNPO",
+      "name": "International Classification of Non-Profit Organizations",
+      "aliases": [
+        "ICNPO"
+      ],
+      "classification_object": "nonprofit organization activity categories",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "14-organizations"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2008",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2003",
+          "label": "2003",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "group",
+          "subgroup"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2008",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Family/Detail/2008",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "保留2003版本；2018手册扩展为ICNP/TSO，不能悄悄覆盖原版本。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "ICATUS",
+      "name": "International Classification of Activities for Time-Use Statistics",
+      "aliases": [
+        "ICATUS"
+      ],
+      "classification_object": "time-use activities",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "15-activities"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/econ/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2016",
+          "label": "2016",
+          "status": "confirmed_available",
+          "latest_claim": false
+        },
+        {
+          "id": "portal-undated",
+          "label": "Undated ICATUS portal structure (version unverified)",
+          "status": "unverified",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "major division",
+          "division",
+          "group"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/econ/",
+        "formats": [
+          "csv",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "UN download terms; public redistribution unresolved",
+        "url": "https://unstats.un.org/unsd/classifications/econ/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "United Nations Statistics Division; source scheme and edition; URL",
+        "status": "local_only_pending_redistribution",
+        "note": "官方分发结构供下载；仅本地研究/处理。未确认面向公众再分发授权；不套用data.un.org的其他站点条款。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "2016版本；官方结构文件是非UTF8文本，需实际检查编码。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_download_offer_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "BEC",
+      "name": "Classification by Broad Economic Categories",
+      "aliases": [],
+      "classification_object": "traded products by end use and economic categories",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "02-products",
+        "03-consumption"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1068",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "Rev.5",
+          "label": "Rev.5",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1068",
+        "formats": [
+          "json",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "UN download terms; public redistribution unresolved",
+        "url": "https://unstats.un.org/unsd/classifications/econ/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "United Nations Statistics Division; source scheme and edition; URL",
+        "status": "local_only_pending_redistribution",
+        "note": "官方分发结构供下载；仅本地研究/处理。未确认面向公众再分发授权；不套用data.un.org的其他站点条款。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "BEC Rev.5",
+            "to_edition": "HS / CPC",
+            "url": "https://unstats.un.org/unsd/classifications/econ/",
+            "status": "official_entry_verified",
+            "semantics": "官方入口；精确对应文件待定位。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Family/Detail/1068",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "BEC5有多维分类属性；不能只按数字前缀猜树。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_download_offer_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        }
+      ],
+      "unresolved": [
+        "原始层级待文件或手册核实",
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "SITC",
+      "name": "Standard International Trade Classification",
+      "aliases": [],
+      "classification_object": "traded goods for statistical analysis",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "02-products"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/econ/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "Rev.4",
+          "label": "Rev.4",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "subgroup",
+          "basic heading"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/econ/",
+        "formats": [
+          "json",
+          "xlsx",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "UN download terms; public redistribution unresolved",
+        "url": "https://unstats.un.org/unsd/classifications/econ/",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "United Nations Statistics Division; source scheme and edition; URL",
+        "status": "local_only_pending_redistribution",
+        "note": "官方分发结构供下载；仅本地研究/处理。未确认面向公众再分发授权；不套用data.un.org的其他站点条款。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "不同于HS的关税目的；保留独立scheme。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/econ/",
+          "method": "official_download_offer_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "UNSD资源页明确提供结构下载；UN通用terms页面本次403，公开再分发仍未核实。"
+        }
+      ],
+      "unresolved": [
+        "官方映射及精确端点版本待核实",
+        "再分发适用条款待逐文件确认"
+      ]
+    },
+    {
+      "id": "SIEC",
+      "name": "Standard International Energy Products Classification",
+      "aliases": [],
+      "classification_object": "energy products",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "10-environment",
+        "02-products"
+      ],
+      "official_url": "https://unstats.un.org/unsd/Classifications/siec/",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "1.0-2011",
+          "label": "1.0-2011",
+          "status": "confirmed_available",
+          "latest_claim": false
+        },
+        {
+          "id": "2.0-draft-2025",
+          "label": "2.0 draft",
+          "status": "draft_endorsement_unverified",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "class"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/Classifications/siec/",
+        "formats": [
+          "pdf",
+          "xlsx"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/Classifications/siec/",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "官方页还称2.0为2025咨询草案、拟2026提交；本次未确认通过文件，因此不称2.0现行。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "CEP",
+      "name": "Classification of Environmental Purposes",
+      "aliases": [],
+      "classification_object": "environmental protection/resource-management purposes",
+      "publisher": "Eurostat / European Commission",
+      "domains": [
+        "10-environment"
+      ],
+      "official_url": "https://seea.un.org/en/content/classification-environmental-purposes-cep",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2024",
+          "label": "2024",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://seea.un.org/en/content/classification-environmental-purposes-cep",
+        "formats": [
+          "ShowVoc",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://seea.un.org/en/content/classification-environmental-purposes-cep",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "SEEA官方指向Eurostat分类说明；不能当作自然资产类型。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ICCS",
+      "name": "International Classification of Crime for Statistical Purposes",
+      "aliases": [],
+      "classification_object": "criminal acts for statistics (not legal topics)",
+      "publisher": "United Nations Office on Drugs and Crime",
+      "domains": [
+        "11-governance"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1000",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "1.0-2015",
+          "label": "1.0-2015",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "class"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1000",
+        "formats": [
+          "pdf",
+          "doc",
+          "xlsx"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Family/Detail/1000",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "补充治理领域，分类行为类型；不采集案件或涉案人。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "EUROVOC",
+      "name": "EuroVoc",
+      "aliases": [],
+      "classification_object": "EU legal/policy and multidisciplinary subjects",
+      "publisher": "Publications Office of the European Union",
+      "domains": [
+        "11-governance",
+        "04-knowledge"
+      ],
+      "official_url": "https://data.europa.eu/data/datasets/eurovoc",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "4.24",
+          "label": "4.24",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "domain",
+          "microthesaurus",
+          "concept broader/narrower (polyhierarchy)"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://data.europa.eu/data/datasets/eurovoc",
+        "formats": [
+          "rdf",
+          "xml",
+          "zip"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://data.europa.eu/data/datasets/eurovoc",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "EU官方目录显示4.24，更新2026-07-08；可用于法律政策主题，不等于各国法律统一目录。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "ISCED_T",
+      "name": "International Standard Classification of Teacher Training Programmes",
+      "aliases": [],
+      "classification_object": "teacher training programmes",
+      "publisher": "UNESCO Institute for Statistics",
+      "domains": [
+        "13-education"
+      ],
+      "official_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2021",
+          "label": "2021",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "补教师培训对象；不混同教育层级与学科。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ICNP_TSO",
+      "name": "International Classification of Non-Profit and Third Sector Organizations",
+      "aliases": [],
+      "classification_object": "nonprofit and third-sector organization activity categories",
+      "publisher": "United Nations Statistics Division",
+      "domains": [
+        "14-organizations"
+      ],
+      "official_url": "https://digitallibrary.un.org/record/3899725?ln=en",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2018",
+          "label": "2018",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://digitallibrary.un.org/record/3899725?ln=en",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://digitallibrary.un.org/record/3899725?ln=en",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "2018 Satellite Account Handbook；扩展2003 ICNPO对象范围。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "NICE",
+      "name": "Nice Classification",
+      "aliases": [],
+      "classification_object": "goods/services for trademark registration",
+      "publisher": "World Intellectual Property Organization",
+      "domains": [
+        "02-products",
+        "06-technology"
+      ],
+      "official_url": "https://www.wipo.int/en/web/classification-nice/index",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "13-2026",
+          "label": "13-2026",
+          "status": "confirmed_available",
+          "latest_claim": false
+        },
+        {
+          "id": "13-2027",
+          "label": "13-2027",
+          "status": "published_future_effective_2027-01-01",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "class",
+          "alphabetical goods/service term"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.wipo.int/en/web/classification-nice/index",
+        "formats": [
+          "xml",
+          "pdf",
+          "xlsx",
+          "doc"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.wipo.int/en/web/classification-nice/index",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "现行13-2026；13-2027为提前发布，2027才生效。"
+        },
+        {
+          "url": "https://www.wipo.int/en/web/classification-nice/faq",
+          "method": "official_page_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "可下载；网站使用需承认WIPO版权，精确适用条件仍审阅中。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "LOCARNO",
+      "name": "Locarno Classification",
+      "aliases": [],
+      "classification_object": "industrial design product categories",
+      "publisher": "World Intellectual Property Organization",
+      "domains": [
+        "06-technology",
+        "12-culture"
+      ],
+      "official_url": "https://www.wipo.int/en/web/classification-locarno",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "15-2025",
+          "label": "15-2025",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "class",
+          "subclass",
+          "product indication"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.wipo.int/en/web/classification-locarno",
+        "formats": [
+          "xml",
+          "pdf",
+          "xlsx"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.wipo.int/en/web/classification-locarno",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "15版2025生效；16版2026提前发布，不当作现行。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    },
+    {
+      "id": "EBOPS",
+      "name": "Extended Balance of Payments Services Classification",
+      "aliases": [],
+      "classification_object": "internationally traded services",
+      "publisher": "Interagency Task Force on Statistics of International Trade in Services / UNSD",
+      "domains": [
+        "02-products"
+      ],
+      "official_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2102",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2026",
+          "label": "2026",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "unverified",
+        "levels": null,
+        "status": "pending",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2102",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Family/Detail/2102",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "download"
+          ],
+          "finding": "UN Family条目明确EBOPS2026；不能沿用旧候选的2010为最新。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实",
+        "原始层级待文件或手册核实"
+      ]
+    },
+    {
+      "id": "ICSE",
+      "name": "International Classification of Status in Employment",
+      "aliases": [],
+      "classification_object": "work relationship status categories",
+      "publisher": "International Labour Organization",
+      "domains": [
+        "05-occupations",
+        "15-activities"
+      ],
+      "official_url": "https://webapps.ilo.org/ilostat-files/Documents/ICSE-18_manual.pdf",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-08",
+      "editions": [
+        {
+          "id": "2018",
+          "label": "2018",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "alternative hierarchy by authority",
+          "alternative hierarchy by economic risk"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://webapps.ilo.org/ilostat-files/Documents/ICSE-18_manual.pdf",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": null,
+        "url": null,
+        "access": "public_metadata",
+        "download": null,
+        "local_processing": null,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": null,
+        "status": "pending",
+        "note": "逐文件核实；公开网页不等于开放许可。"
+      },
+      "official_mappings": {
+        "status": "not_yet_verified",
+        "items": []
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://webapps.ilo.org/ilostat-files/Documents/ICSE-18_manual.pdf",
+          "method": "official_page_review",
+          "fields": [
+            "publisher",
+            "classification_object",
+            "editions",
+            "hierarchy",
+            "download"
+          ],
+          "finding": "ICSE-18-A与ICSE-18-R为不同聚合；不合成单树。"
+        }
+      ],
+      "unresolved": [
+        "公开再分发许可待核实",
+        "官方映射及精确端点版本待核实"
+      ]
+    }
+  ]
+}

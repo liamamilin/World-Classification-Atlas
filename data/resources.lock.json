@@ -1,0 +1,62 @@
+{
+  "isic4-structure": {
+    "sha256": "18b645efc5a0b001fda5852cfd0690eb579011651e405631e50cb2d271ee2cc6",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_structure.Txt",
+    "source_id": "ISIC",
+    "edition": "Rev.4"
+  },
+  "cpc3-structure": {
+    "sha256": "5cd2c1c4890dd6be16af48e9bb940fed48efff9865f39ff15edaa921da25fb7c",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Structure_30Jun2025.csv",
+    "source_id": "UN_CPC",
+    "edition": "3.0"
+  },
+  "cofog1999-structure": {
+    "sha256": "5368887bb253a1819bfefc6a9eedc74cb76f50c6a7c35133d2420b1d4a3b39b5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/COFOG_english_structure.txt",
+    "source_id": "COFOG",
+    "edition": "1999"
+  },
+  "copni1999-structure": {
+    "sha256": "78229a038ec45138e79f6d5c3828f33889ae3bf28ec5fa666cd8dc82df998f06",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/COPNI_English_structure.txt",
+    "source_id": "COPNI",
+    "edition": "1999"
+  },
+  "icatus-portal-structure": {
+    "sha256": "1eb7c84054d7c8f4adf73dfdf1935120e9692739f391cde62fd70d4a2ffeb33f",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ICATUS_structure.txt",
+    "source_id": "ICATUS",
+    "edition": "portal-undated"
+  },
+  "isic4-isic5-correspondence": {
+    "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
+  },
+  "onet31-occupations": {
+    "sha256": "a09eae1d6609686e44e05b7290993a1c8b523d8ca224bc0eedc194c855c3ee02",
+    "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/occupation_data.csv",
+    "source_id": "ONET",
+    "edition": "31.0"
+  },
+  "onet31-content-model": {
+    "sha256": "370033744006dbd5df048431d42a402f6741a00a229b6d0f4e4f4249b6399c04",
+    "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/content_model_reference.csv",
+    "source_id": "ONET",
+    "edition": "31.0"
+  },
+  "onet2019-taxonomy": {
+    "sha256": "40e5550796d8402cc6c13da7177b401cda35b8d377933f76f181bb6dd52b82f7",
+    "url": "https://www.onetcenter.org/ctdl/graph/ce-8350d6ad-bc2a-11ef-8f5a-005056bdd76e",
+    "source_id": "ONET",
+    "edition": "SOC2019-snapshot-2026-11-08"
+  },
+  "isic5-structure": {
+    "sha256": "fc408f57bd3a4f33c35a4f384ec0010283dd72774892c8d48ae1330a8caeb57f",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_5_english_structure.csv",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
+  }
+}

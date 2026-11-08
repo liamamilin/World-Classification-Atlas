@@ -1,0 +1,50 @@
+{
+  "note": "Syntactic comparisons only. Equal codes or labels are not proof of semantic equivalence; missing definitions are not compared. No fusion or inferred mappings.",
+  "comparisons": [
+    {
+      "domain": "01-economy",
+      "from_resource": "isic4-structure",
+      "to_resource": "isic5-structure",
+      "status": "compared",
+      "from_count": 766,
+      "to_count": 830,
+      "shared_code_strings": 700,
+      "only_from": 66,
+      "only_to": 130,
+      "shared_codes_with_changed_label": 183,
+      "shared_codes_with_both_definitions": 0,
+      "shared_codes_with_changed_definition": 0,
+      "semantic_equivalence_inferred": false
+    },
+    {
+      "domain": "03-consumption",
+      "from_resource": "cofog1999-structure",
+      "to_resource": "copni1999-structure",
+      "status": "compared",
+      "from_count": 188,
+      "to_count": 65,
+      "shared_code_strings": 42,
+      "only_from": 146,
+      "only_to": 23,
+      "shared_codes_with_changed_label": 42,
+      "shared_codes_with_both_definitions": 0,
+      "shared_codes_with_changed_definition": 0,
+      "semantic_equivalence_inferred": false
+    },
+    {
+      "domain": "05-occupations",
+      "from_resource": "onet2019-taxonomy",
+      "to_resource": "onet31-occupations",
+      "status": "compared",
+      "from_count": 1016,
+      "to_count": 1016,
+      "shared_code_strings": 1016,
+      "only_from": 0,
+      "only_to": 0,
+      "shared_codes_with_changed_label": 0,
+      "shared_codes_with_both_definitions": 1016,
+      "shared_codes_with_changed_definition": 0,
+      "semantic_equivalence_inferred": false
+    }
+  ]
+}

@@ -1,0 +1,880 @@
+[
+  {
+    "source_id": "ISIC",
+    "url": "https://unstats.un.org/unsd/classifications/econ/",
+    "checked_at": "2026-11-08T12:43:41.065334+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classifications on economic statistics",
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "bytes": 144294,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/econ/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "NAICS",
+    "url": "https://www.census.gov/naics/",
+    "checked_at": "2026-11-08T12:43:47.078062+00:00",
+    "status": "reachable",
+    "title": "North American Industry Classification System (NAICS) U.S. Census Bureau",
+    "sha256": "3e1c02ec166238af3d501041425e687675a9a001f3f7931b425aaec3a2d915e9",
+    "bytes": 58261,
+    "robots": {
+      "url": "https://www.census.gov/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.census.gov/naics/",
+    "http_status": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "NACE",
+    "url": "https://ec.europa.eu/eurostat/web/nace/",
+    "checked_at": "2026-11-08T12:43:50.997039+00:00",
+    "status": "reachable",
+    "title": "Overview - NACE - Eurostat English Search Success Success",
+    "sha256": "5529a146f49cd4f72832a3f94540c1102cfd9969215d79b4231304fba4d2e398",
+    "bytes": 189566,
+    "robots": {
+      "url": "https://ec.europa.eu/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://ec.europa.eu/eurostat/web/nace/",
+    "http_status": 200,
+    "content_type": "text/html;charset=UTF-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "GBT4754",
+    "url": "https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html",
+    "checked_at": "2026-11-08T12:43:56.075591+00:00",
+    "status": "reachable",
+    "title": "关于执行国民经济行业分类第1号修改单的通知 - 国家统计局",
+    "sha256": "f3e668a57ffd96447efd6406060e5167dfc5c898e4806a6f3dc6a46d1cd2f8a3",
+    "bytes": 78029,
+    "robots": {
+      "url": "https://www.stats.gov.cn/robots.txt",
+      "result": "HTTP 404; no robots rules",
+      "allowed": true
+    },
+    "final_url": "https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html",
+    "http_status": 200,
+    "content_type": "text/html",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "UN_CPC",
+    "url": "https://unstats.un.org/unsd/classifications/econ/",
+    "checked_at": "2026-11-08T12:43:41.065334+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classifications on economic statistics",
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "bytes": 144294,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/econ/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "HS",
+    "url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
+    "checked_at": "2026-11-08T12:44:05.027275+00:00",
+    "status": "reachable",
+    "title": "World Customs Organization",
+    "sha256": "8a64905cc8640020dc8d76b3331b10c6e24b600191e1f5905bd277e532339148",
+    "bytes": 53301,
+    "robots": {
+      "url": "https://www.wcoomd.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "UNSPSC",
+    "url": "https://www.undp.org/unspsc",
+    "checked_at": "2026-11-08T12:44:13.439158+00:00",
+    "status": "failed",
+    "error": "ValueError: robots unavailable: HTTP 403"
+  },
+  {
+    "source_id": "ECLASS",
+    "url": "https://eclass.eu/en/eclass-standard/releases",
+    "checked_at": "2026-11-08T12:44:14.880324+00:00",
+    "status": "reachable",
+    "title": "The latest ECLASS Release - ECLASS",
+    "sha256": "0f239260e95e095decb9df1f3f0341b81359df2e52fda60c7c01bb29a95debbc",
+    "bytes": 52307,
+    "robots": {
+      "url": "https://eclass.eu/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://eclass.eu/en/eclass-standard/releases",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "COICOP",
+    "url": "https://unstats.un.org/unsd/classifications/econ/",
+    "checked_at": "2026-11-08T12:43:41.065334+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classifications on economic statistics",
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "bytes": 144294,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/econ/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "COFOG",
+    "url": "https://unstats.un.org/unsd/classifications/econ/",
+    "checked_at": "2026-11-08T12:43:41.065334+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classifications on economic statistics",
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "bytes": 144294,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/econ/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "COPNI",
+    "url": "https://unstats.un.org/unsd/classifications/econ/",
+    "checked_at": "2026-11-08T12:43:41.065334+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classifications on economic statistics",
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "bytes": 144294,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/econ/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "FORD",
+    "url": "https://unstats.un.org/unsd/classifications/Family/Detail/1039",
+    "checked_at": "2026-11-08T12:44:22.895988+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classification Detail",
+    "sha256": "189a08d9b0cc4a32606a2516692d48d3e8e4412b58ffb04ef7fc65e9f2e3b847",
+    "bytes": 44780,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1039",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "ISCED_F",
+    "url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+    "checked_at": "2026-11-08T12:44:25.503258+00:00",
+    "status": "reachable",
+    "title": "International Standard Classification of Education - ISCED | Institute for Statistics (UIS)",
+    "sha256": "67bfc6925c865d4885476eeb047fad9d66d6671f592c51629799c4c4dd5165cb",
+    "bytes": 55021,
+    "robots": {
+      "url": "https://www.uis.unesco.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": "W/\"1794117636\"",
+    "last_modified": "Sun, 08 Nov 2026 06:00:36 GMT"
+  },
+  {
+    "source_id": "LCC",
+    "url": "https://www.loc.gov/catdir/cpso/lcco/",
+    "checked_at": "2026-11-08T12:44:30.945547+00:00",
+    "status": "reachable",
+    "title": "Library of Congress Classification Outline - Classification - Cataloging and Acquisitions (Library of Congress)",
+    "sha256": "a2634ff9076c8277dd281c512541f05e6dbb930b71c349f9a4a71fe53ec25a27",
+    "bytes": 13784,
+    "robots": {
+      "url": "https://www.loc.gov/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.loc.gov/catdir/cpso/lcco/",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "DDC",
+    "url": "https://help.oclc.org/Metadata_Services/WebDewey/WebDewey_user_guide/Get_started_with_WebDewey/About_WebDewey",
+    "checked_at": "2026-11-08T12:44:37.770401+00:00",
+    "status": "reachable",
+    "title": "About WebDewey - OCLC Support",
+    "sha256": "72c7aa18f66c527ca28560a44ef24c27fc4abd6b54b10415dc1ba28e7c241925",
+    "bytes": 79823,
+    "robots": {
+      "url": "https://help.oclc.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://help.oclc.org/Metadata_Services/WebDewey/WebDewey_user_guide/Get_started_with_WebDewey/About_WebDewey",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "ISCO",
+    "url": "https://www.ilo.org/publications/international-standard-classification-occupations-2008-isco-08-structure",
+    "checked_at": "2026-11-08T12:44:48.548944+00:00",
+    "status": "reachable",
+    "title": "International Standard Classification of Occupations 2008 (ISCO-08): Structure, group definitions and correspondence tables | International Labour Organization",
+    "sha256": "46871c3e2a72750d0834a7dcce6000d982699303c0b98442b21605451d200aa5",
+    "bytes": 55353,
+    "robots": {
+      "url": "https://www.ilo.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.ilo.org/publications/international-standard-classification-occupations-2008-isco-08-structure",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": "Sat, 07 Nov 2026 17:47:48 GMT"
+  },
+  {
+    "source_id": "ESCO",
+    "url": "https://esco.ec.europa.eu/en/use-esco/download",
+    "checked_at": "2026-11-08T12:44:59.111936+00:00",
+    "status": "reachable",
+    "title": "Download | European Skills, Competences, Qualifications and Occupations (ESCO)",
+    "sha256": "e3b703164f0b1001105cc041ffe8b8223ce7876f887d43ea36e92d7e57631074",
+    "bytes": 75604,
+    "robots": {
+      "url": "https://esco.ec.europa.eu/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://esco.ec.europa.eu/en/use-esco/download",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": "W/\"1794124421-gzip\"",
+    "last_modified": "Sun, 08 Nov 2026 07:53:41 GMT"
+  },
+  {
+    "source_id": "ONET",
+    "url": "https://www.onetcenter.org/database.html",
+    "checked_at": "2026-11-08T12:45:08.163056+00:00",
+    "status": "reachable",
+    "title": "O*NET Database at O*NET Resource Center",
+    "sha256": "4b3d73ed9648d8f4edac65f3ebb636226169f35c326c084ab62e9d115ad0ce57",
+    "bytes": 424509,
+    "robots": {
+      "url": "https://www.onetcenter.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.onetcenter.org/database.html",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": null,
+    "last_modified": "Sun, 08 Nov 2026 12:40:14 GMT"
+  },
+  {
+    "source_id": "IPC",
+    "url": "https://www.wipo.int/en/web/classification-ipc",
+    "checked_at": "2026-11-08T12:45:18.961094+00:00",
+    "status": "reachable",
+    "title": "International Patent Classification (IPC)",
+    "sha256": "fca34b933aa607226e7d650683af2263b8a8560bb0ce304a1ca705188d1d9e9d",
+    "bytes": 119956,
+    "robots": {
+      "url": "https://www.wipo.int/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.wipo.int/en/web/classification-ipc",
+    "http_status": 200,
+    "content_type": "text/html;charset=UTF-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "PATENT_CPC",
+    "url": "https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk",
+    "checked_at": "2026-11-08T12:45:29.265367+00:00",
+    "status": "reachable",
+    "title": "Bulk Data | Cooperative Patent Classification",
+    "sha256": "cc9954b5e1b4972cf4417796ff12d2d6899be09820c9e7c5d63571206924a692",
+    "bytes": 27986,
+    "robots": {
+      "url": "https://www.cooperativepatentclassification.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.cooperativepatentclassification.org/cpcSchemeAndDefinitions/bulk",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": null,
+    "last_modified": "Thu, 15 Oct 2026 06:26:37 GMT"
+  },
+  {
+    "source_id": "ACM_CCS",
+    "url": "https://dl.acm.org/ccs",
+    "checked_at": "2026-11-08T12:45:38.167972+00:00",
+    "status": "failed",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+    "source_id": "ICD11",
+    "url": "https://icd.who.int/browse/2026-01/mms/en",
+    "checked_at": "2026-11-08T12:45:47.437080+00:00",
+    "status": "reachable",
+    "title": "ICD-11 for Mortality and Morbidity Statistics",
+    "sha256": "88237d728365680e9d01262ddd3eac09758a095e84fb1226726dd5ef5f059a20",
+    "bytes": 26140,
+    "robots": {
+      "url": "https://icd.who.int/robots.txt",
+      "result": "HTTP 404; no robots rules",
+      "allowed": true
+    },
+    "final_url": "https://icd.who.int/browse/2026-01/mms/en",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "ICF",
+    "url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health",
+    "checked_at": "2026-11-08T12:45:58.089208+00:00",
+    "status": "reachable",
+    "title": "International Classification of Functioning, Disability and Health (ICF)",
+    "sha256": "b2523b9e2f831a3e83a8e31ffedcad473405860f1c402416622d0950484c7fe5",
+    "bytes": 97736,
+    "robots": {
+      "url": "https://www.who.int/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.who.int/standards/classifications/international-classification-of-functioning-disability-and-health",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": "Sat, 07 Nov 2026 14:28:47 GMT"
+  },
+  {
+    "source_id": "ATC",
+    "url": "https://atcddd.fhi.no/atc_ddd_index/",
+    "checked_at": "2026-11-08T12:46:08.138264+00:00",
+    "status": "reachable",
+    "title": "ATCDDD - ATC/DDD Index",
+    "sha256": "0d908251da9b5825616c679096d2742048a27436522593f29f63eba2f0480a05",
+    "bytes": 14461,
+    "robots": {
+      "url": "https://atcddd.fhi.no/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://atcddd.fhi.no/atc_ddd_index/",
+    "http_status": 200,
+    "content_type": "text/html; charset=ISO-8859-1",
+    "etag": null,
+    "last_modified": "Nov 08 2026 12:46:22"
+  },
+  {
+    "source_id": "SNOMED",
+    "url": "https://www.snomed.org/get-snomed",
+    "checked_at": "2026-11-08T12:46:23.292537+00:00",
+    "status": "reachable",
+    "title": "Get SNOMED CT | SNOMED International",
+    "sha256": "5726e1cfd2f3f8e3675b1d7caefc67027160882bc19362c21256154ec436ad26",
+    "bytes": 1387486,
+    "robots": {
+      "url": "https://www.snomed.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.snomed.org/get-snomed",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": "W/\"7046017b81901432d0d28fd5dcfd7d55\"",
+    "last_modified": null
+  },
+  {
+    "source_id": "COL",
+    "url": "https://www.catalogueoflife.org/data/download",
+    "checked_at": "2026-11-08T12:46:48.140976+00:00",
+    "status": "failed",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+    "source_id": "GBIF",
+    "url": "https://www.gbif.org/dataset/d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
+    "checked_at": "2026-11-08T12:47:05.931842+00:00",
+    "status": "failed",
+    "error": "ValueError: robots unavailable: HTTP 403"
+  },
+  {
+    "source_id": "NCBI_TAX",
+    "url": "https://ftp.ncbi.nlm.nih.gov/pub/taxonomy/",
+    "checked_at": "2026-11-08T12:47:13.445922+00:00",
+    "status": "failed",
+    "error": "ValueError: robots.txt disallows this URL"
+  },
+  {
+    "source_id": "M49",
+    "url": "https://unstats.un.org/unsd/methodology/m49/",
+    "checked_at": "2026-11-08T12:47:22.784682+00:00",
+    "status": "reachable",
+    "title": "UNSD — Methodology",
+    "sha256": "4d5cabcb10ad9ef184553b5e64c0a34ba8deeb20dab2e02cd0be3599b93bb01d",
+    "bytes": 2051368,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/methodology/m49/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "ISO3166",
+    "url": "https://www.iso.org/iso-3166-country-codes.html",
+    "checked_at": "2026-11-08T12:47:35.976375+00:00",
+    "status": "failed",
+    "error": "ValueError: robots unavailable: HTTP 403"
+  },
+  {
+    "source_id": "SEEA",
+    "url": "https://seea.un.org/content/seea-central-framework",
+    "checked_at": "2026-11-08T12:47:42.485659+00:00",
+    "status": "reachable",
+    "title": "SEEA Central Framework | System of Environmental Economic Accounting",
+    "sha256": "19a1547054968158dbb6e584055b02a53fec95c0a7916f3b05c1779d1596c359",
+    "bytes": 110929,
+    "robots": {
+      "url": "https://seea.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://seea.un.org/en/methodology/seea-central-framework",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": "W/\"1794142087\"",
+    "last_modified": "Sun, 08 Nov 2026 12:48:07 GMT"
+  },
+  {
+    "source_id": "FAO_LCCS",
+    "url": "https://www.fao.org/geospatial/data-and-tools/tools/land-cover-toolbox/",
+    "checked_at": "2026-11-08T12:48:09.232615+00:00",
+    "status": "reachable",
+    "title": "Land cover toolbox",
+    "sha256": "8a18a2021d71bfb105fd054c56824ab98667bba6f4d922b7bd7a2bf77beaaa63",
+    "bytes": 80014,
+    "robots": {
+      "url": "https://www.fao.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.fao.org/geospatial/data-and-tools/tools/land-cover-toolbox/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": "Sat, 07 Nov 2026 20:10:33 GMT"
+  },
+  {
+    "source_id": "LEGAL_TOPICS",
+    "url": "https://www.loc.gov/catdir/cpso/lcco/",
+    "checked_at": "2026-11-08T12:44:30.945547+00:00",
+    "status": "reachable",
+    "title": "Library of Congress Classification Outline - Classification - Cataloging and Acquisitions (Library of Congress)",
+    "sha256": "a2634ff9076c8277dd281c512541f05e6dbb930b71c349f9a4a71fe53ec25a27",
+    "bytes": 13784,
+    "robots": {
+      "url": "https://www.loc.gov/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.loc.gov/catdir/cpso/lcco/",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "GETTY_AAT",
+    "url": "https://www.getty.edu/research-conservation/tools-databases/vocabularies/data-services/",
+    "checked_at": "2026-11-08T12:48:23.370266+00:00",
+    "status": "reachable",
+    "title": "Data & Services for Vocabularies | Getty Tools & Databases",
+    "sha256": "a39c578937f956e1bcffb05e7245bd9096c0ad68343e81ca00cc79162cb13bdb",
+    "bytes": 3066282,
+    "robots": {
+      "url": "https://www.getty.edu/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.getty.edu/research-conservation/tools-databases/vocabularies/data-services/",
+    "http_status": 200,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": "\"0f4bba631b06eff68ca1f9dc92c2283b\"",
+    "last_modified": "Thu, 05 Nov 2026 08:09:35 GMT"
+  },
+  {
+    "source_id": "ISCED",
+    "url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+    "checked_at": "2026-11-08T12:44:25.503258+00:00",
+    "status": "reachable",
+    "title": "International Standard Classification of Education - ISCED | Institute for Statistics (UIS)",
+    "sha256": "67bfc6925c865d4885476eeb047fad9d66d6671f592c51629799c4c4dd5165cb",
+    "bytes": 55021,
+    "robots": {
+      "url": "https://www.uis.unesco.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": "W/\"1794117636\"",
+    "last_modified": "Sun, 08 Nov 2026 06:00:36 GMT"
+  },
+  {
+    "source_id": "SNA_SECTORS",
+    "url": "https://unstats.un.org/unsd/econstats/national-accounts/sna2025",
+    "checked_at": "2026-11-08T12:48:44.707809+00:00",
+    "status": "reachable",
+    "title": "System of National Accounts | United Nations Statistics Division",
+    "sha256": "c32893edbe97146432e3b1ad292591d77929e4212132e748166655f231083ce8",
+    "bytes": 2604,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/econstats/national-accounts/sna2025",
+    "http_status": 200,
+    "content_type": "text/html",
+    "etag": "\"0d95b7a586edd1:0\"",
+    "last_modified": "Sat, 07 Nov 2026 01:36:58 GMT"
+  },
+  {
+    "source_id": "ICNPO",
+    "url": "https://unstats.un.org/unsd/classifications/Family/Detail/2008",
+    "checked_at": "2026-11-08T12:48:53.568097+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classification Detail",
+    "sha256": "306705fea424b2c5b075f1bdad76ddfe8f69952fd9057fbb38be3d1143d49179",
+    "bytes": 44378,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2008",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "ICATUS",
+    "url": "https://unstats.un.org/unsd/classifications/econ/",
+    "checked_at": "2026-11-08T12:43:41.065334+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classifications on economic statistics",
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "bytes": 144294,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/econ/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "BEC",
+    "url": "https://unstats.un.org/unsd/classifications/Family/Detail/1068",
+    "checked_at": "2026-11-08T12:49:03.691445+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classification Detail",
+    "sha256": "1e10e7ac72a74d2062a66913bcfe298e31771a2d5625ca4b7cad77e94ea8fbe7",
+    "bytes": 49801,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1068",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "SITC",
+    "url": "https://unstats.un.org/unsd/classifications/econ/",
+    "checked_at": "2026-11-08T12:43:41.065334+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classifications on economic statistics",
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "bytes": 144294,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/econ/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "SIEC",
+    "url": "https://unstats.un.org/unsd/Classifications/siec/",
+    "checked_at": "2026-11-08T12:49:14.241807+00:00",
+    "status": "reachable",
+    "title": "UNSD — Standard International Energy Products Classification (SIEC)",
+    "sha256": "46a2ce609bf2ed087c0098d6027341a47807fc15efa035961c96efe4366709ea",
+    "bytes": 41669,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/Classifications/siec/",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "CEP",
+    "url": "https://seea.un.org/en/content/classification-environmental-purposes-cep",
+    "checked_at": "2026-11-08T12:49:23.833126+00:00",
+    "status": "reachable",
+    "title": "Classification of environmental purposes (CEP) | System of Environmental Economic Accounting",
+    "sha256": "3554c6db5d2c3cae36ab6e2cb00067ec672672fbc3ca93357279847ef3e90f78",
+    "bytes": 93462,
+    "robots": {
+      "url": "https://seea.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://seea.un.org/en/content/classification-environmental-purposes-cep",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": "W/\"1794142172\"",
+    "last_modified": "Sun, 08 Nov 2026 12:49:32 GMT"
+  },
+  {
+    "source_id": "ICCS",
+    "url": "https://unstats.un.org/unsd/classifications/Family/Detail/1000",
+    "checked_at": "2026-11-08T12:49:34.445101+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classification Detail",
+    "sha256": "491080bdaacfa79c63f172d05e8f6687dbac267f2108bb637371e2c3ddd2270b",
+    "bytes": 48288,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/Family/Detail/1000",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "EUROVOC",
+    "url": "https://data.europa.eu/data/datasets/eurovoc",
+    "checked_at": "2026-11-08T12:49:43.960806+00:00",
+    "status": "reachable",
+    "title": "European Data Portal",
+    "sha256": "6c25d8e78e6c165067d88d1fe7b81899a3e2274ce9562521110a84d7254d82e4",
+    "bytes": 1599,
+    "robots": {
+      "url": "https://data.europa.eu/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://data.europa.eu/data/datasets/eurovoc",
+    "http_status": 200,
+    "content_type": "text/html",
+    "etag": "W/\"6ab64aea-63f\"",
+    "last_modified": "Fri, 25 Sep 2026 10:20:26 GMT"
+  },
+  {
+    "source_id": "ISCED_T",
+    "url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+    "checked_at": "2026-11-08T12:44:25.503258+00:00",
+    "status": "reachable",
+    "title": "International Standard Classification of Education - ISCED | Institute for Statistics (UIS)",
+    "sha256": "67bfc6925c865d4885476eeb047fad9d66d6671f592c51629799c4c4dd5165cb",
+    "bytes": 55021,
+    "robots": {
+      "url": "https://www.uis.unesco.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.uis.unesco.org/en/methods-and-tools/isced",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": "W/\"1794117636\"",
+    "last_modified": "Sun, 08 Nov 2026 06:00:36 GMT"
+  },
+  {
+    "source_id": "ICNP_TSO",
+    "url": "https://digitallibrary.un.org/record/3899725?ln=en",
+    "checked_at": "2026-11-08T12:50:03.063040+00:00",
+    "status": "reachable",
+    "title": "",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "robots": {
+      "url": "https://digitallibrary.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://digitallibrary.un.org/record/3899725?ln=en",
+    "http_status": 202,
+    "content_type": "text/html; charset=UTF-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "NICE",
+    "url": "https://www.wipo.int/en/web/classification-nice/index",
+    "checked_at": "2026-11-08T12:50:22.988304+00:00",
+    "status": "reachable",
+    "title": "Nice Classification",
+    "sha256": "10080ec1a2e7179b18b4c2241e1e05562f36425fdbd9db5c8434733a3eabe246",
+    "bytes": 110972,
+    "robots": {
+      "url": "https://www.wipo.int/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.wipo.int/en/web/classification-nice/index",
+    "http_status": 200,
+    "content_type": "text/html;charset=UTF-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "LOCARNO",
+    "url": "https://www.wipo.int/en/web/classification-locarno",
+    "checked_at": "2026-11-08T12:50:33.390055+00:00",
+    "status": "reachable",
+    "title": "Locarno Classification",
+    "sha256": "a610d65d4ebd587745f45e8c14bc6ca97ca47b0c24fd9590143ac9686c048e26",
+    "bytes": 110157,
+    "robots": {
+      "url": "https://www.wipo.int/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://www.wipo.int/en/web/classification-locarno",
+    "http_status": 200,
+    "content_type": "text/html;charset=UTF-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "EBOPS",
+    "url": "https://unstats.un.org/unsd/classifications/Family/Detail/2102",
+    "checked_at": "2026-11-08T12:50:44.688404+00:00",
+    "status": "reachable",
+    "title": "UNSD — Classification Detail",
+    "sha256": "b5e6c5494e661d8011dbcfcadb059e1e64ec719601942830e3ec4227415adbfa",
+    "bytes": 50617,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/Family/Detail/2102",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "source_id": "ICSE",
+    "url": "https://webapps.ilo.org/ilostat-files/Documents/ICSE-18_manual.pdf",
+    "checked_at": "2026-11-08T12:50:54.554543+00:00",
+    "status": "reachable",
+    "title": "",
+    "sha256": "80cf86110d778354924ad3485c5bc6b585dae501ba86fdb002e8d896572c5a5b",
+    "bytes": 2039729,
+    "robots": {
+      "url": "https://webapps.ilo.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://webapps.ilo.org/ilostat-files/Documents/ICSE-18_manual.pdf",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "etag": "\"65008321-1f1fb1\"",
+    "last_modified": "Tue, 12 Sep 2023 15:26:25 GMT"
+  }
+]

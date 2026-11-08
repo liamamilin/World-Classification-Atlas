@@ -1,0 +1,254 @@
+[
+  {
+    "id": "isic4-structure",
+    "source_id": "ISIC",
+    "edition": "Rev.4",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_4_english_structure.Txt",
+    "filename": "isic4-structure.csv",
+    "format": "csv",
+    "role": "structure",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": "un_isic",
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "isic5-structure",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC_Rev_5_english_structure.csv",
+    "filename": "isic5-structure.csv",
+    "format": "csv",
+    "role": "structure",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "cp1252",
+    "parser": "un_isic",
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "cpc3-structure",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Structure_30Jun2025.csv",
+    "filename": "cpc3-structure.csv",
+    "format": "csv",
+    "role": "structure",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": "un_numeric",
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "cofog1999-structure",
+    "source_id": "COFOG",
+    "edition": "1999",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/COFOG_english_structure.txt",
+    "filename": "cofog1999-structure.csv",
+    "format": "txt",
+    "role": "structure",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": "un_dotted",
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "copni1999-structure",
+    "source_id": "COPNI",
+    "edition": "1999",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/COPNI_English_structure.txt",
+    "filename": "copni1999-structure.csv",
+    "format": "txt",
+    "role": "structure",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": "un_dotted",
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "icatus-portal-structure",
+    "source_id": "ICATUS",
+    "edition": "portal-undated",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ICATUS_structure.txt",
+    "filename": "icatus-portal-structure.csv",
+    "format": "csv",
+    "role": "structure_unverified_edition",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "cp1252",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "isic4-isic5-correspondence",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+    "filename": "isic4-isic5-correspondence.xlsx",
+    "format": "xlsx",
+    "role": "official_correspondence",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
+    }
+  },
+  {
+    "id": "onet31-occupations",
+    "source_id": "ONET",
+    "edition": "31.0",
+    "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/occupation_data.csv",
+    "filename": "onet31-occupations.csv",
+    "format": "csv",
+    "role": "occupation_codes_and_definitions",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": "onet_occupations",
+    "expected_rows": 1016,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "CC BY 4.0",
+      "evidence_url": "https://www.onetcenter.org/license_db.html"
+    }
+  },
+  {
+    "id": "onet31-content-model",
+    "source_id": "ONET",
+    "edition": "31.0",
+    "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/content_model_reference.csv",
+    "filename": "onet31-content-model.csv",
+    "format": "csv",
+    "role": "content_model_codes_and_definitions",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": "onet_content",
+    "expected_rows": 3006,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "CC BY 4.0",
+      "evidence_url": "https://www.onetcenter.org/license_db.html"
+    }
+  },
+  {
+    "id": "onet2019-taxonomy",
+    "source_id": "ONET",
+    "edition": "SOC2019-snapshot-2026-11-08",
+    "url": "https://www.onetcenter.org/ctdl/graph/ce-8350d6ad-bc2a-11ef-8f5a-005056bdd76e",
+    "filename": "onet2019-taxonomy.jsonld",
+    "format": "jsonld",
+    "role": "occupation_taxonomy",
+    "language": "en",
+    "publication_date": "2025-01-16 (ceasn:dateModified in collection)",
+    "encoding": "utf-8-sig",
+    "parser": "ctdl_taxonomy",
+    "expected_rows": 1016,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "CC BY 4.0",
+      "evidence_url": "https://www.onetcenter.org/license_db.html"
+    }
+  },
+  {
+    "id": "unspsc-current-workbook",
+    "source_id": "UNSPSC",
+    "edition": "unverified-version",
+    "url": "https://www.undp.org/sites/g/files/zskgke326/files/2026-10/unspsc_english.xlsx",
+    "filename": "unspsc-current-workbook.xlsx",
+    "format": "xlsx",
+    "role": "structure_unverified_edition",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": null,
+      "redistribute": null,
+      "license": "UNDP terms pending",
+      "evidence_url": "https://www.undp.org/unspsc"
+    }
+  },
+  {
+    "id": "snomed-international",
+    "source_id": "SNOMED",
+    "edition": "authorization-required",
+    "url": "https://mlds.ihtsdotools.org/",
+    "filename": "snomed-international.zip",
+    "format": "zip",
+    "role": "licensed_release",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8-sig",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": false,
+      "local_processing": false,
+      "redistribute": false,
+      "license": "Affiliate license required",
+      "evidence_url": "https://www.snomed.org/get-snomed"
+    }
+  }
+]

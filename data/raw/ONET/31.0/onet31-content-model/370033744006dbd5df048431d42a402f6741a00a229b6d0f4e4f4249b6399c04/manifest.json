@@ -1,0 +1,31 @@
+{
+  "resource_id": "onet31-content-model",
+  "source_id": "ONET",
+  "edition": "31.0",
+  "url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/content_model_reference.csv",
+  "attempted_at": "2026-11-08T12:38:27.548089+00:00",
+  "final_url": "https://www.onetcenter.org/dl_files/database/db_31_0_csv/content_model_reference.csv",
+  "http_status": 200,
+  "content_type": "application/octet-stream",
+  "etag": "\"6a8d105e-39950\"",
+  "last_modified": "Tue, 25 Aug 2026 03:47:42 GMT",
+  "sha256": "370033744006dbd5df048431d42a402f6741a00a229b6d0f4e4f4249b6399c04",
+  "bytes": 235856,
+  "path": "data/raw/ONET/31.0/onet31-content-model/370033744006dbd5df048431d42a402f6741a00a229b6d0f4e4f4249b6399c04/onet31-content-model.csv",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "CC BY 4.0",
+    "evidence_url": "https://www.onetcenter.org/license_db.html"
+  },
+  "role": "content_model_codes_and_definitions",
+  "language": "en",
+  "format": "csv",
+  "publication_date": null,
+  "robots": {
+    "url": "https://www.onetcenter.org/robots.txt",
+    "result": "fetched",
+    "allowed": true
+  }
+}

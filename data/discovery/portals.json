@@ -1,0 +1,42 @@
+[
+  {
+    "url": "https://unstats.un.org/unsd/classifications/Family/ListByName",
+    "checked_at": "2026-11-08T12:38:49.124914+00:00",
+    "status": "reachable",
+    "sha256": "099696cac9312321f979d524d48083701c1855f479054cf23c463ea74a0c5399",
+    "bytes": 104703,
+    "robots": {
+      "url": "https://unstats.un.org/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://unstats.un.org/unsd/classifications/Family/ListByName",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null
+  },
+  {
+    "url": "https://ec.europa.eu/eurostat/ramon/",
+    "checked_at": "2026-11-08T12:38:56.397033+00:00",
+    "status": "failed",
+    "error": "HTTPError: HTTP Error 404: "
+  },
+  {
+    "url": "https://ec.europa.eu/eurostat/web/metadata/classifications",
+    "checked_at": "2026-11-08T12:39:01.317921+00:00",
+    "status": "reachable",
+    "sha256": "e792175cfaa3f91d5d629dbd9236bcf1693148726913928f03a34bce46316b78",
+    "bytes": 268785,
+    "robots": {
+      "url": "https://ec.europa.eu/robots.txt",
+      "result": "fetched",
+      "allowed": true
+    },
+    "final_url": "https://ec.europa.eu/eurostat/web/metadata/classifications",
+    "http_status": 200,
+    "content_type": "text/html;charset=UTF-8",
+    "etag": null,
+    "last_modified": null
+  }
+]
