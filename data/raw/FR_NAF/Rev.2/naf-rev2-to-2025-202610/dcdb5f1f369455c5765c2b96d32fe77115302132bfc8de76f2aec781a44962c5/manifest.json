@@ -1,0 +1,31 @@
+{
+  "resource_id": "naf-rev2-to-2025-202610",
+  "source_id": "FR_NAF",
+  "edition": "Rev.2",
+  "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+  "attempted_at": "2026-11-09T01:14:18.471615+00:00",
+  "final_url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+  "http_status": 200,
+  "content_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+  "bytes": 234922,
+  "path": "data/raw/FR_NAF/Rev.2/naf-rev2-to-2025-202610/dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5/naf-rev2-to-2025-202610.xlsx",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+    "evidence_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm"
+  },
+  "role": "official_correspondence",
+  "language": "fr",
+  "format": "xlsx",
+  "publication_date": "2026-10",
+  "robots": {
+    "url": "https://www.insee.fr/robots.txt",
+    "result": "fetched",
+    "allowed": true
+  }
+}

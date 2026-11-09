@@ -4421,6 +4421,124 @@
         "本轮只取CPA 2008服务类别作证据，未解析全体系或跨版对应"
       ],
       "local_research_report": "data/reports/furniture-alignment.json"
+    },
+    {
+      "id": "FR_NAF",
+      "name": "Nomenclature d’activités française",
+      "aliases": [
+        "NAF",
+        "NAF rév. 2",
+        "NAF 2025"
+      ],
+      "classification_object": "economic activities",
+      "publisher": "Institut national de la statistique et des études économiques (Insee)",
+      "domains": [
+        "01-economy"
+      ],
+      "official_url": "https://www.insee.fr/fr/information/2406147",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-09",
+      "editions": [
+        {
+          "id": "Rev.2",
+          "label": "NAF rév. 2 (2008)",
+          "status": "confirmed_available",
+          "latest_claim": false
+        },
+        {
+          "id": "2025",
+          "label": "NAF 2025",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "class",
+          "subclass"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.insee.fr/fr/information/8617910",
+        "formats": [
+          "dbf",
+          "xlsx",
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+        "url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": true,
+        "derivatives": true,
+        "attribution": "Source : Insee. Publication and update dates retained per component.",
+        "status": "open_licence_documented",
+        "note": "结构及对应数据可按出处署名复用。含排版与其他内容的完整PDF原件本地保存。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "Rev.2",
+            "to_edition": "2025",
+            "url": "https://www.insee.fr/fr/information/8617910",
+            "status": "official_entry_verified",
+            "semantics": "Insee提供双向发布的子类对应及活动内容。表为2026年10月版。"
+          },
+          {
+            "from_edition": "NAF Rev.2 / NAF 2025",
+            "to_edition": "NACE Rev.2 / NACE Rev.2.1",
+            "url": "https://www.insee.fr/fr/information/2406147",
+            "status": "publisher_class_alignment_documented",
+            "semantics": "保留四位类与法国五位子类的层级差异。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.insee.fr/fr/information/2120875",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "download"
+          ],
+          "finding": "NAF rév.2发布五级嵌套DBF及结构和说明PDF。"
+        },
+        {
+          "url": "https://www.insee.fr/fr/information/8617910",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "download",
+            "hierarchy",
+            "official_mappings"
+          ],
+          "finding": "2026年10月结构标题更新与双向对应表分别发布。NAF 2025的2025年说明版独立保留。"
+        },
+        {
+          "url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm",
+          "method": "official_terms_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "Insee公共下载通常适用Etalab 2.0。引用保留出处、已知更新日期和原始语义。"
+        }
+      ],
+      "unresolved": [
+        "本轮只逐条审查家具制造及相邻安装分支的来源说明与对应"
+      ],
+      "local_research_report": "data/reports/furniture-alignment.json"
     }
   ]
 }

@@ -268,5 +268,41 @@
     "url": "https://ec.europa.eu/eurostat/documents/6495078/19716404/CPA2008structureexplanatorynotesEN.pdf/f655ffea-01f4-47db-108e-4d35da5991d9?t=1722511832285",
     "source_id": "EU_CPA",
     "edition": "2008"
+  },
+  "naf-rev2-hierarchy": {
+    "sha256": "5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/2120875/naf2008_5_niveaux.dbf",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2"
+  },
+  "naf-rev2-cpf21-notes-2020": {
+    "sha256": "2f90dfb4652203062a72a2bdca21aa32491def85ca72c85e627cb2101d82a3f3",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/2120875/Nomenclatures_NAF_et_CPF_Reedition_2020.pdf",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2"
+  },
+  "naf-2025-structure-202610": {
+    "sha256": "35a470a436ffc16dedcb4c983a6cbe2362408bfc65add8637d993554bd440c2b",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Structure%20NAF%202025%20Maj%202026-10.xlsx",
+    "source_id": "FR_NAF",
+    "edition": "2025"
+  },
+  "naf-2025-notes-2025": {
+    "sha256": "b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/NAF2025%20-%20Notes%20-%20Edition%202025.pdf",
+    "source_id": "FR_NAF",
+    "edition": "2025"
+  },
+  "naf-rev2-to-2025-202610": {
+    "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2"
+  },
+  "naf-2025-to-rev2-202610": {
+    "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+    "source_id": "FR_NAF",
+    "edition": "2025"
   }
 }

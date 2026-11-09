@@ -1,8 +1,8 @@
 {
   "review_date": "2026-11-09",
-  "registered_sources": 52,
+  "registered_sources": 53,
   "metadata_status": {
-    "partially_verified": 48,
+    "partially_verified": 49,
     "verified_metadata": 1,
     "inaccessible": 2,
     "candidate": 1
@@ -11,11 +11,11 @@
     {
       "id": "01-economy",
       "label": "经济与行业",
-      "registered": 7,
+      "registered": 8,
       "metadata_status": {
-        "partially_verified": 7
+        "partially_verified": 8
       },
-      "sources_with_local_files": 4,
+      "sources_with_local_files": 5,
       "sources_with_parsed_files": 1
     },
     {
@@ -165,13 +165,13 @@
     }
   ],
   "unsd_family_discovered_candidates": 149,
-  "planned_resources": 47,
-  "pinned_resources": 45,
-  "sources_with_local_files": 9,
+  "planned_resources": 53,
+  "pinned_resources": 51,
+  "sources_with_local_files": 10,
   "parsed_resources": 8,
   "resource_status": {
     "parsed": 8,
-    "format_checked_only": 37,
+    "format_checked_only": 43,
     "blocked_rights": 2
   },
   "economic_activity_research": {
@@ -375,41 +375,43 @@
       },
       "isic4_to_nace2_rows": 996,
       "furniture_current_incoming_rows": 7,
-      "individually_reviewed_rows": 54,
+      "individually_reviewed_rows": 65,
       "reviews_by_resource": {
         "nace21-nace2-correspondence": 11,
         "isic4-nace2-correspondence": 12,
         "nace2-nace21-correspondence-20260831": 11,
         "nace-cellar-nace2-isic4-xkos-20261109": 12,
-        "isic4-isic5-correspondence": 8
+        "isic4-isic5-correspondence": 9,
+        "naf-rev2-to-2025-202610": 5,
+        "naf-2025-to-rev2-202610": 5
       }
     },
     "directory": {
-      "node_count": 29,
-      "unique_codes": 29,
+      "node_count": 33,
+      "unique_codes": 33,
       "duplicate_codes": [],
-      "edge_count": 25,
+      "edge_count": 29,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 4,
-        "2": 10,
-        "3": 10,
-        "4": 5
+        "2": 11,
+        "3": 11,
+        "4": 7
       },
       "roots": 4,
-      "leaves": 19,
-      "definitions": 29,
+      "leaves": 23,
+      "definitions": 33,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
     "reused_ids": 2,
-    "new_ids": 27,
-    "bounded_activities": 21,
-    "evidence_claims": 141,
-    "research_mappings": 23,
-    "candidate_bindings": 9,
+    "new_ids": 31,
+    "bounded_activities": 25,
+    "evidence_claims": 183,
+    "research_mappings": 28,
+    "candidate_bindings": 13,
     "followup_sources": {
       "rdf_selected_nodes": 22,
       "nace2_to_nace21_rows": 1598,
@@ -493,14 +495,14 @@
       }
     },
     "activity_review_status": {
-      "reviewed_bounded_activity": 19,
+      "reviewed_bounded_activity": 22,
       "reviewed_current_multisource_activity": 1,
-      "reviewed_with_legacy_gap": 1
+      "reviewed_with_legacy_gap": 2
     },
     "binding_history_records": 1,
     "approved_isic5_source_levels": {
-      "class": 15,
-      "group": 6
+      "class": 16,
+      "group": 9
     },
     "material_boundaries": {
       "new_activities": 5,
@@ -1009,6 +1011,261 @@
         "registry_title_matches": [],
         "scope": "Fresh downloads of fixed table URLs and Cellar queries. Registry title review is limited to the captured listing."
       }
+    },
+    "naf_boundary": {
+      "rev2": {
+        "node_count": 1728,
+        "unique_codes": 1728,
+        "duplicate_codes": [],
+        "edge_count": 1707,
+        "orphan_parents": [],
+        "self_links": [],
+        "cycles": [],
+        "levels": {
+          "1": 21,
+          "2": 88,
+          "3": 272,
+          "4": 615,
+          "5": 732
+        },
+        "roots": 21,
+        "leaves": 732,
+        "definitions": 4,
+        "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+        "polyhierarchy_nodes": 0
+      },
+      "naf2025": {
+        "node_count": 1794,
+        "unique_codes": 1794,
+        "duplicate_codes": [],
+        "edge_count": 1772,
+        "orphan_parents": [],
+        "self_links": [],
+        "cycles": [],
+        "levels": {
+          "1": 22,
+          "2": 87,
+          "3": 287,
+          "4": 651,
+          "5": 747
+        },
+        "roots": 22,
+        "leaves": 747,
+        "definitions": 4,
+        "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+        "polyhierarchy_nodes": 0
+      },
+      "rev2_titles": 732,
+      "new_claims": 42,
+      "new_activities": 4,
+      "note_components": 8,
+      "correspondence": {
+        "forward_rows": 1242,
+        "reverse_rows": 1242,
+        "reversed_pair_sets_equal": true,
+        "forward_types": {
+          "Unique": 516,
+          "Multiple": 725,
+          "blank": 1
+        },
+        "reverse_types": {
+          "Unique": 515,
+          "Multiple": 726,
+          "blank": 1
+        },
+        "paired_common_content_text_differences": 954,
+        "current_section_count_comparison": {
+          "notes_reported": 21,
+          "structure_measured": 22,
+          "matches": false,
+          "evidence": {
+            "resource_id": "naf-2025-notes-2025",
+            "edition": "2025",
+            "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/NAF2025%20-%20Notes%20-%20Edition%202025.pdf",
+            "sha256": "b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015",
+            "publication_date": "2025",
+            "pdf_page": 2
+          }
+        }
+      },
+      "common_content_observations": [
+        {
+          "id": "naf-old-office-shop-finish-text",
+          "mapping_ids": [
+            "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+            "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c"
+          ],
+          "pattern": "finissage|finition",
+          "expected_mention": false,
+          "scope": "两方向的整品共同内容未单列独立涂装。",
+          "directional_observations": [
+            {
+              "id": "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+              "from": "FR_NAF:Rev.2:31.01Z",
+              "to": "FR_NAF:2025:31.00G",
+              "evidence": {
+                "resource_id": "naf-rev2-to-2025-202610",
+                "edition": "Rev.2",
+                "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+                "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+                "publication_date": "2026-10",
+                "sheet": "NAF rév. 2 vers NAF 2025",
+                "row": 383
+              },
+              "publisher_mapping_type": "Multiple",
+              "mentioned": false
+            },
+            {
+              "id": "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c",
+              "from": "FR_NAF:2025:31.00G",
+              "to": "FR_NAF:Rev.2:31.01Z",
+              "evidence": {
+                "resource_id": "naf-2025-to-rev2-202610",
+                "edition": "2025",
+                "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+                "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+                "publication_date": "2026-10",
+                "sheet": "correspondance inversée NAF",
+                "row": 382
+              },
+              "publisher_mapping_type": "Multiple",
+              "mentioned": false
+            }
+          ]
+        },
+        {
+          "id": "naf-old-shop-component-text",
+          "mapping_ids": [
+            "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+            "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c"
+          ],
+          "pattern": "composants? intégrés?",
+          "expected_mention": false,
+          "scope": "现行说明的店铺家具内置件未在两方向的整品共同内容明列。",
+          "directional_observations": [
+            {
+              "id": "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+              "from": "FR_NAF:Rev.2:31.01Z",
+              "to": "FR_NAF:2025:31.00G",
+              "evidence": {
+                "resource_id": "naf-rev2-to-2025-202610",
+                "edition": "Rev.2",
+                "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+                "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+                "publication_date": "2026-10",
+                "sheet": "NAF rév. 2 vers NAF 2025",
+                "row": 383
+              },
+              "publisher_mapping_type": "Multiple",
+              "mentioned": false
+            },
+            {
+              "id": "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c",
+              "from": "FR_NAF:2025:31.00G",
+              "to": "FR_NAF:Rev.2:31.01Z",
+              "evidence": {
+                "resource_id": "naf-2025-to-rev2-202610",
+                "edition": "2025",
+                "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+                "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+                "publication_date": "2026-10",
+                "sheet": "correspondance inversée NAF",
+                "row": 382
+              },
+              "publisher_mapping_type": "Multiple",
+              "mentioned": false
+            }
+          ]
+        },
+        {
+          "id": "naf-other-professional-finish-text",
+          "mapping_ids": [
+            "urn:atlas:mapping:ebfeeece-bbdb-5375-8bb6-8926d4bac85b",
+            "urn:atlas:mapping:e73062bc-f760-5e15-98c2-4fe704bbbd0b"
+          ],
+          "pattern": "finissage|finition",
+          "expected_mention": true,
+          "scope": "两方向都列出专业用途其他家具的表面处理。",
+          "directional_observations": [
+            {
+              "id": "urn:atlas:mapping:ebfeeece-bbdb-5375-8bb6-8926d4bac85b",
+              "from": "FR_NAF:Rev.2:31.09B",
+              "to": "FR_NAF:2025:31.00G",
+              "evidence": {
+                "resource_id": "naf-rev2-to-2025-202610",
+                "edition": "Rev.2",
+                "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+                "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+                "publication_date": "2026-10",
+                "sheet": "NAF rév. 2 vers NAF 2025",
+                "row": 391
+              },
+              "publisher_mapping_type": "Multiple",
+              "mentioned": true
+            },
+            {
+              "id": "urn:atlas:mapping:e73062bc-f760-5e15-98c2-4fe704bbbd0b",
+              "from": "FR_NAF:2025:31.00G",
+              "to": "FR_NAF:Rev.2:31.09B",
+              "evidence": {
+                "resource_id": "naf-2025-to-rev2-202610",
+                "edition": "2025",
+                "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+                "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+                "publication_date": "2026-10",
+                "sheet": "correspondance inversée NAF",
+                "row": 385
+              },
+              "publisher_mapping_type": "Multiple",
+              "mentioned": true
+            }
+          ]
+        },
+        {
+          "id": "naf-wooden-shop-installation-text",
+          "mapping_ids": [
+            "urn:atlas:mapping:8bb129ad-7424-5779-bcb8-de346d16a4d4",
+            "urn:atlas:mapping:fd6b8df1-8cba-55d9-ad0d-833e8529de7e"
+          ],
+          "pattern": "menuiserie bois et PVC",
+          "expected_mention": true,
+          "scope": "两方向均明确木及PVC作业，独立于店铺家具制造。",
+          "directional_observations": [
+            {
+              "id": "urn:atlas:mapping:8bb129ad-7424-5779-bcb8-de346d16a4d4",
+              "from": "FR_NAF:Rev.2:43.32C",
+              "to": "FR_NAF:2025:43.32G",
+              "evidence": {
+                "resource_id": "naf-rev2-to-2025-202610",
+                "edition": "Rev.2",
+                "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+                "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+                "publication_date": "2026-10",
+                "sheet": "NAF rév. 2 vers NAF 2025",
+                "row": 493
+              },
+              "publisher_mapping_type": "Multiple",
+              "mentioned": true
+            },
+            {
+              "id": "urn:atlas:mapping:fd6b8df1-8cba-55d9-ad0d-833e8529de7e",
+              "from": "FR_NAF:2025:43.32G",
+              "to": "FR_NAF:Rev.2:43.32C",
+              "evidence": {
+                "resource_id": "naf-2025-to-rev2-202610",
+                "edition": "2025",
+                "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+                "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+                "publication_date": "2026-10",
+                "sheet": "correspondance inversée NAF",
+                "row": 492
+              },
+              "publisher_mapping_type": "Multiple",
+              "mentioned": true
+            }
+          ]
+        }
+      ]
     }
   },
   "resources": [
@@ -1801,6 +2058,94 @@
       "domain_stage": {
         "status": "selected_clauses_reviewed",
         "pages": 338
+      }
+    },
+    {
+      "resource_id": "naf-rev2-hierarchy",
+      "source_id": "FR_NAF",
+      "edition": "Rev.2",
+      "role": "official_structure",
+      "sha256": "5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8",
+      "path": "data/raw/FR_NAF/Rev.2/naf-rev2-hierarchy/5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8/naf-rev2-hierarchy.dbf",
+      "bytes": 14102,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "official_hierarchy_parsed",
+        "nodes": 1728
+      }
+    },
+    {
+      "resource_id": "naf-rev2-cpf21-notes-2020",
+      "source_id": "FR_NAF",
+      "edition": "Rev.2",
+      "role": "explanatory_notes",
+      "sha256": "2f90dfb4652203062a72a2bdca21aa32491def85ca72c85e627cb2101d82a3f3",
+      "path": "data/local/raw/FR_NAF/Rev.2/naf-rev2-cpf21-notes-2020/2f90dfb4652203062a72a2bdca21aa32491def85ca72c85e627cb2101d82a3f3/naf-rev2-cpf21-notes-2020.pdf",
+      "bytes": 3333260,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "selected_activity_notes_parsed"
+      }
+    },
+    {
+      "resource_id": "naf-2025-structure-202610",
+      "source_id": "FR_NAF",
+      "edition": "2025",
+      "role": "official_structure",
+      "sha256": "35a470a436ffc16dedcb4c983a6cbe2362408bfc65add8637d993554bd440c2b",
+      "path": "data/raw/FR_NAF/2025/naf-2025-structure-202610/35a470a436ffc16dedcb4c983a6cbe2362408bfc65add8637d993554bd440c2b/naf-2025-structure-202610.xlsx",
+      "bytes": 99566,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "official_hierarchy_parsed",
+        "nodes": 1794
+      }
+    },
+    {
+      "resource_id": "naf-2025-notes-2025",
+      "source_id": "FR_NAF",
+      "edition": "2025",
+      "role": "explanatory_notes",
+      "sha256": "b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015",
+      "path": "data/local/raw/FR_NAF/2025/naf-2025-notes-2025/b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015/naf-2025-notes-2025.pdf",
+      "bytes": 2292933,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "selected_activity_notes_parsed"
+      }
+    },
+    {
+      "resource_id": "naf-rev2-to-2025-202610",
+      "source_id": "FR_NAF",
+      "edition": "Rev.2",
+      "role": "official_correspondence",
+      "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+      "path": "data/raw/FR_NAF/Rev.2/naf-rev2-to-2025-202610/dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5/naf-rev2-to-2025-202610.xlsx",
+      "bytes": 234922,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "official_correspondence_parsed",
+        "rows": 1242
+      }
+    },
+    {
+      "resource_id": "naf-2025-to-rev2-202610",
+      "source_id": "FR_NAF",
+      "edition": "2025",
+      "role": "official_correspondence",
+      "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+      "path": "data/raw/FR_NAF/2025/naf-2025-to-rev2-202610/096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696/naf-2025-to-rev2-202610.xlsx",
+      "bytes": 758532,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "official_correspondence_parsed",
+        "rows": 1242
       }
     }
   ]

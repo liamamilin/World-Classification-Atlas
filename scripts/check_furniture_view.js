@@ -14,7 +14,7 @@ const context={document:{getElementById:id=>elements.get(id),createElement:tag=>
 vm.runInNewContext(code,context);
 const text=n=>[n.textContent,...n.children.map(text)].join(' ');
 const view=context.furnitureView;
-assert.equal(elements.get('tree').children.length,29,'complete own branch trees');
+assert.equal(elements.get('tree').children.length,33,'complete own branch trees');
 const ceramic=view.data.directory.concepts.find(n=>n.key==='ceramic');
 view.show(ceramic);
 assert.match(text(elements.get('detail')),/NACE:Rev.2.1:31.00/);
@@ -68,6 +68,18 @@ const independentParts=view.data.directory.concepts.find(n=>n.key==='independent
 view.show(independentParts);
 assert.match(text(elements.get('detail')),/非部分 NACE 端.*旧 ISIC 端保持部分/);
 assert.match(text(elements.get('detail')),/uk-sic-2007-index-202409:5631/);
+const specialist=view.data.directory.concepts.find(n=>n.key==='contract-finishing-office-and-shop-furniture');
+view.show(specialist);
+assert.match(text(elements.get('detail')),/FR_NAF:2025:31.00G/);
+assert.match(text(elements.get('detail')),/待审来源 · FR_NAF:Rev.2:31.01Z/);
+assert.match(text(elements.get('audit')),/法国 NAF 双向共同内容观察/);
+elements.get('scheme').value='FR_NAF:2025';
+elements.get('search').value='31.00G';
+view.render();
+assert.match(text(elements.get('tree')),/31.00G Fabrication de meubles à destination de professionnels/);
+view.show(view.data.sources.find(n=>n.id==='FR_NAF:2025:31.00G'));
+assert.match(text(elements.get('detail')),/composants intégrés pour meubles de magasin/);
+assert.match(text(elements.get('detail')),/publisher_mapping_type.*Multiple/);
 view.show(view.data.sources.find(n=>n.id==='NACE:Rev.2:31.09'));
 assert.match(text(elements.get('detail')),/独立说明组件/);
 console.log('Passed: furniture source trees, stable own IDs, directional bindings, evidence hashes, candidate separation, official/research distinction and conflicts. Visual layout not tested.');

@@ -21,12 +21,13 @@ from .furniture_followup import (ASSETS as FOLLOWUP_ASSETS, PLAN as FOLLOWUP_PLA
                                 sources as followup_sources, extend_plan, supports_binding)
 from . import furniture_materials as materials
 from . import furniture_contracts as contracts
+from . import furniture_naf as naf
 
 NACE_ASSETS = ("nace21-download-list", "nace21-notes-20260930", "nace21-nace2-correspondence",
                "nace21-manual-2026", "nace2-manual-2008", "nace-reuse-policy",
                "isic4-nace2-correspondence", "isic4-nace2-change-history")
 BASE_REQUIRED = NACE_ASSETS + ("isic4-database", "isic5-notes-20260819", "isic4-isic5-correspondence")
-REQUIRED = tuple(dict.fromkeys(BASE_REQUIRED + FOLLOWUP_ASSETS + materials.ASSETS + contracts.ASSETS + contracts.RECHECKED))
+REQUIRED = tuple(dict.fromkeys(BASE_REQUIRED + FOLLOWUP_ASSETS + materials.ASSETS + contracts.ASSETS + contracts.RECHECKED + naf.ASSETS))
 PLAN = "data/research/furniture-review.json"
 BASE = "data/research/isic-expanded-review.json"
 LOCAL = "data/local/economy/furniture"
@@ -215,7 +216,7 @@ def validate_slice(activity, claims, documents, activities=None):
     keys = set()
     for binding in activity["source_bindings"]:
         key = binding["node_id"]
-        if key not in documents or documents[key]["source_id"] not in ("ISIC", "NACE"):
+        if key not in documents or documents[key]["source_id"] not in ("ISIC", "NACE", naf.SOURCE):
             raise ValueError("same-object activity source required")
         if key in keys or binding["relation"] != "broadMatch":
             raise ValueError("activity binding must be unique and point to a broader source class")
@@ -274,8 +275,11 @@ def build(root, resources):
         raise ValueError("official source disagreement differs from reviewed comparison")
     plan, material_review = materials.extend_plan(root, plan, observed)
     plan, contract_review = contracts.extend_plan(root, plan, observed)
+    plan, naf_review = naf.extend_plan(root, plan, observed)
     release_recheck = contracts.publication_audit(root, contract_review, assets)
-    documents = {n["id"]: n for n in old + new + current + previous}
+    naf_old, naf_current, naf_edges, naf_notes, naf_pages, naf_audit = naf.read_sources(assets, naf_review, pdf_pages, topology)
+    documents = {n["id"]: n for n in old + new + current + previous + naf_old + naf_current + naf_notes}
+    documents.update({f"{rid}:page:{p['evidence']['pdf_page']}": p for rid, pages in naf_pages.items() for p in pages})
     documents.update({n["id"]: n for n in extra["nodes"]})
     for n in extra["nodes"]:
         documents.setdefault(n["canonical_node_id"], {**n, "id": n["canonical_node_id"]})
@@ -287,7 +291,7 @@ def build(root, resources):
     contract_docs, index_count, service = contracts.evidence_documents(
         contract_pages, assets[contracts.INDEX], material_pages["cpc21-manual-2015"], old)
     documents.update(contract_docs)
-    all_official = cross + legacy + extra["reverse"] + extra["xkos"] + isic_edges
+    all_official = cross + legacy + extra["reverse"] + extra["xkos"] + isic_edges + naf_edges
     documents.update({e["id"]: e for e in all_official})
     claims, dossiers = {}, []
     for claim in plan["claims"]:
@@ -311,7 +315,8 @@ def build(root, resources):
     official = {e["id"]: e for e in all_official}
     reviewed = []
     reviewed_ids = set()
-    scoped_review_ids = {r["mapping_id"] for r in material_review["official_reviews"] + contract_review["official_reviews"]}
+    scoped_review_ids = {r["mapping_id"] for r in material_review["official_reviews"] + contract_review["official_reviews"]
+                         + naf_review["official_reviews"]}
     for decision in plan["official_reviews"]:
         if decision["mapping_id"] in reviewed_ids:
             raise ValueError("duplicate official review; retain a follow-up history instead")
@@ -330,6 +335,8 @@ def build(root, resources):
                          "publisher_partial_flags": edge.get("publisher_partial_flags"),
                          "publisher_relation": edge.get("publisher_relation"), "publisher_predicate": edge.get("publisher_predicate"),
                          "gsim_ids": edge.get("gsim_ids"), "review": decision})
+        if edge["evidence"]["resource_id"] in (naf.FORWARD, naf.REVERSE):
+            reviewed[-1]["publisher_mapping_type"] = edge["publisher_mapping_type"]
     branch_edges = [e for e in cross if e["from"] == "NACE:Rev.2.1:31.00"]
     if {e["id"] for e in branch_edges} - {e["mapping_id"] for e in reviewed}:
         raise ValueError("incoming NACE furniture rows missing individual review")
@@ -339,6 +346,7 @@ def build(root, resources):
         mappings.append(mapping)
     comparisons = materials.check_comparisons(material_review["comparisons"], all_official, assets,
                                                {m["id"]: m for m in mappings}, claims)
+    naf_observations = naf.check_text_observations(naf_review["text_observations"], official)
     ids = read_json(root / BASE)["atlas_identities"]
     nodes = plan["navigation"] + plan["anchors"] + plan["activities"]
     for node in plan["anchors"]:
@@ -362,7 +370,7 @@ def build(root, resources):
                  "claims": list(claims.values()), "issues": plan["issues"], "research_mappings": mappings,
                  "official_reviews": reviewed, "official_pair_comparisons": comparisons,
                  "auxiliary_product_references": [product], "auxiliary_service_references": [service],
-                 "publisher_release_recheck": release_recheck}
+                 "publisher_release_recheck": release_recheck, "naf_common_content_observations": naf_observations}
     local = root / LOCAL
     write_json(root / PUBLIC, directory)
     for filename, value in (("nace21-nodes.jsonl", current), ("nace2-selected-nodes.jsonl", previous),
@@ -394,7 +402,11 @@ def build(root, resources):
         "publisher_rows": [e for e in all_official if e["id"] in contract_edge_ids],
         "auxiliary_service_reference": service, "publisher_release_recheck": release_recheck,
     })
-    source_nodes = {n["id"]: dict(n) for n in old + new + current + previous}
+    for filename, rows in (("naf-rev2-nodes", naf_old), ("naf-2025-nodes", naf_current), ("naf-selected-notes", naf_notes),
+                           ("naf-rev2-to-2025", [e for e in naf_edges if e["evidence"]["resource_id"] == naf.FORWARD]),
+                           ("naf-2025-to-rev2", [e for e in naf_edges if e["evidence"]["resource_id"] == naf.REVERSE])):
+        write_jsonl(local / (filename + ".jsonl"), rows)
+    source_nodes = {n["id"]: dict(n) for n in old + new + current + previous + naf_old + naf_current}
     for n in extra["nodes"]:
         key = n["canonical_node_id"]
         if key in source_nodes:
@@ -405,6 +417,7 @@ def build(root, resources):
     wanted.update("NACE:Rev.2:" + c for c in ("31.01", "31.02", "31.03", "31.09"))
     wanted.update(c["document"] for c in material_review["claims"] + contract_review["claims"] if c["document"] in source_nodes)
     wanted.update(b for c in comparisons for e in c["adjacent_rows"] for b in (e["from"], e["to"]))
+    wanted.update(b for c in naf_observations for e in c["directional_observations"] for b in (e["from"], e["to"]))
     pending = list(wanted)
     while pending:
         key = pending.pop()
@@ -438,6 +451,11 @@ def build(root, resources):
                                             "uk_index_selected_rows": sum(k.startswith(contracts.INDEX + ":") for k in contract_docs),
                                             "pdf_pages": {rid: len(pages) for rid, pages in contract_pages.items()},
                                             "publisher_release_recheck": release_recheck},
+             "naf_boundary": {"rev2": checked_qa(naf_old), "naf2025": checked_qa(naf_current),
+                              "rev2_titles": sum(bool(n["label"]) for n in naf_old),
+                              "new_claims": len(naf_review["claims"]), "new_activities": len(naf_review["activities"]),
+                              "note_components": len(naf_notes), "correspondence": naf_audit,
+                              "common_content_observations": naf_observations},
              "official_tables": {"nace21_to_nace2_rows": len(cross), "nace_levels": dict(Counter(e["level"] for e in cross)),
                                  "isic4_to_nace2_rows": len(legacy), "furniture_current_incoming_rows": len(branch_edges),
                                  "individually_reviewed_rows": len(reviewed),
@@ -459,7 +477,8 @@ def build(root, resources):
                                  "followup_review": plan["followup_metadata"],
                                  "material_boundary_review": plan["material_boundary_review"],
                                  "contract_parts_review": plan["contract_parts_review"],
-                                 "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("furniture.py", "furniture_followup.py", "furniture_materials.py", "furniture_contracts.py", "furniture_view.html", "isic.py", "isic_boundaries.py", "isic_priority.py", "xlsx.py", "normalize.py")}},
+                                 "naf_review_sha256": sha256((root / naf.PLAN).read_bytes()),
+                                 "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("furniture.py", "furniture_followup.py", "furniture_materials.py", "furniture_contracts.py", "furniture_naf.py", "furniture_view.html", "isic.py", "isic_boundaries.py", "isic_priority.py", "xlsx.py", "normalize.py")}},
              "limits": ["No direct official NACE2.1-ISIC5 crosswalk found at checked endpoints; research edges are not transitive official edges.",
                         "Every furniture leaf has scoped research coverage; complete class equivalence remains unapproved.",
                         "NACE2 extraction is selected, not a full old scheme; no real-world entities or allocation weights."]}
@@ -483,7 +502,7 @@ def run(root, resources):
 
 
 def reproduce(root, resources):
-    result = {"status": "failed", "method": "fresh directory; pinned raw assets, manifests, query texts, acquisition record and five research inputs only; no network", "files": []}
+    result = {"status": "failed", "method": "fresh directory; pinned raw assets, manifests, query texts, acquisition record and six research inputs only; no network", "files": []}
     try:
         if run(root, resources):
             raise ValueError("baseline failed")
@@ -492,7 +511,7 @@ def reproduce(root, resources):
             target = Path(folder)
             queries = [a["resource"]["query_file"] for a in assets.values() if a["resource"].get("query_file")]
             recheck = read_json(root / contracts.PLAN)["release_recheck"]["acquisition_path"]
-            for rel in [PLAN, BASE, FOLLOWUP_PLAN, materials.PLAN, contracts.PLAN, recheck, "data/resources.lock.json"] + queries:
+            for rel in [PLAN, BASE, FOLLOWUP_PLAN, materials.PLAN, contracts.PLAN, naf.PLAN, recheck, "data/resources.lock.json"] + queries:
                 path = target / rel
                 path.parent.mkdir(parents=True, exist_ok=True)
                 shutil.copyfile(root / rel, path)

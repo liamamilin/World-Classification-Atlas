@@ -2,13 +2,13 @@
 
 核查日期：2026-11-09。来源核实与下载状态独立。
 
-登记 52 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
+登记 53 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-47 个采集任务，45 个已锁定且通过格式检查，涉及 9 个来源；8 个资源可解析。
+53 个采集任务，51 个已锁定且通过格式检查，涉及 10 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
-| 01-economy 经济与行业 | 7 | 4 | 1 |
+| 01-economy 经济与行业 | 8 | 5 | 1 |
 | 02-products 产品与服务 | 10 | 2 | 1 |
 | 03-consumption 消费与支出 | 4 | 2 | 2 |
 | 04-knowledge 学科与知识 | 6 | 0 | 0 |
@@ -75,6 +75,12 @@
 | unsd-classification-registry-20261109 | Rev.5 | format_checked_only; economy: {'status': 'publisher_release_listing_checked'} | 未统计 | — |
 | nace-correspondence-listing-20261109 | Rev.2.1 | format_checked_only; economy: {'status': 'publisher_release_listing_checked'} | 未统计 | — |
 | cpa2008-structure-notes | 2008 | format_checked_only; economy: {'status': 'selected_clauses_reviewed', 'pages': 338} | 未统计 | — |
+| naf-rev2-hierarchy | Rev.2 | format_checked_only; economy: {'status': 'official_hierarchy_parsed', 'nodes': 1728} | 未统计 | — |
+| naf-rev2-cpf21-notes-2020 | Rev.2 | format_checked_only; economy: {'status': 'selected_activity_notes_parsed'} | 未统计 | — |
+| naf-2025-structure-202610 | 2025 | format_checked_only; economy: {'status': 'official_hierarchy_parsed', 'nodes': 1794} | 未统计 | — |
+| naf-2025-notes-2025 | 2025 | format_checked_only; economy: {'status': 'selected_activity_notes_parsed'} | 未统计 | — |
+| naf-rev2-to-2025-202610 | Rev.2 | format_checked_only; economy: {'status': 'official_correspondence_parsed', 'rows': 1242} | 未统计 | — |
+| naf-2025-to-rev2-202610 | 2025 | format_checked_only; economy: {'status': 'official_correspondence_parsed', 'rows': 1242} | 未统计 | — |
 
 经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 
@@ -85,10 +91,11 @@
 其中3个活动只审定Rev.5当前范围；7条待审来源关联与已审绑定分别索引，1个待审目录提案不计入已审节点。CPC产品说明和主要行业对应仅作旁证，见 [边界核查](isic-boundary-review.json)。
 
 家具多源研究另见 [NACE/ISIC实测](furniture-alignment.json)，状态：passed。
-NACE Rev.2.1完整解析1047节点；家具分支29节点，含2个沿用身份及27个新身份；23条有界跨体系研究关系、54条官方行独立审查、9条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
+NACE Rev.2.1完整解析1047节点；家具分支33节点，含2个沿用身份及31个新身份；28条有界跨体系研究关系、65条官方行独立审查、13条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
 新增旧NACE2→ISIC4直接官方XKOS桥996条，发布者closeMatch保持独立；与UNSD有995对代码事实一致，46.6→466/465差异保留。当前NACE2.1–ISIC5审计有1047节点阳性对照，未观察到直接关系。
 家具材料边界研究含5项活动和37条证据。在3份固定官方表中核实卫生洁具缺行，单独登记定义支持的研究对应。
 承包处理与旧家具部件新增4项活动和36条证据。发布复查中7份文件字节与旧快照相同，核查298条登记标题。卫生洁具官方缺行、旧31.01冲突及专用店铺部件的旧ISIC候选继续保留。
+法国NAF两版五级目录解析1728和1794个节点。双向官方对应各1242及1242行，保留原方向内容。本次增补4项家具活动和42条逐条证据。法国国家表的卫生洁具与陶瓷厨卫家具分别对应，原ISIC缺行仍独立登记。
 
 节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。
 
@@ -145,3 +152,4 @@ NACE Rev.2.1完整解析1047节点；家具分支29节点，含2个沿用身份�
 - ICSE: 公开再分发许可待核实；官方映射及精确端点版本待核实。 [官方入口](https://webapps.ilo.org/ilostat-files/Documents/ICSE-18_manual.pdf)
 - UK_SIC: 仅选取2007索引活动作比较，未解析英国整套分类及2026对应表。 [官方入口](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)
 - EU_CPA: 本轮只取CPA 2008服务类别作证据，未解析全体系或跨版对应。 [官方入口](https://ec.europa.eu/eurostat/web/cpa)
+- FR_NAF: 本轮只逐条审查家具制造及相邻安装分支的来源说明与对应。 [官方入口](https://www.insee.fr/fr/information/2406147)

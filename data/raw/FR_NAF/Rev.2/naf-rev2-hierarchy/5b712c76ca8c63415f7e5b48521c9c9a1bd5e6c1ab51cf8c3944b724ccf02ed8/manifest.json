@@ -1,0 +1,31 @@
+{
+  "resource_id": "naf-rev2-hierarchy",
+  "source_id": "FR_NAF",
+  "edition": "Rev.2",
+  "url": "https://www.insee.fr/fr/statistiques/fichier/2120875/naf2008_5_niveaux.dbf",
+  "attempted_at": "2026-11-09T01:13:50.822042+00:00",
+  "final_url": "https://www.insee.fr/fr/statistiques/fichier/2120875/naf2008_5_niveaux.dbf",
+  "http_status": 200,
+  "content_type": "application/vnd.dbf",
+  "etag": null,
+  "last_modified": null,
+  "sha256": "5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8",
+  "bytes": 14102,
+  "path": "data/raw/FR_NAF/Rev.2/naf-rev2-hierarchy/5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8/naf-rev2-hierarchy.dbf",
+  "rights": {
+    "download": true,
+    "local_processing": true,
+    "redistribute": true,
+    "license": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+    "evidence_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm"
+  },
+  "role": "official_structure",
+  "language": "fr",
+  "format": "dbf",
+  "publication_date": null,
+  "robots": {
+    "url": "https://www.insee.fr/robots.txt",
+    "result": "fetched",
+    "allowed": true
+  }
+}

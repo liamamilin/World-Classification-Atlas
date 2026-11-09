@@ -1,0 +1,1508 @@
+{
+  "parent_review_sha256": "44190dd9d0532eb3291afbee2b7a9a4ea5502a488a4515222be6d17c52426403",
+  "reviewed_on": "2026-11-09",
+  "reviewer": "Codex",
+  "reviewed_input_sha256": {
+    "isic4-database": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+    "isic5-notes-20260819": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+    "nace2-cellar-selected-notes-20261109": "06997658752f8480ab26a0313fa65fc33d4586e4815efbd2fd62b26db1552ebf",
+    "nace2-manual-2008": "452982566cfcb4ee4f0e20d19395cb9c81726828b3bce48fdf4a0c7efc3a2302",
+    "nace21-notes-20260930": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+    "naf-2025-notes-2025": "b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015",
+    "naf-2025-structure-202610": "35a470a436ffc16dedcb4c983a6cbe2362408bfc65add8637d993554bd440c2b",
+    "naf-2025-to-rev2-202610": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+    "naf-rev2-cpf21-notes-2020": "2f90dfb4652203062a72a2bdca21aa32491def85ca72c85e627cb2101d82a3f3",
+    "naf-rev2-hierarchy": "5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8",
+    "naf-rev2-to-2025-202610": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5"
+  },
+  "claims": [
+    {
+      "id": "FN001",
+      "document": "FR_NAF:Rev.2:31.01Z@naf-rev2-cpf21-notes-2020:p422",
+      "field": "notes.includes",
+      "start": 180,
+      "end": 271,
+      "field_sha256": "388f92e5e9ba20d59dcc5effec0dabc10b64ab7bc91ad1ab397cbafed88f2988",
+      "text_sha256": "95e71b4a5ba1fcdabfff5f1beab1ca61daf5f4d85f91e5c6e777b8200d782eaa",
+      "role": "inclusion",
+      "rationale": "旧法国说明明确列店铺家具整品。"
+    },
+    {
+      "id": "FN002",
+      "document": "FR_NAF:2025:31.00G@naf-2025-notes-2025:p160",
+      "field": "notes.includes",
+      "start": 342,
+      "end": 433,
+      "field_sha256": "663892888fcc070d0eb2cafa6babfd642828e28199d297e9e6ed89cb71d1dc39",
+      "text_sha256": "95e71b4a5ba1fcdabfff5f1beab1ca61daf5f4d85f91e5c6e777b8200d782eaa",
+      "role": "inclusion",
+      "rationale": "当前法国说明列同一整品制造活动。"
+    },
+    {
+      "id": "FN003",
+      "document": "FR_NAF:2025:31.00G@naf-2025-notes-2025:p160",
+      "field": "notes.includes_also",
+      "start": 168,
+      "end": 229,
+      "field_sha256": "51f83f5459764564d82bfc56f937e426b456b18a538fa4380e005e876f81fc03",
+      "text_sha256": "272c3441adc6cb15f27c0af7912d112f08ad8267d4cb7ed7eedc68d99d1775ae",
+      "role": "inclusion",
+      "rationale": "当前法国专业家具子类明确列内置部件制造。"
+    },
+    {
+      "id": "FN004",
+      "document": "FR_NAF:2025:31.00G@naf-2025-notes-2025:p160",
+      "field": "notes.includes_also",
+      "start": 248,
+      "end": 347,
+      "field_sha256": "51f83f5459764564d82bfc56f937e426b456b18a538fa4380e005e876f81fc03",
+      "text_sha256": "ad9ddf716cb0a5c666cd3ac157551ee3b67a0811180c452d30ef3735a3424b91",
+      "role": "inclusion",
+      "rationale": "当前法国专业家具子类明列所属家具的喷涂、油漆等处理。"
+    },
+    {
+      "id": "FN005",
+      "document": "FR_NAF:Rev.2:31.09B@naf-rev2-cpf21-notes-2020:p424",
+      "field": "notes.includes_also",
+      "start": 12,
+      "end": 108,
+      "field_sha256": "9aecd23782248f384856daec09c17247b5ad5f129e672dd64073beb88ad2abd6",
+      "text_sha256": "22553ca1869289183c688ddd12785d7949cf9c056e566396e2c4cdf2d77a6872",
+      "role": "inclusion",
+      "rationale": "法国旧其他家具说明列涂装。原段另含修复排除。"
+    },
+    {
+      "id": "FN006",
+      "document": "FR_NAF:2025:31.00J@naf-2025-notes-2025:p161",
+      "field": "notes.includes_also",
+      "start": 19,
+      "end": 118,
+      "field_sha256": "f6371f98acd2b6ece21acd616b4ccac9962ce795f426f136e88d99b620395dbe",
+      "text_sha256": "ad9ddf716cb0a5c666cd3ac157551ee3b67a0811180c452d30ef3735a3424b91",
+      "role": "inclusion",
+      "rationale": "法国当前家用其他家具子类明确列本类新家具处理。"
+    },
+    {
+      "id": "FN007",
+      "document": "FR_NAF:Rev.2:31.09B@naf-rev2-cpf21-notes-2020:p424",
+      "field": "notes.includes",
+      "start": 12,
+      "end": 60,
+      "field_sha256": "7130423e3b30bf8428307c5e2565b4f650b2910e5d8a42bc2f8d83b07055fea0",
+      "text_sha256": "18ce1e513aafdfb74c26baa47dc94f4fe5a0e086566b13fbf19b0bac4ae5a99c",
+      "role": "inclusion",
+      "rationale": "旧法国说明列可移动户外座椅。"
+    },
+    {
+      "id": "FN008",
+      "document": "FR_NAF:Rev.2:31.01Z@naf-rev2-cpf21-notes-2020:p422",
+      "field": "notes.includes_also",
+      "start": 101,
+      "end": 188,
+      "field_sha256": "9f8996d82f1d29449e521707c203b7847b309c4847bf2f8c342fee7137665a2a",
+      "text_sha256": "e9b0ad6aa4820cb08e33d1e8532af2495aaa68a47f190a2c33f23483b7ea3b09",
+      "role": "inclusion",
+      "rationale": "旧法国办公及店铺子类明确列本类座椅在制造阶段的软包。此句用途是区分工序。"
+    },
+    {
+      "id": "FN009",
+      "document": "naf-rev2-cpf21-notes-2020:page:421",
+      "field": "text",
+      "start": 926,
+      "end": 983,
+      "field_sha256": "e6444e29fdecb9ca5a01d2719dba68d1519f1cbe4fbd6c71c0ae1e0c020342bd",
+      "text_sha256": "ba9d4501f85f10e7795a524d52de4f148111ab6a8c84d05da65f0dc500bdeea2",
+      "role": "auxiliary_product_context",
+      "rationale": "旧法国合订本奇数页为产品CPF。旧类的关联产品为泛家具部件，保留产品对象差别。"
+    },
+    {
+      "id": "FN010",
+      "document": "FR_NAF:Rev.2:31.01Z@naf-rev2-cpf21-notes-2020:p422",
+      "field": "notes.includes",
+      "start": 283,
+      "end": 318,
+      "field_sha256": "388f92e5e9ba20d59dcc5effec0dabc10b64ab7bc91ad1ab397cbafed88f2988",
+      "text_sha256": "e5c0ba402908f719369d47e220af1b80c20b390c73d51b9c457005e9f70581c8",
+      "role": "inclusion",
+      "rationale": "旧法国31.01Z明列办公家具整品。"
+    },
+    {
+      "id": "FN011",
+      "document": "FR_NAF:2025:31.00G@naf-2025-notes-2025:p160",
+      "field": "notes.includes",
+      "start": 452,
+      "end": 508,
+      "field_sha256": "663892888fcc070d0eb2cafa6babfd642828e28199d297e9e6ed89cb71d1dc39",
+      "text_sha256": "8883877f6ff3ef75d012bf61bfa1defe3ac2dc8b3e7d09ba38c5a1a08ef2ae9d",
+      "role": "inclusion",
+      "rationale": "现法国31.00G明列专业办公家具整品。"
+    },
+    {
+      "id": "FN012",
+      "document": "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+      "field": "common_content",
+      "start": 2,
+      "end": 80,
+      "field_sha256": "f534849a0236eccc1d5f37847d7da4e78e7bb902e4342a162a783f6e8e99d1fb",
+      "text_sha256": "5a5c8bcc99c8869db2364b33e63d8264bde09a88eba2c10eec2794d50e10c326",
+      "role": "official_correspondence",
+      "rationale": "对应共同内容列办公及店铺整品。涂装与专用部件两项另作字段观察。"
+    },
+    {
+      "id": "FN013",
+      "document": "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c",
+      "field": "common_content",
+      "start": 2,
+      "end": 80,
+      "field_sha256": "f534849a0236eccc1d5f37847d7da4e78e7bb902e4342a162a783f6e8e99d1fb",
+      "text_sha256": "5a5c8bcc99c8869db2364b33e63d8264bde09a88eba2c10eec2794d50e10c326",
+      "role": "official_correspondence",
+      "rationale": "对应共同内容列办公及店铺整品。涂装与专用部件两项另作字段观察。"
+    },
+    {
+      "id": "FN014",
+      "document": "urn:atlas:mapping:ebfeeece-bbdb-5375-8bb6-8926d4bac85b",
+      "field": "common_content",
+      "start": 421,
+      "end": 566,
+      "field_sha256": "1ea2c44de7f196db0d8039be502b696d646182ee51d3161abc7e74d5649af1a0",
+      "text_sha256": "4e55ca43b9a255899224025baee94d742c3d13db4a2004680e4844ec8a77df9d",
+      "role": "official_correspondence",
+      "rationale": "双向共同内容明确列旧31.09B专业用途其他家具的涂装。"
+    },
+    {
+      "id": "FN015",
+      "document": "urn:atlas:mapping:e73062bc-f760-5e15-98c2-4fe704bbbd0b",
+      "field": "common_content",
+      "start": 421,
+      "end": 566,
+      "field_sha256": "1ea2c44de7f196db0d8039be502b696d646182ee51d3161abc7e74d5649af1a0",
+      "text_sha256": "4e55ca43b9a255899224025baee94d742c3d13db4a2004680e4844ec8a77df9d",
+      "role": "official_correspondence",
+      "rationale": "双向共同内容明确列旧31.09B专业用途其他家具的涂装。"
+    },
+    {
+      "id": "FN016",
+      "document": "urn:atlas:mapping:bacae847-6737-59ad-a5e6-1402f9a49fb7",
+      "field": "common_content",
+      "start": 419,
+      "end": 564,
+      "field_sha256": "3dd88a10a203a4ccb74f39cdf47b8f1fd51cdb892be8508a5adb807c8c66d7f7",
+      "text_sha256": "4e55ca43b9a255899224025baee94d742c3d13db4a2004680e4844ec8a77df9d",
+      "role": "official_correspondence",
+      "rationale": "双向共同内容明确列旧31.09B家用其他家具的涂装。"
+    },
+    {
+      "id": "FN017",
+      "document": "urn:atlas:mapping:5d861d77-8603-57a9-bd6e-e2efffdc5c27",
+      "field": "common_content",
+      "start": 419,
+      "end": 564,
+      "field_sha256": "3dd88a10a203a4ccb74f39cdf47b8f1fd51cdb892be8508a5adb807c8c66d7f7",
+      "text_sha256": "4e55ca43b9a255899224025baee94d742c3d13db4a2004680e4844ec8a77df9d",
+      "role": "official_correspondence",
+      "rationale": "双向共同内容明确列旧31.09B家用其他家具的涂装。"
+    },
+    {
+      "id": "FN018",
+      "document": "ISIC:Rev.4:3100",
+      "field": "notes.inclusion",
+      "start": 444,
+      "end": 525,
+      "field_sha256": "73f539fc3c0aaabe7271dad64e4329e787dfaa25a8af92cf28a5bd597d4a0877",
+      "text_sha256": "541033f2ebb3e12780f714296373248f9f0bec45a49d10660fa5c9b82101b35a",
+      "role": "inclusion",
+      "rationale": "旧ISIC明确列店铺整品制造。"
+    },
+    {
+      "id": "FN019",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes",
+      "start": 582,
+      "end": 663,
+      "field_sha256": "70501c3e5f241b0207f06a6e1665027efd930d2d11bedd2b918650f1db594066",
+      "text_sha256": "541033f2ebb3e12780f714296373248f9f0bec45a49d10660fa5c9b82101b35a",
+      "role": "inclusion",
+      "rationale": "当前ISIC组明确列店铺整品制造。"
+    },
+    {
+      "id": "FN020",
+      "document": "NACE:Rev.2:31.01@cellar-20261109",
+      "field": "notes.includes",
+      "start": 338,
+      "end": 419,
+      "field_sha256": "5fada18901f503d68dd2f711a32f89a25ec3201835b4cc829073efa93148c64b",
+      "text_sha256": "541033f2ebb3e12780f714296373248f9f0bec45a49d10660fa5c9b82101b35a",
+      "role": "inclusion",
+      "rationale": "旧NACE说明明确列店铺整品制造。"
+    },
+    {
+      "id": "FN021",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.includes",
+      "start": 446,
+      "end": 528,
+      "field_sha256": "d3c41be6cbd3433830f45a6cab415f5a3d431a5db7bb16cb418c9e92469605b1",
+      "text_sha256": "76fc2c8a662694ec472abea3dab5c6b6f2092c55455f660fa8fe34bbf8320dab",
+      "role": "inclusion",
+      "rationale": "当前NACE说明明确列店铺整品制造。"
+    },
+    {
+      "id": "FN022",
+      "document": "ISIC:Rev.4:3100",
+      "field": "notes.inclusion",
+      "start": 402,
+      "end": 440,
+      "field_sha256": "73f539fc3c0aaabe7271dad64e4329e787dfaa25a8af92cf28a5bd597d4a0877",
+      "text_sha256": "042e6e82cb9544662bcbc60a92f8a344057fcf988281a8f3d52cb57d04e36a56",
+      "role": "inclusion",
+      "rationale": "旧ISIC列花园座椅，确定其他家具对象范围。"
+    },
+    {
+      "id": "FN023",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes",
+      "start": 542,
+      "end": 580,
+      "field_sha256": "70501c3e5f241b0207f06a6e1665027efd930d2d11bedd2b918650f1db594066",
+      "text_sha256": "042e6e82cb9544662bcbc60a92f8a344057fcf988281a8f3d52cb57d04e36a56",
+      "role": "inclusion",
+      "rationale": "当前ISIC列花园座椅。"
+    },
+    {
+      "id": "FN024",
+      "document": "NACE:Rev.2:31.09",
+      "field": "notes.includes",
+      "start": 110,
+      "end": 148,
+      "field_sha256": "1fecd7d6548613281193915dba791db72921aec6c8fb28d37c35c5564218d664",
+      "text_sha256": "042e6e82cb9544662bcbc60a92f8a344057fcf988281a8f3d52cb57d04e36a56",
+      "role": "inclusion",
+      "rationale": "旧NACE其他家具类明列户外座椅。"
+    },
+    {
+      "id": "FN025",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.includes",
+      "start": 833,
+      "end": 871,
+      "field_sha256": "d3c41be6cbd3433830f45a6cab415f5a3d431a5db7bb16cb418c9e92469605b1",
+      "text_sha256": "042e6e82cb9544662bcbc60a92f8a344057fcf988281a8f3d52cb57d04e36a56",
+      "role": "inclusion",
+      "rationale": "当前NACE明列户外座椅。"
+    },
+    {
+      "id": "FN026",
+      "document": "ISIC:Rev.4:3100",
+      "field": "notes.inclusion",
+      "start": 592,
+      "end": 623,
+      "field_sha256": "73f539fc3c0aaabe7271dad64e4329e787dfaa25a8af92cf28a5bd597d4a0877",
+      "text_sha256": "8dd29fa3119d530afd17a36f5cae7fd65d82e41e0db4d1c1cd896215a5d34115",
+      "role": "inclusion",
+      "rationale": "旧ISIC明列办公家具，工序另有包含。"
+    },
+    {
+      "id": "FN027",
+      "document": "ISIC:Rev.5:310",
+      "field": "notes.includes",
+      "start": 726,
+      "end": 757,
+      "field_sha256": "70501c3e5f241b0207f06a6e1665027efd930d2d11bedd2b918650f1db594066",
+      "text_sha256": "8dd29fa3119d530afd17a36f5cae7fd65d82e41e0db4d1c1cd896215a5d34115",
+      "role": "inclusion",
+      "rationale": "当前ISIC组包含办公家具。"
+    },
+    {
+      "id": "FN028",
+      "document": "NACE:Rev.2.1:31.00",
+      "field": "notes.includes",
+      "start": 531,
+      "end": 562,
+      "field_sha256": "d3c41be6cbd3433830f45a6cab415f5a3d431a5db7bb16cb418c9e92469605b1",
+      "text_sha256": "8dd29fa3119d530afd17a36f5cae7fd65d82e41e0db4d1c1cd896215a5d34115",
+      "role": "inclusion",
+      "rationale": "当前NACE说明列办公家具。"
+    },
+    {
+      "id": "FN029",
+      "document": "ISIC:Rev.4:4330",
+      "field": "notes.inclusion",
+      "start": 282,
+      "end": 353,
+      "field_sha256": "3374487518a617fc6fcfee17dd38c1bd4b8eb5c7e30a1a02ba2fa152e0693e68",
+      "text_sha256": "5a6506db4c541ff4135046600a4494666963917d9eae01b88a11fd98c08eacdb",
+      "role": "inclusion",
+      "rationale": "旧ISIC施工类明列安装店铺装置。"
+    },
+    {
+      "id": "FN030",
+      "document": "ISIC:Rev.5:4330",
+      "field": "notes.includes",
+      "start": 279,
+      "end": 350,
+      "field_sha256": "fbdc6cbbcb183fc0fb202ae13305cf68f2ea6e1ca4d8aaf5a361b9d7ad4ea2b3",
+      "text_sha256": "5a6506db4c541ff4135046600a4494666963917d9eae01b88a11fd98c08eacdb",
+      "role": "inclusion",
+      "rationale": "当前ISIC仍明列店铺装置安装。"
+    },
+    {
+      "id": "FN031",
+      "document": "NACE:Rev.2:43.32@cellar-20261109",
+      "field": "notes.includes",
+      "start": 141,
+      "end": 232,
+      "field_sha256": "bb3f1540ad3758ead4f7f165c87ac41d60f2cf2ca240ac97871524da20786ff3",
+      "text_sha256": "95b50e7bd305ab48270e2b8434ed58365837be82184b439c90b4cdade6f33e8e",
+      "role": "inclusion",
+      "rationale": "旧NACE木作安装明确包含店铺装置。"
+    },
+    {
+      "id": "FN032",
+      "document": "NACE:Rev.2.1:43.32",
+      "field": "notes.includes",
+      "start": 141,
+      "end": 224,
+      "field_sha256": "023f48a37675d42ba65142522ecbd7f5a9b7ed1b442289bb81132e8a507f5b7f",
+      "text_sha256": "d3f3e1fa30294c3767dd7020124718b68b5e69d6c3a287425c99dc375fafa001",
+      "role": "inclusion",
+      "rationale": "当前NACE明确保留店铺装置安装。"
+    },
+    {
+      "id": "FN033",
+      "document": "FR_NAF:Rev.2:43.32C@naf-rev2-cpf21-notes-2020:p510",
+      "field": "notes.includes",
+      "start": 12,
+      "end": 89,
+      "field_sha256": "5cb7f43a0a2cbbaa679e1ae4b19c792b09256b77b702ca480e6474bc0a98c5ff",
+      "text_sha256": "668463db755383d34f9981b6439ffd2587a525a3086738fe570aea1b5edfb1a5",
+      "role": "inclusion",
+      "rationale": "旧法国子类包含店铺装配作业。"
+    },
+    {
+      "id": "FN034",
+      "document": "FR_NAF:2025:43.32G@naf-2025-notes-2025:p202",
+      "field": "notes.includes",
+      "start": 277,
+      "end": 342,
+      "field_sha256": "89076fcfd998305cea2a9155698d540ee86377816e3659a0cc4f4009d81ecbe2",
+      "text_sha256": "822742c558272a46844648fdee71ac657fa0bdca9f8ee4983d82269ac5971bd1",
+      "role": "inclusion",
+      "rationale": "法国当前子类明确列木质或PVC店铺装置安装。"
+    },
+    {
+      "id": "FN035",
+      "document": "urn:atlas:mapping:8bb129ad-7424-5779-bcb8-de346d16a4d4",
+      "field": "common_content",
+      "start": 2,
+      "end": 39,
+      "field_sha256": "0e85665b04a226c6dbcfb8ff8939b9fe625f312b0b9def7f9903d7f408bfd470",
+      "text_sha256": "63b7df88b91aa13b37d5b8beab06d4eba38f905fce7178e11abac992cac23b12",
+      "role": "official_correspondence",
+      "rationale": "双向表把旧店铺装配子类中的木材及PVC木作分到43.32G。"
+    },
+    {
+      "id": "FN036",
+      "document": "urn:atlas:mapping:fd6b8df1-8cba-55d9-ad0d-833e8529de7e",
+      "field": "common_content",
+      "start": 2,
+      "end": 39,
+      "field_sha256": "0e85665b04a226c6dbcfb8ff8939b9fe625f312b0b9def7f9903d7f408bfd470",
+      "text_sha256": "63b7df88b91aa13b37d5b8beab06d4eba38f905fce7178e11abac992cac23b12",
+      "role": "official_correspondence",
+      "rationale": "双向表把旧店铺装配子类中的木材及PVC木作分到43.32G。"
+    },
+    {
+      "id": "FN037",
+      "document": "FR_NAF:Rev.2:23.42Z@naf-rev2-cpf21-notes-2020:p240",
+      "field": "notes.includes",
+      "start": 12,
+      "end": 108,
+      "field_sha256": "9a81fad3cae307e29e76972df6fe3d27dd8e2b78eb38bc1639adc424a01c0b6c",
+      "text_sha256": "864daeb9397d77984ec16f7b04d337519b876f9bb1a1c7eebd6e2148f0573e7f",
+      "role": "inclusion",
+      "rationale": "法国旧说明明列陶瓷卫生洁具。"
+    },
+    {
+      "id": "FN038",
+      "document": "FR_NAF:2025:23.42Y@naf-2025-notes-2025:p101",
+      "field": "notes.includes",
+      "start": 19,
+      "end": 111,
+      "field_sha256": "39356010fc75266338b5750671c041ab0954f0e827972c63b5e6b31d04c82aed",
+      "text_sha256": "3d01f7f215c4a008a627da444c496cd1ef3a56ed10ad9e9ae6070733ed9b26b2",
+      "role": "inclusion",
+      "rationale": "法国新说明明列陶瓷卫生洁具。"
+    },
+    {
+      "id": "FN039",
+      "document": "urn:atlas:mapping:2c15782b-f044-5624-ad46-fb6df625ebb5",
+      "field": "common_content",
+      "start": 2,
+      "end": 52,
+      "field_sha256": "77f06a6adf2c5b134b3fe86a4853967f25bd8a8b8b94a814ac1ac3139ea30c7e",
+      "text_sha256": "c308bd061443d6a0594713c5b68272c28fb82cb4b3c93f7ed741d8f3db8ee9b3",
+      "role": "official_correspondence",
+      "rationale": "法国旧→新对应明确列卫生洁具活动。"
+    },
+    {
+      "id": "FN040",
+      "document": "urn:atlas:mapping:71fafa47-b04b-5501-8b20-3e05324d8010",
+      "field": "common_content",
+      "start": 0,
+      "end": 29,
+      "field_sha256": "03f87ce4b696b1c8f169dc76a680dc1ba8dbf3f4c8870c3485c935f5b4564ebe",
+      "text_sha256": "03f87ce4b696b1c8f169dc76a680dc1ba8dbf3f4c8870c3485c935f5b4564ebe",
+      "role": "official_correspondence",
+      "rationale": "法国新→旧使用整个新子类表述。旧端范围仍由原表多向划分。"
+    },
+    {
+      "id": "FN041",
+      "document": "urn:atlas:mapping:2eda2408-cc9c-5bcf-9b65-2b046fc3324c",
+      "field": "common_content",
+      "start": 2,
+      "end": 69,
+      "field_sha256": "51f1234255b149948a1f0f80c58a36dc4e65ba01715665b6fd8bc3a9b5f86220",
+      "text_sha256": "59b806ad2ecc05c6038d99c0cc75044d085a933fd8088c733ee446aa97adff84",
+      "role": "official_correspondence",
+      "rationale": "法国独立行把陶瓷厨房及浴室家具转至31.00H。"
+    },
+    {
+      "id": "FN042",
+      "document": "naf-rev2-cpf21-notes-2020:page:422",
+      "field": "text",
+      "start": 1478,
+      "end": 1578,
+      "field_sha256": "f8dd08ada9b4fc07287a07102b848c7a3ba3dea249d115b6aa2ef64d1852fae0",
+      "text_sha256": "755c152c57bad69c8f99dec344e87b69151a166acdbb3b4ea04d3d0125edee84",
+      "role": "auxiliary_product_context",
+      "rationale": "旧31.01Z的关联产品列表将31.00.20p记为部分关联。仅说明部分产品关联，未指定独立内置件的活动。"
+    }
+  ],
+  "navigation": [],
+  "activities": [
+    {
+      "id": "urn:atlas:concept:df67a84e-39ed-547f-b0f1-8d1dfbf6233e",
+      "key": "manufacture-finished-wooden-shop-counters-with-built-ins",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "木制店铺柜台和展柜整品制造中的内置件装配",
+      "atlas_scope": "限定制造木制店铺柜台或展柜整品，并在该制造过程中装配其内置件。产出是已制成的柜台或展柜。独立产出专用部件与营业场所施工安装分别归档。",
+      "parents": [
+        "urn:atlas:concept:636497ec-bb07-5316-a6b4-a7b935b48807"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN018"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN019"
+          ],
+          "source_level": "group"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.01",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN020"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN021"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:Rev.2:31.01Z",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN001"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:2025:31.00G",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN002",
+            "FN003"
+          ]
+        }
+      ],
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "boundary_claim_ids": [
+        "FN003",
+        "FN009",
+        "FN012",
+        "FN013"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:6380d96e-772d-5e6e-9d38-b8de24cccaad",
+      "key": "contract-finishing-other-furniture-for-professionals",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "专业用途新制其他家具的独立承包涂装",
+      "atlas_scope": "限定按收费或合同，对委托方拥有并已识别为专业用途其他家具的新制非矿物投入物上漆或涂清漆，例如活动式花园座椅。范围限旧其他家具类别中的专业用途制品。专门办公和店铺家具、固定安装、首次软包、旧家具维修及通用材料加工各有独立边界。",
+      "parents": [
+        "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF001",
+            "FN022"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF002",
+            "FN023"
+          ],
+          "source_level": "group"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.09",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF003",
+            "FN024"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF004",
+            "FN025"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:Rev.2:31.09B",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN005",
+            "FN007"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:2025:31.00G",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN004"
+          ]
+        }
+      ],
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "contractor_scope": {
+        "activity_role": "contractor",
+        "payment_basis": "fee_or_contract",
+        "input_state": "recognisable_other_furniture_for_professionals",
+        "inputs_owned_by_principal": true,
+        "rule_claims": {
+          "ISIC:Rev.4": "FC001",
+          "ISIC:Rev.5": "FC002",
+          "NACE:Rev.2": "FC003",
+          "NACE:Rev.2.1": "FC004"
+        }
+      },
+      "boundary_claim_ids": [
+        "FN014",
+        "FN015",
+        "FC012",
+        "FC013",
+        "FC015"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:03564108-e543-5101-bda9-a80d689fba75",
+      "key": "contract-finishing-office-and-shop-furniture",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_with_legacy_gap",
+      "atlas_label": "新制专用办公和店铺家具独立承包涂装",
+      "atlas_scope": "限定按收费或合同，对委托方拥有、已识别为专业办公家具或店铺专用柜台、展柜的新制非矿物家具，在制造阶段实施上漆和涂清漆。家用办公家具、通用材料加工、家具使用后修复、施工现场安装及初次软包另行处理。",
+      "parents": [
+        "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:3100",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF001",
+            "FN018",
+            "FN026"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:310",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF002",
+            "FN019",
+            "FN027"
+          ],
+          "source_level": "group"
+        },
+        {
+          "node_id": "NACE:Rev.2.1:31.00",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FF004",
+            "FN021",
+            "FN028"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:2025:31.00G",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN004",
+            "FN002",
+            "FN011"
+          ]
+        }
+      ],
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "historical_scope_status": {
+        "pending_editions": [
+          "NACE:Rev.2"
+        ]
+      },
+      "contractor_scope": {
+        "activity_role": "contractor",
+        "payment_basis": "fee_or_contract",
+        "input_state": "recognisable_office_and_shop_furniture",
+        "inputs_owned_by_principal": true,
+        "rule_claims": {
+          "ISIC:Rev.4": "FC001",
+          "ISIC:Rev.5": "FC002",
+          "NACE:Rev.2": "FC003",
+          "NACE:Rev.2.1": "FC004"
+        }
+      },
+      "boundary_claim_ids": [
+        "FN012",
+        "FN013",
+        "FN014",
+        "FN015",
+        "FN008",
+        "FC012",
+        "FC013",
+        "FC014",
+        "FC017"
+      ],
+      "candidate_source_bindings": [
+        {
+          "node_id": "NACE:Rev.2:31.01",
+          "relation": null,
+          "claim_ids": [
+            "FC017",
+            "FC014",
+            "FN012",
+            "FN013"
+          ],
+          "status": "pending_specialist_scope",
+          "scope_limit": "555行广义工序与旧定义及法国专门整品对应并列，缺明确的旧独立涂装分配。"
+        },
+        {
+          "node_id": "NACE:Rev.2:31.09",
+          "relation": null,
+          "claim_ids": [
+            "FF003",
+            "FN014",
+            "FN015"
+          ],
+          "status": "pending_specialist_scope",
+          "scope_limit": "旧泛处理条款及法国其他家具共同内容有范围差别，专用办公店铺归属仍待证。"
+        },
+        {
+          "node_id": "FR_NAF:Rev.2:31.01Z",
+          "relation": null,
+          "claim_ids": [
+            "FN001",
+            "FN010",
+            "FN008",
+            "FN012",
+            "FN013"
+          ],
+          "status": "pending_specialist_scope",
+          "scope_limit": "旧法国说明包含本类座椅软包，整品共同行未单列涂装。"
+        }
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253",
+      "key": "on-site-installation-of-fixed-wooden-shop-fittings",
+      "kind": "atlas_authored_activity",
+      "status": "reviewed_bounded_activity",
+      "atlas_label": "木制店铺内置装置现场安装",
+      "atlas_scope": "限定在营业场所内安装固定式木制店铺装置。木制厂内整品装配、独立零部件制造、PVC或金属装置以及临时展台分别归档。",
+      "parents": [
+        "urn:atlas:concept:789db488-47df-5c5a-9766-8f87d5ed59a0"
+      ],
+      "source_bindings": [
+        {
+          "node_id": "ISIC:Rev.4:4330",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN029"
+          ]
+        },
+        {
+          "node_id": "ISIC:Rev.5:4330",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN030"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2:43.32",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN031"
+          ]
+        },
+        {
+          "node_id": "NACE:Rev.2.1:43.32",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN032"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:Rev.2:43.32C",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN033",
+            "FN035",
+            "FN036"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:2025:43.32G",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN034"
+          ]
+        }
+      ],
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09",
+      "boundary_claim_ids": [
+        "FN035",
+        "FN036"
+      ]
+    }
+  ],
+  "official_reviews": [
+    {
+      "mapping_id": "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:df67a84e-39ed-547f-b0f1-8d1dfbf6233e"
+      ],
+      "claim_ids": [
+        "FN001",
+        "FN002",
+        "FN012",
+        "FN013"
+      ],
+      "rationale": "保留双向Multiple，只审定木制店铺柜台和展柜整品制造。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:df67a84e-39ed-547f-b0f1-8d1dfbf6233e"
+      ],
+      "claim_ids": [
+        "FN001",
+        "FN002",
+        "FN012",
+        "FN013"
+      ],
+      "rationale": "保留双向Multiple，只审定木制店铺柜台和展柜整品制造。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:ebfeeece-bbdb-5375-8bb6-8926d4bac85b",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:6380d96e-772d-5e6e-9d38-b8de24cccaad"
+      ],
+      "claim_ids": [
+        "FN005",
+        "FN004",
+        "FN014",
+        "FN015"
+      ],
+      "rationale": "只审定专业用途其他家具的独立涂装范围。共同内容明确给出此工序。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:e73062bc-f760-5e15-98c2-4fe704bbbd0b",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:6380d96e-772d-5e6e-9d38-b8de24cccaad"
+      ],
+      "claim_ids": [
+        "FN005",
+        "FN004",
+        "FN014",
+        "FN015"
+      ],
+      "rationale": "只审定专业用途其他家具的独立涂装范围。共同内容明确给出此工序。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:bacae847-6737-59ad-a5e6-1402f9a49fb7",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:2fccaadf-2a4d-5207-ba75-0d70cf4784f4"
+      ],
+      "claim_ids": [
+        "FN005",
+        "FN006",
+        "FN016",
+        "FN017"
+      ],
+      "rationale": "只审定旧法国其他家用家具的新制涂装共同范围。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:5d861d77-8603-57a9-bd6e-e2efffdc5c27",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:2fccaadf-2a4d-5207-ba75-0d70cf4784f4"
+      ],
+      "claim_ids": [
+        "FN005",
+        "FN006",
+        "FN016",
+        "FN017"
+      ],
+      "rationale": "只审定旧法国其他家用家具的新制涂装共同范围。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:8bb129ad-7424-5779-bcb8-de346d16a4d4",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253"
+      ],
+      "claim_ids": [
+        "FN033",
+        "FN034",
+        "FN035",
+        "FN036"
+      ],
+      "rationale": "审定木制店铺装置的固定安装。原表还含PVC，范围保持独立。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:fd6b8df1-8cba-55d9-ad0d-833e8529de7e",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253"
+      ],
+      "claim_ids": [
+        "FN033",
+        "FN034",
+        "FN035",
+        "FN036"
+      ],
+      "rationale": "审定木制店铺装置的固定安装。原表还含PVC，范围保持独立。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:c2b13141-0450-52b9-9c65-070bebde04d8",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253"
+      ],
+      "claim_ids": [
+        "FN029",
+        "FN030",
+        "FN031",
+        "FN032"
+      ],
+      "rationale": "只审定木制店铺装置现场安装活动。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:2c15782b-f044-5624-ad46-fb6df625ebb5",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:03f6de96-1dd0-5f3d-8210-e87fd4eb8ba5"
+      ],
+      "claim_ids": [
+        "FN037",
+        "FN038",
+        "FN039",
+        "FN040",
+        "FN041"
+      ],
+      "rationale": "范围限定在陶瓷卫生洁具。原始方向的Multiple与Unique各自保留。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:71fafa47-b04b-5501-8b20-3e05324d8010",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:03f6de96-1dd0-5f3d-8210-e87fd4eb8ba5"
+      ],
+      "claim_ids": [
+        "FN037",
+        "FN038",
+        "FN039",
+        "FN040",
+        "FN041"
+      ],
+      "rationale": "范围限定在陶瓷卫生洁具。原始方向的Multiple与Unique各自保留。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    }
+  ],
+  "research_mappings": [
+    {
+      "id": "urn:atlas:mapping:86a102bb-7f4a-5008-b9cf-4a15db26d253",
+      "from": "ISIC:Rev.4:3100",
+      "to": "FR_NAF:2025:31.00G",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:df67a84e-39ed-547f-b0f1-8d1dfbf6233e",
+        "urn:atlas:concept:03564108-e543-5101-bda9-a80d689fba75"
+      ],
+      "allocation_weight": null,
+      "rationale": "两版说明直接列店铺柜台和展柜整品制造，国家子类继续独立。 旧ISIC和法国当前说明共同包含限定专业家具及新制表面处理。"
+    },
+    {
+      "id": "urn:atlas:mapping:13f47cec-65ec-51a7-8c13-9ea875377835",
+      "from": "NACE:Rev.2:31.09",
+      "to": "FR_NAF:2025:31.00G",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:6380d96e-772d-5e6e-9d38-b8de24cccaad"
+      ],
+      "allocation_weight": null,
+      "rationale": "旧NACE说明与法国当前专业其他家具分支共同覆盖已审涂装。"
+    },
+    {
+      "id": "urn:atlas:mapping:4e479309-2519-5bb8-8fea-1226a1986896",
+      "from": "NACE:Rev.2:31.09",
+      "to": "FR_NAF:2025:31.00J",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:2fccaadf-2a4d-5207-ba75-0d70cf4784f4"
+      ],
+      "allocation_weight": null,
+      "rationale": "法国现行家用其他家具说明与旧NACE涂装说明有同一有界活动。"
+    },
+    {
+      "id": "urn:atlas:mapping:de94017f-2fe5-5d8e-baf9-99e6e28bdaf1",
+      "from": "ISIC:Rev.5:4330",
+      "to": "FR_NAF:2025:43.32G",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253"
+      ],
+      "allocation_weight": null,
+      "rationale": "两版直接说明同含木制店铺固定装置现场安装。"
+    },
+    {
+      "id": "urn:atlas:mapping:773d947d-f173-5b88-9a78-bc8208244d3a",
+      "from": "ISIC:Rev.5:2393",
+      "to": "FR_NAF:2025:23.42Y",
+      "origin": "atlas_research",
+      "official_mapping_id": null,
+      "relation": "relatedMatch",
+      "status": "reviewed_scoped_overlap",
+      "activity_ids": [
+        "urn:atlas:concept:03f6de96-1dd0-5f3d-8210-e87fd4eb8ba5"
+      ],
+      "allocation_weight": null,
+      "rationale": "两套当前说明直接列同一陶瓷卫生洁具制造子范围。"
+    }
+  ],
+  "research_mapping_followups": [
+    {
+      "mapping_id": "urn:atlas:mapping:54bc2a85-6f81-57e7-a8f9-e34397c251d3",
+      "additional_activity_ids": [
+        "urn:atlas:concept:6380d96e-772d-5e6e-9d38-b8de24cccaad"
+      ]
+    }
+  ],
+  "activity_followups": [
+    {
+      "activity_id": "urn:atlas:concept:fb06e8aa-e396-55df-9f4e-c91b6562ec73",
+      "child_activity_ids": [
+        "urn:atlas:concept:6380d96e-772d-5e6e-9d38-b8de24cccaad",
+        "urn:atlas:concept:03564108-e543-5101-bda9-a80d689fba75"
+      ],
+      "status": "national_use_split_reviewed",
+      "claim_ids": [
+        "FN012",
+        "FN013",
+        "FN014",
+        "FN015",
+        "FN004",
+        "FN008"
+      ],
+      "rationale": "法国旧至新和新至旧共同内容帮助区分专业其他家具与专用办公和店铺范围。专用范围旧版涂装候选保留。"
+    },
+    {
+      "activity_id": "urn:atlas:concept:a62f38d1-7dd9-52ae-b515-2d39384f83ac",
+      "child_activity_ids": [],
+      "status": "current_national_binding_and_legacy_hold",
+      "claim_ids": [
+        "FN003",
+        "FN001",
+        "FN009",
+        "FN012",
+        "FN013",
+        "FN042"
+      ],
+      "rationale": "加入法国新子类的部件明文。法国旧类和旧ISIC独立部件归属继续待审。"
+    }
+  ],
+  "official_review_followups": [
+    {
+      "mapping_id": "urn:atlas:mapping:ad0a8011-d924-5cd5-b2a4-a147df79fa1b",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:df67a84e-39ed-547f-b0f1-8d1dfbf6233e"
+      ],
+      "claim_ids": [
+        "FN018",
+        "FN020",
+        "FN001",
+        "FN012",
+        "FN013"
+      ],
+      "rationale": "旧ISIC及旧NACE均直接列店铺整品。只批准此共同活动。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+      "status": "held_for_this_activity",
+      "relation": null,
+      "activity_ids": [
+        "urn:atlas:concept:a62f38d1-7dd9-52ae-b515-2d39384f83ac"
+      ],
+      "claim_ids": [
+        "FN001",
+        "FN003",
+        "FN009",
+        "FN012",
+        "FN013"
+      ],
+      "rationale": "法国新说明明确内置部件制造。两方向共同内容只列办公和店铺整品，旧部件活动的细分仍待证。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c",
+      "status": "held_for_this_activity",
+      "relation": null,
+      "activity_ids": [
+        "urn:atlas:concept:a62f38d1-7dd9-52ae-b515-2d39384f83ac"
+      ],
+      "claim_ids": [
+        "FN001",
+        "FN003",
+        "FN009",
+        "FN012",
+        "FN013"
+      ],
+      "rationale": "法国新说明明确内置部件制造。两方向共同内容只列办公和店铺整品，旧部件活动的细分仍待证。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+      "status": "held_for_this_activity",
+      "relation": null,
+      "activity_ids": [
+        "urn:atlas:concept:03564108-e543-5101-bda9-a80d689fba75"
+      ],
+      "claim_ids": [
+        "FN001",
+        "FN010",
+        "FN008",
+        "FN004",
+        "FN012",
+        "FN013"
+      ],
+      "rationale": "专业整品的官方共同内容予以保留。独立涂装旧端留待审。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c",
+      "status": "held_for_this_activity",
+      "relation": null,
+      "activity_ids": [
+        "urn:atlas:concept:03564108-e543-5101-bda9-a80d689fba75"
+      ],
+      "claim_ids": [
+        "FN001",
+        "FN010",
+        "FN008",
+        "FN004",
+        "FN012",
+        "FN013"
+      ],
+      "rationale": "专业整品的官方共同内容予以保留。独立涂装旧端留待审。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:f2e84ca4-4b69-5477-babd-f5438fd29125",
+      "status": "held_for_this_activity",
+      "relation": null,
+      "activity_ids": [
+        "urn:atlas:concept:03564108-e543-5101-bda9-a80d689fba75"
+      ],
+      "claim_ids": [
+        "FC017",
+        "FC014",
+        "FN012",
+        "FN013",
+        "FN014",
+        "FN015"
+      ],
+      "rationale": "555行的通用表述尚不足以分配旧版专用办公和店铺独立涂装。保留冲突。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:17726393-4331-512f-81ed-5334413f5a7e",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253"
+      ],
+      "claim_ids": [
+        "FN029",
+        "FN030",
+        "FN031",
+        "FN032"
+      ],
+      "rationale": "只审定木制店铺装置现场安装活动。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "mapping_id": "urn:atlas:mapping:d88c7488-0acd-558f-bb9b-1e9fc100149e",
+      "status": "reviewed_scoped_correspondence",
+      "relation": "relatedMatch",
+      "activity_ids": [
+        "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253"
+      ],
+      "claim_ids": [
+        "FN029",
+        "FN030",
+        "FN031",
+        "FN032"
+      ],
+      "rationale": "只审定木制店铺装置现场安装活动。",
+      "whole_class_relation_status": "not_approved",
+      "reviewer": "Codex",
+      "reviewed_on": "2026-11-09"
+    }
+  ],
+  "issue_followups": [
+    {
+      "issue_id": "FURN-FINISHING",
+      "status": "partially_addressed",
+      "finding": "审定专业用途其他家具独立涂装的旧31.09及法国双向范围。专用办公和店铺家具的独立涂装获得两代ISIC、当前NACE及当前NAF的有界绑定。",
+      "remaining": "旧31.01与31.09的泛工序冲突继续保留。旧NACE及旧法国专用家具独立涂装、混合中间件、独立初次软包和ISIC材料细类仍待审。",
+      "claim_ids": [
+        "FN004",
+        "FN005",
+        "FN008",
+        "FN012",
+        "FN013",
+        "FN014",
+        "FN015"
+      ],
+      "activity_ids": [
+        "urn:atlas:concept:6380d96e-772d-5e6e-9d38-b8de24cccaad",
+        "urn:atlas:concept:03564108-e543-5101-bda9-a80d689fba75"
+      ],
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "issue_id": "FURN-PARTS-RESIDUAL",
+      "status": "partially_addressed",
+      "finding": "区分木制店铺整品厂内装配、独立内置件制造和木制固定装置现场安装。NAF新子类有部件明文和独立安装去向。",
+      "remaining": "旧ISIC3100与法国旧31.01Z的专用内置件独立制造候选仍待审。法国双向共同内容仅明确整品，CPF关联产品仍为旁证。",
+      "claim_ids": [
+        "FN003",
+        "FN001",
+        "FN009",
+        "FN012",
+        "FN013",
+        "FN033",
+        "FN034",
+        "FN035",
+        "FN036",
+        "FN042"
+      ],
+      "activity_ids": [
+        "urn:atlas:concept:df67a84e-39ed-547f-b0f1-8d1dfbf6233e",
+        "urn:atlas:concept:a62f38d1-7dd9-52ae-b515-2d39384f83ac",
+        "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253"
+      ],
+      "reviewed_on": "2026-11-09"
+    },
+    {
+      "issue_id": "FURN-SANITARY-CROSSWALK-GAP",
+      "status": "conflict_retained",
+      "finding": "法国表单独定位旧23.42Z的陶瓷卫生洁具和陶瓷厨卫家具去向，旧新卫生洁具说明与两方向行已分别绑定。",
+      "remaining": "ISIC跨版及ISIC–NACE的三处官方缺行继续保留。法国国家表提供对照，发布者修订仍待跟踪。",
+      "claim_ids": [
+        "FN037",
+        "FN038",
+        "FN039",
+        "FN040",
+        "FN041"
+      ],
+      "activity_ids": [
+        "urn:atlas:concept:03f6de96-1dd0-5f3d-8210-e87fd4eb8ba5"
+      ],
+      "reviewed_on": "2026-11-09"
+    }
+  ],
+  "new_issues": [],
+  "binding_additions": [
+    {
+      "activity_id": "urn:atlas:concept:a62f38d1-7dd9-52ae-b515-2d39384f83ac",
+      "source_bindings": [
+        {
+          "node_id": "FR_NAF:2025:31.00G",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN003"
+          ]
+        }
+      ],
+      "candidate_source_bindings": [
+        {
+          "node_id": "FR_NAF:Rev.2:31.01Z",
+          "relation": null,
+          "claim_ids": [
+            "FN001",
+            "FN009",
+            "FN012",
+            "FN013",
+            "FN042"
+          ],
+          "status": "pending_specialist_scope",
+          "scope_limit": "整品制造共同内容和泛部件关联产品未定位到独立内置部件制造。"
+        }
+      ]
+    },
+    {
+      "activity_id": "urn:atlas:concept:2fccaadf-2a4d-5207-ba75-0d70cf4784f4",
+      "source_bindings": [
+        {
+          "node_id": "FR_NAF:Rev.2:31.09B",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN005",
+            "FN016",
+            "FN017"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:2025:31.00J",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN006",
+            "FN016",
+            "FN017"
+          ]
+        }
+      ],
+      "candidate_source_bindings": []
+    },
+    {
+      "activity_id": "urn:atlas:concept:03f6de96-1dd0-5f3d-8210-e87fd4eb8ba5",
+      "source_bindings": [
+        {
+          "node_id": "FR_NAF:Rev.2:23.42Z",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN037",
+            "FN039"
+          ]
+        },
+        {
+          "node_id": "FR_NAF:2025:23.42Y",
+          "relation": "broadMatch",
+          "claim_ids": [
+            "FN038",
+            "FN040"
+          ]
+        }
+      ],
+      "candidate_source_bindings": []
+    }
+  ],
+  "note_selections": [
+    {
+      "node_id": "FR_NAF:Rev.2:31.01Z",
+      "page": 422,
+      "end_pattern": "^ *Produits associés",
+      "heading_page": 420
+    },
+    {
+      "node_id": "FR_NAF:Rev.2:31.09B",
+      "page": 424,
+      "end_pattern": "^ *Produits associés"
+    },
+    {
+      "node_id": "FR_NAF:Rev.2:43.32C",
+      "page": 510,
+      "end_pattern": "^ *Produits associés"
+    },
+    {
+      "node_id": "FR_NAF:Rev.2:23.42Z",
+      "page": 240,
+      "end_pattern": "^ *Produits associés"
+    },
+    {
+      "node_id": "FR_NAF:2025:31.00G",
+      "page": 160,
+      "end_pattern": "^Nomenclature d'activités française NAF 2025"
+    },
+    {
+      "node_id": "FR_NAF:2025:31.00J",
+      "page": 161,
+      "end_pattern": "^Nomenclature d'activités française NAF 2025"
+    },
+    {
+      "node_id": "FR_NAF:2025:43.32G",
+      "page": 202,
+      "end_pattern": "^ *43\\.32H +"
+    },
+    {
+      "node_id": "FR_NAF:2025:23.42Y",
+      "page": 101,
+      "end_pattern": "^Nomenclature d'activités française NAF 2025"
+    }
+  ],
+  "text_observations": [
+    {
+      "id": "naf-old-office-shop-finish-text",
+      "mapping_ids": [
+        "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+        "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c"
+      ],
+      "pattern": "finissage|finition",
+      "expected_mention": false,
+      "scope": "两方向的整品共同内容未单列独立涂装。"
+    },
+    {
+      "id": "naf-old-shop-component-text",
+      "mapping_ids": [
+        "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+        "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c"
+      ],
+      "pattern": "composants? intégrés?",
+      "expected_mention": false,
+      "scope": "现行说明的店铺家具内置件未在两方向的整品共同内容明列。"
+    },
+    {
+      "id": "naf-other-professional-finish-text",
+      "mapping_ids": [
+        "urn:atlas:mapping:ebfeeece-bbdb-5375-8bb6-8926d4bac85b",
+        "urn:atlas:mapping:e73062bc-f760-5e15-98c2-4fe704bbbd0b"
+      ],
+      "pattern": "finissage|finition",
+      "expected_mention": true,
+      "scope": "两方向都列出专业用途其他家具的表面处理。"
+    },
+    {
+      "id": "naf-wooden-shop-installation-text",
+      "mapping_ids": [
+        "urn:atlas:mapping:8bb129ad-7424-5779-bcb8-de346d16a4d4",
+        "urn:atlas:mapping:fd6b8df1-8cba-55d9-ad0d-833e8529de7e"
+      ],
+      "pattern": "menuiserie bois et PVC",
+      "expected_mention": true,
+      "scope": "两方向均明确木及PVC作业，独立于店铺家具制造。"
+    }
+  ]
+}

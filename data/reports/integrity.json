@@ -789,5 +789,93 @@
       "status": "selected_clauses_reviewed",
       "pages": 338
     }
+  },
+  {
+    "resource_id": "naf-rev2-hierarchy",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2",
+    "role": "official_structure",
+    "sha256": "5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8",
+    "path": "data/raw/FR_NAF/Rev.2/naf-rev2-hierarchy/5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8/naf-rev2-hierarchy.dbf",
+    "bytes": 14102,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "official_hierarchy_parsed",
+      "nodes": 1728
+    }
+  },
+  {
+    "resource_id": "naf-rev2-cpf21-notes-2020",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2",
+    "role": "explanatory_notes",
+    "sha256": "2f90dfb4652203062a72a2bdca21aa32491def85ca72c85e627cb2101d82a3f3",
+    "path": "data/local/raw/FR_NAF/Rev.2/naf-rev2-cpf21-notes-2020/2f90dfb4652203062a72a2bdca21aa32491def85ca72c85e627cb2101d82a3f3/naf-rev2-cpf21-notes-2020.pdf",
+    "bytes": 3333260,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "selected_activity_notes_parsed"
+    }
+  },
+  {
+    "resource_id": "naf-2025-structure-202610",
+    "source_id": "FR_NAF",
+    "edition": "2025",
+    "role": "official_structure",
+    "sha256": "35a470a436ffc16dedcb4c983a6cbe2362408bfc65add8637d993554bd440c2b",
+    "path": "data/raw/FR_NAF/2025/naf-2025-structure-202610/35a470a436ffc16dedcb4c983a6cbe2362408bfc65add8637d993554bd440c2b/naf-2025-structure-202610.xlsx",
+    "bytes": 99566,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "official_hierarchy_parsed",
+      "nodes": 1794
+    }
+  },
+  {
+    "resource_id": "naf-2025-notes-2025",
+    "source_id": "FR_NAF",
+    "edition": "2025",
+    "role": "explanatory_notes",
+    "sha256": "b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015",
+    "path": "data/local/raw/FR_NAF/2025/naf-2025-notes-2025/b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015/naf-2025-notes-2025.pdf",
+    "bytes": 2292933,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "selected_activity_notes_parsed"
+    }
+  },
+  {
+    "resource_id": "naf-rev2-to-2025-202610",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2",
+    "role": "official_correspondence",
+    "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+    "path": "data/raw/FR_NAF/Rev.2/naf-rev2-to-2025-202610/dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5/naf-rev2-to-2025-202610.xlsx",
+    "bytes": 234922,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "official_correspondence_parsed",
+      "rows": 1242
+    }
+  },
+  {
+    "resource_id": "naf-2025-to-rev2-202610",
+    "source_id": "FR_NAF",
+    "edition": "2025",
+    "role": "official_correspondence",
+    "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+    "path": "data/raw/FR_NAF/2025/naf-2025-to-rev2-202610/096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696/naf-2025-to-rev2-202610.xlsx",
+    "bytes": 758532,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "official_correspondence_parsed",
+      "rows": 1242
+    }
   }
 ]

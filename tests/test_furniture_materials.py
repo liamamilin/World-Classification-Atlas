@@ -51,8 +51,8 @@ class MaterialBoundaryTests(unittest.TestCase):
         docs[official["document"]] = {"from": "NACE:Rev.2.1:31.00", "to": "NACE:Rev.2:31.01",
                                       "evidence": {"resource_id": "nace21-nace2-correspondence"}}
         validate_slice(a, self.claims, docs)
-        candidate = a["candidate_source_bindings"].pop()
-        self.assertEqual(candidate["node_id"], "ISIC:Rev.4:3100")
+        candidate = next(b for b in a["candidate_source_bindings"] if b["node_id"] == "ISIC:Rev.4:3100")
+        a["candidate_source_bindings"].remove(candidate)
         product, = (c for c in candidate["claim_ids"] if self.claims[c]["role"] == "auxiliary_product_link")
         docs[self.claims[product]["document"]] = {"source_id": "UN_CPC"}
         a["source_bindings"].append({**candidate, "relation": "broadMatch", "claim_ids": [product]})
@@ -78,7 +78,7 @@ class MaterialBoundaryTests(unittest.TestCase):
     def test_conflict_and_bounded_positive_control_keep_separate_ids_and_scopes(self):
         sanitary = self.activity("ceramic-sanitary-fixtures")
         tiles = self.activity("non-refractory-ceramic-tiles-and-mosaics")
-        self.assertEqual({b["node_id"] for b in sanitary["source_bindings"]},
+        self.assertEqual({b["node_id"] for b in sanitary["source_bindings"] if b["node_id"].startswith(("ISIC:", "NACE:"))},
                          {"ISIC:Rev.4:2392", "ISIC:Rev.5:2393", "NACE:Rev.2:23.42", "NACE:Rev.2.1:23.42"})
         same_code = next(r for r in self.directory["official_reviews"]
                          if (r["from"], r["to"]) == ("ISIC:Rev.4:2392", "ISIC:Rev.5:2392"))

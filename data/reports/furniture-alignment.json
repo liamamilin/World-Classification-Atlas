@@ -224,6 +224,48 @@
       "url": "https://unstats.un.org/unsd/classifications/Econ/Download/Errata_for_the_Explanatory_Notes_of_the_ISICRev5_-_2026.pdf",
       "sha256": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
       "publication_date": "2026"
+    },
+    {
+      "resource_id": "naf-rev2-hierarchy",
+      "edition": "Rev.2",
+      "url": "https://www.insee.fr/fr/statistiques/fichier/2120875/naf2008_5_niveaux.dbf",
+      "sha256": "5b712c76ca8c63415f7e5b48521c9c9a1bd5e6c1ab51cf8c3944b724ccf02ed8",
+      "publication_date": null
+    },
+    {
+      "resource_id": "naf-rev2-cpf21-notes-2020",
+      "edition": "Rev.2",
+      "url": "https://www.insee.fr/fr/statistiques/fichier/2120875/Nomenclatures_NAF_et_CPF_Reedition_2020.pdf",
+      "sha256": "2f90dfb4652203062a72a2bdca21aa32491def85ca72c85e627cb2101d82a3f3",
+      "publication_date": "2020"
+    },
+    {
+      "resource_id": "naf-2025-structure-202610",
+      "edition": "2025",
+      "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Structure%20NAF%202025%20Maj%202026-10.xlsx",
+      "sha256": "35a470a436ffc16dedcb4c983a6cbe2362408bfc65add8637d993554bd440c2b",
+      "publication_date": "2026-10"
+    },
+    {
+      "resource_id": "naf-2025-notes-2025",
+      "edition": "2025",
+      "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/NAF2025%20-%20Notes%20-%20Edition%202025.pdf",
+      "sha256": "b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015",
+      "publication_date": "2025"
+    },
+    {
+      "resource_id": "naf-rev2-to-2025-202610",
+      "edition": "Rev.2",
+      "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+      "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+      "publication_date": "2026-10"
+    },
+    {
+      "resource_id": "naf-2025-to-rev2-202610",
+      "edition": "2025",
+      "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+      "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+      "publication_date": "2026-10"
     }
   ],
   "nace21": {
@@ -271,7 +313,9 @@
     "ISIC:Rev.4": 29,
     "ISIC:Rev.5": 25,
     "NACE:Rev.2.1": 25,
-    "NACE:Rev.2": 31
+    "NACE:Rev.2": 31,
+    "FR_NAF:Rev.2": 16,
+    "FR_NAF:2025": 15
   },
   "pdf_pages": {
     "nace2-manual-2008": 369,
@@ -785,6 +829,261 @@
       "scope": "Fresh downloads of fixed table URLs and Cellar queries. Registry title review is limited to the captured listing."
     }
   },
+  "naf_boundary": {
+    "rev2": {
+      "node_count": 1728,
+      "unique_codes": 1728,
+      "duplicate_codes": [],
+      "edge_count": 1707,
+      "orphan_parents": [],
+      "self_links": [],
+      "cycles": [],
+      "levels": {
+        "1": 21,
+        "2": 88,
+        "3": 272,
+        "4": 615,
+        "5": 732
+      },
+      "roots": 21,
+      "leaves": 732,
+      "definitions": 4,
+      "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+      "polyhierarchy_nodes": 0
+    },
+    "naf2025": {
+      "node_count": 1794,
+      "unique_codes": 1794,
+      "duplicate_codes": [],
+      "edge_count": 1772,
+      "orphan_parents": [],
+      "self_links": [],
+      "cycles": [],
+      "levels": {
+        "1": 22,
+        "2": 87,
+        "3": 287,
+        "4": 651,
+        "5": 747
+      },
+      "roots": 22,
+      "leaves": 747,
+      "definitions": 4,
+      "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+      "polyhierarchy_nodes": 0
+    },
+    "rev2_titles": 732,
+    "new_claims": 42,
+    "new_activities": 4,
+    "note_components": 8,
+    "correspondence": {
+      "forward_rows": 1242,
+      "reverse_rows": 1242,
+      "reversed_pair_sets_equal": true,
+      "forward_types": {
+        "Unique": 516,
+        "Multiple": 725,
+        "blank": 1
+      },
+      "reverse_types": {
+        "Unique": 515,
+        "Multiple": 726,
+        "blank": 1
+      },
+      "paired_common_content_text_differences": 954,
+      "current_section_count_comparison": {
+        "notes_reported": 21,
+        "structure_measured": 22,
+        "matches": false,
+        "evidence": {
+          "resource_id": "naf-2025-notes-2025",
+          "edition": "2025",
+          "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/NAF2025%20-%20Notes%20-%20Edition%202025.pdf",
+          "sha256": "b671269c1349690ad6501d257f4147cffb6d3af4ebc9e775f76c782a30fab015",
+          "publication_date": "2025",
+          "pdf_page": 2
+        }
+      }
+    },
+    "common_content_observations": [
+      {
+        "id": "naf-old-office-shop-finish-text",
+        "mapping_ids": [
+          "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+          "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c"
+        ],
+        "pattern": "finissage|finition",
+        "expected_mention": false,
+        "scope": "两方向的整品共同内容未单列独立涂装。",
+        "directional_observations": [
+          {
+            "id": "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+            "from": "FR_NAF:Rev.2:31.01Z",
+            "to": "FR_NAF:2025:31.00G",
+            "evidence": {
+              "resource_id": "naf-rev2-to-2025-202610",
+              "edition": "Rev.2",
+              "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+              "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+              "publication_date": "2026-10",
+              "sheet": "NAF rév. 2 vers NAF 2025",
+              "row": 383
+            },
+            "publisher_mapping_type": "Multiple",
+            "mentioned": false
+          },
+          {
+            "id": "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c",
+            "from": "FR_NAF:2025:31.00G",
+            "to": "FR_NAF:Rev.2:31.01Z",
+            "evidence": {
+              "resource_id": "naf-2025-to-rev2-202610",
+              "edition": "2025",
+              "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+              "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+              "publication_date": "2026-10",
+              "sheet": "correspondance inversée NAF",
+              "row": 382
+            },
+            "publisher_mapping_type": "Multiple",
+            "mentioned": false
+          }
+        ]
+      },
+      {
+        "id": "naf-old-shop-component-text",
+        "mapping_ids": [
+          "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+          "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c"
+        ],
+        "pattern": "composants? intégrés?",
+        "expected_mention": false,
+        "scope": "现行说明的店铺家具内置件未在两方向的整品共同内容明列。",
+        "directional_observations": [
+          {
+            "id": "urn:atlas:mapping:c078d547-c06c-5b4a-9fb9-070a8463dc75",
+            "from": "FR_NAF:Rev.2:31.01Z",
+            "to": "FR_NAF:2025:31.00G",
+            "evidence": {
+              "resource_id": "naf-rev2-to-2025-202610",
+              "edition": "Rev.2",
+              "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+              "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+              "publication_date": "2026-10",
+              "sheet": "NAF rév. 2 vers NAF 2025",
+              "row": 383
+            },
+            "publisher_mapping_type": "Multiple",
+            "mentioned": false
+          },
+          {
+            "id": "urn:atlas:mapping:78cee2ea-28b3-5ed3-a147-b9d733d53b9c",
+            "from": "FR_NAF:2025:31.00G",
+            "to": "FR_NAF:Rev.2:31.01Z",
+            "evidence": {
+              "resource_id": "naf-2025-to-rev2-202610",
+              "edition": "2025",
+              "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+              "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+              "publication_date": "2026-10",
+              "sheet": "correspondance inversée NAF",
+              "row": 382
+            },
+            "publisher_mapping_type": "Multiple",
+            "mentioned": false
+          }
+        ]
+      },
+      {
+        "id": "naf-other-professional-finish-text",
+        "mapping_ids": [
+          "urn:atlas:mapping:ebfeeece-bbdb-5375-8bb6-8926d4bac85b",
+          "urn:atlas:mapping:e73062bc-f760-5e15-98c2-4fe704bbbd0b"
+        ],
+        "pattern": "finissage|finition",
+        "expected_mention": true,
+        "scope": "两方向都列出专业用途其他家具的表面处理。",
+        "directional_observations": [
+          {
+            "id": "urn:atlas:mapping:ebfeeece-bbdb-5375-8bb6-8926d4bac85b",
+            "from": "FR_NAF:Rev.2:31.09B",
+            "to": "FR_NAF:2025:31.00G",
+            "evidence": {
+              "resource_id": "naf-rev2-to-2025-202610",
+              "edition": "Rev.2",
+              "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+              "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+              "publication_date": "2026-10",
+              "sheet": "NAF rév. 2 vers NAF 2025",
+              "row": 391
+            },
+            "publisher_mapping_type": "Multiple",
+            "mentioned": true
+          },
+          {
+            "id": "urn:atlas:mapping:e73062bc-f760-5e15-98c2-4fe704bbbd0b",
+            "from": "FR_NAF:2025:31.00G",
+            "to": "FR_NAF:Rev.2:31.09B",
+            "evidence": {
+              "resource_id": "naf-2025-to-rev2-202610",
+              "edition": "2025",
+              "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+              "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+              "publication_date": "2026-10",
+              "sheet": "correspondance inversée NAF",
+              "row": 385
+            },
+            "publisher_mapping_type": "Multiple",
+            "mentioned": true
+          }
+        ]
+      },
+      {
+        "id": "naf-wooden-shop-installation-text",
+        "mapping_ids": [
+          "urn:atlas:mapping:8bb129ad-7424-5779-bcb8-de346d16a4d4",
+          "urn:atlas:mapping:fd6b8df1-8cba-55d9-ad0d-833e8529de7e"
+        ],
+        "pattern": "menuiserie bois et PVC",
+        "expected_mention": true,
+        "scope": "两方向均明确木及PVC作业，独立于店铺家具制造。",
+        "directional_observations": [
+          {
+            "id": "urn:atlas:mapping:8bb129ad-7424-5779-bcb8-de346d16a4d4",
+            "from": "FR_NAF:Rev.2:43.32C",
+            "to": "FR_NAF:2025:43.32G",
+            "evidence": {
+              "resource_id": "naf-rev2-to-2025-202610",
+              "edition": "Rev.2",
+              "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+              "sha256": "dcdb5f1f369455c5765c2b96d32fe77115302132bfc8de76f2aec781a44962c5",
+              "publication_date": "2026-10",
+              "sheet": "NAF rév. 2 vers NAF 2025",
+              "row": 493
+            },
+            "publisher_mapping_type": "Multiple",
+            "mentioned": true
+          },
+          {
+            "id": "urn:atlas:mapping:fd6b8df1-8cba-55d9-ad0d-833e8529de7e",
+            "from": "FR_NAF:2025:43.32G",
+            "to": "FR_NAF:Rev.2:43.32C",
+            "evidence": {
+              "resource_id": "naf-2025-to-rev2-202610",
+              "edition": "2025",
+              "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+              "sha256": "096489e591502f76cf9a08fbe53d7cdeaf10aee6b456237967e1844962913696",
+              "publication_date": "2026-10",
+              "sheet": "correspondance inversée NAF",
+              "row": 492
+            },
+            "publisher_mapping_type": "Multiple",
+            "mentioned": true
+          }
+        ]
+      }
+    ]
+  },
   "official_tables": {
     "nace21_to_nace2_rows": 1598,
     "nace_levels": {
@@ -795,13 +1094,15 @@
     },
     "isic4_to_nace2_rows": 996,
     "furniture_current_incoming_rows": 7,
-    "individually_reviewed_rows": 54,
+    "individually_reviewed_rows": 65,
     "reviews_by_resource": {
       "nace21-nace2-correspondence": 11,
       "isic4-nace2-correspondence": 12,
       "nace2-nace21-correspondence-20260831": 11,
       "nace-cellar-nace2-isic4-xkos-20261109": 12,
-      "isic4-isic5-correspondence": 8
+      "isic4-isic5-correspondence": 9,
+      "naf-rev2-to-2025-202610": 5,
+      "naf-2025-to-rev2-202610": 5
     }
   },
   "followup_sources": {
@@ -906,41 +1207,41 @@
     ]
   },
   "directory": {
-    "node_count": 29,
-    "unique_codes": 29,
+    "node_count": 33,
+    "unique_codes": 33,
     "duplicate_codes": [],
-    "edge_count": 25,
+    "edge_count": 29,
     "orphan_parents": [],
     "self_links": [],
     "cycles": [],
     "levels": {
       "1": 4,
-      "2": 10,
-      "3": 10,
-      "4": 5
+      "2": 11,
+      "3": 11,
+      "4": 7
     },
     "roots": 4,
-    "leaves": 19,
-    "definitions": 29,
+    "leaves": 23,
+    "definitions": 33,
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
   "reused_ids": 2,
-  "new_ids": 27,
-  "bounded_activities": 21,
-  "approved_bindings": 87,
+  "new_ids": 31,
+  "bounded_activities": 25,
+  "approved_bindings": 114,
   "activity_review_status": {
-    "reviewed_bounded_activity": 19,
+    "reviewed_bounded_activity": 22,
     "reviewed_current_multisource_activity": 1,
-    "reviewed_with_legacy_gap": 1
+    "reviewed_with_legacy_gap": 2
   },
   "approved_isic5_source_levels": {
-    "class": 15,
-    "group": 6
+    "class": 16,
+    "group": 9
   },
-  "candidate_bindings": 9,
-  "evidence_claims": 141,
-  "research_mappings": 23,
+  "candidate_bindings": 13,
+  "evidence_claims": 183,
+  "research_mappings": 28,
   "issues": [
     {
       "id": "FURN-DIRECT-CROSSWALK",
@@ -1049,30 +1350,60 @@
             ],
             "reviewed_on": "2026-11-09"
           }
+        },
+        {
+          "id": "FURN-FINISHING",
+          "status": "partially_addressed",
+          "claim_ids": [
+            "F033",
+            "F029"
+          ],
+          "finding": "当前对应表31.00→旧31.01共同内容列家具表面处理；2008手册把该活动列在31.09。两份原文并存，不重写历史分配。",
+          "next_action": "取得更正说明或旧版补充索引；暂不建立表面处理跨版已审子节点。",
+          "followup": {
+            "issue_id": "FURN-FINISHING",
+            "status": "partially_addressed",
+            "finding": "本轮区分承包者和委托方，审定识别为新制家用活动家具的独立涂装，并另审通用木料防腐和金属工件漆涂层。英国索引和旧CPA证据支持31.09的新家具子范围。",
+            "remaining": "旧31.01第555行的广义表面处理归属冲突、办公与店铺新家具的独立承包、独立处理的ISIC材料细类、材料未定的中间件和首次软包仍待审。",
+            "claim_ids": [
+              "FC017",
+              "FF003",
+              "FC012",
+              "FC013",
+              "FC014",
+              "FC006",
+              "FC008",
+              "FC001",
+              "FC002",
+              "FC003",
+              "FC004"
+            ],
+            "activity_ids": [
+              "urn:atlas:concept:2fccaadf-2a4d-5207-ba75-0d70cf4784f4",
+              "urn:atlas:concept:8ef1156d-f2cb-5deb-b7f1-5329df1e5925",
+              "urn:atlas:concept:1ef95e8f-e39d-5d17-bbe0-c6f05bddf9f0"
+            ],
+            "reviewed_on": "2026-11-09"
+          }
         }
       ],
       "followup": {
         "issue_id": "FURN-FINISHING",
         "status": "partially_addressed",
-        "finding": "本轮区分承包者和委托方，审定识别为新制家用活动家具的独立涂装，并另审通用木料防腐和金属工件漆涂层。英国索引和旧CPA证据支持31.09的新家具子范围。",
-        "remaining": "旧31.01第555行的广义表面处理归属冲突、办公与店铺新家具的独立承包、独立处理的ISIC材料细类、材料未定的中间件和首次软包仍待审。",
+        "finding": "审定专业用途其他家具独立涂装的旧31.09及法国双向范围。专用办公和店铺家具的独立涂装获得两代ISIC、当前NACE及当前NAF的有界绑定。",
+        "remaining": "旧31.01与31.09的泛工序冲突继续保留。旧NACE及旧法国专用家具独立涂装、混合中间件、独立初次软包和ISIC材料细类仍待审。",
         "claim_ids": [
-          "FC017",
-          "FF003",
-          "FC012",
-          "FC013",
-          "FC014",
-          "FC006",
-          "FC008",
-          "FC001",
-          "FC002",
-          "FC003",
-          "FC004"
+          "FN004",
+          "FN005",
+          "FN008",
+          "FN012",
+          "FN013",
+          "FN014",
+          "FN015"
         ],
         "activity_ids": [
-          "urn:atlas:concept:2fccaadf-2a4d-5207-ba75-0d70cf4784f4",
-          "urn:atlas:concept:8ef1156d-f2cb-5deb-b7f1-5329df1e5925",
-          "urn:atlas:concept:1ef95e8f-e39d-5d17-bbe0-c6f05bddf9f0"
+          "urn:atlas:concept:6380d96e-772d-5e6e-9d38-b8de24cccaad",
+          "urn:atlas:concept:03564108-e543-5101-bda9-a80d689fba75"
         ],
         "reviewed_on": "2026-11-09"
       }
@@ -1265,25 +1596,59 @@
             ],
             "reviewed_on": "2026-11-09"
           }
+        },
+        {
+          "id": "FURN-PARTS-RESIDUAL",
+          "status": "partially_addressed",
+          "claim_ids": [
+            "F035",
+            "F004"
+          ],
+          "finding": "家具部件与玻璃、石、陶瓷等独立板材存在边界；本轮七个活动只研究成品家具或床垫，未审完整类所有部件和表面处理。",
+          "next_action": "在材料、工序及成品范围上逐项核对；不强制清空待审范围。",
+          "followup": {
+            "issue_id": "FURN-PARTS-RESIDUAL",
+            "status": "partially_addressed",
+            "finding": "其他家用家具的可识别木制部件得到旧NACE31.09的国家活动索引依据，并以旧NACE侧的明确非部分对应支持旧ISIC3100的有界研究分配。",
+            "remaining": "旧ISIC3100缺直接部件条款。专用店铺内置部件、通用板材及其他残余仍逐项待审。",
+            "claim_ids": [
+              "FC007",
+              "FC005",
+              "FC009",
+              "FC032",
+              "FC033",
+              "FC034",
+              "FC035",
+              "FC036"
+            ],
+            "activity_ids": [
+              "urn:atlas:concept:879352c1-dbde-50cf-aee6-a953b83c79ed"
+            ],
+            "reviewed_on": "2026-11-09"
+          }
         }
       ],
       "followup": {
         "issue_id": "FURN-PARTS-RESIDUAL",
         "status": "partially_addressed",
-        "finding": "其他家用家具的可识别木制部件得到旧NACE31.09的国家活动索引依据，并以旧NACE侧的明确非部分对应支持旧ISIC3100的有界研究分配。",
-        "remaining": "旧ISIC3100缺直接部件条款。专用店铺内置部件、通用板材及其他残余仍逐项待审。",
+        "finding": "区分木制店铺整品厂内装配、独立内置件制造和木制固定装置现场安装。NAF新子类有部件明文和独立安装去向。",
+        "remaining": "旧ISIC3100与法国旧31.01Z的专用内置件独立制造候选仍待审。法国双向共同内容仅明确整品，CPF关联产品仍为旁证。",
         "claim_ids": [
-          "FC007",
-          "FC005",
-          "FC009",
-          "FC032",
-          "FC033",
-          "FC034",
-          "FC035",
-          "FC036"
+          "FN003",
+          "FN001",
+          "FN009",
+          "FN012",
+          "FN013",
+          "FN033",
+          "FN034",
+          "FN035",
+          "FN036",
+          "FN042"
         ],
         "activity_ids": [
-          "urn:atlas:concept:879352c1-dbde-50cf-aee6-a953b83c79ed"
+          "urn:atlas:concept:df67a84e-39ed-547f-b0f1-8d1dfbf6233e",
+          "urn:atlas:concept:a62f38d1-7dd9-52ae-b515-2d39384f83ac",
+          "urn:atlas:concept:9c09fc85-2767-5026-a06e-568f86132253"
         ],
         "reviewed_on": "2026-11-09"
       }
@@ -1348,20 +1713,61 @@
             "sanitary-unsd-legacy",
             "sanitary-eurostat-legacy"
           ]
+        },
+        {
+          "id": "FURN-SANITARY-CROSSWALK-GAP",
+          "status": "conflict_retained",
+          "finding": "三份已检完整官方对应缺少由卫生洁具定义支持的代码对。2024年Rev.5说明内部冲突，2026年删掉冲突排除。两代ISIC及旧NACE与ISIC的历史对应原样保留。",
+          "next_action": "后续查找卫生洁具对应的发布者修订或说明。继续逐项区分陶瓷家具、卫生洁具与板材。",
+          "claim_ids": [
+            "FM020",
+            "FM021",
+            "FM022",
+            "FM023",
+            "F039",
+            "FM024",
+            "FM025",
+            "FM026",
+            "FM027",
+            "FM028",
+            "FM029"
+          ],
+          "comparison_ids": [
+            "sanitary-isic-revision",
+            "sanitary-unsd-legacy",
+            "sanitary-eurostat-legacy"
+          ],
+          "followup": {
+            "issue_id": "FURN-SANITARY-CROSSWALK-GAP",
+            "status": "conflict_retained",
+            "finding": "复查官方入口、已锁定发布件与Eurostat Cellar查询。三份表的卫生洁具缺行仍在，2026年勘误文件仍只用于说明条款。",
+            "remaining": "本次复查限所列发布入口与登记标题。缺行的发布者修订状态继续跟踪。",
+            "claim_ids": [
+              "FM020",
+              "FM021",
+              "FM027",
+              "FM028"
+            ],
+            "activity_ids": [],
+            "reviewed_on": "2026-11-09"
+          }
         }
       ],
       "followup": {
         "issue_id": "FURN-SANITARY-CROSSWALK-GAP",
         "status": "conflict_retained",
-        "finding": "复查官方入口、已锁定发布件与Eurostat Cellar查询。三份表的卫生洁具缺行仍在，2026年勘误文件仍只用于说明条款。",
-        "remaining": "本次复查限所列发布入口与登记标题。缺行的发布者修订状态继续跟踪。",
+        "finding": "法国表单独定位旧23.42Z的陶瓷卫生洁具和陶瓷厨卫家具去向，旧新卫生洁具说明与两方向行已分别绑定。",
+        "remaining": "ISIC跨版及ISIC–NACE的三处官方缺行继续保留。法国国家表提供对照，发布者修订仍待跟踪。",
         "claim_ids": [
-          "FM020",
-          "FM021",
-          "FM027",
-          "FM028"
+          "FN037",
+          "FN038",
+          "FN039",
+          "FN040",
+          "FN041"
         ],
-        "activity_ids": [],
+        "activity_ids": [
+          "urn:atlas:concept:03f6de96-1dd0-5f3d-8210-e87fd4eb8ba5"
+        ],
         "reviewed_on": "2026-11-09"
       }
     }
@@ -1478,12 +1884,14 @@
       },
       "reviewed_on": "2026-11-09"
     },
+    "naf_review_sha256": "01ab3b9cc498587b5313f0a976f361501434b9177b40c1bfbe37bbf7f1b7c6d5",
     "parser_sha256": {
-      "furniture.py": "684ba901a394144d01171daff1dc0d236067fc6d9d10676baa3464491ea6b957",
+      "furniture.py": "1d8c563aef13357007340697e43f565ebf724abfad1cfdf98adb17845b91d11b",
       "furniture_followup.py": "5e17272f24f5378a33f4d9e5624a6eb34a3785f6d2042976caea125a1a049996",
       "furniture_materials.py": "6a93882d7800a18de089e4898f6a834c0282acabcc23a29706a5b1589b3875c8",
-      "furniture_contracts.py": "75f5c0a6bc321602773f0408a677dc1d5ffec900d4b5a0c24d13384fff32cde7",
-      "furniture_view.html": "afbc5ae46c2b185cfb0147d7d5c15fb549ba04126983a06be36d23eb16cff866",
+      "furniture_contracts.py": "8a376ff136672f6189e202b9cbd9822c0cc22be28ee2078db6add3551050eba6",
+      "furniture_naf.py": "c4d6d38e9d187334799a8b6ff08c3be3426f108269f6166d67e44eacb412131d",
+      "furniture_view.html": "f9a0642b0c7906ed0f1bd9a18cf9a3b9e5c1ee13b98a32603e0cc93daf227483",
       "isic.py": "a44cfdb15f5dc2c4d3899b417d02773202ee1e0f0be34958b5a5a562e634a426",
       "isic_boundaries.py": "003be7ca8c42c216ef8ffe82b779866e7bc0aceeb641f8e383e9cad53141d838",
       "isic_priority.py": "c82f8758119023bd1d570157b78bb577978caa873e113d3798a615bc44b3c430",

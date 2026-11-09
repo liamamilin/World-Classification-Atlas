@@ -28,6 +28,8 @@ CONTRACT_INPUTS = {
     "contract-finishing-recognisable-new-household-furniture": "recognisable_new_household_furniture",
     "contract-preservative-treatment-of-unfinished-wood": "unfinished_general_wood",
     "contract-lacquering-general-metalwork": "general_metalwork",
+    "contract-finishing-other-furniture-for-professionals": "recognisable_other_furniture_for_professionals",
+    "contract-finishing-office-and-shop-furniture": "recognisable_office_and_shop_furniture",
 }
 
 

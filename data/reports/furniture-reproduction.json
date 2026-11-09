@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "method": "fresh directory; pinned raw assets, manifests, query texts, acquisition record and five research inputs only; no network",
+  "method": "fresh directory; pinned raw assets, manifests, query texts, acquisition record and six research inputs only; no network",
   "files": [
     {
       "path": "data/atlas/economy/furniture-directory.json",
-      "sha256": "a23a4c34f2ddb220cec49f4fe3b7bcde5f6f98a8adf3527cef1ea3b14895a9a1",
+      "sha256": "440954902de648f62283f1f6e2f534be5f4a550cfe22a07a8193df8d1c77bd63",
       "identical": true
     },
     {
@@ -34,12 +34,12 @@
     },
     {
       "path": "data/local/economy/furniture/evidence-dossiers.json",
-      "sha256": "d9c26907dfc683d8f61f26eb12001317f909f52c7599c5cad920dc2abcc04629",
+      "sha256": "9ed7171293a504480a21aa547aecc3f2c5901bdfbbe1d697eb328ac1c1c7f95d",
       "identical": true
     },
     {
       "path": "data/local/economy/furniture/index.html",
-      "sha256": "338feafd716694640ebc7d655ae4b73c13814c9282541f47a206dbe3a20c0983",
+      "sha256": "7065aaf8a04247e015c98f804911b84a4de81bf7f0958b2f7697e28da6fd1470",
       "identical": true
     },
     {
@@ -83,8 +83,33 @@
       "identical": true
     },
     {
+      "path": "data/local/economy/furniture/naf-2025-nodes.jsonl",
+      "sha256": "ac30ea28f2be547e43789bfa49a002e8b715b0f0824bb23dbc42402692497106",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/naf-2025-to-rev2.jsonl",
+      "sha256": "ef1dc97d73285cf50c7d5fae0dea61b4eabee0adb5123b6c8e257286d650c27b",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/naf-rev2-nodes.jsonl",
+      "sha256": "d063f6e171b0287a09c3bb2dd09e00c6f99d42732e14ef2f840090bf5cbbf57d",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/naf-rev2-to-2025.jsonl",
+      "sha256": "6f1da08bd257345a12e21bf3e2d299e7786450cfd18ea2fa3fcb076e67bc4a3b",
+      "identical": true
+    },
+    {
+      "path": "data/local/economy/furniture/naf-selected-notes.jsonl",
+      "sha256": "16d38023c33b27def66156e7e5a5f4d764ce92baab0fec82a8d02e51a2cddc89",
+      "identical": true
+    },
+    {
       "path": "data/local/economy/furniture/source-branches.json",
-      "sha256": "734ef5ee0aee70c6970bac52f4434211ac1c92bd4d2df540d8e265a3284f6510",
+      "sha256": "21cdd36450f0c5050415321b42b8d1f8be44b4514636dfdf2c7dfadc30d7dd2b",
       "identical": true
     },
     {
@@ -114,10 +139,10 @@
     },
     {
       "path": "data/reports/furniture-alignment.json",
-      "sha256": "74bd36d287518750ab83632f8ca801a66d6960a3d2ce92a37e566431abfd02ab",
+      "sha256": "71440b432a53c74a5fc20631615f492e88c5b953ca43d10173d1e9e42692d7db",
       "identical": true
     }
   ],
-  "compared_files": 23,
-  "identical_files": 23
+  "compared_files": 28,
+  "identical_files": 28
 }

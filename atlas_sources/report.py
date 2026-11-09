@@ -64,6 +64,16 @@ def build(root, registry, resources):
                     stages[rid] = {"status": "selected_clauses_reviewed", "pages": pages}
                 for rid in contract["publisher_release_recheck"]["listings"]:
                     stages[rid] = {"status": "publisher_release_listing_checked"}
+            if furniture.get("naf_boundary"):
+                naf = furniture["naf_boundary"]
+                stages.update({
+                    "naf-rev2-hierarchy": {"status": "official_hierarchy_parsed", "nodes": naf["rev2"]["node_count"]},
+                    "naf-2025-structure-202610": {"status": "official_hierarchy_parsed", "nodes": naf["naf2025"]["node_count"]},
+                    "naf-rev2-cpf21-notes-2020": {"status": "selected_activity_notes_parsed"},
+                    "naf-2025-notes-2025": {"status": "selected_activity_notes_parsed"},
+                    "naf-rev2-to-2025-202610": {"status": "official_correspondence_parsed", "rows": naf["correspondence"]["forward_rows"]},
+                    "naf-2025-to-rev2-202610": {"status": "official_correspondence_parsed", "rows": naf["correspondence"]["reverse_rows"]},
+                })
             for row in integrity:
                 if row["resource_id"] in stages:
                     row["domain_stage"] = stages[row["resource_id"]]
@@ -91,7 +101,7 @@ def build(root, registry, resources):
                                                 "correspondence": economy.get("correspondence")}
                                                if economy else None),
                "counts_note": "Counts are per resource, not global concepts. O*NET CSV/CTDL overlap. ISIC has a separately counted reviewed subset; no instance links.",
-               "furniture_multisource_research": ({k: furniture[k] for k in ("status", "nace21", "official_tables", "directory", "reused_ids", "new_ids", "bounded_activities", "evidence_claims", "research_mappings", "candidate_bindings", "followup_sources", "activity_review_status", "binding_history_records", "approved_isic5_source_levels", "material_boundaries", "contract_parts_boundaries") if k in furniture} if furniture else None),
+               "furniture_multisource_research": ({k: furniture[k] for k in ("status", "nace21", "official_tables", "directory", "reused_ids", "new_ids", "bounded_activities", "evidence_claims", "research_mappings", "candidate_bindings", "followup_sources", "activity_review_status", "binding_history_records", "approved_isic5_source_levels", "material_boundaries", "contract_parts_boundaries", "naf_boundary") if k in furniture} if furniture else None),
                "resources": integrity}
     reports = root / "data/reports"
     write_json(reports / "coverage.json", summary)
@@ -148,6 +158,13 @@ def build(root, registry, resources):
                 lines += [f"承包处理与旧家具部件新增{contract['new_activities']}项活动和{contract['new_claims']}条证据。"
                           f"发布复查中{len(recheck['same_bytes'])}份文件字节与旧快照相同，核查{recheck['registry_titles_checked']}条登记标题。"
                           "卫生洁具官方缺行、旧31.01冲突及专用店铺部件的旧ISIC候选继续保留。"]
+            if furniture.get("naf_boundary"):
+                naf = furniture["naf_boundary"]
+                correspondence = naf["correspondence"]
+                lines += [f"法国NAF两版五级目录解析{naf['rev2']['node_count']}和{naf['naf2025']['node_count']}个节点。"
+                          f"双向官方对应各{correspondence['forward_rows']}及{correspondence['reverse_rows']}行，保留原方向内容。"
+                          f"本次增补{naf['new_activities']}项家具活动和{naf['new_claims']}条逐条证据。"
+                          "法国国家表的卫生洁具与陶瓷厨卫家具分别对应，原ISIC缺行仍独立登记。"]
     lines += ["", "节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。",
               "", "## 未决项（逐来源）", ""]
     for s in registry["sources"]:

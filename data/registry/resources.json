@@ -1022,5 +1022,131 @@
       "license": "Eurostat reuse notice with exceptions; original PDF kept locally",
       "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
     }
+  },
+  {
+    "id": "naf-rev2-hierarchy",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/2120875/naf2008_5_niveaux.dbf",
+    "filename": "naf-rev2-hierarchy.dbf",
+    "format": "dbf",
+    "role": "official_structure",
+    "language": "fr",
+    "publication_date": null,
+    "encoding": "cp1252",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+      "evidence_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm"
+    }
+  },
+  {
+    "id": "naf-rev2-cpf21-notes-2020",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/2120875/Nomenclatures_NAF_et_CPF_Reedition_2020.pdf",
+    "filename": "naf-rev2-cpf21-notes-2020.pdf",
+    "format": "pdf",
+    "role": "explanatory_notes",
+    "language": "fr",
+    "publication_date": "2020",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+      "evidence_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm"
+    }
+  },
+  {
+    "id": "naf-2025-structure-202610",
+    "source_id": "FR_NAF",
+    "edition": "2025",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Structure%20NAF%202025%20Maj%202026-10.xlsx",
+    "filename": "naf-2025-structure-202610.xlsx",
+    "format": "xlsx",
+    "role": "official_structure",
+    "language": "fr",
+    "publication_date": "2026-10",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+      "evidence_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm"
+    }
+  },
+  {
+    "id": "naf-2025-notes-2025",
+    "source_id": "FR_NAF",
+    "edition": "2025",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/NAF2025%20-%20Notes%20-%20Edition%202025.pdf",
+    "filename": "naf-2025-notes-2025.pdf",
+    "format": "pdf",
+    "role": "explanatory_notes",
+    "language": "fr",
+    "publication_date": "2025",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+      "evidence_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm"
+    }
+  },
+  {
+    "id": "naf-rev2-to-2025-202610",
+    "source_id": "FR_NAF",
+    "edition": "Rev.2",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_NAFrev2-NAF2025.xlsx",
+    "filename": "naf-rev2-to-2025-202610.xlsx",
+    "format": "xlsx",
+    "role": "official_correspondence",
+    "language": "fr",
+    "publication_date": "2026-10",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+      "evidence_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm"
+    }
+  },
+  {
+    "id": "naf-2025-to-rev2-202610",
+    "source_id": "FR_NAF",
+    "edition": "2025",
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8617910/Correspondances_inversees_NAF2025-NAFrev2.xlsx",
+    "filename": "naf-2025-to-rev2-202610.xlsx",
+    "format": "xlsx",
+    "role": "official_correspondence",
+    "language": "fr",
+    "publication_date": "2026-10",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": true,
+      "license": "Licence Ouverte / Open Licence 2.0 (Etalab), except where stated",
+      "evidence_url": "https://www.insee.fr/fr/information/2008466?page=copyright.htm"
+    }
   }
 ]
