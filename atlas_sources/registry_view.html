@@ -6,6 +6,11 @@
 </style>
 <header><small>WORLD CLASSIFICATION ATLAS / 来源发现与本地资料</small><h1>世界分类来源注册表</h1><div id="stats"></div><p class="muted">15 个领域用于导航。来源登记、元数据核实、资料采集与解析分别统计；不同分类对象独立保留。</p></header>
 <nav><input id="q" type="search" placeholder="搜索名称、分类对象、机构或备注" aria-label="搜索来源"><select id="domain" aria-label="筛选领域"><option value="">全部领域</option></select><select id="status" aria-label="筛选核实状态"><option value="">全部核实状态</option></select></nav>
+<article id="isic-pilot" aria-labelledby="isic-heading" hidden>
+  <h2 id="isic-heading">经济活动 · ISIC 离线目录</h2>
+  <p>浏览 ISIC Rev.4、Rev.5 和 Atlas 经济活动目录，查看勘误、对应表和原始证据。</p>
+  <div id="isic-entry"></div>
+</article>
 <article id="furniture-pilot" aria-labelledby="furniture-heading" hidden>
   <h2 id="furniture-heading">经济活动 · 家具离线目录</h2>
   <p>浏览 ISIC、NACE 和法国 NAF 的来源分支，查看 Atlas 活动和原始证据。</p>
@@ -14,34 +19,38 @@
 <div id="count" class="muted" aria-live="polite"></div><main id="list"></main><footer>官方链接及核查记录在每项详情中。未确认的信息保留为空或待核实。此视图不包含受限原始标准资料。</footer>
 <script id="data" type="application/json">__ATLAS_DATA__</script>
 <script>
-const {registry,coverage,furniture_view}=JSON.parse(document.getElementById('data').textContent);
+const {registry,coverage,isic_view,furniture_view}=JSON.parse(document.getElementById('data').textContent);
 const el=id=>document.getElementById(id), make=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n};
 const labels={verified_metadata:'元数据已核实',partially_verified:'部分已核实',candidate:'候选',inaccessible:'官方端点不可访问'};
 for(const d of registry.domains){const o=make('option',d.id+' · '+d.label);o.value=d.id;el('domain').append(o)}
 const requestedDomain = new URLSearchParams(location.search).get('domain');
 if (registry.domains.some(domain => domain.id === requestedDomain)) el('domain').value = requestedDomain;
-const furnitureEntry = el('furniture-entry');
-if (furniture_view === 'passed') {
-  const link = make('a', '打开家具离线目录');
-  link.href = '../local/economy/furniture/index.html';
-  furnitureEntry.append(link);
-} else {
-  const messages = {
-    inputs_not_available_locally: '本地家具资料缺失或校验失败。',
-    not_generated: '本地家具浏览页尚未生成。',
-    stale: '本地家具浏览页需要更新。'
-  };
-  furnitureEntry.append(make('p', messages[furniture_view] || '本地家具浏览页暂不可用。'));
-  if (furniture_view === 'inputs_not_available_locally') {
-    furnitureEntry.append(make('p', '请先运行 python3 -m atlas_sources collect 补齐本地资料。'));
+function catalogueEntry(id, label, status, command) {
+  const entry = el(id + '-entry');
+  if (status === 'passed') {
+    const link = make('a', '打开' + label + '离线目录');
+    link.href = '../local/economy/' + id + '/index.html';
+    entry.append(link);
+    return;
   }
-  furnitureEntry.append(make('p', '在仓库根目录运行以下命令，然后重新打开注册表。'),
-    make('pre', 'python3 -m atlas_sources furniture\npython3 -m atlas_sources report'));
+  const messages = {
+    inputs_not_available_locally: '资料缺失或校验失败。',
+    not_generated: '浏览页尚未生成。',
+    stale: '浏览页需要更新。'
+  };
+  entry.append(make('p', '本地' + label + (messages[status] || '浏览页暂不可用。')));
+  if (status === 'inputs_not_available_locally') {
+    entry.append(make('p', '请先运行 python3 -m atlas_sources collect 补齐本地资料。'));
+  }
+  entry.append(make('p', '在仓库根目录运行以下命令，然后重新打开注册表。'),
+    make('pre', 'python3 -m atlas_sources ' + command + '\npython3 -m atlas_sources report'));
 }
+catalogueEntry('isic', ' ISIC ', isic_view, 'economy');
+catalogueEntry('furniture', '家具', furniture_view, 'furniture');
 for(const s of new Set(registry.sources.map(s=>s.verification_status))){const o=make('option',labels[s]);o.value=s;el('status').append(o)}
 el('stats').textContent=`核查 ${registry.review_date} · ${coverage.registered_sources} 个登记来源 · ${coverage.sources_with_local_files} 个来源有本地文件 · ${coverage.pinned_resources} 个已锁定资源 · ${coverage.parsed_resources} 个资源可解析`;
 function render(){const q=el('q').value.toLowerCase(),domain=el('domain').value,status=el('status').value;
-el('furniture-pilot').hidden = domain !== '' && domain !== '01-economy';
+for (const id of ['isic-pilot', 'furniture-pilot']) el(id).hidden = domain !== '' && domain !== '01-economy';
 const rows=registry.sources.filter(s=>(!domain||s.domains.includes(domain))&&(!status||s.verification_status===status)&&JSON.stringify(s).toLowerCase().includes(q));
 el('list').replaceChildren();el('count').textContent=`显示 ${rows.length} / ${registry.sources.length} 个来源`;
 for(const s of rows){const a=make('article'),details=make('details'),head=make('summary'),title=make('div');title.append(make('strong',s.id+' · '+s.name));head.append(title,make('span',s.classification_object),make('span',labels[s.verification_status]));details.append(head);const dl=make('dl');

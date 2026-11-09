@@ -4,14 +4,31 @@ from collections import Counter
 from pathlib import Path
 from .acquire import sha256
 from .furniture import LOCAL as FURNITURE_LOCAL, REPORT as FURNITURE_REPORT, REQUIRED as FURNITURE_INPUTS
+from .isic import LOCAL as ISIC_LOCAL, REPORT as ISIC_REPORT, REQUIRED as ISIC_INPUTS
 from .normalize import inspect
 from .registry import read_json, write_json
+
+
+def view_status(root, report, local, required, directory, template):
+    if any(not local.get(rid, {}).get("sha256") or local[rid]["status"] == "failed" for rid in required):
+        return "inputs_not_available_locally"
+    status = report["status"] if report else "not_generated"
+    if status != "passed":
+        return status
+    page = root / directory / "index.html"
+    if not page.is_file():
+        return "not_generated"
+    template_sha = sha256((Path(__file__).parent / template).read_bytes())
+    if (report.get("view_sha256") != sha256(page.read_bytes()) or
+            report.get("reproducibility", {}).get("parser_sha256", {}).get(template) != template_sha):
+        return "stale"
+    return "passed"
 
 
 def build(root, registry, resources):
     integrity = inspect(root, resources)
     local = {r["resource_id"]: r for r in integrity}
-    economy_path = root / "data/reports/isic-economy.json"
+    economy_path = root / ISIC_REPORT
     economy = read_json(economy_path) if economy_path.exists() else None
     if economy and economy.get("status") == "passed":
         pins = read_json(root / "data/resources.lock.json")
@@ -174,18 +191,10 @@ def build(root, registry, resources):
     (reports / "coverage.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     # Inline metadata only, so file:// works offline; raw restricted source content is never embedded.
     template = (Path(__file__).parent / "registry_view.html").read_text(encoding="utf-8")
-    furniture_page = root / FURNITURE_LOCAL / "index.html"
-    furniture_view = furniture["status"] if furniture else "not_generated"
-    if any(not local.get(rid, {}).get("sha256") or local[rid]["status"] == "failed" for rid in FURNITURE_INPUTS):
-        furniture_view = "inputs_not_available_locally"
-    elif furniture_view == "passed":
-        if not furniture_page.is_file():
-            furniture_view = "not_generated"
-        elif (furniture.get("view_sha256") != sha256(furniture_page.read_bytes()) or
-              furniture.get("reproducibility", {}).get("parser_sha256", {}).get("furniture_view.html") != sha256(
-                  (Path(__file__).parent / "furniture_view.html").read_bytes())):
-            furniture_view = "stale"
-    payload = json.dumps({"registry": registry, "coverage": summary, "furniture_view": furniture_view},
+    isic_view = view_status(root, economy, local, ISIC_INPUTS, ISIC_LOCAL, "economy_view.html")
+    furniture_view = view_status(root, furniture, local, FURNITURE_INPUTS, FURNITURE_LOCAL, "furniture_view.html")
+    payload = json.dumps({"registry": registry, "coverage": summary,
+                          "isic_view": isic_view, "furniture_view": furniture_view},
                          ensure_ascii=False).replace("<", "\\u003c")
     (reports / "registry.html").write_text(template.replace("__ATLAS_DATA__", payload), encoding="utf-8")
     print(f"Report: {reports / 'coverage.md'}\nBrowse: {reports / 'registry.html'}")

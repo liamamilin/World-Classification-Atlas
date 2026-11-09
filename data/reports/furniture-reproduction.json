@@ -39,7 +39,7 @@
     },
     {
       "path": "data/local/economy/furniture/index.html",
-      "sha256": "26a4c3eacb5c1b2646dc574153894159e3e89cafefc413d82146576a6dcab80c",
+      "sha256": "e41b263b7ae724f1a86a9e0995dcde82450637c4d9ff7573b795221624b9f995",
       "identical": true
     },
     {
@@ -139,7 +139,7 @@
     },
     {
       "path": "data/reports/furniture-alignment.json",
-      "sha256": "7ab7e0748b503964c3cb3333676693782793ea82f1772268ec95ea97036c019d",
+      "sha256": "291e3eb7c1aba3751ef14dae844af3512f2b550068b9bb06572bac85a4a492e4",
       "identical": true
     }
   ],

@@ -46,6 +46,7 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 - [独立承包处理、旧木制部件与官方修订复查](docs/16-FURNITURE-CONTRACT-PARTS-RECHECK.md)
 - [法国 NAF 双向对应、专业家具涂装与店铺内置装置](docs/17-FURNITURE-NAF-BOUNDARIES.md)
 - [家具离线浏览及 NAF、NACE、ISIC 的 Chrome 实测](docs/18-FURNITURE-OFFLINE-BROWSER.md)
+- [ISIC 经济活动离线目录和三项边界案例实测](docs/19-ISIC-OFFLINE-BROWSER.md)
 - [原始分类体系候选清单（机器可读）](data/source-candidates.csv)
 - [Codex 项目协作说明](AGENTS.md)
 
@@ -74,8 +75,10 @@ open data/reports/registry.html
 python3 -m pip install -r requirements-isic.txt --target data/local/deps
 python3 -m atlas_sources economy
 python3 -m atlas_sources reproduce-economy
+python3 -m atlas_sources report
 node scripts/check_economy_view.js
-open data/local/economy/isic/index.html
+node scripts/check_economy_browser.js
+open data/reports/registry.html
 ```
 
 家具活动已接入NACE两版，与ISIC两版逐条比较。当前NACE完整结构1047节点及原有1598行对应保留；又采到实际反向1598行表和996条Eurostat NACE2→ISIC4直接XKOS对应，发布者closeMatch原样保留。后者与UNSD有995对代码事实一致，46.6→466/465的差异独立记录。当前NACE2.1–ISIC5的命名图审计有1047节点阳性对照，未观察到直接关系；没有通过版本链制造官方等价。

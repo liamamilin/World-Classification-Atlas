@@ -64,7 +64,7 @@
     },
     {
       "path": "data/local/economy/isic/index.html",
-      "sha256": "b3bbe93c0877a1d049e3dc3f6ec8ffec38779de47610b9287ade084e720c61c5",
+      "sha256": "5e18fbe91d0b08c01a4411e5c29b8264b610c295758610901b21b8789d697fd4",
       "identical": true
     },
     {
@@ -159,7 +159,7 @@
     },
     {
       "path": "data/reports/isic-economy.json",
-      "sha256": "07d2d935aae08878a18967f2d4fbdeddad02d97e2fb08c09804dc25335bdccd3",
+      "sha256": "1a21deb51a5c0e29e402b9bdabaa24af12983b7470650838f4f7ddb7c241e05a",
       "identical": true
     },
     {

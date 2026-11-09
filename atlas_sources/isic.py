@@ -9,6 +9,7 @@ import uuid
 import zipfile
 from importlib.metadata import version
 from collections import Counter, defaultdict
+from os.path import relpath
 from pathlib import Path
 from .acquire import check_payload, sha256, snapshot_dir
 from .normalize import qa, table_nodes
@@ -19,6 +20,8 @@ from .isic_priority import research
 from .isic_boundaries import auxiliary
 
 NAMESPACE = uuid.UUID("b61f81d8-409b-4faf-8c02-62311fc6b833")
+LOCAL = "data/local/economy/isic"
+REPORT = "data/reports/isic-economy.json"
 REQUIRED = ("isic4-structure", "isic5-structure", "isic4-database", "isic4-manual-2008",
             "isic5-notes-20260819", "isic5-white-cover-2026", "isic5-errata-2026",
             "isic4-isic5-correspondence", "isic4-isic5-technical-note-20241025",
@@ -327,7 +330,7 @@ def run(root, resources):
     deps = root / "data/local/deps"
     if deps.exists():
         sys.path.insert(0, str(deps))
-    output = root / "data/local/economy/isic"
+    output = root / LOCAL
     output.mkdir(parents=True, exist_ok=True)
     try:
         assets = get_assets(root, resources)
@@ -382,9 +385,13 @@ def run(root, resources):
                     "source_to_atlas": dict(reverse_index),
                     "labels_and_definitions": "Resolved from local source snapshots; not republished while source rights remain unresolved."})
         template = (Path(__file__).parent / "economy_view.html").read_text(encoding="utf-8")
+        dossiers = read_json(output / "priority-evidence-dossiers.json")["claims"]
         payload = json.dumps({"old": old, "new": new, "edges": edges, "errata": errata, "concepts": concepts,
-                              "review": expanded}, ensure_ascii=False).replace("<", "\\u003c")
-        (output / "index.html").write_text(template.replace("__ECONOMY_DATA__", payload), encoding="utf-8")
+                              "review": expanded, "dossiers": dossiers,
+                              "original_files": {rid: Path(relpath(asset["path"], output)).as_posix()
+                                                 for rid, asset in assets.items()}}, ensure_ascii=False).replace("<", "\\u003c")
+        html = template.replace("__ECONOMY_DATA__", payload).encode("utf-8")
+        (output / "index.html").write_bytes(html)
         stats = {"status": "passed", "domain": "01-economy", "classification_object": "economic activities",
                  "inputs": [assets[k]["evidence"] for k in REQUIRED], "rev4": old_qa, "rev5": new_qa,
                  "correspondence": {"rows": len(edges), "unique_pairs": len({(e['from_code'], e['to_code']) for e in edges}),
@@ -404,21 +411,21 @@ def run(root, resources):
                  "rev4_readme_corrections": database["readme_correction_checks"],
                  "reproducibility": {"python": sys.version.split()[0],
                                      "packages": {p: version(p) for p in ("access-parser", "construct", "tabulate")},
-                                     "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("isic.py", "isic_review.py", "isic_priority.py", "isic_boundaries.py", "xlsx.py", "normalize.py")},
+                                     "parser_sha256": {p: sha256((Path(__file__).parent / p).read_bytes()) for p in ("isic.py", "isic_review.py", "isic_priority.py", "isic_boundaries.py", "xlsx.py", "normalize.py", "economy_view.html")},
                                      "review_decisions_sha256": sha256((root / "data/research/isic-review-decisions.json").read_bytes()),
                                      "expanded_review_sha256": sha256((root / "data/research/isic-expanded-review.json").read_bytes()),
                                      "priority_review_sha256": sha256((root / "data/research/isic-priority-review.json").read_bytes()),
                                      "boundary_review_sha256": sha256((root / "data/research/isic-boundary-review.json").read_bytes())},
-                 "pdfs": pdfs, "outputs": {"local_directory": str(output.relative_to(root))},
+                 "pdfs": pdfs, "outputs": {"local_directory": LOCAL}, "view_sha256": sha256(html),
                  "automatic_concept_merges": 0,
                  "limits": ["UN raw data and full derived notes/mappings are local-only pending redistribution rights.",
                             "Mapping GSIM is a 2025 historical statement; affected 2026 notes require review.",
                             "SKOS relations are directional research candidates, not approved concept merges.",
                             "No allocation weights or mappings above class level are invented."]}
-        write_json(root / "data/reports/isic-economy.json", stats)
+        write_json(root / REPORT, stats)
         print(json.dumps({k: stats[k] for k in ("status", "correspondence", "rev5_errata_records")}, ensure_ascii=False, indent=2))
         return 0
     except (OSError, ValueError, KeyError, StopIteration, subprocess.CalledProcessError) as error:
-        write_json(root / "data/reports/isic-economy.json", {"status": "failed", "error": f"{type(error).__name__}: {error}"})
+        write_json(root / REPORT, {"status": "failed", "error": f"{type(error).__name__}: {error}"})
         print(f"ISIC research failed: {error}")
         return 1

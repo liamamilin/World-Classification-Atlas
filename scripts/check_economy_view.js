@@ -13,7 +13,11 @@ class Element {
 const elements = new Map(['data', 'edition', 'q', 'stats', 'detail', 'results', 'count', 'proposals'].map(id => [id, new Element(id)]));
 elements.get('data').textContent = payload;
 elements.get('edition').value = 'Atlas';
-const context = { document: { getElementById: id => elements.get(id), createElement: tag => new Element(tag) } };
+const context = {
+  document: { getElementById: id => elements.get(id), createElement: tag => new Element(tag) },
+  location: { hash: '' },
+  window: { addEventListener() {} }
+};
 vm.runInNewContext(code, context);
 const text = node => [node.textContent, ...node.children.map(text)].join(' ');
 const data = JSON.parse(payload);
@@ -32,15 +36,16 @@ assert.match(text(elements.get('detail')), /held_after_review/);
 context.select('ISIC:Rev.5:5221');
 assert.match(text(elements.get('detail')), /TEXT-2026-5221/);
 assert.match(text(elements.get('detail')), /different_word_sequence/);
-const buttons = node => (node.tag === 'button' ? [node] : []).concat(...node.children.map(buttons));
-const parent = buttons(elements.get('detail')).find(b => b.textContent.startsWith('522 '));
-assert.ok(parent, 'original parent link'); parent.onclick();
+const links = node => (node.tag === 'a' ? [node] : []).concat(...node.children.map(links));
+const parent = links(elements.get('detail')).find(a => a.textContent.startsWith('522 '));
+assert.equal(decodeURIComponent(parent.href.slice(1)), 'ISIC:Rev.5:522', 'original parent link');
+context.select(decodeURIComponent(parent.href.slice(1)));
 assert.match(text(elements.get('detail')), /Rev.5 · 522 /);
 console.log('Passed: offline DOM smoke (Atlas tree, partial direction, search, original tree, holds, errata conflict, parent navigation). Visual layout not tested.');
 const plant = data.review.directory.find(n => n.atlas_label === '植物奶饮料制造');
 assert.ok(plant, 'bounded activity has its own stable Atlas identity');
 context.select(plant.id);
-assert.match(text(elements.get('detail')), /不是官方子码/);
+assert.match(text(elements.get('detail')), /属于所引来源类的一部分/);
 assert.match(text(elements.get('detail')), /ISIC:Rev.4:1079/);
 assert.match(text(elements.get('detail')), /ISIC:Rev.5:1105/);
 assert.match(text(elements.get('detail')), /broadMatch/);

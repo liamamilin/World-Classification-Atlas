@@ -1,27 +1,345 @@
 <!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ISIC 经济活动研究</title><style>
-body{margin:0;font:14px/1.65 system-ui,sans-serif;color:#19382f;background:#f4f6f0}header{padding:22px 28px;border-bottom:1px solid #becdc1}h1{margin:0;font-size:25px}h2{font-size:21px}h3{margin-bottom:7px}p{margin:8px 0}main{display:grid;grid-template-columns:360px 1fr;max-width:1500px;margin:auto}aside{padding:18px;border-right:1px solid #d0dbd0;height:calc(100vh - 160px);overflow:auto}section{padding:20px 30px}input,select{padding:8px;font:inherit;border:1px solid #b5c7b9;border-radius:4px;background:white}input{width:94%;margin:10px 0}button{font:inherit;background:none;border:0;text-align:left;color:#184f3c;cursor:pointer;padding:3px 0}details details{margin-left:14px}summary{cursor:pointer}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:15px;border:1px solid #d6dfd3}article{background:white;border:1px solid #d6dfd3;border-radius:5px;padding:12px;margin:9px 0}.muted{color:#5f7467}.flag{color:#87501a}a{color:#146344}#results button{display:block;margin:5px 0}small{display:block;color:#5f7467}@media(max-width:750px){main{grid-template-columns:1fr}aside{height:280px;border-bottom:1px solid #becdc1}section{padding:18px}}
+<title>ISIC 经济活动研究</title>
+<style>
+body{margin:0;font:14px/1.65 system-ui,sans-serif;color:#19382f;background:#f4f6f0;overflow-wrap:anywhere}
+header{padding:22px 28px;border-bottom:1px solid #becdc1}h1{margin:0;font-size:25px}h2{font-size:21px}h3{margin-bottom:7px}p{margin:8px 0}
+main{display:grid;grid-template-columns:minmax(220px,360px) minmax(0,1fr);max-width:1500px;margin:auto}
+aside{padding:18px;border-right:1px solid #d0dbd0;height:calc(100vh - 160px);overflow:auto}
+section{padding:20px 30px}#detail{min-width:0;scroll-margin-top:10px}
+input,select{box-sizing:border-box;max-width:100%;padding:8px;font:inherit;border:1px solid #b5c7b9;border-radius:4px;background:white}
+input{width:100%;margin:10px 0}details{margin:5px 0}details details{margin-left:14px}summary{cursor:pointer}
+pre{white-space:pre-wrap;overflow-wrap:anywhere;background:white;padding:15px;border:1px solid #d6dfd3}
+article{background:white;border:1px solid #d6dfd3;border-radius:5px;padding:12px;margin:9px 0}
+.flag{color:#87501a}a{color:#146344}.node-link{display:block;padding:3px 0}.reference a{display:inline-block;margin-right:10px}
+small{display:block;color:#5f7467}
+@media(max-width:750px){main{grid-template-columns:minmax(0,1fr)}aside{height:280px;border-bottom:1px solid #becdc1}section{padding:18px}}
 </style>
-<header><small>WORLD CLASSIFICATION ATLAS / 经济活动分类研究</small><h1>ISIC 原目录、定义与版本对应</h1><p id="stats"></p><small>原始版本独立保存。对应表依据为 2025-01-17；Rev.5 注释为 2026-08-19。关系是研究候选，范围分配比例未知。</small></header>
-<main><aside><select id="edition" aria-label="目录或源版本"><option value="Atlas">Atlas 已审活动目录 · 局部</option><option value="Rev.5">ISIC Rev.5 · 2026-08 注释</option><option value="Rev.4">ISIC Rev.4 · 数据库更正版</option></select><input id="q" placeholder="搜索代码、名称、说明或排除项" aria-label="搜索节点"><small id="count"></small><div id="results"></div><details><summary>待审目录提案</summary><div id="proposals"></div></details></aside><section id="detail"><p>从左侧选择节点。Atlas 上级仅作来源骨架导航；已审活动与尚待研究的原始目录分别显示。</p></section></main>
+<header>
+  <nav aria-label="经济活动导航"><a href="../../../reports/registry.html?domain=01-economy">返回经济活动来源注册表</a></nav>
+  <small>WORLD CLASSIFICATION ATLAS / 经济活动分类研究</small>
+  <h1>ISIC 原目录、定义与版本对应</h1>
+  <p id="stats"></p>
+  <small>官方对应表发布于 2025-01-17。当前 Rev.5 注释来自 2026-08-19 更新。各条对应分别显示发布信息和 Atlas 审查。</small>
+</header>
+<main>
+  <aside>
+    <select id="edition" aria-label="目录或源版本"><option value="Atlas">Atlas 已审活动目录 · 局部</option><option value="Rev.5">ISIC Rev.5 · 2026-08 注释</option><option value="Rev.4">ISIC Rev.4 · 数据库更正版</option></select>
+    <input id="q" placeholder="搜索代码、名称、说明或排除项" aria-label="搜索节点">
+    <details><summary>待审目录提案</summary><div id="proposals"></div></details>
+    <small id="count"></small><div id="results"></div>
+  </aside>
+  <section id="detail" tabindex="-1"><p>选择节点查看定义、版本对应和证据。</p></section>
+</main>
 <script id="data" type="application/json">__ECONOMY_DATA__</script><script>
-const data=JSON.parse(document.getElementById('data').textContent),el=id=>document.getElementById(id),make=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n};
-const byId=new Map([...data.old,...data.new].map(n=>[n.id,n]));
-const directory=new Map(data.review.directory.map(n=>[n.id,n])),queue=new Map(data.review.queue.map(e=>[e.mapping_id,e])),cases=new Map([...data.review.cases.map(e=>[e.mapping_id,e]),...data.review.supplemental_mappings.map(e=>[e.id,e])]),claims=new Map(data.review.priority_research.claims.map(c=>[c.id,c]));
-const proposals=new Map(data.review.directory_proposals.map(p=>[p.id,p]));const s=data.review.statistics;el('stats').textContent=`Rev.4 ${data.old.length} 个节点 · Rev.5 ${data.new.length} 个节点 · ${data.edges.length} 条官方对应 · 已审关系 ${s.mapping_status.reviewed_current_relation} 条 · 研究补充 ${s.supplemental_mapping_status.accepted_scoped_overlap||0} 条 · Atlas 类锚点 ${s.reviewed_rev5_classes} 个 + 自有活动 ${s.directory_kinds.reviewed_activity_slice||0} 个 · 开放问题 ${s.unresolved_issues} 项`;
-function evidence(parent,e){const a=make('a','官方来源');a.href=e.url;a.target='_blank';a.rel='noopener noreferrer';parent.append(a,make('small',`${e.resource_id} / SHA-256 ${e.sha256}`));if(e.pdf_page)parent.append(make('small','PDF物理页 '+e.pdf_page));if(e.sheet)parent.append(make('small',`${e.sheet}!${e.range||e.row}`))}
-function atlasSelect(id){const n=directory.get(id),out=el('detail');out.replaceChildren(make('h2',n.label),make('p',n.id),make('p',n.kind==='reviewed_activity'?'已审 Rev.5 范围锚点；不同旧类保留独立的部分关联。':n.kind==='reviewed_activity_slice'?'Atlas 自有活动范围；属于所引来源类的一部分，不是官方子码。':'来源骨架导航节点；未审定跨版语义，不计入已审活动覆盖。'));for(const p of n.parents){const b=make('button','上级：'+directory.get(p).label);b.onclick=()=>atlasSelect(p);out.append(b)}out.append(make('pre',n.definition||'未提供独立说明'),make('h3','Atlas → 来源（关系方向）'));for(const b of n.source_bindings){const button=make('button',b.node_id+' · '+(b.relation||'仅导航来源'));button.onclick=()=>select(b.node_id);out.append(button,make('br'));if(b.review_mapping_id){const c=cases.get(b.review_mapping_id);out.append(make('p',c.review?(c.review.cohort_rationale||c.review.rationale):c.rationale));if(c.origin)out.append(make('p','来源层：'+c.origin));evidence(out,c.evidence)}for(const cid of b.claim_ids||[]){const c=claims.get(cid);out.append(make('small',`${cid} · ${c.document} · ${c.field} [${c.start},${c.end}) · SHA-256 ${c.text_sha256}`));evidence(out,c.evidence)}}if(n.activity_review_status==='accepted_current_activity')out.append(make('p','仅Rev.5当前范围已审；没有已批准的Rev.4绑定。'));for(const b of n.candidate_source_bindings||[]){const a=make('article'),button=make('button','待审来源：'+b.node_id);button.onclick=()=>select(b.node_id);a.append(button,make('p',b.status+' · 未批准关系'),make('p',b.rationale));for(const cid of b.claim_ids){const c=claims.get(cid);a.append(make('small',cid+' · '+c.document+' · '+c.field));evidence(a,c.evidence)}out.append(a)}out.append(make('small',n.parent_basis))}
-function proposalSelect(id){const p=proposals.get(id),out=el('detail');out.replaceChildren(make('h2',p.label),make('p','待审目录提案 · '+p.status),make('pre',p.scope),make('p',p.rationale),make('p','没有已批准的来源绑定，不计入已审活动。'));for(const sid of p.candidate_parent_source_ids){const b=make('button','候选当前归属：'+sid);b.onclick=()=>select(sid);out.append(b,make('br'))}for(const cid of p.claim_ids){const c=claims.get(cid);out.append(make('p',cid+' · '+c.document+' · '+c.field));evidence(out,c.evidence)}}
-function select(id){if(proposals.has(id)){proposalSelect(id);return}if(directory.has(id)){atlasSelect(id);return}const n=byId.get(id);el('detail').replaceChildren(make('h2',`${n.edition} · ${n.code} ${n.label}`),make('p',n.component));const parents=make('p','原始父级：');for(const p of n.parents){const b=make('button',p+' '+byId.get(`ISIC:${n.edition}:${p}`).label);b.onclick=()=>select(`ISIC:${n.edition}:${p}`);parents.append(b)}if(!n.parents.length)parents.append(make('span','根节点'));el('detail').append(parents);evidence(el('detail'),n.evidence);
-el('detail').append(make('h3','官方说明与范围'),make('pre',n.definition||'官方数据库未提供独立说明；保留为空。'));
-const concepts=data.concepts.filter(c=>c.source_bindings.some(b=>b.node_id===id));for(const c of concepts){el('detail').append(make('h3','已审 Atlas 研究概念'),make('p',c.id));for(const b of c.source_bindings){const button=make('button',b.node_id+' · '+b.relation);button.onclick=()=>select(b.node_id);el('detail').append(button,make('br'))}}
-for(const a of data.review.directory.filter(a=>a.source_bindings.some(b=>b.node_id===id))){const b=make('button','Atlas 局部目录：'+a.label);b.onclick=()=>atlasSelect(a.id);el('detail').append(b,make('br'))}
-for(const c of data.review.source_to_candidates[id]||[]){const b=make('button','待审活动来源关联：'+directory.get(c.atlas_id).label);b.onclick=()=>atlasSelect(c.atlas_id);el('detail').append(b,make('p',c.status+' · 未批准关系'))}
-const changes=n.edition==='Rev.5'?data.errata.filter(e=>e.code===n.code):[];for(const e of changes){const r=data.review.errata_reviews.find(r=>r.code===e.code),d=make('details');d.append(make('summary','2024 原说明与 2026 更新说明'),make('p',e.reason||''),make('p',r.effect+' / '+r.text_agreement),make('p',r.rationale),make('pre',e.original_note_2024||''),make('pre',e.updated_note_2026||''));if(r.priority_finding)d.append(make('p',r.priority_finding.status),make('p',r.priority_finding.rationale));el('detail').append(d)}
-for(const issue of data.review.issues.filter(i=>(n.edition==='Rev.4'?i.rev4_codes:i.rev5_codes).includes(n.code))){const a=make('article');a.append(make('h3','问题记录 · '+issue.id+' · '+issue.status),make('p',issue.rationale));if(issue.followup)a.append(make('p',issue.followup.rationale),make('p','发布者解决状态：'+issue.followup.publisher_resolution));el('detail').append(a)}
-el('detail').append(make('h3','Atlas 活动证据补充（独立于官方表）'));for(const m of data.review.supplemental_mappings.filter(m=>id===`ISIC:Rev.4:${m.from_code}`||id===`ISIC:Rev.5:${m.to_code}`)){const a=make('article'),peer=id.startsWith('ISIC:Rev.4:')?`ISIC:Rev.5:${m.to_code}`:`ISIC:Rev.4:${m.from_code}`,b=make('button',`${m.from_code} → ${m.to_code}`);b.onclick=()=>select(peer);a.append(b,make('p',m.origin+' · '+m.status+' · '+(m.relation||'待审')),make('p',m.rationale),make('p',m.scope_limit));for(const aid of m.activity_ids){const b=make('button',directory.get(aid).label);b.onclick=()=>atlasSelect(aid);a.append(b,make('br'))}for(const c of m.claim_evidence){a.append(make('small',c.id+' · '+c.document+' · '+c.field));evidence(a,c.evidence)}el('detail').append(a)}el('detail').append(make('h3','官方类级对应'));const edges=data.edges.filter(e=>e.from===id||e.to===id);if(!edges.length)el('detail').append(make('p','该节点非类级或未提供直接对应，不从下级自动生成上级等价。'));
-for(const e of edges){const a=make('article'),peer=e.from===id?e.to:e.from,b=make('button',`${e.from_code}（Rev.4） → ${e.to_code}（Rev.5）`),r=queue.get(e.id),c=cases.get(e.id);b.onclick=()=>select(peer);a.append(b,make('p',`${e.gsim_raw||'GSIM 空白（需结合完整对应图判断）'} · ${e.topology}`),make('p',`原范围 ${e.from_scope} / 新范围 ${e.to_scope}；研究候选 ${e.current_skos_candidate||'待审'}`),make('p',`审查：${r.status} · Rev.4 → Rev.5 ${r.reviewed_relation_rev4_to_rev5||'未批准关系'}`),make('p',e.decision_status),make('pre',e.change_description||''));if(c){a.append(make('p',c.review.cohort_rationale||c.review.rationale),make('p',c.review.rationale));if(c.activity_ids){a.append(make('p',c.scope_limit));for(const aid of c.activity_ids){const b=make('button','已审活动：'+directory.get(aid).label);b.onclick=()=>atlasSelect(aid);a.append(b,make('br'))}}}if(r.issue_ids.length)a.append(make('p','问题：'+r.issue_ids.join(', ')));if(e.publisher_uncertainty)a.append(make('p','发布者原文含问号，保留不确定。'));if(e.qualified_code_issues.length)a.append(make('pre',JSON.stringify(e.qualified_code_issues,null,2)));if(e.updated_notes_affected_codes.length)a.append(make('p','2026 注释影响节点：'+e.updated_notes_affected_codes.join(', ')));evidence(a,e.evidence);el('detail').append(a)}}
-function browse(){const mode=el('edition').value,nodes=mode==='Atlas'?data.review.directory.map(n=>({...n,code:n.kind==='reviewed_activity_slice'?'Atlas活动':n.anchor_source_id.split(':').pop()})):mode==='Rev.4'?data.old:data.new,q=el('q').value.toLowerCase(),out=el('results'),key=n=>mode==='Atlas'?n.id:n.code;out.replaceChildren();if(q){const rows=nodes.filter(n=>(n.code+' '+n.label+' '+(n.definition||'')).toLowerCase().includes(q));el('count').textContent=`匹配 ${rows.length}，显示前 ${Math.min(100,rows.length)} 项`;for(const n of rows.slice(0,100)){const b=make('button',n.code+' '+n.label);b.onclick=()=>select(n.id);out.append(b)}return}el('count').textContent=mode==='Atlas'?`${s.reviewed_rev5_classes} 个类锚点 + ${s.directory_kinds.reviewed_activity_slice||0} 个自有活动 + ${s.directory_kinds.source_derived_navigation} 个导航上级`:`全部 ${nodes.length} 个源节点`;const children=new Map;for(const n of nodes){const p=n.parents[0]||'';if(!children.has(p))children.set(p,[]);children.get(p).push(n)}function tree(parent,holder){for(const n of children.get(parent)||[]){if(children.has(key(n))){const d=make('details'),summary=make('summary',n.code+' '+n.label),b=make('button','查看定义与对应');b.onclick=()=>select(n.id);d.append(summary,b);tree(key(n),d);holder.append(d)}else{const b=make('button',n.code+' '+n.label);b.onclick=()=>select(n.id);holder.append(b,make('br'))}}}tree('',out)}
-for(const p of proposals.values()){const b=make('button',p.label);b.onclick=()=>proposalSelect(p.id);el('proposals').append(b)}
-el('edition').onchange=browse;el('q').oninput=browse;browse();
+const data = JSON.parse(document.getElementById('data').textContent);
+const el = id => document.getElementById(id);
+function make(tag, text, parent) {
+  const node = document.createElement(tag);
+  if (text !== undefined) node.textContent = text;
+  if (parent) parent.append(node);
+  return node;
+}
+const byId = new Map([...data.old, ...data.new].map(node => [node.id, node]));
+const directory = new Map(data.review.directory.map(node => [node.id, node]));
+const proposals = new Map(data.review.directory_proposals.map(node => [node.id, node]));
+const queue = new Map(data.review.queue.map(row => [row.mapping_id, row]));
+const cases = new Map([...data.review.cases.map(row => [row.mapping_id, row]),
+  ...data.review.supplemental_mappings.map(row => [row.id, row])]);
+const claims = new Map(data.dossiers.map(claim => [claim.id, claim]));
+const stats = data.review.statistics;
+el('stats').textContent = `Rev.4 ${data.old.length} 个节点 · Rev.5 ${data.new.length} 个节点 · ${data.edges.length} 条官方对应 · 已审关系 ${stats.mapping_status.reviewed_current_relation} 条 · 研究补充 ${stats.supplemental_mapping_status.accepted_scoped_overlap || 0} 条 · Atlas 类锚点 ${stats.reviewed_rev5_classes} 个 + 自有活动 ${stats.directory_kinds.reviewed_activity_slice || 0} 个 · 开放问题 ${stats.unresolved_issues} 项`;
+
+function nodeLink(id, label, parent) {
+  const link = make('a', label, parent);
+  link.href = '#' + encodeURIComponent(id);
+  link.className = 'node-link';
+}
+function group(parent, id, title) {
+  const box = make('div', undefined, parent);
+  box.id = id;
+  make('h3', title, box);
+  return box;
+}
+function disclosure(parent, title) {
+  const box = make('details', undefined, parent);
+  make('summary', title, box);
+  return box;
+}
+function evidence(parent, item) {
+  const row = make('div', undefined, parent);
+  row.className = 'reference';
+  const locator = [item.resource_id, item.sheet, item.row && '第 ' + item.row + ' 行', item.range,
+    item.pdf_page && 'PDF 物理第 ' + item.pdf_page + ' 页', item.table, item.key && '代码 ' + item.key]
+    .filter(Boolean).join(' · ');
+  make('small', locator, row);
+  const path = data.original_files[item.resource_id];
+  if (path) {
+    const local = make('a', '打开本地原件', row);
+    local.className = 'source-file';
+    local.href = path + (item.pdf_page ? '#page=' + item.pdf_page : '');
+    local.target = '_blank';
+    local.rel = 'noopener';
+  } else {
+    make('span', '本地原件入口缺失', row).className = 'flag';
+  }
+  const official = make('a', '官方来源', row);
+  official.href = item.url;
+  official.target = '_blank';
+  official.rel = 'noopener noreferrer';
+  make('small', 'SHA-256 ' + item.sha256, row);
+}
+function showClaims(parent, ids) {
+  for (const id of ids || []) {
+    const claim = claims.get(id);
+    const box = disclosure(parent, [id, claim.document, claim.field].join(' · '));
+    make('pre', claim.selected_source_text, box);
+    evidence(box, claim.evidence);
+    make('small', `Unicode [${claim.start},${claim.end}) · 节选 SHA-256 ${claim.text_sha256}`, box);
+  }
+}
+function detail(id, title) {
+  const out = el('detail');
+  out.replaceChildren(make('h2', title), make('small', id));
+  return out;
+}
+function atlasSelect(node) {
+  const out = detail(node.id, node.label);
+  const kind = {
+    reviewed_activity: '已审 Rev.5 范围锚点。各旧类的部分关联独立记录。',
+    reviewed_activity_slice: 'Atlas 自有活动范围，属于所引来源类的一部分，官方代码见来源。',
+    source_derived_navigation: '来源骨架导航节点，仅用于目录层级。'
+  };
+  make('p', kind[node.kind], out);
+  for (const id of node.parents) nodeLink(id, '上级 · ' + directory.get(id).label, out);
+  make('pre', node.definition || '未提供独立说明', out);
+  if (node.activity_review_status === 'accepted_current_activity') make('p', '仅Rev.5当前范围已审。', out);
+  const approved = group(out, 'approved-sources', 'Atlas → 来源（关系方向）');
+  for (const binding of node.source_bindings) {
+    nodeLink(binding.node_id, binding.node_id + ' · ' + (binding.relation || '仅导航来源'), approved);
+    if (binding.review_mapping_id) {
+      const review = cases.get(binding.review_mapping_id);
+      make('p', review.review ? (review.review.cohort_rationale || review.review.rationale) : review.rationale, approved);
+      if (review.origin) make('p', '来源层 · ' + review.origin, approved);
+      evidence(approved, review.evidence);
+    }
+    showClaims(approved, binding.claim_ids);
+  }
+  if (node.candidate_source_bindings?.length) {
+    const pending = group(out, 'candidate-sources', '待审来源');
+    for (const binding of node.candidate_source_bindings) {
+      const box = make('article', undefined, pending);
+      nodeLink(binding.node_id, '待审来源 · ' + binding.node_id, box);
+      make('p', binding.status + ' · 未批准关系', box).className = 'flag';
+      make('p', binding.rationale, box);
+      showClaims(box, binding.claim_ids);
+    }
+  }
+  make('small', node.parent_basis, out);
+}
+function proposalSelect(node) {
+  const out = detail(node.id, node.label);
+  make('p', '待审目录提案 · ' + node.status, out).className = 'flag';
+  make('pre', node.scope, out);
+  make('p', node.rationale, out);
+  make('p', '没有已批准的来源绑定。', out);
+  const parents = group(out, 'proposal-parents', '候选当前归属');
+  for (const id of node.candidate_parent_source_ids) nodeLink(id, '候选当前归属 · ' + id, parents);
+  showClaims(out, node.claim_ids);
+}
+function showBacklinks(node, out) {
+  const approved = data.review.directory.filter(a => a.source_bindings.some(b => b.node_id === node.id));
+  if (approved.length) {
+    const box = group(out, 'approved-backlinks', 'Atlas 局部目录与已审活动');
+    for (const activity of approved) nodeLink(activity.id, activity.label, box);
+  }
+  const candidates = data.review.source_to_candidates[node.id] || [];
+  if (candidates.length) {
+    const box = group(out, 'candidate-backlinks', '待审活动来源关联');
+    for (const candidate of candidates) {
+      nodeLink(candidate.atlas_id, directory.get(candidate.atlas_id).label, box);
+      make('p', candidate.status + ' · 未批准关系', box).className = 'flag';
+    }
+  }
+  const relatedProposals = [...proposals.values()].filter(p => p.candidate_parent_source_ids.includes(node.id));
+  if (relatedProposals.length) {
+    const box = group(out, 'proposal-backlinks', '待审目录提案的候选归属');
+    for (const proposal of relatedProposals) nodeLink(proposal.id, proposal.label, box);
+  }
+}
+function showErrata(node, out) {
+  if (node.edition !== 'Rev.5') return;
+  const entry = data.errata.find(row => row.code === node.code);
+  if (!entry) return;
+  const review = data.review.errata_reviews.find(row => row.code === node.code);
+  const box = disclosure(out, '2024 原说明与 2026 更新说明');
+  box.id = 'errata';
+  make('p', entry.reason || '', box);
+  make('p', review.effect + ' / ' + review.text_agreement, box);
+  make('p', review.rationale, box);
+  make('h4', '2024 原说明', box);
+  make('pre', entry.original_note_2024 || '', box);
+  make('h4', '2026 更新说明', box);
+  make('pre', entry.updated_note_2026 || '', box);
+  evidence(box, entry.evidence);
+  if (review.priority_finding) {
+    make('p', review.priority_finding.status, box);
+    make('p', review.priority_finding.rationale, box);
+    showClaims(box, review.priority_finding.claim_ids);
+  }
+}
+function showIssues(node, out) {
+  for (const issue of data.review.issues) {
+    const codes = node.edition === 'Rev.4' ? issue.rev4_codes : issue.rev5_codes;
+    if (!codes.includes(node.code)) continue;
+    const box = make('article', undefined, out);
+    make('h3', '问题记录 · ' + issue.id + ' · ' + issue.status, box);
+    make('p', issue.rationale, box);
+    if (issue.followup) {
+      make('p', issue.followup.rationale, box);
+      make('p', '发布者解决状态 · ' + issue.followup.publisher_resolution, box);
+    }
+  }
+}
+function showSupplements(node, out) {
+  const section = group(out, 'supplemental-rows', 'Atlas 活动证据补充（独立于官方表）');
+  for (const row of data.review.supplemental_mappings) {
+    const from = 'ISIC:Rev.4:' + row.from_code;
+    const to = 'ISIC:Rev.5:' + row.to_code;
+    if (node.id !== from && node.id !== to) continue;
+    const box = make('article', undefined, section);
+    nodeLink(node.id === from ? to : from, row.from_code + '（Rev.4） → ' + row.to_code + '（Rev.5）', box);
+    make('p', row.origin + ' · ' + row.status + ' · ' + (row.relation || '未批准关系'), box);
+    make('p', row.rationale, box);
+    make('p', row.scope_limit, box);
+    evidence(box, row.evidence);
+    for (const id of row.activity_ids) nodeLink(id, directory.get(id).label, box);
+    showClaims(box, row.claim_evidence.map(claim => claim.id));
+  }
+}
+function showOfficial(node, out) {
+  const section = group(out, 'official-rows', '官方类级对应');
+  const edges = data.edges.filter(edge => edge.from === node.id || edge.to === node.id);
+  if (!edges.length) make('p', '该节点暂无直接类级对应。', section);
+  for (const edge of edges) {
+    const box = make('article', undefined, section);
+    const peer = edge.from === node.id ? edge.to : edge.from;
+    const review = queue.get(edge.id);
+    const caseRecord = cases.get(edge.id);
+    nodeLink(peer, edge.from_code + '（Rev.4） → ' + edge.to_code + '（Rev.5）', box);
+    make('p', (edge.gsim_raw || 'GSIM 空白') + ' · ' + edge.topology, box);
+    make('p', `原范围 ${edge.from_scope} / 新范围 ${edge.to_scope}（按完整类级对应推断）`, box);
+    make('p', '研究候选 · ' + (edge.current_skos_candidate || '待审'), box);
+    make('p', `审查 · ${review.status} · Rev.4 → Rev.5 ${review.reviewed_relation_rev4_to_rev5 || '未批准关系'}`, box);
+    make('p', edge.decision_status, box);
+    make('pre', edge.change_description || '', box);
+    if (caseRecord) {
+      if (caseRecord.review.cohort_rationale) make('p', caseRecord.review.cohort_rationale, box);
+      make('p', caseRecord.review.rationale, box);
+      if (caseRecord.activity_ids) {
+        make('p', caseRecord.scope_limit, box);
+        for (const id of caseRecord.activity_ids) nodeLink(id, '已审活动 · ' + directory.get(id).label, box);
+      }
+    }
+    if (review.issue_ids.length) make('p', '问题 · ' + review.issue_ids.join(', '), box);
+    if (edge.publisher_uncertainty) make('p', '发布者原文含问号，保留不确定。', box);
+    if (edge.qualified_code_issues.length) make('pre', JSON.stringify(edge.qualified_code_issues, null, 2), box);
+    if (edge.updated_notes_affected_codes.length) make('p', '2026 注释影响节点 · ' + edge.updated_notes_affected_codes.join(', '), box);
+    evidence(box, edge.evidence);
+  }
+}
+function select(id) {
+  if (proposals.has(id)) return proposalSelect(proposals.get(id));
+  if (directory.has(id)) return atlasSelect(directory.get(id));
+  const node = byId.get(id);
+  if (!node) {
+    el('detail').replaceChildren(make('p', '此本地目录未收录该节点 · ' + id));
+    return;
+  }
+  const out = detail(node.id, `${node.edition} · ${node.code} ${node.label}`);
+  make('p', node.component, out);
+  const parents = make('div', undefined, out);
+  parents.id = 'original-parents';
+  make('p', node.parents.length ? '原始父级' : '根节点', parents);
+  for (const code of node.parents) {
+    const parent = byId.get(`ISIC:${node.edition}:${code}`);
+    nodeLink(parent.id, code + ' ' + parent.label, parents);
+  }
+  evidence(out, node.evidence);
+  make('h3', '官方说明与范围', out);
+  make('pre', node.definition || '官方数据库未提供独立说明。', out);
+  for (const concept of data.concepts.filter(c => c.source_bindings.some(b => b.node_id === id))) {
+    make('h3', '已审 Atlas 研究概念', out);
+    make('p', concept.id, out);
+    for (const binding of concept.source_bindings) nodeLink(binding.node_id, binding.node_id + ' · ' + binding.relation, out);
+  }
+  showBacklinks(node, out);
+  showErrata(node, out);
+  showIssues(node, out);
+  showSupplements(node, out);
+  showOfficial(node, out);
+}
+function browse() {
+  const mode = el('edition').value;
+  const nodes = mode === 'Atlas' ? data.review.directory.map(node => ({
+    ...node, code: node.kind === 'reviewed_activity_slice' ? 'Atlas活动' : node.anchor_source_id.split(':').pop()
+  })) : mode === 'Rev.4' ? data.old : data.new;
+  const query = el('q').value.toLowerCase();
+  const out = el('results');
+  out.replaceChildren();
+  const label = node => node.code + ' ' + node.label;
+  if (query) {
+    const rows = nodes.filter(node => (label(node) + ' ' + (node.definition || '')).toLowerCase().includes(query));
+    el('count').textContent = `匹配 ${rows.length}，显示前 ${Math.min(100, rows.length)} 项`;
+    for (const node of rows.slice(0, 100)) nodeLink(node.id, label(node), out);
+    return;
+  }
+  el('count').textContent = mode === 'Atlas'
+    ? `${stats.reviewed_rev5_classes} 个类锚点 + ${stats.directory_kinds.reviewed_activity_slice || 0} 个自有活动 + ${stats.directory_kinds.source_derived_navigation} 个导航上级`
+    : `全部 ${nodes.length} 个源节点`;
+  const children = new Map();
+  for (const node of nodes) {
+    const parent = node.parents[0] || '';
+    if (!children.has(parent)) children.set(parent, []);
+    children.get(parent).push(node);
+  }
+  function tree(parent, holder) {
+    for (const node of children.get(parent) || []) {
+      const key = mode === 'Atlas' ? node.id : node.code;
+      if (children.has(key)) {
+        const box = disclosure(holder, label(node));
+        nodeLink(node.id, '查看定义与对应', box);
+        tree(key, box);
+      } else {
+        nodeLink(node.id, label(node), holder);
+      }
+    }
+  }
+  tree('', out);
+}
+function followLocation(focus = false) {
+  const hash = location.hash.slice(1);
+  if (!hash) {
+    el('detail').replaceChildren(make('p', '选择节点查看定义、版本对应和证据。'));
+    return;
+  }
+  let id;
+  try { id = decodeURIComponent(hash); } catch { id = hash; }
+  const mode = byId.get(id)?.edition || 'Atlas';
+  if (el('edition').value !== mode) {
+    el('edition').value = mode;
+    el('q').value = '';
+    browse();
+  }
+  select(id);
+  if (focus) {
+    el('detail').focus({preventScroll: true});
+    el('detail').scrollIntoView({block: 'start'});
+  }
+}
+for (const proposal of proposals.values()) nodeLink(proposal.id, proposal.label, el('proposals'));
+el('edition').onchange = browse;
+el('q').oninput = browse;
+window.addEventListener('hashchange', () => followLocation(true));
+browse();
+followLocation();
 </script></html>
