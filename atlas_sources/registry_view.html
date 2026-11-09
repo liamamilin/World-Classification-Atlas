@@ -17,8 +17,8 @@
   <div id="furniture-entry"></div>
 </article>
 <article id="cpc-pilot" aria-labelledby="cpc-heading" hidden>
-  <h2 id="cpc-heading">产品与服务 · CPC 3.0 与 HS 2022 离线目录</h2>
-  <p>分别浏览产品与服务、贸易商品目录，沿官方说明引用查看原件和回查条目。</p>
+  <h2 id="cpc-heading">产品与服务 · CPC、HS 与 Atlas 贸易商品</h2>
+  <p>浏览两套源目录和 Atlas 自有目录，沿证据回查来源、范围和核查状态。</p>
   <div id="cpc-entry"></div>
 </article>
 <div id="count" class="muted" aria-live="polite"></div><main id="list"></main><footer>官方链接及核查记录在每项详情中。未确认的信息保留为空或待核实。此视图不包含受限原始标准资料。</footer>
@@ -54,12 +54,17 @@ catalogueEntry('isic', ' ISIC ', isic_view, 'economy');
 catalogueEntry('furniture', '家具', furniture_view, 'furniture');
 catalogueEntry('cpc', ' CPC 3.0 ', cpc_view, 'cpc', 'products');
 if (cpc_view === 'passed') {
-  const hsLink = make('a', '打开 HS 2022 离线目录');
-  hsLink.id = 'hs-entry';
-  hsLink.href = '../local/products/cpc/index.html#HS%3A2022';
-  const line = make('p');
-  line.append(hsLink);
-  el('cpc-entry').append(line);
+  for (const [id, name, route] of [
+    ['hs-entry', '打开 HS 2022 离线目录', 'HS:2022'],
+    ['atlas-goods-entry', '打开 Atlas 贸易商品自有目录', 'urn:atlas:scheme:trade-goods']
+  ]) {
+    const link = make('a', name);
+    link.id = id;
+    link.href = '../local/products/cpc/index.html#' + encodeURIComponent(route);
+    const line = make('p');
+    line.append(link);
+    el('cpc-entry').append(line);
+  }
 }
 for(const s of new Set(registry.sources.map(s=>s.verification_status))){const o=make('option',labels[s]);o.value=s;el('status').append(o)}
 el('stats').textContent=`核查 ${registry.review_date} · ${coverage.registered_sources} 个登记来源 · ${coverage.sources_with_local_files} 个来源有本地文件 · ${coverage.pinned_resources} 个已锁定资源 · ${coverage.parsed_resources} 个资源可解析`;

@@ -202,7 +202,7 @@
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
-  "view_sha256": "75303038a6d04f35b69e5bb936db8e864cb71f03671cfd2fb30006a68f0b257b",
+  "view_sha256": "ccbe31ac7c821c88efe8734ba2e8968a3995de1a7f66093b4fbc79b90a03de3d",
   "hs_review": {
     "audit": {
       "status": "standalone_table_not_located_in_checked_listing",
@@ -3946,6 +3946,46 @@
       }
     }
   },
+  "trade_goods": {
+    "path": "data/atlas/products/trade-goods-directory.json",
+    "sha256": "a84043d538027eb0497562eb15fbc99ab02a7f9b6471c49ae941248be7231ee8",
+    "hierarchy": {
+      "node_count": 14,
+      "unique_codes": 14,
+      "duplicate_codes": [],
+      "edge_count": 13,
+      "orphan_parents": [],
+      "self_links": [],
+      "cycles": [],
+      "levels": {
+        "1": 1,
+        "2": 4,
+        "3": 7,
+        "4": 2
+      },
+      "roots": 1,
+      "leaves": 8,
+      "definitions": 0,
+      "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+      "polyhierarchy_nodes": 0
+    },
+    "node_status": {
+      "navigation": 6,
+      "reviewed": 4,
+      "pending": 4
+    },
+    "binding_status": {
+      "reviewed": 10,
+      "pending": 9
+    },
+    "reviewed_relations": {
+      "exact": 5,
+      "source_broader": 3,
+      "excluded": 2
+    },
+    "source_nodes": 15,
+    "evidence_records": 18
+  },
   "note_entries": [
     {
       "id": "CPC:3.0:17400",
@@ -4055,12 +4095,13 @@
   "reproducibility": {
     "pdftotext": "pdftotext version 26.04.0",
     "parser_sha256": {
-      "cpc_view.html": "d10e0a713daec9198dbf32bef47adb705a7d0d3611ef14032b645406e154a749",
-      "cpc.py": "8406ee1c607fea2dbcc1710e27bf916674ff2e2af6f49aa5b53980cb224e53c7",
+      "cpc_view.html": "b6dafa8c080c9b5da64cab6f4b2d219f79baaaed2b0a96606306777bd272495d",
+      "cpc.py": "7ff350bee6f47faa1abdf22fcf4b2943a339594aab861189cb65d5cf71935eab",
       "cpc_hs.py": "104d468ab012350e288db7be59f26b207e98a7b3b069f57d533b83738c9c16bd",
       "cpc_hs_followup.py": "21f4f701cd65a077f7994695129b1620d33d741e4297ebc773b651f8ebec60b4",
       "hs.py": "e351af4ef5538322334e3d7d38857c6e980713bdfb1bdb2e4596e395a48ae9eb",
-      "hs_reference.py": "fced54e61263385f5ff7c3968fec0d35cc248e48a3a9de764ab0a722875f63a3"
+      "hs_reference.py": "fced54e61263385f5ff7c3968fec0d35cc248e48a3a9de764ab0a722875f63a3",
+      "trade_goods.py": "95b9af4625a47c55ea127825237e29ed08d447cf5b0c9a06f24149bcbc17aabb"
     }
   }
 }

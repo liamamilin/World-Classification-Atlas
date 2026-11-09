@@ -6,7 +6,7 @@ from os.path import relpath
 from pathlib import Path
 
 from .acquire import sha256
-from . import cpc_hs, cpc_hs_followup, hs, hs_reference
+from . import cpc_hs, cpc_hs_followup, hs, hs_reference, trade_goods
 from .isic import get_assets
 from .normalize import qa, table_nodes
 from .registry import write_json
@@ -88,12 +88,14 @@ def build(root, resources):
     if any(target not in by_code for note in notes.values() for target in note["excluded_to"]):
         raise ValueError("CPC note points outside the locked source tree")
     hs_review = cpc_hs.build(assets, by_code)
+    directory = trade_goods.build(assets, by_code, hs_review)
     output = root / LOCAL
     inputs = [{**a["evidence"], "path": a["path"].relative_to(root).as_posix()} for a in assets.values()]
     payload = {
         "nodes": nodes, "notes": notes, "levels": quality["levels"],
         "pending_scope": PENDING_SCOPE,
         "hs_review": hs_review,
+        "trade_goods": directory,
         "original_files": {rid: Path(relpath(asset["path"], output)).as_posix()
                            for rid, asset in assets.items()},
         "structure_evidence": structure["evidence"],
@@ -103,6 +105,8 @@ def build(root, resources):
     view = template.decode("utf-8").replace("__CPC_DATA__", data).encode("utf-8")
     output.mkdir(parents=True, exist_ok=True)
     (output / "index.html").write_bytes(view)
+    public_directory = root / trade_goods.PUBLIC
+    write_json(public_directory, directory)
     references = hs_review["official_note_references"]
     followup = hs_review["scope_followup"]
     followup_metadata = {
@@ -122,6 +126,8 @@ def build(root, resources):
         "classification_object": "products and services", "inputs": inputs,
         "structure": quality, "view_sha256": sha256(view),
         "hs_review": hs_review,
+        "trade_goods": {"path": trade_goods.PUBLIC, "sha256": sha256(public_directory.read_bytes()),
+                        **directory["summary"]},
         "note_entries": [{"id": by_code[code]["id"], "csv_row": by_code[code]["source_row"],
                           "pdf_page": note["evidence"]["pdf_page"], "has_explanatory_text": bool(note["text"]),
                           "scope_review_status": "pending" if code in PENDING_SCOPE else None,
@@ -130,7 +136,8 @@ def build(root, resources):
             "pdftotext": subprocess.check_output(["pdftotext", "-v"], stderr=subprocess.STDOUT).decode().splitlines()[0],
             "parser_sha256": {"cpc_view.html": sha256(template), **{
                 Path(path).name: sha256(Path(path).read_bytes())
-                for path in (__file__, cpc_hs.__file__, cpc_hs_followup.__file__, hs.__file__, hs_reference.__file__)
+                for path in (__file__, cpc_hs.__file__, cpc_hs_followup.__file__, hs.__file__,
+                             hs_reference.__file__, trade_goods.__file__)
             }},
         },
     }

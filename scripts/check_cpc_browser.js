@@ -8,6 +8,7 @@ const { root, until, buildRegistry, withOfflineBrowser } = require('./offline_br
 const registry = 'data/reports/registry.html';
 const view = 'data/local/products/cpc/index.html';
 const report = 'data/reports/cpc-offline.json';
+const directory = 'data/atlas/products/trade-goods-directory.json';
 const structure = 'cpc3-structure';
 const notes = 'cpc3-notes-20250630';
 const workbook = 'cpc3-notes-xlsx-20250630';
@@ -362,6 +363,98 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await until(() => evaluate('document.querySelector("#domain")?.value === "02-products"'), 'HS registry return');
   console.log('Passed: stable deep link and registry return.');
 
+  const goods = JSON.parse(fs.readFileSync(path.join(root, directory), 'utf8'));
+  const bySlug = new Map(goods.nodes.map(node => [node.code, node]));
+  const bindingSelector = (group, binding) => group + ' li[data-binding-id=' + json(binding.id) + ']';
+  const bindingFor = (concept, source) => concept.binding_ids.map(id => goods.bindings[id])
+    .find(binding => binding.source_id === source);
+  async function expectGoods(concept) {
+    await until(() => evaluate('document.querySelector("#node-id")?.innerText === ' + json(concept.id)), concept.code);
+    assert.equal(await evaluate('decodeURIComponent(location.hash.slice(1))'), concept.id);
+  }
+  async function searchGoods(query, concept) {
+    await evaluate(`(() => {
+      const input = document.querySelector('#search');
+      input.value = ${json(query)};
+      input.dispatchEvent(new Event('input', { bubbles: true }));
+    })()`);
+    await click(linksTo('#results', concept.id));
+    await expectGoods(concept);
+  }
+  async function backToGoods(concept, binding) {
+    await click(bindingSelector('#atlas-backlinks', binding) + ' > a');
+    await expectGoods(concept);
+  }
+  assert.deepEqual(goods.summary.node_status, { navigation: 6, reviewed: 4, pending: 4 });
+  assert.deepEqual(goods.summary.binding_status, { reviewed: 10, pending: 9 });
+  await click('#atlas-goods-entry');
+  await until(() => exists('#choose-atlas[aria-current="page"]'), 'Atlas goods from registry');
+  assert.match(await text('#detail'), /4 个已审商品范围 · 4 个待核范围/);
+  const reviewedGoods = bySlug.get('tree-lights-led-only');
+  for (const slug of ['trade-goods', 'lighting', 'tree-lights']) {
+    const branch = '#tree details[data-code=' + json(slug) + ']';
+    await click(branch + ' > summary');
+    await until(() => exists(branch + '[open] > ul'), slug + ' children');
+  }
+  await click(linksTo('#tree', reviewedGoods.id));
+  await expectGoods(reviewedGoods);
+  assert.deepEqual(await evaluate('Array.from(document.querySelectorAll("#ancestors > li"), node => node.dataset.code)'),
+    ['trade-goods', 'lighting', 'tree-lights', 'tree-lights-led-only']);
+  assert.match(await text('#atlas-node-status'), /已审商品范围/);
+
+  const excluded = bindingFor(reviewedGoods, id('46532'));
+  const excludedRow = bindingSelector('#atlas-bindings', excluded);
+  assert.match(await text(excludedRow), /已审 · 排除/);
+  await click(excludedRow + ' > details > summary');
+  await openOriginal(excludedRow + ' details a[download]', workbook);
+  await openOriginal(excludedRow + ' details a:not([download])', 'hs2022-chapter94', { mode: 'pdf', pdfPage: 4 });
+  await click(excludedRow + ' > a');
+  await expectNode(christmas, excluded.source_clause_id);
+  assert.match(await text(bindingSelector('#atlas-backlinks', excluded)), /已审 · 排除/);
+  await backToGoods(reviewedGoods, excluded);
+
+  const hsBinding = bindingFor(reviewedGoods, hsId('9405.31'));
+  await openHs('#atlas-bindings', '9405.31');
+  assert.match(await text(bindingSelector('#atlas-backlinks', hsBinding)), /范围等价/);
+  await backToGoods(reviewedGoods, hsBinding);
+  assert.match(await text(bindingSelector('#atlas-bindings', bindingFor(reviewedGoods, id('46533')))), /来源范围更宽/);
+
+  const held = bySlug.get('other-led-scope-review');
+  await searchGoods('9405.42', held);
+  assert.match(await text('#atlas-node-status'), /待核范围/);
+  assert.match(await text('#atlas-bindings'), /限定非 LED 专用[\s\S]*9405\.42 却明确限定 LED 专用/);
+  assert.equal(await exists('#atlas-bindings [data-status=reviewed]'), false);
+  await openHs('#atlas-bindings', '9405.42');
+  assert.match(await text('#hs-official-backlinks'), /46539 · 官方定义引用/);
+  await backToGoods(held, bindingFor(held, hsId('9405.42')));
+
+  const frozen = bySlug.get('frozen-octopus-candidate');
+  await searchGoods('冷冻章鱼', frozen);
+  await openHs('#atlas-bindings', '0307.52');
+  assert.equal(await exists('#hs-official-backlinks a'), false);
+  assert.match(await text('#hs-candidate-backlinks'), /Atlas 待核候选/);
+  await backToGoods(frozen, bindingFor(frozen, hsId('0307.52')));
+
+  const bindingFailures = await evaluate(`(() => {
+    const bindings = ${json(Object.values(goods.bindings))};
+    const errors = [];
+    const check = (selector, item, target) => {
+      const row = document.querySelector(selector + ' li[data-binding-id="' + item.id + '"]');
+      const hash = row?.querySelector('a')?.hash;
+      return row?.dataset.status === item.status && hash && decodeURIComponent(hash.slice(1)) === target;
+    };
+    for (const item of bindings) {
+      const source = item.source_clause_id || item.source_id;
+      renderSelection(item.concept_id);
+      if (!check('#atlas-bindings', item, source)) errors.push(item.id + ' forward');
+      renderSelection(source);
+      if (!check('#atlas-backlinks', item, item.concept_id)) errors.push(item.id + ' reverse');
+    }
+    return errors;
+  })()`);
+  assert.deepEqual(bindingFailures, []);
+  console.log('Passed: Atlas hierarchy, original evidence hashes, source-clause clicks and all 19 binding directions.');
+
   const fixture = path.join(temp, 'fixture');
   const copy = file => fs.cpSync(path.join(root, file), path.join(fixture, file), { recursive: true });
   for (const file of ['data/registry', 'data/source-candidates.csv', 'data/resources.lock.json']) copy(file);
@@ -374,17 +467,18 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   }
   await registryState('not-generated', /浏览页尚未生成/);
   execFileSync('python3', ['-m', 'atlas_sources', '--root', fixture, 'cpc'], { cwd: root });
-  for (const file of [view, report]) {
+  for (const file of [view, report, directory]) {
     assert.ok(fs.readFileSync(path.join(fixture, file)).equals(fs.readFileSync(path.join(root, file))), file);
   }
   await registryState('ready', /打开 CPC 3\.0 离线目录/);
+  assert.equal(await exists('#atlas-goods-entry'), true);
   fs.appendFileSync(path.join(fixture, view), '<!-- stale test page -->');
   await registryState('stale', /浏览页需要更新/);
   const missing = baseline.inputs.find(input => input.resource_id === notes).path;
   fs.unlinkSync(path.join(fixture, missing));
   await registryState('missing-notes', /资料缺失或校验失败/);
   assert.match(await text('#cpc-entry'), /python3 -m atlas_sources collect/);
-  console.log('Passed: 2/2 clean rebuild outputs are byte-identical and catalogue readiness states are correct.');
+  console.log('Passed: 3/3 clean rebuild outputs are byte-identical and catalogue readiness states are correct.');
 }
 
 withOfflineBrowser(run).catch(error => { console.error(error); process.exitCode = 1; });

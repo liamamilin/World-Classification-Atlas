@@ -51,6 +51,7 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 - [CPC 3.0 与 HS 2022 对应证据及离线复查](docs/21-CPC-HS2022-REVIEW.md)
 - [HS 2022 结构与 CPC 官方说明的双向回查](docs/22-HS2022-STRUCTURE-AND-CPC-REFERENCES.md)
 - [章鱼、煤炭及摩托车范围与 WCO 章注复核](docs/23-CPC-HS-BOUNDARY-FOLLOWUP.md)
+- [Atlas 贸易商品自有目录样板与双向回查](docs/24-ATLAS-TRADE-GOODS.md)
 - [原始分类体系候选清单（机器可读）](data/source-candidates.csv)
 - [Codex 项目协作说明](AGENTS.md)
 
@@ -105,6 +106,8 @@ CPC 3.0 说明工作簿已提取 69 条明确的 HS 2022 引用。口罩和碳�
 HS 2022 的 6,957 个源节点可按部、章、品目和子目离线浏览。CPC 工作簿的 69 条引用接入 184 条双向回查路径，保留缺码、范围待核及排除。 [结构采集与实测](docs/22-HS2022-STRUCTURE-AND-CPC-REFERENCES.md)
 
 章鱼、煤炭及摩托车的四条 CPC 原句已接入 9 项 WCO 分组、章注及规则证据。UNSD 公开更正筛选未查到章鱼勘误，相关候选和范围仍可单独核查。 [范围复核与实测](docs/23-CPC-HS-BOUNDARY-FOLLOWUP.md)
+
+「产品与服务」可进入 Atlas 贸易商品样板。14 个节点含 4 个已审商品范围和 4 个待核范围，19 条逐条核查记录可与 CPC、HS 源条目双向回查。 [样板与实测](docs/24-ATLAS-TRADE-GOODS.md)
 
 未开发现实实体关联或需求理论。后续继续按明确分类对象和合法本地快照逐领域整理，保留原始目录、版本及映射的语义差异。
 

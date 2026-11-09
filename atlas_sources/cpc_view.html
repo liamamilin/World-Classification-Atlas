@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CPC 3.0 与 HS 2022 · 产品与贸易商品源目录</title>
+<title>CPC 3.0、HS 2022 与 Atlas 贸易商品目录</title>
 <style>
 body{margin:0;font:15px/1.6 system-ui,sans-serif;color:#19382f;background:#f4f6f0;overflow-wrap:anywhere}
 header,main{max-width:1360px;margin:auto;padding:20px 28px}
@@ -19,16 +19,18 @@ pre{white-space:pre-wrap;background:#f4f6f0;padding:12px;overflow-wrap:anywhere}
 .catalogues{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0}
 .catalogues [aria-current]{font-weight:bold;text-decoration-thickness:2px}
 .reference-targets a{display:inline-block;margin:0 8px 3px 0}
+#atlas-bindings>li{padding:8px 0;border-top:1px solid #d6dfd3}
 @media(max-width:750px){header,main{padding:14px}main{grid-template-columns:minmax(0,1fr)}aside{max-height:42vh}}
 </style>
 <header>
   <nav aria-label="产品与服务导航"><a href="../../../reports/registry.html?domain=02-products">返回产品与服务来源注册表</a></nav>
-  <h1>CPC 3.0 与 HS 2022 源目录</h1>
+  <h1>CPC 3.0、HS 2022 与 Atlas 贸易商品</h1>
   <p>CPC 分类对象为产品与服务，ISIC 分类对象为经济活动。HS 分类对象为贸易商品。</p>
   <p id="coverage"></p>
   <nav class="catalogues" aria-label="选择源目录">
     <a id="choose-cpc" href="#CPC%3A3.0">CPC 3.0 产品与服务</a>
     <a id="choose-hs" href="#HS%3A2022">HS 2022 贸易商品</a>
+    <a id="choose-atlas" href="#urn%3Aatlas%3Ascheme%3Atrade-goods">Atlas 贸易商品自有目录</a>
   </nav>
   <details id="release-status">
     <summary>CPC 3.0 与 HS 2022 对应发布状态</summary>
@@ -54,6 +56,8 @@ const el = id => document.getElementById(id);
 const byId = new Map(data.nodes.map(node => [node.id, node]));
 const byCode = new Map(data.nodes.map(node => [node.code, node]));
 const hsReview = data.hs_review;
+const goods = data.trade_goods;
+const goodsById = new Map(goods.nodes.map(node => [node.id, node]));
 const followup = hsReview.scope_followup;
 const hsStructure = hsReview.hs_structure;
 const hsById = new Map(hsStructure.nodes.map(node => [node.id, node]));
@@ -78,8 +82,13 @@ function indexChildren(nodes) {
   return index;
 }
 const catalogues = {
-  cpc: {nodes: data.nodes, byCode, children: indexChildren(data.nodes)},
-  hs: {nodes: hsStructure.nodes, byCode: hsByCode, children: indexChildren(hsStructure.nodes)}
+  cpc: {nodes: data.nodes, byCode, children: indexChildren(data.nodes), treeLabel: 'CPC 3.0 五级源目录',
+    searchLabel: '检索 CPC 代码或原文标题', placeholder: '例如 17400'},
+  hs: {nodes: hsStructure.nodes, byCode: hsByCode, children: indexChildren(hsStructure.nodes),
+    treeLabel: 'HS 2022 四级源目录', searchLabel: '检索 HS 代码或原文标题', placeholder: '例如 9405.31'},
+  atlas: {nodes: goods.nodes, byCode: new Map(goods.nodes.map(node => [node.code, node])),
+    children: indexChildren(goods.nodes), treeLabel: 'Atlas 贸易商品自有目录',
+    searchLabel: '检索 Atlas 商品名称或所引原码', placeholder: '例如 圣诞树或 9405.31'}
 };
 let active;
 function make(tag, value, parent) {
@@ -88,7 +97,10 @@ function make(tag, value, parent) {
   parent.append(item);
   return item;
 }
-function nodeLink(node, parent, label = node.code + ' ' + node.label) {
+function treeLabel(node) {
+  return node.scope ? node.label : node.code + ' ' + node.label;
+}
+function nodeLink(node, parent, label = treeLabel(node)) {
   const link = make('a', label, parent);
   link.href = '#' + encodeURIComponent(node.id);
 }
@@ -107,6 +119,65 @@ function original(parent, evidence, label) {
 }
 function download(parent, evidence, label) {
   original(parent, evidence, label).download = '';
+}
+const goodsRelations = {exact: '已审 · 范围等价', source_broader: '已审 · 来源范围更宽', excluded: '已审 · 排除'};
+function goodsRelation(binding) {
+  return goodsRelations[binding.relation] || '待核 · 范围证据';
+}
+function renderGoodsEvidence(out, evidence) {
+  if (evidence.sheet) {
+    download(out, evidence, '下载 CPC 3.0 工作簿 · ' + evidence.sheet + '!' + evidence.column +
+      evidence.row + ' · 单元格内第 ' + evidence.line + ' 行');
+  } else if (evidence.pdf_page) {
+    original(out, evidence, '打开 WCO HS 2022 PDF · 第 ' + evidence.pdf_page + ' 页');
+    make('small', '提取文本行 ' + evidence.lines.join('–'), out);
+  } else {
+    original(out, evidence, evidence.label);
+  }
+}
+function renderGoods(out, node) {
+  make('h2', node.label, out);
+  make('small', node.id, out).id = 'node-id';
+  const states = {navigation: 'Atlas 导航', reviewed: '已审商品范围', pending: '待核范围'};
+  make('p', states[node.status], out).id = 'atlas-node-status';
+  make('p', node.scope, out);
+  if (node.code === 'trade-goods') {
+    const counts = goods.summary.node_status;
+    make('p', counts.reviewed + ' 个已审商品范围 · ' + counts.pending + ' 个待核范围', out);
+  }
+  renderHierarchy(out, node, catalogues.atlas);
+  if (!node.binding_ids.length) return;
+  make('h3', 'Atlas 到来源的逐条核查', out);
+  const list = make('ul', undefined, out);
+  list.id = 'atlas-bindings';
+  for (const id of node.binding_ids) {
+    const binding = goods.bindings[id];
+    const row = make('li', undefined, list);
+    row.dataset.bindingId = id;
+    row.dataset.status = binding.status;
+    const source = byId.get(binding.source_id) || hsById.get(binding.source_id);
+    const target = refsById.get(binding.source_clause_id) || source;
+    nodeLink(target, row, source.id + ' · ' + source.label);
+    make('p', goodsRelation(binding) + '。' + binding.reason, row);
+    const evidence = make('details', undefined, row);
+    make('summary', '原件和位置', evidence);
+    for (const proof of binding.evidence_ids) renderGoodsEvidence(evidence, goods.evidence[proof]);
+  }
+}
+function renderGoodsBacklinks(out, sourceId) {
+  const ids = goods.source_index[sourceId];
+  if (!ids) return;
+  make('h3', 'Atlas 贸易商品回查', out);
+  const list = make('ul', undefined, out);
+  list.id = 'atlas-backlinks';
+  for (const id of ids) {
+    const binding = goods.bindings[id];
+    const concept = goodsById.get(binding.concept_id);
+    const row = make('li', undefined, list);
+    row.dataset.bindingId = id;
+    row.dataset.status = binding.status;
+    nodeLink(concept, row, concept.label + ' · ' + goodsRelation(binding));
+  }
 }
 function renderPassage(out, passage, label = '打开 WCO 原始 PDF') {
   const item = make('div', undefined, out);
@@ -294,6 +365,7 @@ function renderHs(out, node) {
     const title = make('h3', 'Atlas 范围核查回查', out);
     out.insertBefore(title, backlinks);
   }
+  renderGoodsBacklinks(out, node.id);
 }
 function tree(parent, nodes, children) {
   for (const node of nodes) {
@@ -304,8 +376,8 @@ function tree(parent, nodes, children) {
     }
     const branch = make('details', undefined, item);
     branch.dataset.code = node.code;
-    make('summary', node.code + ' ' + node.label, branch);
-    nodeLink(node, branch, '查看 ' + node.code);
+    make('summary', treeLabel(node), branch);
+    nodeLink(node, branch, '查看 ' + (node.scope ? node.label : node.code));
     branch.addEventListener('toggle', () => {
       if (branch.open && !branch.querySelector('ul')) {
         tree(make('ul', undefined, branch), children.get(node.code), children);
@@ -324,7 +396,8 @@ function search() {
   if (!query) return;
   const catalogue = catalogues[active];
   const matches = catalogue.nodes.filter(node => node.code.toLowerCase().includes(query) ||
-    node.source_code?.includes(query) || node.label.toLowerCase().includes(query));
+    node.source_code?.includes(query) || node.label.toLowerCase().includes(query) ||
+    node.binding_ids?.some(id => goods.bindings[id].source_id.endsWith(':' + query)));
   const exact = catalogue.byCode.get(active === 'hs' ?
     (query.length === 6 && /^\d+$/.test(query) ? query.slice(0, 4) + '.' + query.slice(4) : query.toUpperCase()) : query);
   if (exact) matches.unshift(...matches.splice(matches.indexOf(exact), 1));
@@ -335,20 +408,20 @@ function selectCatalogue(scheme) {
   if (active === scheme) return;
   active = scheme;
   const catalogue = catalogues[scheme];
-  el('search-label').textContent = '检索 ' + (scheme === 'hs' ? 'HS' : 'CPC') + ' 代码或原文标题';
-  el('search').placeholder = scheme === 'hs' ? '例如 9405.31' : '例如 17400';
+  el('search-label').textContent = catalogue.searchLabel;
+  el('search').placeholder = catalogue.placeholder;
   for (const key of Object.keys(catalogues)) {
     if (key === scheme) el('choose-' + key).setAttribute('aria-current', 'page');
     else el('choose-' + key).removeAttribute('aria-current');
   }
   el('search').value = '';
   el('tree').replaceChildren();
-  el('tree').setAttribute('aria-label', scheme === 'hs' ? 'HS 2022 四级源目录' : 'CPC 3.0 五级源目录');
+  el('tree').setAttribute('aria-label', catalogue.treeLabel);
   tree(el('tree'), catalogue.children.get(''), catalogue.children);
   search();
 }
 function renderHierarchy(out, node, catalogue) {
-  make('h3', '原目录路径', out);
+  make('h3', node.scope ? 'Atlas 目录路径' : '原目录路径', out);
   const path = [];
   for (let current = node; current; current = catalogue.byCode.get(current.parents[0])) path.unshift(current);
   const ancestors = make('ol', undefined, out);
@@ -356,7 +429,7 @@ function renderHierarchy(out, node, catalogue) {
   for (const current of path) {
     const item = make('li', undefined, ancestors);
     item.dataset.code = current.code;
-    if (current === node) item.textContent = current.code + ' ' + current.label;
+    if (current === node) item.textContent = treeLabel(current);
     else nodeLink(current, item);
   }
   const descendants = catalogue.children.get(node.code);
@@ -377,9 +450,15 @@ function renderSelection(id, focus = false) {
   const out = el('detail');
   const reference = refsById.get(id);
   const node = byId.get(reference?.cpc_id || id);
+  const concept = goodsById.get(id) || (id === goods.scheme_id ? goods.nodes[0] : undefined);
   out.replaceChildren();
   const hs = hsById.get(id);
-  selectCatalogue(hs || id === 'HS:2022' ? 'hs' : 'cpc');
+  selectCatalogue(concept ? 'atlas' : hs || id === 'HS:2022' ? 'hs' : 'cpc');
+  if (concept) {
+    renderGoods(out, concept);
+    if (focus) out.focus();
+    return;
+  }
   if (hs) {
     renderHs(out, hs);
     if (focus) out.focus();
@@ -387,7 +466,7 @@ function renderSelection(id, focus = false) {
   }
   if (!node) {
     const home = !id || ['HS:2022', 'CPC:3.0'].includes(id);
-    make('p', home ? '从目录或检索结果选择一个条目。' : '未收录此 CPC 3.0 或 HS 2022 标识。', out);
+    make('p', home ? '从目录或检索结果选择一个条目。' : '未收录此目录标识。', out);
     if (id === 'HS:2022') make('p', 'HS 2022 · ' + hsStructure.quality.node_count +
       ' 个源节点 · 部、章、品目、子目。', out);
     return;
@@ -431,6 +510,7 @@ function renderSelection(id, focus = false) {
     for (const [code] of referencing) nodeLink(byCode.get(code), make('li', undefined, list));
   }
   renderCpcReview(out, node);
+  renderGoodsBacklinks(out, node.id);
   if (focus || reference) {
     const target = reference ? el(reference.id) : out;
     target.focus({preventScroll: true});

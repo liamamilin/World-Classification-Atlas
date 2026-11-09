@@ -1,0 +1,770 @@
+{
+  "scheme_id": "urn:atlas:scheme:trade-goods",
+  "classification_object": "traded goods",
+  "binding_direction": "Atlas to source",
+  "source_editions": [
+    "CPC:3.0",
+    "HS:2022"
+  ],
+  "nodes": [
+    {
+      "id": "urn:atlas:concept:4884dabd-80b2-5ec0-893e-ce3c443485e5",
+      "code": "trade-goods",
+      "label": "贸易商品",
+      "parents": [],
+      "scope": "按商品形态、用途和工艺组织的 Atlas 样板。",
+      "status": "navigation",
+      "binding_ids": []
+    },
+    {
+      "id": "urn:atlas:concept:037b7ce5-e5ef-5126-8a34-2d1a01cac864",
+      "code": "lighting",
+      "label": "照明商品",
+      "parents": [
+        "trade-goods"
+      ],
+      "scope": "按用途和光源设计区分灯串与其他电灯具。",
+      "status": "navigation",
+      "binding_ids": []
+    },
+    {
+      "id": "urn:atlas:concept:11eb78c9-6132-529c-adeb-b1ea14bf238b",
+      "code": "tree-lights",
+      "label": "圣诞树用灯串",
+      "parents": [
+        "lighting"
+      ],
+      "scope": "按是否仅为 LED 光源设计分开。",
+      "status": "navigation",
+      "binding_ids": []
+    },
+    {
+      "id": "urn:atlas:concept:611d79f2-aa2e-544f-b0ec-2f73ead35600",
+      "code": "seafood",
+      "label": "水产商品",
+      "parents": [
+        "trade-goods"
+      ],
+      "scope": "按物种和加工形态组织，当前选取冷冻章鱼候选。",
+      "status": "navigation",
+      "binding_ids": []
+    },
+    {
+      "id": "urn:atlas:concept:2ce1bbe5-097a-5273-a40f-e994ddefa92c",
+      "code": "coal",
+      "label": "煤炭商品",
+      "parents": [
+        "trade-goods"
+      ],
+      "scope": "保留商品形态、煤种及判定口径的差异。",
+      "status": "navigation",
+      "binding_ids": []
+    },
+    {
+      "id": "urn:atlas:concept:489dd738-6d97-53d6-b920-f67a7b49b85c",
+      "code": "cycles",
+      "label": "摩托车及装辅助动力的脚踏车",
+      "parents": [
+        "trade-goods"
+      ],
+      "scope": "按驱动和边车范围组织有证据的样本。",
+      "status": "navigation",
+      "binding_ids": []
+    },
+    {
+      "id": "urn:atlas:concept:5ad689d5-ab54-5f96-9d41-1aa970e0b596",
+      "code": "tree-lights-led-only",
+      "label": "LED 专用圣诞树灯串",
+      "parents": [
+        "tree-lights"
+      ],
+      "scope": "仅为 LED 光源设计的圣诞树用灯串。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:cac27a9e-6b68-55a5-8861-6d4be9a37a71",
+        "urn:atlas:mapping:9c754ae4-8bb6-5a43-9bad-6d01e9039fc8",
+        "urn:atlas:mapping:ca2dd13f-c666-5178-bcab-b1b872099c8f"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:e0073ea8-628f-5347-b875-b8d91c8bc202",
+      "code": "tree-lights-other",
+      "label": "其他圣诞树灯串",
+      "parents": [
+        "tree-lights"
+      ],
+      "scope": "圣诞树用灯串中，未限定为仅使用 LED 光源的部分。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:727b832a-49d5-5fba-b3dd-f31b9e799cbb",
+        "urn:atlas:mapping:4250ad69-2c35-5366-af25-ac8b11825681"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:098b3467-6fb9-5096-be3f-1ffa3c5462ff",
+      "code": "other-photovoltaic-led",
+      "label": "其他光伏 LED 专用电灯具",
+      "parents": [
+        "lighting"
+      ],
+      "scope": "归在其他电灯及灯具中的光伏产品，仅为 LED 光源设计。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db",
+        "urn:atlas:mapping:8a01e0d0-38cf-59df-85e8-281ba896a0a6",
+        "urn:atlas:mapping:52c3808c-58c5-5ec2-8937-be6a39b0acc7"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:d446e283-01c2-5632-9cca-e05a150663ea",
+      "code": "other-led-scope-review",
+      "label": "其他 LED 专用电灯具对应待核",
+      "parents": [
+        "lighting"
+      ],
+      "scope": "核查 HS 所列的其他 LED 专用电灯具，与 CPC 原句所指范围的差异。",
+      "status": "pending",
+      "binding_ids": [
+        "urn:atlas:mapping:a7c5eac4-2b2c-514a-bcad-7da0253ec459",
+        "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:60a52f22-c9f2-5207-b07c-d92da75b1c44",
+      "code": "frozen-octopus-candidate",
+      "label": "冷冻章鱼对应待核",
+      "parents": [
+        "seafood"
+      ],
+      "scope": "核查冷冻章鱼部分。章鱼粉、粗粉及团粒另有 HS 章注边界。",
+      "status": "pending",
+      "binding_ids": [
+        "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66",
+        "urn:atlas:mapping:3d71f10a-4232-5ec5-89b0-9198107a3e95"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:d7a7ac44-97c8-579c-8a30-05c338b61c1a",
+      "code": "unagglomerated-bituminous-scope-review",
+      "label": "未团聚烟煤共引范围待核",
+      "parents": [
+        "coal"
+      ],
+      "scope": "以 WCO 未团聚煤分组和烟煤阈值为边界，记录烟煤与次烟煤两个 CPC 条目的共引问题。",
+      "status": "pending",
+      "binding_ids": [
+        "urn:atlas:mapping:67e38db8-0ac2-5376-ba32-99570f6e4e0f",
+        "urn:atlas:mapping:09988464-af0f-5f57-bd6b-0a993f176ea7",
+        "urn:atlas:mapping:0f9230bb-7fd3-5d0a-ad54-767440858d28"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:f3f1395e-efc4-5e78-a8b2-5b0485d74e7c",
+      "code": "electric-motor-cycles",
+      "label": "电动机驱动的摩托车及辅助动力脚踏车",
+      "parents": [
+        "cycles"
+      ],
+      "scope": "HS 87.11 内以电动机驱动的摩托车和装有辅助动力的脚踏车，可带边车。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:a6a5d3c3-c487-55ea-9e69-984782f48de7",
+        "urn:atlas:mapping:0db74a6a-cd7c-5fe0-ae0a-c3ef5bc2d891"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:94ac527a-67d2-5710-9206-6b494c2b4cfb",
+      "code": "other-motor-cycle-scope-review",
+      "label": "其他辅助动力车辆及边车范围待核",
+      "parents": [
+        "cycles"
+      ],
+      "scope": "核查 HS 87.11 同级残余项在 CPC 电驱动纳入句中的具体所指。",
+      "status": "pending",
+      "binding_ids": [
+        "urn:atlas:mapping:d74e582c-70d5-5ee2-b390-7784ecb0698e",
+        "urn:atlas:mapping:c79e6235-0395-5b66-942f-caed1fa9c9f5"
+      ]
+    }
+  ],
+  "bindings": {
+    "urn:atlas:mapping:cac27a9e-6b68-55a5-8861-6d4be9a37a71": {
+      "id": "urn:atlas:mapping:cac27a9e-6b68-55a5-8861-6d4be9a37a71",
+      "concept_id": "urn:atlas:concept:5ad689d5-ab54-5f96-9d41-1aa970e0b596",
+      "source_id": "HS:2022:9405.31",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-christmas-strings"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:9c754ae4-8bb6-5a43-9bad-6d01e9039fc8": {
+      "id": "urn:atlas:mapping:9c754ae4-8bb6-5a43-9bad-6d01e9039fc8",
+      "concept_id": "urn:atlas:concept:5ad689d5-ab54-5f96-9d41-1aa970e0b596",
+      "source_id": "CPC:3.0:46533",
+      "status": "reviewed",
+      "relation": "source_broader",
+      "reason": "该 CPC 子类还涵盖其他 LED 专用灯具。",
+      "evidence_ids": [
+        "CPC:3.0:46533:HS2022:C:1",
+        "wco-christmas-strings"
+      ],
+      "source_clause_id": "CPC:3.0:46533:HS2022:C:1"
+    },
+    "urn:atlas:mapping:ca2dd13f-c666-5178-bcab-b1b872099c8f": {
+      "id": "urn:atlas:mapping:ca2dd13f-c666-5178-bcab-b1b872099c8f",
+      "concept_id": "urn:atlas:concept:5ad689d5-ab54-5f96-9d41-1aa970e0b596",
+      "source_id": "CPC:3.0:46532",
+      "status": "reviewed",
+      "relation": "excluded",
+      "reason": "CPC 排除句明确列出 9405.31。",
+      "evidence_ids": [
+        "CPC:3.0:46532:HS2022:D:1",
+        "wco-christmas-strings"
+      ],
+      "source_clause_id": "CPC:3.0:46532:HS2022:D:1"
+    },
+    "urn:atlas:mapping:727b832a-49d5-5fba-b3dd-f31b9e799cbb": {
+      "id": "urn:atlas:mapping:727b832a-49d5-5fba-b3dd-f31b9e799cbb",
+      "concept_id": "urn:atlas:concept:e0073ea8-628f-5347-b875-b8d91c8bc202",
+      "source_id": "HS:2022:9405.39",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-christmas-strings"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:4250ad69-2c35-5366-af25-ac8b11825681": {
+      "id": "urn:atlas:mapping:4250ad69-2c35-5366-af25-ac8b11825681",
+      "concept_id": "urn:atlas:concept:e0073ea8-628f-5347-b875-b8d91c8bc202",
+      "source_id": "CPC:3.0:46532",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "CPC 定义指向 9405.39，并明确排除同组 LED 专用灯串。",
+      "evidence_ids": [
+        "CPC:3.0:46532:HS2022:C:1",
+        "wco-christmas-strings"
+      ],
+      "source_clause_id": "CPC:3.0:46532:HS2022:C:1"
+    },
+    "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db": {
+      "id": "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db",
+      "concept_id": "urn:atlas:concept:098b3467-6fb9-5096-be3f-1ffa3c5462ff",
+      "source_id": "HS:2022:9405.41",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-other-electric-lighting"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:8a01e0d0-38cf-59df-85e8-281ba896a0a6": {
+      "id": "urn:atlas:mapping:8a01e0d0-38cf-59df-85e8-281ba896a0a6",
+      "concept_id": "urn:atlas:concept:098b3467-6fb9-5096-be3f-1ffa3c5462ff",
+      "source_id": "CPC:3.0:46533",
+      "status": "reviewed",
+      "relation": "source_broader",
+      "reason": "该 CPC 子类还涵盖其他用途的 LED 专用灯具。",
+      "evidence_ids": [
+        "CPC:3.0:46533:HS2022:C:1",
+        "wco-other-electric-lighting"
+      ],
+      "source_clause_id": "CPC:3.0:46533:HS2022:C:1"
+    },
+    "urn:atlas:mapping:52c3808c-58c5-5ec2-8937-be6a39b0acc7": {
+      "id": "urn:atlas:mapping:52c3808c-58c5-5ec2-8937-be6a39b0acc7",
+      "concept_id": "urn:atlas:concept:098b3467-6fb9-5096-be3f-1ffa3c5462ff",
+      "source_id": "CPC:3.0:46539",
+      "status": "reviewed",
+      "relation": "excluded",
+      "reason": "CPC 排除句明确列出 9405.41。",
+      "evidence_ids": [
+        "CPC:3.0:46539:HS2022:D:1",
+        "wco-other-electric-lighting"
+      ],
+      "source_clause_id": "CPC:3.0:46539:HS2022:D:1"
+    },
+    "urn:atlas:mapping:a7c5eac4-2b2c-514a-bcad-7da0253ec459": {
+      "id": "urn:atlas:mapping:a7c5eac4-2b2c-514a-bcad-7da0253ec459",
+      "concept_id": "urn:atlas:concept:d446e283-01c2-5632-9cca-e05a150663ea",
+      "source_id": "HS:2022:9405.42",
+      "status": "pending",
+      "relation": null,
+      "reason": "此 HS 子目为范围核查证据。",
+      "evidence_ids": [
+        "wco-other-electric-lighting"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74": {
+      "id": "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74",
+      "concept_id": "urn:atlas:concept:d446e283-01c2-5632-9cca-e05a150663ea",
+      "source_id": "CPC:3.0:46539",
+      "status": "pending",
+      "relation": null,
+      "reason": "CPC 标题限定非 LED 专用，所引的 9405.42 却明确限定 LED 专用。",
+      "evidence_ids": [
+        "CPC:3.0:46539:HS2022:C:1",
+        "wco-other-electric-lighting"
+      ],
+      "source_clause_id": "CPC:3.0:46539:HS2022:C:1"
+    },
+    "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66": {
+      "id": "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66",
+      "concept_id": "urn:atlas:concept:60a52f22-c9f2-5207-b07c-d92da75b1c44",
+      "source_id": "HS:2022:0307.52",
+      "status": "pending",
+      "relation": null,
+      "reason": "此 HS 子目为范围核查证据。",
+      "evidence_ids": [
+        "wco-octopus",
+        "wco-octopus-powders",
+        "unsd-octopus-corrections"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:3d71f10a-4232-5ec5-89b0-9198107a3e95": {
+      "id": "urn:atlas:mapping:3d71f10a-4232-5ec5-89b0-9198107a3e95",
+      "concept_id": "urn:atlas:concept:60a52f22-c9f2-5207-b07c-d92da75b1c44",
+      "source_id": "CPC:3.0:21267",
+      "status": "pending",
+      "relation": null,
+      "reason": "CPC 原句写 0307.53。0307.52 有冷冻章鱼税则依据，保留为候选。",
+      "evidence_ids": [
+        "CPC:3.0:21267:HS2022:C:1",
+        "wco-octopus",
+        "wco-octopus-powders",
+        "unsd-octopus-corrections"
+      ],
+      "source_clause_id": "CPC:3.0:21267:HS2022:C:1"
+    },
+    "urn:atlas:mapping:67e38db8-0ac2-5376-ba32-99570f6e4e0f": {
+      "id": "urn:atlas:mapping:67e38db8-0ac2-5376-ba32-99570f6e4e0f",
+      "concept_id": "urn:atlas:concept:d7a7ac44-97c8-579c-8a30-05c338b61c1a",
+      "source_id": "HS:2022:2701.12",
+      "status": "pending",
+      "relation": null,
+      "reason": "此 HS 子目为范围核查证据。",
+      "evidence_ids": [
+        "wco-bituminous-coal",
+        "wco-coal-group"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:09988464-af0f-5f57-bd6b-0a993f176ea7": {
+      "id": "urn:atlas:mapping:09988464-af0f-5f57-bd6b-0a993f176ea7",
+      "concept_id": "urn:atlas:concept:d7a7ac44-97c8-579c-8a30-05c338b61c1a",
+      "source_id": "CPC:3.0:11012",
+      "status": "pending",
+      "relation": null,
+      "reason": "烟煤原句明确引用该码，两条 CPC 原句的共引范围待核。",
+      "evidence_ids": [
+        "CPC:3.0:11012:HS2022:C:1",
+        "wco-bituminous-coal",
+        "wco-coal-group"
+      ],
+      "source_clause_id": "CPC:3.0:11012:HS2022:C:1"
+    },
+    "urn:atlas:mapping:0f9230bb-7fd3-5d0a-ad54-767440858d28": {
+      "id": "urn:atlas:mapping:0f9230bb-7fd3-5d0a-ad54-767440858d28",
+      "concept_id": "urn:atlas:concept:d7a7ac44-97c8-579c-8a30-05c338b61c1a",
+      "source_id": "CPC:3.0:11031",
+      "status": "pending",
+      "relation": null,
+      "reason": "次烟煤位于 CPC 褐煤类，其引用与烟煤共用同一 HS 子目。",
+      "evidence_ids": [
+        "CPC:3.0:11031:HS2022:C:1",
+        "wco-bituminous-coal",
+        "wco-coal-group"
+      ],
+      "source_clause_id": "CPC:3.0:11031:HS2022:C:1"
+    },
+    "urn:atlas:mapping:a6a5d3c3-c487-55ea-9e69-984782f48de7": {
+      "id": "urn:atlas:mapping:a6a5d3c3-c487-55ea-9e69-984782f48de7",
+      "concept_id": "urn:atlas:concept:f3f1395e-efc4-5e78-a8b2-5b0485d74e7c",
+      "source_id": "HS:2022:8711.60",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-motorcycles",
+        "wco-motorcycles-heading"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:0db74a6a-cd7c-5fe0-ae0a-c3ef5bc2d891": {
+      "id": "urn:atlas:mapping:0db74a6a-cd7c-5fe0-ae0a-c3ef5bc2d891",
+      "concept_id": "urn:atlas:concept:f3f1395e-efc4-5e78-a8b2-5b0485d74e7c",
+      "source_id": "CPC:3.0:49913",
+      "status": "reviewed",
+      "relation": "source_broader",
+      "reason": "纳入原句点名电驱动，CPC 子类标题还涵盖更宽的辅助动力及边车范围。",
+      "evidence_ids": [
+        "CPC:3.0:49913:HS2022:C:1",
+        "wco-motorcycles",
+        "wco-motorcycles-heading"
+      ],
+      "source_clause_id": "CPC:3.0:49913:HS2022:C:1"
+    },
+    "urn:atlas:mapping:d74e582c-70d5-5ee2-b390-7784ecb0698e": {
+      "id": "urn:atlas:mapping:d74e582c-70d5-5ee2-b390-7784ecb0698e",
+      "concept_id": "urn:atlas:concept:94ac527a-67d2-5710-9206-6b494c2b4cfb",
+      "source_id": "HS:2022:8711.90",
+      "status": "pending",
+      "relation": null,
+      "reason": "此 HS 子目为范围核查证据。",
+      "evidence_ids": [
+        "wco-motorcycles",
+        "wco-motorcycles-heading"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:c79e6235-0395-5b66-942f-caed1fa9c9f5": {
+      "id": "urn:atlas:mapping:c79e6235-0395-5b66-942f-caed1fa9c9f5",
+      "concept_id": "urn:atlas:concept:94ac527a-67d2-5710-9206-6b494c2b4cfb",
+      "source_id": "CPC:3.0:49913",
+      "status": "pending",
+      "relation": null,
+      "reason": "CPC 电驱动纳入句同时列出该残余项，具体纳入范围待核。",
+      "evidence_ids": [
+        "CPC:3.0:49913:HS2022:C:1",
+        "wco-motorcycles",
+        "wco-motorcycles-heading"
+      ],
+      "source_clause_id": "CPC:3.0:49913:HS2022:C:1"
+    }
+  },
+  "source_index": {
+    "HS:2022:9405.31": [
+      "urn:atlas:mapping:cac27a9e-6b68-55a5-8861-6d4be9a37a71"
+    ],
+    "CPC:3.0:46533": [
+      "urn:atlas:mapping:9c754ae4-8bb6-5a43-9bad-6d01e9039fc8",
+      "urn:atlas:mapping:8a01e0d0-38cf-59df-85e8-281ba896a0a6"
+    ],
+    "CPC:3.0:46532": [
+      "urn:atlas:mapping:ca2dd13f-c666-5178-bcab-b1b872099c8f",
+      "urn:atlas:mapping:4250ad69-2c35-5366-af25-ac8b11825681"
+    ],
+    "HS:2022:9405.39": [
+      "urn:atlas:mapping:727b832a-49d5-5fba-b3dd-f31b9e799cbb"
+    ],
+    "HS:2022:9405.41": [
+      "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db"
+    ],
+    "CPC:3.0:46539": [
+      "urn:atlas:mapping:52c3808c-58c5-5ec2-8937-be6a39b0acc7",
+      "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74"
+    ],
+    "HS:2022:9405.42": [
+      "urn:atlas:mapping:a7c5eac4-2b2c-514a-bcad-7da0253ec459"
+    ],
+    "HS:2022:0307.52": [
+      "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66"
+    ],
+    "CPC:3.0:21267": [
+      "urn:atlas:mapping:3d71f10a-4232-5ec5-89b0-9198107a3e95"
+    ],
+    "HS:2022:2701.12": [
+      "urn:atlas:mapping:67e38db8-0ac2-5376-ba32-99570f6e4e0f"
+    ],
+    "CPC:3.0:11012": [
+      "urn:atlas:mapping:09988464-af0f-5f57-bd6b-0a993f176ea7"
+    ],
+    "CPC:3.0:11031": [
+      "urn:atlas:mapping:0f9230bb-7fd3-5d0a-ad54-767440858d28"
+    ],
+    "HS:2022:8711.60": [
+      "urn:atlas:mapping:a6a5d3c3-c487-55ea-9e69-984782f48de7"
+    ],
+    "CPC:3.0:49913": [
+      "urn:atlas:mapping:0db74a6a-cd7c-5fe0-ae0a-c3ef5bc2d891",
+      "urn:atlas:mapping:c79e6235-0395-5b66-942f-caed1fa9c9f5"
+    ],
+    "HS:2022:8711.90": [
+      "urn:atlas:mapping:d74e582c-70d5-5ee2-b390-7784ecb0698e"
+    ]
+  },
+  "evidence": {
+    "wco-christmas-strings": {
+      "resource_id": "hs2022-chapter94",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+      "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+      "publication_date": null,
+      "pdf_page": 4,
+      "lines": [
+        7,
+        10
+      ],
+      "text_sha256": "7c0f12a113853c40851b9947c541bf87e65b89a955bfb9ddca87e05dfe2c37b3"
+    },
+    "wco-other-electric-lighting": {
+      "resource_id": "hs2022-chapter94",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+      "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+      "publication_date": null,
+      "pdf_page": 4,
+      "lines": [
+        11,
+        16
+      ],
+      "text_sha256": "7cd597b86f63a1e177cfbb3e0955acb4478b39032d4889ec4416a0967879f9cd"
+    },
+    "wco-octopus": {
+      "resource_id": "hs2022-chapter03",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+      "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+      "publication_date": null,
+      "pdf_page": 11,
+      "lines": [
+        23,
+        26
+      ],
+      "text_sha256": "66de33b4f25bae3ba48761402c71052f38036661fca1d4c303fe41804bbd875b"
+    },
+    "wco-bituminous-coal": {
+      "resource_id": "hs2022-chapter27",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+      "sha256": "596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805",
+      "publication_date": null,
+      "pdf_page": 1,
+      "lines": [
+        33,
+        35
+      ],
+      "text_sha256": "2e591906cb37b619d44721e4661a5fddeae8c5c60c3bcc6d185d202975c9f4d5"
+    },
+    "wco-coal-group": {
+      "resource_id": "hs2022-chapter27",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+      "sha256": "596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805",
+      "publication_date": null,
+      "pdf_page": 2,
+      "lines": [
+        3,
+        9
+      ],
+      "text_sha256": "bb27a32548d81d38e7962af6895cfd2e91a253b0ba3a801a72402d582257fff3"
+    },
+    "wco-motorcycles-heading": {
+      "resource_id": "hs2022-chapter87",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+      "sha256": "e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904",
+      "publication_date": null,
+      "pdf_page": 4,
+      "lines": [
+        39,
+        46
+      ],
+      "text_sha256": "87b1ffb80ea3dd245c5506c9e0b0b69f300cdd70bfce817080486a109e6a3b95"
+    },
+    "wco-motorcycles": {
+      "resource_id": "hs2022-chapter87",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+      "sha256": "e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904",
+      "publication_date": null,
+      "pdf_page": 5,
+      "lines": [
+        3,
+        8
+      ],
+      "text_sha256": "18ed2febba5bd221cfc5b2e62f5675a049ec54292269e409987049cb90d6a32a"
+    },
+    "wco-octopus-powders": {
+      "resource_id": "hs2022-chapter03",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+      "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+      "publication_date": null,
+      "pdf_page": 1,
+      "lines": [
+        17,
+        18
+      ],
+      "text_sha256": "1d329332af90f137fcb78f9c0305a95ce62b0707dd3a72be0d4aefcc224e95ad"
+    },
+    "unsd-octopus-corrections": {
+      "resource_id": "cpc3-corrections-register-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+      "sha256": "9bb865425c6d46015e3f8f56554da7ac67a964786a81ab4e83522ca9863cf513",
+      "publication_date": null,
+      "element_id": "searchResult",
+      "label": "打开 UNSD 更正检索结果",
+      "search_form": {
+        "searchS": "Search",
+        "selAcronym": "CPC",
+        "selVersion": "2100",
+        "selTypeEntry": "Correction",
+        "selUpdated": "-36400"
+      }
+    },
+    "CPC:3.0:46533:HS2022:C:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 2484,
+      "column": "C",
+      "line": 1,
+      "kind": "definition",
+      "text_sha256": "25e1560119c873d5f01d4246797963042e05fd4562605f39527c27e6b30fda0f"
+    },
+    "CPC:3.0:46532:HS2022:D:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 2483,
+      "column": "D",
+      "line": 1,
+      "kind": "exclusion",
+      "text_sha256": "e4035914f03e3d283b1f0adbc0c6733dea65d8086d82ea1e696d901e07af3f82"
+    },
+    "CPC:3.0:46532:HS2022:C:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 2483,
+      "column": "C",
+      "line": 1,
+      "kind": "definition",
+      "text_sha256": "c08143b6403157f60c1573e13faece436cb899e4bed817cb21ae924463c397ec"
+    },
+    "CPC:3.0:46539:HS2022:D:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 2485,
+      "column": "D",
+      "line": 1,
+      "kind": "exclusion",
+      "text_sha256": "914646f9c90ee5b05fc3df488d15debe8383b397f1eb4f6866951d1112067685"
+    },
+    "CPC:3.0:46539:HS2022:C:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 2485,
+      "column": "C",
+      "line": 1,
+      "kind": "definition",
+      "text_sha256": "5513f1faa84894e6a63278b54d74879a72028df455ddfc6bb66731e05c7862fc"
+    },
+    "CPC:3.0:21267:HS2022:C:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 633,
+      "column": "C",
+      "line": 1,
+      "kind": "definition",
+      "text_sha256": "4b0e4f0ccfbc053ff88b9e1cd3232c3a9ef3dedd0a0bf03ba7268aab3f1fbf41"
+    },
+    "CPC:3.0:11012:HS2022:C:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 435,
+      "column": "C",
+      "line": 1,
+      "kind": "definition",
+      "text_sha256": "40845b725a1da7b4cc54464d46ecb45f6f313b5ce23a1a5db1a71557ff692480"
+    },
+    "CPC:3.0:11031:HS2022:C:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 439,
+      "column": "C",
+      "line": 1,
+      "kind": "definition",
+      "text_sha256": "40845b725a1da7b4cc54464d46ecb45f6f313b5ce23a1a5db1a71557ff692480"
+    },
+    "CPC:3.0:49913:HS2022:C:1": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "row": 2739,
+      "column": "C",
+      "line": 1,
+      "kind": "inclusion",
+      "text_sha256": "e9f15e17584222342479ab331953e6280e9952c4ece9908bf7cad3ba9812c90b"
+    }
+  },
+  "summary": {
+    "hierarchy": {
+      "node_count": 14,
+      "unique_codes": 14,
+      "duplicate_codes": [],
+      "edge_count": 13,
+      "orphan_parents": [],
+      "self_links": [],
+      "cycles": [],
+      "levels": {
+        "1": 1,
+        "2": 4,
+        "3": 7,
+        "4": 2
+      },
+      "roots": 1,
+      "leaves": 8,
+      "definitions": 0,
+      "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+      "polyhierarchy_nodes": 0
+    },
+    "node_status": {
+      "navigation": 6,
+      "reviewed": 4,
+      "pending": 4
+    },
+    "binding_status": {
+      "reviewed": 10,
+      "pending": 9
+    },
+    "reviewed_relations": {
+      "exact": 5,
+      "source_broader": 3,
+      "excluded": 2
+    },
+    "source_nodes": 15,
+    "evidence_records": 18
+  }
+}
