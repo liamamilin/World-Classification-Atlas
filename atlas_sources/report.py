@@ -2,17 +2,19 @@
 import json
 from collections import Counter
 from pathlib import Path
+from .acquire import sha256
+from .furniture import LOCAL as FURNITURE_LOCAL, REPORT as FURNITURE_REPORT, REQUIRED as FURNITURE_INPUTS
 from .normalize import inspect
 from .registry import read_json, write_json
 
 
 def build(root, registry, resources):
     integrity = inspect(root, resources)
+    local = {r["resource_id"]: r for r in integrity}
     economy_path = root / "data/reports/isic-economy.json"
     economy = read_json(economy_path) if economy_path.exists() else None
     if economy and economy.get("status") == "passed":
         pins = read_json(root / "data/resources.lock.json")
-        local = {r["resource_id"]: r for r in integrity}
         if any(local.get(e["resource_id"], {}).get("status") in ("failed", "not_downloaded") for e in economy["inputs"]):
             economy = {"status": "inputs_not_available_locally", "note": "Collect and run economy to reproduce this research locally."}
         elif any(pins.get(e["resource_id"], {}).get("sha256") != e["sha256"] for e in economy["inputs"]):
@@ -29,11 +31,10 @@ def build(root, registry, resources):
                 if row["resource_id"] in stages:
                     row["domain_stage"] = stages[row["resource_id"]]
     snapshots = [r for r in integrity if r.get("sha256") and r["status"] != "failed"]
-    furniture_path = root / "data/reports/furniture-alignment.json"
+    furniture_path = root / FURNITURE_REPORT
     furniture = read_json(furniture_path) if furniture_path.exists() else None
     if furniture and furniture.get("status") == "passed":
         pins = read_json(root / "data/resources.lock.json")
-        local = {r["resource_id"]: r for r in integrity}
         if any(local.get(e["resource_id"], {}).get("status") in ("failed", "not_downloaded") for e in furniture["inputs"]):
             furniture = {"status": "inputs_not_available_locally"}
         elif any(pins.get(e["resource_id"], {}).get("sha256") != e["sha256"] for e in furniture["inputs"]):
@@ -173,6 +174,18 @@ def build(root, registry, resources):
     (reports / "coverage.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     # Inline metadata only, so file:// works offline; raw restricted source content is never embedded.
     template = (Path(__file__).parent / "registry_view.html").read_text(encoding="utf-8")
-    payload = json.dumps({"registry": registry, "coverage": summary}, ensure_ascii=False).replace("<", "\\u003c")
+    furniture_page = root / FURNITURE_LOCAL / "index.html"
+    furniture_view = furniture["status"] if furniture else "not_generated"
+    if any(not local.get(rid, {}).get("sha256") or local[rid]["status"] == "failed" for rid in FURNITURE_INPUTS):
+        furniture_view = "inputs_not_available_locally"
+    elif furniture_view == "passed":
+        if not furniture_page.is_file():
+            furniture_view = "not_generated"
+        elif (furniture.get("view_sha256") != sha256(furniture_page.read_bytes()) or
+              furniture.get("reproducibility", {}).get("parser_sha256", {}).get("furniture_view.html") != sha256(
+                  (Path(__file__).parent / "furniture_view.html").read_bytes())):
+            furniture_view = "stale"
+    payload = json.dumps({"registry": registry, "coverage": summary, "furniture_view": furniture_view},
+                         ensure_ascii=False).replace("<", "\\u003c")
     (reports / "registry.html").write_text(template.replace("__ATLAS_DATA__", payload), encoding="utf-8")
     print(f"Report: {reports / 'coverage.md'}\nBrowse: {reports / 'registry.html'}")

@@ -8,6 +8,7 @@ import subprocess
 import sys
 import tempfile
 from collections import Counter, defaultdict
+from os.path import relpath
 from pathlib import Path
 
 from .acquire import sha256, snapshot_dir
@@ -482,11 +483,15 @@ def build(root, resources):
              "limits": ["No direct official NACE2.1-ISIC5 crosswalk found at checked endpoints; research edges are not transitive official edges.",
                         "Every furniture leaf has scoped research coverage; complete class equivalence remains unapproved.",
                         "NACE2 extraction is selected, not a full old scheme; no real-world entities or allocation weights."]}
-    write_json(root / REPORT, stats)
     template = (Path(__file__).parent / "furniture_view.html").read_text()
     payload = {"directory": directory, "sources": read_json(local / "source-branches.json"),
-               "evidence": dossiers, "official": reviewed, "stats": stats}
-    (local / "index.html").write_text(template.replace("__FURNITURE_DATA__", json.dumps(payload, ensure_ascii=False).replace("<", "\\u003c")), encoding="utf-8")
+               "evidence": dossiers, "official": reviewed, "stats": stats,
+               "original_files": {rid: Path(relpath(asset["path"], local)).as_posix()
+                                  for rid, asset in assets.items()}}
+    html = template.replace("__FURNITURE_DATA__", json.dumps(payload, ensure_ascii=False).replace("<", "\\u003c")).encode("utf-8")
+    (local / "index.html").write_bytes(html)
+    stats["view_sha256"] = sha256(html)
+    write_json(root / REPORT, stats)
     return stats
 
 

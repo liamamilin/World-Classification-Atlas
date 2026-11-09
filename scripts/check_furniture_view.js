@@ -10,7 +10,8 @@ class Element {
 }
 const elements=new Map(['data','scheme','search','tree','detail','stats','issues','audit'].map(k=>[k,new Element(k)]));
 elements.get('data').textContent=payload;elements.get('scheme').value='atlas';
-const context={document:{getElementById:id=>elements.get(id),createElement:tag=>new Element(tag)}};
+const context={document:{getElementById:id=>elements.get(id),createElement:tag=>new Element(tag)},
+  location:{hash:''},window:{addEventListener(){}}};
 vm.runInNewContext(code,context);
 const text=n=>[n.textContent,...n.children.map(text)].join(' ');
 const view=context.furnitureView;
