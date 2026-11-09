@@ -62,7 +62,7 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await click('#cpc-entry a');
   await until(() => exists('#tree > li'), 'CPC catalogue from registry');
   assert.equal(await evaluate('navigator.onLine'), false);
-  assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 12 个已定位说明条目/);
+  assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 13 个已定位说明条目/);
   assert.match(await text('#coverage'), /69 条 HS 2022 原文引用/);
   assert.match(await text('header'), /CPC 分类对象为产品与服务，ISIC 分类对象为经济活动/);
   await click('#release-status summary');
@@ -385,11 +385,11 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
     await click(bindingSelector('#atlas-backlinks', binding) + ' > a');
     await expectGoods(concept);
   }
-  assert.deepEqual(goods.summary.node_status, { navigation: 6, reviewed: 4, pending: 4 });
-  assert.deepEqual(goods.summary.binding_status, { reviewed: 10, pending: 9 });
+  assert.deepEqual(goods.summary.node_status, { navigation: 8, reviewed: 6, pending: 5 });
+  assert.deepEqual(goods.summary.binding_status, { reviewed: 14, pending: 11 });
   await click('#atlas-goods-entry');
   await until(() => exists('#choose-atlas[aria-current="page"]'), 'Atlas goods from registry');
-  assert.match(await text('#detail'), /4 个已审商品范围 · 4 个待核范围/);
+  assert.match(await text('#detail'), /6 个已审商品范围 · 5 个待核范围/);
   const reviewedGoods = bySlug.get('tree-lights-led-only');
   for (const slug of ['trade-goods', 'lighting', 'tree-lights']) {
     const branch = '#tree details[data-code=' + json(slug) + ']';
@@ -419,14 +419,68 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await backToGoods(reviewedGoods, hsBinding);
   assert.match(await text(bindingSelector('#atlas-bindings', bindingFor(reviewedGoods, id('46533')))), /来源范围更宽/);
 
+  const lighting = ['4', '46', '465', '4653'];
+  for (const [code, slug, parent, page] of [
+    ['9405.11', 'ceiling-wall-led-only', 'ceiling-wall-lights', 3],
+    ['9405.21', 'table-floor-led-only', 'table-floor-lights', 4]
+  ]) {
+    const concept = bySlug.get(slug);
+    await searchGoods(code, concept);
+    assert.deepEqual(await evaluate('Array.from(document.querySelectorAll("#ancestors > li"), node => node.dataset.code)'),
+      ['trade-goods', 'lighting', parent, slug]);
+    const cpcBinding = bindingFor(concept, id('46533'));
+    const cpcRow = bindingSelector('#atlas-bindings', cpcBinding);
+    assert.match(await text(cpcRow), /已审 · 来源范围更宽/);
+    await click(cpcRow + ' > details > summary');
+    await openOriginal(cpcRow + ' details a:not([download])', 'hs2022-chapter94', { mode: 'pdf', pdfPage: page });
+    await click(cpcRow + ' > a');
+    await expectNode([...lighting, '46533'], cpcBinding.source_clause_id);
+    await backToGoods(concept, cpcBinding);
+    await openHs('#atlas-bindings', code);
+    assert.match(await text('#hs-official-backlinks'), /46533 · 官方定义引用/);
+    await backToGoods(concept, bindingFor(concept, hsId(code)));
+  }
+
   const held = bySlug.get('other-led-scope-review');
   await searchGoods('9405.42', held);
   assert.match(await text('#atlas-node-status'), /待核范围/);
   assert.match(await text('#atlas-bindings'), /限定非 LED 专用[\s\S]*9405\.42 却明确限定 LED 专用/);
   assert.equal(await exists('#atlas-bindings [data-status=reviewed]'), false);
+  const heldCpc = bindingFor(held, id('46539'));
+  const heldRow = bindingSelector('#atlas-bindings', heldCpc);
+  await click(heldRow + ' > details > summary');
+  const heldEvidence = heldRow + ' details a';
+  await openOriginal(heldEvidence + '[href$=".xlsx"]', workbook);
+  await openOriginal(heldEvidence + '[href$=".csv"]', structure);
+  await openOriginal(heldEvidence + '[href$="chapter94.pdf#page=4"]', 'hs2022-chapter94', { mode: 'pdf', pdfPage: 4 });
+  await openOriginal(heldEvidence + '[href$="20250630.pdf#page=253"]', notes, { mode: 'pdf', pdfPage: 253 });
+  await openOriginal(heldEvidence + '[href$="46539-20261109.html#PrintDivID"]',
+    'cpc3-detail-46539-20261109', { mode: 'html', elementId: 'PrintDivID' });
+  await openOriginal(heldEvidence + '[href$="20261109.html#searchResult"]',
+    'cpc3-corrections-register-20261109', { mode: 'html', elementId: 'searchResult' });
   await openHs('#atlas-bindings', '9405.42');
   assert.match(await text('#hs-official-backlinks'), /46539 · 官方定义引用/);
+  assert.match(await text('#hs-official-backlinks'), /范围对应待核/);
   await backToGoods(held, bindingFor(held, hsId('9405.42')));
+  await click(heldRow + ' > a');
+  await expectNode([...lighting, '46539'], heldCpc.source_clause_id);
+  assert.match(await text('#official-hs-notes [data-kind=definition] .reference-targets'), /9405\.42/);
+  assert.match(await text('#official-hs-notes [data-kind=exclusion] .reference-targets'), /9405\.41/);
+  await backToGoods(held, heldCpc);
+
+  const residual = bySlug.get('other-electric-lighting-residual-candidate');
+  await searchGoods('9405.49', residual);
+  assert.equal(await exists('#atlas-bindings [data-status=reviewed]'), false);
+  const residualCpc = bindingFor(residual, id('46539'));
+  assert.equal(residualCpc.source_clause_id, null);
+  await click(bindingSelector('#atlas-bindings', residualCpc) + ' > a');
+  await expectNode([...lighting, '46539']);
+  await backToGoods(residual, residualCpc);
+  await openHs('#atlas-bindings', '9405.49');
+  assert.equal(await exists('#hs-official-backlinks a'), false);
+  await backToGoods(residual, bindingFor(residual, hsId('9405.49')));
+  assert.equal(goods.lighting_review.correction_search.status, 'no_46539_correction_in_checked_results');
+  console.log('Passed: lighting scopes 9405.11/.21, 46539 conflict at .42, and the separate .49 candidate.');
 
   const frozen = bySlug.get('frozen-octopus-candidate');
   await searchGoods('冷冻章鱼', frozen);
@@ -453,7 +507,8 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
     return errors;
   })()`);
   assert.deepEqual(bindingFailures, []);
-  console.log('Passed: Atlas hierarchy, original evidence hashes, source-clause clicks and all 19 binding directions.');
+  console.log('Passed: Atlas hierarchy, original evidence hashes, source-clause clicks and both directions of all ' +
+    Object.keys(goods.bindings).length + ' bindings.');
 
   const fixture = path.join(temp, 'fixture');
   const copy = file => fs.cpSync(path.join(root, file), path.join(fixture, file), { recursive: true });

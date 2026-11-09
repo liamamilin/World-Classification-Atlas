@@ -179,6 +179,14 @@
       "sha256": "a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a",
       "publication_date": null,
       "path": "data/local/raw/HS/2022/hs2022-wco-interpretation-rules/a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a/hs2022-wco-interpretation-rules.pdf"
+    },
+    {
+      "resource_id": "cpc3-detail-46539-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46539",
+      "sha256": "1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46539-20261109/1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4/cpc3-detail-46539-20261109.html"
     }
   ],
   "structure": {
@@ -202,7 +210,7 @@
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
-  "view_sha256": "ccbe31ac7c821c88efe8734ba2e8968a3995de1a7f66093b4fbc79b90a03de3d",
+  "view_sha256": "27f5e283a9c55034b6f481736e93d5f2db2a9376d428e807bdb9cf82290c4f35",
   "hs_review": {
     "audit": {
       "status": "standalone_table_not_located_in_checked_listing",
@@ -2602,7 +2610,7 @@
         "resolution_status": "verified_codes",
         "review": {
           "status": "notation_reviewed",
-          "finding": "裸后缀 31 和 41 沿用 9405。两个代码另在 CPC 46532、46539 分别出现为排除。",
+          "finding": "裸后缀 31 和 41 沿用 9405。原句列出四个 LED 专用子目，9405.42 未列在此处。",
           "evidence": {
             "resource_id": "hs2022-chapter94",
             "edition": "2022",
@@ -2611,6 +2619,7 @@
             "publication_date": null,
             "pdf_page": 4,
             "lines": [
+              4,
               8,
               12
             ]
@@ -2640,7 +2649,24 @@
         "target_ids": [
           "HS:2022:9405.42"
         ],
-        "resolution_status": "verified_codes"
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "scope_pending",
+          "finding": "CPC 标题限定非 LED 专用，定义句引用的 9405.42 在 WCO 税则中限定 LED 专用。保留官方引用，范围对应待核。9405.49 是同组残余项，Atlas 单列候选。",
+          "evidence": {
+            "resource_id": "hs2022-chapter94",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+            "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+            "publication_date": null,
+            "pdf_page": 4,
+            "lines": [
+              12,
+              14,
+              16
+            ]
+          }
+        }
       },
       {
         "id": "CPC:3.0:46539:HS2022:D:1",
@@ -3948,43 +3974,43 @@
   },
   "trade_goods": {
     "path": "data/atlas/products/trade-goods-directory.json",
-    "sha256": "a84043d538027eb0497562eb15fbc99ab02a7f9b6471c49ae941248be7231ee8",
+    "sha256": "1492430471ed7a7fac36393a64f8b0d97c5846602e416fe75329b58611bbe4d3",
     "hierarchy": {
-      "node_count": 14,
-      "unique_codes": 14,
+      "node_count": 19,
+      "unique_codes": 19,
       "duplicate_codes": [],
-      "edge_count": 13,
+      "edge_count": 18,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 1,
         "2": 4,
-        "3": 7,
-        "4": 2
+        "3": 10,
+        "4": 4
       },
       "roots": 1,
-      "leaves": 8,
+      "leaves": 11,
       "definitions": 0,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
     "node_status": {
-      "navigation": 6,
-      "reviewed": 4,
-      "pending": 4
+      "navigation": 8,
+      "reviewed": 6,
+      "pending": 5
     },
     "binding_status": {
-      "reviewed": 10,
-      "pending": 9
+      "reviewed": 14,
+      "pending": 11
     },
     "reviewed_relations": {
-      "exact": 5,
-      "source_broader": 3,
+      "exact": 7,
+      "source_broader": 5,
       "excluded": 2
     },
-    "source_nodes": 15,
-    "evidence_records": 18
+    "source_nodes": 18,
+    "evidence_records": 24
   },
   "note_entries": [
     {
@@ -4059,7 +4085,7 @@
       "csv_row": 633,
       "pdf_page": 79,
       "has_explanatory_text": true,
-      "scope_review_status": null,
+      "scope_review_status": "pending",
       "excluded_to": [
         "04471",
         "21280",
@@ -4072,7 +4098,7 @@
       "csv_row": 435,
       "pdf_page": 55,
       "has_explanatory_text": true,
-      "scope_review_status": null,
+      "scope_review_status": "pending",
       "excluded_to": []
     },
     {
@@ -4080,7 +4106,7 @@
       "csv_row": 439,
       "pdf_page": 55,
       "has_explanatory_text": true,
-      "scope_review_status": null,
+      "scope_review_status": "pending",
       "excluded_to": []
     },
     {
@@ -4088,20 +4114,28 @@
       "csv_row": 2739,
       "pdf_page": 276,
       "has_explanatory_text": true,
-      "scope_review_status": null,
+      "scope_review_status": "pending",
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:46539",
+      "csv_row": 2485,
+      "pdf_page": 253,
+      "has_explanatory_text": true,
+      "scope_review_status": "pending",
       "excluded_to": []
     }
   ],
   "reproducibility": {
     "pdftotext": "pdftotext version 26.04.0",
     "parser_sha256": {
-      "cpc_view.html": "b6dafa8c080c9b5da64cab6f4b2d219f79baaaed2b0a96606306777bd272495d",
-      "cpc.py": "7ff350bee6f47faa1abdf22fcf4b2943a339594aab861189cb65d5cf71935eab",
-      "cpc_hs.py": "104d468ab012350e288db7be59f26b207e98a7b3b069f57d533b83738c9c16bd",
+      "cpc_view.html": "d5a92d56755a1404aff833c3efcaee0302e38669f00b97632cf7c61265ee452b",
+      "cpc.py": "5fda59f4bfc641b06ed606236be1136d81a0fcd3c45500cfb206cb07f9ca639c",
+      "cpc_hs.py": "cb1e1c6c3d60605e5691936c575fcf61f71d8fa0fabfd679b4bbde61ce174f19",
       "cpc_hs_followup.py": "21f4f701cd65a077f7994695129b1620d33d741e4297ebc773b651f8ebec60b4",
       "hs.py": "e351af4ef5538322334e3d7d38857c6e980713bdfb1bdb2e4596e395a48ae9eb",
       "hs_reference.py": "fced54e61263385f5ff7c3968fec0d35cc248e48a3a9de764ab0a722875f63a3",
-      "trade_goods.py": "95b9af4625a47c55ea127825237e29ed08d447cf5b0c9a06f24149bcbc17aabb"
+      "trade_goods.py": "03821eb360d710bc4c47ea48175f15c897b53e41f2b190fd2c0e0124f65bf828"
     }
   }
 }

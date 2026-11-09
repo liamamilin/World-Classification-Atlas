@@ -1,0 +1,18 @@
+[
+  {
+    "resource_id": "cpc3-detail-46539-20261109",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46539",
+    "attempted_at": "2026-11-09T11:55:45.176394+00:00",
+    "sha256": "1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4",
+    "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46539-20261109/1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4/cpc3-detail-46539-20261109.html",
+    "bytes": 38486,
+    "final_url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46539",
+    "http_status": 200,
+    "content_type": "text/html; charset=utf-8",
+    "etag": null,
+    "last_modified": null,
+    "status": "downloaded"
+  }
+]

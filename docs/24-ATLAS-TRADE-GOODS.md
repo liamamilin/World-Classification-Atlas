@@ -1,5 +1,7 @@
 # Atlas 贸易商品自有目录样板
 
+本文记录初版样板的实测结果。当前覆盖和采集命令见照明扩充报告。 [当前目录与复现](25-ATLAS-LIGHTING-SCOPE.md)
+
 Atlas 样板将部分贸易商品按形态、用途和工艺组织为照明、水产、煤炭和摩托车分支。CPC 3.0 与 HS 2022 在同一离线页内独立浏览，Atlas 层级使用独立的 `urn:atlas:scheme:trade-goods` 和节点 ID。目录从注册表「产品与服务」进入，可按商品名称或所引原码检索。 [机器可读目录](../data/atlas/products/trade-goods-directory.json) · [CPC 3.0 原始工作簿](https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx) · [WCO HS 2022 税则目录](https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/hs-nomenclature-2022-edition.aspx)
 
 样板有 14 个节点、13 条父子边和 4 层。6 个节点用于导航，4 个叶节点的商品范围已审，4 个叶节点保留待核范围。15 个来源节点对应 19 条逐条核查记录，含 10 条已审记录及 9 条待核记录。已审记录含 5 条范围等价、3 条来源范围更宽和 2 条排除。待核记录的关系字段为空，保留原句、税则和待核理由。所有关系方向均为 Atlas 范围到来源。 [构建报告](../data/reports/cpc-offline.json)
@@ -17,7 +19,7 @@ Atlas 样板将部分贸易商品按形态、用途和工艺组织为照明、�
 
 目录中的 18 个证据记录带原件 URL、版本、SHA-256、表格单元格或 PDF 页及文本行定位。CPC 绑定可直接进入具体定义、纳入或排除原句。HS 绑定可进入原目录条目并从证据面板打开对应 PDF。来源页的 Atlas 回链按同一绑定 ID 返回具体商品范围。构建从锁定资料重算，公开目录只保存 Atlas 编写的范围、关系和证据定位。 [锁文件](../data/resources.lock.json) · [构建实现](../atlas_sources/trade_goods.py)
 
-首次复现按前次报告补齐 22 份锁定资源。本轮使用现有资料，构建与 Chrome 验收可离线运行。 [完整采集命令入口](23-CPC-HS-BOUNDARY-FOLLOWUP.md#复现与验收)
+当前代码首次复现需补齐 23 份锁定资源，构建与 Chrome 验收可离线运行。 [完整采集命令入口](25-ATLAS-LIGHTING-SCOPE.md#复现与验收)
 
 ```sh
 python3 -m atlas_sources validate

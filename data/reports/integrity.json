@@ -1077,6 +1077,17 @@
     "note": "No semantic adapter; no node counts or edition confirmation inferred."
   },
   {
+    "resource_id": "cpc3-detail-46539-20261109",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "role": "publisher_code_detail",
+    "sha256": "1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4",
+    "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46539-20261109/1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4/cpc3-detail-46539-20261109.html",
+    "bytes": 38486,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
     "resource_id": "siec1-escm-historical-coal",
     "source_id": "SIEC",
     "edition": "1.0-2011",

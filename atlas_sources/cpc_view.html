@@ -128,9 +128,11 @@ function renderGoodsEvidence(out, evidence) {
   if (evidence.sheet) {
     download(out, evidence, '下载 CPC 3.0 工作簿 · ' + evidence.sheet + '!' + evidence.column +
       evidence.row + ' · 单元格内第 ' + evidence.line + ' 行');
+  } else if (evidence.csv_row) {
+    download(out, evidence, '下载 CPC 3.0 结构 CSV · 第 ' + evidence.csv_row + ' 行');
   } else if (evidence.pdf_page) {
-    original(out, evidence, '打开 WCO HS 2022 PDF · 第 ' + evidence.pdf_page + ' 页');
-    make('small', '提取文本行 ' + evidence.lines.join('–'), out);
+    original(out, evidence, (evidence.label || '打开 WCO HS 2022 PDF') + ' · 第 ' + evidence.pdf_page + ' 页');
+    if (evidence.lines) make('small', '提取文本行 ' + evidence.lines.join('–'), out);
   } else {
     original(out, evidence, evidence.label);
   }

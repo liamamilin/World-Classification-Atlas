@@ -23,7 +23,7 @@
       "parents": [
         "trade-goods"
       ],
-      "scope": "按用途和光源设计区分灯串与其他电灯具。",
+      "scope": "按用途和光源设计区分照明商品，保留各税则分组的范围。",
       "status": "navigation",
       "binding_ids": []
     },
@@ -35,6 +35,28 @@
         "lighting"
       ],
       "scope": "按是否仅为 LED 光源设计分开。",
+      "status": "navigation",
+      "binding_ids": []
+    },
+    {
+      "id": "urn:atlas:concept:d523be23-17dc-559e-b74f-477bff33b343",
+      "code": "ceiling-wall-lights",
+      "label": "天花板或墙壁电灯具",
+      "parents": [
+        "lighting"
+      ],
+      "scope": "该税则分组排除公共开放场所或道路照明灯具。",
+      "status": "navigation",
+      "binding_ids": []
+    },
+    {
+      "id": "urn:atlas:concept:0876c0f8-8c5c-5f29-bead-232f81c34317",
+      "code": "table-floor-lights",
+      "label": "台式及落地电灯具",
+      "parents": [
+        "lighting"
+      ],
+      "scope": "该税则分组涵盖台灯、书桌灯、床头灯及落地灯。",
       "status": "navigation",
       "binding_ids": []
     },
@@ -101,6 +123,34 @@
       ]
     },
     {
+      "id": "urn:atlas:concept:9c786ffc-439e-5dd1-8cd9-7405f4d786e9",
+      "code": "ceiling-wall-led-only",
+      "label": "LED 专用天花板或墙壁电灯具",
+      "parents": [
+        "ceiling-wall-lights"
+      ],
+      "scope": "仅为 LED 光源设计的枝形吊灯和其他天花板或墙壁电灯具。公共开放场所或道路照明灯具另有归类。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:63a4566a-5839-5498-8982-e8b2d1ef00a1",
+        "urn:atlas:mapping:eb0e9a26-6539-58ed-bda2-1d109f8adea4"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:da655577-b54e-5fca-93b0-8e89d71ed303",
+      "code": "table-floor-led-only",
+      "label": "LED 专用台灯、书桌灯、床头灯及落地灯",
+      "parents": [
+        "table-floor-lights"
+      ],
+      "scope": "仅为 LED 光源设计的台灯、书桌灯、床头灯及落地灯。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318",
+        "urn:atlas:mapping:2e348441-02e8-55de-8c64-e91d163637d4"
+      ]
+    },
+    {
       "id": "urn:atlas:concept:098b3467-6fb9-5096-be3f-1ffa3c5462ff",
       "code": "other-photovoltaic-led",
       "label": "其他光伏 LED 专用电灯具",
@@ -127,6 +177,20 @@
       "binding_ids": [
         "urn:atlas:mapping:a7c5eac4-2b2c-514a-bcad-7da0253ec459",
         "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74"
+      ]
+    },
+    {
+      "id": "urn:atlas:concept:7b43ec55-ab41-5527-b32e-90b136a41091",
+      "code": "other-electric-lighting-residual-candidate",
+      "label": "其他电灯具的非 LED 专用范围候选",
+      "parents": [
+        "lighting"
+      ],
+      "scope": "以 HS 其他电灯具分组中的残余子目为依据，核查其与 CPC 非 LED 专用标题的范围。",
+      "status": "pending",
+      "binding_ids": [
+        "urn:atlas:mapping:b533d4e9-5c4b-58f4-ac77-bc4642a2f449",
+        "urn:atlas:mapping:8d696bcd-0795-5baa-9f73-10cddae66261"
       ]
     },
     {
@@ -251,6 +315,56 @@
       ],
       "source_clause_id": "CPC:3.0:46532:HS2022:C:1"
     },
+    "urn:atlas:mapping:63a4566a-5839-5498-8982-e8b2d1ef00a1": {
+      "id": "urn:atlas:mapping:63a4566a-5839-5498-8982-e8b2d1ef00a1",
+      "concept_id": "urn:atlas:concept:9c786ffc-439e-5dd1-8cd9-7405f4d786e9",
+      "source_id": "HS:2022:9405.11",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-ceiling-wall-lights"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:eb0e9a26-6539-58ed-bda2-1d109f8adea4": {
+      "id": "urn:atlas:mapping:eb0e9a26-6539-58ed-bda2-1d109f8adea4",
+      "concept_id": "urn:atlas:concept:9c786ffc-439e-5dd1-8cd9-7405f4d786e9",
+      "source_id": "CPC:3.0:46533",
+      "status": "reviewed",
+      "relation": "source_broader",
+      "reason": "CPC 定义明确列出 9405.11，还涵盖另外三个 LED 专用子目。",
+      "evidence_ids": [
+        "CPC:3.0:46533:HS2022:C:1",
+        "wco-ceiling-wall-lights"
+      ],
+      "source_clause_id": "CPC:3.0:46533:HS2022:C:1"
+    },
+    "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318": {
+      "id": "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318",
+      "concept_id": "urn:atlas:concept:da655577-b54e-5fca-93b0-8e89d71ed303",
+      "source_id": "HS:2022:9405.21",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-table-floor-lights"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:2e348441-02e8-55de-8c64-e91d163637d4": {
+      "id": "urn:atlas:mapping:2e348441-02e8-55de-8c64-e91d163637d4",
+      "concept_id": "urn:atlas:concept:da655577-b54e-5fca-93b0-8e89d71ed303",
+      "source_id": "CPC:3.0:46533",
+      "status": "reviewed",
+      "relation": "source_broader",
+      "reason": "原句缩写 .21 承接 9405，CPC 定义还涵盖另外三个 LED 专用子目。",
+      "evidence_ids": [
+        "CPC:3.0:46533:HS2022:C:1",
+        "wco-table-floor-lights"
+      ],
+      "source_clause_id": "CPC:3.0:46533:HS2022:C:1"
+    },
     "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db": {
       "id": "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db",
       "concept_id": "urn:atlas:concept:098b3467-6fb9-5096-be3f-1ffa3c5462ff",
@@ -310,9 +424,42 @@
       "reason": "CPC 标题限定非 LED 专用，所引的 9405.42 却明确限定 LED 专用。",
       "evidence_ids": [
         "CPC:3.0:46539:HS2022:C:1",
-        "wco-other-electric-lighting"
+        "wco-other-electric-lighting",
+        "cpc-46539-title",
+        "cpc-46539-pdf",
+        "cpc-46539-online",
+        "unsd-cpc3-corrections"
       ],
       "source_clause_id": "CPC:3.0:46539:HS2022:C:1"
+    },
+    "urn:atlas:mapping:b533d4e9-5c4b-58f4-ac77-bc4642a2f449": {
+      "id": "urn:atlas:mapping:b533d4e9-5c4b-58f4-ac77-bc4642a2f449",
+      "concept_id": "urn:atlas:concept:7b43ec55-ab41-5527-b32e-90b136a41091",
+      "source_id": "HS:2022:9405.49",
+      "status": "pending",
+      "relation": null,
+      "reason": "此 HS 子目为范围核查证据。",
+      "evidence_ids": [
+        "wco-other-electric-lighting"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:8d696bcd-0795-5baa-9f73-10cddae66261": {
+      "id": "urn:atlas:mapping:8d696bcd-0795-5baa-9f73-10cddae66261",
+      "concept_id": "urn:atlas:concept:7b43ec55-ab41-5527-b32e-90b136a41091",
+      "source_id": "CPC:3.0:46539",
+      "status": "pending",
+      "relation": null,
+      "reason": "9405.49 扣除同组 9405.41 和 9405.42 后与 CPC 标题方向相符。CPC 定义原句引用 9405.42，具体对应待核。",
+      "evidence_ids": [
+        "CPC:3.0:46539:HS2022:C:1",
+        "wco-other-electric-lighting",
+        "cpc-46539-title",
+        "cpc-46539-pdf",
+        "cpc-46539-online",
+        "unsd-cpc3-corrections"
+      ],
+      "source_clause_id": null
     },
     "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66": {
       "id": "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66",
@@ -445,6 +592,8 @@
     ],
     "CPC:3.0:46533": [
       "urn:atlas:mapping:9c754ae4-8bb6-5a43-9bad-6d01e9039fc8",
+      "urn:atlas:mapping:eb0e9a26-6539-58ed-bda2-1d109f8adea4",
+      "urn:atlas:mapping:2e348441-02e8-55de-8c64-e91d163637d4",
       "urn:atlas:mapping:8a01e0d0-38cf-59df-85e8-281ba896a0a6"
     ],
     "CPC:3.0:46532": [
@@ -454,15 +603,25 @@
     "HS:2022:9405.39": [
       "urn:atlas:mapping:727b832a-49d5-5fba-b3dd-f31b9e799cbb"
     ],
+    "HS:2022:9405.11": [
+      "urn:atlas:mapping:63a4566a-5839-5498-8982-e8b2d1ef00a1"
+    ],
+    "HS:2022:9405.21": [
+      "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318"
+    ],
     "HS:2022:9405.41": [
       "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db"
     ],
     "CPC:3.0:46539": [
       "urn:atlas:mapping:52c3808c-58c5-5ec2-8937-be6a39b0acc7",
-      "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74"
+      "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74",
+      "urn:atlas:mapping:8d696bcd-0795-5baa-9f73-10cddae66261"
     ],
     "HS:2022:9405.42": [
       "urn:atlas:mapping:a7c5eac4-2b2c-514a-bcad-7da0253ec459"
+    ],
+    "HS:2022:9405.49": [
+      "urn:atlas:mapping:b533d4e9-5c4b-58f4-ac77-bc4642a2f449"
     ],
     "HS:2022:0307.52": [
       "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66"
@@ -490,7 +649,100 @@
       "urn:atlas:mapping:d74e582c-70d5-5ee2-b390-7784ecb0698e"
     ]
   },
+  "lighting_review": {
+    "status": "scope_conflict_pending",
+    "cpc_id": "CPC:3.0:46539",
+    "literal_clause_id": "CPC:3.0:46539:HS2022:C:1",
+    "literal_hs_id": "HS:2022:9405.42",
+    "excluded_clause_id": "CPC:3.0:46539:HS2022:D:1",
+    "candidate_hs_id": "HS:2022:9405.49",
+    "candidate_basis": "CPC title and WCO residual subheading",
+    "correction_search": {
+      "status": "no_46539_correction_in_checked_results",
+      "registry_last_update": "2026-11-03",
+      "result_ids": [
+        "4379"
+      ]
+    },
+    "evidence_ids": [
+      "cpc-46539-title",
+      "cpc-46539-pdf",
+      "cpc-46539-online",
+      "unsd-cpc3-corrections",
+      "CPC:3.0:46539:HS2022:C:1",
+      "CPC:3.0:46539:HS2022:D:1",
+      "wco-other-electric-lighting"
+    ]
+  },
   "evidence": {
+    "cpc-46539-title": {
+      "resource_id": "cpc3-structure",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Structure_30Jun2025.csv",
+      "sha256": "5cd2c1c4890dd6be16af48e9bb940fed48efff9865f39ff15edaa921da25fb7c",
+      "publication_date": null,
+      "csv_row": 2485
+    },
+    "cpc-46539-pdf": {
+      "resource_id": "cpc3-notes-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+      "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+      "publication_date": "2025-06-30",
+      "pdf_page": 253,
+      "label": "打开 CPC 3.0 说明 PDF"
+    },
+    "cpc-46539-online": {
+      "resource_id": "cpc3-detail-46539-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46539",
+      "sha256": "1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4",
+      "publication_date": null,
+      "element_id": "PrintDivID",
+      "label": "打开 UNSD 在线条目 46539 快照"
+    },
+    "unsd-cpc3-corrections": {
+      "resource_id": "cpc3-corrections-register-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+      "sha256": "9bb865425c6d46015e3f8f56554da7ac67a964786a81ab4e83522ca9863cf513",
+      "publication_date": null,
+      "element_id": "searchResult",
+      "label": "打开 UNSD 更正检索结果",
+      "search_form": {
+        "searchS": "Search",
+        "selAcronym": "CPC",
+        "selVersion": "2100",
+        "selTypeEntry": "Correction",
+        "selUpdated": "-36400"
+      }
+    },
+    "wco-ceiling-wall-lights": {
+      "resource_id": "hs2022-chapter94",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+      "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+      "publication_date": null,
+      "pdf_page": 3,
+      "lines": [
+        37,
+        42
+      ],
+      "text_sha256": "b918725d70c3197c4de9dfaa3019a566a76e54492b6ff7598b45000eceda2f44"
+    },
+    "wco-table-floor-lights": {
+      "resource_id": "hs2022-chapter94",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+      "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+      "publication_date": null,
+      "pdf_page": 4,
+      "lines": [
+        3,
+        6
+      ],
+      "text_sha256": "cbb87d8bb45a951b76e889507a1d4d744279a3c3191c0953378702c893134519"
+    },
     "wco-christmas-strings": {
       "resource_id": "hs2022-chapter94",
       "edition": "2022",
@@ -731,40 +983,40 @@
   },
   "summary": {
     "hierarchy": {
-      "node_count": 14,
-      "unique_codes": 14,
+      "node_count": 19,
+      "unique_codes": 19,
       "duplicate_codes": [],
-      "edge_count": 13,
+      "edge_count": 18,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 1,
         "2": 4,
-        "3": 7,
-        "4": 2
+        "3": 10,
+        "4": 4
       },
       "roots": 1,
-      "leaves": 8,
+      "leaves": 11,
       "definitions": 0,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
     "node_status": {
-      "navigation": 6,
-      "reviewed": 4,
-      "pending": 4
+      "navigation": 8,
+      "reviewed": 6,
+      "pending": 5
     },
     "binding_status": {
-      "reviewed": 10,
-      "pending": 9
+      "reviewed": 14,
+      "pending": 11
     },
     "reviewed_relations": {
-      "exact": 5,
-      "source_broader": 3,
+      "exact": 7,
+      "source_broader": 5,
       "excluded": 2
     },
-    "source_nodes": 15,
-    "evidence_records": 18
+    "source_nodes": 18,
+    "evidence_records": 24
   }
 }

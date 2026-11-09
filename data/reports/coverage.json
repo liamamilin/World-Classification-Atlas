@@ -165,13 +165,13 @@
     }
   ],
   "unsd_family_discovered_candidates": 149,
-  "planned_resources": 73,
-  "pinned_resources": 71,
+  "planned_resources": 74,
+  "pinned_resources": 72,
   "sources_with_local_files": 12,
   "parsed_resources": 8,
   "resource_status": {
     "parsed": 8,
-    "format_checked_only": 63,
+    "format_checked_only": 64,
     "blocked_rights": 2
   },
   "economic_activity_research": {
@@ -2343,6 +2343,17 @@
       "sha256": "30d55c098e9fa5cde7287f844d099e9f9e28a37fee1ac7d7195be67eb2f015e0",
       "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-21267-20261109/30d55c098e9fa5cde7287f844d099e9f9e28a37fee1ac7d7195be67eb2f015e0/cpc3-detail-21267-20261109.html",
       "bytes": 39574,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "cpc3-detail-46539-20261109",
+      "source_id": "UN_CPC",
+      "edition": "3.0",
+      "role": "publisher_code_detail",
+      "sha256": "1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46539-20261109/1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4/cpc3-detail-46539-20261109.html",
+      "bytes": 38486,
       "status": "format_checked_only",
       "note": "No semantic adapter; no node counts or edition confirmation inferred."
     },

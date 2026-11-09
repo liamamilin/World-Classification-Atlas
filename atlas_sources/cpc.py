@@ -13,14 +13,14 @@ from .registry import write_json
 
 STRUCTURE = "cpc3-structure"
 NOTES = "cpc3-notes-20250630"
-REQUIRED = (STRUCTURE, NOTES, *cpc_hs.REQUIRED)
+REQUIRED = (STRUCTURE, NOTES, *cpc_hs.REQUIRED, trade_goods.LIGHTING_DETAIL)
 LOCAL = "data/local/products/cpc"
 REPORT = "data/reports/cpc-offline.json"
 NOTE_PAGES = {
     "17400": 63, "22270": 101, "34210": 160,
     "48160": 264, "27190": 127,
     "37990": 187, "46950": 254, "89200": 487,
-    "21267": 79, "11012": 55, "11031": 55, "49913": 276,
+    "21267": 79, "11012": 55, "11031": 55, "49913": 276, "46539": 253,
 }
 PENDING_SCOPE = {
     "48160": "原题排除同时没有机械部件和可更换滤芯的防护口罩。这类口罩的具体 CPC 子类待核。",
@@ -88,7 +88,7 @@ def build(root, resources):
     if any(target not in by_code for note in notes.values() for target in note["excluded_to"]):
         raise ValueError("CPC note points outside the locked source tree")
     hs_review = cpc_hs.build(assets, by_code)
-    directory = trade_goods.build(assets, by_code, hs_review)
+    directory = trade_goods.build(assets, by_code, hs_review, structure["evidence"], notes["46539"])
     output = root / LOCAL
     inputs = [{**a["evidence"], "path": a["path"].relative_to(root).as_posix()} for a in assets.values()]
     payload = {
@@ -108,6 +108,8 @@ def build(root, resources):
     public_directory = root / trade_goods.PUBLIC
     write_json(public_directory, directory)
     references = hs_review["official_note_references"]
+    pending_notes = {ref["cpc_id"] for ref in references
+                     if ref.get("review", {}).get("status") in {"scope_pending", "missing_code"}}
     followup = hs_review["scope_followup"]
     followup_metadata = {
         **followup,
@@ -130,7 +132,8 @@ def build(root, resources):
                         **directory["summary"]},
         "note_entries": [{"id": by_code[code]["id"], "csv_row": by_code[code]["source_row"],
                           "pdf_page": note["evidence"]["pdf_page"], "has_explanatory_text": bool(note["text"]),
-                          "scope_review_status": "pending" if code in PENDING_SCOPE else None,
+                          "scope_review_status": "pending" if code in PENDING_SCOPE or
+                          by_code[code]["id"] in pending_notes else None,
                           "excluded_to": note["excluded_to"]} for code, note in notes.items()],
         "reproducibility": {
             "pdftotext": subprocess.check_output(["pdftotext", "-v"], stderr=subprocess.STDOUT).decode().splitlines()[0],

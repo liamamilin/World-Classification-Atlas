@@ -431,5 +431,11 @@
     "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0001_2022e-gir.pdf",
     "source_id": "HS",
     "edition": "2022"
+  },
+  "cpc3-detail-46539-20261109": {
+    "sha256": "1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46539",
+    "source_id": "UN_CPC",
+    "edition": "3.0"
   }
 }
