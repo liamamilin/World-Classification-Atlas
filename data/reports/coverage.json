@@ -1,8 +1,8 @@
 {
   "review_date": "2026-11-09",
-  "registered_sources": 50,
+  "registered_sources": 52,
   "metadata_status": {
-    "partially_verified": 46,
+    "partially_verified": 48,
     "verified_metadata": 1,
     "inaccessible": 2,
     "candidate": 1
@@ -11,21 +11,21 @@
     {
       "id": "01-economy",
       "label": "经济与行业",
-      "registered": 5,
+      "registered": 7,
       "metadata_status": {
-        "partially_verified": 5
+        "partially_verified": 7
       },
-      "sources_with_local_files": 2,
+      "sources_with_local_files": 4,
       "sources_with_parsed_files": 1
     },
     {
       "id": "02-products",
       "label": "产品与服务",
-      "registered": 9,
+      "registered": 10,
       "metadata_status": {
-        "partially_verified": 9
+        "partially_verified": 10
       },
-      "sources_with_local_files": 1,
+      "sources_with_local_files": 2,
       "sources_with_parsed_files": 1
     },
     {
@@ -165,13 +165,13 @@
     }
   ],
   "unsd_family_discovered_candidates": 149,
-  "planned_resources": 41,
-  "pinned_resources": 39,
-  "sources_with_local_files": 7,
+  "planned_resources": 47,
+  "pinned_resources": 45,
+  "sources_with_local_files": 9,
   "parsed_resources": 8,
   "resource_status": {
     "parsed": 8,
-    "format_checked_only": 31,
+    "format_checked_only": 37,
     "blocked_rights": 2
   },
   "economic_activity_research": {
@@ -375,41 +375,41 @@
       },
       "isic4_to_nace2_rows": 996,
       "furniture_current_incoming_rows": 7,
-      "individually_reviewed_rows": 44,
+      "individually_reviewed_rows": 54,
       "reviews_by_resource": {
-        "nace21-nace2-correspondence": 9,
-        "isic4-nace2-correspondence": 10,
-        "nace2-nace21-correspondence-20260831": 9,
-        "nace-cellar-nace2-isic4-xkos-20261109": 10,
-        "isic4-isic5-correspondence": 6
+        "nace21-nace2-correspondence": 11,
+        "isic4-nace2-correspondence": 12,
+        "nace2-nace21-correspondence-20260831": 11,
+        "nace-cellar-nace2-isic4-xkos-20261109": 12,
+        "isic4-isic5-correspondence": 8
       }
     },
     "directory": {
-      "node_count": 24,
-      "unique_codes": 24,
+      "node_count": 29,
+      "unique_codes": 29,
       "duplicate_codes": [],
-      "edge_count": 21,
+      "edge_count": 25,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
-        "1": 3,
-        "2": 8,
+        "1": 4,
+        "2": 10,
         "3": 10,
-        "4": 3
+        "4": 5
       },
-      "roots": 3,
-      "leaves": 15,
-      "definitions": 24,
+      "roots": 4,
+      "leaves": 19,
+      "definitions": 29,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
     "reused_ids": 2,
-    "new_ids": 22,
-    "bounded_activities": 17,
-    "evidence_claims": 105,
-    "research_mappings": 19,
-    "candidate_bindings": 8,
+    "new_ids": 27,
+    "bounded_activities": 21,
+    "evidence_claims": 141,
+    "research_mappings": 23,
+    "candidate_bindings": 9,
     "followup_sources": {
       "rdf_selected_nodes": 22,
       "nace2_to_nace21_rows": 1598,
@@ -493,14 +493,14 @@
       }
     },
     "activity_review_status": {
-      "reviewed_bounded_activity": 15,
+      "reviewed_bounded_activity": 19,
       "reviewed_current_multisource_activity": 1,
       "reviewed_with_legacy_gap": 1
     },
     "binding_history_records": 1,
     "approved_isic5_source_levels": {
-      "class": 13,
-      "group": 4
+      "class": 15,
+      "group": 6
     },
     "material_boundaries": {
       "new_activities": 5,
@@ -869,6 +869,145 @@
         "cpc21-manual-2015": 618,
         "isic4-manual-2008": 307,
         "isic5-white-cover-2026": 335
+      }
+    },
+    "contract_parts_boundaries": {
+      "new_activities": 4,
+      "new_claims": 36,
+      "additional_official_scope_reviews": 6,
+      "uk_index_activity_rows": 15957,
+      "uk_index_selected_rows": 4,
+      "pdf_pages": {
+        "uk-sic-2007-index-original": 328,
+        "cpa2008-structure-notes": 338
+      },
+      "publisher_release_recheck": {
+        "status": "no_revised_pair_observed_in_checked_publications",
+        "acquisition": {
+          "acquisition_path": "data/acquisition/20261109T003503106764Z-a46eea10.json",
+          "acquisition_sha256": "6e50547d12849d05afabd787c0798114ca8ca0ad0e27f2b671c108084b8c2824",
+          "reviewed_release_links": [
+            "https://showvoc.op.europa.eu/#/datasets/ESTAT_Main_Industrial_Groupings_%28MIG%29/downloads",
+            "https://showvoc.op.europa.eu/#/datasets/ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29/downloads",
+            "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/Change history.txt",
+            "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+            "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx"
+          ],
+          "reviewed_registry_title_ids": []
+        },
+        "same_bytes": {
+          "isic4-isic5-correspondence": {
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+            "attempted_at": "2026-11-09T00:34:14.613612+00:00",
+            "http_status": 200,
+            "etag": "\"623b909bd470db1:0\"",
+            "last_modified": "Mon, 27 Jan 2025 16:00:38 GMT"
+          },
+          "isic4-nace2-correspondence": {
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+            "sha256": "fd5283a539afecfb36aad2ad3023787c333a133458463592d681c30d1a15a101",
+            "attempted_at": "2026-11-09T00:34:27.207636+00:00",
+            "http_status": 200,
+            "etag": "\"0264670d0b6cc1:0\"",
+            "last_modified": "Sat, 10 Dec 2011 00:12:44 GMT"
+          },
+          "isic5-errata-2026": {
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/Errata_for_the_Explanatory_Notes_of_the_ISICRev5_-_2026.pdf",
+            "sha256": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
+            "attempted_at": "2026-11-09T00:34:19.140921+00:00",
+            "http_status": 200,
+            "etag": "\"33e8d2d5b042dd1:0\"",
+            "last_modified": "Sat, 12 Sep 2026 12:18:36 GMT"
+          },
+          "nace-cellar-nace2-isic4-xkos-20261109": {
+            "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+            "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+            "attempted_at": "2026-11-09T00:34:39.918095+00:00",
+            "http_status": 200,
+            "etag": null,
+            "last_modified": null
+          },
+          "nace2-cellar-isic4-predicates-20261109": {
+            "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+            "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+            "attempted_at": "2026-11-09T00:34:33.299028+00:00",
+            "http_status": 200,
+            "etag": null,
+            "last_modified": null
+          },
+          "nace21-nace2-correspondence": {
+            "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE_Rev.2.1_NACE_Rev.2_+CorrespondenceTable.xlsx",
+            "sha256": "2ceee6c855731842c7933a897a9400756fe23c4416b00176631236053b704ac2",
+            "attempted_at": "2026-11-09T00:34:22.156070+00:00",
+            "http_status": 200,
+            "etag": null,
+            "last_modified": null
+          },
+          "nace2-nace21-correspondence-20260831": {
+            "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+            "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+            "attempted_at": "2026-11-09T00:34:30.290849+00:00",
+            "http_status": 200,
+            "etag": null,
+            "last_modified": null
+          }
+        },
+        "listings": {
+          "isic-economic-downloads-20261109": {
+            "resource_id": "isic-economic-downloads-20261109",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/",
+            "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+            "publication_date": null
+          },
+          "unsd-classification-registry-20261109": {
+            "resource_id": "unsd-classification-registry-20261109",
+            "edition": "Rev.5",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+            "sha256": "848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f",
+            "publication_date": null
+          },
+          "nace-correspondence-listing-20261109": {
+            "resource_id": "nace-correspondence-listing-20261109",
+            "edition": "Rev.2.1",
+            "url": "https://ec.europa.eu/eurostat/web/nace/correspondence-tables",
+            "sha256": "d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b",
+            "publication_date": null
+          }
+        },
+        "unsd_release_links": [
+          {
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "line": 721
+          },
+          {
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+            "line": 1647
+          },
+          {
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+            "line": 1742
+          },
+          {
+            "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/Change history.txt",
+            "line": 1743
+          }
+        ],
+        "eurostat_showvoc_links": [
+          {
+            "url": "https://showvoc.op.europa.eu/#/datasets/ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29/downloads",
+            "line": 4706
+          },
+          {
+            "url": "https://showvoc.op.europa.eu/#/datasets/ESTAT_Main_Industrial_Groupings_%28MIG%29/downloads",
+            "line": 4707
+          }
+        ],
+        "registry_date": "2026-11-03",
+        "registry_titles_checked": 298,
+        "registry_title_matches": [],
+        "scope": "Fresh downloads of fixed table URLs and Cellar queries. Registry title review is limited to the captured listing."
       }
     }
   },
@@ -1392,7 +1531,7 @@
       "note": "No semantic adapter; no node counts or edition confirmation inferred.",
       "domain_stage": {
         "status": "selected_branch_notes_parsed",
-        "nodes": 17
+        "nodes": 23
       }
     },
     {
@@ -1574,6 +1713,94 @@
       "domain_stage": {
         "status": "bounded_direct_correspondence_audit",
         "finding": "not_observed_in_audited_cellar_snapshot"
+      }
+    },
+    {
+      "resource_id": "uk-sic-2007-index-original",
+      "source_id": "UK_SIC",
+      "edition": "2007",
+      "role": "historical_activity_index",
+      "sha256": "14d9e4b28b2c572772e326e2d2151e24786b7ec476e2cbcf147ab9cbf8b422fa",
+      "path": "data/local/raw/UK_SIC/2007/uk-sic-2007-index-original/14d9e4b28b2c572772e326e2d2151e24786b7ec476e2cbcf147ab9cbf8b422fa/uk-sic-2007-index-original.pdf",
+      "bytes": 1828606,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "selected_clauses_reviewed",
+        "pages": 328
+      }
+    },
+    {
+      "resource_id": "uk-sic-2007-index-202409",
+      "source_id": "UK_SIC",
+      "edition": "2007",
+      "role": "historical_activity_index",
+      "sha256": "dcd36353d6e359550f88f9070557a974e8a020998fbf75b55b02d38e49912eac",
+      "path": "data/local/raw/UK_SIC/2007/uk-sic-2007-index-202409/dcd36353d6e359550f88f9070557a974e8a020998fbf75b55b02d38e49912eac/uk-sic-2007-index-202409.xlsx",
+      "bytes": 890595,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "selected_activity_index_rows_reviewed",
+        "index_rows": 15957,
+        "selected_rows": 4
+      }
+    },
+    {
+      "resource_id": "isic-economic-downloads-20261109",
+      "source_id": "ISIC",
+      "edition": "Rev.5",
+      "role": "publisher_release_listing",
+      "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+      "path": "data/local/raw/ISIC/Rev.5/isic-economic-downloads-20261109/1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde/isic-economic-downloads-20261109.html",
+      "bytes": 144294,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "publisher_release_listing_checked"
+      }
+    },
+    {
+      "resource_id": "unsd-classification-registry-20261109",
+      "source_id": "ISIC",
+      "edition": "Rev.5",
+      "role": "publisher_registry_listing",
+      "sha256": "848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f",
+      "path": "data/local/raw/ISIC/Rev.5/unsd-classification-registry-20261109/848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f/unsd-classification-registry-20261109.html",
+      "bytes": 164938,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "publisher_release_listing_checked"
+      }
+    },
+    {
+      "resource_id": "nace-correspondence-listing-20261109",
+      "source_id": "NACE",
+      "edition": "Rev.2.1",
+      "role": "publisher_release_listing",
+      "sha256": "d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b",
+      "path": "data/local/raw/NACE/Rev.2.1/nace-correspondence-listing-20261109/d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b/nace-correspondence-listing-20261109.html",
+      "bytes": 179165,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "publisher_release_listing_checked"
+      }
+    },
+    {
+      "resource_id": "cpa2008-structure-notes",
+      "source_id": "EU_CPA",
+      "edition": "2008",
+      "role": "structure_and_explanatory_notes",
+      "sha256": "990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755",
+      "path": "data/local/raw/EU_CPA/2008/cpa2008-structure-notes/990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755/cpa2008-structure-notes.pdf",
+      "bytes": 1276359,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+      "domain_stage": {
+        "status": "selected_clauses_reviewed",
+        "pages": 338
       }
     }
   ]

@@ -18,6 +18,17 @@ def extend_plan(root, previous, observed):
     pins = review["reviewed_input_sha256"]
     if not set(ASSETS) <= pins.keys() or any(observed[rid] != digest for rid, digest in pins.items()):
         raise ValueError("material boundary reviewed source bytes changed")
+    result = apply_review(previous, review)
+    result["material_boundary_review"] = {
+        "review_sha256": sha256((root / PLAN).read_bytes()),
+        "parent_review_sha256": review["parent_review_sha256"],
+        "reviewed_input_sha256": pins,
+        "reviewed_on": review["reviewed_on"],
+    }
+    return result, review
+
+
+def apply_review(previous, review):
     result = copy.deepcopy(previous)
     append_review_entries(result, review)
     add_mapping_scopes(result, review)
@@ -32,13 +43,7 @@ def extend_plan(root, previous, observed):
     official = {r["mapping_id"]: r for r in result["official_reviews"]}
     for update in review["official_review_followups"]:
         official[update["mapping_id"]].setdefault("scope_followups", []).append(update)
-    result["material_boundary_review"] = {
-        "review_sha256": sha256((root / PLAN).read_bytes()),
-        "parent_review_sha256": review["parent_review_sha256"],
-        "reviewed_input_sha256": pins,
-        "reviewed_on": review["reviewed_on"],
-    }
-    return result, review
+    return result
 
 
 def note_revision_id(code):

@@ -175,6 +175,55 @@
       "url": "https://unstats.un.org/unsd/classifications/Econ/Download/ISIC_Rev5_Publication-white_cover_version.pdf",
       "sha256": "df116f2bdc0beb16fc135fd2417a3d865bfb3e8bd3b4da19d3b16370ee8f7b11",
       "publication_date": "2026"
+    },
+    {
+      "resource_id": "uk-sic-2007-index-202409",
+      "edition": "2007",
+      "url": "https://www.ons.gov.uk/file?uri=%2Fmethodology%2Fclassificationsandstandards%2Fukstandardindustrialclassificationofeconomicactivities%2Fuksic2007%2Fuksic2007indexeswithaddendumdecember2022newformatsept20241.xlsx",
+      "sha256": "dcd36353d6e359550f88f9070557a974e8a020998fbf75b55b02d38e49912eac",
+      "publication_date": "2024-09"
+    },
+    {
+      "resource_id": "uk-sic-2007-index-original",
+      "edition": "2007",
+      "url": "https://www.ons.gov.uk/file?uri=%2Fmethodology%2Fclassificationsandstandards%2Fukstandardindustrialclassificationofeconomicactivities%2Fuksic2007%2Fsic2007indexes.pdf",
+      "sha256": "14d9e4b28b2c572772e326e2d2151e24786b7ec476e2cbcf147ab9cbf8b422fa",
+      "publication_date": "2009-12"
+    },
+    {
+      "resource_id": "cpa2008-structure-notes",
+      "edition": "2008",
+      "url": "https://ec.europa.eu/eurostat/documents/6495078/19716404/CPA2008structureexplanatorynotesEN.pdf/f655ffea-01f4-47db-108e-4d35da5991d9?t=1722511832285",
+      "sha256": "990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755",
+      "publication_date": null
+    },
+    {
+      "resource_id": "isic-economic-downloads-20261109",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/",
+      "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+      "publication_date": null
+    },
+    {
+      "resource_id": "unsd-classification-registry-20261109",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+      "sha256": "848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f",
+      "publication_date": null
+    },
+    {
+      "resource_id": "nace-correspondence-listing-20261109",
+      "edition": "Rev.2.1",
+      "url": "https://ec.europa.eu/eurostat/web/nace/correspondence-tables",
+      "sha256": "d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b",
+      "publication_date": null
+    },
+    {
+      "resource_id": "isic5-errata-2026",
+      "edition": "Rev.5",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/Errata_for_the_Explanatory_Notes_of_the_ISICRev5_-_2026.pdf",
+      "sha256": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
+      "publication_date": "2026"
     }
   ],
   "nace21": {
@@ -198,31 +247,31 @@
     "polyhierarchy_nodes": 0
   },
   "nace2_selected": {
-    "node_count": 17,
-    "unique_codes": 17,
+    "node_count": 23,
+    "unique_codes": 23,
     "duplicate_codes": [],
-    "edge_count": 16,
+    "edge_count": 22,
     "orphan_parents": [],
     "self_links": [],
     "cycles": [],
     "levels": {
       "1": 1,
-      "2": 2,
-      "3": 5,
-      "4": 9
+      "2": 4,
+      "3": 7,
+      "4": 11
     },
     "roots": 1,
-    "leaves": 9,
-    "definitions": 12,
+    "leaves": 11,
+    "definitions": 17,
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
   "nace21_class_definitions": 651,
   "branch_source_nodes": {
-    "ISIC:Rev.4": 21,
-    "ISIC:Rev.5": 22,
-    "NACE:Rev.2.1": 23,
-    "NACE:Rev.2": 25
+    "ISIC:Rev.4": 29,
+    "ISIC:Rev.5": 25,
+    "NACE:Rev.2.1": 25,
+    "NACE:Rev.2": 31
   },
   "pdf_pages": {
     "nace2-manual-2008": 369,
@@ -597,6 +646,145 @@
       "isic5-white-cover-2026": 335
     }
   },
+  "contract_parts_boundaries": {
+    "new_activities": 4,
+    "new_claims": 36,
+    "additional_official_scope_reviews": 6,
+    "uk_index_activity_rows": 15957,
+    "uk_index_selected_rows": 4,
+    "pdf_pages": {
+      "uk-sic-2007-index-original": 328,
+      "cpa2008-structure-notes": 338
+    },
+    "publisher_release_recheck": {
+      "status": "no_revised_pair_observed_in_checked_publications",
+      "acquisition": {
+        "acquisition_path": "data/acquisition/20261109T003503106764Z-a46eea10.json",
+        "acquisition_sha256": "6e50547d12849d05afabd787c0798114ca8ca0ad0e27f2b671c108084b8c2824",
+        "reviewed_release_links": [
+          "https://showvoc.op.europa.eu/#/datasets/ESTAT_Main_Industrial_Groupings_%28MIG%29/downloads",
+          "https://showvoc.op.europa.eu/#/datasets/ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29/downloads",
+          "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/Change history.txt",
+          "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+          "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx"
+        ],
+        "reviewed_registry_title_ids": []
+      },
+      "same_bytes": {
+        "isic4-isic5-correspondence": {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "sha256": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+          "attempted_at": "2026-11-09T00:34:14.613612+00:00",
+          "http_status": 200,
+          "etag": "\"623b909bd470db1:0\"",
+          "last_modified": "Mon, 27 Jan 2025 16:00:38 GMT"
+        },
+        "isic4-nace2-correspondence": {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+          "sha256": "fd5283a539afecfb36aad2ad3023787c333a133458463592d681c30d1a15a101",
+          "attempted_at": "2026-11-09T00:34:27.207636+00:00",
+          "http_status": 200,
+          "etag": "\"0264670d0b6cc1:0\"",
+          "last_modified": "Sat, 10 Dec 2011 00:12:44 GMT"
+        },
+        "isic5-errata-2026": {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Download/Errata_for_the_Explanatory_Notes_of_the_ISICRev5_-_2026.pdf",
+          "sha256": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
+          "attempted_at": "2026-11-09T00:34:19.140921+00:00",
+          "http_status": 200,
+          "etag": "\"33e8d2d5b042dd1:0\"",
+          "last_modified": "Sat, 12 Sep 2026 12:18:36 GMT"
+        },
+        "nace-cellar-nace2-isic4-xkos-20261109": {
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+%3Fassociation+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2FNACE2_ISIC4%3E+%3Chttp%3A%2F%2Frdf-vocabulary.ddialliance.org%2Fxkos%23madeOf%3E+%3Fassociation+.+%3Fassociation+%3Fp+%3Fo+%7D+FILTER%28%21isLiteral%28%3Fo%29+%7C%7C+LANG%28%3Fo%29%3D%22en%22+%7C%7C+LANG%28%3Fo%29%3D%22%22%29+%7D+ORDER+BY+%3Fassociation+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+          "attempted_at": "2026-11-09T00:34:39.918095+00:00",
+          "http_status": 200,
+          "etag": null,
+          "last_modified": null
+        },
+        "nace2-cellar-isic4-predicates-20261109": {
+          "url": "https://publications.europa.eu/webapi/rdf/sparql?query=SELECT+DISTINCT+%3Fs+%3Fp+%3Fo+WHERE+%7B+GRAPH+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%7B+%3Fs+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23inScheme%3E+%3Chttp%3A%2F%2Fdata.europa.eu%2Fux2%2Fnace2%2Fnace2%3E+%3B+%3Fp+%3Fo+.+VALUES+%3Fp+%7B+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23exactMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23closeMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23narrowMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23broadMatch%3E+%3Chttp%3A%2F%2Fwww.w3.org%2F2004%2F02%2Fskos%2Fcore%23relatedMatch%3E+%7D+FILTER%28STRSTARTS%28STR%28%3Fo%29%2C+%22https%3A%2F%2Funstats.un.org%2Fclassifications%2FISIC%2Frev4%2F%22%29%29+%7D+%7D+ORDER+BY+%3Fs+%3Fp+%3Fo&format=application%2Fsparql-results%2Bjson",
+          "sha256": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+          "attempted_at": "2026-11-09T00:34:33.299028+00:00",
+          "http_status": 200,
+          "etag": null,
+          "last_modified": null
+        },
+        "nace21-nace2-correspondence": {
+          "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29&fileName=NACE_Rev.2.1_NACE_Rev.2_+CorrespondenceTable.xlsx",
+          "sha256": "2ceee6c855731842c7933a897a9400756fe23c4416b00176631236053b704ac2",
+          "attempted_at": "2026-11-09T00:34:22.156070+00:00",
+          "http_status": 200,
+          "etag": null,
+          "last_modified": null
+        },
+        "nace2-nace21-correspondence-20260831": {
+          "url": "https://showvoc.op.europa.eu/semanticturkey/it.uniroma2.art.semanticturkey/st-core-services/Download/getFile?ctx_project=ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2&fileName=NACE_Rev.2_NACE_Rev.2.1_+CorrespondenceTable.xlsx",
+          "sha256": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+          "attempted_at": "2026-11-09T00:34:30.290849+00:00",
+          "http_status": 200,
+          "etag": null,
+          "last_modified": null
+        }
+      },
+      "listings": {
+        "isic-economic-downloads-20261109": {
+          "resource_id": "isic-economic-downloads-20261109",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/",
+          "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+          "publication_date": null
+        },
+        "unsd-classification-registry-20261109": {
+          "resource_id": "unsd-classification-registry-20261109",
+          "edition": "Rev.5",
+          "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+          "sha256": "848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f",
+          "publication_date": null
+        },
+        "nace-correspondence-listing-20261109": {
+          "resource_id": "nace-correspondence-listing-20261109",
+          "edition": "Rev.2.1",
+          "url": "https://ec.europa.eu/eurostat/web/nace/correspondence-tables",
+          "sha256": "d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b",
+          "publication_date": null
+        }
+      },
+      "unsd_release_links": [
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "line": 721
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC_Rev4_to_ISIC_Rev5_Correspondence_Table-17Jan2025.xlsx",
+          "line": 1647
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/ISIC4_NACE2.txt",
+          "line": 1742
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/tables/ISIC/ISIC4_NACE2/Change history.txt",
+          "line": 1743
+        }
+      ],
+      "eurostat_showvoc_links": [
+        {
+          "url": "https://showvoc.op.europa.eu/#/datasets/ESTAT_Statistical_Classification_of_Economic_Activities_in_the_European_Community_Rev._2.1._%28NACE_2.1%29/downloads",
+          "line": 4706
+        },
+        {
+          "url": "https://showvoc.op.europa.eu/#/datasets/ESTAT_Main_Industrial_Groupings_%28MIG%29/downloads",
+          "line": 4707
+        }
+      ],
+      "registry_date": "2026-11-03",
+      "registry_titles_checked": 298,
+      "registry_title_matches": [],
+      "scope": "Fresh downloads of fixed table URLs and Cellar queries. Registry title review is limited to the captured listing."
+    }
+  },
   "official_tables": {
     "nace21_to_nace2_rows": 1598,
     "nace_levels": {
@@ -607,13 +795,13 @@
     },
     "isic4_to_nace2_rows": 996,
     "furniture_current_incoming_rows": 7,
-    "individually_reviewed_rows": 44,
+    "individually_reviewed_rows": 54,
     "reviews_by_resource": {
-      "nace21-nace2-correspondence": 9,
-      "isic4-nace2-correspondence": 10,
-      "nace2-nace21-correspondence-20260831": 9,
-      "nace-cellar-nace2-isic4-xkos-20261109": 10,
-      "isic4-isic5-correspondence": 6
+      "nace21-nace2-correspondence": 11,
+      "isic4-nace2-correspondence": 12,
+      "nace2-nace21-correspondence-20260831": 11,
+      "nace-cellar-nace2-isic4-xkos-20261109": 12,
+      "isic4-isic5-correspondence": 8
     }
   },
   "followup_sources": {
@@ -718,41 +906,41 @@
     ]
   },
   "directory": {
-    "node_count": 24,
-    "unique_codes": 24,
+    "node_count": 29,
+    "unique_codes": 29,
     "duplicate_codes": [],
-    "edge_count": 21,
+    "edge_count": 25,
     "orphan_parents": [],
     "self_links": [],
     "cycles": [],
     "levels": {
-      "1": 3,
-      "2": 8,
+      "1": 4,
+      "2": 10,
       "3": 10,
-      "4": 3
+      "4": 5
     },
-    "roots": 3,
-    "leaves": 15,
-    "definitions": 24,
+    "roots": 4,
+    "leaves": 19,
+    "definitions": 29,
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
   "reused_ids": 2,
-  "new_ids": 22,
-  "bounded_activities": 17,
-  "approved_bindings": 71,
+  "new_ids": 27,
+  "bounded_activities": 21,
+  "approved_bindings": 87,
   "activity_review_status": {
-    "reviewed_bounded_activity": 15,
+    "reviewed_bounded_activity": 19,
     "reviewed_current_multisource_activity": 1,
     "reviewed_with_legacy_gap": 1
   },
   "approved_isic5_source_levels": {
-    "class": 13,
-    "group": 4
+    "class": 15,
+    "group": 6
   },
-  "candidate_bindings": 8,
-  "evidence_claims": 105,
-  "research_mappings": 19,
+  "candidate_bindings": 9,
+  "evidence_claims": 141,
+  "research_mappings": 23,
   "issues": [
     {
       "id": "FURN-DIRECT-CROSSWALK",
@@ -828,28 +1016,63 @@
             "finding": "两套旧版与两套当前版支持新家具表面工序和首次软包；ISIC5在310组直接列项，故批准组级绑定。旧NACE RDF与2008手册均明确31.09；相反分配到31.01的对应表内容保留为候选。",
             "remaining": "泛材料工序没有强制拆到3101/3102；旧31.01与31.09的发布者陈述差异未获更正。"
           }
+        },
+        {
+          "id": "FURN-FINISHING",
+          "status": "partially_addressed",
+          "claim_ids": [
+            "F033",
+            "F029"
+          ],
+          "finding": "当前对应表31.00→旧31.01共同内容列家具表面处理；2008手册把该活动列在31.09。两份原文并存，不重写历史分配。",
+          "next_action": "取得更正说明或旧版补充索引；暂不建立表面处理跨版已审子节点。",
+          "followup": {
+            "issue_id": "FURN-FINISHING",
+            "status": "partially_addressed",
+            "finding": "批准木质与全金属新制家用活动家具的集成表面处理子范围，保留原310组级范围和3100拆分。",
+            "remaining": "未裁定材料不明的混合家具、独立外包处理、初次软包的材料细类及旧NACE 31.01与31.09的表面处理冲突。",
+            "claim_ids": [
+              "FF002",
+              "FM001",
+              "FM002",
+              "FM004",
+              "FM005",
+              "FM006",
+              "FM008",
+              "FM009",
+              "F029",
+              "FF003"
+            ],
+            "activity_ids": [
+              "urn:atlas:concept:c6d8be01-7532-53c8-bb0f-05eee3179ce9",
+              "urn:atlas:concept:3bc38e79-01eb-5935-8ea2-37f56c7f2716"
+            ],
+            "reviewed_on": "2026-11-09"
+          }
         }
       ],
       "followup": {
         "issue_id": "FURN-FINISHING",
         "status": "partially_addressed",
-        "finding": "批准木质与全金属新制家用活动家具的集成表面处理子范围，保留原310组级范围和3100拆分。",
-        "remaining": "未裁定材料不明的混合家具、独立外包处理、初次软包的材料细类及旧NACE 31.01与31.09的表面处理冲突。",
+        "finding": "本轮区分承包者和委托方，审定识别为新制家用活动家具的独立涂装，并另审通用木料防腐和金属工件漆涂层。英国索引和旧CPA证据支持31.09的新家具子范围。",
+        "remaining": "旧31.01第555行的广义表面处理归属冲突、办公与店铺新家具的独立承包、独立处理的ISIC材料细类、材料未定的中间件和首次软包仍待审。",
         "claim_ids": [
-          "FF002",
-          "FM001",
-          "FM002",
-          "FM004",
-          "FM005",
-          "FM006",
-          "FM008",
-          "FM009",
-          "F029",
-          "FF003"
+          "FC017",
+          "FF003",
+          "FC012",
+          "FC013",
+          "FC014",
+          "FC006",
+          "FC008",
+          "FC001",
+          "FC002",
+          "FC003",
+          "FC004"
         ],
         "activity_ids": [
-          "urn:atlas:concept:c6d8be01-7532-53c8-bb0f-05eee3179ce9",
-          "urn:atlas:concept:3bc38e79-01eb-5935-8ea2-37f56c7f2716"
+          "urn:atlas:concept:2fccaadf-2a4d-5207-ba75-0d70cf4784f4",
+          "urn:atlas:concept:8ef1156d-f2cb-5deb-b7f1-5329df1e5925",
+          "urn:atlas:concept:1ef95e8f-e39d-5d17-bbe0-c6f05bddf9f0"
         ],
         "reviewed_on": "2026-11-09"
       }
@@ -1012,25 +1235,55 @@
             "finding": "新增当前两源的可识别木制家具部件范围，旧版保留待审；维修及固定安装另作与制造并列的边界节点，不与首次制造处理混淆。",
             "remaining": "旧部件分配、全部板材/部件及材料工序边界仍未全审。"
           }
+        },
+        {
+          "id": "FURN-PARTS-RESIDUAL",
+          "status": "partially_addressed",
+          "claim_ids": [
+            "F035",
+            "F004"
+          ],
+          "finding": "家具部件与玻璃、石、陶瓷等独立板材存在边界；本轮七个活动只研究成品家具或床垫，未审完整类所有部件和表面处理。",
+          "next_action": "在材料、工序及成品范围上逐项核对；不强制清空待审范围。",
+          "followup": {
+            "issue_id": "FURN-PARTS-RESIDUAL",
+            "status": "partially_addressed",
+            "finding": "旧NACE 31.01的官方共同内容支持店铺家具内置部件子范围。旧ISIC 3100取得CPC产品层旁证。",
+            "remaining": "独立制造的部件在ISIC Rev.4的活动分配、其他旧NACE部件及板材残余未审定。CPC主要生产行业只保留为旁证。",
+            "claim_ids": [
+              "FM012",
+              "FM013",
+              "FM016",
+              "FM015",
+              "FM017",
+              "FM018",
+              "FM019",
+              "FM014"
+            ],
+            "activity_ids": [
+              "urn:atlas:concept:a62f38d1-7dd9-52ae-b515-2d39384f83ac"
+            ],
+            "reviewed_on": "2026-11-09"
+          }
         }
       ],
       "followup": {
         "issue_id": "FURN-PARTS-RESIDUAL",
         "status": "partially_addressed",
-        "finding": "旧NACE 31.01的官方共同内容支持店铺家具内置部件子范围。旧ISIC 3100取得CPC产品层旁证。",
-        "remaining": "独立制造的部件在ISIC Rev.4的活动分配、其他旧NACE部件及板材残余未审定。CPC主要生产行业只保留为旁证。",
+        "finding": "其他家用家具的可识别木制部件得到旧NACE31.09的国家活动索引依据，并以旧NACE侧的明确非部分对应支持旧ISIC3100的有界研究分配。",
+        "remaining": "旧ISIC3100缺直接部件条款。专用店铺内置部件、通用板材及其他残余仍逐项待审。",
         "claim_ids": [
-          "FM012",
-          "FM013",
-          "FM016",
-          "FM015",
-          "FM017",
-          "FM018",
-          "FM019",
-          "FM014"
+          "FC007",
+          "FC005",
+          "FC009",
+          "FC032",
+          "FC033",
+          "FC034",
+          "FC035",
+          "FC036"
         ],
         "activity_ids": [
-          "urn:atlas:concept:a62f38d1-7dd9-52ae-b515-2d39384f83ac"
+          "urn:atlas:concept:879352c1-dbde-50cf-aee6-a953b83c79ed"
         ],
         "reviewed_on": "2026-11-09"
       }
@@ -1070,7 +1323,47 @@
         "sanitary-isic-revision",
         "sanitary-unsd-legacy",
         "sanitary-eurostat-legacy"
-      ]
+      ],
+      "history": [
+        {
+          "id": "FURN-SANITARY-CROSSWALK-GAP",
+          "status": "conflict_retained",
+          "finding": "三份已检完整官方对应缺少由卫生洁具定义支持的代码对。2024年Rev.5说明内部冲突，2026年删掉冲突排除。两代ISIC及旧NACE与ISIC的历史对应原样保留。",
+          "next_action": "后续查找卫生洁具对应的发布者修订或说明。继续逐项区分陶瓷家具、卫生洁具与板材。",
+          "claim_ids": [
+            "FM020",
+            "FM021",
+            "FM022",
+            "FM023",
+            "F039",
+            "FM024",
+            "FM025",
+            "FM026",
+            "FM027",
+            "FM028",
+            "FM029"
+          ],
+          "comparison_ids": [
+            "sanitary-isic-revision",
+            "sanitary-unsd-legacy",
+            "sanitary-eurostat-legacy"
+          ]
+        }
+      ],
+      "followup": {
+        "issue_id": "FURN-SANITARY-CROSSWALK-GAP",
+        "status": "conflict_retained",
+        "finding": "复查官方入口、已锁定发布件与Eurostat Cellar查询。三份表的卫生洁具缺行仍在，2026年勘误文件仍只用于说明条款。",
+        "remaining": "本次复查限所列发布入口与登记标题。缺行的发布者修订状态继续跟踪。",
+        "claim_ids": [
+          "FM020",
+          "FM021",
+          "FM027",
+          "FM028"
+        ],
+        "activity_ids": [],
+        "reviewed_on": "2026-11-09"
+      }
     }
   ],
   "isic_furniture_official_rows": [
@@ -1157,11 +1450,40 @@
       },
       "reviewed_on": "2026-11-09"
     },
+    "contract_parts_review": {
+      "review_sha256": "44190dd9d0532eb3291afbee2b7a9a4ea5502a488a4515222be6d17c52426403",
+      "parent_review_sha256": "2d7d8074bba69e24ce1eaf10e3da8aaad03ef9b0f2b7062d43d5262450689994",
+      "reviewed_input_sha256": {
+        "cpa2008-structure-notes": "990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755",
+        "cpc21-manual-2015": "f5a10be7b476dd12942d9a233f4818f5e0074add013772a4ca63cd3fc1d8289f",
+        "isic-economic-downloads-20261109": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+        "isic4-database": "24f346cafdd2dae0c1cad9a6f7e58d6962919ea5dda7572d3488c3adf53c9dc4",
+        "isic4-isic5-correspondence": "59bbe76799750a67aa96153cd24f61d97247b19ee79784e72d6f2ecedb764415",
+        "isic4-manual-2008": "ef36c082df9bb6232627945e2f092130bccdd8f319a9c55c55c75e6bf51342fe",
+        "isic4-nace2-correspondence": "fd5283a539afecfb36aad2ad3023787c333a133458463592d681c30d1a15a101",
+        "isic5-errata-2026": "63e4de14bfb3c41fdca649ee75e3a45465e68f85a7871d29552b109f3e47434d",
+        "isic5-notes-20260819": "e54e922eebcf37353f9e1783789e177d841987f0db04ef01b774ebb2cf0dfffa",
+        "isic5-white-cover-2026": "df116f2bdc0beb16fc135fd2417a3d865bfb3e8bd3b4da19d3b16370ee8f7b11",
+        "nace-cellar-nace2-isic4-xkos-20261109": "ebb2b8f7373f7fe50e4c3b995130c5b29ef2f759ddc375c9f214ee56857907a2",
+        "nace-correspondence-listing-20261109": "d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b",
+        "nace2-cellar-isic4-predicates-20261109": "9181d36e48e4671c982c4732fa6d51d43b997289c76d160dd35d578b62fd5758",
+        "nace2-manual-2008": "452982566cfcb4ee4f0e20d19395cb9c81726828b3bce48fdf4a0c7efc3a2302",
+        "nace2-nace21-correspondence-20260831": "a6f961f00fcc62aff9d44d825e51b483f6ff0d828066dc2bddf31b4040c86dbd",
+        "nace21-manual-2026": "3cd7bc5d1dcc60c3e0ecaefa732ad2d30d87d009abf5b1b823632e12a8dd0cd4",
+        "nace21-nace2-correspondence": "2ceee6c855731842c7933a897a9400756fe23c4416b00176631236053b704ac2",
+        "nace21-notes-20260930": "9a0e11d53c97475b5a7b132cdbf1fdf4b13e3d584402a04c3f5455dcc3e06442",
+        "uk-sic-2007-index-202409": "dcd36353d6e359550f88f9070557a974e8a020998fbf75b55b02d38e49912eac",
+        "uk-sic-2007-index-original": "14d9e4b28b2c572772e326e2d2151e24786b7ec476e2cbcf147ab9cbf8b422fa",
+        "unsd-classification-registry-20261109": "848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f"
+      },
+      "reviewed_on": "2026-11-09"
+    },
     "parser_sha256": {
-      "furniture.py": "7c5a5f6c1d48af0dcc597b7e55e2b20a170ec454d3abe834cbe70b9e3f623f55",
+      "furniture.py": "684ba901a394144d01171daff1dc0d236067fc6d9d10676baa3464491ea6b957",
       "furniture_followup.py": "5e17272f24f5378a33f4d9e5624a6eb34a3785f6d2042976caea125a1a049996",
-      "furniture_materials.py": "e91a17a43ba13349021124f0b32af8cc035a6ae5c35e739cee618fe08dc391bb",
-      "furniture_view.html": "e83715f3e5bd41bc331379b9a97d6c0fef481a650eacad6b643c3aaf5c7b6875",
+      "furniture_materials.py": "6a93882d7800a18de089e4898f6a834c0282acabcc23a29706a5b1589b3875c8",
+      "furniture_contracts.py": "75f5c0a6bc321602773f0408a677dc1d5ffec900d4b5a0c24d13384fff32cde7",
+      "furniture_view.html": "afbc5ae46c2b185cfb0147d7d5c15fb549ba04126983a06be36d23eb16cff866",
       "isic.py": "a44cfdb15f5dc2c4d3899b417d02773202ee1e0f0be34958b5a5a562e634a426",
       "isic_boundaries.py": "003be7ca8c42c216ef8ffe82b779866e7bc0aceeb641f8e383e9cad53141d838",
       "isic_priority.py": "c82f8758119023bd1d570157b78bb577978caa873e113d3798a615bc44b3c430",

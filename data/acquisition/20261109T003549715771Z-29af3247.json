@@ -1,0 +1,18 @@
+[
+  {
+    "resource_id": "cpa2008-structure-notes",
+    "source_id": "EU_CPA",
+    "edition": "2008",
+    "url": "https://ec.europa.eu/eurostat/documents/6495078/19716404/CPA2008structureexplanatorynotesEN.pdf/f655ffea-01f4-47db-108e-4d35da5991d9?t=1722511832285",
+    "attempted_at": "2026-11-09T00:35:42.320643+00:00",
+    "sha256": "990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755",
+    "path": "data/local/raw/EU_CPA/2008/cpa2008-structure-notes/990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755/cpa2008-structure-notes.pdf",
+    "bytes": 1276359,
+    "final_url": "https://ec.europa.eu/eurostat/documents/6495078/19716404/CPA2008structureexplanatorynotesEN.pdf/f655ffea-01f4-47db-108e-4d35da5991d9?t=1722511832285",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "etag": "\"1722511832:dtagent10343260715123811bMYz:dtagent10343260715123811bMYz\"",
+    "last_modified": "Thu, 01 Aug 2024 11:30:30 GMT",
+    "status": "downloaded"
+  }
+]

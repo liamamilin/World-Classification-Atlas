@@ -2,14 +2,14 @@
 
 核查日期：2026-11-09。来源核实与下载状态独立。
 
-登记 50 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
+登记 52 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-41 个采集任务，39 个已锁定且通过格式检查，涉及 7 个来源；8 个资源可解析。
+47 个采集任务，45 个已锁定且通过格式检查，涉及 9 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
-| 01-economy 经济与行业 | 5 | 2 | 1 |
-| 02-products 产品与服务 | 9 | 1 | 1 |
+| 01-economy 经济与行业 | 7 | 4 | 1 |
+| 02-products 产品与服务 | 10 | 2 | 1 |
 | 03-consumption 消费与支出 | 4 | 2 | 2 |
 | 04-knowledge 学科与知识 | 6 | 0 | 0 |
 | 05-occupations 职业与技能 | 4 | 1 | 1 |
@@ -55,7 +55,7 @@
 | nace21-notes-20260930 | Rev.2.1 | format_checked_only; economy: {'status': 'structure_and_notes_parsed', 'nodes': 1047} | 未统计 | — |
 | nace21-nace2-correspondence | Rev.2.1 | format_checked_only; economy: {'status': 'correspondence_parsed', 'rows': 1598} | 未统计 | — |
 | nace21-manual-2026 | Rev.2.1 | format_checked_only; economy: {'status': 'text_extracted_and_selected_clauses_reviewed'} | 未统计 | — |
-| nace2-manual-2008 | Rev.2 | format_checked_only; economy: {'status': 'selected_branch_notes_parsed', 'nodes': 17} | 未统计 | — |
+| nace2-manual-2008 | Rev.2 | format_checked_only; economy: {'status': 'selected_branch_notes_parsed', 'nodes': 23} | 未统计 | — |
 | nace-reuse-policy | Rev.2.1 | format_checked_only | 未统计 | — |
 | isic4-nace2-correspondence | Rev.4 | format_checked_only; economy: {'status': 'correspondence_parsed', 'rows': 996} | 未统计 | — |
 | isic4-nace2-change-history | Rev.4 | format_checked_only | 未统计 | — |
@@ -69,6 +69,12 @@
 | nace-cellar-current-positive-control-20261109 | Rev.2.1 | format_checked_only; economy: {'status': 'bounded_direct_correspondence_audit', 'finding': 'not_observed_in_audited_cellar_snapshot'} | 未统计 | — |
 | nace-cellar-nace2-isic4-xkos-20261109 | Rev.2 | format_checked_only; economy: {'status': 'official_direct_XKOS_correspondence_parsed', 'associations': 996} | 未统计 | — |
 | nace-cellar-current-incoming-isic-20261109 | Rev.2.1 | format_checked_only; economy: {'status': 'bounded_direct_correspondence_audit', 'finding': 'not_observed_in_audited_cellar_snapshot'} | 未统计 | — |
+| uk-sic-2007-index-original | 2007 | format_checked_only; economy: {'status': 'selected_clauses_reviewed', 'pages': 328} | 未统计 | — |
+| uk-sic-2007-index-202409 | 2007 | format_checked_only; economy: {'status': 'selected_activity_index_rows_reviewed', 'index_rows': 15957, 'selected_rows': 4} | 未统计 | — |
+| isic-economic-downloads-20261109 | Rev.5 | format_checked_only; economy: {'status': 'publisher_release_listing_checked'} | 未统计 | — |
+| unsd-classification-registry-20261109 | Rev.5 | format_checked_only; economy: {'status': 'publisher_release_listing_checked'} | 未统计 | — |
+| nace-correspondence-listing-20261109 | Rev.2.1 | format_checked_only; economy: {'status': 'publisher_release_listing_checked'} | 未统计 | — |
+| cpa2008-structure-notes | 2008 | format_checked_only; economy: {'status': 'selected_clauses_reviewed', 'pages': 338} | 未统计 | — |
 
 经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 
@@ -79,9 +85,10 @@
 其中3个活动只审定Rev.5当前范围；7条待审来源关联与已审绑定分别索引，1个待审目录提案不计入已审节点。CPC产品说明和主要行业对应仅作旁证，见 [边界核查](isic-boundary-review.json)。
 
 家具多源研究另见 [NACE/ISIC实测](furniture-alignment.json)，状态：passed。
-NACE Rev.2.1完整解析1047节点；家具分支24节点，含2个沿用身份及22个新身份；19条有界跨体系研究关系、44条官方行独立审查、8条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
+NACE Rev.2.1完整解析1047节点；家具分支29节点，含2个沿用身份及27个新身份；23条有界跨体系研究关系、54条官方行独立审查、9条待审来源绑定。原有ISIC目录仍独立保留，节点数不重复累加。上表通用适配器数量不包含专项解析。
 新增旧NACE2→ISIC4直接官方XKOS桥996条，发布者closeMatch保持独立；与UNSD有995对代码事实一致，46.6→466/465差异保留。当前NACE2.1–ISIC5审计有1047节点阳性对照，未观察到直接关系。
-家具材料边界新增5项活动和37条证据。在3份固定官方表中核实卫生洁具缺行，单独登记定义支持的研究对应。旧ISIC部件候选、独立处理及整类冲突继续待审。
+家具材料边界研究含5项活动和37条证据。在3份固定官方表中核实卫生洁具缺行，单独登记定义支持的研究对应。
+承包处理与旧家具部件新增4项活动和36条证据。发布复查中7份文件字节与旧快照相同，核查298条登记标题。卫生洁具官方缺行、旧31.01冲突及专用店铺部件的旧ISIC候选继续保留。
 
 节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。
 
@@ -136,3 +143,5 @@ NACE Rev.2.1完整解析1047节点；家具分支24节点，含2个沿用身份�
 - LOCARNO: 公开再分发许可待核实；官方映射及精确端点版本待核实。 [官方入口](https://www.wipo.int/en/web/classification-locarno)
 - EBOPS: 公开再分发许可待核实；官方映射及精确端点版本待核实；原始层级待文件或手册核实。 [官方入口](https://unstats.un.org/unsd/classifications/Family/Detail/2102)
 - ICSE: 公开再分发许可待核实；官方映射及精确端点版本待核实。 [官方入口](https://webapps.ilo.org/ilostat-files/Documents/ICSE-18_manual.pdf)
+- UK_SIC: 仅选取2007索引活动作比较，未解析英国整套分类及2026对应表。 [官方入口](https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities)
+- EU_CPA: 本轮只取CPA 2008服务类别作证据，未解析全体系或跨版对应。 [官方入口](https://ec.europa.eu/eurostat/web/cpa)

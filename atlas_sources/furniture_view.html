@@ -22,8 +22,9 @@ function show(n){const box=$('detail');box.replaceChildren();el('h2',n.atlas_lab
 if(n.notes){el('h3','原始说明字段',box);json(n.notes,box)}
 if(n.status==='reviewed_current_multisource_activity')el('p','仅当前两套体系已审；两套旧版归属仍待审。',box).className='pending';
 if(n.status==='reviewed_with_legacy_gap')el('p',`已审两套当前体系与一套旧版；${n.historical_scope_status.pending_editions.join('、')} 仍待审。`,box).className='pending';
+if(n.contractor_scope){el('h3','独立承包者的活动范围',box);json(n.contractor_scope,box);for(const c of Object.values(n.contractor_scope.rule_claims))claim(c,box)}
 for(const component of n.alternate_components||[]){const d=el('details',undefined,box);el('summary',`独立说明组件 · ${component.id}`,d);json({notes:component.notes,evidence:component.evidence},d)}
-for(const b of (n.source_bindings||[]).concat(n.additional_source_bindings||[])){el('h3',`Atlas → ${b.node_id} · ${b.relation||'仅导航'}`,box);if(b.source_level==='group')el('p','组级证据：未自动分配到材料细类。',box);if(b.basis==='group_inclusion_and_material_class_scope')el('p','组级工序与材料细类的交集；仅用于已审的集成制造活动。',box);if(b.basis==='explicit_official_crosswalk_activity_allocation')el('p','依据官方对应表的具体活动分配；不冒称旧定义直接包含。',box);if(source.has(b.node_id)){const s=source.get(b.node_id);el('button',`查看源 ${s.code} ${s.label}`,box).onclick=()=>show(s)}if(b.scope_limit)el('p',b.scope_limit,box);for(const c of b.claim_ids||[])claim(c,box)}
+for(const b of (n.source_bindings||[]).concat(n.additional_source_bindings||[])){el('h3',`Atlas → ${b.node_id} · ${b.relation||'仅导航'}`,box);if(b.source_level==='group')el('p','组级证据：未自动分配到材料细类。',box);if(b.basis==='group_inclusion_and_material_class_scope')el('p','组级工序与材料细类的交集；仅用于已审的集成制造活动。',box);if(b.basis==='explicit_official_crosswalk_activity_allocation')el('p','依据官方对应表的具体活动分配；不冒称旧定义直接包含。',box);if(b.basis==='national_activity_index_with_four_digit_alignment')el('p','依据 ONS 活动索引及四位类对齐。',box);if(b.basis==='national_activity_index_and_nonpartial_nace_side')el('p','依据 ONS 活动索引及 UNSD 对应的非部分 NACE 端。旧 ISIC 端保持部分。',box);if(source.has(b.node_id)){const s=source.get(b.node_id);el('button',`查看源 ${s.code} ${s.label}`,box).onclick=()=>show(s)}if(b.scope_limit)el('p',b.scope_limit,box);for(const c of b.claim_ids||[])claim(c,box)}
 for(const b of n.candidate_source_bindings||[]){el('h3',`待审来源 · ${b.node_id} · 未批准关系`,box).className='pending';json(b,box);for(const c of b.claim_ids||[])claim(c,box)}
 for(const h of n.binding_history||[]){const d=el('details',undefined,box);el('summary',`历史绑定 · ${h.node_id} · ${h.status}`,d);json(h,d);for(const c of h.claim_ids||[])claim(c,d)}
 if(n.boundary_claim_ids){el('h3','范围边界与历史证据',box);for(const c of n.boundary_claim_ids)claim(c,box)}
@@ -35,6 +36,10 @@ function render(){const scheme=$('scheme').value,q=$('search').value.toLowerCase
 $('stats').textContent=`${D.stats.nace21.node_count} 个当前 NACE 源节点已解析；本研究目录 ${D.stats.directory.node_count} 节点（${D.stats.reused_ids} 个复用ID，${D.stats.new_ids} 个新ID）；${D.stats.evidence_claims} 条证据，${D.stats.research_mappings} 条有界跨体系研究对应。`;
 const audit=D.directory.direct_correspondence_audit;el('p',`当前直接对应观察：${audit.status}；阳性对照 ${audit.positive_control_current_nodes} 个NACE节点。空查询不等于官方无对应。`,$('audit'));json(audit,$('audit'));
 for(const c of D.directory.official_pair_comparisons){const d=el('details',undefined,$('audit'));el('summary',`核查表中缺行 · ${c.absent_from} → ${c.absent_to}`,d);json(c,d);for(const id of c.claim_ids)claim(id,d)}
+const release=D.directory.publisher_release_recheck;
+const releaseDetails=el('details',undefined,$('audit'));
+el('summary',`发布者修订复查 · ${Object.keys(release.same_bytes).length} 个文件字节一致 · ${release.registry_titles_checked} 个登记标题`,releaseDetails);
+json(release,releaseDetails);
 for(const issue of D.directory.issues){const d=el('details',undefined,$('issues'));el('summary',`${issue.id} · ${issue.status}`,d);el('p',issue.finding,d);if(issue.next_action)el('p',issue.next_action,d);for(const c of issue.claim_ids||[])claim(c,d);if(issue.followup){el('h3','本轮跟进',d);el('p',issue.followup.finding,d);el('p',issue.followup.remaining,d);for(const c of issue.followup.claim_ids)claim(c,d)}if(issue.history){const h=el('details',undefined,d);el('summary','原始判断历史',h);json(issue.history,h)}if(issue.evidence_resources)json(issue.evidence_resources,d)}
 $('scheme').onchange=render;$('search').oninput=render;render();
 globalThis.furnitureView={data:D,show,render};

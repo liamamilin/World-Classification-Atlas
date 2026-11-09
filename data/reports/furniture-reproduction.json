@@ -1,10 +1,10 @@
 {
   "status": "passed",
-  "method": "fresh directory; pinned raw assets, manifests, query texts and four research inputs only; no network",
+  "method": "fresh directory; pinned raw assets, manifests, query texts, acquisition record and five research inputs only; no network",
   "files": [
     {
       "path": "data/atlas/economy/furniture-directory.json",
-      "sha256": "492f108d3bdbe6c902902362b57b3b075886fe331c2c65181858b58c25c9baac",
+      "sha256": "a23a4c34f2ddb220cec49f4fe3b7bcde5f6f98a8adf3527cef1ea3b14895a9a1",
       "identical": true
     },
     {
@@ -23,18 +23,23 @@
       "identical": true
     },
     {
+      "path": "data/local/economy/furniture/contract-parts-source-evidence.json",
+      "sha256": "636bd405e1fba2e9157fa8c2c2c4f6ab642f7368d8554174c756007fd6e1ae0e",
+      "identical": true
+    },
+    {
       "path": "data/local/economy/furniture/correspondence-to-Rev.2.1-20260831.jsonl",
       "sha256": "09aa139bd9fee17c49a81ecdc766d84028a2de9417bd02a1e1194116db321b2a",
       "identical": true
     },
     {
       "path": "data/local/economy/furniture/evidence-dossiers.json",
-      "sha256": "1d69682a7a06f28db31e94d81db98387f23c9595788ee54eae23e584564dc643",
+      "sha256": "d9c26907dfc683d8f61f26eb12001317f909f52c7599c5cad920dc2abcc04629",
       "identical": true
     },
     {
       "path": "data/local/economy/furniture/index.html",
-      "sha256": "7c07a4baaab8db6b31cedf1dcfcd417d755ddbdb0453924537cba105c99b4a76",
+      "sha256": "338feafd716694640ebc7d655ae4b73c13814c9282541f47a206dbe3a20c0983",
       "identical": true
     },
     {
@@ -49,7 +54,7 @@
     },
     {
       "path": "data/local/economy/furniture/material-boundary-source-evidence.json",
-      "sha256": "d892c74cfd61e12d30a90172e2c076e4b9896cf47fef21300e8b88e5b563e7c8",
+      "sha256": "9f9b3c9ebd5ebe31e02ead3897436db4d44d46c2e2c132355e44e1d1883d4f24",
       "identical": true
     },
     {
@@ -59,7 +64,7 @@
     },
     {
       "path": "data/local/economy/furniture/nace2-selected-nodes.jsonl",
-      "sha256": "720c5260f4ef13b4f8d1e09a6ef93628c4f57a2127bf0aee9a36fa46505deb70",
+      "sha256": "d561d2154e94a8e4f7baceb248d5b9f1e94f98bc3b70563065625c7b60953361",
       "identical": true
     },
     {
@@ -79,7 +84,7 @@
     },
     {
       "path": "data/local/economy/furniture/source-branches.json",
-      "sha256": "757f36a50090057d0b9f6bb4b8fc13d51e0dafd2ec22eebfcaf76c4470ab2748",
+      "sha256": "734ef5ee0aee70c6970bac52f4434211ac1c92bd4d2df540d8e265a3284f6510",
       "identical": true
     },
     {
@@ -109,10 +114,10 @@
     },
     {
       "path": "data/reports/furniture-alignment.json",
-      "sha256": "7a5b496853e140779fdcadd23d5d37aeb1d0dc5819f8f30b1629cc51ed402a0b",
+      "sha256": "74bd36d287518750ab83632f8ca801a66d6960a3d2ce92a37e566431abfd02ab",
       "identical": true
     }
   ],
-  "compared_files": 22,
-  "identical_files": 22
+  "compared_files": 23,
+  "identical_files": 23
 }

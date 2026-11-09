@@ -896,5 +896,131 @@
     "query_sha256": "4597cfc00f3a9362d938aa441ef8e592f7a693acbec4d27442ca4a88246934d7",
     "query_scope": "Exact named graphs and known NACE scheme URIs; no federation, no implicit version-chain mapping",
     "discovery_evidence": "https://cros.ec.europa.eu/book-page/sparql-queries-user-guide"
+  },
+  {
+    "id": "uk-sic-2007-index-original",
+    "source_id": "UK_SIC",
+    "edition": "2007",
+    "url": "https://www.ons.gov.uk/file?uri=%2Fmethodology%2Fclassificationsandstandards%2Fukstandardindustrialclassificationofeconomicactivities%2Fuksic2007%2Fsic2007indexes.pdf",
+    "filename": "uk-sic-2007-index-original.pdf",
+    "format": "pdf",
+    "role": "historical_activity_index",
+    "language": "en",
+    "publication_date": "2009-12",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "ONS Open Government Licence v3.0 except where stated; original component kept locally",
+      "evidence_url": "https://www.ons.gov.uk/help/terms-conditions"
+    }
+  },
+  {
+    "id": "uk-sic-2007-index-202409",
+    "source_id": "UK_SIC",
+    "edition": "2007",
+    "url": "https://www.ons.gov.uk/file?uri=%2Fmethodology%2Fclassificationsandstandards%2Fukstandardindustrialclassificationofeconomicactivities%2Fuksic2007%2Fuksic2007indexeswithaddendumdecember2022newformatsept20241.xlsx",
+    "filename": "uk-sic-2007-index-202409.xlsx",
+    "format": "xlsx",
+    "role": "historical_activity_index",
+    "language": "en",
+    "publication_date": "2024-09",
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "ONS Open Government Licence v3.0 except where stated; original component kept locally",
+      "evidence_url": "https://www.ons.gov.uk/help/terms-conditions"
+    }
+  },
+  {
+    "id": "isic-economic-downloads-20261109",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/",
+    "filename": "isic-economic-downloads-20261109.html",
+    "format": "html",
+    "role": "publisher_release_listing",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ/"
+    }
+  },
+  {
+    "id": "unsd-classification-registry-20261109",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+    "filename": "unsd-classification-registry-20261109.html",
+    "format": "html",
+    "role": "publisher_registry_listing",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ/"
+    }
+  },
+  {
+    "id": "nace-correspondence-listing-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "url": "https://ec.europa.eu/eurostat/web/nace/correspondence-tables",
+    "filename": "nace-correspondence-listing-20261109.html",
+    "format": "html",
+    "role": "publisher_release_listing",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "Eurostat public page; whole page kept locally",
+      "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+    }
+  },
+  {
+    "id": "cpa2008-structure-notes",
+    "source_id": "EU_CPA",
+    "edition": "2008",
+    "url": "https://ec.europa.eu/eurostat/documents/6495078/19716404/CPA2008structureexplanatorynotesEN.pdf/f655ffea-01f4-47db-108e-4d35da5991d9?t=1722511832285",
+    "filename": "cpa2008-structure-notes.pdf",
+    "format": "pdf",
+    "role": "structure_and_explanatory_notes",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "Eurostat reuse notice with exceptions; original PDF kept locally",
+      "evidence_url": "https://ec.europa.eu/eurostat/help/copyright-notice"
+    }
   }
 ]

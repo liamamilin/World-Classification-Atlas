@@ -232,5 +232,41 @@
     "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/ISIC5_Exp_Notes_11Mar2024.pdf",
     "source_id": "ISIC",
     "edition": "Rev.5"
+  },
+  "uk-sic-2007-index-original": {
+    "sha256": "14d9e4b28b2c572772e326e2d2151e24786b7ec476e2cbcf147ab9cbf8b422fa",
+    "url": "https://www.ons.gov.uk/file?uri=%2Fmethodology%2Fclassificationsandstandards%2Fukstandardindustrialclassificationofeconomicactivities%2Fuksic2007%2Fsic2007indexes.pdf",
+    "source_id": "UK_SIC",
+    "edition": "2007"
+  },
+  "uk-sic-2007-index-202409": {
+    "sha256": "dcd36353d6e359550f88f9070557a974e8a020998fbf75b55b02d38e49912eac",
+    "url": "https://www.ons.gov.uk/file?uri=%2Fmethodology%2Fclassificationsandstandards%2Fukstandardindustrialclassificationofeconomicactivities%2Fuksic2007%2Fuksic2007indexeswithaddendumdecember2022newformatsept20241.xlsx",
+    "source_id": "UK_SIC",
+    "edition": "2007"
+  },
+  "isic-economic-downloads-20261109": {
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
+  },
+  "unsd-classification-registry-20261109": {
+    "sha256": "848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+    "source_id": "ISIC",
+    "edition": "Rev.5"
+  },
+  "nace-correspondence-listing-20261109": {
+    "sha256": "d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b",
+    "url": "https://ec.europa.eu/eurostat/web/nace/correspondence-tables",
+    "source_id": "NACE",
+    "edition": "Rev.2.1"
+  },
+  "cpa2008-structure-notes": {
+    "sha256": "990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755",
+    "url": "https://ec.europa.eu/eurostat/documents/6495078/19716404/CPA2008structureexplanatorynotesEN.pdf/f655ffea-01f4-47db-108e-4d35da5991d9?t=1722511832285",
+    "source_id": "EU_CPA",
+    "edition": "2008"
   }
 }

@@ -4198,6 +4198,229 @@
         "公开再分发许可待核实",
         "官方映射及精确端点版本待核实"
       ]
+    },
+    {
+      "id": "UK_SIC",
+      "name": "UK Standard Industrial Classification of Economic Activities",
+      "aliases": [
+        "UK SIC",
+        "UK SIC 2007"
+      ],
+      "classification_object": "economic activities",
+      "publisher": "Office for National Statistics (UK)",
+      "domains": [
+        "01-economy"
+      ],
+      "official_url": "https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-09",
+      "editions": [
+        {
+          "id": "2007",
+          "label": "UK SIC 2007",
+          "status": "confirmed_historical",
+          "latest_claim": false
+        },
+        {
+          "id": "2026",
+          "label": "UK SIC 2026",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "class",
+          "subclass where subdivided"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2007",
+        "formats": [
+          "pdf",
+          "xlsx"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "Open Government Licence v3.0 except where stated",
+        "url": "https://www.ons.gov.uk/help/terms-conditions",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "Office for National Statistics, UK SIC 2007, Crown copyright, OGL v3.0",
+        "status": "selected_factual_references",
+        "note": "本次原件本地保存，公开文件只发布索引定位、代码事实和 Atlas 研究判断。"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "UK SIC 2007",
+            "to_edition": "NACE Rev.2",
+            "url": "https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2007",
+            "status": "publisher_class_alignment_documented",
+            "semantics": "ONS说明两体系到四位类对齐。五位索引和国家活动实例保持英国来源身份。"
+          },
+          {
+            "from_edition": "UK SIC 2007",
+            "to_edition": "UK SIC 2026",
+            "url": "https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2026",
+            "status": "official_entry_verified",
+            "semantics": "ONS发布对应工作簿。当前家具核查使用2007版索引。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2007",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "download",
+            "official_mappings"
+          ],
+          "finding": "2007版于2008年生效。ONS同时发布原索引及带2022增补的2024重排版。"
+        },
+        {
+          "url": "https://www.ons.gov.uk/methodology/classificationsandstandards/ukstandardindustrialclassificationofeconomicactivities/uksic2026",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "official_mappings"
+          ],
+          "finding": "2026版及2007→2026官方对应文件已发布。"
+        },
+        {
+          "url": "https://www.ons.gov.uk/help/terms-conditions",
+          "method": "official_terms_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "ONS网站多数内容采用OGL v3.0，保留明确列明的例外。"
+        }
+      ],
+      "unresolved": [
+        "仅选取2007索引活动作比较，未解析英国整套分类及2026对应表"
+      ],
+      "local_research_report": "data/reports/furniture-alignment.json"
+    },
+    {
+      "id": "EU_CPA",
+      "name": "Statistical Classification of Products by Activity in the European Union",
+      "aliases": [
+        "CPA",
+        "Eurostat CPA"
+      ],
+      "classification_object": "products and services by activity of origin",
+      "publisher": "Eurostat (European Commission)",
+      "domains": [
+        "01-economy",
+        "02-products"
+      ],
+      "official_url": "https://ec.europa.eu/eurostat/web/cpa",
+      "verification_status": "partially_verified",
+      "checked_on": "2026-11-09",
+      "editions": [
+        {
+          "id": "2008",
+          "label": "CPA 2008",
+          "status": "confirmed_historical",
+          "latest_claim": false
+        },
+        {
+          "id": "2.2",
+          "label": "CPA Ver. 2.2",
+          "status": "confirmed_available",
+          "latest_claim": false
+        }
+      ],
+      "hierarchy": {
+        "kind": "hierarchy",
+        "levels": [
+          "section",
+          "division",
+          "group",
+          "class",
+          "category",
+          "subcategory"
+        ],
+        "status": "verified_description",
+        "counts": null
+      },
+      "download": {
+        "landing_url": "https://ec.europa.eu/eurostat/web/cpa",
+        "formats": [
+          "pdf"
+        ],
+        "status": "official_entry_verified"
+      },
+      "license": {
+        "name": "Eurostat reuse notice with source attribution and exceptions",
+        "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+        "access": "public_metadata",
+        "download": true,
+        "local_processing": true,
+        "redistribute": null,
+        "derivatives": null,
+        "attribution": "European Commission, Eurostat, CPA 2008",
+        "status": "selected_factual_references"
+      },
+      "official_mappings": {
+        "status": "official_entry_verified",
+        "items": [
+          {
+            "from_edition": "CPA Ver. 2.1",
+            "to_edition": "CPA Ver. 2.2",
+            "url": "https://ec.europa.eu/eurostat/web/cpa",
+            "status": "official_entry_verified",
+            "semantics": "Eurostat概览确认有跨版产品对应。"
+          }
+        ]
+      },
+      "update_policy": null,
+      "evidence": [
+        {
+          "url": "https://ec.europa.eu/eurostat/web/cpa",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "classification_object",
+            "official_mappings"
+          ],
+          "finding": "Eurostat说明CPA按生产活动关联产品类别，并公布2.1至2.2的对应。"
+        },
+        {
+          "url": "https://ec.europa.eu/eurostat/documents/6495078/19716404/CPA2008structureexplanatorynotesEN.pdf/f655ffea-01f4-47db-108e-4d35da5991d9?t=1722511832285",
+          "method": "official_file_review",
+          "fields": [
+            "download",
+            "hierarchy"
+          ],
+          "finding": "CPA 2008结构与说明提供31.09.91新制家具表面处理服务证据，保留产品与活动对象差异。"
+        },
+        {
+          "url": "https://ec.europa.eu/eurostat/help/copyright-notice",
+          "method": "official_terms_review",
+          "fields": [
+            "license"
+          ],
+          "finding": "原PDF本地保存，公共结果引用代码事实与定位。"
+        }
+      ],
+      "unresolved": [
+        "本轮只取CPA 2008服务类别作证据，未解析全体系或跨版对应"
+      ],
+      "local_research_report": "data/reports/furniture-alignment.json"
     }
   ]
 }

@@ -518,7 +518,7 @@
     "note": "No semantic adapter; no node counts or edition confirmation inferred.",
     "domain_stage": {
       "status": "selected_branch_notes_parsed",
-      "nodes": 17
+      "nodes": 23
     }
   },
   {
@@ -700,6 +700,94 @@
     "domain_stage": {
       "status": "bounded_direct_correspondence_audit",
       "finding": "not_observed_in_audited_cellar_snapshot"
+    }
+  },
+  {
+    "resource_id": "uk-sic-2007-index-original",
+    "source_id": "UK_SIC",
+    "edition": "2007",
+    "role": "historical_activity_index",
+    "sha256": "14d9e4b28b2c572772e326e2d2151e24786b7ec476e2cbcf147ab9cbf8b422fa",
+    "path": "data/local/raw/UK_SIC/2007/uk-sic-2007-index-original/14d9e4b28b2c572772e326e2d2151e24786b7ec476e2cbcf147ab9cbf8b422fa/uk-sic-2007-index-original.pdf",
+    "bytes": 1828606,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "selected_clauses_reviewed",
+      "pages": 328
+    }
+  },
+  {
+    "resource_id": "uk-sic-2007-index-202409",
+    "source_id": "UK_SIC",
+    "edition": "2007",
+    "role": "historical_activity_index",
+    "sha256": "dcd36353d6e359550f88f9070557a974e8a020998fbf75b55b02d38e49912eac",
+    "path": "data/local/raw/UK_SIC/2007/uk-sic-2007-index-202409/dcd36353d6e359550f88f9070557a974e8a020998fbf75b55b02d38e49912eac/uk-sic-2007-index-202409.xlsx",
+    "bytes": 890595,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "selected_activity_index_rows_reviewed",
+      "index_rows": 15957,
+      "selected_rows": 4
+    }
+  },
+  {
+    "resource_id": "isic-economic-downloads-20261109",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "role": "publisher_release_listing",
+    "sha256": "1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde",
+    "path": "data/local/raw/ISIC/Rev.5/isic-economic-downloads-20261109/1201a4416d90f8bdb7bbbcc518a7dfce58a4613f35a34a3ee5f65e345a154dde/isic-economic-downloads-20261109.html",
+    "bytes": 144294,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "publisher_release_listing_checked"
+    }
+  },
+  {
+    "resource_id": "unsd-classification-registry-20261109",
+    "source_id": "ISIC",
+    "edition": "Rev.5",
+    "role": "publisher_registry_listing",
+    "sha256": "848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f",
+    "path": "data/local/raw/ISIC/Rev.5/unsd-classification-registry-20261109/848d41e89f8b76e80fbc6c537e51d0163f476b4545f085b23905b5a0649d0f2f/unsd-classification-registry-20261109.html",
+    "bytes": 164938,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "publisher_release_listing_checked"
+    }
+  },
+  {
+    "resource_id": "nace-correspondence-listing-20261109",
+    "source_id": "NACE",
+    "edition": "Rev.2.1",
+    "role": "publisher_release_listing",
+    "sha256": "d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b",
+    "path": "data/local/raw/NACE/Rev.2.1/nace-correspondence-listing-20261109/d9a0ecb4b824384b0ee1b8d58aed7cae9720e7fdea99db70fc054043ed3dd43b/nace-correspondence-listing-20261109.html",
+    "bytes": 179165,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "publisher_release_listing_checked"
+    }
+  },
+  {
+    "resource_id": "cpa2008-structure-notes",
+    "source_id": "EU_CPA",
+    "edition": "2008",
+    "role": "structure_and_explanatory_notes",
+    "sha256": "990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755",
+    "path": "data/local/raw/EU_CPA/2008/cpa2008-structure-notes/990a04c932537afe15117b954c5a852c2067ebc35813a2f18f240b90451d5755/cpa2008-structure-notes.pdf",
+    "bytes": 1276359,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred.",
+    "domain_stage": {
+      "status": "selected_clauses_reviewed",
+      "pages": 338
     }
   }
 ]

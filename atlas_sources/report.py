@@ -56,6 +56,14 @@ def build(root, registry, resources):
             if furniture.get("material_boundaries"):
                 stages["isic5-notes-20240311"] = {"status": "historical_note_clauses_reviewed",
                     "pages": furniture["material_boundaries"]["pdf_pages"]["isic5-notes-20240311"]}
+            if furniture.get("contract_parts_boundaries"):
+                contract = furniture["contract_parts_boundaries"]
+                stages["uk-sic-2007-index-202409"] = {"status": "selected_activity_index_rows_reviewed",
+                    "index_rows": contract["uk_index_activity_rows"], "selected_rows": contract["uk_index_selected_rows"]}
+                for rid, pages in contract["pdf_pages"].items():
+                    stages[rid] = {"status": "selected_clauses_reviewed", "pages": pages}
+                for rid in contract["publisher_release_recheck"]["listings"]:
+                    stages[rid] = {"status": "publisher_release_listing_checked"}
             for row in integrity:
                 if row["resource_id"] in stages:
                     row["domain_stage"] = stages[row["resource_id"]]
@@ -83,7 +91,7 @@ def build(root, registry, resources):
                                                 "correspondence": economy.get("correspondence")}
                                                if economy else None),
                "counts_note": "Counts are per resource, not global concepts. O*NET CSV/CTDL overlap. ISIC has a separately counted reviewed subset; no instance links.",
-               "furniture_multisource_research": ({k: furniture[k] for k in ("status", "nace21", "official_tables", "directory", "reused_ids", "new_ids", "bounded_activities", "evidence_claims", "research_mappings", "candidate_bindings", "followup_sources", "activity_review_status", "binding_history_records", "approved_isic5_source_levels", "material_boundaries") if k in furniture} if furniture else None),
+               "furniture_multisource_research": ({k: furniture[k] for k in ("status", "nace21", "official_tables", "directory", "reused_ids", "new_ids", "bounded_activities", "evidence_claims", "research_mappings", "candidate_bindings", "followup_sources", "activity_review_status", "binding_history_records", "approved_isic5_source_levels", "material_boundaries", "contract_parts_boundaries") if k in furniture} if furniture else None),
                "resources": integrity}
     reports = root / "data/reports"
     write_json(reports / "coverage.json", summary)
@@ -132,9 +140,14 @@ def build(root, registry, resources):
                           "当前NACE2.1–ISIC5审计有1047节点阳性对照，未观察到直接关系。"]
             if furniture.get("material_boundaries"):
                 material = furniture["material_boundaries"]
-                lines += [f"家具材料边界新增{material['new_activities']}项活动和{material['new_claims']}条证据。"
-                          f"在{len(material['official_pair_comparisons'])}份固定官方表中核实卫生洁具缺行，单独登记定义支持的研究对应。"
-                          "旧ISIC部件候选、独立处理及整类冲突继续待审。"]
+                lines += [f"家具材料边界研究含{material['new_activities']}项活动和{material['new_claims']}条证据。"
+                          f"在{len(material['official_pair_comparisons'])}份固定官方表中核实卫生洁具缺行，单独登记定义支持的研究对应。"]
+            if furniture.get("contract_parts_boundaries"):
+                contract = furniture["contract_parts_boundaries"]
+                recheck = contract["publisher_release_recheck"]
+                lines += [f"承包处理与旧家具部件新增{contract['new_activities']}项活动和{contract['new_claims']}条证据。"
+                          f"发布复查中{len(recheck['same_bytes'])}份文件字节与旧快照相同，核查{recheck['registry_titles_checked']}条登记标题。"
+                          "卫生洁具官方缺行、旧31.01冲突及专用店铺部件的旧ISIC候选继续保留。"]
     lines += ["", "节点数按实际原文件统计，不能跨表累加为世界概念总量。O*NET 两种职业资源包含重复代码；职业文件不提供父子边，未据代码补造缺失父节点。",
               "", "## 未决项（逐来源）", ""]
     for s in registry["sources"]:
