@@ -4,7 +4,7 @@
 
 登记 53 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-74 个采集任务，72 个已锁定且通过格式检查，涉及 12 个来源；8 个资源可解析。
+77 个采集任务，75 个已锁定且通过格式检查，涉及 12 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
@@ -100,6 +100,9 @@
 | cpc3-correction-4379 | 3.0 | format_checked_only | 未统计 | — |
 | cpc3-detail-21267-20261109 | 3.0 | format_checked_only | 未统计 | — |
 | cpc3-detail-46539-20261109 | 3.0 | format_checked_only | 未统计 | — |
+| cpc3-detail-46533-20261109 | 3.0 | format_checked_only | 未统计 | — |
+| hs2017-chapter94 | 2017 | format_checked_only | 未统计 | — |
+| hs2022-chapter85 | 2022 | format_checked_only | 未统计 | — |
 | siec1-escm-historical-coal | 1.0-2011 | format_checked_only | 未统计 | — |
 | hs2022-wco-interpretation-rules | 2022 | format_checked_only | 未统计 | — |
 

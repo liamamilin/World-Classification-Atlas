@@ -1,19 +1,13 @@
 """Reviewed trade-goods sample built from pinned CPC clauses and WCO passages."""
 from collections import Counter
-from html import escape
 
+from . import cpc_lighting
 from .cpc_hs_followup import pdf_excerpt
 from .isic import stable_id
 from .normalize import qa
 
 PUBLIC = "data/atlas/products/trade-goods-directory.json"
 SCHEME = "urn:atlas:scheme:trade-goods"
-LIGHTING_DETAIL = "cpc3-detail-46539-20261109"
-LIGHTING_CPC = "CPC:3.0:46539"
-LIGHTING_DEFINITION = LIGHTING_CPC + ":HS2022:C:1"
-LIGHTING_EXCLUSION = LIGHTING_CPC + ":HS2022:D:1"
-LIGHTING_LITERAL = "HS:2022:9405.42"
-LIGHTING_CANDIDATE = "HS:2022:9405.49"
 NAVIGATION = (
     ("trade-goods", None, "贸易商品", "按商品形态、用途和工艺组织的 Atlas 样板。"),
     ("lighting", "trade-goods", "照明商品", "按用途和光源设计区分照明商品，保留各税则分组的范围。"),
@@ -25,7 +19,7 @@ NAVIGATION = (
     ("cycles", "trade-goods", "摩托车及装辅助动力的脚踏车", "按驱动和边车范围组织有证据的样本。"),
 )
 
-# A leaf has a WCO anchor and CPC clause bindings or a separately marked title-based candidate.
+# A leaf has a WCO anchor and may have CPC clause bindings or a separately marked title-based candidate.
 # A missing relation marks a pending binding. Reviewed exclusions are kept separately from positive matches.
 LEAVES = (
     ("tree-lights-led-only", "tree-lights", "LED 专用圣诞树灯串",
@@ -39,21 +33,30 @@ LEAVES = (
      "仅为 LED 光源设计的枝形吊灯和其他天花板或墙壁电灯具。公共开放场所或道路照明灯具另有归类。",
      "9405.11", "ceiling-wall-lights",
      (("46533", "C", "definition", "source_broader", "CPC 定义明确列出 9405.11，还涵盖另外三个 LED 专用子目。"),)),
+    ("ceiling-wall-other", "ceiling-wall-lights", "其他天花板或墙壁电灯具",
+     "该组扣除 LED 专用灯具后的范围。上级分组排除公共开放场所或道路照明灯具。",
+     "9405.19", "ceiling-wall-lights", ()),
     ("table-floor-led-only", "table-floor-lights", "LED 专用台灯、书桌灯、床头灯及落地灯",
      "仅为 LED 光源设计的台灯、书桌灯、床头灯及落地灯。", "9405.21", "table-floor-lights",
      (("46533", "C", "definition", "source_broader", "原句缩写 .21 承接 9405，CPC 定义还涵盖另外三个 LED 专用子目。"),)),
+    ("table-floor-other", "table-floor-lights", "其他台灯、书桌灯、床头灯及落地灯",
+     "该组扣除 LED 专用灯具后的范围。", "9405.29", "table-floor-lights", ()),
     ("other-photovoltaic-led", "lighting", "其他光伏 LED 专用电灯具",
      "归在其他电灯及灯具中的光伏产品，仅为 LED 光源设计。", "9405.41", "other-electric-lighting",
      (("46533", "C", "definition", "source_broader", "该 CPC 子类还涵盖其他用途的 LED 专用灯具。"),
       ("46539", "D", "exclusion", "excluded", "CPC 排除句明确列出 9405.41。"))),
     ("other-led-scope-review", "lighting", "其他 LED 专用电灯具对应待核",
      "核查 HS 所列的其他 LED 专用电灯具，与 CPC 原句所指范围的差异。", "9405.42", "other-electric-lighting",
-     (("46539", "C", "definition", None, "CPC 标题限定非 LED 专用，所引的 9405.42 却明确限定 LED 专用。"),)),
+     (("46539", "C", "definition", None, "CPC 标题限定非 LED 专用，所引的 9405.42 却明确限定 LED 专用。"),
+      ("46533", "C", "title_candidate", None, "CPC 标题和 HS 子目均指 LED 专用灯具。CPC 的定义句只列 .11、.21、.31、.41，.42 的归属待核。"))),
     ("other-electric-lighting-residual-candidate", "lighting", "其他电灯具的非 LED 专用范围候选",
      "以 HS 其他电灯具分组中的残余子目为依据，核查其与 CPC 非 LED 专用标题的范围。",
      "9405.49", "other-electric-lighting",
      (("46539", "C", "title_candidate", None,
        "9405.49 扣除同组 9405.41 和 9405.42 后与 CPC 标题方向相符。CPC 定义原句引用 9405.42，具体对应待核。"),)),
+    ("led-light-source-modules", "lighting", "LED 光源模块",
+     "由 LED 和电路等构成的光源模块。按 HS 章注，模块没有便于在灯具中装卸并建立机械和电气接触的灯头。",
+     "8539.51", "led-modules", ()),
     ("frozen-octopus-candidate", "seafood", "冷冻章鱼对应待核",
      "核查冷冻章鱼部分。章鱼粉、粗粉及团粒另有 HS 章注边界。", "0307.52", "octopus",
      (("21267", "C", "definition", None, "CPC 原句写 0307.53。0307.52 有冷冻章鱼税则依据，保留为候选。"),)),
@@ -71,47 +74,11 @@ LEAVES = (
 )
 
 
-def lighting_audit(assets, node, structure, note, references, corrections):
-    detail = assets[LIGHTING_DETAIL]
-    html = detail["raw"].decode("utf-8")
-    definition, exclusion = references[LIGHTING_DEFINITION], references[LIGHTING_EXCLUSION]
-    statements = (definition["text"], exclusion["text"])
-    if (
-        "not solely for LED light sources" not in node["label"]
-        or definition["target_ids"] != [LIGHTING_LITERAL]
-        or exclusion["target_ids"] != ["HS:2022:9405.41"]
-        or not all(line in note["text"].splitlines() for line in statements)
-        or not all(escape(value, quote=False) in html for value in (
-            'id="PrintDivID"', "Version 3.0 - Code 46539", node["label"], *statements,
-        ))
-    ):
-        raise ValueError("CPC 46539 structure, PDF, workbook or online note changed; review LED scope")
-    evidence = {
-        "cpc-46539-title": {**structure, "csv_row": node["source_row"]},
-        "cpc-46539-pdf": {**note["evidence"], "label": "打开 CPC 3.0 说明 PDF"},
-        "cpc-46539-online": {**detail["evidence"], "element_id": "PrintDivID",
-                             "label": "打开 UNSD 在线条目 46539 快照"},
-        "unsd-cpc3-corrections": corrections["evidence"][0],
-    }
-    audit = {
-        "status": "scope_conflict_pending", "cpc_id": LIGHTING_CPC,
-        "literal_clause_id": LIGHTING_DEFINITION, "literal_hs_id": LIGHTING_LITERAL,
-        "excluded_clause_id": LIGHTING_EXCLUSION, "candidate_hs_id": LIGHTING_CANDIDATE,
-        "candidate_basis": "CPC title and WCO residual subheading",
-        "correction_search": {"status": "no_46539_correction_in_checked_results",
-                              "registry_last_update": corrections["registry_last_update"],
-                              "result_ids": corrections["result_ids"]},
-        "evidence_ids": [*evidence, LIGHTING_DEFINITION, LIGHTING_EXCLUSION, "wco-other-electric-lighting"],
-    }
-    return audit, evidence
-
-
-def build(assets, by_code, hs_review, structure, lighting_note):
+def build(assets, by_code, hs_review, structure, notes):
     wco = hs_review["scope_followup"]["wco_evidence"]
     corrections = hs_review["scope_followup"]["corrigendum_audit"]
     references = {ref["id"]: ref for ref in hs_review["official_note_references"]}
-    lighting, lighting_evidence = lighting_audit(assets, by_code["46539"], structure, lighting_note,
-                                                references, corrections)
+    lighting, lighting_evidence = cpc_lighting.build(assets, by_code, hs_review, structure, notes, references)
     evidence = {
         **lighting_evidence,
         "wco-ceiling-wall-lights": pdf_excerpt(
@@ -132,6 +99,14 @@ def build(assets, by_code, hs_review, structure, lighting_note):
             ("Other electric luminaires and lighting fittings", "9405.41 -- Photovoltaic",
              "9405.42 -- Other, designed for use solely", "9405.49 -- Other"),
         ),
+        "wco-led-modules": pdf_excerpt(
+            assets, cpc_lighting.MODULES_CHAPTER, 16, 10, 12,
+            ("8539.51 -- Light-emitting diode (LED) modules", "8539.52 -- Light-emitting diode (LED) lamps"),
+        ),
+        "wco-led-source-note": pdf_excerpt(
+            assets, cpc_lighting.MODULES_CHAPTER, 2, 28, 39,
+            ("LED) light sources", "modules do not have a cap", "lamps have a cap"),
+        ),
         "wco-octopus": wco["HS:2022:0307:WCO:octopus"]["passages"][0],
         "wco-bituminous-coal": wco["HS:2022:27:WCO:subheading-note-2"]["passages"][0],
         "wco-coal-group": wco["HS:2022:2701:WCO:unagglomerated-coal"]["passages"][0],
@@ -141,6 +116,7 @@ def build(assets, by_code, hs_review, structure, lighting_note):
         "unsd-octopus-corrections": corrections["evidence"][0],
     }
     supplement = {
+        "led-modules": ["wco-led-source-note"],
         "octopus": ["wco-octopus-powders", "unsd-octopus-corrections"],
         "bituminous-coal": ["wco-coal-group"],
         "motorcycles": ["wco-motorcycles-heading"],
@@ -173,6 +149,8 @@ def build(assets, by_code, hs_review, structure, lighting_note):
     for code, parent, label, scope, hs_code, passage, cpc_bindings in LEAVES:
         reviewed = all(relation for _, _, _, relation, _ in cpc_bindings)
         node = add_node(code, parent, label, scope, "reviewed" if reviewed else "pending")
+        if not cpc_bindings:
+            node["cpc_scope_status"] = "not_reviewed"
         hs_id = "HS:2022:" + hs_code
         proof = ["wco-" + passage, *supplement.get(passage, [])]
         if hs_id not in hs_ids or hs_code not in evidence[proof[0]]["text"]:
@@ -186,7 +164,7 @@ def build(assets, by_code, hs_review, structure, lighting_note):
             ref = references[ref_id]
             title_candidate = kind == "title_candidate"
             if title_candidate:
-                if relation or (ref_id, hs_id) != (lighting["literal_clause_id"], lighting["candidate_hs_id"]):
+                if relation or cpc_lighting.CANDIDATES.get(ref_id) != hs_id or hs_id in ref["target_ids"]:
                     raise ValueError(f"unexpected lighting title candidate: {ref_id} -> {hs_id}")
             elif ref["kind"] != kind or (
                 hs_id not in ref["target_ids"] and (relation or ref.get("review", {}).get("candidate_hs_id") != hs_id)
@@ -197,8 +175,11 @@ def build(assets, by_code, hs_review, structure, lighting_note):
                 **{key: ref[key] for key in ("sheet", "row", "column", "line", "kind", "text_sha256")},
             }
             cpc_proof = [ref_id, *proof]
-            if ref_id == lighting["literal_clause_id"]:
-                cpc_proof.extend(lighting_evidence)
+            if ref_id == cpc_lighting.LITERAL_CLAUSE or title_candidate:
+                cpc_proof.extend([f"cpc-{cpc_code}-pdf", f"cpc-{cpc_code}-online",
+                                  "unsd-cpc3-corrections", "unsd-cpc3-correspondence"])
+            if ref_id == cpc_lighting.LITERAL_CLAUSE:
+                cpc_proof.append("cpc-46539-title")
             bind(node, cpc_id, relation, reason, cpc_proof, None if title_candidate else ref_id)
 
     quality = qa(nodes)

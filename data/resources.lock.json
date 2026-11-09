@@ -437,5 +437,23 @@
     "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46539",
     "source_id": "UN_CPC",
     "edition": "3.0"
+  },
+  "cpc3-detail-46533-20261109": {
+    "sha256": "04548d7714823c73a25e8fffc3bb5839171a361495bf8b11b25f61a764e5af95",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46533",
+    "source_id": "UN_CPC",
+    "edition": "3.0"
+  },
+  "hs2017-chapter94": {
+    "sha256": "7f52579b27bce95f090989632a83482ff695915712270aa72c2dac34539fa0de",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/2094_2017e.pdf?la=en",
+    "source_id": "HS",
+    "edition": "2017"
+  },
+  "hs2022-chapter85": {
+    "sha256": "1f2eada9662f4b6089e6bd90f8c5e50f93f032eabd7ae2a19014c06b711357c5",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1685_2022e.pdf?la=en",
+    "source_id": "HS",
+    "edition": "2022"
   }
 }

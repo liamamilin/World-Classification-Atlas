@@ -1088,6 +1088,39 @@
     "note": "No semantic adapter; no node counts or edition confirmation inferred."
   },
   {
+    "resource_id": "cpc3-detail-46533-20261109",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "role": "publisher_code_detail",
+    "sha256": "04548d7714823c73a25e8fffc3bb5839171a361495bf8b11b25f61a764e5af95",
+    "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46533-20261109/04548d7714823c73a25e8fffc3bb5839171a361495bf8b11b25f61a764e5af95/cpc3-detail-46533-20261109.html",
+    "bytes": 38335,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
+    "resource_id": "hs2017-chapter94",
+    "source_id": "HS",
+    "edition": "2017",
+    "role": "nomenclature_chapter",
+    "sha256": "7f52579b27bce95f090989632a83482ff695915712270aa72c2dac34539fa0de",
+    "path": "data/local/raw/HS/2017/hs2017-chapter94/7f52579b27bce95f090989632a83482ff695915712270aa72c2dac34539fa0de/hs2017-chapter94.pdf",
+    "bytes": 22068,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
+    "resource_id": "hs2022-chapter85",
+    "source_id": "HS",
+    "edition": "2022",
+    "role": "nomenclature_chapter",
+    "sha256": "1f2eada9662f4b6089e6bd90f8c5e50f93f032eabd7ae2a19014c06b711357c5",
+    "path": "data/local/raw/HS/2022/hs2022-chapter85/1f2eada9662f4b6089e6bd90f8c5e50f93f032eabd7ae2a19014c06b711357c5/hs2022-chapter85.pdf",
+    "bytes": 463121,
+    "status": "format_checked_only",
+    "note": "No semantic adapter; no node counts or edition confirmation inferred."
+  },
+  {
     "resource_id": "siec1-escm-historical-coal",
     "source_id": "SIEC",
     "edition": "1.0-2011",

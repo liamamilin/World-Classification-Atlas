@@ -62,7 +62,7 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await click('#cpc-entry a');
   await until(() => exists('#tree > li'), 'CPC catalogue from registry');
   assert.equal(await evaluate('navigator.onLine'), false);
-  assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 13 个已定位说明条目/);
+  assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 14 个已定位说明条目/);
   assert.match(await text('#coverage'), /69 条 HS 2022 原文引用/);
   assert.match(await text('header'), /CPC 分类对象为产品与服务，ISIC 分类对象为经济活动/);
   await click('#release-status summary');
@@ -385,11 +385,11 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
     await click(bindingSelector('#atlas-backlinks', binding) + ' > a');
     await expectGoods(concept);
   }
-  assert.deepEqual(goods.summary.node_status, { navigation: 8, reviewed: 6, pending: 5 });
-  assert.deepEqual(goods.summary.binding_status, { reviewed: 14, pending: 11 });
+  assert.deepEqual(goods.summary.node_status, { navigation: 8, reviewed: 9, pending: 5 });
+  assert.deepEqual(goods.summary.binding_status, { reviewed: 17, pending: 12 });
   await click('#atlas-goods-entry');
   await until(() => exists('#choose-atlas[aria-current="page"]'), 'Atlas goods from registry');
-  assert.match(await text('#detail'), /6 个已审商品范围 · 5 个待核范围/);
+  assert.match(await text('#detail'), /9 个已审商品范围 · 5 个待核范围/);
   const reviewedGoods = bySlug.get('tree-lights-led-only');
   for (const slug of ['trade-goods', 'lighting', 'tree-lights']) {
     const branch = '#tree details[data-code=' + json(slug) + ']';
@@ -461,12 +461,28 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await openHs('#atlas-bindings', '9405.42');
   assert.match(await text('#hs-official-backlinks'), /46539 · 官方定义引用/);
   assert.match(await text('#hs-official-backlinks'), /范围对应待核/);
+  assert.doesNotMatch(await text('#hs-official-backlinks'), /46533/);
   await backToGoods(held, bindingFor(held, hsId('9405.42')));
   await click(heldRow + ' > a');
   await expectNode([...lighting, '46539'], heldCpc.source_clause_id);
   assert.match(await text('#official-hs-notes [data-kind=definition] .reference-targets'), /9405\.42/);
   assert.match(await text('#official-hs-notes [data-kind=exclusion] .reference-targets'), /9405\.41/);
   await backToGoods(held, heldCpc);
+  const ledCandidate = bindingFor(held, id('46533'));
+  assert.equal(ledCandidate.source_clause_id, null);
+  const ledRow = bindingSelector('#atlas-bindings', ledCandidate);
+  assert.match(await text(ledRow), /待核[\s\S]*只列 \.11、\.21、\.31、\.41/);
+  await click(ledRow + ' > details > summary');
+  await openOriginal(ledRow + ' details a[href$="46533-20261109.html#PrintDivID"]',
+    'cpc3-detail-46533-20261109', { mode: 'html', elementId: 'PrintDivID' });
+  await openOriginal(ledRow + ' details a[href$="20261109.html#corresp-cpc"]',
+    listing, { mode: 'html', elementId: 'corresp-cpc' });
+  await click(ledRow + ' > a');
+  await expectNode([...lighting, '46533']);
+  assert.deepEqual(await evaluate(
+    'Array.from(document.querySelectorAll("#official-hs-notes .reference-targets a"), a => a.textContent)'),
+  ['9405.11', '9405.21', '9405.31', '9405.41'].map(code => 'HS 2022 ' + code));
+  await backToGoods(held, ledCandidate);
 
   const residual = bySlug.get('other-electric-lighting-residual-candidate');
   await searchGoods('9405.49', residual);
@@ -478,9 +494,49 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await backToGoods(residual, residualCpc);
   await openHs('#atlas-bindings', '9405.49');
   assert.equal(await exists('#hs-official-backlinks a'), false);
+  const oldHs = 'HS:2017:9405.40';
+  async function backToOldHs() {
+    await click(linksTo('#lighting-historical-backlink', oldHs));
+    await until(() => evaluate('document.querySelector("#node-id")?.innerText === ' + json(oldHs)), oldHs);
+    assert.equal(await exists('#hs-official-backlinks'), false);
+  }
+  await backToOldHs();
+  assert.match(await text('#detail'), /HS:2017:9405\.40 ↔ CPC:2\.1:46539 · HS partial=0 · CPC partial=0/);
+  assert.match(await text('#lighting-split-targets'), /8539\.51 ← ex9405\.40[\s\S]*9405\.40 → ex8539\.51/);
+  assert.match(await text('#detail'), /ex8539\.90、ex8543\.70、ex9405\.10、ex9405\.20、ex9405\.30、ex9405\.40/);
+  await openOriginal('#detail a[href$="hs2017-chapter94.pdf#page=3"]', 'hs2017-chapter94', { mode: 'pdf', pdfPage: 3 });
+  await openOriginal('#lighting-legacy-csv', legacy);
+  const historyLink = '#lighting-split-targets a[href$=';
+  for (const [file, page] of [['hs2022-to-hs2017-wco-table-i', 27], ['hs2022-to-hs2017-wco-table-i', 33],
+    ['hs2017-to-hs2022-wco-table-ii', 23]]) {
+    await openOriginal(historyLink + json(file + '.pdf#page=' + page) + ']', file, { mode: 'pdf', pdfPage: page });
+  }
+  for (const code of ['8539.51', '9405.41', '9405.42', '9405.49']) {
+    await openHs('#lighting-split-targets', code);
+    await backToOldHs();
+  }
+  await openHs('#lighting-split-targets', '9405.49');
   await backToGoods(residual, bindingFor(residual, hsId('9405.49')));
   assert.equal(goods.lighting_review.correction_search.status, 'no_46539_correction_in_checked_results');
-  console.log('Passed: lighting scopes 9405.11/.21, 46539 conflict at .42, and the separate .49 candidate.');
+  for (const [code, slug] of [['9405.19', 'ceiling-wall-other'], ['9405.29', 'table-floor-other'],
+    ['8539.51', 'led-light-source-modules']]) {
+    const concept = bySlug.get(slug);
+    await searchGoods(code, concept);
+    assert.match(await text('#detail'), /现行 CPC 对应尚未审定/);
+    assert.equal(concept.binding_ids.length, 1);
+    const binding = bindingFor(concept, hsId(code));
+    if (code === '8539.51') {
+      const row = bindingSelector('#atlas-bindings', binding);
+      await click(row + ' > details > summary');
+      for (const page of [2, 16]) {
+        await openOriginal(row + ' details a[href$="#page=' + page + '"]',
+          'hs2022-chapter85', { mode: 'pdf', pdfPage: page });
+      }
+    }
+    await openHs('#atlas-bindings', code);
+    await backToGoods(concept, binding);
+  }
+  console.log('Passed: four historical split round trips, original tables, separate .42/.49 candidates and three reviewed HS-only scopes.');
 
   const frozen = bySlug.get('frozen-octopus-candidate');
   await searchGoods('冷冻章鱼', frozen);

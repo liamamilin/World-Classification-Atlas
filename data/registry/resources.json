@@ -1556,6 +1556,69 @@
     }
   },
   {
+    "id": "cpc3-detail-46533-20261109",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46533",
+    "filename": "cpc3-detail-46533-20261109.html",
+    "format": "html",
+    "role": "publisher_code_detail",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ/CPC"
+    }
+  },
+  {
+    "id": "hs2017-chapter94",
+    "source_id": "HS",
+    "edition": "2017",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/2094_2017e.pdf?la=en",
+    "filename": "hs2017-chapter94.pdf",
+    "format": "pdf",
+    "role": "nomenclature_chapter",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
+  },
+  {
+    "id": "hs2022-chapter85",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1685_2022e.pdf?la=en",
+    "filename": "hs2022-chapter85.pdf",
+    "format": "pdf",
+    "role": "nomenclature_chapter",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
+  },
+  {
     "id": "siec1-escm-historical-coal",
     "source_id": "SIEC",
     "edition": "1.0-2011",

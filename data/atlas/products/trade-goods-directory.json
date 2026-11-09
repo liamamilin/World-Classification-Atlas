@@ -137,6 +137,20 @@
       ]
     },
     {
+      "id": "urn:atlas:concept:2cbdfd1c-6570-5605-ae36-81a88a161f44",
+      "code": "ceiling-wall-other",
+      "label": "其他天花板或墙壁电灯具",
+      "parents": [
+        "ceiling-wall-lights"
+      ],
+      "scope": "该组扣除 LED 专用灯具后的范围。上级分组排除公共开放场所或道路照明灯具。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:c92bdc39-c9f9-52e2-9191-011771addf63"
+      ],
+      "cpc_scope_status": "not_reviewed"
+    },
+    {
       "id": "urn:atlas:concept:da655577-b54e-5fca-93b0-8e89d71ed303",
       "code": "table-floor-led-only",
       "label": "LED 专用台灯、书桌灯、床头灯及落地灯",
@@ -149,6 +163,20 @@
         "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318",
         "urn:atlas:mapping:2e348441-02e8-55de-8c64-e91d163637d4"
       ]
+    },
+    {
+      "id": "urn:atlas:concept:cad72f3a-c8b8-57b0-a1db-a1b30e1f43fe",
+      "code": "table-floor-other",
+      "label": "其他台灯、书桌灯、床头灯及落地灯",
+      "parents": [
+        "table-floor-lights"
+      ],
+      "scope": "该组扣除 LED 专用灯具后的范围。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:eba5f710-756b-5c6e-88e5-285e0f9f6e29"
+      ],
+      "cpc_scope_status": "not_reviewed"
     },
     {
       "id": "urn:atlas:concept:098b3467-6fb9-5096-be3f-1ffa3c5462ff",
@@ -176,7 +204,8 @@
       "status": "pending",
       "binding_ids": [
         "urn:atlas:mapping:a7c5eac4-2b2c-514a-bcad-7da0253ec459",
-        "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74"
+        "urn:atlas:mapping:10c4f316-96b3-53d3-9e4f-3e8c72365a74",
+        "urn:atlas:mapping:b4d39ff3-4554-580f-b364-81a4ce4f6458"
       ]
     },
     {
@@ -192,6 +221,20 @@
         "urn:atlas:mapping:b533d4e9-5c4b-58f4-ac77-bc4642a2f449",
         "urn:atlas:mapping:8d696bcd-0795-5baa-9f73-10cddae66261"
       ]
+    },
+    {
+      "id": "urn:atlas:concept:cc809a69-8125-59af-83d7-5716ef690cad",
+      "code": "led-light-source-modules",
+      "label": "LED 光源模块",
+      "parents": [
+        "lighting"
+      ],
+      "scope": "由 LED 和电路等构成的光源模块。按 HS 章注，模块没有便于在灯具中装卸并建立机械和电气接触的灯头。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:b856bf71-4dba-5590-91df-07553f092198"
+      ],
+      "cpc_scope_status": "not_reviewed"
     },
     {
       "id": "urn:atlas:concept:60a52f22-c9f2-5207-b07c-d92da75b1c44",
@@ -340,6 +383,18 @@
       ],
       "source_clause_id": "CPC:3.0:46533:HS2022:C:1"
     },
+    "urn:atlas:mapping:c92bdc39-c9f9-52e2-9191-011771addf63": {
+      "id": "urn:atlas:mapping:c92bdc39-c9f9-52e2-9191-011771addf63",
+      "concept_id": "urn:atlas:concept:2cbdfd1c-6570-5605-ae36-81a88a161f44",
+      "source_id": "HS:2022:9405.19",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-ceiling-wall-lights"
+      ],
+      "source_clause_id": null
+    },
     "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318": {
       "id": "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318",
       "concept_id": "urn:atlas:concept:da655577-b54e-5fca-93b0-8e89d71ed303",
@@ -364,6 +419,18 @@
         "wco-table-floor-lights"
       ],
       "source_clause_id": "CPC:3.0:46533:HS2022:C:1"
+    },
+    "urn:atlas:mapping:eba5f710-756b-5c6e-88e5-285e0f9f6e29": {
+      "id": "urn:atlas:mapping:eba5f710-756b-5c6e-88e5-285e0f9f6e29",
+      "concept_id": "urn:atlas:concept:cad72f3a-c8b8-57b0-a1db-a1b30e1f43fe",
+      "source_id": "HS:2022:9405.29",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-table-floor-lights"
+      ],
+      "source_clause_id": null
     },
     "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db": {
       "id": "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db",
@@ -425,12 +492,30 @@
       "evidence_ids": [
         "CPC:3.0:46539:HS2022:C:1",
         "wco-other-electric-lighting",
-        "cpc-46539-title",
         "cpc-46539-pdf",
         "cpc-46539-online",
-        "unsd-cpc3-corrections"
+        "unsd-cpc3-corrections",
+        "unsd-cpc3-correspondence",
+        "cpc-46539-title"
       ],
       "source_clause_id": "CPC:3.0:46539:HS2022:C:1"
+    },
+    "urn:atlas:mapping:b4d39ff3-4554-580f-b364-81a4ce4f6458": {
+      "id": "urn:atlas:mapping:b4d39ff3-4554-580f-b364-81a4ce4f6458",
+      "concept_id": "urn:atlas:concept:d446e283-01c2-5632-9cca-e05a150663ea",
+      "source_id": "CPC:3.0:46533",
+      "status": "pending",
+      "relation": null,
+      "reason": "CPC 标题和 HS 子目均指 LED 专用灯具。CPC 的定义句只列 .11、.21、.31、.41，.42 的归属待核。",
+      "evidence_ids": [
+        "CPC:3.0:46533:HS2022:C:1",
+        "wco-other-electric-lighting",
+        "cpc-46533-pdf",
+        "cpc-46533-online",
+        "unsd-cpc3-corrections",
+        "unsd-cpc3-correspondence"
+      ],
+      "source_clause_id": null
     },
     "urn:atlas:mapping:b533d4e9-5c4b-58f4-ac77-bc4642a2f449": {
       "id": "urn:atlas:mapping:b533d4e9-5c4b-58f4-ac77-bc4642a2f449",
@@ -454,10 +539,24 @@
       "evidence_ids": [
         "CPC:3.0:46539:HS2022:C:1",
         "wco-other-electric-lighting",
-        "cpc-46539-title",
         "cpc-46539-pdf",
         "cpc-46539-online",
-        "unsd-cpc3-corrections"
+        "unsd-cpc3-corrections",
+        "unsd-cpc3-correspondence",
+        "cpc-46539-title"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:b856bf71-4dba-5590-91df-07553f092198": {
+      "id": "urn:atlas:mapping:b856bf71-4dba-5590-91df-07553f092198",
+      "concept_id": "urn:atlas:concept:cc809a69-8125-59af-83d7-5716ef690cad",
+      "source_id": "HS:2022:8539.51",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-led-modules",
+        "wco-led-source-note"
       ],
       "source_clause_id": null
     },
@@ -594,7 +693,8 @@
       "urn:atlas:mapping:9c754ae4-8bb6-5a43-9bad-6d01e9039fc8",
       "urn:atlas:mapping:eb0e9a26-6539-58ed-bda2-1d109f8adea4",
       "urn:atlas:mapping:2e348441-02e8-55de-8c64-e91d163637d4",
-      "urn:atlas:mapping:8a01e0d0-38cf-59df-85e8-281ba896a0a6"
+      "urn:atlas:mapping:8a01e0d0-38cf-59df-85e8-281ba896a0a6",
+      "urn:atlas:mapping:b4d39ff3-4554-580f-b364-81a4ce4f6458"
     ],
     "CPC:3.0:46532": [
       "urn:atlas:mapping:ca2dd13f-c666-5178-bcab-b1b872099c8f",
@@ -606,8 +706,14 @@
     "HS:2022:9405.11": [
       "urn:atlas:mapping:63a4566a-5839-5498-8982-e8b2d1ef00a1"
     ],
+    "HS:2022:9405.19": [
+      "urn:atlas:mapping:c92bdc39-c9f9-52e2-9191-011771addf63"
+    ],
     "HS:2022:9405.21": [
       "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318"
+    ],
+    "HS:2022:9405.29": [
+      "urn:atlas:mapping:eba5f710-756b-5c6e-88e5-285e0f9f6e29"
     ],
     "HS:2022:9405.41": [
       "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db"
@@ -622,6 +728,9 @@
     ],
     "HS:2022:9405.49": [
       "urn:atlas:mapping:b533d4e9-5c4b-58f4-ac77-bc4642a2f449"
+    ],
+    "HS:2022:8539.51": [
+      "urn:atlas:mapping:b856bf71-4dba-5590-91df-07553f092198"
     ],
     "HS:2022:0307.52": [
       "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66"
@@ -657,6 +766,13 @@
     "excluded_clause_id": "CPC:3.0:46539:HS2022:D:1",
     "candidate_hs_id": "HS:2022:9405.49",
     "candidate_basis": "CPC title and WCO residual subheading",
+    "led_candidate": {
+      "status": "pending",
+      "cpc_id": "CPC:3.0:46533",
+      "hs_id": "HS:2022:9405.42",
+      "checked_clause_id": "CPC:3.0:46533:HS2022:C:1",
+      "basis": "CPC title and WCO LED-only subheading"
+    },
     "correction_search": {
       "status": "no_46539_correction_in_checked_results",
       "registry_last_update": "2026-11-03",
@@ -664,6 +780,7 @@
         "4379"
       ]
     },
+    "publication_status": "standalone_table_not_located_in_checked_listing",
     "evidence_ids": [
       "cpc-46539-title",
       "cpc-46539-pdf",
@@ -671,10 +788,220 @@
       "unsd-cpc3-corrections",
       "CPC:3.0:46539:HS2022:C:1",
       "CPC:3.0:46539:HS2022:D:1",
-      "wco-other-electric-lighting"
-    ]
+      "wco-other-electric-lighting",
+      "cpc-46533-pdf",
+      "cpc-46533-online",
+      "CPC:3.0:46533:HS2022:C:1",
+      "unsd-cpc3-correspondence"
+    ],
+    "hs_history": {
+      "hs_2017": {
+        "id": "HS:2017:9405.40",
+        "label": "Other electric lamps and lighting fittings",
+        "evidence_id": "wco-2017-9405"
+      },
+      "rows": [
+        {
+          "id": "HS:2017:9405.40:WCO:HS:2022:8539.51",
+          "hs_2022_id": "HS:2022:8539.51",
+          "table_i": {
+            "hs_2022": "8539.51",
+            "hs_2017": "ex9405.40",
+            "line": 46,
+            "evidence_id": "wco-lighting-table-i-8539"
+          },
+          "table_ii": {
+            "hs_2017": "9405.40",
+            "hs_2022": "ex8539.51",
+            "line": 42,
+            "evidence_id": "wco-lighting-table-ii"
+          }
+        },
+        {
+          "id": "HS:2017:9405.40:WCO:HS:2022:9405.41",
+          "hs_2022_id": "HS:2022:9405.41",
+          "table_i": {
+            "hs_2022": "9405.41",
+            "hs_2017": "ex9405.40",
+            "line": 18,
+            "evidence_id": "wco-lighting-table-i-9405"
+          },
+          "table_ii": {
+            "hs_2017": "9405.40",
+            "hs_2022": "9405.41",
+            "line": 43,
+            "evidence_id": "wco-lighting-table-ii"
+          }
+        },
+        {
+          "id": "HS:2017:9405.40:WCO:HS:2022:9405.42",
+          "hs_2022_id": "HS:2022:9405.42",
+          "table_i": {
+            "hs_2022": "9405.42",
+            "hs_2017": "ex9405.40",
+            "line": 20,
+            "evidence_id": "wco-lighting-table-i-9405"
+          },
+          "table_ii": {
+            "hs_2017": "9405.40",
+            "hs_2022": "9405.42",
+            "line": 44,
+            "evidence_id": "wco-lighting-table-ii"
+          }
+        },
+        {
+          "id": "HS:2017:9405.40:WCO:HS:2022:9405.49",
+          "hs_2022_id": "HS:2022:9405.49",
+          "table_i": {
+            "hs_2022": "9405.49",
+            "hs_2017": "ex9405.40",
+            "line": 22,
+            "evidence_id": "wco-lighting-table-i-9405"
+          },
+          "table_ii": {
+            "hs_2017": "9405.40",
+            "hs_2022": "9405.49",
+            "line": 45,
+            "evidence_id": "wco-lighting-table-ii"
+          }
+        }
+      ],
+      "hs2022_8539_51_table_i_predecessors": [
+        "ex8539.90",
+        "ex8543.70",
+        "ex9405.10",
+        "ex9405.20",
+        "ex9405.30",
+        "ex9405.40"
+      ],
+      "cpc21_hs2017": {
+        "hs_id": "HS:2017:9405.40",
+        "cpc_id": "CPC:2.1:46539",
+        "hs_partial": "0",
+        "cpc_partial": "0",
+        "csv_line": 5730,
+        "evidence_id": "unsd-hs2017-cpc21-lighting"
+      }
+    }
   },
   "evidence": {
+    "wco-2017-9405": {
+      "resource_id": "hs2017-chapter94",
+      "edition": "2017",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/2094_2017e.pdf?la=en",
+      "sha256": "7f52579b27bce95f090989632a83482ff695915712270aa72c2dac34539fa0de",
+      "publication_date": null,
+      "pdf_page": 3,
+      "lines": [
+        14,
+        25
+      ],
+      "text_sha256": "87c5e91821329cff7686682902797eb1d130871225046ccda45b6d0dd7977137"
+    },
+    "wco-lighting-table-i-9405": {
+      "resource_id": "hs2022-to-hs2017-wco-table-i",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-i_en.pdf?la=en",
+      "sha256": "e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361",
+      "publication_date": null,
+      "pdf_page": 33,
+      "lines": [
+        18,
+        22
+      ],
+      "text_sha256": "ad853e29831cbac01e22e880ef5b4c3af8bbf733973e55d47b60b45a9a6776bf"
+    },
+    "wco-lighting-table-i-8539": {
+      "resource_id": "hs2022-to-hs2017-wco-table-i",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-i_en.pdf?la=en",
+      "sha256": "e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361",
+      "publication_date": null,
+      "pdf_page": 27,
+      "lines": [
+        41,
+        46
+      ],
+      "text_sha256": "69aaf2d1a4bc93947f09c1f85552b0bf82f2134ad757e51a9817e81f82c333bd"
+    },
+    "wco-lighting-table-ii": {
+      "resource_id": "hs2017-to-hs2022-wco-table-ii",
+      "edition": "2017",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-ii_en.pdf?la=en",
+      "sha256": "2ca3c6fdd0e18f274c5458cc2f73fc8dc47ebe2bac4c821afdb179d1c848e1bc",
+      "publication_date": null,
+      "pdf_page": 23,
+      "lines": [
+        42,
+        45
+      ],
+      "text_sha256": "8ad9dfe239f163646b5340e5aa4b2313e33031028f7067e84d8c16c6ae3d5021"
+    },
+    "unsd-hs2017-cpc21-lighting": {
+      "resource_id": "cpc21-hs2017-unsd-correspondence",
+      "edition": "2.1",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/tables/CPC/CPCv21_HS2017/CPC21-HS2017.csv",
+      "sha256": "a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c",
+      "publication_date": null,
+      "csv_line": 5730,
+      "label": "下载 UNSD 历史对应 CSV · 第 5730 行"
+    },
+    "unsd-cpc3-corrections": {
+      "resource_id": "cpc3-corrections-register-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+      "sha256": "9bb865425c6d46015e3f8f56554da7ac67a964786a81ab4e83522ca9863cf513",
+      "publication_date": null,
+      "element_id": "searchResult",
+      "label": "打开 UNSD 更正检索结果",
+      "search_form": {
+        "searchS": "Search",
+        "selAcronym": "CPC",
+        "selVersion": "2100",
+        "selTypeEntry": "Correction",
+        "selUpdated": "-36400"
+      }
+    },
+    "unsd-cpc3-correspondence": {
+      "resource_id": "cpc3-correspondence-listing-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/CPC",
+      "sha256": "22e584a275ea39747e23ffd5205f9a55eaa2f5b67c9f325ba20671c7f859c736",
+      "publication_date": null,
+      "element_id": "corresp-cpc",
+      "labels": [
+        "FROM / TO",
+        "CPC prov",
+        "CPC Ver. 1.0",
+        "CPC Ver. 1.1",
+        "CPC Ver. 2",
+        "CPC Ver. 2.1",
+        "CPC prov",
+        "CPC Ver. 1.0",
+        "CPC Ver. 1.1",
+        "CPC Ver. 2",
+        "CPC Ver. 2.1",
+        "ISIC Rev. 3",
+        "ISIC Rev. 3.1",
+        "ISIC Rev. 4",
+        "BEC Rev. 5",
+        "SITC Rev. 4",
+        "HS1988",
+        "HS1996",
+        "HS2002",
+        "HS2007",
+        "HS2012",
+        "HS2017",
+        "EBOPS2002",
+        "EBOPS2010",
+        "COICOP",
+        "Prodcom2002",
+        " New",
+        "CPA 2.1"
+      ],
+      "link_count": 43,
+      "label": "打开 UNSD 对应表目录"
+    },
     "cpc-46539-title": {
       "resource_id": "cpc3-structure",
       "edition": "3.0",
@@ -682,6 +1009,24 @@
       "sha256": "5cd2c1c4890dd6be16af48e9bb940fed48efff9865f39ff15edaa921da25fb7c",
       "publication_date": null,
       "csv_row": 2485
+    },
+    "cpc-46533-pdf": {
+      "resource_id": "cpc3-notes-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+      "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+      "publication_date": "2025-06-30",
+      "pdf_page": 253,
+      "label": "打开 CPC 3.0 说明 PDF"
+    },
+    "cpc-46533-online": {
+      "resource_id": "cpc3-detail-46533-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46533",
+      "sha256": "04548d7714823c73a25e8fffc3bb5839171a361495bf8b11b25f61a764e5af95",
+      "publication_date": null,
+      "element_id": "PrintDivID",
+      "label": "打开 UNSD 在线条目 46533 快照"
     },
     "cpc-46539-pdf": {
       "resource_id": "cpc3-notes-20250630",
@@ -700,22 +1045,6 @@
       "publication_date": null,
       "element_id": "PrintDivID",
       "label": "打开 UNSD 在线条目 46539 快照"
-    },
-    "unsd-cpc3-corrections": {
-      "resource_id": "cpc3-corrections-register-20261109",
-      "edition": "3.0",
-      "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
-      "sha256": "9bb865425c6d46015e3f8f56554da7ac67a964786a81ab4e83522ca9863cf513",
-      "publication_date": null,
-      "element_id": "searchResult",
-      "label": "打开 UNSD 更正检索结果",
-      "search_form": {
-        "searchS": "Search",
-        "selAcronym": "CPC",
-        "selVersion": "2100",
-        "selTypeEntry": "Correction",
-        "selUpdated": "-36400"
-      }
     },
     "wco-ceiling-wall-lights": {
       "resource_id": "hs2022-chapter94",
@@ -768,6 +1097,32 @@
         16
       ],
       "text_sha256": "7cd597b86f63a1e177cfbb3e0955acb4478b39032d4889ec4416a0967879f9cd"
+    },
+    "wco-led-modules": {
+      "resource_id": "hs2022-chapter85",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1685_2022e.pdf?la=en",
+      "sha256": "1f2eada9662f4b6089e6bd90f8c5e50f93f032eabd7ae2a19014c06b711357c5",
+      "publication_date": null,
+      "pdf_page": 16,
+      "lines": [
+        10,
+        12
+      ],
+      "text_sha256": "93ae9d4c52a7086b0a47e11c0aa6af171842dc17a1fe946978d8a00770a5a7b8"
+    },
+    "wco-led-source-note": {
+      "resource_id": "hs2022-chapter85",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1685_2022e.pdf?la=en",
+      "sha256": "1f2eada9662f4b6089e6bd90f8c5e50f93f032eabd7ae2a19014c06b711357c5",
+      "publication_date": null,
+      "pdf_page": 2,
+      "lines": [
+        28,
+        39
+      ],
+      "text_sha256": "3b7132ec65d4a2266915e345416eed097863719187f5716c1efa5f60b75dfb2a"
     },
     "wco-octopus": {
       "resource_id": "hs2022-chapter03",
@@ -983,40 +1338,40 @@
   },
   "summary": {
     "hierarchy": {
-      "node_count": 19,
-      "unique_codes": 19,
+      "node_count": 22,
+      "unique_codes": 22,
       "duplicate_codes": [],
-      "edge_count": 18,
+      "edge_count": 21,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 1,
         "2": 4,
-        "3": 10,
-        "4": 4
+        "3": 11,
+        "4": 6
       },
       "roots": 1,
-      "leaves": 11,
+      "leaves": 14,
       "definitions": 0,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
     "node_status": {
       "navigation": 8,
-      "reviewed": 6,
+      "reviewed": 9,
       "pending": 5
     },
     "binding_status": {
-      "reviewed": 14,
-      "pending": 11
+      "reviewed": 17,
+      "pending": 12
     },
     "reviewed_relations": {
-      "exact": 7,
+      "exact": 10,
       "source_broader": 5,
       "excluded": 2
     },
-    "source_nodes": 18,
-    "evidence_records": 24
+    "source_nodes": 21,
+    "evidence_records": 34
   }
 }

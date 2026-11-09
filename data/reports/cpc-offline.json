@@ -181,12 +181,36 @@
       "path": "data/local/raw/HS/2022/hs2022-wco-interpretation-rules/a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a/hs2022-wco-interpretation-rules.pdf"
     },
     {
+      "resource_id": "cpc3-detail-46533-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46533",
+      "sha256": "04548d7714823c73a25e8fffc3bb5839171a361495bf8b11b25f61a764e5af95",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46533-20261109/04548d7714823c73a25e8fffc3bb5839171a361495bf8b11b25f61a764e5af95/cpc3-detail-46533-20261109.html"
+    },
+    {
       "resource_id": "cpc3-detail-46539-20261109",
       "edition": "3.0",
       "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46539",
       "sha256": "1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4",
       "publication_date": null,
       "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46539-20261109/1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4/cpc3-detail-46539-20261109.html"
+    },
+    {
+      "resource_id": "hs2017-chapter94",
+      "edition": "2017",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/2094_2017e.pdf?la=en",
+      "sha256": "7f52579b27bce95f090989632a83482ff695915712270aa72c2dac34539fa0de",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2017/hs2017-chapter94/7f52579b27bce95f090989632a83482ff695915712270aa72c2dac34539fa0de/hs2017-chapter94.pdf"
+    },
+    {
+      "resource_id": "hs2022-chapter85",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1685_2022e.pdf?la=en",
+      "sha256": "1f2eada9662f4b6089e6bd90f8c5e50f93f032eabd7ae2a19014c06b711357c5",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-chapter85/1f2eada9662f4b6089e6bd90f8c5e50f93f032eabd7ae2a19014c06b711357c5/hs2022-chapter85.pdf"
     }
   ],
   "structure": {
@@ -210,7 +234,7 @@
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
-  "view_sha256": "27f5e283a9c55034b6f481736e93d5f2db2a9376d428e807bdb9cf82290c4f35",
+  "view_sha256": "0b9e3e1e4359af966c2bbaf7fa4cd59f73c6f740a8f4fdab41178ee8cb3b198f",
   "hs_review": {
     "audit": {
       "status": "standalone_table_not_located_in_checked_listing",
@@ -3544,6 +3568,15 @@
             "cpc_partial": "1",
             "csv_line": 5547
           }
+        ],
+        "46539": [
+          {
+            "hs_id": "HS:2017:9405.40",
+            "cpc_id": "CPC:2.1:46539",
+            "hs_partial": "0",
+            "cpc_partial": "0",
+            "csv_line": 5730
+          }
         ]
       },
       "evidence": {
@@ -3974,43 +4007,43 @@
   },
   "trade_goods": {
     "path": "data/atlas/products/trade-goods-directory.json",
-    "sha256": "1492430471ed7a7fac36393a64f8b0d97c5846602e416fe75329b58611bbe4d3",
+    "sha256": "1d4d37dceb59984243cbde122e23e09eaaf5cf1181525f82c410c5d3406dd8fb",
     "hierarchy": {
-      "node_count": 19,
-      "unique_codes": 19,
+      "node_count": 22,
+      "unique_codes": 22,
       "duplicate_codes": [],
-      "edge_count": 18,
+      "edge_count": 21,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 1,
         "2": 4,
-        "3": 10,
-        "4": 4
+        "3": 11,
+        "4": 6
       },
       "roots": 1,
-      "leaves": 11,
+      "leaves": 14,
       "definitions": 0,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
     "node_status": {
       "navigation": 8,
-      "reviewed": 6,
+      "reviewed": 9,
       "pending": 5
     },
     "binding_status": {
-      "reviewed": 14,
-      "pending": 11
+      "reviewed": 17,
+      "pending": 12
     },
     "reviewed_relations": {
-      "exact": 7,
+      "exact": 10,
       "source_broader": 5,
       "excluded": 2
     },
-    "source_nodes": 18,
-    "evidence_records": 24
+    "source_nodes": 21,
+    "evidence_records": 34
   },
   "note_entries": [
     {
@@ -4124,18 +4157,27 @@
       "has_explanatory_text": true,
       "scope_review_status": "pending",
       "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:46533",
+      "csv_row": 2484,
+      "pdf_page": 253,
+      "has_explanatory_text": true,
+      "scope_review_status": null,
+      "excluded_to": []
     }
   ],
   "reproducibility": {
     "pdftotext": "pdftotext version 26.04.0",
     "parser_sha256": {
-      "cpc_view.html": "d5a92d56755a1404aff833c3efcaee0302e38669f00b97632cf7c61265ee452b",
-      "cpc.py": "5fda59f4bfc641b06ed606236be1136d81a0fcd3c45500cfb206cb07f9ca639c",
-      "cpc_hs.py": "cb1e1c6c3d60605e5691936c575fcf61f71d8fa0fabfd679b4bbde61ce174f19",
+      "cpc_view.html": "ec870e64566f6a54d2d2779c64ed0c73859e4a7dfd935d3bc9b1293573949bf0",
+      "cpc.py": "85b2bf06f3ac068f9385d0c871966cfafbaedad243547583af20acbc85402b34",
+      "cpc_hs.py": "0029d41f83f4c6e0b199846f190dcb6455378a113cc6dae0e98e9d6d0cd056cb",
       "cpc_hs_followup.py": "21f4f701cd65a077f7994695129b1620d33d741e4297ebc773b651f8ebec60b4",
       "hs.py": "e351af4ef5538322334e3d7d38857c6e980713bdfb1bdb2e4596e395a48ae9eb",
       "hs_reference.py": "fced54e61263385f5ff7c3968fec0d35cc248e48a3a9de764ab0a722875f63a3",
-      "trade_goods.py": "03821eb360d710bc4c47ea48175f15c897b53e41f2b190fd2c0e0124f65bf828"
+      "cpc_lighting.py": "2ae8a231cd757c073f57a1f215bec53aac46560a28367eb3d57aae5614a46e90",
+      "trade_goods.py": "d09e3108d54d0ef95ee6e0a726fd90373182b6cc29396fd71ee080172067b41c"
     }
   }
 }

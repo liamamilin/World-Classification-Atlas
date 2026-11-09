@@ -6,21 +6,21 @@ from os.path import relpath
 from pathlib import Path
 
 from .acquire import sha256
-from . import cpc_hs, cpc_hs_followup, hs, hs_reference, trade_goods
+from . import cpc_hs, cpc_hs_followup, cpc_lighting, hs, hs_reference, trade_goods
 from .isic import get_assets
 from .normalize import qa, table_nodes
 from .registry import write_json
 
 STRUCTURE = "cpc3-structure"
 NOTES = "cpc3-notes-20250630"
-REQUIRED = (STRUCTURE, NOTES, *cpc_hs.REQUIRED, trade_goods.LIGHTING_DETAIL)
+REQUIRED = (STRUCTURE, NOTES, *cpc_hs.REQUIRED, *cpc_lighting.REQUIRED)
 LOCAL = "data/local/products/cpc"
 REPORT = "data/reports/cpc-offline.json"
 NOTE_PAGES = {
     "17400": 63, "22270": 101, "34210": 160,
     "48160": 264, "27190": 127,
     "37990": 187, "46950": 254, "89200": 487,
-    "21267": 79, "11012": 55, "11031": 55, "49913": 276, "46539": 253,
+    "21267": 79, "11012": 55, "11031": 55, "49913": 276, "46539": 253, "46533": 253,
 }
 PENDING_SCOPE = {
     "48160": "原题排除同时没有机械部件和可更换滤芯的防护口罩。这类口罩的具体 CPC 子类待核。",
@@ -88,7 +88,7 @@ def build(root, resources):
     if any(target not in by_code for note in notes.values() for target in note["excluded_to"]):
         raise ValueError("CPC note points outside the locked source tree")
     hs_review = cpc_hs.build(assets, by_code)
-    directory = trade_goods.build(assets, by_code, hs_review, structure["evidence"], notes["46539"])
+    directory = trade_goods.build(assets, by_code, hs_review, structure["evidence"], notes)
     output = root / LOCAL
     inputs = [{**a["evidence"], "path": a["path"].relative_to(root).as_posix()} for a in assets.values()]
     payload = {
@@ -140,7 +140,7 @@ def build(root, resources):
             "parser_sha256": {"cpc_view.html": sha256(template), **{
                 Path(path).name: sha256(Path(path).read_bytes())
                 for path in (__file__, cpc_hs.__file__, cpc_hs_followup.__file__, hs.__file__,
-                             hs_reference.__file__, trade_goods.__file__)
+                             hs_reference.__file__, cpc_lighting.__file__, trade_goods.__file__)
             }},
         },
     }

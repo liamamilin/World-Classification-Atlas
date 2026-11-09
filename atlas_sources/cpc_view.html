@@ -57,6 +57,7 @@ const byId = new Map(data.nodes.map(node => [node.id, node]));
 const byCode = new Map(data.nodes.map(node => [node.code, node]));
 const hsReview = data.hs_review;
 const goods = data.trade_goods;
+const lightingHistory = goods.lighting_review.hs_history;
 const goodsById = new Map(goods.nodes.map(node => [node.id, node]));
 const followup = hsReview.scope_followup;
 const hsStructure = hsReview.hs_structure;
@@ -118,7 +119,9 @@ function original(parent, evidence, label) {
   return link;
 }
 function download(parent, evidence, label) {
-  original(parent, evidence, label).download = '';
+  const link = original(parent, evidence, label);
+  link.download = '';
+  return link;
 }
 const goodsRelations = {exact: '已审 · 范围等价', source_broader: '已审 · 来源范围更宽', excluded: '已审 · 排除'};
 function goodsRelation(binding) {
@@ -143,6 +146,9 @@ function renderGoods(out, node) {
   const states = {navigation: 'Atlas 导航', reviewed: '已审商品范围', pending: '待核范围'};
   make('p', states[node.status], out).id = 'atlas-node-status';
   make('p', node.scope, out);
+  if (node.cpc_scope_status === 'not_reviewed') {
+    make('p', '已审状态适用于 HS 2022 商品范围。现行 CPC 对应尚未审定。', out);
+  }
   if (node.code === 'trade-goods') {
     const counts = goods.summary.node_status;
     make('p', counts.reviewed + ' 个已审商品范围 · ' + counts.pending + ' 个待核范围', out);
@@ -301,6 +307,34 @@ function renderHistorical(out, code) {
   }
   download(legacy, history.evidence, '下载历史官方对应 CSV');
 }
+function renderLightingHistory(out) {
+  const old = lightingHistory.hs_2017;
+  make('h2', 'HS 2017 9405.40 · ' + old.label, out);
+  make('small', old.id, out).id = 'node-id';
+  make('p', '历史税则拆分与转移证据。表 I 的 ex 标记旧子目的一部分，表 II 的 ex 标记新子目的一部分。', out);
+  renderGoodsEvidence(out, {...goods.evidence[old.evidence_id], label: '打开 WCO HS 2017 第 94 章'});
+  const list = make('ul', undefined, out);
+  list.id = 'lighting-split-targets';
+  for (const row of lightingHistory.rows) {
+    const entry = make('li', undefined, list);
+    entry.dataset.historyId = row.id;
+    hsLink(entry, hsById.get(row.hs_2022_id));
+    make('p', '表 I · ' + row.table_i.hs_2022 + ' ← ' + row.table_i.hs_2017 +
+      ' · 表 II · ' + row.table_ii.hs_2017 + ' → ' + row.table_ii.hs_2022, entry);
+    for (const [table, label] of [[row.table_i, '表 I'], [row.table_ii, '表 II']]) {
+      const evidence = goods.evidence[table.evidence_id];
+      original(entry, evidence, '打开 WCO ' + label + ' · 第 ' + evidence.pdf_page + ' 页 · 提取行 ' + table.line);
+    }
+  }
+  make('p', '表 I 所列 8539.51 的全部旧码贡献范围 · ' +
+    lightingHistory.hs2022_8539_51_table_i_predecessors.join('、'), out);
+  const legacy = lightingHistory.cpc21_hs2017;
+  make('h3', '历史 UNSD 对应 · HS 2017 与 CPC 2.1', out);
+  make('p', legacy.hs_id + ' ↔ ' + legacy.cpc_id + ' · HS partial=' + legacy.hs_partial +
+    ' · CPC partial=' + legacy.cpc_partial, out);
+  const evidence = goods.evidence[legacy.evidence_id];
+  download(out, evidence, evidence.label).id = 'lighting-legacy-csv';
+}
 function renderHs(out, node) {
   const scope = hsReview.hs_scope[node.code];
   make('h2', 'HS 2022 ' + node.code + ' · ' + (scope?.label || node.label), out);
@@ -324,6 +358,14 @@ function renderHs(out, node) {
   }
   renderWco(out, Object.entries(followup.wco_evidence)
     .filter(([, entry]) => entry.subject_ids.includes(node.id)).map(([id]) => id));
+  const split = lightingHistory.rows.find(row => row.hs_2022_id === node.id);
+  if (split) {
+    const historical = make('div', undefined, out);
+    historical.id = 'lighting-historical-backlink';
+    make('h3', 'WCO 历史拆分', historical);
+    nodeLink(lightingHistory.hs_2017, historical, '回查 HS 2017 9405.40');
+    make('p', '表 I 原码 ' + split.table_i.hs_2017 + ' · 表 II 原码 ' + split.table_ii.hs_2022, historical);
+  }
   const correlations = hsReview.carbon_correlations;
   const row = correlations.rows[node.code];
   if (row) {
@@ -455,7 +497,8 @@ function renderSelection(id, focus = false) {
   const concept = goodsById.get(id) || (id === goods.scheme_id ? goods.nodes[0] : undefined);
   out.replaceChildren();
   const hs = hsById.get(id);
-  selectCatalogue(concept ? 'atlas' : hs || id === 'HS:2022' ? 'hs' : 'cpc');
+  const oldLighting = id === lightingHistory.hs_2017.id;
+  selectCatalogue(concept ? 'atlas' : hs || oldLighting || id === 'HS:2022' ? 'hs' : 'cpc');
   if (concept) {
     renderGoods(out, concept);
     if (focus) out.focus();
@@ -463,6 +506,11 @@ function renderSelection(id, focus = false) {
   }
   if (hs) {
     renderHs(out, hs);
+    if (focus) out.focus();
+    return;
+  }
+  if (oldLighting) {
+    renderLightingHistory(out);
     if (focus) out.focus();
     return;
   }
@@ -512,6 +560,9 @@ function renderSelection(id, focus = false) {
     for (const [code] of referencing) nodeLink(byCode.get(code), make('li', undefined, list));
   }
   renderCpcReview(out, node);
+  if (node.id === goods.lighting_review.cpc_id) {
+    nodeLink(lightingHistory.hs_2017, out, '比较 HS 2017 9405.40 与 CPC 2.1 的历史证据');
+  }
   renderGoodsBacklinks(out, node.id);
   if (focus || reference) {
     const target = reference ? el(reference.id) : out;

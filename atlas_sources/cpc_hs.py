@@ -197,7 +197,9 @@ def legacy_correspondences(asset):
         ):
             raise ValueError(f"invalid historical correspondence at CSV line {rows.line_num}")
         count[f"HS={hs_partial};CPC={cpc_partial}"] += 1
-        if cpc in REVIEWS or cpc in cpc_hs_followup.HISTORICAL_CODES or (cpc == "32193" and hs == "4818.90"):
+        if cpc in REVIEWS or cpc in cpc_hs_followup.HISTORICAL_CODES or cpc == "46539" or (
+            cpc == "32193" and hs == "4818.90"
+        ):
             selected.setdefault(cpc, []).append({
                 "hs_id": f"HS:2017:{hs}", "cpc_id": f"CPC:2.1:{cpc}",
                 "hs_partial": hs_partial, "cpc_partial": cpc_partial, "csv_line": rows.line_num,
