@@ -156,7 +156,9 @@ def inspect(root, resources, write=False):
             manifest = read_json(folder / "manifest.json")
             if (sha256(data) != pinned["sha256"] or manifest["sha256"] != pinned["sha256"]
                     or manifest["url"] != resource["url"] or pinned["url"] != resource["url"]
-                    or manifest["source_id"] != resource["source_id"] or manifest["edition"] != resource["edition"]):
+                    or manifest["source_id"] != resource["source_id"] or manifest["edition"] != resource["edition"]
+                    or manifest.get("search_form") != resource.get("search_form")
+                    or pinned.get("search_form") != resource.get("search_form")):
                 raise ValueError("snapshot/manifest/lock provenance mismatch")
             check_payload(data, resource)
             result.update(sha256=pinned["sha256"], path=str(path.relative_to(root)), bytes=len(data))

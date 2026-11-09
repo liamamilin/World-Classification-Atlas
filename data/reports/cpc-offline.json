@@ -139,6 +139,46 @@
       "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
       "publication_date": null,
       "path": "data/local/raw/HS/2022/hs2022-chapter94/5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911/hs2022-chapter94.pdf"
+    },
+    {
+      "resource_id": "cpc3-corrections-register-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+      "sha256": "9bb865425c6d46015e3f8f56554da7ac67a964786a81ab4e83522ca9863cf513",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-corrections-register-20261109/9bb865425c6d46015e3f8f56554da7ac67a964786a81ab4e83522ca9863cf513/cpc3-corrections-register-20261109.html"
+    },
+    {
+      "resource_id": "cpc3-correction-4379",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Registry/Detail/4379",
+      "sha256": "52c552406e9f6739df344e9c16e1ef7ed854b60f77e8cdf639636eb4f139cb89",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-correction-4379/52c552406e9f6739df344e9c16e1ef7ed854b60f77e8cdf639636eb4f139cb89/cpc3-correction-4379.html"
+    },
+    {
+      "resource_id": "cpc3-detail-21267-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Detail/EN/2100/21267",
+      "sha256": "30d55c098e9fa5cde7287f844d099e9f9e28a37fee1ac7d7195be67eb2f015e0",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-21267-20261109/30d55c098e9fa5cde7287f844d099e9f9e28a37fee1ac7d7195be67eb2f015e0/cpc3-detail-21267-20261109.html"
+    },
+    {
+      "resource_id": "siec1-escm-historical-coal",
+      "edition": "1.0-2011",
+      "url": "https://unstats.un.org/unsd/energystats/methodology/documents/escm_2017850e.pdf",
+      "sha256": "5e62b5320442fca313b668a213d180da33038a30a49f87ee9b7efbcc783ccae3",
+      "publication_date": null,
+      "path": "data/local/raw/SIEC/1.0-2011/siec1-escm-historical-coal/5e62b5320442fca313b668a213d180da33038a30a49f87ee9b7efbcc783ccae3/siec1-escm-historical-coal.pdf"
+    },
+    {
+      "resource_id": "hs2022-wco-interpretation-rules",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0001_2022e-gir.pdf",
+      "sha256": "a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-wco-interpretation-rules/a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a/hs2022-wco-interpretation-rules.pdf"
     }
   ],
   "structure": {
@@ -162,7 +202,7 @@
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
-  "view_sha256": "04e153976d33ca6a88cc609fd27d406deb990e2e7c4d1ff1632478b88f4adba7",
+  "view_sha256": "75303038a6d04f35b69e5bb936db8e864cb71f03671cfd2fb30006a68f0b257b",
   "hs_review": {
     "audit": {
       "status": "standalone_table_not_located_in_checked_listing",
@@ -398,7 +438,7 @@
         "resolution_status": "verified_codes",
         "review": {
           "status": "scope_pending",
-          "finding": "第 27 章将 2701.12 定为烟煤。工作簿在烟煤和次烟煤条目都引用该子目，分界待核。",
+          "finding": "烟煤 11012 与次烟煤 11031 均引用 2701.12。WCO 子目注 2 同时要求挥发分在干燥无矿物质基准上超过 14%，热值在含水无矿物质基准上至少 5,833 kcal/kg。CPC 共引范围待核。",
           "evidence": {
             "resource_id": "hs2022-chapter27",
             "edition": "2022",
@@ -438,7 +478,7 @@
         "resolution_status": "verified_codes",
         "review": {
           "status": "scope_pending",
-          "finding": "第 27 章将 2701.12 定为烟煤。工作簿在烟煤和次烟煤条目都引用该子目，分界待核。",
+          "finding": "次烟煤 11031 位于褐煤类，烟煤 11012 位于硬煤类，两者共引 2701.12。WCO 对该子目的烟煤阈值明确，CPC 共引范围及次烟煤对应仍待核。",
           "evidence": {
             "resource_id": "hs2022-chapter27",
             "edition": "2022",
@@ -881,7 +921,7 @@
         "resolution_status": "pending",
         "review": {
           "status": "missing_code",
-          "finding": "CPC 工作簿和说明 PDF 均写 0307.53。HS 2022 第 03 章列 0307.52 为冷冻章鱼，保留为待核候选。",
+          "finding": "CPC 工作簿、说明 PDF 和在线条目均写 0307.53。UNSD 更正检索只返回与章鱼无关的 4379 号。WCO 分组列 0307.52 为冷冻章鱼，Atlas 保留该码为待核候选。CPC 同时涵盖供人食用的章鱼粉、粗粉和团粒，WCO 章注将这类制品划到 03.09，具体跨表范围待核。",
           "evidence": {
             "resource_id": "hs2022-chapter03",
             "edition": "2022",
@@ -2841,7 +2881,7 @@
         "resolution_status": "verified_codes",
         "review": {
           "status": "scope_pending",
-          "finding": "纳入句点名电驱动，HS 8711.60 明列电驱动，8711.90 是其他项。保留两处引用，8711.90 的具体范围待核。",
+          "finding": "纳入句点名电驱动并引用两个代码。WCO 将电驱动列入 8711.60，8711.90 是品目 87.11 的同级残余项。CPC 类标题另含边车，8711.90 的具体范围待核。",
           "evidence": {
             "resource_id": "hs2022-chapter87",
             "edition": "2022",
@@ -3265,6 +3305,54 @@
       },
       "rows": 5843,
       "selected": {
+        "21267": [
+          {
+            "hs_id": "HS:2017:0307.52",
+            "cpc_id": "CPC:2.1:21267",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 491
+          },
+          {
+            "hs_id": "HS:2017:0307.59",
+            "cpc_id": "CPC:2.1:21267",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 492
+          }
+        ],
+        "11010": [
+          {
+            "hs_id": "HS:2017:2701.11",
+            "cpc_id": "CPC:2.1:11010",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 1400
+          },
+          {
+            "hs_id": "HS:2017:2701.12",
+            "cpc_id": "CPC:2.1:11010",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 1401
+          },
+          {
+            "hs_id": "HS:2017:2701.19",
+            "cpc_id": "CPC:2.1:11010",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 1402
+          }
+        ],
+        "11030": [
+          {
+            "hs_id": "HS:2017:2702.10",
+            "cpc_id": "CPC:2.1:11030",
+            "hs_partial": "0",
+            "cpc_partial": "0",
+            "csv_line": 1404
+          }
+        ],
         "32193": [
           {
             "hs_id": "HS:2017:4818.90",
@@ -3392,6 +3480,22 @@
             "csv_line": 5316
           }
         ],
+        "49913": [
+          {
+            "hs_id": "HS:2017:8711.60",
+            "cpc_id": "CPC:2.1:49913",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5413
+          },
+          {
+            "hs_id": "HS:2017:8711.90",
+            "cpc_id": "CPC:2.1:49913",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5414
+          }
+        ],
         "48160": [
           {
             "hs_id": "HS:2017:9019.10",
@@ -3422,6 +3526,423 @@
         "url": "https://unstats.un.org/unsd/classifications/Econ/tables/CPC/CPCv21_HS2017/CPC21-HS2017.csv",
         "sha256": "a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c",
         "publication_date": null
+      }
+    },
+    "scope_followup": {
+      "corrigendum_audit": {
+        "status": "no_octopus_correction_in_checked_cpc3_registry_results",
+        "registry_last_update": "2026-11-03",
+        "result_ids": [
+          "4379"
+        ],
+        "positive_control": {
+          "id": "4379",
+          "cpc_id": "CPC:3.0:03239",
+          "listing_date": "2026-04-15",
+          "detail_updated": "2026-07-02"
+        },
+        "online_cpc_id": "CPC:3.0:21267",
+        "printed_hs2022_codes": [
+          "0307.53",
+          "0307.59"
+        ],
+        "candidate_hs_id": "HS:2022:0307.52",
+        "evidence": [
+          {
+            "resource_id": "cpc3-corrections-register-20261109",
+            "edition": "3.0",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+            "sha256": "9bb865425c6d46015e3f8f56554da7ac67a964786a81ab4e83522ca9863cf513",
+            "publication_date": null,
+            "element_id": "searchResult",
+            "label": "打开 UNSD 更正检索结果",
+            "search_form": {
+              "searchS": "Search",
+              "selAcronym": "CPC",
+              "selVersion": "2100",
+              "selTypeEntry": "Correction",
+              "selUpdated": "-36400"
+            }
+          },
+          {
+            "resource_id": "cpc3-correction-4379",
+            "edition": "3.0",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Registry/Detail/4379",
+            "sha256": "52c552406e9f6739df344e9c16e1ef7ed854b60f77e8cdf639636eb4f139cb89",
+            "publication_date": null,
+            "element_id": "PrintDivID",
+            "label": "打开 UNSD 更正 4379 原件"
+          },
+          {
+            "resource_id": "cpc3-detail-21267-20261109",
+            "edition": "3.0",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Detail/EN/2100/21267",
+            "sha256": "30d55c098e9fa5cde7287f844d099e9f9e28a37fee1ac7d7195be67eb2f015e0",
+            "publication_date": null,
+            "element_id": "PrintDivID",
+            "label": "打开 UNSD 在线条目 21267 快照"
+          }
+        ]
+      },
+      "wco_evidence": {
+        "HS:2022:0307:WCO:octopus": {
+          "label": "无独立数字码的章鱼分组",
+          "kind": "dash_group",
+          "subject_ids": [
+            "HS:2022:0307",
+            "HS:2022:0307.51",
+            "HS:2022:0307.52",
+            "HS:2022:0307.59"
+          ],
+          "related_hs_ids": [
+            "HS:2022:0307.51",
+            "HS:2022:0307.52",
+            "HS:2022:0307.59"
+          ],
+          "passages": [
+            {
+              "resource_id": "hs2022-chapter03",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+              "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+              "publication_date": null,
+              "pdf_page": 11,
+              "lines": [
+                23,
+                26
+              ],
+              "text_sha256": "66de33b4f25bae3ba48761402c71052f38036661fca1d4c303fe41804bbd875b"
+            }
+          ]
+        },
+        "HS:2022:03:WCO:chapter-note-1c": {
+          "label": "第 03 章章注 1(c) · 不适合人食用的粉、粗粉或团粒",
+          "kind": "chapter_note",
+          "subject_ids": [
+            "HS:2022:03",
+            "HS:2022:0307",
+            "HS:2022:0307.52",
+            "HS:2022:0307.59",
+            "HS:2022:2301"
+          ],
+          "related_hs_ids": [
+            "HS:2022:2301"
+          ],
+          "passages": [
+            {
+              "resource_id": "hs2022-chapter03",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+              "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+              "publication_date": null,
+              "pdf_page": 1,
+              "lines": [
+                10,
+                13
+              ],
+              "text_sha256": "74fe4cc8e5928ef219085909912f83eced4d1492debeae8166f697b348ee430f"
+            }
+          ]
+        },
+        "HS:2022:03:WCO:chapter-note-3": {
+          "label": "第 03 章章注 3 · 供人食用的粉、粗粉或团粒",
+          "kind": "chapter_note",
+          "subject_ids": [
+            "HS:2022:03",
+            "HS:2022:0307",
+            "HS:2022:0307.52",
+            "HS:2022:0307.59",
+            "HS:2022:0309",
+            "HS:2022:0309.90"
+          ],
+          "related_hs_ids": [
+            "HS:2022:0309",
+            "HS:2022:0309.90"
+          ],
+          "passages": [
+            {
+              "resource_id": "hs2022-chapter03",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+              "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+              "publication_date": null,
+              "pdf_page": 1,
+              "lines": [
+                17,
+                18
+              ],
+              "text_sha256": "1d329332af90f137fcb78f9c0305a95ce62b0707dd3a72be0d4aefcc224e95ad"
+            },
+            {
+              "resource_id": "hs2022-chapter03",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+              "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+              "publication_date": null,
+              "pdf_page": 12,
+              "lines": [
+                24,
+                27
+              ],
+              "text_sha256": "a4b7bb91baff9997d42ad64a97e074dd969832cbada248dd61ac3784f3537464"
+            }
+          ]
+        },
+        "HS:2022:2701:WCO:unagglomerated-coal": {
+          "label": "无独立数字码的未团聚煤分组",
+          "kind": "dash_group",
+          "subject_ids": [
+            "HS:2022:2701",
+            "HS:2022:2701.11",
+            "HS:2022:2701.12",
+            "HS:2022:2701.19",
+            "HS:2022:2701.20"
+          ],
+          "related_hs_ids": [
+            "HS:2022:2701.11",
+            "HS:2022:2701.12",
+            "HS:2022:2701.19"
+          ],
+          "passages": [
+            {
+              "resource_id": "hs2022-chapter27",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+              "sha256": "596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805",
+              "publication_date": null,
+              "pdf_page": 2,
+              "lines": [
+                3,
+                9
+              ],
+              "text_sha256": "bb27a32548d81d38e7962af6895cfd2e91a253b0ba3a801a72402d582257fff3"
+            }
+          ]
+        },
+        "HS:2022:27:WCO:subheading-note-2": {
+          "label": "第 27 章子目注 2 · 烟煤阈值",
+          "kind": "subheading_note",
+          "subject_ids": [
+            "HS:2022:27",
+            "HS:2022:2701",
+            "HS:2022:2701.12"
+          ],
+          "related_hs_ids": [
+            "HS:2022:2701.12"
+          ],
+          "passages": [
+            {
+              "resource_id": "hs2022-chapter27",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+              "sha256": "596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805",
+              "publication_date": null,
+              "pdf_page": 1,
+              "lines": [
+                33,
+                35
+              ],
+              "text_sha256": "2e591906cb37b619d44721e4661a5fddeae8c5c60c3bcc6d185d202975c9f4d5"
+            }
+          ]
+        },
+        "HS:2022:2702:WCO:lignite": {
+          "label": "27.02 褐煤品目",
+          "kind": "heading",
+          "subject_ids": [
+            "HS:2022:2701.12",
+            "HS:2022:2702",
+            "HS:2022:2702.10",
+            "HS:2022:2702.20"
+          ],
+          "related_hs_ids": [
+            "HS:2022:2702.10",
+            "HS:2022:2702.20"
+          ],
+          "passages": [
+            {
+              "resource_id": "hs2022-chapter27",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+              "sha256": "596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805",
+              "publication_date": null,
+              "pdf_page": 2,
+              "lines": [
+                11,
+                13
+              ],
+              "text_sha256": "93e3a7ab3b0ff6157fafa3df4b865b58b280c2dbd200eb4fd8127604fc14df47"
+            }
+          ]
+        },
+        "HS:2022:8711:WCO:heading": {
+          "label": "87.11 品目及同级子目",
+          "kind": "heading",
+          "subject_ids": [
+            "HS:2022:8711",
+            "HS:2022:8711.10",
+            "HS:2022:8711.20",
+            "HS:2022:8711.30",
+            "HS:2022:8711.40",
+            "HS:2022:8711.50",
+            "HS:2022:8711.60",
+            "HS:2022:8711.90"
+          ],
+          "related_hs_ids": [
+            "HS:2022:8711.10",
+            "HS:2022:8711.20",
+            "HS:2022:8711.30",
+            "HS:2022:8711.40",
+            "HS:2022:8711.50",
+            "HS:2022:8711.60",
+            "HS:2022:8711.90"
+          ],
+          "passages": [
+            {
+              "resource_id": "hs2022-chapter87",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+              "sha256": "e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904",
+              "publication_date": null,
+              "pdf_page": 4,
+              "lines": [
+                39,
+                46
+              ],
+              "text_sha256": "87b1ffb80ea3dd245c5506c9e0b0b69f300cdd70bfce817080486a109e6a3b95"
+            },
+            {
+              "resource_id": "hs2022-chapter87",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+              "sha256": "e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904",
+              "publication_date": null,
+              "pdf_page": 5,
+              "lines": [
+                3,
+                8
+              ],
+              "text_sha256": "18ed2febba5bd221cfc5b2e62f5675a049ec54292269e409987049cb90d6a32a"
+            }
+          ]
+        },
+        "HS:2022:87:WCO:chapter-note-4": {
+          "label": "第 87 章章注 4 · 儿童自行车与其他儿童车边界",
+          "kind": "chapter_note",
+          "subject_ids": [
+            "HS:2022:87",
+            "HS:2022:8711",
+            "HS:2022:8711.60",
+            "HS:2022:8711.90",
+            "HS:2022:8712.00",
+            "HS:2022:9503"
+          ],
+          "related_hs_ids": [
+            "HS:2022:8712.00",
+            "HS:2022:9503"
+          ],
+          "passages": [
+            {
+              "resource_id": "hs2022-chapter87",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+              "sha256": "e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904",
+              "publication_date": null,
+              "pdf_page": 1,
+              "lines": [
+                16,
+                22
+              ],
+              "text_sha256": "9e0b0fb401996f031e70482d0b25046f8acfdb98f3a8de6abecf4fc9cc7863ba"
+            },
+            {
+              "resource_id": "hs2022-chapter87",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+              "sha256": "e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904",
+              "publication_date": null,
+              "pdf_page": 5,
+              "lines": [
+                10,
+                11
+              ],
+              "text_sha256": "1e3cee518861af24d7fad8033400e7cf8e30b7a397a4aa11144fe7eaa03630b0"
+            }
+          ]
+        },
+        "HS:2022:WCO:GIR:6": {
+          "label": "WCO 归类总规则 6 · 同级子目比较",
+          "kind": "interpretation_rule",
+          "subject_ids": [
+            "HS:2022:0307.52",
+            "HS:2022:2701.12",
+            "HS:2022:8711.60",
+            "HS:2022:8711.90"
+          ],
+          "related_hs_ids": [],
+          "passages": [
+            {
+              "resource_id": "hs2022-wco-interpretation-rules",
+              "edition": "2022",
+              "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0001_2022e-gir.pdf",
+              "sha256": "a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a",
+              "publication_date": null,
+              "pdf_page": 1,
+              "lines": [
+                46,
+                50
+              ],
+              "text_sha256": "12c680d895e81b2eec751dc947518f341ca538facc461b502bc50633ee251bb1"
+            }
+          ]
+        }
+      },
+      "historical_coal": {
+        "resource_id": "siec1-escm-historical-coal",
+        "edition": "1.0-2011",
+        "url": "https://unstats.un.org/unsd/energystats/methodology/documents/escm_2017850e.pdf",
+        "sha256": "5e62b5320442fca313b668a213d180da33038a30a49f87ee9b7efbcc783ccae3",
+        "publication_date": null,
+        "pdf_page": 47,
+        "lines": [
+          5,
+          20
+        ],
+        "text_sha256": "126ad0a3e3a1d3c2a58139ba1c3a07ad459b64d9af662f89444a20fcc4f8de10"
+      },
+      "by_reference": {
+        "CPC:3.0:21267:HS2022:C:1": {
+          "wco_ids": [
+            "HS:2022:0307:WCO:octopus",
+            "HS:2022:03:WCO:chapter-note-1c",
+            "HS:2022:03:WCO:chapter-note-3"
+          ],
+          "historical_cpc21_code": "21267"
+        },
+        "CPC:3.0:11012:HS2022:C:1": {
+          "wco_ids": [
+            "HS:2022:2701:WCO:unagglomerated-coal",
+            "HS:2022:27:WCO:subheading-note-2",
+            "HS:2022:2702:WCO:lignite"
+          ],
+          "historical_cpc21_code": "11010"
+        },
+        "CPC:3.0:11031:HS2022:C:1": {
+          "wco_ids": [
+            "HS:2022:2701:WCO:unagglomerated-coal",
+            "HS:2022:27:WCO:subheading-note-2",
+            "HS:2022:2702:WCO:lignite"
+          ],
+          "historical_cpc21_code": "11030"
+        },
+        "CPC:3.0:49913:HS2022:C:1": {
+          "wco_ids": [
+            "HS:2022:8711:WCO:heading",
+            "HS:2022:87:WCO:chapter-note-4",
+            "HS:2022:WCO:GIR:6"
+          ],
+          "historical_cpc21_code": "49913"
+        }
       }
     }
   },
@@ -3505,15 +4026,40 @@
         "21291",
         "21299"
       ]
+    },
+    {
+      "id": "CPC:3.0:11012",
+      "csv_row": 435,
+      "pdf_page": 55,
+      "has_explanatory_text": true,
+      "scope_review_status": null,
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:11031",
+      "csv_row": 439,
+      "pdf_page": 55,
+      "has_explanatory_text": true,
+      "scope_review_status": null,
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:49913",
+      "csv_row": 2739,
+      "pdf_page": 276,
+      "has_explanatory_text": true,
+      "scope_review_status": null,
+      "excluded_to": []
     }
   ],
   "reproducibility": {
     "pdftotext": "pdftotext version 26.04.0",
     "parser_sha256": {
-      "cpc_view.html": "e1c4c68835fcb27255afbca76ca6828612ffdf9e7c03cc565a4b41bf462449d5",
-      "cpc.py": "2d7341fac2fd155a995a98de552ecbf2cecbcf26eb22610f004ae021e4cf112f",
-      "cpc_hs.py": "8d1ec3d79c9ce36d8148ea1b5d8c41f22bac09add47157c7cdde7f269264a654",
-      "hs.py": "91dfda8e348af870767622b825b26d8b3f842b409dfb073631dbe49f34b3fc82",
+      "cpc_view.html": "d10e0a713daec9198dbf32bef47adb705a7d0d3611ef14032b645406e154a749",
+      "cpc.py": "8406ee1c607fea2dbcc1710e27bf916674ff2e2af6f49aa5b53980cb224e53c7",
+      "cpc_hs.py": "104d468ab012350e288db7be59f26b207e98a7b3b069f57d533b83738c9c16bd",
+      "cpc_hs_followup.py": "21f4f701cd65a077f7994695129b1620d33d741e4297ebc773b651f8ebec60b4",
+      "hs.py": "e351af4ef5538322334e3d7d38857c6e980713bdfb1bdb2e4596e395a48ae9eb",
       "hs_reference.py": "fced54e61263385f5ff7c3968fec0d35cc248e48a3a9de764ab0a722875f63a3"
     }
   }

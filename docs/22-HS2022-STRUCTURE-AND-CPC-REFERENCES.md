@@ -1,5 +1,7 @@
 # HS 2022 结构与 CPC 3.0 引用回查
 
+当前构建的五项补充资源见 [范围复核与复现](23-CPC-HS-BOUNDARY-FOLLOWUP.md#复现与验收)。
+
 2026-11-09 从 UNSD 的官方分类下载页取得多版 HS 代码工作簿，选用标注 `H6` 的 `HS22` 工作表。章、品目、子目的原码、原文标题、父码及行号取自该工作表。部的标题及章所属部取自 WCO 2022 年税则目录，每个部和章都可追溯到 PDF 页及行。原码保留前导零，六位子目另用带点形式显示并沿用已有 `HS:2022:6815.12` 等 ID。 [UNSD 发布入口](https://unstats.un.org/unsd/classifications/Econ/) · [UNSD 原始工作簿](https://unstats.un.org/unsd/classifications/Econ/download/In%20Text/HSCodeandDescription.xlsx) · [WCO 2022 税则目录](https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/table-of-contents_2022e_rev.pdf?la=en)
 
 | 层级 | 节点数 | 来源 |

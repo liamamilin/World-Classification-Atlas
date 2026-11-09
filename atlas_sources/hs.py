@@ -20,6 +20,12 @@ def pdf_pages(asset):
     return [page.splitlines() for page in text.removesuffix("\f").split("\f")]
 
 
+def pdf_lines(assets, resource, page):
+    return subprocess.check_output([
+        "pdftotext", "-f", str(page), "-l", str(page), "-layout", str(assets[resource]["path"]), "-"
+    ]).decode("utf-8").split("\f", 1)[0].splitlines()
+
+
 def wco_contents(asset):
     sections, chapters, reserved = [], {}, {}
     section = None

@@ -61,7 +61,7 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await click('#cpc-entry a');
   await until(() => exists('#tree > li'), 'CPC catalogue from registry');
   assert.equal(await evaluate('navigator.onLine'), false);
-  assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 9 个已定位说明条目/);
+  assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 12 个已定位说明条目/);
   assert.match(await text('#coverage'), /69 条 HS 2022 原文引用/);
   assert.match(await text('header'), /CPC 分类对象为产品与服务，ISIC 分类对象为经济活动/);
   await click('#release-status summary');
@@ -150,6 +150,12 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
     await expectNode(codes, noteId);
     assert.equal(await evaluate('document.activeElement.id'), noteId);
   }
+  async function evidenceCard(id) {
+    const card = '.wco-evidence details[data-evidence-id=' + json(id) + ']';
+    await click(card + ' > summary');
+    assert.ok(await exists(card + '[open]'));
+    return card;
+  }
   const masks = titleEntries[0].codes;
   const textiles = titleEntries[1].codes;
   const carbon = titleEntries[2].codes;
@@ -222,33 +228,93 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await search(['1', '11', '110', '1103', '11031']);
   await openHs('#official-hs-notes', '2701.12');
   assert.match(await text('#hs-official-backlinks'), /11012 · 官方定义引用[\s\S]*11031 · 官方定义引用/);
+  const coalNote = await evidenceCard('HS:2022:27:WCO:subheading-note-2');
+  assert.match(await text(coalNote + ' pre'), /a dry, mineral-matter-free basis[\s\S]*exceeding 14 %[\s\S]*5,833 kcal\/kg/);
+  await openOriginal(coalNote + ' a[target]', 'hs2022-chapter27', { mode: 'pdf', pdfPage: 1 });
+  const coalGroup = await evidenceCard('HS:2022:2701:WCO:unagglomerated-coal');
+  assert.match(await text(coalGroup + ' pre'), /not agglomerated[\s\S]*2701\.19[\s\S]*2701\.20/);
+  assert.equal(await exists(linksTo(coalGroup, hsId('2701.20'))), false);
+  await openOriginal(coalGroup + ' a[target]', 'hs2022-chapter27', { mode: 'pdf', pdfPage: 2 });
+  await backToNote(['1', '11', '110', '1101', '11012']);
+  await openOriginal('#note-source a', notes, { mode: 'pdf', pdfPage: 55 });
+  await openHs('#official-hs-notes .reference-targets', '2701.12');
   await backToNote(['1', '11', '110', '1103', '11031']);
-  await openOriginal('#official-hs-notes .reference-review a', 'hs2022-chapter27', { mode: 'pdf', pdfPage: 1 });
+  await click('#historical-energy > summary');
+  assert.match(await text('#historical-energy pre'), /HS 2017[\s\S]*0210\s+Sub-bituminous coal[\s\S]*2702\.10\*/);
+  await openOriginal('#historical-energy a', 'siec1-escm-historical-coal', { mode: 'pdf', pdfPage: 47 });
+  assert.match(await text('#legacy-hs'), /HS:2017:2702\.10 ↔ CPC:2\.1:11030/);
+  const lignite = await evidenceCard('HS:2022:2702:WCO:lignite');
+  await openHs(lignite, '2702.10');
+  assert.match(await text('#hs-official-backlinks'), /11032 · 官方定义引用/);
+  assert.doesNotMatch(await text('#hs-official-backlinks'), /11031/);
+  await click('#choose-cpc');
+  await until(() => exists('#choose-cpc[aria-current="page"]'), 'CPC catalogue after HS boundary');
 
   await search(['3', '35', '352', '3527', '35273']);
   const targets = () => evaluate('Array.from(document.querySelectorAll(".reference-targets a"), a => a.innerText)');
   assert.deepEqual(await targets(), ['3002.41', '3002.42', '3002.49', '3002.51', '3002.59'].map(x => 'HS 2022 ' + x));
   await openOriginal('#official-hs-notes .reference-review a', 'hs2022-chapter30', { mode: 'pdf', pdfPage: 3 });
 
-  await search(['4', '49', '499', '4991', '49913']);
+  const motorcycle = ['4', '49', '499', '4991', '49913'];
+  await search(motorcycle);
   assert.match(await text('#official-hs-notes [data-kind=inclusion]'), /8711\.90 的具体范围待核/);
-  await openOriginal('#official-hs-notes .reference-review a', 'hs2022-chapter87', { mode: 'pdf', pdfPage: 5 });
+  await openOriginal('#note-source a', notes, { mode: 'pdf', pdfPage: 276 });
+  assert.match(await text('#legacy-hs'), /HS:2017:8711\.90 ↔ CPC:2\.1:49913/);
+  await openHs('#official-hs-notes .reference-targets', '8711.90');
+  const motorcycleHeading = await evidenceCard('HS:2022:8711:WCO:heading');
+  assert.match(await text(motorcycleHeading), /side-cars[\s\S]*8711\.60\s+- With electric motor[\s\S]*8711\.90\s+- Other/);
+  await openOriginal(motorcycleHeading + ' .wco-passage:nth-of-type(1) a', 'hs2022-chapter87', { mode: 'pdf', pdfPage: 4 });
+  await openOriginal(motorcycleHeading + ' .wco-passage:nth-of-type(2) a', 'hs2022-chapter87', { mode: 'pdf', pdfPage: 5 });
+  const chapterNote = await evidenceCard('HS:2022:87:WCO:chapter-note-4');
+  await openOriginal(chapterNote + ' a[target]', 'hs2022-chapter87', { mode: 'pdf', pdfPage: 1 });
+  const rules = await evidenceCard('HS:2022:WCO:GIR:6');
+  await openOriginal(rules + ' a', 'hs2022-wco-interpretation-rules', { mode: 'pdf', pdfPage: 1 });
+  await backToNote(motorcycle);
+  await openHs('#official-hs-notes .reference-targets', '8711.90');
+  await evidenceCard('HS:2022:8711:WCO:heading');
+  await openHs(motorcycleHeading, '8711.60');
+  await backToNote(motorcycle);
 
   const octopus = ['2', '21', '212', '2126', '21267'];
   await search(octopus);
   assert.match(await text('#official-hs-notes'), /0307\.53 → 待核 · HS 2022 无该代码/);
   assert.deepEqual(await targets(), ['HS 2022 0307.59']);
+  assert.match(await text('#octopus-correction-audit'), /仅返回 4379[\s\S]*03239[\s\S]*仍列 0307\.53/);
+  for (const [index, resource, elementId] of [
+    [1, 'cpc3-corrections-register-20261109', 'searchResult'],
+    [2, 'cpc3-correction-4379', 'PrintDivID'],
+    [3, 'cpc3-detail-21267-20261109', 'PrintDivID']
+  ]) {
+    await openOriginal('#octopus-correction-audit a:nth-of-type(' + index + ')', resource, { mode: 'html', elementId });
+  }
   await openOriginal('#note-source a', notes, { mode: 'pdf', pdfPage: 79 });
   await openOriginal('#official-hs-notes .reference-review a:not([href^="#"])', 'hs2022-chapter03',
     { mode: 'pdf', pdfPage: 11 });
   await openHs('#official-hs-notes .reference-review', '0307.52');
   assert.equal(await exists('#hs-official-backlinks a'), false);
   assert.match(await text('#hs-candidate-backlinks'), /21267 · Atlas 待核候选/);
+  const octopusGroup = await evidenceCard('HS:2022:0307:WCO:octopus');
+  assert.match(await text(octopusGroup + ' pre'), /0307\.51[\s\S]*0307\.52\s+-- Frozen[\s\S]*0307\.59/);
+  const powders = await evidenceCard('HS:2022:03:WCO:chapter-note-3');
+  await openOriginal(powders + ' .wco-passage:nth-of-type(1) a', 'hs2022-chapter03', { mode: 'pdf', pdfPage: 1 });
+  await openOriginal(powders + ' .wco-passage:nth-of-type(2) a', 'hs2022-chapter03', { mode: 'pdf', pdfPage: 12 });
+  await openHs(powders, '0309.90');
+  assert.doesNotMatch(await text('#hs-official-backlinks'), /21267/);
+  const powderBoundary = await evidenceCard('HS:2022:03:WCO:chapter-note-3');
+  assert.match(await text(powderBoundary + ' pre'), /03\.05 to 03\.08 do not cover/);
+  await openHs(powderBoundary, '0309');
+  await searchHs('030752', '0307.52');
+  await evidenceCard('HS:2022:0307:WCO:octopus');
+  await openHs(octopusGroup, '0307.59');
+  await backToNote(octopus);
+  await openHs('#official-hs-notes .reference-review', '0307.52');
   await backToNote(octopus, 'C', '#hs-candidate-backlinks');
+  console.log('Passed: UNSD correction audit, WCO group and note originals, and historical versus current scope paths.');
 
   const baseline = JSON.parse(fs.readFileSync(path.join(root, report), 'utf8'));
   const references = baseline.hs_review.official_note_references;
   assert.equal(references.length, 69);
+  assert.equal(references.reduce((sum, ref) => sum + ref.target_ids.length, 0), 184);
   const failures = await evaluate(`(() => {
     const refs = ${json(references.map(ref => ({ id: ref.id, kind: ref.kind, targets: ref.target_ids })))};
     const links = group => Array.from(group.querySelectorAll('a'), a => decodeURIComponent(a.hash.slice(1)));

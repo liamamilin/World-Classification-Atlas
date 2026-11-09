@@ -22,16 +22,32 @@ def resource(**updates):
 class FakeHTTP:
     def __init__(self, data):
         self.data, self.requests = data, 0
+        self.form = None
 
     def allowed(self, url):
         return {"url": "https://example.org/robots.txt", "result": "test", "allowed": True}
 
-    def get(self, url):
+    def get(self, url, *, form=None):
         self.requests += 1
+        self.form = form
         return self.data, {"final_url": url, "http_status": 200, "content_type": "text/csv"}
 
 
 class CollectionTests(unittest.TestCase):
+    def test_filter_cannot_reuse_a_pinned_search_response(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            selected = {"selVersion": "2100", "selTypeEntry": "Correction"}
+            r = resource(format="html", filename="results.html", search_form=selected)
+            client = FakeHTTP(b"<html>Search results</html>")
+            result = collect(root, [r], freeze=True, client=client)[0]
+            self.assertEqual(result["status"], "downloaded")
+            self.assertEqual(client.form, selected)
+            self.assertEqual(read_json(root / "data/resources.lock.json")[r["id"]]["search_form"], selected)
+            changed = {**r, "search_form": {**selected, "selTypeEntry": "Interpretation"}}
+            self.assertEqual(collect(root, [changed], client=client)[0]["status"], "failed")
+            self.assertEqual(client.requests, 1)
+
     def test_drift_preserves_original_pin_and_both_snapshots(self):
         with tempfile.TemporaryDirectory() as tmp:
             root, r = Path(tmp), resource()

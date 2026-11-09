@@ -2,11 +2,11 @@
 import csv
 import io
 import re
-import subprocess
 from collections import Counter
 
-from . import hs, hs_reference
+from . import cpc_hs_followup, hs, hs_reference
 from .acquire import sha256
+from .hs import pdf_lines
 from .xlsx import read_workbook
 
 WORKBOOK = "cpc3-notes-xlsx-20250630"
@@ -19,7 +19,8 @@ TABLE_II = "hs2017-to-hs2022-wco-table-ii"
 LEGACY = "cpc21-hs2017-unsd-correspondence"
 REVIEW_CHAPTERS = ("03", "27", "30", "87", "94")
 REQUIRED = (WORKBOOK, LISTING, STATUS, CHAPTER, GUIDANCE, TABLE_I, TABLE_II, LEGACY,
-            hs.STRUCTURE, hs.CONTENTS, *(f"hs2022-chapter{code}" for code in REVIEW_CHAPTERS))
+            hs.STRUCTURE, hs.CONTENTS, *(f"hs2022-chapter{code}" for code in REVIEW_CHAPTERS),
+            *cpc_hs_followup.REQUIRED)
 
 HS_SCOPE = {
     "4818.90": ("纸或纤维素口罩示例（多数国家）", GUIDANCE, 3, 9, 11, "Cellulose/paper masks"),
@@ -55,11 +56,11 @@ REVIEWS = {
 }
 
 NOTE_REVIEWS = {
-    ("11012", "C"): ("scope_pending", "第 27 章将 2701.12 定为烟煤。工作簿在烟煤和次烟煤条目都引用该子目，分界待核。",
+    ("11012", "C"): ("scope_pending", "烟煤 11012 与次烟煤 11031 均引用 2701.12。WCO 子目注 2 同时要求挥发分在干燥无矿物质基准上超过 14%，热值在含水无矿物质基准上至少 5,833 kcal/kg。CPC 共引范围待核。",
                     "27", 1, ("2701.12",), None),
-    ("11031", "C"): ("scope_pending", "第 27 章将 2701.12 定为烟煤。工作簿在烟煤和次烟煤条目都引用该子目，分界待核。",
+    ("11031", "C"): ("scope_pending", "次烟煤 11031 位于褐煤类，烟煤 11012 位于硬煤类，两者共引 2701.12。WCO 对该子目的烟煤阈值明确，CPC 共引范围及次烟煤对应仍待核。",
                     "27", 1, ("2701.12",), None),
-    ("21267", "C"): ("missing_code", "CPC 工作簿和说明 PDF 均写 0307.53。HS 2022 第 03 章列 0307.52 为冷冻章鱼，保留为待核候选。",
+    ("21267", "C"): ("missing_code", "CPC 工作簿、说明 PDF 和在线条目均写 0307.53。UNSD 更正检索只返回与章鱼无关的 4379 号。WCO 分组列 0307.52 为冷冻章鱼，Atlas 保留该码为待核候选。CPC 同时涵盖供人食用的章鱼粉、粗粉和团粒，WCO 章注将这类制品划到 03.09，具体跨表范围待核。",
                     "03", 11, ("0307.52", "0307.59"), "0307.52"),
     ("35272", "C"): ("scope_pending", "3002.90 是该 HS 品目的其他项，原引用可回查，残余子目与 CPC 血液和免疫产品条目的范围待核。",
                     "30", 3, ("3002.90",), None),
@@ -73,15 +74,9 @@ NOTE_REVIEWS = {
                     "94", 4, ("9405.31", "9405.41"), None),
     ("46539", "D"): ("scope_reviewed", "9405.41 在此处为排除，在 CPC 46533 是定义引用。",
                     "94", 4, ("9405.41",), None),
-    ("49913", "C"): ("scope_pending", "纳入句点名电驱动，HS 8711.60 明列电驱动，8711.90 是其他项。保留两处引用，8711.90 的具体范围待核。",
+    ("49913", "C"): ("scope_pending", "纳入句点名电驱动并引用两个代码。WCO 将电驱动列入 8711.60，8711.90 是品目 87.11 的同级残余项。CPC 类标题另含边车，8711.90 的具体范围待核。",
                     "87", 5, ("8711.60", "8711.90"), None),
 }
-
-
-def pdf_lines(assets, rid, page):
-    return subprocess.check_output([
-        "pdftotext", "-f", str(page), "-l", str(page), "-layout", str(assets[rid]["path"]), "-"
-    ]).decode("utf-8").split("\f", 1)[0].splitlines()
 
 
 def workbook_references(asset, by_code):
@@ -200,7 +195,7 @@ def legacy_correspondences(asset):
         ):
             raise ValueError(f"invalid historical correspondence at CSV line {rows.line_num}")
         count[f"HS={hs_partial};CPC={cpc_partial}"] += 1
-        if cpc in REVIEWS or cpc == "32193" and hs == "4818.90":
+        if cpc in REVIEWS or cpc in cpc_hs_followup.HISTORICAL_CODES or (cpc == "32193" and hs == "4818.90"):
             selected.setdefault(cpc, []).append({
                 "hs_id": f"HS:2017:{hs}", "cpc_id": f"CPC:2.1:{cpc}",
                 "hs_partial": hs_partial, "cpc_partial": cpc_partial, "csv_line": rows.line_num,
@@ -273,4 +268,5 @@ def build(assets, by_code):
         "official_note_reference_counts": reference_counts,
         "workbook_review_rows": checked, "hs_structure": structure, "hs_scope": scope, "reviews": reviews,
         "carbon_correlations": carbon_correlations(assets), "historical_cpc_hs": legacy_correspondences(assets[LEGACY]),
+        "scope_followup": cpc_hs_followup.build(assets, references, structure["nodes"]),
     }

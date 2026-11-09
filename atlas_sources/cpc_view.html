@@ -54,6 +54,7 @@ const el = id => document.getElementById(id);
 const byId = new Map(data.nodes.map(node => [node.id, node]));
 const byCode = new Map(data.nodes.map(node => [node.code, node]));
 const hsReview = data.hs_review;
+const followup = hsReview.scope_followup;
 const hsStructure = hsReview.hs_structure;
 const hsById = new Map(hsStructure.nodes.map(node => [node.id, node]));
 const hsByCode = new Map(hsStructure.nodes.map(node => [node.code, node]));
@@ -107,6 +108,51 @@ function original(parent, evidence, label) {
 function download(parent, evidence, label) {
   original(parent, evidence, label).download = '';
 }
+function renderPassage(out, passage, label = '打开 WCO 原始 PDF') {
+  const item = make('div', undefined, out);
+  item.className = 'wco-passage';
+  make('pre', passage.text, item);
+  original(item, passage, label + ' · 第 ' + passage.pdf_page + ' 页');
+  make('small', '提取文本行 ' + passage.lines.join('–'), item);
+}
+function renderWco(out, ids) {
+  if (!ids.length) return;
+  const section = make('div', undefined, out);
+  section.className = 'wco-evidence';
+  make('h4', 'WCO 2022 分组、章注及归类规则', section);
+  for (const id of ids) {
+    const entry = followup.wco_evidence[id];
+    const card = make('details', undefined, section);
+    card.dataset.evidenceId = id;
+    make('summary', entry.label, card);
+    for (const passage of entry.passages) renderPassage(card, passage);
+    if (entry.related_hs_ids.length) {
+      const list = make('ul', undefined, card);
+      for (const code of entry.related_hs_ids) hsLink(make('li', undefined, list), hsById.get(code));
+    }
+  }
+}
+function renderFollowup(out, reference) {
+  const entry = followup.by_reference[reference.id];
+  if (!entry) return;
+  if (reference.id === 'CPC:3.0:21267:HS2022:C:1') {
+    const audit = followup.corrigendum_audit;
+    const checked = make('div', undefined, out);
+    checked.id = 'octopus-correction-audit';
+    make('h4', 'UNSD 勘误核查', checked);
+    make('p', '注册表更新日期 ' + audit.registry_last_update + '。筛选 CPC 3.0 更正仅返回 4379，' +
+      '详情更正的是 03239。21267 在线说明仍列 0307.53，冷冻章鱼 0307.52 保留待核。', checked);
+    for (const evidence of audit.evidence) original(checked, evidence, evidence.label);
+  }
+  renderWco(out, entry.wco_ids);
+  if (entry.historical_cpc21_code === '11010' || entry.historical_cpc21_code === '11030') {
+    const energy = make('details', undefined, out);
+    energy.id = 'historical-energy';
+    make('summary', '历史能源统计手册 · SIEC 1.0、旧 CPC 及旧 HS', energy);
+    renderPassage(energy, followup.historical_coal, '打开 UNSD 能源统计手册原始 PDF');
+  }
+  renderHistorical(out, entry.historical_cpc21_code);
+}
 function renderNoteReferences(out, node) {
   const references = hsReview.official_note_references.filter(ref => ref.cpc_id === node.id);
   if (!references.length) return;
@@ -141,6 +187,7 @@ function renderNoteReferences(out, node) {
       if (review.evidence) original(finding, review.evidence,
         '打开 WCO 原始 PDF · 第 ' + review.evidence.pdf_page + ' 页');
     }
+    renderFollowup(row, reference);
   }
   download(notes, hsReview.workbook, '下载原始 CPC 3.0 说明工作簿');
 }
@@ -164,10 +211,13 @@ function renderCpcReview(out, node) {
     if (finding.hs_id) hsLink(row, hsById.get(finding.hs_id));
     make('p', reviewLabels[finding.status] + ' · ' + finding.finding, row);
   }
+  renderHistorical(review, node.code);
+}
+function renderHistorical(out, code) {
   const history = hsReview.historical_cpc_hs;
-  const rows = history.selected[node.code];
+  const rows = history.selected[code];
   if (!rows) return;
-  const legacy = make('div', undefined, review);
+  const legacy = make('div', undefined, out);
   legacy.id = 'legacy-hs';
   make('h4', '历史官方对应 · CPC 2.1 与 HS 2017', legacy);
   make('p', '原表的两列 partial 标记分别保留。1 表示该版该侧的代码在对侧有多项，0 表示单项。', legacy);
@@ -199,6 +249,8 @@ function renderHs(out, node) {
     original(pdf, scope.evidence, '打开 ' + source + ' PDF · 第 ' + scope.evidence.pdf_page + ' 页');
     make('p', '提取文本行 ' + scope.evidence.lines.join('–'), pdf);
   }
+  renderWco(out, Object.entries(followup.wco_evidence)
+    .filter(([, entry]) => entry.subject_ids.includes(node.id)).map(([id]) => id));
   const correlations = hsReview.carbon_correlations;
   const row = correlations.rows[node.code];
   if (row) {

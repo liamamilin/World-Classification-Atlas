@@ -3,6 +3,7 @@ import hashlib
 import json
 import time
 import urllib.error
+import urllib.parse
 import urllib.request
 import urllib.robotparser
 import uuid
@@ -58,12 +59,13 @@ class HTTPClient:
         self.last_request = 0
         self.robots = {}
 
-    def get(self, url):
+    def get(self, url, *, form=None):
+        body = urllib.parse.urlencode(form).encode("ascii") if form else None
         for attempt in range(self.retries + 1):
             time.sleep(max(0, self.delay - (time.monotonic() - self.last_request)))
             self.last_request = time.monotonic()
             try:
-                req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+                req = urllib.request.Request(url, data=body, headers={"User-Agent": USER_AGENT})
                 with urllib.request.urlopen(req, timeout=self.timeout) as response:
                     # Deliberately bounded; large taxonomic dumps need a streaming adapter.
                     data = response.read(50 * 1024 * 1024 + 1)
@@ -113,16 +115,20 @@ def collect(root, resources, refresh=False, freeze=False, client=None):
     results = []
     for resource in resources:
         rid = resource["id"]
+        form = resource.get("search_form")
         result = {"resource_id": rid, "source_id": resource["source_id"],
                   "edition": resource["edition"], "url": resource["url"], "attempted_at": now()}
+        if form:
+            result["search_form"] = form
         try:
             if resource["rights"]["download"] is not True or resource["rights"]["local_processing"] is not True:
                 result.update(status="blocked_rights", error="download/local processing permission is not confirmed")
                 results.append(result)
                 continue
             pinned = lock.get(rid)
-            if pinned and any(pinned.get(key) != resource[key] for key in ("url", "source_id", "edition")):
-                raise ValueError("resource URL/source/edition changed; use a new resource ID or review the lock")
+            if pinned and any(pinned.get(key) != resource.get(key)
+                              for key in ("url", "source_id", "edition", "search_form")):
+                raise ValueError("resource URL/source/edition/search form changed; use a new resource ID or review the lock")
             cached_path = (snapshot_dir(root, resource, pinned["sha256"]) / resource["filename"]) if pinned else None
             if pinned and not refresh and cached_path.exists():
                 folder = snapshot_dir(root, resource, pinned["sha256"])
@@ -133,7 +139,7 @@ def collect(root, resources, refresh=False, freeze=False, client=None):
                 result.update(status="cached", sha256=pinned["sha256"], path=str((folder / resource["filename"]).relative_to(root)), bytes=len(data))
             else:
                 robots = client.allowed(resource["url"])
-                data, response = client.get(resource["url"])
+                data, response = client.get(resource["url"], form=form) if form else client.get(resource["url"])
                 digest = sha256(data)
                 folder = snapshot_dir(root, resource, digest)
                 folder.mkdir(parents=True, exist_ok=True)
@@ -161,6 +167,8 @@ def collect(root, resources, refresh=False, freeze=False, client=None):
                 if freeze and not pinned:
                     lock[rid] = {"sha256": digest, "url": resource["url"],
                                  "source_id": resource["source_id"], "edition": resource["edition"]}
+                    if form:
+                        lock[rid]["search_form"] = form
         except (OSError, ValueError, zipfile.BadZipFile) as error:
             result.update(status="failed", error=f"{type(error).__name__}: {error}")
         results.append(result)

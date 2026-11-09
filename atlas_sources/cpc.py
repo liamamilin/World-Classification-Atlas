@@ -6,7 +6,7 @@ from os.path import relpath
 from pathlib import Path
 
 from .acquire import sha256
-from . import cpc_hs, hs, hs_reference
+from . import cpc_hs, cpc_hs_followup, hs, hs_reference
 from .isic import get_assets
 from .normalize import qa, table_nodes
 from .registry import write_json
@@ -20,7 +20,7 @@ NOTE_PAGES = {
     "17400": 63, "22270": 101, "34210": 160,
     "48160": 264, "27190": 127,
     "37990": 187, "46950": 254, "89200": 487,
-    "21267": 79,
+    "21267": 79, "11012": 55, "11031": 55, "49913": 276,
 }
 PENDING_SCOPE = {
     "48160": "原题排除同时没有机械部件和可更换滤芯的防护口罩。这类口罩的具体 CPC 子类待核。",
@@ -104,9 +104,19 @@ def build(root, resources):
     output.mkdir(parents=True, exist_ok=True)
     (output / "index.html").write_bytes(view)
     references = hs_review["official_note_references"]
+    followup = hs_review["scope_followup"]
+    followup_metadata = {
+        **followup,
+        "wco_evidence": {key: {**entry, "passages": [
+            {field: value for field, value in passage.items() if field != "text"}
+            for passage in entry["passages"]
+        ]} for key, entry in followup["wco_evidence"].items()},
+        "historical_coal": {key: value for key, value in followup["historical_coal"].items() if key != "text"},
+    }
     hs_review = {**hs_review, "official_note_references": [
         {key: value for key, value in ref.items() if key != "text"} for ref in references
-    ], "hs_structure": {key: value for key, value in hs_review["hs_structure"].items() if key != "nodes"}}
+    ], "hs_structure": {key: value for key, value in hs_review["hs_structure"].items() if key != "nodes"},
+        "scope_followup": followup_metadata}
     summary = {
         "status": "passed", "source_id": "UN_CPC", "edition": "3.0",
         "classification_object": "products and services", "inputs": inputs,
@@ -120,7 +130,7 @@ def build(root, resources):
             "pdftotext": subprocess.check_output(["pdftotext", "-v"], stderr=subprocess.STDOUT).decode().splitlines()[0],
             "parser_sha256": {"cpc_view.html": sha256(template), **{
                 Path(path).name: sha256(Path(path).read_bytes())
-                for path in (__file__, cpc_hs.__file__, hs.__file__, hs_reference.__file__)
+                for path in (__file__, cpc_hs.__file__, cpc_hs_followup.__file__, hs.__file__, hs_reference.__file__)
             }},
         },
     }

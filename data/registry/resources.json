@@ -1463,5 +1463,117 @@
       "license": "WCO copyright; local reference only",
       "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
     }
+  },
+  {
+    "id": "cpc3-corrections-register-20261109",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+    "filename": "cpc3-corrections-register-20261109.html",
+    "format": "html",
+    "role": "publisher_corrections_search",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ/CPC"
+    },
+    "search_form": {
+      "searchS": "Search",
+      "selAcronym": "CPC",
+      "selVersion": "2100",
+      "selTypeEntry": "Correction",
+      "selUpdated": "-36400"
+    }
+  },
+  {
+    "id": "cpc3-correction-4379",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Registry/Detail/4379",
+    "filename": "cpc3-correction-4379.html",
+    "format": "html",
+    "role": "publisher_correction",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ/Registry"
+    }
+  },
+  {
+    "id": "cpc3-detail-21267-20261109",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Detail/EN/2100/21267",
+    "filename": "cpc3-detail-21267-20261109.html",
+    "format": "html",
+    "role": "publisher_code_detail",
+    "language": "en",
+    "publication_date": null,
+    "encoding": "utf-8",
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ/CPC"
+    }
+  },
+  {
+    "id": "siec1-escm-historical-coal",
+    "source_id": "SIEC",
+    "edition": "1.0-2011",
+    "url": "https://unstats.un.org/unsd/energystats/methodology/documents/escm_2017850e.pdf",
+    "filename": "siec1-escm-historical-coal.pdf",
+    "format": "pdf",
+    "role": "historical_correspondence_annex",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UN download terms; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/energystats/methodology/escm/"
+    }
+  },
+  {
+    "id": "hs2022-wco-interpretation-rules",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0001_2022e-gir.pdf",
+    "filename": "hs2022-wco-interpretation-rules.pdf",
+    "format": "pdf",
+    "role": "nomenclature_interpretation_rules",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
   }
 ]

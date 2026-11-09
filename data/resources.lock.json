@@ -394,5 +394,42 @@
     "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
     "source_id": "HS",
     "edition": "2022"
+  },
+  "cpc3-corrections-register-20261109": {
+    "sha256": "9bb865425c6d46015e3f8f56554da7ac67a964786a81ab4e83522ca9863cf513",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Registry",
+    "source_id": "UN_CPC",
+    "edition": "3.0",
+    "search_form": {
+      "searchS": "Search",
+      "selAcronym": "CPC",
+      "selVersion": "2100",
+      "selTypeEntry": "Correction",
+      "selUpdated": "-36400"
+    }
+  },
+  "cpc3-correction-4379": {
+    "sha256": "52c552406e9f6739df344e9c16e1ef7ed854b60f77e8cdf639636eb4f139cb89",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Registry/Detail/4379",
+    "source_id": "UN_CPC",
+    "edition": "3.0"
+  },
+  "cpc3-detail-21267-20261109": {
+    "sha256": "30d55c098e9fa5cde7287f844d099e9f9e28a37fee1ac7d7195be67eb2f015e0",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/Detail/EN/2100/21267",
+    "source_id": "UN_CPC",
+    "edition": "3.0"
+  },
+  "siec1-escm-historical-coal": {
+    "sha256": "5e62b5320442fca313b668a213d180da33038a30a49f87ee9b7efbcc783ccae3",
+    "url": "https://unstats.un.org/unsd/energystats/methodology/documents/escm_2017850e.pdf",
+    "source_id": "SIEC",
+    "edition": "1.0-2011"
+  },
+  "hs2022-wco-interpretation-rules": {
+    "sha256": "a15ad1e08fa165e509a34d4bf07299b57c68554d98149217c284c24fe2d49d5a",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0001_2022e-gir.pdf",
+    "source_id": "HS",
+    "edition": "2022"
   }
 }

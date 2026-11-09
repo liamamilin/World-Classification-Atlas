@@ -4,12 +4,12 @@
 
 登记 53 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-68 个采集任务，66 个已锁定且通过格式检查，涉及 11 个来源；8 个资源可解析。
+73 个采集任务，71 个已锁定且通过格式检查，涉及 12 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
 | 01-economy 经济与行业 | 8 | 5 | 1 |
-| 02-products 产品与服务 | 10 | 3 | 1 |
+| 02-products 产品与服务 | 10 | 4 | 1 |
 | 03-consumption 消费与支出 | 4 | 2 | 2 |
 | 04-knowledge 学科与知识 | 6 | 0 | 0 |
 | 05-occupations 职业与技能 | 4 | 1 | 1 |
@@ -17,7 +17,7 @@
 | 07-health 医学与健康 | 4 | 0 | 0 |
 | 08-biodiversity 生物与自然 | 3 | 0 | 0 |
 | 09-geography 地理与空间 | 2 | 0 | 0 |
-| 10-environment 环境与资源 | 4 | 0 | 0 |
+| 10-environment 环境与资源 | 4 | 1 | 0 |
 | 11-governance 法律与公共治理 | 4 | 1 | 1 |
 | 12-culture 文化与艺术 | 2 | 0 | 0 |
 | 13-education 教育与培训 | 4 | 0 | 0 |
@@ -96,6 +96,11 @@
 | hs2022-chapter87 | 2022 | format_checked_only | 未统计 | — |
 | hs2022-chapter94 | 2022 | format_checked_only | 未统计 | — |
 | hs2022-chapter03 | 2022 | format_checked_only | 未统计 | — |
+| cpc3-corrections-register-20261109 | 3.0 | format_checked_only | 未统计 | — |
+| cpc3-correction-4379 | 3.0 | format_checked_only | 未统计 | — |
+| cpc3-detail-21267-20261109 | 3.0 | format_checked_only | 未统计 | — |
+| siec1-escm-historical-coal | 1.0-2011 | format_checked_only | 未统计 | — |
+| hs2022-wco-interpretation-rules | 2022 | format_checked_only | 未统计 | — |
 
 经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 

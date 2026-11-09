@@ -42,7 +42,9 @@ def get_assets(root, resources, required=REQUIRED):
         raw = path.read_bytes()
         manifest = read_json(path.parent / "manifest.json")
         if (sha256(raw) != pin["sha256"] or any(pin[k] != r[k] for k in ("source_id", "edition", "url"))
-                or manifest["sha256"] != pin["sha256"] or manifest["url"] != r["url"]):
+                or manifest["sha256"] != pin["sha256"] or manifest["url"] != r["url"]
+                or pin.get("search_form") != r.get("search_form")
+                or manifest.get("search_form") != r.get("search_form")):
             raise ValueError(f"raw provenance mismatch: {rid}")
         if r["rights"]["local_processing"] is not True:
             raise ValueError(f"local processing permission not confirmed: {rid}")
