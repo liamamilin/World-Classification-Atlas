@@ -28,7 +28,7 @@ Chrome 通过两处定位加载了同一锁定 PDF，分别核对 `#page=63` 和
 
 解析器核对换行标题，读取下一物理页以确认页末条目的正文边界。当前已定位 8 个条目，其中 2 个有说明正文，6 个在原件中仅列标题。对其余节点显示说明尚未纳入试点。浏览器打开了全部 8 个定位，验证 `17400` 与 `22270` 的原路径及返回注册表筛选。95 项单测通过。临时目录重建页面与报告，2/2 份逐字节一致。此轮扩大的是 CPC 原件说明覆盖，产品和服务范围与 ISIC 的经济活动审查分别记录。 [最新构建报告](../data/reports/cpc-offline.json) · [ISIC 审查依据](12-ISIC-BOUNDARY-FOLLOWUPS.md)
 
-已有锁定资料和 Poppler 时，在仓库根目录离线执行下列命令。Chrome 可执行文件可通过 `ATLAS_CHROME` 指定。缺资料时使用 `python3 -m atlas_sources collect --resource cpc3-structure --resource cpc3-notes-20250630` 按锁补齐。 [采集与许可说明](07-REGISTRY-AND-REPRODUCTION.md)
+已有锁定资料和 Poppler 时，在仓库根目录离线执行下列命令。Chrome 可执行文件可通过 `ATLAS_CHROME` 指定。当前构建还使用 HS 对应核查原件。缺资料时按新增研究报告中的清单补齐。 [当前采集命令](21-CPC-HS2022-REVIEW.md) · [采集与许可说明](07-REGISTRY-AND-REPRODUCTION.md)
 
 ```sh
 python3 -m atlas_sources cpc

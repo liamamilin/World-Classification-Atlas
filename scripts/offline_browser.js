@@ -143,8 +143,9 @@ async function offlineSession(temp, browser) {
     if (!(await exists(details + '[open]'))) await click(details + ' > summary');
     return details + '[open]';
   }
-  async function openOriginal(selector, resource, { pdfPage, mode = 'download' } = {}) {
-    const url = await original(selector, resource, pdfPage ? '#page=' + pdfPage : '');
+  async function openOriginal(selector, resource, { pdfPage, elementId, mode = 'download' } = {}) {
+    const fragment = pdfPage ? '#page=' + pdfPage : elementId ? '#' + elementId : '';
+    const url = await original(selector, resource, fragment);
     let download;
     if (mode !== 'pdf') {
       const folder = fs.mkdtempSync(path.join(temp, 'download-'));
@@ -163,8 +164,9 @@ async function offlineSession(temp, browser) {
       return;
     }
     const originalTab = await send('Target.attachToTarget', { targetId: opened.targetId, flatten: true });
-    const expected = mode === 'text' ? '/^(text\\/plain|application\\/json|text\\/csv)$/.test(document.contentType)' :
-      'document.contentType === "application/pdf"';
+    let expected = mode === 'text' ? '/^(text\\/plain|application\\/json|text\\/csv)$/.test(document.contentType)' :
+      'document.contentType === ' + json(mode === 'html' ? 'text/html' : 'application/pdf');
+    if (elementId) expected += ' && Boolean(document.getElementById(' + json(elementId) + '))';
     await until(async () => (await send('Runtime.evaluate', {
       expression: 'document.readyState === "complete" && ' + expected,
       returnByValue: true

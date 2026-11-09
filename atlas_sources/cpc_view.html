@@ -14,6 +14,8 @@ a{color:#146344}input{box-sizing:border-box;width:100%;padding:8px;margin:7px 0;
 summary{cursor:pointer}ul,ol{padding-left:20px}li{margin:4px 0}details ul{margin:4px 0}
 #detail{scroll-margin-top:10px}#ancestors{display:flex;flex-wrap:wrap;gap:4px 16px}
 pre{white-space:pre-wrap;background:#f4f6f0;padding:12px;overflow-wrap:anywhere}
+#hs-review,#release-status{border-top:1px solid #d6dfd3;margin-top:16px;padding-top:8px}
+#hs-review h4{margin:14px 0 4px}
 @media(max-width:750px){header,main{padding:14px}main{grid-template-columns:minmax(0,1fr)}aside{max-height:42vh}}
 </style>
 <header>
@@ -21,6 +23,10 @@ pre{white-space:pre-wrap;background:#f4f6f0;padding:12px;overflow-wrap:anywhere}
   <h1>CPC 3.0 产品与服务源目录</h1>
   <p>联合国统计司发布。CPC 分类对象为产品与服务，ISIC 分类对象为经济活动。</p>
   <p id="coverage"></p>
+  <details id="release-status">
+    <summary>CPC 3.0 与 HS 2022 对应发布状态</summary>
+    <p>已核查的 UNSD 公开对应目录未列出完整的 CPC 3.0 与 HS 2022 对应表。2026 年 5 月的培训资料仍将该表列为进行中。</p>
+  </details>
 </header>
 <main>
   <aside aria-label="源目录">
@@ -40,6 +46,17 @@ const data = JSON.parse(document.getElementById('data').textContent);
 const el = id => document.getElementById(id);
 const byId = new Map(data.nodes.map(node => [node.id, node]));
 const byCode = new Map(data.nodes.map(node => [node.code, node]));
+const hsReview = data.hs_review;
+const hsById = new Map(Object.entries(hsReview.hs).map(([code, node]) => [node.id, {code, ...node}]));
+const reviewLabels = {
+  pending: '当前对应待核',
+  excluded_from_cpc: 'CPC 原文排除',
+  scope_boundary: '范围对照',
+  service_context: '受托制造服务',
+  definition: '官方定义引用',
+  inclusion: '官方纳入引用',
+  exclusion: '官方排除引用'
+};
 const children = new Map();
 for (const node of data.nodes) {
   const parent = node.parents[0] || '';
@@ -56,13 +73,114 @@ function nodeLink(node, parent, label = node.code + ' ' + node.label) {
   const link = make('a', label, parent);
   link.href = '#' + encodeURIComponent(node.id);
 }
+function hsLink(parent, node) {
+  const link = make('a', 'HS 2022 ' + node.code, parent);
+  link.href = '#' + encodeURIComponent(node.id);
+}
 function original(parent, evidence, label) {
   const link = make('a', label, parent);
-  link.href = data.original_files[evidence.resource_id] + (evidence.pdf_page ? '#page=' + evidence.pdf_page : '');
+  const fragment = evidence.pdf_page ? 'page=' + evidence.pdf_page : evidence.element_id;
+  link.href = data.original_files[evidence.resource_id] + (fragment ? '#' + fragment : '');
   link.target = '_blank';
   link.rel = 'noopener';
   make('p', 'SHA-256 ' + evidence.sha256, parent);
   return link;
+}
+function download(parent, evidence, label) {
+  original(parent, evidence, label).download = '';
+}
+function renderNoteReferences(out, node) {
+  const references = hsReview.official_note_references.filter(ref => ref.cpc_id === node.id);
+  if (!references.length) return;
+  const notes = make('div', undefined, out);
+  notes.id = 'official-hs-notes';
+  make('h3', 'CPC 3.0 官方说明中的 HS 2022 引用', notes);
+  const list = make('ul', undefined, notes);
+  for (const reference of references) {
+    const row = make('li', undefined, list);
+    make('strong', reviewLabels[reference.kind] + ' · ' + reference.sheet + '!' +
+         reference.column + reference.row + ' · 单元格第 ' + reference.line + ' 行', row);
+    make('pre', reference.text, row);
+    const hs = hsById.get('HS:2022:' + reference.hs_notation);
+    if (hs?.note_cpc_id === node.id) hsLink(row, hs);
+  }
+  download(notes, hsReview.workbook, '下载原始 CPC 3.0 说明工作簿');
+}
+function renderCpcReview(out, node) {
+  renderNoteReferences(out, node);
+  const findings = hsReview.reviews[node.code];
+  if (!findings) return;
+  const review = make('div', undefined, out);
+  review.id = 'hs-review';
+  make('h3', 'HS 2022 商品范围核查', review);
+  const checked = hsReview.workbook_review_rows[node.code];
+  make('p', 'CPC3! 第 ' + checked.row + ' 行无明确 HS 2022 引用。', review);
+  const worksheet = make('div', undefined, review);
+  worksheet.id = 'review-workbook';
+  download(worksheet, hsReview.workbook, '下载原始 CPC 3.0 说明工作簿');
+  const list = make('ul', undefined, review);
+  list.id = 'hs-findings';
+  for (const finding of findings) {
+    const row = make('li', undefined, list);
+    row.dataset.status = finding.status;
+    if (finding.hs_id) hsLink(row, hsById.get(finding.hs_id));
+    make('p', reviewLabels[finding.status] + ' · ' + finding.finding, row);
+  }
+  const history = hsReview.historical_cpc_hs;
+  const rows = history.selected[node.code];
+  if (!rows) return;
+  const legacy = make('div', undefined, review);
+  legacy.id = 'legacy-hs';
+  make('h4', '历史官方对应 · CPC 2.1 与 HS 2017', legacy);
+  make('p', '原表的两列 partial 标记分别保留。1 表示该版该侧的代码在对侧有多项，0 表示单项。', legacy);
+  const entries = make('ul', undefined, legacy);
+  for (const row of rows) {
+    make('li', row.hs_id + ' ↔ ' + row.cpc_id + ' · HS partial=' + row.hs_partial +
+         ' · CPC partial=' + row.cpc_partial + ' · CSV 第 ' + row.csv_line + ' 行', entries);
+  }
+  download(legacy, history.evidence, '下载历史官方对应 CSV');
+}
+function renderHs(out, node) {
+  make('h2', 'HS 2022 ' + node.code + ' · ' + node.label, out);
+  make('small', node.id, out).id = 'node-id';
+  make('p', 'HS 分类对象为贸易商品。此处展示已核对的证据条目。', out);
+  if (node.evidence) {
+    const pdf = make('div', undefined, out);
+    pdf.id = 'hs-original';
+    const source = node.source_kind === 'classification_guidance' ?
+      'WCO / WHO 参考指南（示例）' : 'WCO HS 2022 税则';
+    original(pdf, node.evidence, '打开 ' + source + ' PDF · 第 ' + node.evidence.pdf_page + ' 页');
+    make('p', '提取文本行 ' + node.evidence.lines.join('–'), pdf);
+  }
+  const correlations = hsReview.carbon_correlations;
+  const row = correlations.rows[node.code];
+  if (row) {
+    const crosswalk = make('div', undefined, out);
+    crosswalk.id = 'hs-version-rows';
+    make('h3', 'WCO 两版 HS 代码列', crosswalk);
+    make('p', '表 I · HS 2022 ' + row.table_i.hs_2022 + ' → HS 2017 ' + row.table_i.hs_2017 +
+         (row.hs2017_partial_in_table_i ? '（旧子目部分对应）' : ''), crosswalk);
+    original(crosswalk, correlations.table_i, '打开表 I 原始 PDF · 第 17 页').id = 'hs-table-i';
+    make('p', '表 II · HS 2017 ' + row.table_ii.hs_2017 + ' → HS 2022 ' + row.table_ii.hs_2022, crosswalk);
+    original(crosswalk, correlations.table_ii, '打开表 II 原始 PDF · 第 11 页').id = 'hs-table-ii';
+    make('p', '表 I 共用备注从旧 6815.10 说明拆分。逐行关系采用两表的代码列，保留表 I 的 ex 标记。', crosswalk);
+  }
+  make('h3', '回查 CPC 3.0', out);
+  const backlinks = make('ul', undefined, out);
+  backlinks.id = 'hs-backlinks';
+  if (node.note_cpc_id) {
+    nodeLink(byId.get(node.note_cpc_id), make('li', undefined, backlinks), '32193 · 官方定义引用');
+  }
+  for (const [code, findings] of Object.entries(hsReview.reviews)) {
+    for (const finding of findings.filter(finding => finding.hs_id === node.id)) {
+      nodeLink(byCode.get(code), make('li', undefined, backlinks), code + ' · ' + reviewLabels[finding.status]);
+    }
+  }
+  if (node.code === '4818.90' || node.code === '4818') {
+    const related = hsById.get(node.code === '4818' ? 'HS:2022:4818.90' : 'HS:2022:4818');
+    make('h3', '品目与子目回查', out);
+    hsLink(out, related);
+  }
 }
 function tree(parent, nodes) {
   for (const node of nodes) {
@@ -103,8 +221,14 @@ function detail(focus = false) {
   try { id = decodeURIComponent(hash); } catch { id = hash; }
   const node = byId.get(id);
   out.replaceChildren();
+  const hs = hsById.get(id);
+  if (hs) {
+    renderHs(out, hs);
+    if (focus) out.focus();
+    return;
+  }
   if (!node) {
-    make('p', hash ? '此 CPC 3.0 源目录未收录该标识。' : '从目录或检索结果选择一个条目。', out);
+    make('p', hash ? '未收录此 CPC 3.0 或 HS 2022 标识。' : '从目录或检索结果选择一个条目。', out);
     return;
   }
   make('h2', node.code + ' ' + node.label, out);
@@ -162,13 +286,16 @@ function detail(focus = false) {
     list.id = 'exclusion-backlinks';
     for (const [code] of referencing) nodeLink(byCode.get(code), make('li', undefined, list));
   }
+  renderCpcReview(out, node);
   if (focus) {
     out.focus({preventScroll: true});
     out.scrollIntoView({block: 'start'});
   }
 }
 el('coverage').textContent = data.nodes.length + ' 个源节点 · ' + Object.keys(data.levels).length + ' 级目录 · ' +
-  Object.keys(data.notes).length + ' 个已定位说明条目';
+  Object.keys(data.notes).length + ' 个已定位说明条目 · ' + hsReview.official_note_references.length + ' 条 HS 2022 原文引用';
+original(el('release-status'), hsReview.audit.listing, '打开 UNSD 对应目录网页原件').id = 'unsd-listing';
+original(el('release-status'), hsReview.audit.workshop, '打开 UNSD 培训原始 PDF · 第 46 页');
 tree(el('tree'), children.get(''));
 el('search').addEventListener('input', search);
 window.addEventListener('hashchange', () => detail(true));

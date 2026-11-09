@@ -6,13 +6,14 @@ from os.path import relpath
 from pathlib import Path
 
 from .acquire import sha256
+from . import cpc_hs
 from .isic import get_assets
 from .normalize import qa, table_nodes
 from .registry import write_json
 
 STRUCTURE = "cpc3-structure"
 NOTES = "cpc3-notes-20250630"
-REQUIRED = (STRUCTURE, NOTES)
+REQUIRED = (STRUCTURE, NOTES, *cpc_hs.REQUIRED)
 LOCAL = "data/local/products/cpc"
 REPORT = "data/reports/cpc-offline.json"
 NOTE_PAGES = {
@@ -85,11 +86,13 @@ def build(root, resources):
              for code, page in NOTE_PAGES.items()}
     if any(target not in by_code for note in notes.values() for target in note["excluded_to"]):
         raise ValueError("CPC note points outside the locked source tree")
+    hs_review = cpc_hs.build(assets, by_code)
     output = root / LOCAL
     inputs = [{**a["evidence"], "path": a["path"].relative_to(root).as_posix()} for a in assets.values()]
     payload = {
         "nodes": nodes, "notes": notes, "levels": quality["levels"],
         "pending_scope": PENDING_SCOPE,
+        "hs_review": hs_review,
         "original_files": {rid: Path(relpath(asset["path"], output)).as_posix()
                            for rid, asset in assets.items()},
         "structure_evidence": structure["evidence"],
@@ -99,17 +102,23 @@ def build(root, resources):
     view = template.decode("utf-8").replace("__CPC_DATA__", data).encode("utf-8")
     output.mkdir(parents=True, exist_ok=True)
     (output / "index.html").write_bytes(view)
+    references = hs_review["official_note_references"]
+    hs_review = {**hs_review, "official_note_references": [
+        {key: value for key, value in ref.items() if key != "text"} for ref in references
+    ]}
     summary = {
         "status": "passed", "source_id": "UN_CPC", "edition": "3.0",
         "classification_object": "products and services", "inputs": inputs,
         "structure": quality, "view_sha256": sha256(view),
+        "hs_review": hs_review,
         "note_entries": [{"id": by_code[code]["id"], "csv_row": by_code[code]["source_row"],
                           "pdf_page": note["evidence"]["pdf_page"], "has_explanatory_text": bool(note["text"]),
                           "scope_review_status": "pending" if code in PENDING_SCOPE else None,
                           "excluded_to": note["excluded_to"]} for code, note in notes.items()],
         "reproducibility": {
             "pdftotext": subprocess.check_output(["pdftotext", "-v"], stderr=subprocess.STDOUT).decode().splitlines()[0],
-            "parser_sha256": {"cpc_view.html": sha256(template), "cpc.py": sha256(Path(__file__).read_bytes())},
+            "parser_sha256": {"cpc_view.html": sha256(template), "cpc.py": sha256(Path(__file__).read_bytes()),
+                              "cpc_hs.py": sha256(Path(cpc_hs.__file__).read_bytes())},
         },
     }
     write_json(root / REPORT, summary)
@@ -124,5 +133,6 @@ def run(root, resources):
         print(f"CPC build failed: {error}")
         return 1
     print(f"CPC 3.0: {summary['structure']['node_count']} source nodes, "
-          f"{len(summary['note_entries'])} PDF entries located")
+          f"{len(summary['note_entries'])} PDF entries located, "
+          f"{len(summary['hs_review']['official_note_references'])} explicit HS 2022 note references")
     return 0

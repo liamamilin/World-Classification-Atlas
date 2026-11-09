@@ -10,7 +10,14 @@ const view = 'data/local/products/cpc/index.html';
 const report = 'data/reports/cpc-offline.json';
 const structure = 'cpc3-structure';
 const notes = 'cpc3-notes-20250630';
+const workbook = 'cpc3-notes-xlsx-20250630';
+const listing = 'cpc3-correspondence-listing-20261109';
+const status = 'cpc3-hs2022-status-202605';
+const guidance = 'hs2022-wco-who-medical-supplies';
+const chapter = 'hs2022-chapter68';
+const legacy = 'cpc21-hs2017-unsd-correspondence';
 const id = code => 'CPC:3.0:' + code;
+const hsId = code => 'HS:2022:' + code;
 const ice = ['1', '17', '174', '1740', '17400'];
 const edibleIce = ['2', '22', '222', '2227', '22270'];
 const dryIce = ['3', '34', '342', '3421', '34210'];
@@ -55,7 +62,13 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await until(() => exists('#tree > li'), 'CPC catalogue from registry');
   assert.equal(await evaluate('navigator.onLine'), false);
   assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 8 个已定位说明条目/);
+  assert.match(await text('#coverage'), /69 条 HS 2022 原文引用/);
   assert.match(await text('header'), /CPC 分类对象为产品与服务，ISIC 分类对象为经济活动/);
+  await click('#release-status summary');
+  assert.match(await text('#release-status'), /未列出完整的 CPC 3\.0 与 HS 2022 对应表/);
+  await openOriginal('#unsd-listing', listing, { mode: 'html', elementId: 'corresp-cpc' });
+  await openOriginal('#release-status a:not(#unsd-listing)', status, { mode: 'pdf', pdfPage: 46 });
+  await click('#release-status summary');
 
   await walk(ice);
   assert.match(await text('#detail > h2'), /^17400 Ice and snow$/);
@@ -121,6 +134,72 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   assert.match(await text('#pending-scope'), /产出制品的产品子类待核/);
   await openOriginal('#note-source a', notes, { mode: 'pdf', pdfPage: 487 });
   console.log('Passed: protective-mask and carbon scope, pending product placement and PDF pages 127/187/254/264/487.');
+
+  async function openHs(group, code) {
+    await click(linksTo(group, hsId(code)));
+    await until(() => evaluate('document.querySelector("#node-id")?.innerText === ' + json(hsId(code))), hsId(code));
+    assert.match(await text('#detail'), /HS 分类对象为贸易商品/);
+  }
+  async function backToCpc(codes) {
+    await click(linksTo('#hs-backlinks', id(codes.at(-1))));
+    await expectNode(codes);
+  }
+  const masks = titleEntries[0].codes;
+  const textiles = titleEntries[1].codes;
+  const carbon = titleEntries[2].codes;
+  await search(masks);
+  assert.match(await text('#hs-review'), /第 2598 行无明确 HS 2022 引用/);
+  assert.match(await text('#hs-findings [data-status=excluded_from_cpc]'), /同时无机械部件和可换滤芯/);
+  await openOriginal('#review-workbook a', workbook);
+  await openHs('#hs-findings', '6307.90');
+  assert.match(await text('#detail > h2'), /纺织口罩示例/);
+  await openOriginal('#hs-original a', guidance, { mode: 'pdf', pdfPage: 3 });
+  assert.match(await text('#hs-backlinks'), /48160 · CPC 原文排除/);
+  assert.match(await text('#hs-backlinks'), /27190 · 当前对应待核/);
+  await backToCpc(textiles);
+  assert.match(await text('#legacy-hs'), /HS:2017:6307\.90 ↔ CPC:2\.1:27190 · HS partial=0 · CPC partial=1/);
+  await openOriginal('#legacy-hs a', legacy);
+  await openHs('#hs-findings', '6307.90');
+  await backToCpc(masks);
+  await openHs('#hs-findings', '9020.00');
+  assert.match(await text('#detail > h2'), /带机械部件或可更换滤芯/);
+  await backToCpc(masks);
+  await openHs('#hs-findings', '4818.90');
+  assert.match(await text('#detail > h2'), /纸或纤维素口罩示例（多数国家）/);
+  await openHs('#detail', '4818');
+  await backToCpc(['3', '32', '321', '3219', '32193']);
+  assert.match(await text('#official-hs-notes'), /官方定义引用 · CPC3!C1289/);
+  await openOriginal('#official-hs-notes a[download]', workbook);
+  await openHs('#official-hs-notes', '4818');
+  await backToCpc(['3', '32', '321', '3219', '32193']);
+  console.log('Passed: textile, paper and respirator boundaries, historical partial flags, and a current UNSD heading reference.');
+
+  await search(carbon);
+  assert.match(await text('#legacy-hs'), /HS:2017:6815\.99 ↔ CPC:2\.1:37990 · HS partial=0 · CPC partial=1/);
+  for (const [code, label] of [['6815.11', /碳纤维本体/], ['6815.12', /碳纤维织物/],
+    ['6815.13', /其他碳纤维制品.*非电气/], ['6815.19', /该非电气用组中的其他项/]]) {
+    await openHs('#hs-findings', code);
+    assert.match(await text('#detail > h2'), label);
+    const rows = await text('#hs-version-rows');
+    if (code === '6815.19') assert.match(rows, /HS 2017 6815\.10/);
+    else assert.match(rows, /ex6815\.99（旧子目部分对应）/);
+    if (code === '6815.12') {
+      await openOriginal('#hs-original a', chapter, { mode: 'pdf', pdfPage: 4 });
+      await openOriginal('#hs-table-i', 'hs2022-to-hs2017-wco-table-i', { mode: 'pdf', pdfPage: 17 });
+      await openOriginal('#hs-table-ii', 'hs2017-to-hs2022-wco-table-ii', { mode: 'pdf', pdfPage: 11 });
+    }
+    await backToCpc(carbon);
+    assert.match(await text('#hs-review'), /第 1741 行无明确 HS 2022 引用/);
+  }
+  await openHs('#hs-findings', '6815.13');
+  await backToCpc(titleEntries[3].codes);
+  assert.match(await text('#hs-findings'), /电气用范围.*非电气用边界/);
+  await search(['8', '89', '892', '8920', '89200']);
+  assert.match(await text('#hs-findings [data-status=service_context]'), /受托塑料件制造服务/);
+  assert.equal(await exists('#hs-findings a'), false);
+  await search(['4', '46', '465', '4653', '46532']);
+  assert.match(await text('#official-hs-notes'), /官方定义引用[\s\S]*9405\.39[\s\S]*官方排除引用[\s\S]*9405\.31/);
+  console.log('Passed: four carbon subheadings, both original WCO tables, partial semantics, and separate electrical/service scopes.');
 
   await navigate(path.join(root, view), '#' + encodeURIComponent(id('22270')));
   await expectNode(edibleIce);

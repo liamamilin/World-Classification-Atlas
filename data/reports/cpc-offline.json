@@ -19,6 +19,70 @@
       "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
       "publication_date": "2025-06-30",
       "path": "data/local/raw/UN_CPC/3.0/cpc3-notes-20250630/c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1/cpc3-notes-20250630.pdf"
+    },
+    {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-notes-xlsx-20250630/fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b/cpc3-notes-xlsx-20250630.xlsx"
+    },
+    {
+      "resource_id": "cpc3-correspondence-listing-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/CPC",
+      "sha256": "22e584a275ea39747e23ffd5205f9a55eaa2f5b67c9f325ba20671c7f859c736",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-correspondence-listing-20261109/22e584a275ea39747e23ffd5205f9a55eaa2f5b67c9f325ba20671c7f859c736/cpc3-correspondence-listing-20261109.html"
+    },
+    {
+      "resource_id": "cpc3-hs2022-status-202605",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Workshops/AddisAbaba2026/Session4-Introduction-to-the-CPC-Ver-3-0.pdf",
+      "sha256": "782176cf5b9002c88c7a7b87e8f1dcdd16ed8b39107d8da276750992d46a7336",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-hs2022-status-202605/782176cf5b9002c88c7a7b87e8f1dcdd16ed8b39107d8da276750992d46a7336/cpc3-hs2022-status-202605.pdf"
+    },
+    {
+      "resource_id": "hs2022-chapter68",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1368_2022e.pdf?la=en",
+      "sha256": "a87577cd153b95696c6713df8703d18c5f1219c8c48b4daba756bcaeb1d410ef",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-chapter68/a87577cd153b95696c6713df8703d18c5f1219c8c48b4daba756bcaeb1d410ef/hs2022-chapter68.pdf"
+    },
+    {
+      "resource_id": "hs2022-wco-who-medical-supplies",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/covid_19/hs-classification-reference_edition-3_en.pdf?la=pt-PT",
+      "sha256": "3504e5ac3693607b83fef0061f9c6cb9d0ab391890c0f1967937e9617bb922c5",
+      "publication_date": "2022-01-15",
+      "path": "data/local/raw/HS/2022/hs2022-wco-who-medical-supplies/3504e5ac3693607b83fef0061f9c6cb9d0ab391890c0f1967937e9617bb922c5/hs2022-wco-who-medical-supplies.pdf"
+    },
+    {
+      "resource_id": "hs2022-to-hs2017-wco-table-i",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-i_en.pdf?la=en",
+      "sha256": "e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-to-hs2017-wco-table-i/e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361/hs2022-to-hs2017-wco-table-i.pdf"
+    },
+    {
+      "resource_id": "hs2017-to-hs2022-wco-table-ii",
+      "edition": "2017",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-ii_en.pdf?la=en",
+      "sha256": "2ca3c6fdd0e18f274c5458cc2f73fc8dc47ebe2bac4c821afdb179d1c848e1bc",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2017/hs2017-to-hs2022-wco-table-ii/2ca3c6fdd0e18f274c5458cc2f73fc8dc47ebe2bac4c821afdb179d1c848e1bc/hs2017-to-hs2022-wco-table-ii.pdf"
+    },
+    {
+      "resource_id": "cpc21-hs2017-unsd-correspondence",
+      "edition": "2.1",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/tables/CPC/CPCv21_HS2017/CPC21-HS2017.csv",
+      "sha256": "a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/2.1/cpc21-hs2017-unsd-correspondence/a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c/cpc21-hs2017-unsd-correspondence.csv"
     }
   ],
   "structure": {
@@ -42,7 +106,1309 @@
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
-  "view_sha256": "3df7830a1b02d96e6f7ca23b06b5bbd3cb0230299a41856be3d75e87008fb152",
+  "view_sha256": "da57e08e5869d4512cb4dde7536b2d3fafd4af3ead269f56715046c98e566192",
+  "hs_review": {
+    "audit": {
+      "status": "standalone_table_not_located_in_checked_listing",
+      "listing": {
+        "resource_id": "cpc3-correspondence-listing-20261109",
+        "edition": "3.0",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/CPC",
+        "sha256": "22e584a275ea39747e23ffd5205f9a55eaa2f5b67c9f325ba20671c7f859c736",
+        "publication_date": null,
+        "element_id": "corresp-cpc",
+        "labels": [
+          "FROM / TO",
+          "CPC prov",
+          "CPC Ver. 1.0",
+          "CPC Ver. 1.1",
+          "CPC Ver. 2",
+          "CPC Ver. 2.1",
+          "CPC prov",
+          "CPC Ver. 1.0",
+          "CPC Ver. 1.1",
+          "CPC Ver. 2",
+          "CPC Ver. 2.1",
+          "ISIC Rev. 3",
+          "ISIC Rev. 3.1",
+          "ISIC Rev. 4",
+          "BEC Rev. 5",
+          "SITC Rev. 4",
+          "HS1988",
+          "HS1996",
+          "HS2002",
+          "HS2007",
+          "HS2012",
+          "HS2017",
+          "EBOPS2002",
+          "EBOPS2010",
+          "COICOP",
+          "Prodcom2002",
+          " New",
+          "CPA 2.1"
+        ],
+        "link_count": 43
+      },
+      "workshop": {
+        "resource_id": "cpc3-hs2022-status-202605",
+        "edition": "3.0",
+        "url": "https://unstats.un.org/unsd/classifications/Workshops/AddisAbaba2026/Session4-Introduction-to-the-CPC-Ver-3-0.pdf",
+        "sha256": "782176cf5b9002c88c7a7b87e8f1dcdd16ed8b39107d8da276750992d46a7336",
+        "publication_date": null,
+        "pdf_page": 46
+      }
+    },
+    "workbook": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30"
+    },
+    "workbook_code_rows": 4586,
+    "official_note_references": [
+      {
+        "cpc_id": "CPC:3.0:01111",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "1001.11 & .91",
+        "sheet": "CPC3",
+        "row": 6,
+        "column": "C",
+        "line": 2,
+        "text_sha256": "a5567ad4cf18712815802be81064e68355d9ffa26737238cf67a5af36b62ed1a"
+      },
+      {
+        "cpc_id": "CPC:3.0:01112",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "1001.19 & .99",
+        "sheet": "CPC3",
+        "row": 7,
+        "column": "C",
+        "line": 2,
+        "text_sha256": "09bcb9eb2287fd47f3af09e956236c439f7b4f30607997dc776a063b44ccfedd"
+      },
+      {
+        "cpc_id": "CPC:3.0:03251",
+        "hs_edition": "2022",
+        "kind": "inclusion",
+        "hs_notation": "1404.20",
+        "sheet": "CPC3",
+        "row": 328,
+        "column": "C",
+        "line": 2,
+        "text_sha256": "87059919c772e8fa0c3392477b319222c132d6533bf8c2d66285997a8866d0ea"
+      },
+      {
+        "cpc_id": "CPC:3.0:03252",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "1401, 1404.90",
+        "sheet": "CPC3",
+        "row": 329,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "418e56442e61dfa0e553af5e5d542ee2df5783dfdec07787f997a67efe7072ee"
+      },
+      {
+        "cpc_id": "CPC:3.0:11011",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "2701.11",
+        "sheet": "CPC3",
+        "row": 434,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "8de80a3ed48f58885cca4a53d65a2d0ba18d25815a1cb74b7efd13e6bc7ce3d4"
+      },
+      {
+        "cpc_id": "CPC:3.0:11012",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "2701.12",
+        "sheet": "CPC3",
+        "row": 435,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "40845b725a1da7b4cc54464d46ecb45f6f313b5ce23a1a5db1a71557ff692480"
+      },
+      {
+        "cpc_id": "CPC:3.0:11031",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "2701.12",
+        "sheet": "CPC3",
+        "row": 439,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "40845b725a1da7b4cc54464d46ecb45f6f313b5ce23a1a5db1a71557ff692480"
+      },
+      {
+        "cpc_id": "CPC:3.0:11032",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "2702.10, 2702.20",
+        "sheet": "CPC3",
+        "row": 440,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "a6817ceab7bf8aa3972e4fa43c7aedb8b215181cbadc514edd7ec144cad73de7"
+      },
+      {
+        "cpc_id": "CPC:3.0:15400",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "2507, 2508",
+        "sheet": "CPC3",
+        "row": 495,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "cbe76c17e19b2f4b6ca40c3b59f4829484c89cfd2b599288793290342e757e7d"
+      },
+      {
+        "cpc_id": "CPC:3.0:16200",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "2501.00",
+        "sheet": "CPC3",
+        "row": 506,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "42701a8ff3f3ea64c1905de2705dea84fc2d3c7187ac60584cbaf586e456b2e4"
+      },
+      {
+        "cpc_id": "CPC:3.0:16390",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "2504, 2506.10, 2512, 2519, 2524, 2525.10, .20, 2526, 2529.10, .30, 2530.10",
+        "sheet": "CPC3",
+        "row": 515,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "759212c184221c4af3723d7db181a191c4e7047de56a5ff4b29742afe115e78f"
+      },
+      {
+        "cpc_id": "CPC:3.0:21261",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "0307.83 and 0307.87",
+        "sheet": "CPC3",
+        "row": 627,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "de85255ad48a7822feb2ec934abd275bd619ac32b3699dcf51ca6cb10a67e5e6"
+      },
+      {
+        "cpc_id": "CPC:3.0:21262",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "0307.12 and 0307.19",
+        "sheet": "CPC3",
+        "row": 628,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "b73bbdc5a9cdcfccce28f4f8901d8e2010eebcc9fb03514901d1ec501c9e6316"
+      },
+      {
+        "cpc_id": "CPC:3.0:21263",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "0307.32 and 0307.39",
+        "sheet": "CPC3",
+        "row": 629,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "f86e847dd52a07b452c25ebe08a9a28aa22e3890e80b8f45e88af5ef275149dd"
+      },
+      {
+        "cpc_id": "CPC:3.0:21264",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "0307.22 and 0307.29",
+        "sheet": "CPC3",
+        "row": 630,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "efa51ac2b6b96a45ec38022a85195e32eff213233895ce1dbdf3015901e15774"
+      },
+      {
+        "cpc_id": "CPC:3.0:21265",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "0307.72 and 0307.79",
+        "sheet": "CPC3",
+        "row": 631,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "618013eb808685ee144ca74b63fbfb6df3b2f9bdadb54757c27330e298f866e6"
+      },
+      {
+        "cpc_id": "CPC:3.0:21266",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "0307.43 and 0307.49",
+        "sheet": "CPC3",
+        "row": 632,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "5de35cb04381c6c43677e128574aef5c9a06cd5663d3d1203177003616ae8c73"
+      },
+      {
+        "cpc_id": "CPC:3.0:21267",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "0307.53 and 0307.59",
+        "sheet": "CPC3",
+        "row": 633,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "4b0e4f0ccfbc053ff88b9e1cd3232c3a9ef3dedd0a0bf03ba7268aab3f1fbf41"
+      },
+      {
+        "cpc_id": "CPC:3.0:21268",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "0307.92 and 0307.99",
+        "sheet": "CPC3",
+        "row": 634,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "2df0c27f50cb4732ff1629875d8e636d7bb4ffc205acf54c72c0e9ecad9442ef"
+      },
+      {
+        "cpc_id": "CPC:3.0:25091",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "24.03",
+        "sheet": "CPC3",
+        "row": 924,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "85b7470dc028fd6505bf863ce8922110b778ef4b227085dcf400cd046cc13bd3"
+      },
+      {
+        "cpc_id": "CPC:3.0:25092",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "24.04",
+        "sheet": "CPC3",
+        "row": 925,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "940c7104e2f9f4fbee64fb6864ea6a8f53e96a1a6743495766efaacf172c72ee"
+      },
+      {
+        "cpc_id": "CPC:3.0:26860",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "58.03",
+        "sheet": "CPC3",
+        "row": 1034,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "3f3d2ffa1e3ec13cb987004d79adab15fe421f30fa1b7d7c8e1ac0760255f0c0"
+      },
+      {
+        "cpc_id": "CPC:3.0:27991",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "56.01",
+        "sheet": "CPC3",
+        "row": 1082,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "23936b90d8c6fe69afb8c1bd4a2fd01bd1ec26f54feb924320d792c296e6584c"
+      },
+      {
+        "cpc_id": "CPC:3.0:31911",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "4417",
+        "sheet": "CPC3",
+        "row": 1247,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "97534ff5ad19300b13d49b23323bf76bbc243648271f6455248de2c6d531bdcd"
+      },
+      {
+        "cpc_id": "CPC:3.0:32132",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "4804.11, .19",
+        "sheet": "CPC3",
+        "row": 1271,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "917eda17edc1181c9df033c89c93cb268c2c9d260721ae742199b613efb8bc34"
+      },
+      {
+        "cpc_id": "CPC:3.0:32143",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "4810",
+        "sheet": "CPC3",
+        "row": 1280,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "782ec6e125a1171385c40c0af7d313b482347132a049502fa06f6b9536c1c7f8"
+      },
+      {
+        "cpc_id": "CPC:3.0:32149",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "4809, 4811",
+        "sheet": "CPC3",
+        "row": 1281,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "689120f706cf3e484417ed023f9a95f6cef864d9ac37709f244419f2875fc780"
+      },
+      {
+        "cpc_id": "CPC:3.0:32191",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "4816",
+        "sheet": "CPC3",
+        "row": 1287,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "7ca96fac2aa224407dc52623017dcb1fd8590a1c18d907d33d1cab121fa48685"
+      },
+      {
+        "cpc_id": "CPC:3.0:32193",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "4818",
+        "sheet": "CPC3",
+        "row": 1289,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "6d1dee6a87c8ad0f858082e5a5a7348375bb1a3d4959ab68fbf230d91e9f77c6"
+      },
+      {
+        "cpc_id": "CPC:3.0:32196",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "9619",
+        "sheet": "CPC3",
+        "row": 1292,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "e85972382d7e2c3c01d396659a4bc776599c28326069367f8d920876e11ea1b0"
+      },
+      {
+        "cpc_id": "CPC:3.0:33110",
+        "hs_edition": "2022",
+        "kind": "inclusion",
+        "hs_notation": "2704.00",
+        "sheet": "CPC3",
+        "row": 1346,
+        "column": "C",
+        "line": 6,
+        "text_sha256": "4ea1d346f8592f5ae4171263fd0acf99441ffe699f9f4ef2c9e0fce8f32480fa"
+      },
+      {
+        "cpc_id": "CPC:3.0:35271",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "30.01",
+        "sheet": "CPC3",
+        "row": 1541,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "5b806f25f5d1bfcbbe7c80581e1c359f8744f99fb3aa23e06684facb911aba75"
+      },
+      {
+        "cpc_id": "CPC:3.0:35272",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "3002.12-15 & .90",
+        "sheet": "CPC3",
+        "row": 1542,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "9fec9458d56be1749dac9de0a1c965a79ab2209a01c5a592a40be441d7aad2c0"
+      },
+      {
+        "cpc_id": "CPC:3.0:35273",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "3002.41-49, 3002.51/59",
+        "sheet": "CPC3",
+        "row": 1543,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "422c08bd762264e40c67fe6fa3e19fc055e3466cc408cb2a3e75951fa72b814d"
+      },
+      {
+        "cpc_id": "CPC:3.0:35279",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "30.05",
+        "sheet": "CPC3",
+        "row": 1544,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "54c2a649132185c0f3f3acb9d673f429cac6a5d17222696d902ccff314b8671d"
+      },
+      {
+        "cpc_id": "CPC:3.0:35290",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "30.06",
+        "sheet": "CPC3",
+        "row": 1546,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "c0ce1a391da9c0b9c2c63da923b8476458d05b11c3f4defb4516320b3035a554"
+      },
+      {
+        "cpc_id": "CPC:3.0:38169",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "9401.99 and 9403.99",
+        "sheet": "CPC3",
+        "row": 1760,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "97be504f5aa5b128ec207b861f4b19089d3ed3b73793ff5b11292a1eefd67be7"
+      },
+      {
+        "cpc_id": "CPC:3.0:39282",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "4401.32 and .39",
+        "sheet": "CPC3",
+        "row": 1906,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "78af973b55ce1863c7229cd8db9bf884e67046de3c6f2ef468c45d034fc89e9c"
+      },
+      {
+        "cpc_id": "CPC:3.0:41601",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8101.10, .94; 8102.10, .94; 8103.20, .99; 8104.11; 8105.20; 8108.20; 8109.21, .29; 8112.51, .59",
+        "sheet": "CPC3",
+        "row": 2069,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "5c2d78a1b24a9a0b999e62bcd9e4c8a00efc30521354d330cd786494cc21fa1c"
+      },
+      {
+        "cpc_id": "CPC:3.0:41602",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8101.96, .99; 8102.95, .96, .99; 8103.91; 8104.19, .30, .90; 8105.90; 8108.90; 8109.91, .99",
+        "sheet": "CPC3",
+        "row": 2070,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "f76a922314e2f04fd3ae48d8409090c17a2da615df18ce758fb38eb142da7420"
+      },
+      {
+        "cpc_id": "CPC:3.0:41609",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8101.97, 8102.97, 8103.30, 8104.20, 8105.30. 8108.30, 8109.31, .39",
+        "sheet": "CPC3",
+        "row": 2073,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "a96fbcd12f33014e10b999feccbaf363d51a8487e3442843dc91ba87adcf86e1"
+      },
+      {
+        "cpc_id": "CPC:3.0:43561",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8428.70, 8479.50",
+        "sheet": "CPC3",
+        "row": 2196,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "02be49ab96874a3e5080b1770740178990ec97befc92a7ad001b60800a3acce0"
+      },
+      {
+        "cpc_id": "CPC:3.0:43562",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8428.10, .20, .31, .32, .33, .39, .40, .60, .90",
+        "sheet": "CPC3",
+        "row": 2197,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "7c41767781549978ad61e7a56a1ff734c34e7299c11a6345418c349359ce56e1"
+      },
+      {
+        "cpc_id": "CPC:3.0:44826",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8419.12",
+        "sheet": "CPC3",
+        "row": 2369,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "87159359355cb2299765dd1d2c901d93378493924c3c4661e25b9e54fce379fa"
+      },
+      {
+        "cpc_id": "CPC:3.0:44827",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8419.11, .19",
+        "sheet": "CPC3",
+        "row": 2370,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "3a8e1daa5e655aa0e871357c4de4cf97799c9f36c8e1c63669a0fb888b69960e"
+      },
+      {
+        "cpc_id": "CPC:3.0:44920",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8485",
+        "sheet": "CPC3",
+        "row": 2386,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "5172e8ebf2292a65bb93331277d3c65a6c4d8620dd9f09590e56c500c241ff96"
+      },
+      {
+        "cpc_id": "CPC:3.0:44930",
+        "hs_edition": "2022",
+        "kind": "inclusion",
+        "hs_notation": "8401.20",
+        "sheet": "CPC3",
+        "row": 2388,
+        "column": "C",
+        "line": 2,
+        "text_sha256": "6843dade573fff621c39df9e712fdb4a58ad9e46d9339f6615678325415054c5"
+      },
+      {
+        "cpc_id": "CPC:3.0:44930",
+        "hs_edition": "2022",
+        "kind": "inclusion",
+        "hs_notation": "8475.10",
+        "sheet": "CPC3",
+        "row": 2388,
+        "column": "C",
+        "line": 3,
+        "text_sha256": "60fdbf566df4ffb6be99361a4c2c4c881a46a061ce776837adc9f7de57758e6b"
+      },
+      {
+        "cpc_id": "CPC:3.0:44930",
+        "hs_edition": "2022",
+        "kind": "inclusion",
+        "hs_notation": "8475.21 & .29",
+        "sheet": "CPC3",
+        "row": 2388,
+        "column": "C",
+        "line": 4,
+        "text_sha256": "b61a899b3475be91431087d7c3a2e865911c8006d564b8ef96fafe5daf7ee2b4"
+      },
+      {
+        "cpc_id": "CPC:3.0:44930",
+        "hs_edition": "2022",
+        "kind": "inclusion",
+        "hs_notation": "8479.40",
+        "sheet": "CPC3",
+        "row": 2388,
+        "column": "C",
+        "line": 5,
+        "text_sha256": "4306d02d53cbf8dab208db9c7d91d6b607d3b48de145afb444fb7e848a46418f"
+      },
+      {
+        "cpc_id": "CPC:3.0:44941",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8439.91, .99, 8441.90",
+        "sheet": "CPC3",
+        "row": 2390,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "a3bb454587491b145ec905b9ffa2d89450468504dc06ca2dcb1b49c94d51b0ec"
+      },
+      {
+        "cpc_id": "CPC:3.0:44942",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8440.90, 8442.40, 8443.91 - .99",
+        "sheet": "CPC3",
+        "row": 2391,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "59cf3b9f333cf709497995477b9eb5c425fc1c3e483e9e8f077e5ad2791deaa5"
+      },
+      {
+        "cpc_id": "CPC:3.0:44943",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8486.90",
+        "sheet": "CPC3",
+        "row": 2392,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "67fdef58ceef86ca8b38ac07364cb71091c1ce6edb456781b087028cc9534a63"
+      },
+      {
+        "cpc_id": "CPC:3.0:44949",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8475.90, 8477.90, 8479.90",
+        "sheet": "CPC3",
+        "row": 2393,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "61092125256d41ea9f2ab5d7ed39ecd7f11e86d524bc5e81f29b9e60a85847b7"
+      },
+      {
+        "cpc_id": "CPC:3.0:46111",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8501.10, .31 - .34",
+        "sheet": "CPC3",
+        "row": 2439,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "fcb3e0520d3dae62528286d24caabf47d43054088a6ac9d3f75bc2785bf75864"
+      },
+      {
+        "cpc_id": "CPC:3.0:46112",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8501.20, .40 - .53, .61 - .64",
+        "sheet": "CPC3",
+        "row": 2440,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "8508ceca3cc5755c610a403de3f234875550a735c69e7b21c434f4d6c93edc48"
+      },
+      {
+        "cpc_id": "CPC:3.0:46113",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8501.71, .72, .80",
+        "sheet": "CPC3",
+        "row": 2441,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "40a30498b528060ad4dfc61a2c7ee7db00c1e8538b294761f273294873f85a5d"
+      },
+      {
+        "cpc_id": "CPC:3.0:46114",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8502",
+        "sheet": "CPC3",
+        "row": 2442,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "1b36d9b538a3406d08e4d671cc9c48f0d54a15d6b441b51899cfdd05bd3a2ae6"
+      },
+      {
+        "cpc_id": "CPC:3.0:46532",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "9405.39",
+        "sheet": "CPC3",
+        "row": 2483,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "c08143b6403157f60c1573e13faece436cb899e4bed817cb21ae924463c397ec"
+      },
+      {
+        "cpc_id": "CPC:3.0:46532",
+        "hs_edition": "2022",
+        "kind": "exclusion",
+        "hs_notation": "9405.31",
+        "sheet": "CPC3",
+        "row": 2483,
+        "column": "D",
+        "line": 1,
+        "text_sha256": "e4035914f03e3d283b1f0adbc0c6733dea65d8086d82ea1e696d901e07af3f82"
+      },
+      {
+        "cpc_id": "CPC:3.0:46533",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "9405.11, .21, 31, 41",
+        "sheet": "CPC3",
+        "row": 2484,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "25e1560119c873d5f01d4246797963042e05fd4562605f39527c27e6b30fda0f"
+      },
+      {
+        "cpc_id": "CPC:3.0:46539",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "9405.42",
+        "sheet": "CPC3",
+        "row": 2485,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "5513f1faa84894e6a63278b54d74879a72028df455ddfc6bb66731e05c7862fc"
+      },
+      {
+        "cpc_id": "CPC:3.0:46539",
+        "hs_edition": "2022",
+        "kind": "exclusion",
+        "hs_notation": "9405.41",
+        "sheet": "CPC3",
+        "row": 2485,
+        "column": "D",
+        "line": 1,
+        "text_sha256": "914646f9c90ee5b05fc3df488d15debe8383b397f1eb4f6866951d1112067685"
+      },
+      {
+        "cpc_id": "CPC:3.0:49113",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8703.21 - .90",
+        "sheet": "CPC3",
+        "row": 2674,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "021cad0aa543f8acbdf17080506f47573f4f08f872c0c98257ce519d32680de8"
+      },
+      {
+        "cpc_id": "CPC:3.0:49621",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8802.11, .12",
+        "sheet": "CPC3",
+        "row": 2727,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "57ff4db9f8f676da851e757a95615a455849ef27abe276aa1312386fa79644ba"
+      },
+      {
+        "cpc_id": "CPC:3.0:49622",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8802.20",
+        "sheet": "CPC3",
+        "row": 2728,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "149855ad8b4cd9f5df8bbcefad9f31a037dcf5a69d2159fd533ce967b32b89b1"
+      },
+      {
+        "cpc_id": "CPC:3.0:49623",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8802.30, .40",
+        "sheet": "CPC3",
+        "row": 2729,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "d13e5e7669ba36327d7a5b0ba2077f04d3b1e80ea549023c9dd41cd0d81d3e99"
+      },
+      {
+        "cpc_id": "CPC:3.0:49624",
+        "hs_edition": "2022",
+        "kind": "definition",
+        "hs_notation": "8806",
+        "sheet": "CPC3",
+        "row": 2730,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "b9a664edcd409eb6696f40051a85df49f2a45dda2b73b84d4f3b0b9ec7208f61"
+      },
+      {
+        "cpc_id": "CPC:3.0:49913",
+        "hs_edition": "2022",
+        "kind": "inclusion",
+        "hs_notation": "8711.60 & .90",
+        "sheet": "CPC3",
+        "row": 2739,
+        "column": "C",
+        "line": 1,
+        "text_sha256": "e9f15e17584222342479ab331953e6280e9952c4ece9908bf7cad3ba9812c90b"
+      }
+    ],
+    "workbook_review_rows": {
+      "27190": {
+        "row": 1058,
+        "explicit_hs2022_reference": false,
+        "empty_note_columns": [
+          "C",
+          "D"
+        ]
+      },
+      "37990": {
+        "row": 1741,
+        "explicit_hs2022_reference": false,
+        "empty_note_columns": [
+          "C",
+          "D"
+        ]
+      },
+      "46950": {
+        "row": 2502,
+        "explicit_hs2022_reference": false,
+        "empty_note_columns": [
+          "C",
+          "D"
+        ]
+      },
+      "48160": {
+        "row": 2598,
+        "explicit_hs2022_reference": false,
+        "empty_note_columns": [
+          "C",
+          "D"
+        ]
+      },
+      "89200": {
+        "row": 4241,
+        "explicit_hs2022_reference": false,
+        "empty_note_columns": [
+          "D"
+        ]
+      }
+    },
+    "hs": {
+      "4818.90": {
+        "id": "HS:2022:4818.90",
+        "label": "纸或纤维素口罩示例（多数国家）",
+        "source_kind": "classification_guidance",
+        "evidence": {
+          "resource_id": "hs2022-wco-who-medical-supplies",
+          "edition": "2022",
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/covid_19/hs-classification-reference_edition-3_en.pdf?la=pt-PT",
+          "sha256": "3504e5ac3693607b83fef0061f9c6cb9d0ab391890c0f1967937e9617bb922c5",
+          "publication_date": "2022-01-15",
+          "pdf_page": 3,
+          "lines": [
+            9,
+            11
+          ],
+          "text_sha256": "e5e063703a0ad7d43111f83df4d5c76c64af6a83f52b7836d62f15c7265cab8e"
+        }
+      },
+      "6307.90": {
+        "id": "HS:2022:6307.90",
+        "label": "无机械部件或可更换滤芯的纺织口罩示例",
+        "source_kind": "classification_guidance",
+        "evidence": {
+          "resource_id": "hs2022-wco-who-medical-supplies",
+          "edition": "2022",
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/covid_19/hs-classification-reference_edition-3_en.pdf?la=pt-PT",
+          "sha256": "3504e5ac3693607b83fef0061f9c6cb9d0ab391890c0f1967937e9617bb922c5",
+          "publication_date": "2022-01-15",
+          "pdf_page": 3,
+          "lines": [
+            12,
+            16
+          ],
+          "text_sha256": "2a0f62909fdec43e544b1fdf3ce934016ebafa50d3e53202077f241704da26e5"
+        }
+      },
+      "9020.00": {
+        "id": "HS:2022:9020.00",
+        "label": "带机械部件或可更换滤芯的防毒面具示例",
+        "source_kind": "classification_guidance",
+        "evidence": {
+          "resource_id": "hs2022-wco-who-medical-supplies",
+          "edition": "2022",
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/covid_19/hs-classification-reference_edition-3_en.pdf?la=pt-PT",
+          "sha256": "3504e5ac3693607b83fef0061f9c6cb9d0ab391890c0f1967937e9617bb922c5",
+          "publication_date": "2022-01-15",
+          "pdf_page": 3,
+          "lines": [
+            18,
+            20
+          ],
+          "text_sha256": "c499088d4e2be9fd3607b4de73dc5a7567f178706a4171340e8e80ae6d1c403e"
+        }
+      },
+      "6815.11": {
+        "id": "HS:2022:6815.11",
+        "label": "碳纤维本体",
+        "source_kind": "nomenclature_chapter",
+        "evidence": {
+          "resource_id": "hs2022-chapter68",
+          "edition": "2022",
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1368_2022e.pdf?la=en",
+          "sha256": "a87577cd153b95696c6713df8703d18c5f1219c8c48b4daba756bcaeb1d410ef",
+          "publication_date": null,
+          "pdf_page": 4,
+          "lines": [
+            35,
+            35
+          ],
+          "text_sha256": "06a0b1e38c78c15e82b54756a96b62f77711a0ec09df92d3181219829337d90a"
+        }
+      },
+      "6815.12": {
+        "id": "HS:2022:6815.12",
+        "label": "碳纤维织物",
+        "source_kind": "nomenclature_chapter",
+        "evidence": {
+          "resource_id": "hs2022-chapter68",
+          "edition": "2022",
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1368_2022e.pdf?la=en",
+          "sha256": "a87577cd153b95696c6713df8703d18c5f1219c8c48b4daba756bcaeb1d410ef",
+          "publication_date": null,
+          "pdf_page": 4,
+          "lines": [
+            36,
+            36
+          ],
+          "text_sha256": "b77cd84a9ed44339c46f4cafd80212c1efa1ba517e57c78f71d62034d25b5569"
+        }
+      },
+      "6815.13": {
+        "id": "HS:2022:6815.13",
+        "label": "其他碳纤维制品（该组限非电气用途）",
+        "source_kind": "nomenclature_chapter",
+        "evidence": {
+          "resource_id": "hs2022-chapter68",
+          "edition": "2022",
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1368_2022e.pdf?la=en",
+          "sha256": "a87577cd153b95696c6713df8703d18c5f1219c8c48b4daba756bcaeb1d410ef",
+          "publication_date": null,
+          "pdf_page": 4,
+          "lines": [
+            37,
+            37
+          ],
+          "text_sha256": "74e6c76e99762bde0d1b1c4d6a748dc7cdae6ddbdf0414d8f4fc5c63a1298b9b"
+        }
+      },
+      "6815.19": {
+        "id": "HS:2022:6815.19",
+        "label": "该非电气用组中的其他项",
+        "source_kind": "nomenclature_chapter",
+        "evidence": {
+          "resource_id": "hs2022-chapter68",
+          "edition": "2022",
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1368_2022e.pdf?la=en",
+          "sha256": "a87577cd153b95696c6713df8703d18c5f1219c8c48b4daba756bcaeb1d410ef",
+          "publication_date": null,
+          "pdf_page": 4,
+          "lines": [
+            38,
+            38
+          ],
+          "text_sha256": "c96bf041084ce468224bc27f8eedfe3e5f9577dce6999d016fb8b18b0ee3afaa"
+        }
+      },
+      "4818": {
+        "id": "HS:2022:4818",
+        "label": "CPC 3.0 注释引用的品目",
+        "source_kind": "official_cpc_note",
+        "note_cpc_id": "CPC:3.0:32193"
+      }
+    },
+    "reviews": {
+      "48160": [
+        {
+          "hs_id": "HS:2022:6307.90",
+          "status": "excluded_from_cpc",
+          "finding": "同时无机械部件和可换滤芯的防护口罩明确排除；WCO 的纺织口罩示例提供边界旁证。"
+        },
+        {
+          "hs_id": "HS:2022:4818.90",
+          "status": "scope_boundary",
+          "finding": "排除条款没有指定材料。WCO 另列纸或纤维素口罩，注明多数国家的归类及需确认的情形。"
+        },
+        {
+          "hs_id": "HS:2022:9020.00",
+          "status": "pending",
+          "finding": "WCO 对带机械部件或可换滤芯的防毒面具提供正向示例。当前两版的直接代码对应待核。"
+        }
+      ],
+      "27190": [
+        {
+          "hs_id": "HS:2022:6307.90",
+          "status": "pending",
+          "finding": "纺织口罩是有历史对应支持的候选。CPC 3.0 标题未点名口罩，说明工作簿的纳入与排除单元格为空。"
+        }
+      ],
+      "37990": [
+        {
+          "hs_id": "HS:2022:6815.11",
+          "status": "pending",
+          "finding": "碳纤维本体在 HS 单列。当前 CPC 的残余范围未逐项确认。"
+        },
+        {
+          "hs_id": "HS:2022:6815.12",
+          "status": "pending",
+          "finding": "HS 单列碳纤维织物。CPC 标题仅给出非电气用碳制品的较宽范围，织物具体归属待核。"
+        },
+        {
+          "hs_id": "HS:2022:6815.13",
+          "status": "pending",
+          "finding": "HS 区分其他非电气用碳纤维制品和织物。具体制品的 CPC 归属待核。"
+        },
+        {
+          "hs_id": "HS:2022:6815.19",
+          "status": "scope_boundary",
+          "finding": "这是同一 HS 组的其他项。历史 6815.10 的对应代码列指向该项。"
+        }
+      ],
+      "46950": [
+        {
+          "hs_id": "HS:2022:6815.13",
+          "status": "scope_boundary",
+          "finding": "CPC 46950 的电气用范围与这组 HS 6815 的非电气用边界分开。旧表列 HS 8545，具体电气制品的当前对应待核。"
+        }
+      ],
+      "89200": [
+        {
+          "hs_id": null,
+          "status": "service_context",
+          "finding": "原文涵盖受托塑料件制造服务，可包含碳纤维增强。产出制品的产品子类及 HS 归属待核。"
+        }
+      ]
+    },
+    "carbon_correlations": {
+      "rows": {
+        "6815.11": {
+          "table_i": {
+            "hs_2022": "6815.11",
+            "hs_2017": "ex6815.99",
+            "line": 38
+          },
+          "table_ii": {
+            "hs_2017": "6815.99",
+            "hs_2022": "6815.11",
+            "line": 33
+          },
+          "hs2017_partial_in_table_i": true
+        },
+        "6815.12": {
+          "table_i": {
+            "hs_2022": "6815.12",
+            "hs_2017": "ex6815.99",
+            "line": 40
+          },
+          "table_ii": {
+            "hs_2017": "6815.99",
+            "hs_2022": "6815.12",
+            "line": 34
+          },
+          "hs2017_partial_in_table_i": true
+        },
+        "6815.13": {
+          "table_i": {
+            "hs_2022": "6815.13",
+            "hs_2017": "ex6815.99",
+            "line": 42
+          },
+          "table_ii": {
+            "hs_2017": "6815.99",
+            "hs_2022": "6815.13",
+            "line": 35
+          },
+          "hs2017_partial_in_table_i": true
+        },
+        "6815.19": {
+          "table_i": {
+            "hs_2022": "6815.19",
+            "hs_2017": "6815.10",
+            "line": 44
+          },
+          "table_ii": {
+            "hs_2017": "6815.10",
+            "hs_2022": "6815.19",
+            "line": 29
+          },
+          "hs2017_partial_in_table_i": false
+        }
+      },
+      "table_i": {
+        "resource_id": "hs2022-to-hs2017-wco-table-i",
+        "edition": "2022",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-i_en.pdf?la=en",
+        "sha256": "e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361",
+        "publication_date": null,
+        "pdf_page": 17,
+        "remark_lines": [
+          38,
+          41
+        ]
+      },
+      "table_ii": {
+        "resource_id": "hs2017-to-hs2022-wco-table-ii",
+        "edition": "2017",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-ii_en.pdf?la=en",
+        "sha256": "2ca3c6fdd0e18f274c5458cc2f73fc8dc47ebe2bac4c821afdb179d1c848e1bc",
+        "publication_date": null,
+        "pdf_page": 11
+      }
+    },
+    "historical_cpc_hs": {
+      "by_flags": {
+        "HS=0;CPC=1": 4592,
+        "HS=0;CPC=0": 539,
+        "HS=1;CPC=1": 595,
+        "HS=1;CPC=0": 117
+      },
+      "rows": 5843,
+      "selected": {
+        "32193": [
+          {
+            "hs_id": "HS:2017:4818.90",
+            "cpc_id": "CPC:2.1:32193",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 2838
+          }
+        ],
+        "27190": [
+          {
+            "hs_id": "HS:2017:6307.10",
+            "cpc_id": "CPC:2.1:27190",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3689
+          },
+          {
+            "hs_id": "HS:2017:6307.20",
+            "cpc_id": "CPC:2.1:27190",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3690
+          },
+          {
+            "hs_id": "HS:2017:6307.90",
+            "cpc_id": "CPC:2.1:27190",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3691
+          }
+        ],
+        "37990": [
+          {
+            "hs_id": "HS:2017:6806.10",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3761
+          },
+          {
+            "hs_id": "HS:2017:6806.20",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3762
+          },
+          {
+            "hs_id": "HS:2017:6806.90",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3763
+          },
+          {
+            "hs_id": "HS:2017:6814.10",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3786
+          },
+          {
+            "hs_id": "HS:2017:6814.90",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3787
+          },
+          {
+            "hs_id": "HS:2017:6815.10",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3788
+          },
+          {
+            "hs_id": "HS:2017:6815.20",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3789
+          },
+          {
+            "hs_id": "HS:2017:6815.99",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 3791
+          },
+          {
+            "hs_id": "HS:2017:9620.00",
+            "cpc_id": "CPC:2.1:37990",
+            "hs_partial": "1",
+            "cpc_partial": "1",
+            "csv_line": 5827
+          }
+        ],
+        "46950": [
+          {
+            "hs_id": "HS:2017:8545.11",
+            "cpc_id": "CPC:2.1:46950",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5313
+          },
+          {
+            "hs_id": "HS:2017:8545.19",
+            "cpc_id": "CPC:2.1:46950",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5314
+          },
+          {
+            "hs_id": "HS:2017:8545.20",
+            "cpc_id": "CPC:2.1:46950",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5315
+          },
+          {
+            "hs_id": "HS:2017:8545.90",
+            "cpc_id": "CPC:2.1:46950",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5316
+          }
+        ],
+        "48160": [
+          {
+            "hs_id": "HS:2017:9019.10",
+            "cpc_id": "CPC:2.1:48160",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5545
+          },
+          {
+            "hs_id": "HS:2017:9019.20",
+            "cpc_id": "CPC:2.1:48160",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5546
+          },
+          {
+            "hs_id": "HS:2017:9020.00",
+            "cpc_id": "CPC:2.1:48160",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5547
+          }
+        ]
+      },
+      "evidence": {
+        "resource_id": "cpc21-hs2017-unsd-correspondence",
+        "edition": "2.1",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/tables/CPC/CPCv21_HS2017/CPC21-HS2017.csv",
+        "sha256": "a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c",
+        "publication_date": null
+      }
+    }
+  },
   "note_entries": [
     {
       "id": "CPC:3.0:17400",
@@ -115,8 +1481,9 @@
   "reproducibility": {
     "pdftotext": "pdftotext version 26.04.0",
     "parser_sha256": {
-      "cpc_view.html": "22987f77a818f48558bf4fca9d1dccb18b67325100d9b5404987cc872faee396",
-      "cpc.py": "5976f28a4fca29a211f38a14d0df9b4cdaa5fd226c6e1de6821095351573d625"
+      "cpc_view.html": "23f29d1877b766007960b585b618df8f46d9a0e2e1ad6589f039540120ef48d1",
+      "cpc.py": "34cc167ea69daa737675370800d4296a0165d2da641d15aef76f3e619141fa65",
+      "cpc_hs.py": "286caa7786b5555e5b8ca66e37aa8a490c12d17bcb78ef635e967fa85e588e5f"
     }
   }
 }

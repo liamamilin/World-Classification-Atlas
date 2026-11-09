@@ -568,7 +568,7 @@
       ],
       "official_url": "https://unstats.un.org/unsd/classifications/econ/",
       "verification_status": "partially_verified",
-      "checked_on": "2026-11-08",
+      "checked_on": "2026-11-09",
       "editions": [
         {
           "id": "3.0",
@@ -632,6 +632,20 @@
             "url": "https://unstats.un.org/unsd/classifications/unsdclassifications/cpcv21.pdf",
             "status": "official_publication_available",
             "semantics": "手册表内官方对应列；HS2007打印标签及HS2012更正说明分别保留。不证明产品和行业概念等价，不自动生成跨ISIC版本关系。"
+          },
+          {
+            "from_edition": "CPC3.0",
+            "to_edition": "HS2022",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+            "status": "embedded_official_references_verified",
+            "semantics": "说明中的定义、局部纳入和排除引用按单元格保留。"
+          },
+          {
+            "from_edition": "CPC3.0",
+            "to_edition": "HS2022",
+            "url": "https://unstats.un.org/unsd/classifications/Econ/CPC",
+            "status": "standalone_table_pending",
+            "semantics": "核查公开对应表目录未见完整表。2026 年 5 月 UNSD 培训资料仍列为进行中。"
           }
         ]
       },
@@ -676,10 +690,19 @@
             "official_mappings"
           ],
           "finding": "2025-04-03 Readme要求优先使用更新的XLSX；保留2015 PDF但不称其为已含更正，HS2007/2012引用差异单独处理。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Workshops/AddisAbaba2026/Session4-Introduction-to-the-CPC-Ver-3-0.pdf",
+          "method": "publisher_workshop_review",
+          "fields": [
+            "official_mappings"
+          ],
+          "finding": "物理第 46 页将 CPC 3.0 与 HS 2022 对应表列为进行中。"
         }
       ],
       "unresolved": [
-        "再分发适用条款待逐文件确认"
+        "再分发适用条款待逐文件确认",
+        "CPC 3.0 与 HS 2022 完整对应表的公开下载和重点条目归属待核。"
       ]
     },
     {
@@ -693,10 +716,16 @@
       "domains": [
         "02-products"
       ],
-      "official_url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
+      "official_url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/hs-nomenclature-2022-edition.aspx",
       "verification_status": "partially_verified",
-      "checked_on": "2026-11-08",
+      "checked_on": "2026-11-09",
       "editions": [
+        {
+          "id": "2017",
+          "label": "HS2017",
+          "status": "confirmed_historical",
+          "latest_claim": false
+        },
         {
           "id": "2022",
           "label": "2022",
@@ -722,7 +751,7 @@
         "counts": null
       },
       "download": {
-        "landing_url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
+        "landing_url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/hs-nomenclature-2022-edition.aspx",
         "formats": [
           "pdf"
         ],
@@ -730,7 +759,7 @@
       },
       "license": {
         "name": null,
-        "url": null,
+        "url": "https://www.wcoomd.org/en/copyright.aspx",
         "access": "public_metadata",
         "download": null,
         "local_processing": null,
@@ -738,7 +767,7 @@
         "derivatives": null,
         "attribution": null,
         "status": "pending",
-        "note": "逐文件核实；公开网页不等于开放许可。"
+        "note": "第 68 章、参考指南和两张对应表的原件仅本地参考。其余资料逐文件核实。"
       },
       "official_mappings": {
         "status": "official_entry_verified",
@@ -749,6 +778,13 @@
             "url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx",
             "status": "official_entry_verified",
             "semantics": "官方 correlation tables，有 corrigenda；不可将部分对应自动转 exact。"
+          },
+          {
+            "from_edition": "HS2022 / HS2017",
+            "to_edition": "HS2017 / HS2022",
+            "url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/correlation-tables-hs-2017-2022.aspx?p=1",
+            "status": "official_publication_available",
+            "semantics": "WCO 表 I 和表 II，保存原列方向及 ex 部分对应；发布者注明为实施参考。"
           }
         ]
       },
@@ -765,6 +801,24 @@
             "download"
           ],
           "finding": "HS2022 现行；HS2028 已公布、2028-01-01 才生效；UN Comtrade 提供的摘录不等于 WCO 全套注释。"
+        },
+        {
+          "url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/correlation-tables-hs-2017-2022.aspx?p=1",
+          "method": "official_page_review",
+          "fields": [
+            "editions",
+            "official_mappings"
+          ],
+          "finding": "WCO 同时发布两版双向对应。样本文件仅本地参考，版权保留。"
+        },
+        {
+          "url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/hs-nomenclature-2022-edition.aspx",
+          "method": "official_page_review",
+          "fields": [
+            "download",
+            "hierarchy"
+          ],
+          "finding": "WCO 的 HS 2022 税则逐章提供 PDF，含第 68 章。"
         }
       ],
       "unresolved": [

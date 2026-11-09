@@ -25,7 +25,7 @@
       "metadata_status": {
         "partially_verified": 10
       },
-      "sources_with_local_files": 2,
+      "sources_with_local_files": 3,
       "sources_with_parsed_files": 1
     },
     {
@@ -165,13 +165,13 @@
     }
   ],
   "unsd_family_discovered_candidates": 149,
-  "planned_resources": 53,
-  "pinned_resources": 51,
-  "sources_with_local_files": 10,
+  "planned_resources": 61,
+  "pinned_resources": 59,
+  "sources_with_local_files": 11,
   "parsed_resources": 8,
   "resource_status": {
     "parsed": 8,
-    "format_checked_only": 43,
+    "format_checked_only": 51,
     "blocked_rights": 2
   },
   "economic_activity_research": {
@@ -2147,6 +2147,94 @@
         "status": "official_correspondence_parsed",
         "rows": 1242
       }
+    },
+    {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "source_id": "UN_CPC",
+      "edition": "3.0",
+      "role": "structure_and_explanatory_notes",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-notes-xlsx-20250630/fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b/cpc3-notes-xlsx-20250630.xlsx",
+      "bytes": 332423,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "cpc3-correspondence-listing-20261109",
+      "source_id": "UN_CPC",
+      "edition": "3.0",
+      "role": "publisher_correspondence_listing",
+      "sha256": "22e584a275ea39747e23ffd5205f9a55eaa2f5b67c9f325ba20671c7f859c736",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-correspondence-listing-20261109/22e584a275ea39747e23ffd5205f9a55eaa2f5b67c9f325ba20671c7f859c736/cpc3-correspondence-listing-20261109.html",
+      "bytes": 61125,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "cpc3-hs2022-status-202605",
+      "source_id": "UN_CPC",
+      "edition": "3.0",
+      "role": "publisher_correspondence_status",
+      "sha256": "782176cf5b9002c88c7a7b87e8f1dcdd16ed8b39107d8da276750992d46a7336",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-hs2022-status-202605/782176cf5b9002c88c7a7b87e8f1dcdd16ed8b39107d8da276750992d46a7336/cpc3-hs2022-status-202605.pdf",
+      "bytes": 1429992,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "hs2022-chapter68",
+      "source_id": "HS",
+      "edition": "2022",
+      "role": "nomenclature_chapter",
+      "sha256": "a87577cd153b95696c6713df8703d18c5f1219c8c48b4daba756bcaeb1d410ef",
+      "path": "data/local/raw/HS/2022/hs2022-chapter68/a87577cd153b95696c6713df8703d18c5f1219c8c48b4daba756bcaeb1d410ef/hs2022-chapter68.pdf",
+      "bytes": 159187,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "hs2022-wco-who-medical-supplies",
+      "source_id": "HS",
+      "edition": "2022",
+      "role": "classification_guidance",
+      "sha256": "3504e5ac3693607b83fef0061f9c6cb9d0ab391890c0f1967937e9617bb922c5",
+      "path": "data/local/raw/HS/2022/hs2022-wco-who-medical-supplies/3504e5ac3693607b83fef0061f9c6cb9d0ab391890c0f1967937e9617bb922c5/hs2022-wco-who-medical-supplies.pdf",
+      "bytes": 676017,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "hs2022-to-hs2017-wco-table-i",
+      "source_id": "HS",
+      "edition": "2022",
+      "role": "correspondence_table",
+      "sha256": "e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361",
+      "path": "data/local/raw/HS/2022/hs2022-to-hs2017-wco-table-i/e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361/hs2022-to-hs2017-wco-table-i.pdf",
+      "bytes": 652048,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "hs2017-to-hs2022-wco-table-ii",
+      "source_id": "HS",
+      "edition": "2017",
+      "role": "correspondence_table",
+      "sha256": "2ca3c6fdd0e18f274c5458cc2f73fc8dc47ebe2bac4c821afdb179d1c848e1bc",
+      "path": "data/local/raw/HS/2017/hs2017-to-hs2022-wco-table-ii/2ca3c6fdd0e18f274c5458cc2f73fc8dc47ebe2bac4c821afdb179d1c848e1bc/hs2017-to-hs2022-wco-table-ii.pdf",
+      "bytes": 341830,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "cpc21-hs2017-unsd-correspondence",
+      "source_id": "UN_CPC",
+      "edition": "2.1",
+      "role": "correspondence_table",
+      "sha256": "a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c",
+      "path": "data/local/raw/UN_CPC/2.1/cpc21-hs2017-unsd-correspondence/a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c/cpc21-hs2017-unsd-correspondence.csv",
+      "bytes": 111062,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
     }
   ]
 }

@@ -1,0 +1,18 @@
+[
+  {
+    "resource_id": "cpc21-hs2017-unsd-correspondence",
+    "source_id": "UN_CPC",
+    "edition": "2.1",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/tables/CPC/CPCv21_HS2017/CPC21-HS2017.csv",
+    "attempted_at": "2026-11-09T05:33:33.371855+00:00",
+    "sha256": "a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c",
+    "path": "data/local/raw/UN_CPC/2.1/cpc21-hs2017-unsd-correspondence/a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c/cpc21-hs2017-unsd-correspondence.csv",
+    "bytes": 111062,
+    "final_url": "https://unstats.un.org/unsd/classifications/Econ/tables/CPC/CPCv21_HS2017/CPC21-HS2017.csv",
+    "http_status": 200,
+    "content_type": "application/octet-stream",
+    "etag": "\"bc193d443d4d61:0\"",
+    "last_modified": "Fri, 27 Mar 2020 13:40:23 GMT",
+    "status": "downloaded"
+  }
+]

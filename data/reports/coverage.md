@@ -4,12 +4,12 @@
 
 登记 53 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-53 个采集任务，51 个已锁定且通过格式检查，涉及 10 个来源；8 个资源可解析。
+61 个采集任务，59 个已锁定且通过格式检查，涉及 11 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
 | 01-economy 经济与行业 | 8 | 5 | 1 |
-| 02-products 产品与服务 | 10 | 2 | 1 |
+| 02-products 产品与服务 | 10 | 3 | 1 |
 | 03-consumption 消费与支出 | 4 | 2 | 2 |
 | 04-knowledge 学科与知识 | 6 | 0 | 0 |
 | 05-occupations 职业与技能 | 4 | 1 | 1 |
@@ -81,6 +81,14 @@
 | naf-2025-notes-2025 | 2025 | format_checked_only; economy: {'status': 'selected_activity_notes_parsed'} | 未统计 | — |
 | naf-rev2-to-2025-202610 | Rev.2 | format_checked_only; economy: {'status': 'official_correspondence_parsed', 'rows': 1242} | 未统计 | — |
 | naf-2025-to-rev2-202610 | 2025 | format_checked_only; economy: {'status': 'official_correspondence_parsed', 'rows': 1242} | 未统计 | — |
+| cpc3-notes-xlsx-20250630 | 3.0 | format_checked_only | 未统计 | — |
+| cpc3-correspondence-listing-20261109 | 3.0 | format_checked_only | 未统计 | — |
+| cpc3-hs2022-status-202605 | 3.0 | format_checked_only | 未统计 | — |
+| hs2022-chapter68 | 2022 | format_checked_only | 未统计 | — |
+| hs2022-wco-who-medical-supplies | 2022 | format_checked_only | 未统计 | — |
+| hs2022-to-hs2017-wco-table-i | 2022 | format_checked_only | 未统计 | — |
+| hs2017-to-hs2022-wco-table-ii | 2017 | format_checked_only | 未统计 | — |
+| cpc21-hs2017-unsd-correspondence | 2.1 | format_checked_only | 未统计 | — |
 
 经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 
@@ -105,8 +113,8 @@ NACE Rev.2.1完整解析1047节点；家具分支33节点，含2个沿用身份�
 - NAICS: 公开再分发许可待核实。 [官方入口](https://www.census.gov/naics/)
 - NACE: 当前NACE2.1与ISIC5直接官方对应在已审计Cellar命名图及下载清单未观察到；保留开放，不把空结果解释为官方无对应。；家具表面处理在旧31.01/31.09的对应表与定义陈述不同；材料细类、旧部件范围继续待审。陶瓷家具部分已按明确官方活动分配审定，旧卫生洁具整类冲突仍保留。；官方NACE2–ISIC4两来源在46.6→466/465存在一对代码差异；原值及2011更改历史均保留。；本轮仍为家具与边界活动的局部整理，非全NACE或全经济活动融合。。 [官方入口](https://ec.europa.eu/eurostat/web/nace/)
 - GBT4754: 公开再分发许可待核实；官方映射及精确端点版本待核实。 [官方入口](https://www.stats.gov.cn/sj/tjbz/gjtjbz/202302/t20230213_1902779.html)
-- UN_CPC: 再分发适用条款待逐文件确认。 [官方入口](https://unstats.un.org/unsd/classifications/econ/)
-- HS: 公开再分发许可待核实。 [官方入口](https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2028-edition/correlation-tables-hs-2022-2028.aspx)
+- UN_CPC: 再分发适用条款待逐文件确认；CPC 3.0 与 HS 2022 完整对应表的公开下载和重点条目归属待核。。 [官方入口](https://unstats.un.org/unsd/classifications/econ/)
+- HS: 公开再分发许可待核实。 [官方入口](https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/hs-nomenclature-2022-edition.aspx)
 - UNSPSC: 公开再分发许可待核实；官方映射及精确端点版本待核实；明确版本待核实；五层名称及可选层级需核查原文件。 [官方入口](https://www.undp.org/unspsc)
 - ECLASS: 官方映射及精确端点版本待核实；原始层级待文件或手册核实。 [官方入口](https://eclass.eu/en/eclass-standard/releases)
 - COICOP: 再分发适用条款待逐文件确认。 [官方入口](https://unstats.un.org/unsd/classifications/econ/)
