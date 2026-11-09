@@ -380,7 +380,7 @@
       "isic_boundaries.py": "003be7ca8c42c216ef8ffe82b779866e7bc0aceeb641f8e383e9cad53141d838",
       "xlsx.py": "c23f6876d392538ff6621a4ae04cb4070a880621b2bdf5eb8189af945115d4eb",
       "normalize.py": "a3f60df71eca8916a492ebc9fbc715eb254a35362d146f6f35406680a58f1192",
-      "economy_view.html": "c7fb53cb61762b88e0bb7a14376879606b0eb2fc748d43609630bbf8476ff245"
+      "economy_view.html": "2d7f64096dfcc1efcbd95336476f4dc443c51242cf311e2f4f9383ce0bfef260"
     },
     "review_decisions_sha256": "4b70c73367d86a67a40eb0cdcc8c0df23797a328b7dbdb8c2e52ba9e81fc22e4",
     "expanded_review_sha256": "72da016a2b5367dfad13e5d732fa0f783b350524ca2a38d8440045ed75a5f538",
@@ -434,7 +434,7 @@
   "outputs": {
     "local_directory": "data/local/economy/isic"
   },
-  "view_sha256": "5e18fbe91d0b08c01a4411e5c29b8264b610c295758610901b21b8789d697fd4",
+  "view_sha256": "2d1ec0ecfc7b5f6d6d8fddb7a0ca26b7d95c30e1169a320682c47d449aaa84bd",
   "automatic_concept_merges": 0,
   "limits": [
     "UN raw data and full derived notes/mappings are local-only pending redistribution rights.",

@@ -46,6 +46,15 @@ const queue = new Map(data.review.queue.map(row => [row.mapping_id, row]));
 const cases = new Map([...data.review.cases.map(row => [row.mapping_id, row]),
   ...data.review.supplemental_mappings.map(row => [row.id, row])]);
 const claims = new Map(data.dossiers.map(claim => [claim.id, claim]));
+// These existing evidence selectors are located on the named classes' PDF pages.
+const errataPdfClaims = {
+  '1050': ['C086'],
+  '1105': ['C087'],
+  '1312': ['C088'],
+  '2011': ['C091'],
+  '2420': ['C089', 'C092'],
+  '3530': ['C090']
+};
 const stats = data.review.statistics;
 el('stats').textContent = `Rev.4 ${data.old.length} 个节点 · Rev.5 ${data.new.length} 个节点 · ${data.edges.length} 条官方对应 · 已审关系 ${stats.mapping_status.reviewed_current_relation} 条 · 研究补充 ${stats.supplemental_mapping_status.accepted_scoped_overlap || 0} 条 · Atlas 类锚点 ${stats.reviewed_rev5_classes} 个 + 自有活动 ${stats.directory_kinds.reviewed_activity_slice || 0} 个 · 开放问题 ${stats.unresolved_issues} 项`;
 
@@ -185,6 +194,12 @@ function showErrata(node, out) {
     make('p', review.priority_finding.status, box);
     make('p', review.priority_finding.rationale, box);
     showClaims(box, review.priority_finding.claim_ids);
+  }
+  const pdfClaims = errataPdfClaims[node.code];
+  if (pdfClaims) {
+    const pdfs = disclosure(box, '手册与勘误 PDF 旁证');
+    pdfs.id = 'errata-pdf-evidence';
+    showClaims(pdfs, pdfClaims);
   }
 }
 function showIssues(node, out) {
