@@ -7,6 +7,7 @@ class Element {
   constructor(tag){this.tag=tag;this.children=[];this.textContent='';this.style={};this.value='';}
   appendChild(child){this.children.push(child);return child;}
   replaceChildren(...children){this.children=[...children];}
+  setAttribute(name,value){this[name]=value;}
 }
 const elements=new Map(['data','scheme','search','tree','detail','stats','issues','audit'].map(k=>[k,new Element(k)]));
 elements.get('data').textContent=payload;elements.get('scheme').value='atlas';

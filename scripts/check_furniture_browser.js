@@ -7,6 +7,7 @@ const { tmpdir } = require('node:os');
 const path = require('node:path');
 const { setTimeout: delay } = require('node:timers/promises');
 const { fileURLToPath, pathToFileURL } = require('node:url');
+const checkNaceIsic = require('./check_furniture_nace_isic');
 
 const root = path.resolve(__dirname, '..');
 const chrome = process.env.ATLAS_CHROME ||
@@ -151,29 +152,47 @@ async function run(temp, browser) {
     assert.equal(createHash('sha256').update(bytes).digest('hex'), pins[resource].sha256, resource);
     return url.href;
   }
-  async function openPdf(claim, resource, physicalPage, excerpt) {
-    const index = await evaluate(`Array.from(document.querySelectorAll('#approved-bindings > details'))
-      .findIndex(node => node.firstElementChild.innerText.startsWith(${json(claim + ' · ')}))`);
-    assert.ok(index >= 0, claim);
-    const details = '#approved-bindings > details:nth-of-type(' + (index + 1) + ')';
-    await click(details + ' > summary');
-    if (excerpt) assert.ok((await text(details + '[open] > pre')).includes(excerpt));
-    const link = details + '[open] > .reference a';
-    const url = await original(link, resource, '#page=' + physicalPage);
-    await click(link);
-    let targets;
-    const target = await until(async () => {
-      targets = (await send('Target.getTargets')).targetInfos;
-      return targets.find(target => target.type === 'page' && target.targetId !== targetId && target.url === url);
-    }, resource + ' PDF tab').catch(error => {
-      throw new Error(error.message + '\nExpected ' + url + '\nOpened ' + targets.map(target => target.url).join('\n'));
-    });
-    const pdf = await send('Target.attachToTarget', { targetId: target.targetId, flatten: true });
+  async function expand(group, summary) {
+    const index = await evaluate(`Array.from(document.querySelectorAll(${json(group + ' > details')}))
+      .findIndex(node => node.firstElementChild.innerText.startsWith(${json(summary)}))`);
+    assert.ok(index >= 0, summary);
+    const details = group + ' > details:nth-of-type(' + (index + 1) + ')';
+    if (!(await exists(details + '[open]'))) await click(details + ' > summary');
+    return details + '[open]';
+  }
+  async function openOriginal(selector, resource, { pdfPage, mode = 'download' } = {}) {
+    const url = await original(selector, resource, pdfPage ? '#page=' + pdfPage : '');
+    let download;
+    if (mode !== 'pdf') {
+      const folder = fs.mkdtempSync(path.join(temp, 'download-'));
+      await send('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath: folder });
+      download = path.join(folder, path.basename(fileURLToPath(url)));
+    }
+    await click(selector);
+    const opened = await until(async () => {
+      if (download && fs.existsSync(download)) return { download };
+      if (mode === 'download') return undefined;
+      const { targetInfos } = await send('Target.getTargets');
+      return targetInfos.find(tab => tab.type === 'page' && tab.targetId !== targetId && tab.url === url);
+    }, resource + ' original');
+    if (opened.download) {
+      assert.equal(createHash('sha256').update(fs.readFileSync(download)).digest('hex'), pins[resource].sha256);
+      return;
+    }
+    const originalTab = await send('Target.attachToTarget', { targetId: opened.targetId, flatten: true });
+    const expected = mode === 'text' ? '/^(text\\/plain|application\\/json|text\\/csv)$/.test(document.contentType)' :
+      'document.contentType === "application/pdf"';
     await until(async () => (await send('Runtime.evaluate', {
-      expression: 'document.contentType === "application/pdf" && document.readyState === "complete"',
+      expression: 'document.readyState === "complete" && ' + expected,
       returnByValue: true
-    }, pdf.sessionId)).result.value, resource + ' loaded PDF');
-    await send('Target.closeTarget', { targetId: target.targetId });
+    }, originalTab.sessionId)).result.value, resource + ' loaded original');
+    await send('Target.closeTarget', { targetId: opened.targetId });
+  }
+  async function openClaim(group, claim, resource, { excerpt, locator, ...options } = {}) {
+    const details = await expand(group, claim + ' · ');
+    if (excerpt) assert.ok((await text(details + ' > pre')).includes(excerpt), claim + ' excerpt');
+    if (locator) assert.ok((await text(details + ' > .reference')).includes(locator), claim + ' locator');
+    await openOriginal(details + ' > .reference a', resource, options);
   }
 
   await navigate(path.join(root, registry));
@@ -193,7 +212,7 @@ async function run(temp, browser) {
   await toNode('#approved-backlinks', whole, wholeTitle, 'atlas');
   assert.match(await text('#approved-bindings'), /FR_NAF:Rev\.2:31\.01Z · broadMatch/);
   assert.match(await text('#approved-bindings'), /FR_NAF:2025:31\.00G · broadMatch/);
-  await openPdf('FN001', 'naf-rev2-cpf21-notes-2020', 422);
+  await openClaim('#approved-bindings', 'FN001', 'naf-rev2-cpf21-notes-2020', { pdfPage: 422, mode: 'pdf' });
   await toNode('#approved-bindings', old, /^31\.01Z /, 'FR_NAF:Rev.2');
   await toNode('#pending-backlinks', part, partTitle, 'atlas');
   assert.match(await text('#candidate-bindings'), /FR_NAF:Rev\.2:31\.01Z · 未批准关系/);
@@ -201,7 +220,9 @@ async function run(temp, browser) {
   assert.match(await text('#candidate-bindings'), /"status": "pending_specialist_scope"/);
   assert.match(await text('#approved-bindings'), /FR_NAF:2025:31\.00G · broadMatch/);
   assert.equal(await exists(linksTo('#approved-bindings', old)), false);
-  await openPdf('FN003', 'naf-2025-notes-2025', 160, 'la fabrication de composants intégrés pour meubles de magasin');
+  await openClaim('#approved-bindings', 'FN003', 'naf-2025-notes-2025', {
+    pdfPage: 160, mode: 'pdf', excerpt: 'la fabrication de composants intégrés pour meubles de magasin'
+  });
   await toNode('#candidate-bindings', old, /^31\.01Z /, 'FR_NAF:Rev.2');
   await evaluate('history.back()');
   await expectNode(part, partTitle, 'atlas');
@@ -212,8 +233,6 @@ async function run(temp, browser) {
   await toNode('#approved-bindings', old, /^31\.01Z /, 'FR_NAF:Rev.2');
   console.log('Passed: both directions of reviewed and pending bindings, stable history, PDF pages 422 and 160.');
 
-  const downloads = path.join(temp, 'downloads');
-  await send('Browser.setDownloadBehavior', { behavior: 'allow', downloadPath: downloads });
   for (const [resource, locator, from, to, title, scheme] of [
     ['naf-rev2-to-2025-202610', 'NAF rév. 2 vers NAF 2025 · 第 383 行', old, current, /^31\.00G /, 'FR_NAF:2025'],
     ['naf-2025-to-rev2-202610', 'correspondance inversée NAF · 第 382 行', current, old, /^31\.01Z /, 'FR_NAF:Rev.2']
@@ -228,17 +247,14 @@ async function run(temp, browser) {
     assert.match(await text(opened + ' > pre'), /"publisher_mapping_type": "Multiple"/);
     assert.match(await text(opened + ' > summary'), /relatedMatch/);
     assert.ok((await text(opened + ' > .reference')).includes(locator));
-    const link = opened + ' > .reference a';
-    const originalUrl = await original(link, resource);
-    await click(link);
-    const downloaded = path.join(downloads, path.basename(fileURLToPath(originalUrl)));
-    await until(() => fs.existsSync(downloaded), resource + ' workbook download');
-    assert.equal(createHash('sha256').update(fs.readFileSync(downloaded)).digest('hex'), pins[resource].sha256);
+    await openOriginal(opened + ' > .reference a', resource);
     await toNode(opened, to, title, scheme);
   }
+  console.log('Passed: NAF official rows 383 and 382 and both workbook downloads match their pins.');
+  await checkNaceIsic({ page, evaluate, text, exists, click, toNode, expand, openClaim, openOriginal });
   await click('nav[aria-label="经济活动导航"] a');
   await until(() => evaluate('document.querySelector("#domain")?.value === "01-economy"'), 'registry return');
-  console.log('Passed: official rows 383 and 382, both workbook downloads match their pins, registry return.');
+  console.log('Passed: registry return restores the economy filter.');
 
   const fixture = path.join(temp, 'fixture');
   for (const file of ['data/registry', 'data/source-candidates.csv', 'data/resources.lock.json',

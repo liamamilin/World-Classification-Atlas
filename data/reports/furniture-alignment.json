@@ -1891,7 +1891,7 @@
       "furniture_materials.py": "6a93882d7800a18de089e4898f6a834c0282acabcc23a29706a5b1589b3875c8",
       "furniture_contracts.py": "8a376ff136672f6189e202b9cbd9822c0cc22be28ee2078db6add3551050eba6",
       "furniture_naf.py": "c4d6d38e9d187334799a8b6ff08c3be3426f108269f6166d67e44eacb412131d",
-      "furniture_view.html": "4ffb76f4651af53ef57b6349c531941e26729ac4a95eaf3ade7d02e1e6efcffd",
+      "furniture_view.html": "3ba37d577d198a33a40b886971cf5c368c2f5e080899f81e62afd363a4446614",
       "isic.py": "a44cfdb15f5dc2c4d3899b417d02773202ee1e0f0be34958b5a5a562e634a426",
       "isic_boundaries.py": "003be7ca8c42c216ef8ffe82b779866e7bc0aceeb641f8e383e9cad53141d838",
       "isic_priority.py": "c82f8758119023bd1d570157b78bb577978caa873e113d3798a615bc44b3c430",
@@ -1904,5 +1904,5 @@
     "Every furniture leaf has scoped research coverage; complete class equivalence remains unapproved.",
     "NACE2 extraction is selected, not a full old scheme; no real-world entities or allocation weights."
   ],
-  "view_sha256": "0841b3b0c3ebb8fc349e98379ef6052e930dec3f65bdf32cc67e230620cba5e8"
+  "view_sha256": "26a4c3eacb5c1b2646dc574153894159e3e89cafefc413d82146576a6dcab80c"
 }

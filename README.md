@@ -45,7 +45,7 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 - [家具材料细类、旧部件与卫生洁具对应核查](docs/15-FURNITURE-MATERIAL-BOUNDARIES.md)
 - [独立承包处理、旧木制部件与官方修订复查](docs/16-FURNITURE-CONTRACT-PARTS-RECHECK.md)
 - [法国 NAF 双向对应、专业家具涂装与店铺内置装置](docs/17-FURNITURE-NAF-BOUNDARIES.md)
-- [家具离线浏览试点与 Chrome 实测](docs/18-FURNITURE-OFFLINE-BROWSER.md)
+- [家具离线浏览及 NAF、NACE、ISIC 的 Chrome 实测](docs/18-FURNITURE-OFFLINE-BROWSER.md)
 - [原始分类体系候选清单（机器可读）](data/source-candidates.csv)
 - [Codex 项目协作说明](AGENTS.md)
 

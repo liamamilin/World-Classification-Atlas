@@ -3,6 +3,18 @@
 <title>家具制造 · ISIC、NACE 和 NAF</title>
 <style>
 body{font:15px/1.6 system-ui,sans-serif;color:#20323b;background:#f5f7f7;margin:0}header{padding:22px 28px;background:#183c49;color:white}h1{margin:0;font-size:25px}main{padding:22px;max-width:1500px;margin:auto}label{display:inline-block;margin:0 16px 14px 0}input,select{padding:8px;border:1px solid #a8bac0;border-radius:5px;font:inherit}.grid{display:grid;grid-template-columns:minmax(220px,320px) minmax(0,1fr);gap:20px}section{background:white;border:1px solid #d6e0e1;border-radius:7px;padding:18px}button{display:block;text-align:left;background:#eef4f5;border:1px solid #d2dfe2;border-radius:4px;padding:7px 10px;margin:4px 0;cursor:pointer;color:#174d61;font:inherit}button:hover,button[aria-pressed=true]{background:#d7e9ed}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#f4f6f6;padding:12px;font:13px/1.5 ui-monospace,monospace}small{color:#56717a}h2{font-size:20px}h3{font-size:16px}summary{cursor:pointer}details{margin:9px 0;border-bottom:1px solid #dce5e7;padding-bottom:9px}.pending{color:#865407}.badge{display:inline-block;padding:2px 7px;background:#e1eeee;border-radius:4px}.note{max-width:1000px}a{color:#166581}header a{color:#d3eef4}header nav a{margin-right:18px}.node-link{display:block;margin:5px 0;padding:5px 8px;overflow-wrap:anywhere}.node-link[aria-current]{background:#d7e9ed}.reference{margin:6px 0;overflow-wrap:anywhere}@media(max-width:800px){.grid{grid-template-columns:1fr}main{padding:12px}}
+body{overflow-wrap:anywhere}
+.grid>section{min-width:0}
+#detail{scroll-margin-top:12px}
+#official-gaps{margin-top:18px;border-left:4px solid #865407}
+.gap-endpoints{display:flex;flex-wrap:wrap;gap:6px 14px}
+.gap-endpoints .node-link{margin:0;padding:4px 0}
+.reference a{display:inline-block}
+@media(max-width:800px){
+  .grid{grid-template-columns:minmax(0,1fr)}
+  label{max-width:100%;margin-right:0}
+  input,select{box-sizing:border-box;max-width:100%}
+}
 </style>
 <header>
   <nav aria-label="经济活动导航"><a href="../../../reports/registry.html?domain=01-economy">返回经济活动来源注册表</a></nav>
@@ -27,6 +39,7 @@ const source = new Map(D.sources.map(node => [node.id, node]));
 const atlas = new Map(D.directory.concepts.map(node => [node.id, node]));
 const evidence = new Map(D.evidence.map(item => [item.id, item]));
 const originalFiles = D.original_files || {};
+const researchById = new Map(D.directory.research_mappings.map(edge => [edge.id, edge]));
 
 function el(tag, text, parent) {
   const node = document.createElement(tag);
@@ -43,8 +56,11 @@ function reference(item, parent) {
   if (!item) return;
   const line = el('p', undefined, parent);
   line.className = 'reference';
-  const locator = [item.resource_id, item.sheet, item.row && '第 ' + item.row + ' 行',
-    item.pdf_page && 'PDF 物理第 ' + item.pdf_page + ' 页'].filter(Boolean).join(' · ');
+  const row = item.row || item.line;
+  const resultRows = item.field_result_row || item.result_row || item.result_rows?.join('、');
+  const locator = [item.resource_id, item.sheet, row && '第 ' + row + ' 行',
+    item.pdf_page && 'PDF 物理第 ' + item.pdf_page + ' 页', item.table,
+    item.key && '代码 ' + item.key, resultRows && '结果行 ' + resultRows].filter(Boolean).join(' · ');
   el('small', locator + ' ', line);
   const file = originalFiles[item.resource_id];
   if (file) {
@@ -89,6 +105,30 @@ function nodeLink(id, label, parent) {
   return link;
 }
 
+function officialGap(gap, parent) {
+  const details = el('details', undefined, parent);
+  details.setAttribute('data-gap', gap.id);
+  el('summary', '核查表中缺行 · ' + gap.absent_from + ' → ' + gap.absent_to, details);
+  el('p', '在锁定的官方对应资料中核查 ' + gap.table_rows_checked + ' 条发布记录，该方向缺行。' + gap.limit, details);
+  reference(gap.evidence, details);
+  const endpoints = el('div', undefined, details);
+  endpoints.className = 'gap-endpoints';
+  nodeLink(gap.absent_from, '查看起点 · ' + gap.absent_from, endpoints);
+  nodeLink(gap.absent_to, '查看终点 · ' + gap.absent_to, endpoints);
+  const research = researchById.get(gap.research_mapping_id);
+  if (research) el('p', 'Atlas 研究关系 · ' + research.relation + '。' + research.rationale, details);
+  const adjacent = el('details', undefined, details);
+  el('summary', '相邻官方记录与定位', adjacent);
+  for (const row of gap.adjacent_rows) {
+    el('p', row.from + ' → ' + row.to, adjacent);
+    reference(row.evidence, adjacent);
+  }
+  const metadata = el('details', undefined, details);
+  el('summary', '完整核查记录', metadata);
+  json(gap, metadata);
+  for (const id of gap.claim_ids) claim(id, details);
+}
+
 const bindingBasis = {
   group_inclusion_and_material_class_scope: '组级工序与材料细类的交集，仅用于已审的集成制造活动。',
   explicit_official_crosswalk_activity_allocation: '依据官方对应表的具体活动分配。旧版定义另见来源。',
@@ -108,6 +148,14 @@ function show(node) {
   json({kind: node.kind, source_id: node.source_id, edition: node.edition, parents: node.parents,
     base_directory: node.base_directory, base_parent_ids: node.base_parent_ids, evidence: node.evidence,
     label_evidence: node.label_evidence, notes_evidence: node.notes_evidence}, metadata);
+  const gaps = D.directory.official_pair_comparisons.filter(gap => gap.absent_from === node.id ||
+    gap.absent_to === node.id || researchById.get(gap.research_mapping_id)?.activity_ids.includes(node.id));
+  if (gaps.length) {
+    const section = el('section', undefined, box);
+    section.id = 'official-gaps';
+    el('h3', '官方对应缺行核查', section);
+    for (const gap of gaps) officialGap(gap, section);
+  }
   if (node.notes) {
     el('h3', '原始说明字段', box);
     json(node.notes, box);
@@ -271,7 +319,10 @@ function followLocation(focus = false) {
       $('search').value = '';
     }
     show(node);
-    if (focus) $('detail').focus();
+    if (focus) {
+      $('detail').focus({preventScroll: true});
+      $('detail').scrollIntoView({block: 'start'});
+    }
   } else {
     $('detail').replaceChildren(el('p', id ? '此本地分支未收录该节点 · ' + id : '选择节点查看定义、来源和证据。'));
   }
@@ -280,7 +331,7 @@ function followLocation(focus = false) {
 
 $('stats').textContent=`${D.stats.nace21.node_count} 个当前 NACE 源节点已解析；本研究目录 ${D.stats.directory.node_count} 节点（${D.stats.reused_ids} 个复用ID，${D.stats.new_ids} 个新ID）；${D.stats.evidence_claims} 条证据，${D.stats.research_mappings} 条有界跨体系研究对应。`;
 const audit=D.directory.direct_correspondence_audit;el('p',`当前直接对应观察：${audit.status}；阳性对照 ${audit.positive_control_current_nodes} 个NACE节点。空查询不等于官方无对应。`,$('audit'));json(audit,$('audit'));
-for(const c of D.directory.official_pair_comparisons){const d=el('details',undefined,$('audit'));el('summary',`核查表中缺行 · ${c.absent_from} → ${c.absent_to}`,d);json(c,d);for(const id of c.claim_ids)claim(id,d)}
+for (const gap of D.directory.official_pair_comparisons) officialGap(gap, $('audit'));
 const release=D.directory.publisher_release_recheck;
 const releaseDetails=el('details',undefined,$('audit'));
 el('summary',`发布者修订复查 · ${Object.keys(release.same_bytes).length} 个文件字节一致 · ${release.registry_titles_checked} 个登记标题`,releaseDetails);
