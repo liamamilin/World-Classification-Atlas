@@ -3,6 +3,7 @@ import json
 from collections import Counter
 from pathlib import Path
 from .acquire import sha256
+from .cpc import LOCAL as CPC_LOCAL, REPORT as CPC_REPORT, REQUIRED as CPC_INPUTS
 from .furniture import LOCAL as FURNITURE_LOCAL, REPORT as FURNITURE_REPORT, REQUIRED as FURNITURE_INPUTS
 from .isic import LOCAL as ISIC_LOCAL, REPORT as ISIC_REPORT, REQUIRED as ISIC_INPUTS
 from .normalize import inspect
@@ -15,6 +16,8 @@ def view_status(root, report, local, required, directory, template):
     status = report["status"] if report else "not_generated"
     if status != "passed":
         return status
+    if any(local.get(entry["resource_id"], {}).get("sha256") != entry["sha256"] for entry in report["inputs"]):
+        return "stale"
     page = root / directory / "index.html"
     if not page.is_file():
         return "not_generated"
@@ -193,8 +196,11 @@ def build(root, registry, resources):
     template = (Path(__file__).parent / "registry_view.html").read_text(encoding="utf-8")
     isic_view = view_status(root, economy, local, ISIC_INPUTS, ISIC_LOCAL, "economy_view.html")
     furniture_view = view_status(root, furniture, local, FURNITURE_INPUTS, FURNITURE_LOCAL, "furniture_view.html")
+    cpc_path = root / CPC_REPORT
+    cpc = read_json(cpc_path) if cpc_path.is_file() else None
+    cpc_view = view_status(root, cpc, local, CPC_INPUTS, CPC_LOCAL, "cpc_view.html")
     payload = json.dumps({"registry": registry, "coverage": summary,
-                          "isic_view": isic_view, "furniture_view": furniture_view},
+                          "isic_view": isic_view, "furniture_view": furniture_view, "cpc_view": cpc_view},
                          ensure_ascii=False).replace("<", "\\u003c")
     (reports / "registry.html").write_text(template.replace("__ATLAS_DATA__", payload), encoding="utf-8")
     print(f"Report: {reports / 'coverage.md'}\nBrowse: {reports / 'registry.html'}")

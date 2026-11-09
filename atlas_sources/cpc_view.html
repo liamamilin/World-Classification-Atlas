@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>CPC 3.0 · 产品与服务源目录</title>
+<style>
+body{margin:0;font:15px/1.6 system-ui,sans-serif;color:#19382f;background:#f4f6f0;overflow-wrap:anywhere}
+header,main{max-width:1360px;margin:auto;padding:20px 28px}
+header{border-bottom:1px solid #becdc1}h1{margin:8px 0;font-size:26px}h2{font-size:21px}p{margin:8px 0}
+main{display:grid;grid-template-columns:minmax(230px,350px) minmax(0,1fr);gap:18px}
+aside,section{padding:18px;background:white;border:1px solid #d6dfd3;border-radius:6px;min-width:0}
+aside{max-height:calc(100vh - 195px);overflow:auto}
+a{color:#146344}input{box-sizing:border-box;width:100%;padding:8px;margin:7px 0;font:inherit}
+summary{cursor:pointer}ul,ol{padding-left:20px}li{margin:4px 0}details ul{margin:4px 0}
+#detail{scroll-margin-top:10px}#ancestors{display:flex;flex-wrap:wrap;gap:4px 16px}
+pre{white-space:pre-wrap;background:#f4f6f0;padding:12px;overflow-wrap:anywhere}
+@media(max-width:750px){header,main{padding:14px}main{grid-template-columns:minmax(0,1fr)}aside{max-height:42vh}}
+</style>
+<header>
+  <nav aria-label="产品与服务导航"><a href="../../../reports/registry.html?domain=02-products">返回产品与服务来源注册表</a></nav>
+  <h1>CPC 3.0 产品与服务源目录</h1>
+  <p>联合国统计司发布。CPC 分类对象为产品与服务，ISIC 分类对象为经济活动。</p>
+  <p id="coverage"></p>
+</header>
+<main>
+  <aside aria-label="源目录">
+    <label for="search">检索 CPC 代码或原文标题</label>
+    <input id="search" type="search" placeholder="例如 17400">
+    <p id="count" aria-live="polite"></p>
+    <ul id="tree" aria-label="五级源目录"></ul>
+    <ul id="results" aria-label="检索结果" hidden></ul>
+  </aside>
+  <section id="detail" aria-label="来源条目详情" tabindex="-1">
+    <p>从目录或检索结果选择一个条目。</p>
+  </section>
+</main>
+<script id="data" type="application/json">__CPC_DATA__</script>
+<script>
+const data = JSON.parse(document.getElementById('data').textContent);
+const el = id => document.getElementById(id);
+const byId = new Map(data.nodes.map(node => [node.id, node]));
+const byCode = new Map(data.nodes.map(node => [node.code, node]));
+const children = new Map();
+for (const node of data.nodes) {
+  const parent = node.parents[0] || '';
+  if (!children.has(parent)) children.set(parent, []);
+  children.get(parent).push(node);
+}
+function make(tag, value, parent) {
+  const item = document.createElement(tag);
+  if (value !== undefined) item.textContent = value;
+  parent.append(item);
+  return item;
+}
+function nodeLink(node, parent, label = node.code + ' ' + node.label) {
+  const link = make('a', label, parent);
+  link.href = '#' + encodeURIComponent(node.id);
+}
+function original(parent, evidence, label) {
+  const link = make('a', label, parent);
+  link.href = data.original_files[evidence.resource_id] + (evidence.pdf_page ? '#page=' + evidence.pdf_page : '');
+  link.target = '_blank';
+  link.rel = 'noopener';
+  make('p', 'SHA-256 ' + evidence.sha256, parent);
+  return link;
+}
+function tree(parent, nodes) {
+  for (const node of nodes) {
+    const item = make('li', undefined, parent);
+    if (!children.has(node.code)) {
+      nodeLink(node, item);
+      continue;
+    }
+    const branch = make('details', undefined, item);
+    branch.dataset.code = node.code;
+    make('summary', node.code + ' ' + node.label, branch);
+    nodeLink(node, branch, '查看 ' + node.code);
+    branch.addEventListener('toggle', () => {
+      if (branch.open && !branch.querySelector('ul')) {
+        tree(make('ul', undefined, branch), children.get(node.code));
+      }
+    });
+  }
+}
+function search() {
+  const query = el('search').value.trim().toLowerCase();
+  const results = el('results');
+  el('tree').hidden = Boolean(query);
+  results.hidden = !query;
+  results.replaceChildren();
+  el('count').textContent = '';
+  if (!query) return;
+  const matches = data.nodes.filter(node => node.code.includes(query) || node.label.toLowerCase().includes(query));
+  const exact = byCode.get(query);
+  if (exact) matches.unshift(...matches.splice(matches.indexOf(exact), 1));
+  el('count').textContent = '匹配 ' + matches.length + ' 项' + (matches.length > 100 ? '，显示前 100 项' : '');
+  for (const node of matches.slice(0, 100)) nodeLink(node, make('li', undefined, results));
+}
+function detail(focus = false) {
+  const out = el('detail');
+  const hash = location.hash.slice(1);
+  let id;
+  try { id = decodeURIComponent(hash); } catch { id = hash; }
+  const node = byId.get(id);
+  out.replaceChildren();
+  if (!node) {
+    make('p', hash ? '此 CPC 3.0 源目录未收录该标识。' : '从目录或检索结果选择一个条目。', out);
+    return;
+  }
+  make('h2', node.code + ' ' + node.label, out);
+  make('small', node.id, out).id = 'node-id';
+  make('h3', '原目录路径', out);
+  const path = [];
+  for (let current = node; current; current = byCode.get(current.parents[0])) path.unshift(current);
+  const ancestors = make('ol', undefined, out);
+  ancestors.id = 'ancestors';
+  for (const current of path) {
+    const item = make('li', undefined, ancestors);
+    item.dataset.code = current.code;
+    if (current === node) item.textContent = current.code + ' ' + current.label;
+    else nodeLink(current, item);
+  }
+
+  const structure = make('div', undefined, out);
+  structure.id = 'structure-source';
+  const csv = original(structure, data.structure_evidence, '下载原始结构 CSV · 第 ' + node.source_row + ' 行');
+  csv.download = '';
+  const descendants = children.get(node.code);
+  if (descendants) {
+    make('h3', '下一级', out);
+    const list = make('ul', undefined, out);
+    list.id = 'children';
+    for (const child of descendants) nodeLink(child, make('li', undefined, list));
+  }
+
+  make('h3', 'CPC 3.0 官方说明', out);
+  const note = data.notes[node.code];
+  if (note) {
+    if (note.text) make('pre', note.text, out).id = 'note-text';
+    else make('p', '试点核对的原件条目仅列标题。', out).id = 'note-status';
+    const pdf = make('div', undefined, out);
+    pdf.id = 'note-source';
+    original(pdf, note.evidence, '打开原始说明 PDF · 物理第 ' + note.evidence.pdf_page + ' 页');
+    if (note.excluded_to.length) {
+      make('h3', '原文排除指向', out);
+      const exclusions = make('ul', undefined, out);
+      exclusions.id = 'exclusions';
+      for (const code of note.excluded_to) nodeLink(byCode.get(code), make('li', undefined, exclusions));
+    }
+  } else {
+    make('p', '此条目的说明尚未纳入试点。', out).id = 'note-status';
+  }
+  const referencing = Object.entries(data.notes).filter(([, source]) => source.excluded_to.includes(node.code));
+  if (referencing.length) {
+    make('h3', '试点中排除指向此处的条目', out);
+    const list = make('ul', undefined, out);
+    list.id = 'exclusion-backlinks';
+    for (const [code] of referencing) nodeLink(byCode.get(code), make('li', undefined, list));
+  }
+  if (focus) {
+    out.focus({preventScroll: true});
+    out.scrollIntoView({block: 'start'});
+  }
+}
+el('coverage').textContent = data.nodes.length + ' 个源节点 · ' + Object.keys(data.levels).length + ' 级目录 · ' +
+  Object.keys(data.notes).length + ' 个已定位说明条目';
+tree(el('tree'), children.get(''));
+el('search').addEventListener('input', search);
+window.addEventListener('hashchange', () => detail(true));
+detail();
+</script>
+</html>

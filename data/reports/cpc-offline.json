@@ -1,0 +1,72 @@
+{
+  "status": "passed",
+  "source_id": "UN_CPC",
+  "edition": "3.0",
+  "classification_object": "products and services",
+  "inputs": [
+    {
+      "resource_id": "cpc3-structure",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Structure_30Jun2025.csv",
+      "sha256": "5cd2c1c4890dd6be16af48e9bb940fed48efff9865f39ff15edaa921da25fb7c",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-structure/5cd2c1c4890dd6be16af48e9bb940fed48efff9865f39ff15edaa921da25fb7c/cpc3-structure.csv"
+    },
+    {
+      "resource_id": "cpc3-notes-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+      "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+      "publication_date": "2025-06-30",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-notes-20250630/c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1/cpc3-notes-20250630.pdf"
+    }
+  ],
+  "structure": {
+    "node_count": 4586,
+    "unique_codes": 4586,
+    "duplicate_codes": [],
+    "edge_count": 4576,
+    "orphan_parents": [],
+    "self_links": [],
+    "cycles": [],
+    "levels": {
+      "1": 10,
+      "2": 71,
+      "3": 327,
+      "4": 1301,
+      "5": 2877
+    },
+    "roots": 10,
+    "leaves": 2877,
+    "definitions": 0,
+    "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+    "polyhierarchy_nodes": 0
+  },
+  "view_sha256": "7300154ba982ad394a71fd2bd49343ed561b2959e7eea4804df4b77b9fca3f1c",
+  "note_entries": [
+    {
+      "id": "CPC:3.0:17400",
+      "csv_row": 531,
+      "pdf_page": 63,
+      "has_explanatory_text": true,
+      "excluded_to": [
+        "22270",
+        "34210"
+      ]
+    },
+    {
+      "id": "CPC:3.0:22270",
+      "csv_row": 781,
+      "pdf_page": 101,
+      "has_explanatory_text": false,
+      "excluded_to": []
+    }
+  ],
+  "reproducibility": {
+    "pdftotext": "pdftotext version 26.04.0",
+    "parser_sha256": {
+      "cpc_view.html": "25d7f5b4d9337e496fbfbcc071331a241b3e312acbb162ecabbdaf24185cffd5",
+      "cpc.py": "fa71ab7d2cf3997937debefa3b7e9f4b21393d851887c8e3b12e6f1649d69766"
+    }
+  }
+}

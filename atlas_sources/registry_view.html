@@ -16,20 +16,25 @@
   <p>浏览 ISIC、NACE 和法国 NAF 的来源分支，查看 Atlas 活动和原始证据。</p>
   <div id="furniture-entry"></div>
 </article>
+<article id="cpc-pilot" aria-labelledby="cpc-heading" hidden>
+  <h2 id="cpc-heading">产品与服务 · CPC 3.0 离线目录</h2>
+  <p>浏览联合国产品总分类的五级原目录，查看试点条目的说明与原件。</p>
+  <div id="cpc-entry"></div>
+</article>
 <div id="count" class="muted" aria-live="polite"></div><main id="list"></main><footer>官方链接及核查记录在每项详情中。未确认的信息保留为空或待核实。此视图不包含受限原始标准资料。</footer>
 <script id="data" type="application/json">__ATLAS_DATA__</script>
 <script>
-const {registry,coverage,isic_view,furniture_view}=JSON.parse(document.getElementById('data').textContent);
+const {registry,coverage,isic_view,furniture_view,cpc_view}=JSON.parse(document.getElementById('data').textContent);
 const el=id=>document.getElementById(id), make=(tag,text)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;return n};
 const labels={verified_metadata:'元数据已核实',partially_verified:'部分已核实',candidate:'候选',inaccessible:'官方端点不可访问'};
 for(const d of registry.domains){const o=make('option',d.id+' · '+d.label);o.value=d.id;el('domain').append(o)}
 const requestedDomain = new URLSearchParams(location.search).get('domain');
 if (registry.domains.some(domain => domain.id === requestedDomain)) el('domain').value = requestedDomain;
-function catalogueEntry(id, label, status, command) {
+function catalogueEntry(id, label, status, command, folder = 'economy') {
   const entry = el(id + '-entry');
   if (status === 'passed') {
     const link = make('a', '打开' + label + '离线目录');
-    link.href = '../local/economy/' + id + '/index.html';
+    link.href = '../local/' + folder + '/' + id + '/index.html';
     entry.append(link);
     return;
   }
@@ -47,10 +52,12 @@ function catalogueEntry(id, label, status, command) {
 }
 catalogueEntry('isic', ' ISIC ', isic_view, 'economy');
 catalogueEntry('furniture', '家具', furniture_view, 'furniture');
+catalogueEntry('cpc', ' CPC 3.0 ', cpc_view, 'cpc', 'products');
 for(const s of new Set(registry.sources.map(s=>s.verification_status))){const o=make('option',labels[s]);o.value=s;el('status').append(o)}
 el('stats').textContent=`核查 ${registry.review_date} · ${coverage.registered_sources} 个登记来源 · ${coverage.sources_with_local_files} 个来源有本地文件 · ${coverage.pinned_resources} 个已锁定资源 · ${coverage.parsed_resources} 个资源可解析`;
 function render(){const q=el('q').value.toLowerCase(),domain=el('domain').value,status=el('status').value;
 for (const id of ['isic-pilot', 'furniture-pilot']) el(id).hidden = domain !== '' && domain !== '01-economy';
+el('cpc-pilot').hidden = domain !== '' && domain !== '02-products';
 const rows=registry.sources.filter(s=>(!domain||s.domains.includes(domain))&&(!status||s.verification_status===status)&&JSON.stringify(s).toLowerCase().includes(q));
 el('list').replaceChildren();el('count').textContent=`显示 ${rows.length} / ${registry.sources.length} 个来源`;
 for(const s of rows){const a=make('article'),details=make('details'),head=make('summary'),title=make('div');title.append(make('strong',s.id+' · '+s.name));head.append(title,make('span',s.classification_object),make('span',labels[s.verification_status]));details.append(head);const dl=make('dl');

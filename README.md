@@ -47,6 +47,7 @@ World Classification Atlas（世界分类图谱）不是从零凭空创造一套
 - [法国 NAF 双向对应、专业家具涂装与店铺内置装置](docs/17-FURNITURE-NAF-BOUNDARIES.md)
 - [家具离线浏览及 NAF、NACE、ISIC 的 Chrome 实测](docs/18-FURNITURE-OFFLINE-BROWSER.md)
 - [ISIC 经济活动离线目录与六项案例实测](docs/19-ISIC-OFFLINE-BROWSER.md)
+- [CPC 3.0 产品目录离线试点与 Chrome 实测](docs/20-CPC-OFFLINE-BROWSER.md)
 - [原始分类体系候选清单（机器可读）](data/source-candidates.csv)
 - [Codex 项目协作说明](AGENTS.md)
 
@@ -93,6 +94,8 @@ node scripts/check_furniture_view.js
 node scripts/check_furniture_browser.js
 open data/reports/registry.html
 ```
+
+注册表的「产品与服务」可进入 CPC 3.0 离线源目录。五级结构涵盖 4,586 个源节点，试点核对了 `17400`、`22270` 的说明位置和原文排除指向。 [构建命令与实测](docs/20-CPC-OFFLINE-BROWSER.md)
 
 未开发现实实体关联或需求理论。后续继续按明确分类对象和合法本地快照逐领域整理，保留原始目录、版本及映射的语义差异。
 

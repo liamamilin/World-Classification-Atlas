@@ -21,6 +21,7 @@ def main():
     sub.add_parser("reproduce-economy", help="rebuild ISIC in a fresh directory from pinned inputs and compare bytes offline")
     sub.add_parser("furniture", help="align the furniture branch across NACE and both ISIC editions")
     sub.add_parser("reproduce-furniture", help="rebuild furniture research from pinned originals offline")
+    sub.add_parser("cpc", help="build the offline CPC 3.0 source catalogue from pinned originals")
     args = parser.parse_args()
     root = args.root.resolve()
     errors = validate(root)
@@ -66,6 +67,9 @@ def main():
     if args.command == "reproduce-furniture":
         from .furniture import reproduce
         return reproduce(root, resources)
+    if args.command == "cpc":
+        from .cpc import run
+        return run(root, resources)
     return 0
 
 
