@@ -4,7 +4,7 @@
 
 登记 53 个来源；覆盖 15 个导航领域。UNSD Family 独立发现 149 条候选，未经逐条核实，不能与注册表相加。
 
-61 个采集任务，59 个已锁定且通过格式检查，涉及 11 个来源；8 个资源可解析。
+68 个采集任务，66 个已锁定且通过格式检查，涉及 11 个来源；8 个资源可解析。
 
 | 领域 | 登记 | 有本地文件的来源 | 已解析的来源 |
 |---|---:|---:|---:|
@@ -89,6 +89,13 @@
 | hs2022-to-hs2017-wco-table-i | 2022 | format_checked_only | 未统计 | — |
 | hs2017-to-hs2022-wco-table-ii | 2017 | format_checked_only | 未统计 | — |
 | cpc21-hs2017-unsd-correspondence | 2.1 | format_checked_only | 未统计 | — |
+| hs2022-unsd-structure | 2022 | format_checked_only | 未统计 | — |
+| hs2022-wco-contents | 2022 | format_checked_only | 未统计 | — |
+| hs2022-chapter27 | 2022 | format_checked_only | 未统计 | — |
+| hs2022-chapter30 | 2022 | format_checked_only | 未统计 | — |
+| hs2022-chapter87 | 2022 | format_checked_only | 未统计 | — |
+| hs2022-chapter94 | 2022 | format_checked_only | 未统计 | — |
+| hs2022-chapter03 | 2022 | format_checked_only | 未统计 | — |
 
 经济活动专项结果另见 [ISIC 实测报告](isic-economy.json)：包含完整注释解析、官方对应表及已审研究概念。上表 status 为通用格式/结构检查，economy 字段表示专项处理。
 

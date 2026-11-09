@@ -1,5 +1,7 @@
 # CPC 3.0 与 HS 2022 对应证据及离线复查
 
+当前离线构建的完整采集清单见 [HS 2022 结构与双向回查](22-HS2022-STRUCTURE-AND-CPC-REFERENCES.md)。
+
 ## 发布范围
 
 2026-11-09 核查 UNSD 的 CPC 下载页及经济分类总目录。锁定 CPC 页的 `corresp-cpc` 表，实测有 43 个链接，CPC 列到 2.1、HS 行到 2017，含可下载的 CPC 2.1／HS 2017 原表。该目录未找到完整 CPC 3.0／HS 2022 对应表。UNSD 2026 年 5 月培训资料物理第 46 页将该表列为进行中。这个缺口限于已核查的发布入口。 [CPC 下载页](https://unstats.un.org/unsd/classifications/Econ/CPC) · [经济分类总目录](https://unstats.un.org/unsd/classifications/Econ/) · [UNSD 培训原件](https://unstats.un.org/unsd/classifications/Workshops/AddisAbaba2026/Session4-Introduction-to-the-CPC-Ver-3-0.pdf#page=46)

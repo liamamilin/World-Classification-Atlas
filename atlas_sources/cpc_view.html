@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>CPC 3.0 · 产品与服务源目录</title>
+<title>CPC 3.0 与 HS 2022 · 产品与贸易商品源目录</title>
 <style>
 body{margin:0;font:15px/1.6 system-ui,sans-serif;color:#19382f;background:#f4f6f0;overflow-wrap:anywhere}
 header,main{max-width:1360px;margin:auto;padding:20px 28px}
@@ -16,13 +16,20 @@ summary{cursor:pointer}ul,ol{padding-left:20px}li{margin:4px 0}details ul{margin
 pre{white-space:pre-wrap;background:#f4f6f0;padding:12px;overflow-wrap:anywhere}
 #hs-review,#release-status{border-top:1px solid #d6dfd3;margin-top:16px;padding-top:8px}
 #hs-review h4{margin:14px 0 4px}
+.catalogues{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0}
+.catalogues [aria-current]{font-weight:bold;text-decoration-thickness:2px}
+.reference-targets a{display:inline-block;margin:0 8px 3px 0}
 @media(max-width:750px){header,main{padding:14px}main{grid-template-columns:minmax(0,1fr)}aside{max-height:42vh}}
 </style>
 <header>
   <nav aria-label="产品与服务导航"><a href="../../../reports/registry.html?domain=02-products">返回产品与服务来源注册表</a></nav>
-  <h1>CPC 3.0 产品与服务源目录</h1>
-  <p>联合国统计司发布。CPC 分类对象为产品与服务，ISIC 分类对象为经济活动。</p>
+  <h1>CPC 3.0 与 HS 2022 源目录</h1>
+  <p>CPC 分类对象为产品与服务，ISIC 分类对象为经济活动。HS 分类对象为贸易商品。</p>
   <p id="coverage"></p>
+  <nav class="catalogues" aria-label="选择源目录">
+    <a id="choose-cpc" href="#CPC%3A3.0">CPC 3.0 产品与服务</a>
+    <a id="choose-hs" href="#HS%3A2022">HS 2022 贸易商品</a>
+  </nav>
   <details id="release-status">
     <summary>CPC 3.0 与 HS 2022 对应发布状态</summary>
     <p>已核查的 UNSD 公开对应目录未列出完整的 CPC 3.0 与 HS 2022 对应表。2026 年 5 月的培训资料仍将该表列为进行中。</p>
@@ -30,7 +37,7 @@ pre{white-space:pre-wrap;background:#f4f6f0;padding:12px;overflow-wrap:anywhere}
 </header>
 <main>
   <aside aria-label="源目录">
-    <label for="search">检索 CPC 代码或原文标题</label>
+    <label id="search-label" for="search">检索 CPC 代码或原文标题</label>
     <input id="search" type="search" placeholder="例如 17400">
     <p id="count" aria-live="polite"></p>
     <ul id="tree" aria-label="五级源目录"></ul>
@@ -47,7 +54,10 @@ const el = id => document.getElementById(id);
 const byId = new Map(data.nodes.map(node => [node.id, node]));
 const byCode = new Map(data.nodes.map(node => [node.code, node]));
 const hsReview = data.hs_review;
-const hsById = new Map(Object.entries(hsReview.hs).map(([code, node]) => [node.id, {code, ...node}]));
+const hsStructure = hsReview.hs_structure;
+const hsById = new Map(hsStructure.nodes.map(node => [node.id, node]));
+const hsByCode = new Map(hsStructure.nodes.map(node => [node.code, node]));
+const refsById = new Map(hsReview.official_note_references.map(ref => [ref.id, ref]));
 const reviewLabels = {
   pending: '当前对应待核',
   excluded_from_cpc: 'CPC 原文排除',
@@ -57,12 +67,20 @@ const reviewLabels = {
   inclusion: '官方纳入引用',
   exclusion: '官方排除引用'
 };
-const children = new Map();
-for (const node of data.nodes) {
-  const parent = node.parents[0] || '';
-  if (!children.has(parent)) children.set(parent, []);
-  children.get(parent).push(node);
+function indexChildren(nodes) {
+  const index = new Map();
+  for (const node of nodes) {
+    const parent = node.parents[0] || '';
+    if (!index.has(parent)) index.set(parent, []);
+    index.get(parent).push(node);
+  }
+  return index;
 }
+const catalogues = {
+  cpc: {nodes: data.nodes, byCode, children: indexChildren(data.nodes)},
+  hs: {nodes: hsStructure.nodes, byCode: hsByCode, children: indexChildren(hsStructure.nodes)}
+};
+let active;
 function make(tag, value, parent) {
   const item = document.createElement(tag);
   if (value !== undefined) item.textContent = value;
@@ -98,11 +116,31 @@ function renderNoteReferences(out, node) {
   const list = make('ul', undefined, notes);
   for (const reference of references) {
     const row = make('li', undefined, list);
+    row.id = reference.id;
+    row.tabIndex = -1;
+    row.dataset.kind = reference.kind;
     make('strong', reviewLabels[reference.kind] + ' · ' + reference.sheet + '!' +
          reference.column + reference.row + ' · 单元格第 ' + reference.line + ' 行', row);
     make('pre', reference.text, row);
-    const hs = hsById.get('HS:2022:' + reference.hs_notation);
-    if (hs?.note_cpc_id === node.id) hsLink(row, hs);
+    const targets = make('ul', undefined, row);
+    targets.className = 'reference-targets';
+    for (const term of reference.terms) {
+      const item = make('li', undefined, targets);
+      make('span', term.raw + ' → ', item);
+      for (const id of term.target_ids) hsLink(item, hsById.get(id));
+      if (term.issue) make('strong', term.issue === 'code_not_in_hs2022' ?
+        '待核 · HS 2022 无该代码' : '待核 · 原文写法需确认', item);
+    }
+    const review = reference.review;
+    if (review) {
+      const finding = make('div', undefined, row);
+      finding.className = 'reference-review';
+      finding.dataset.status = review.status;
+      make('p', review.finding, finding);
+      if (review.candidate_hs_id) hsLink(finding, hsById.get(review.candidate_hs_id));
+      if (review.evidence) original(finding, review.evidence,
+        '打开 WCO 原始 PDF · 第 ' + review.evidence.pdf_page + ' 页');
+    }
   }
   download(notes, hsReview.workbook, '下载原始 CPC 3.0 说明工作簿');
 }
@@ -141,16 +179,25 @@ function renderCpcReview(out, node) {
   download(legacy, history.evidence, '下载历史官方对应 CSV');
 }
 function renderHs(out, node) {
-  make('h2', 'HS 2022 ' + node.code + ' · ' + node.label, out);
+  const scope = hsReview.hs_scope[node.code];
+  make('h2', 'HS 2022 ' + node.code + ' · ' + (scope?.label || node.label), out);
   make('small', node.id, out).id = 'node-id';
-  make('p', 'HS 分类对象为贸易商品。此处展示已核对的证据条目。', out);
-  if (node.evidence) {
+  make('p', 'HS 分类对象为贸易商品。', out);
+  if (scope) make('p', '原目录标题 · ' + node.label, out);
+  renderHierarchy(out, node, catalogues.hs);
+  const structure = make('div', undefined, out);
+  structure.id = 'hs-structure-source';
+  if (node.source_row) download(structure, hsStructure.workbook,
+    '下载 UNSD 原始结构工作簿 · HS22!B' + node.source_row + ' · 原码 ' + node.source_code);
+  if (node.pdf_page) original(structure, {...hsStructure.contents, pdf_page: node.pdf_page},
+    '打开 WCO 税则目录 PDF · 第 ' + node.pdf_page + ' 页');
+  if (scope) {
     const pdf = make('div', undefined, out);
     pdf.id = 'hs-original';
-    const source = node.source_kind === 'classification_guidance' ?
+    const source = scope.source_kind === 'classification_guidance' ?
       'WCO / WHO 参考指南（示例）' : 'WCO HS 2022 税则';
-    original(pdf, node.evidence, '打开 ' + source + ' PDF · 第 ' + node.evidence.pdf_page + ' 页');
-    make('p', '提取文本行 ' + node.evidence.lines.join('–'), pdf);
+    original(pdf, scope.evidence, '打开 ' + source + ' PDF · 第 ' + scope.evidence.pdf_page + ' 页');
+    make('p', '提取文本行 ' + scope.evidence.lines.join('–'), pdf);
   }
   const correlations = hsReview.carbon_correlations;
   const row = correlations.rows[node.code];
@@ -165,24 +212,38 @@ function renderHs(out, node) {
     original(crosswalk, correlations.table_ii, '打开表 II 原始 PDF · 第 11 页').id = 'hs-table-ii';
     make('p', '表 I 共用备注从旧 6815.10 说明拆分。逐行关系采用两表的代码列，保留表 I 的 ex 标记。', crosswalk);
   }
-  make('h3', '回查 CPC 3.0', out);
+  make('h3', 'CPC 3.0 官方说明回查', out);
+  const official = make('ul', undefined, out);
+  official.id = 'hs-official-backlinks';
+  for (const ref of refsById.values()) {
+    if (!ref.target_ids.includes(node.id)) continue;
+    const item = make('li', undefined, official);
+    item.dataset.kind = ref.kind;
+    nodeLink(ref, item, byId.get(ref.cpc_id).code + ' · ' + reviewLabels[ref.kind] + ' · ' +
+      ref.sheet + '!' + ref.column + ref.row + ' · ' + ref.hs_notation);
+    if (['scope_pending', 'missing_code'].includes(ref.review?.status)) make('p', ref.review.finding, item);
+  }
+  if (!official.children.length) make('p', '本次工作簿核查未见对此代码的明确引用。', out);
+  const candidates = make('ul', undefined, out);
+  candidates.id = 'hs-candidate-backlinks';
+  for (const ref of refsById.values()) {
+    if (ref.review?.candidate_hs_id !== node.id) continue;
+    nodeLink(ref, make('li', undefined, candidates),
+      byId.get(ref.cpc_id).code + ' · Atlas 待核候选 · 原文 ' + ref.hs_notation);
+  }
   const backlinks = make('ul', undefined, out);
   backlinks.id = 'hs-backlinks';
-  if (node.note_cpc_id) {
-    nodeLink(byId.get(node.note_cpc_id), make('li', undefined, backlinks), '32193 · 官方定义引用');
-  }
   for (const [code, findings] of Object.entries(hsReview.reviews)) {
     for (const finding of findings.filter(finding => finding.hs_id === node.id)) {
       nodeLink(byCode.get(code), make('li', undefined, backlinks), code + ' · ' + reviewLabels[finding.status]);
     }
   }
-  if (node.code === '4818.90' || node.code === '4818') {
-    const related = hsById.get(node.code === '4818' ? 'HS:2022:4818.90' : 'HS:2022:4818');
-    make('h3', '品目与子目回查', out);
-    hsLink(out, related);
+  if (backlinks.children.length) {
+    const title = make('h3', 'Atlas 范围核查回查', out);
+    out.insertBefore(title, backlinks);
   }
 }
-function tree(parent, nodes) {
+function tree(parent, nodes, children) {
   for (const node of nodes) {
     const item = make('li', undefined, parent);
     if (!children.has(node.code)) {
@@ -195,47 +256,49 @@ function tree(parent, nodes) {
     nodeLink(node, branch, '查看 ' + node.code);
     branch.addEventListener('toggle', () => {
       if (branch.open && !branch.querySelector('ul')) {
-        tree(make('ul', undefined, branch), children.get(node.code));
+        tree(make('ul', undefined, branch), children.get(node.code), children);
       }
     });
   }
 }
 function search() {
-  const query = el('search').value.trim().toLowerCase();
+  let query = el('search').value.trim().toLowerCase();
+  if (active === 'hs' && /^\d{2}\.\d{2}$/.test(query)) query = query.replace('.', '');
   const results = el('results');
   el('tree').hidden = Boolean(query);
   results.hidden = !query;
   results.replaceChildren();
   el('count').textContent = '';
   if (!query) return;
-  const matches = data.nodes.filter(node => node.code.includes(query) || node.label.toLowerCase().includes(query));
-  const exact = byCode.get(query);
+  const catalogue = catalogues[active];
+  const matches = catalogue.nodes.filter(node => node.code.toLowerCase().includes(query) ||
+    node.source_code?.includes(query) || node.label.toLowerCase().includes(query));
+  const exact = catalogue.byCode.get(active === 'hs' ?
+    (query.length === 6 && /^\d+$/.test(query) ? query.slice(0, 4) + '.' + query.slice(4) : query.toUpperCase()) : query);
   if (exact) matches.unshift(...matches.splice(matches.indexOf(exact), 1));
   el('count').textContent = '匹配 ' + matches.length + ' 项' + (matches.length > 100 ? '，显示前 100 项' : '');
   for (const node of matches.slice(0, 100)) nodeLink(node, make('li', undefined, results));
 }
-function detail(focus = false) {
-  const out = el('detail');
-  const hash = location.hash.slice(1);
-  let id;
-  try { id = decodeURIComponent(hash); } catch { id = hash; }
-  const node = byId.get(id);
-  out.replaceChildren();
-  const hs = hsById.get(id);
-  if (hs) {
-    renderHs(out, hs);
-    if (focus) out.focus();
-    return;
+function selectCatalogue(scheme) {
+  if (active === scheme) return;
+  active = scheme;
+  const catalogue = catalogues[scheme];
+  el('search-label').textContent = '检索 ' + (scheme === 'hs' ? 'HS' : 'CPC') + ' 代码或原文标题';
+  el('search').placeholder = scheme === 'hs' ? '例如 9405.31' : '例如 17400';
+  for (const key of Object.keys(catalogues)) {
+    if (key === scheme) el('choose-' + key).setAttribute('aria-current', 'page');
+    else el('choose-' + key).removeAttribute('aria-current');
   }
-  if (!node) {
-    make('p', hash ? '未收录此 CPC 3.0 或 HS 2022 标识。' : '从目录或检索结果选择一个条目。', out);
-    return;
-  }
-  make('h2', node.code + ' ' + node.label, out);
-  make('small', node.id, out).id = 'node-id';
+  el('search').value = '';
+  el('tree').replaceChildren();
+  el('tree').setAttribute('aria-label', scheme === 'hs' ? 'HS 2022 四级源目录' : 'CPC 3.0 五级源目录');
+  tree(el('tree'), catalogue.children.get(''), catalogue.children);
+  search();
+}
+function renderHierarchy(out, node, catalogue) {
   make('h3', '原目录路径', out);
   const path = [];
-  for (let current = node; current; current = byCode.get(current.parents[0])) path.unshift(current);
+  for (let current = node; current; current = catalogue.byCode.get(current.parents[0])) path.unshift(current);
   const ancestors = make('ol', undefined, out);
   ancestors.id = 'ancestors';
   for (const current of path) {
@@ -244,18 +307,47 @@ function detail(focus = false) {
     if (current === node) item.textContent = current.code + ' ' + current.label;
     else nodeLink(current, item);
   }
-
-  const structure = make('div', undefined, out);
-  structure.id = 'structure-source';
-  const csv = original(structure, data.structure_evidence, '下载原始结构 CSV · 第 ' + node.source_row + ' 行');
-  csv.download = '';
-  const descendants = children.get(node.code);
+  const descendants = catalogue.children.get(node.code);
   if (descendants) {
     make('h3', '下一级', out);
     const list = make('ul', undefined, out);
     list.id = 'children';
     for (const child of descendants) nodeLink(child, make('li', undefined, list));
   }
+}
+function detail(focus = false) {
+  const hash = location.hash.slice(1);
+  let id;
+  try { id = decodeURIComponent(hash); } catch { id = hash; }
+  renderSelection(id, focus);
+}
+function renderSelection(id, focus = false) {
+  const out = el('detail');
+  const reference = refsById.get(id);
+  const node = byId.get(reference?.cpc_id || id);
+  out.replaceChildren();
+  const hs = hsById.get(id);
+  selectCatalogue(hs || id === 'HS:2022' ? 'hs' : 'cpc');
+  if (hs) {
+    renderHs(out, hs);
+    if (focus) out.focus();
+    return;
+  }
+  if (!node) {
+    const home = !id || ['HS:2022', 'CPC:3.0'].includes(id);
+    make('p', home ? '从目录或检索结果选择一个条目。' : '未收录此 CPC 3.0 或 HS 2022 标识。', out);
+    if (id === 'HS:2022') make('p', 'HS 2022 · ' + hsStructure.quality.node_count +
+      ' 个源节点 · 部、章、品目、子目。', out);
+    return;
+  }
+  make('h2', node.code + ' ' + node.label, out);
+  make('small', node.id, out).id = 'node-id';
+  renderHierarchy(out, node, catalogues.cpc);
+
+  const structure = make('div', undefined, out);
+  structure.id = 'structure-source';
+  const csv = original(structure, data.structure_evidence, '下载原始结构 CSV · 第 ' + node.source_row + ' 行');
+  csv.download = '';
 
   make('h3', 'CPC 3.0 官方说明', out);
   const note = data.notes[node.code];
@@ -287,16 +379,16 @@ function detail(focus = false) {
     for (const [code] of referencing) nodeLink(byCode.get(code), make('li', undefined, list));
   }
   renderCpcReview(out, node);
-  if (focus) {
-    out.focus({preventScroll: true});
-    out.scrollIntoView({block: 'start'});
+  if (focus || reference) {
+    const target = reference ? el(reference.id) : out;
+    target.focus({preventScroll: true});
+    target.scrollIntoView({block: 'start'});
   }
 }
 el('coverage').textContent = data.nodes.length + ' 个源节点 · ' + Object.keys(data.levels).length + ' 级目录 · ' +
   Object.keys(data.notes).length + ' 个已定位说明条目 · ' + hsReview.official_note_references.length + ' 条 HS 2022 原文引用';
 original(el('release-status'), hsReview.audit.listing, '打开 UNSD 对应目录网页原件').id = 'unsd-listing';
 original(el('release-status'), hsReview.audit.workshop, '打开 UNSD 培训原始 PDF · 第 46 页');
-tree(el('tree'), children.get(''));
 el('search').addEventListener('input', search);
 window.addEventListener('hashchange', () => detail(true));
 detail();

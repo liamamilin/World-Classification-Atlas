@@ -24,10 +24,10 @@ const dryIce = ['3', '34', '342', '3421', '34210'];
 const json = JSON.stringify;
 
 async function run(temp, { evaluate, text, exists, linksTo, click, navigate, openOriginal }) {
-  async function expectNode(codes) {
+  async function expectNode(codes, hash = id(codes.at(-1))) {
     const code = codes.at(-1);
     await until(() => evaluate('document.querySelector("#node-id")?.innerText === ' + json(id(code))), id(code));
-    assert.equal(await evaluate('decodeURIComponent(location.hash.slice(1))'), id(code));
+    assert.equal(await evaluate('decodeURIComponent(location.hash.slice(1))'), hash);
     assert.deepEqual(await evaluate('Array.from(document.querySelectorAll("#ancestors > li"), node => node.dataset.code)'), codes);
   }
   async function walk(codes) {
@@ -61,7 +61,7 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await click('#cpc-entry a');
   await until(() => exists('#tree > li'), 'CPC catalogue from registry');
   assert.equal(await evaluate('navigator.onLine'), false);
-  assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 8 个已定位说明条目/);
+  assert.match(await text('#coverage'), /4586 个源节点 · 5 级目录 · 9 个已定位说明条目/);
   assert.match(await text('#coverage'), /69 条 HS 2022 原文引用/);
   assert.match(await text('header'), /CPC 分类对象为产品与服务，ISIC 分类对象为经济活动/);
   await click('#release-status summary');
@@ -144,6 +144,12 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
     await click(linksTo('#hs-backlinks', id(codes.at(-1))));
     await expectNode(codes);
   }
+  async function backToNote(codes, column = 'C', group = '#hs-official-backlinks') {
+    const noteId = id(codes.at(-1)) + ':HS2022:' + column + ':1';
+    await click(linksTo(group, noteId));
+    await expectNode(codes, noteId);
+    assert.equal(await evaluate('document.activeElement.id'), noteId);
+  }
   const masks = titleEntries[0].codes;
   const textiles = titleEntries[1].codes;
   const carbon = titleEntries[2].codes;
@@ -153,6 +159,7 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await openOriginal('#review-workbook a', workbook);
   await openHs('#hs-findings', '6307.90');
   assert.match(await text('#detail > h2'), /纺织口罩示例/);
+  assert.equal(await exists('#hs-official-backlinks a'), false);
   await openOriginal('#hs-original a', guidance, { mode: 'pdf', pdfPage: 3 });
   assert.match(await text('#hs-backlinks'), /48160 · CPC 原文排除/);
   assert.match(await text('#hs-backlinks'), /27190 · 当前对应待核/);
@@ -167,11 +174,11 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await openHs('#hs-findings', '4818.90');
   assert.match(await text('#detail > h2'), /纸或纤维素口罩示例（多数国家）/);
   await openHs('#detail', '4818');
-  await backToCpc(['3', '32', '321', '3219', '32193']);
+  await backToNote(['3', '32', '321', '3219', '32193']);
   assert.match(await text('#official-hs-notes'), /官方定义引用 · CPC3!C1289/);
   await openOriginal('#official-hs-notes a[download]', workbook);
   await openHs('#official-hs-notes', '4818');
-  await backToCpc(['3', '32', '321', '3219', '32193']);
+  await backToNote(['3', '32', '321', '3219', '32193']);
   console.log('Passed: textile, paper and respirator boundaries, historical partial flags, and a current UNSD heading reference.');
 
   await search(carbon);
@@ -180,6 +187,7 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
     ['6815.13', /其他碳纤维制品.*非电气/], ['6815.19', /该非电气用组中的其他项/]]) {
     await openHs('#hs-findings', code);
     assert.match(await text('#detail > h2'), label);
+    assert.equal(await exists('#hs-official-backlinks a'), false);
     const rows = await text('#hs-version-rows');
     if (code === '6815.19') assert.match(rows, /HS 2017 6815\.10/);
     else assert.match(rows, /ex6815\.99（旧子目部分对应）/);
@@ -197,21 +205,100 @@ async function run(temp, { evaluate, text, exists, linksTo, click, navigate, ope
   await search(['8', '89', '892', '8920', '89200']);
   assert.match(await text('#hs-findings [data-status=service_context]'), /受托塑料件制造服务/);
   assert.equal(await exists('#hs-findings a'), false);
-  await search(['4', '46', '465', '4653', '46532']);
+  const christmas = ['4', '46', '465', '4653', '46532'];
+  await search(christmas);
   assert.match(await text('#official-hs-notes'), /官方定义引用[\s\S]*9405\.39[\s\S]*官方排除引用[\s\S]*9405\.31/);
   console.log('Passed: four carbon subheadings, both original WCO tables, partial semantics, and separate electrical/service scopes.');
+
+  await openHs('#official-hs-notes [data-kind=exclusion]', '9405.31');
+  assert.match(await text('#hs-official-backlinks'), /46532 · 官方排除引用[\s\S]*46533 · 官方定义引用/);
+  await openOriginal('#hs-structure-source a[download]', 'hs2022-unsd-structure');
+  assert.deepEqual(await evaluate('Array.from(document.querySelectorAll("#ancestors > li"), node => node.dataset.code)'),
+    ['XX', '94', '9405', '9405.31']);
+  await backToNote(christmas, 'D');
+  await openOriginal('#official-hs-notes [data-kind=exclusion] .reference-review a', 'hs2022-chapter94',
+    { mode: 'pdf', pdfPage: 4 });
+
+  await search(['1', '11', '110', '1103', '11031']);
+  await openHs('#official-hs-notes', '2701.12');
+  assert.match(await text('#hs-official-backlinks'), /11012 · 官方定义引用[\s\S]*11031 · 官方定义引用/);
+  await backToNote(['1', '11', '110', '1103', '11031']);
+  await openOriginal('#official-hs-notes .reference-review a', 'hs2022-chapter27', { mode: 'pdf', pdfPage: 1 });
+
+  await search(['3', '35', '352', '3527', '35273']);
+  const targets = () => evaluate('Array.from(document.querySelectorAll(".reference-targets a"), a => a.innerText)');
+  assert.deepEqual(await targets(), ['3002.41', '3002.42', '3002.49', '3002.51', '3002.59'].map(x => 'HS 2022 ' + x));
+  await openOriginal('#official-hs-notes .reference-review a', 'hs2022-chapter30', { mode: 'pdf', pdfPage: 3 });
+
+  await search(['4', '49', '499', '4991', '49913']);
+  assert.match(await text('#official-hs-notes [data-kind=inclusion]'), /8711\.90 的具体范围待核/);
+  await openOriginal('#official-hs-notes .reference-review a', 'hs2022-chapter87', { mode: 'pdf', pdfPage: 5 });
+
+  const octopus = ['2', '21', '212', '2126', '21267'];
+  await search(octopus);
+  assert.match(await text('#official-hs-notes'), /0307\.53 → 待核 · HS 2022 无该代码/);
+  assert.deepEqual(await targets(), ['HS 2022 0307.59']);
+  await openOriginal('#note-source a', notes, { mode: 'pdf', pdfPage: 79 });
+  await openOriginal('#official-hs-notes .reference-review a:not([href^="#"])', 'hs2022-chapter03',
+    { mode: 'pdf', pdfPage: 11 });
+  await openHs('#official-hs-notes .reference-review', '0307.52');
+  assert.equal(await exists('#hs-official-backlinks a'), false);
+  assert.match(await text('#hs-candidate-backlinks'), /21267 · Atlas 待核候选/);
+  await backToNote(octopus, 'C', '#hs-candidate-backlinks');
+
+  const baseline = JSON.parse(fs.readFileSync(path.join(root, report), 'utf8'));
+  const references = baseline.hs_review.official_note_references;
+  assert.equal(references.length, 69);
+  const failures = await evaluate(`(() => {
+    const refs = ${json(references.map(ref => ({ id: ref.id, kind: ref.kind, targets: ref.target_ids })))};
+    const links = group => Array.from(group.querySelectorAll('a'), a => decodeURIComponent(a.hash.slice(1)));
+    const errors = [];
+    for (const ref of refs) {
+      renderSelection(ref.id);
+      const row = document.getElementById(ref.id);
+      if (row?.dataset.kind !== ref.kind || JSON.stringify(links(row.querySelector('.reference-targets'))) !==
+          JSON.stringify(ref.targets)) errors.push(ref.id);
+      for (const target of ref.targets) {
+        renderSelection(target);
+        const back = document.querySelector('#hs-official-backlinks');
+        if (!back || !Array.from(back.children).some(item => item.dataset.kind === ref.kind &&
+            links(item).includes(ref.id))) errors.push(target + ' → ' + ref.id);
+      }
+    }
+    return errors;
+  })()`);
+  assert.deepEqual(failures, []);
+  console.log('Passed: all 69 worksheet clauses and all 184 resolved forward/reverse links; absent and candidate codes kept separate.');
 
   await navigate(path.join(root, view), '#' + encodeURIComponent(id('22270')));
   await expectNode(edibleIce);
   await click('nav[aria-label="产品与服务导航"] a');
   await until(() => evaluate('document.querySelector("#domain")?.value === "02-products"'), 'products registry return');
   assert.equal(await evaluate('document.querySelector("#isic-pilot").hidden'), true);
+  await click('#hs-entry');
+  await until(() => exists('#tree[aria-label="HS 2022 四级源目录"]'), 'HS catalogue from registry');
+  assert.match(await text('#detail'), /6957 个源节点/);
+  await click('#tree details[data-code="XX"] > summary');
+  await until(() => exists('#tree details[data-code="94"]'), 'WCO section XX includes chapter 94');
+  await openHs('#tree', 'XX');
+  await openOriginal('#hs-structure-source a', 'hs2022-wco-contents', { mode: 'pdf', pdfPage: 5 });
+  async function searchHs(query, code) {
+    await evaluate(`(() => {
+    const input = document.querySelector('#search');
+    input.value = ${json(query)};
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+  })()`);
+    await openHs('#results', code);
+  }
+  await searchHs('940531', '9405.31');
+  await searchHs('30.01', '3001');
+  await click('nav[aria-label="产品与服务导航"] a');
+  await until(() => evaluate('document.querySelector("#domain")?.value === "02-products"'), 'HS registry return');
   console.log('Passed: stable deep link and registry return.');
 
   const fixture = path.join(temp, 'fixture');
   const copy = file => fs.cpSync(path.join(root, file), path.join(fixture, file), { recursive: true });
   for (const file of ['data/registry', 'data/source-candidates.csv', 'data/resources.lock.json']) copy(file);
-  const baseline = JSON.parse(fs.readFileSync(path.join(root, report), 'utf8'));
   for (const input of baseline.inputs) copy(path.dirname(input.path));
   async function registryState(state, expected) {
     buildRegistry(fixture);

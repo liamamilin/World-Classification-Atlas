@@ -753,7 +753,8 @@
       "download": {
         "landing_url": "https://www.wcoomd.org/en/topics/nomenclature/instrument-and-tools/hs-nomenclature-2022-edition/hs-nomenclature-2022-edition.aspx",
         "formats": [
-          "pdf"
+          "pdf",
+          "xlsx"
         ],
         "status": "official_entry_verified"
       },
@@ -767,7 +768,7 @@
         "derivatives": null,
         "attribution": null,
         "status": "pending",
-        "note": "第 68 章、参考指南和两张对应表的原件仅本地参考。其余资料逐文件核实。"
+        "note": "WCO 采集原件仅本地参考。UNSD 代码工作簿公开下载，原件和整表的公开再分发权限待核。"
       },
       "official_mappings": {
         "status": "official_entry_verified",
@@ -819,6 +820,24 @@
             "hierarchy"
           ],
           "finding": "WCO 的 HS 2022 税则逐章提供 PDF，含第 68 章。"
+        },
+        {
+          "url": "https://unstats.un.org/unsd/classifications/Econ/download/In%20Text/HSCodeandDescription.xlsx",
+          "method": "publisher_workbook_review",
+          "fields": [
+            "download",
+            "editions",
+            "hierarchy"
+          ],
+          "finding": "UNSD 跨版本工作簿的 HS22 工作表以 H6 标注 2022 版，保留章、品目、子目、父码和统计汇总。"
+        },
+        {
+          "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/table-of-contents_2022e_rev.pdf?la=en",
+          "method": "publisher_nomenclature_review",
+          "fields": [
+            "hierarchy"
+          ],
+          "finding": "WCO 税则目录提供部与章的归属，77、98、99 标为保留。"
         }
       ],
       "unresolved": [

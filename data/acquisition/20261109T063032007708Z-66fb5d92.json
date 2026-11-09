@@ -1,0 +1,18 @@
+[
+  {
+    "resource_id": "hs2022-chapter03",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+    "attempted_at": "2026-11-09T06:30:26.622707+00:00",
+    "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+    "path": "data/local/raw/HS/2022/hs2022-chapter03/79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912/hs2022-chapter03.pdf",
+    "bytes": 275838,
+    "final_url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+    "http_status": 200,
+    "content_type": "application/pdf",
+    "etag": null,
+    "last_modified": "Wed, 17 Nov 2021 17:31:28 GMT",
+    "status": "downloaded"
+  }
+]

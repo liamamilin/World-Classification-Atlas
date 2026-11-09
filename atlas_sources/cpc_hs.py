@@ -5,6 +5,7 @@ import re
 import subprocess
 from collections import Counter
 
+from . import hs, hs_reference
 from .acquire import sha256
 from .xlsx import read_workbook
 
@@ -16,7 +17,9 @@ GUIDANCE = "hs2022-wco-who-medical-supplies"
 TABLE_I = "hs2022-to-hs2017-wco-table-i"
 TABLE_II = "hs2017-to-hs2022-wco-table-ii"
 LEGACY = "cpc21-hs2017-unsd-correspondence"
-REQUIRED = (WORKBOOK, LISTING, STATUS, CHAPTER, GUIDANCE, TABLE_I, TABLE_II, LEGACY)
+REVIEW_CHAPTERS = ("03", "27", "30", "87", "94")
+REQUIRED = (WORKBOOK, LISTING, STATUS, CHAPTER, GUIDANCE, TABLE_I, TABLE_II, LEGACY,
+            hs.STRUCTURE, hs.CONTENTS, *(f"hs2022-chapter{code}" for code in REVIEW_CHAPTERS))
 
 HS_SCOPE = {
     "4818.90": ("纸或纤维素口罩示例（多数国家）", GUIDANCE, 3, 9, 11, "Cellulose/paper masks"),
@@ -51,6 +54,29 @@ REVIEWS = {
     ],
 }
 
+NOTE_REVIEWS = {
+    ("11012", "C"): ("scope_pending", "第 27 章将 2701.12 定为烟煤。工作簿在烟煤和次烟煤条目都引用该子目，分界待核。",
+                    "27", 1, ("2701.12",), None),
+    ("11031", "C"): ("scope_pending", "第 27 章将 2701.12 定为烟煤。工作簿在烟煤和次烟煤条目都引用该子目，分界待核。",
+                    "27", 1, ("2701.12",), None),
+    ("21267", "C"): ("missing_code", "CPC 工作簿和说明 PDF 均写 0307.53。HS 2022 第 03 章列 0307.52 为冷冻章鱼，保留为待核候选。",
+                    "03", 11, ("0307.52", "0307.59"), "0307.52"),
+    ("35272", "C"): ("scope_pending", "3002.90 是该 HS 品目的其他项，原引用可回查，残余子目与 CPC 血液和免疫产品条目的范围待核。",
+                    "30", 3, ("3002.90",), None),
+    ("35273", "C"): ("notation_reviewed", "3002.41–49 取税则中存在的三个子目，3002.51/59 保留为并列的两个子目。",
+                    "30", 3, ("3002.41", "3002.42", "3002.49", "3002.51", "3002.59"), None),
+    ("41609", "C"): ("notation_reviewed", "8105.30 后的句点用于分隔紧邻的两个完整代码，HS 工作表中两者各为独立的废料子目。",
+                    None, None, (), None),
+    ("46532", "D"): ("scope_reviewed", "9405.31 在此处为排除，在 CPC 46533 是定义引用。",
+                    "94", 4, ("9405.31",), None),
+    ("46533", "C"): ("notation_reviewed", "裸后缀 31 和 41 沿用 9405。两个代码另在 CPC 46532、46539 分别出现为排除。",
+                    "94", 4, ("9405.31", "9405.41"), None),
+    ("46539", "D"): ("scope_reviewed", "9405.41 在此处为排除，在 CPC 46533 是定义引用。",
+                    "94", 4, ("9405.41",), None),
+    ("49913", "C"): ("scope_pending", "纳入句点名电驱动，HS 8711.60 明列电驱动，8711.90 是其他项。保留两处引用，8711.90 的具体范围待核。",
+                    "87", 5, ("8711.60", "8711.90"), None),
+}
+
 
 def pdf_lines(assets, rid, page):
     return subprocess.check_output([
@@ -81,6 +107,7 @@ def workbook_references(asset, by_code):
                     kind = "definition"
                 notation = re.split(r"\s+and includes:|\)", line.split("HS 2022:", 1)[1], maxsplit=1)[0]
                 references.append({
+                    "id": f"{cpc_id}:HS2022:{column}:{number}",
                     "cpc_id": cpc_id, "hs_edition": "2022", "kind": kind,
                     "hs_notation": notation.strip().rstrip("."), "sheet": sheet,
                     "row": row["row"], "column": column, "line": number,
@@ -182,33 +209,68 @@ def legacy_correspondences(asset):
             "evidence": asset["evidence"]}
 
 
+def attach_note_reviews(assets, references, nodes):
+    hs_codes = {node["code"]: node["id"] for node in nodes}
+    located = set()
+    for ref in references:
+        key = (ref["cpc_id"].rsplit(":", 1)[1], ref["column"])
+        if key not in NOTE_REVIEWS:
+            continue
+        status, finding, chapter, page, markers, candidate = NOTE_REVIEWS[key]
+        review = {"status": status, "finding": finding}
+        if chapter:
+            rid = f"hs2022-chapter{chapter}"
+            lines = pdf_lines(assets, rid, page)
+            hits = [number for number, line in enumerate(lines, 1) if any(code in line for code in markers)]
+            if not all(any(code in line for line in lines) for code in markers):
+                raise ValueError(f"HS chapter {chapter} verification marker missing")
+            review["evidence"] = {**assets[rid]["evidence"], "pdf_page": page, "lines": hits}
+        if candidate:
+            review["candidate_hs_id"] = hs_codes[candidate]
+        ref["review"] = review
+        located.add(key)
+    if located != set(NOTE_REVIEWS):
+        raise ValueError("CPC note review points to missing references")
+
+
 def build(assets, by_code):
     references, checked = workbook_references(assets[WORKBOOK], by_code)
     if any(row["explicit_hs2022_reference"] for row in checked.values()):
         raise ValueError("a reviewed CPC scope has new explicit HS 2022 evidence; reassess the review")
-    hs = {}
+    structure = hs.catalogue(assets)
+    hs_reference.resolve(references, structure["nodes"])
+    attach_note_reviews(assets, references, structure["nodes"])
+    scope = {}
     for code, (label, rid, page, start, end, marker) in HS_SCOPE.items():
         lines = pdf_lines(assets, rid, page)[start - 1:end]
         source_text = "\n".join(lines)
         if code not in source_text or marker not in source_text:
             raise ValueError(f"HS 2022 {code} source location mismatch")
-        hs[code] = {
-            "id": f"HS:2022:{code}", "label": label, "source_kind": assets[rid]["resource"]["role"],
+        scope[code] = {
+            "label": label, "source_kind": assets[rid]["resource"]["role"],
             "evidence": {**assets[rid]["evidence"], "pdf_page": page, "lines": [start, end],
                          "text_sha256": sha256(source_text.encode("utf-8"))},
         }
-    heading = next(r for r in references if r["cpc_id"] == "CPC:3.0:32193" and r["hs_notation"] == "4818"
-                   and r["kind"] == "definition")
-    hs["4818"] = {"id": "HS:2022:4818", "label": "CPC 3.0 注释引用的品目",
-                  "source_kind": "official_cpc_note", "note_cpc_id": heading["cpc_id"]}
+    if set(scope) - {node["code"] for node in structure["nodes"]}:
+        raise ValueError("HS scope review points outside HS 2022 catalogue")
     reviews = {
-        code: [{"hs_id": hs[hs_code]["id"] if hs_code else None, "status": status, "finding": finding}
+        code: [{"hs_id": f"HS:2022:{hs_code}" if hs_code else None, "status": status, "finding": finding}
                for hs_code, status, finding in findings]
         for code, findings in REVIEWS.items()
+    }
+    targets = [target for ref in references for target in ref["target_ids"]]
+    reference_counts = {
+        "by_kind": dict(Counter(ref["kind"] for ref in references)),
+        "by_resolution": dict(Counter(ref["resolution_status"] for ref in references)),
+        "terms_by_form": dict(Counter(term["form"] for ref in references for term in ref["terms"])),
+        "resolved_links": len(targets), "unique_hs_targets": len(set(targets)),
+        "links_by_kind": {kind: sum(len(ref["target_ids"]) for ref in references if ref["kind"] == kind)
+                          for kind in ("definition", "inclusion", "exclusion")},
     }
     return {
         "audit": publication_audit(assets), "workbook": assets[WORKBOOK]["evidence"],
         "workbook_code_rows": len(by_code), "official_note_references": references,
-        "workbook_review_rows": checked, "hs": hs, "reviews": reviews,
+        "official_note_reference_counts": reference_counts,
+        "workbook_review_rows": checked, "hs_structure": structure, "hs_scope": scope, "reviews": reviews,
         "carbon_correlations": carbon_correlations(assets), "historical_cpc_hs": legacy_correspondences(assets[LEGACY]),
     }

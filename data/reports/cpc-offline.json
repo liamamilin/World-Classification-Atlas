@@ -83,6 +83,62 @@
       "sha256": "a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c",
       "publication_date": null,
       "path": "data/local/raw/UN_CPC/2.1/cpc21-hs2017-unsd-correspondence/a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c/cpc21-hs2017-unsd-correspondence.csv"
+    },
+    {
+      "resource_id": "hs2022-unsd-structure",
+      "edition": "2022",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/download/In%20Text/HSCodeandDescription.xlsx",
+      "sha256": "668700216dd7ba6811e0bcda4b3f6cfb69c2b40d8015730669d0c95d094d6409",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-unsd-structure/668700216dd7ba6811e0bcda4b3f6cfb69c2b40d8015730669d0c95d094d6409/hs2022-unsd-structure.xlsx"
+    },
+    {
+      "resource_id": "hs2022-wco-contents",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/table-of-contents_2022e_rev.pdf?la=en",
+      "sha256": "84c08b4b37240417e6eed19c900a1a1e3887f6bf589e120670482fb0ae777143",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-wco-contents/84c08b4b37240417e6eed19c900a1a1e3887f6bf589e120670482fb0ae777143/hs2022-wco-contents.pdf"
+    },
+    {
+      "resource_id": "hs2022-chapter03",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+      "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-chapter03/79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912/hs2022-chapter03.pdf"
+    },
+    {
+      "resource_id": "hs2022-chapter27",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+      "sha256": "596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-chapter27/596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805/hs2022-chapter27.pdf"
+    },
+    {
+      "resource_id": "hs2022-chapter30",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+      "sha256": "7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-chapter30/7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d/hs2022-chapter30.pdf"
+    },
+    {
+      "resource_id": "hs2022-chapter87",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+      "sha256": "e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-chapter87/e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904/hs2022-chapter87.pdf"
+    },
+    {
+      "resource_id": "hs2022-chapter94",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+      "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+      "publication_date": null,
+      "path": "data/local/raw/HS/2022/hs2022-chapter94/5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911/hs2022-chapter94.pdf"
     }
   ],
   "structure": {
@@ -106,7 +162,7 @@
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
-  "view_sha256": "da57e08e5869d4512cb4dde7536b2d3fafd4af3ead269f56715046c98e566192",
+  "view_sha256": "04e153976d33ca6a88cc609fd27d406deb990e2e7c4d1ff1632478b88f4adba7",
   "hs_review": {
     "audit": {
       "status": "standalone_table_not_located_in_checked_listing",
@@ -168,6 +224,7 @@
     "workbook_code_rows": 4586,
     "official_note_references": [
       {
+        "id": "CPC:3.0:01111:HS2022:C:2",
         "cpc_id": "CPC:3.0:01111",
         "hs_edition": "2022",
         "kind": "definition",
@@ -176,9 +233,31 @@
         "row": 6,
         "column": "C",
         "line": 2,
-        "text_sha256": "a5567ad4cf18712815802be81064e68355d9ffa26737238cf67a5af36b62ed1a"
+        "text_sha256": "a5567ad4cf18712815802be81064e68355d9ffa26737238cf67a5af36b62ed1a",
+        "terms": [
+          {
+            "raw": "1001.11",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:1001.11"
+            ]
+          },
+          {
+            "raw": ".91",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:1001.91"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:1001.11",
+          "HS:2022:1001.91"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:01112:HS2022:C:2",
         "cpc_id": "CPC:3.0:01112",
         "hs_edition": "2022",
         "kind": "definition",
@@ -187,9 +266,31 @@
         "row": 7,
         "column": "C",
         "line": 2,
-        "text_sha256": "09bcb9eb2287fd47f3af09e956236c439f7b4f30607997dc776a063b44ccfedd"
+        "text_sha256": "09bcb9eb2287fd47f3af09e956236c439f7b4f30607997dc776a063b44ccfedd",
+        "terms": [
+          {
+            "raw": "1001.19",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:1001.19"
+            ]
+          },
+          {
+            "raw": ".99",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:1001.99"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:1001.19",
+          "HS:2022:1001.99"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:03251:HS2022:C:2",
         "cpc_id": "CPC:3.0:03251",
         "hs_edition": "2022",
         "kind": "inclusion",
@@ -198,9 +299,23 @@
         "row": 328,
         "column": "C",
         "line": 2,
-        "text_sha256": "87059919c772e8fa0c3392477b319222c132d6533bf8c2d66285997a8866d0ea"
+        "text_sha256": "87059919c772e8fa0c3392477b319222c132d6533bf8c2d66285997a8866d0ea",
+        "terms": [
+          {
+            "raw": "1404.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:1404.20"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:1404.20"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:03252:HS2022:C:1",
         "cpc_id": "CPC:3.0:03252",
         "hs_edition": "2022",
         "kind": "definition",
@@ -209,9 +324,31 @@
         "row": 329,
         "column": "C",
         "line": 1,
-        "text_sha256": "418e56442e61dfa0e553af5e5d542ee2df5783dfdec07787f997a67efe7072ee"
+        "text_sha256": "418e56442e61dfa0e553af5e5d542ee2df5783dfdec07787f997a67efe7072ee",
+        "terms": [
+          {
+            "raw": "1401",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:1401"
+            ]
+          },
+          {
+            "raw": "1404.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:1404.90"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:1401",
+          "HS:2022:1404.90"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:11011:HS2022:C:1",
         "cpc_id": "CPC:3.0:11011",
         "hs_edition": "2022",
         "kind": "definition",
@@ -220,9 +357,23 @@
         "row": 434,
         "column": "C",
         "line": 1,
-        "text_sha256": "8de80a3ed48f58885cca4a53d65a2d0ba18d25815a1cb74b7efd13e6bc7ce3d4"
+        "text_sha256": "8de80a3ed48f58885cca4a53d65a2d0ba18d25815a1cb74b7efd13e6bc7ce3d4",
+        "terms": [
+          {
+            "raw": "2701.11",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2701.11"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2701.11"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:11012:HS2022:C:1",
         "cpc_id": "CPC:3.0:11012",
         "hs_edition": "2022",
         "kind": "definition",
@@ -231,9 +382,38 @@
         "row": 435,
         "column": "C",
         "line": 1,
-        "text_sha256": "40845b725a1da7b4cc54464d46ecb45f6f313b5ce23a1a5db1a71557ff692480"
+        "text_sha256": "40845b725a1da7b4cc54464d46ecb45f6f313b5ce23a1a5db1a71557ff692480",
+        "terms": [
+          {
+            "raw": "2701.12",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2701.12"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2701.12"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "scope_pending",
+          "finding": "第 27 章将 2701.12 定为烟煤。工作簿在烟煤和次烟煤条目都引用该子目，分界待核。",
+          "evidence": {
+            "resource_id": "hs2022-chapter27",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+            "sha256": "596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805",
+            "publication_date": null,
+            "pdf_page": 1,
+            "lines": [
+              33
+            ]
+          }
+        }
       },
       {
+        "id": "CPC:3.0:11031:HS2022:C:1",
         "cpc_id": "CPC:3.0:11031",
         "hs_edition": "2022",
         "kind": "definition",
@@ -242,9 +422,38 @@
         "row": 439,
         "column": "C",
         "line": 1,
-        "text_sha256": "40845b725a1da7b4cc54464d46ecb45f6f313b5ce23a1a5db1a71557ff692480"
+        "text_sha256": "40845b725a1da7b4cc54464d46ecb45f6f313b5ce23a1a5db1a71557ff692480",
+        "terms": [
+          {
+            "raw": "2701.12",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2701.12"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2701.12"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "scope_pending",
+          "finding": "第 27 章将 2701.12 定为烟煤。工作簿在烟煤和次烟煤条目都引用该子目，分界待核。",
+          "evidence": {
+            "resource_id": "hs2022-chapter27",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+            "sha256": "596b0948e008f6f52b05db88ab9001e2944c1ba11d9fb4950496506cf84dd805",
+            "publication_date": null,
+            "pdf_page": 1,
+            "lines": [
+              33
+            ]
+          }
+        }
       },
       {
+        "id": "CPC:3.0:11032:HS2022:C:1",
         "cpc_id": "CPC:3.0:11032",
         "hs_edition": "2022",
         "kind": "definition",
@@ -253,9 +462,31 @@
         "row": 440,
         "column": "C",
         "line": 1,
-        "text_sha256": "a6817ceab7bf8aa3972e4fa43c7aedb8b215181cbadc514edd7ec144cad73de7"
+        "text_sha256": "a6817ceab7bf8aa3972e4fa43c7aedb8b215181cbadc514edd7ec144cad73de7",
+        "terms": [
+          {
+            "raw": "2702.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2702.10"
+            ]
+          },
+          {
+            "raw": "2702.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2702.20"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2702.10",
+          "HS:2022:2702.20"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:15400:HS2022:C:1",
         "cpc_id": "CPC:3.0:15400",
         "hs_edition": "2022",
         "kind": "definition",
@@ -264,9 +495,31 @@
         "row": 495,
         "column": "C",
         "line": 1,
-        "text_sha256": "cbe76c17e19b2f4b6ca40c3b59f4829484c89cfd2b599288793290342e757e7d"
+        "text_sha256": "cbe76c17e19b2f4b6ca40c3b59f4829484c89cfd2b599288793290342e757e7d",
+        "terms": [
+          {
+            "raw": "2507",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2507"
+            ]
+          },
+          {
+            "raw": "2508",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2508"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2507",
+          "HS:2022:2508"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:16200:HS2022:C:1",
         "cpc_id": "CPC:3.0:16200",
         "hs_edition": "2022",
         "kind": "definition",
@@ -275,9 +528,23 @@
         "row": 506,
         "column": "C",
         "line": 1,
-        "text_sha256": "42701a8ff3f3ea64c1905de2705dea84fc2d3c7187ac60584cbaf586e456b2e4"
+        "text_sha256": "42701a8ff3f3ea64c1905de2705dea84fc2d3c7187ac60584cbaf586e456b2e4",
+        "terms": [
+          {
+            "raw": "2501.00",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2501.00"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2501.00"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:16390:HS2022:C:1",
         "cpc_id": "CPC:3.0:16390",
         "hs_edition": "2022",
         "kind": "definition",
@@ -286,9 +553,103 @@
         "row": 515,
         "column": "C",
         "line": 1,
-        "text_sha256": "759212c184221c4af3723d7db181a191c4e7047de56a5ff4b29742afe115e78f"
+        "text_sha256": "759212c184221c4af3723d7db181a191c4e7047de56a5ff4b29742afe115e78f",
+        "terms": [
+          {
+            "raw": "2504",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2504"
+            ]
+          },
+          {
+            "raw": "2506.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2506.10"
+            ]
+          },
+          {
+            "raw": "2512",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2512"
+            ]
+          },
+          {
+            "raw": "2519",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2519"
+            ]
+          },
+          {
+            "raw": "2524",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2524"
+            ]
+          },
+          {
+            "raw": "2525.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2525.10"
+            ]
+          },
+          {
+            "raw": ".20",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:2525.20"
+            ]
+          },
+          {
+            "raw": "2526",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2526"
+            ]
+          },
+          {
+            "raw": "2529.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2529.10"
+            ]
+          },
+          {
+            "raw": ".30",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:2529.30"
+            ]
+          },
+          {
+            "raw": "2530.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2530.10"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2504",
+          "HS:2022:2506.10",
+          "HS:2022:2512",
+          "HS:2022:2519",
+          "HS:2022:2524",
+          "HS:2022:2525.10",
+          "HS:2022:2525.20",
+          "HS:2022:2526",
+          "HS:2022:2529.10",
+          "HS:2022:2529.30",
+          "HS:2022:2530.10"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:21261:HS2022:C:1",
         "cpc_id": "CPC:3.0:21261",
         "hs_edition": "2022",
         "kind": "definition",
@@ -297,9 +658,31 @@
         "row": 627,
         "column": "C",
         "line": 1,
-        "text_sha256": "de85255ad48a7822feb2ec934abd275bd619ac32b3699dcf51ca6cb10a67e5e6"
+        "text_sha256": "de85255ad48a7822feb2ec934abd275bd619ac32b3699dcf51ca6cb10a67e5e6",
+        "terms": [
+          {
+            "raw": "0307.83",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.83"
+            ]
+          },
+          {
+            "raw": "0307.87",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.87"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:0307.83",
+          "HS:2022:0307.87"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:21262:HS2022:C:1",
         "cpc_id": "CPC:3.0:21262",
         "hs_edition": "2022",
         "kind": "definition",
@@ -308,9 +691,31 @@
         "row": 628,
         "column": "C",
         "line": 1,
-        "text_sha256": "b73bbdc5a9cdcfccce28f4f8901d8e2010eebcc9fb03514901d1ec501c9e6316"
+        "text_sha256": "b73bbdc5a9cdcfccce28f4f8901d8e2010eebcc9fb03514901d1ec501c9e6316",
+        "terms": [
+          {
+            "raw": "0307.12",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.12"
+            ]
+          },
+          {
+            "raw": "0307.19",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.19"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:0307.12",
+          "HS:2022:0307.19"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:21263:HS2022:C:1",
         "cpc_id": "CPC:3.0:21263",
         "hs_edition": "2022",
         "kind": "definition",
@@ -319,9 +724,31 @@
         "row": 629,
         "column": "C",
         "line": 1,
-        "text_sha256": "f86e847dd52a07b452c25ebe08a9a28aa22e3890e80b8f45e88af5ef275149dd"
+        "text_sha256": "f86e847dd52a07b452c25ebe08a9a28aa22e3890e80b8f45e88af5ef275149dd",
+        "terms": [
+          {
+            "raw": "0307.32",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.32"
+            ]
+          },
+          {
+            "raw": "0307.39",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.39"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:0307.32",
+          "HS:2022:0307.39"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:21264:HS2022:C:1",
         "cpc_id": "CPC:3.0:21264",
         "hs_edition": "2022",
         "kind": "definition",
@@ -330,9 +757,31 @@
         "row": 630,
         "column": "C",
         "line": 1,
-        "text_sha256": "efa51ac2b6b96a45ec38022a85195e32eff213233895ce1dbdf3015901e15774"
+        "text_sha256": "efa51ac2b6b96a45ec38022a85195e32eff213233895ce1dbdf3015901e15774",
+        "terms": [
+          {
+            "raw": "0307.22",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.22"
+            ]
+          },
+          {
+            "raw": "0307.29",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.29"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:0307.22",
+          "HS:2022:0307.29"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:21265:HS2022:C:1",
         "cpc_id": "CPC:3.0:21265",
         "hs_edition": "2022",
         "kind": "definition",
@@ -341,9 +790,31 @@
         "row": 631,
         "column": "C",
         "line": 1,
-        "text_sha256": "618013eb808685ee144ca74b63fbfb6df3b2f9bdadb54757c27330e298f866e6"
+        "text_sha256": "618013eb808685ee144ca74b63fbfb6df3b2f9bdadb54757c27330e298f866e6",
+        "terms": [
+          {
+            "raw": "0307.72",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.72"
+            ]
+          },
+          {
+            "raw": "0307.79",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.79"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:0307.72",
+          "HS:2022:0307.79"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:21266:HS2022:C:1",
         "cpc_id": "CPC:3.0:21266",
         "hs_edition": "2022",
         "kind": "definition",
@@ -352,9 +823,31 @@
         "row": 632,
         "column": "C",
         "line": 1,
-        "text_sha256": "5de35cb04381c6c43677e128574aef5c9a06cd5663d3d1203177003616ae8c73"
+        "text_sha256": "5de35cb04381c6c43677e128574aef5c9a06cd5663d3d1203177003616ae8c73",
+        "terms": [
+          {
+            "raw": "0307.43",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.43"
+            ]
+          },
+          {
+            "raw": "0307.49",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.49"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:0307.43",
+          "HS:2022:0307.49"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:21267:HS2022:C:1",
         "cpc_id": "CPC:3.0:21267",
         "hs_edition": "2022",
         "kind": "definition",
@@ -363,9 +856,49 @@
         "row": 633,
         "column": "C",
         "line": 1,
-        "text_sha256": "4b0e4f0ccfbc053ff88b9e1cd3232c3a9ef3dedd0a0bf03ba7268aab3f1fbf41"
+        "text_sha256": "4b0e4f0ccfbc053ff88b9e1cd3232c3a9ef3dedd0a0bf03ba7268aab3f1fbf41",
+        "terms": [
+          {
+            "raw": "0307.53",
+            "form": "code",
+            "target_ids": [],
+            "issue": "code_not_in_hs2022",
+            "attempted_codes": [
+              "0307.53"
+            ]
+          },
+          {
+            "raw": "0307.59",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.59"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:0307.59"
+        ],
+        "resolution_status": "pending",
+        "review": {
+          "status": "missing_code",
+          "finding": "CPC 工作簿和说明 PDF 均写 0307.53。HS 2022 第 03 章列 0307.52 为冷冻章鱼，保留为待核候选。",
+          "evidence": {
+            "resource_id": "hs2022-chapter03",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+            "sha256": "79ad0d894bfaf0e622aa7df79c32cb620a0830b4a1e8f9fb67b6dac27880e912",
+            "publication_date": null,
+            "pdf_page": 11,
+            "lines": [
+              25,
+              26
+            ]
+          },
+          "candidate_hs_id": "HS:2022:0307.52"
+        }
       },
       {
+        "id": "CPC:3.0:21268:HS2022:C:1",
         "cpc_id": "CPC:3.0:21268",
         "hs_edition": "2022",
         "kind": "definition",
@@ -374,9 +907,31 @@
         "row": 634,
         "column": "C",
         "line": 1,
-        "text_sha256": "2df0c27f50cb4732ff1629875d8e636d7bb4ffc205acf54c72c0e9ecad9442ef"
+        "text_sha256": "2df0c27f50cb4732ff1629875d8e636d7bb4ffc205acf54c72c0e9ecad9442ef",
+        "terms": [
+          {
+            "raw": "0307.92",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.92"
+            ]
+          },
+          {
+            "raw": "0307.99",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:0307.99"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:0307.92",
+          "HS:2022:0307.99"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:25091:HS2022:C:1",
         "cpc_id": "CPC:3.0:25091",
         "hs_edition": "2022",
         "kind": "definition",
@@ -385,9 +940,23 @@
         "row": 924,
         "column": "C",
         "line": 1,
-        "text_sha256": "85b7470dc028fd6505bf863ce8922110b778ef4b227085dcf400cd046cc13bd3"
+        "text_sha256": "85b7470dc028fd6505bf863ce8922110b778ef4b227085dcf400cd046cc13bd3",
+        "terms": [
+          {
+            "raw": "24.03",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2403"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2403"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:25092:HS2022:C:1",
         "cpc_id": "CPC:3.0:25092",
         "hs_edition": "2022",
         "kind": "definition",
@@ -396,9 +965,23 @@
         "row": 925,
         "column": "C",
         "line": 1,
-        "text_sha256": "940c7104e2f9f4fbee64fb6864ea6a8f53e96a1a6743495766efaacf172c72ee"
+        "text_sha256": "940c7104e2f9f4fbee64fb6864ea6a8f53e96a1a6743495766efaacf172c72ee",
+        "terms": [
+          {
+            "raw": "24.04",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2404"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2404"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:26860:HS2022:C:1",
         "cpc_id": "CPC:3.0:26860",
         "hs_edition": "2022",
         "kind": "definition",
@@ -407,9 +990,23 @@
         "row": 1034,
         "column": "C",
         "line": 1,
-        "text_sha256": "3f3d2ffa1e3ec13cb987004d79adab15fe421f30fa1b7d7c8e1ac0760255f0c0"
+        "text_sha256": "3f3d2ffa1e3ec13cb987004d79adab15fe421f30fa1b7d7c8e1ac0760255f0c0",
+        "terms": [
+          {
+            "raw": "58.03",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:5803"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:5803"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:27991:HS2022:C:1",
         "cpc_id": "CPC:3.0:27991",
         "hs_edition": "2022",
         "kind": "definition",
@@ -418,9 +1015,23 @@
         "row": 1082,
         "column": "C",
         "line": 1,
-        "text_sha256": "23936b90d8c6fe69afb8c1bd4a2fd01bd1ec26f54feb924320d792c296e6584c"
+        "text_sha256": "23936b90d8c6fe69afb8c1bd4a2fd01bd1ec26f54feb924320d792c296e6584c",
+        "terms": [
+          {
+            "raw": "56.01",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:5601"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:5601"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:31911:HS2022:C:1",
         "cpc_id": "CPC:3.0:31911",
         "hs_edition": "2022",
         "kind": "definition",
@@ -429,9 +1040,23 @@
         "row": 1247,
         "column": "C",
         "line": 1,
-        "text_sha256": "97534ff5ad19300b13d49b23323bf76bbc243648271f6455248de2c6d531bdcd"
+        "text_sha256": "97534ff5ad19300b13d49b23323bf76bbc243648271f6455248de2c6d531bdcd",
+        "terms": [
+          {
+            "raw": "4417",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:4417"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:4417"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:32132:HS2022:C:1",
         "cpc_id": "CPC:3.0:32132",
         "hs_edition": "2022",
         "kind": "definition",
@@ -440,9 +1065,31 @@
         "row": 1271,
         "column": "C",
         "line": 1,
-        "text_sha256": "917eda17edc1181c9df033c89c93cb268c2c9d260721ae742199b613efb8bc34"
+        "text_sha256": "917eda17edc1181c9df033c89c93cb268c2c9d260721ae742199b613efb8bc34",
+        "terms": [
+          {
+            "raw": "4804.11",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:4804.11"
+            ]
+          },
+          {
+            "raw": ".19",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:4804.19"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:4804.11",
+          "HS:2022:4804.19"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:32143:HS2022:C:1",
         "cpc_id": "CPC:3.0:32143",
         "hs_edition": "2022",
         "kind": "definition",
@@ -451,9 +1098,23 @@
         "row": 1280,
         "column": "C",
         "line": 1,
-        "text_sha256": "782ec6e125a1171385c40c0af7d313b482347132a049502fa06f6b9536c1c7f8"
+        "text_sha256": "782ec6e125a1171385c40c0af7d313b482347132a049502fa06f6b9536c1c7f8",
+        "terms": [
+          {
+            "raw": "4810",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:4810"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:4810"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:32149:HS2022:C:1",
         "cpc_id": "CPC:3.0:32149",
         "hs_edition": "2022",
         "kind": "definition",
@@ -462,9 +1123,31 @@
         "row": 1281,
         "column": "C",
         "line": 1,
-        "text_sha256": "689120f706cf3e484417ed023f9a95f6cef864d9ac37709f244419f2875fc780"
+        "text_sha256": "689120f706cf3e484417ed023f9a95f6cef864d9ac37709f244419f2875fc780",
+        "terms": [
+          {
+            "raw": "4809",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:4809"
+            ]
+          },
+          {
+            "raw": "4811",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:4811"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:4809",
+          "HS:2022:4811"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:32191:HS2022:C:1",
         "cpc_id": "CPC:3.0:32191",
         "hs_edition": "2022",
         "kind": "definition",
@@ -473,9 +1156,23 @@
         "row": 1287,
         "column": "C",
         "line": 1,
-        "text_sha256": "7ca96fac2aa224407dc52623017dcb1fd8590a1c18d907d33d1cab121fa48685"
+        "text_sha256": "7ca96fac2aa224407dc52623017dcb1fd8590a1c18d907d33d1cab121fa48685",
+        "terms": [
+          {
+            "raw": "4816",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:4816"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:4816"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:32193:HS2022:C:1",
         "cpc_id": "CPC:3.0:32193",
         "hs_edition": "2022",
         "kind": "definition",
@@ -484,9 +1181,23 @@
         "row": 1289,
         "column": "C",
         "line": 1,
-        "text_sha256": "6d1dee6a87c8ad0f858082e5a5a7348375bb1a3d4959ab68fbf230d91e9f77c6"
+        "text_sha256": "6d1dee6a87c8ad0f858082e5a5a7348375bb1a3d4959ab68fbf230d91e9f77c6",
+        "terms": [
+          {
+            "raw": "4818",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:4818"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:4818"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:32196:HS2022:C:1",
         "cpc_id": "CPC:3.0:32196",
         "hs_edition": "2022",
         "kind": "definition",
@@ -495,9 +1206,23 @@
         "row": 1292,
         "column": "C",
         "line": 1,
-        "text_sha256": "e85972382d7e2c3c01d396659a4bc776599c28326069367f8d920876e11ea1b0"
+        "text_sha256": "e85972382d7e2c3c01d396659a4bc776599c28326069367f8d920876e11ea1b0",
+        "terms": [
+          {
+            "raw": "9619",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:9619"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:9619"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:33110:HS2022:C:6",
         "cpc_id": "CPC:3.0:33110",
         "hs_edition": "2022",
         "kind": "inclusion",
@@ -506,9 +1231,23 @@
         "row": 1346,
         "column": "C",
         "line": 6,
-        "text_sha256": "4ea1d346f8592f5ae4171263fd0acf99441ffe699f9f4ef2c9e0fce8f32480fa"
+        "text_sha256": "4ea1d346f8592f5ae4171263fd0acf99441ffe699f9f4ef2c9e0fce8f32480fa",
+        "terms": [
+          {
+            "raw": "2704.00",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:2704.00"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:2704.00"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:35271:HS2022:C:1",
         "cpc_id": "CPC:3.0:35271",
         "hs_edition": "2022",
         "kind": "definition",
@@ -517,9 +1256,23 @@
         "row": 1541,
         "column": "C",
         "line": 1,
-        "text_sha256": "5b806f25f5d1bfcbbe7c80581e1c359f8744f99fb3aa23e06684facb911aba75"
+        "text_sha256": "5b806f25f5d1bfcbbe7c80581e1c359f8744f99fb3aa23e06684facb911aba75",
+        "terms": [
+          {
+            "raw": "30.01",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:3001"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:3001"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:35272:HS2022:C:1",
         "cpc_id": "CPC:3.0:35272",
         "hs_edition": "2022",
         "kind": "definition",
@@ -528,9 +1281,52 @@
         "row": 1542,
         "column": "C",
         "line": 1,
-        "text_sha256": "9fec9458d56be1749dac9de0a1c965a79ab2209a01c5a592a40be441d7aad2c0"
+        "text_sha256": "9fec9458d56be1749dac9de0a1c965a79ab2209a01c5a592a40be441d7aad2c0",
+        "terms": [
+          {
+            "raw": "3002.12-15",
+            "form": "range",
+            "target_ids": [
+              "HS:2022:3002.12",
+              "HS:2022:3002.13",
+              "HS:2022:3002.14",
+              "HS:2022:3002.15"
+            ]
+          },
+          {
+            "raw": ".90",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:3002.90"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:3002.12",
+          "HS:2022:3002.13",
+          "HS:2022:3002.14",
+          "HS:2022:3002.15",
+          "HS:2022:3002.90"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "scope_pending",
+          "finding": "3002.90 是该 HS 品目的其他项，原引用可回查，残余子目与 CPC 血液和免疫产品条目的范围待核。",
+          "evidence": {
+            "resource_id": "hs2022-chapter30",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+            "sha256": "7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d",
+            "publication_date": null,
+            "pdf_page": 3,
+            "lines": [
+              11
+            ]
+          }
+        }
       },
       {
+        "id": "CPC:3.0:35273:HS2022:C:1",
         "cpc_id": "CPC:3.0:35273",
         "hs_edition": "2022",
         "kind": "definition",
@@ -539,9 +1335,56 @@
         "row": 1543,
         "column": "C",
         "line": 1,
-        "text_sha256": "422c08bd762264e40c67fe6fa3e19fc055e3466cc408cb2a3e75951fa72b814d"
+        "text_sha256": "422c08bd762264e40c67fe6fa3e19fc055e3466cc408cb2a3e75951fa72b814d",
+        "terms": [
+          {
+            "raw": "3002.41-49",
+            "form": "range",
+            "target_ids": [
+              "HS:2022:3002.41",
+              "HS:2022:3002.42",
+              "HS:2022:3002.49"
+            ]
+          },
+          {
+            "raw": "3002.51/59",
+            "form": "slash_list",
+            "target_ids": [
+              "HS:2022:3002.51",
+              "HS:2022:3002.59"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:3002.41",
+          "HS:2022:3002.42",
+          "HS:2022:3002.49",
+          "HS:2022:3002.51",
+          "HS:2022:3002.59"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "notation_reviewed",
+          "finding": "3002.41–49 取税则中存在的三个子目，3002.51/59 保留为并列的两个子目。",
+          "evidence": {
+            "resource_id": "hs2022-chapter30",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+            "sha256": "7ad8d2b476a97e2326fee5fbf6af0947d5213cc9a7f5e337667a7cbaa07af11d",
+            "publication_date": null,
+            "pdf_page": 3,
+            "lines": [
+              5,
+              6,
+              7,
+              9,
+              10
+            ]
+          }
+        }
       },
       {
+        "id": "CPC:3.0:35279:HS2022:C:1",
         "cpc_id": "CPC:3.0:35279",
         "hs_edition": "2022",
         "kind": "definition",
@@ -550,9 +1393,23 @@
         "row": 1544,
         "column": "C",
         "line": 1,
-        "text_sha256": "54c2a649132185c0f3f3acb9d673f429cac6a5d17222696d902ccff314b8671d"
+        "text_sha256": "54c2a649132185c0f3f3acb9d673f429cac6a5d17222696d902ccff314b8671d",
+        "terms": [
+          {
+            "raw": "30.05",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:3005"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:3005"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:35290:HS2022:C:1",
         "cpc_id": "CPC:3.0:35290",
         "hs_edition": "2022",
         "kind": "definition",
@@ -561,9 +1418,23 @@
         "row": 1546,
         "column": "C",
         "line": 1,
-        "text_sha256": "c0ce1a391da9c0b9c2c63da923b8476458d05b11c3f4defb4516320b3035a554"
+        "text_sha256": "c0ce1a391da9c0b9c2c63da923b8476458d05b11c3f4defb4516320b3035a554",
+        "terms": [
+          {
+            "raw": "30.06",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:3006"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:3006"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:38169:HS2022:C:1",
         "cpc_id": "CPC:3.0:38169",
         "hs_edition": "2022",
         "kind": "definition",
@@ -572,9 +1443,31 @@
         "row": 1760,
         "column": "C",
         "line": 1,
-        "text_sha256": "97be504f5aa5b128ec207b861f4b19089d3ed3b73793ff5b11292a1eefd67be7"
+        "text_sha256": "97be504f5aa5b128ec207b861f4b19089d3ed3b73793ff5b11292a1eefd67be7",
+        "terms": [
+          {
+            "raw": "9401.99",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:9401.99"
+            ]
+          },
+          {
+            "raw": "9403.99",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:9403.99"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:9401.99",
+          "HS:2022:9403.99"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:39282:HS2022:C:1",
         "cpc_id": "CPC:3.0:39282",
         "hs_edition": "2022",
         "kind": "definition",
@@ -583,9 +1476,31 @@
         "row": 1906,
         "column": "C",
         "line": 1,
-        "text_sha256": "78af973b55ce1863c7229cd8db9bf884e67046de3c6f2ef468c45d034fc89e9c"
+        "text_sha256": "78af973b55ce1863c7229cd8db9bf884e67046de3c6f2ef468c45d034fc89e9c",
+        "terms": [
+          {
+            "raw": "4401.32",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:4401.32"
+            ]
+          },
+          {
+            "raw": ".39",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:4401.39"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:4401.32",
+          "HS:2022:4401.39"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:41601:HS2022:C:1",
         "cpc_id": "CPC:3.0:41601",
         "hs_edition": "2022",
         "kind": "definition",
@@ -594,9 +1509,119 @@
         "row": 2069,
         "column": "C",
         "line": 1,
-        "text_sha256": "5c2d78a1b24a9a0b999e62bcd9e4c8a00efc30521354d330cd786494cc21fa1c"
+        "text_sha256": "5c2d78a1b24a9a0b999e62bcd9e4c8a00efc30521354d330cd786494cc21fa1c",
+        "terms": [
+          {
+            "raw": "8101.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8101.10"
+            ]
+          },
+          {
+            "raw": ".94",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8101.94"
+            ]
+          },
+          {
+            "raw": "8102.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8102.10"
+            ]
+          },
+          {
+            "raw": ".94",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8102.94"
+            ]
+          },
+          {
+            "raw": "8103.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8103.20"
+            ]
+          },
+          {
+            "raw": ".99",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8103.99"
+            ]
+          },
+          {
+            "raw": "8104.11",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8104.11"
+            ]
+          },
+          {
+            "raw": "8105.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8105.20"
+            ]
+          },
+          {
+            "raw": "8108.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8108.20"
+            ]
+          },
+          {
+            "raw": "8109.21",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8109.21"
+            ]
+          },
+          {
+            "raw": ".29",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8109.29"
+            ]
+          },
+          {
+            "raw": "8112.51",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8112.51"
+            ]
+          },
+          {
+            "raw": ".59",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8112.59"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8101.10",
+          "HS:2022:8101.94",
+          "HS:2022:8102.10",
+          "HS:2022:8102.94",
+          "HS:2022:8103.20",
+          "HS:2022:8103.99",
+          "HS:2022:8104.11",
+          "HS:2022:8105.20",
+          "HS:2022:8108.20",
+          "HS:2022:8109.21",
+          "HS:2022:8109.29",
+          "HS:2022:8112.51",
+          "HS:2022:8112.59"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:41602:HS2022:C:1",
         "cpc_id": "CPC:3.0:41602",
         "hs_edition": "2022",
         "kind": "definition",
@@ -605,9 +1630,119 @@
         "row": 2070,
         "column": "C",
         "line": 1,
-        "text_sha256": "f76a922314e2f04fd3ae48d8409090c17a2da615df18ce758fb38eb142da7420"
+        "text_sha256": "f76a922314e2f04fd3ae48d8409090c17a2da615df18ce758fb38eb142da7420",
+        "terms": [
+          {
+            "raw": "8101.96",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8101.96"
+            ]
+          },
+          {
+            "raw": ".99",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8101.99"
+            ]
+          },
+          {
+            "raw": "8102.95",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8102.95"
+            ]
+          },
+          {
+            "raw": ".96",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8102.96"
+            ]
+          },
+          {
+            "raw": ".99",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8102.99"
+            ]
+          },
+          {
+            "raw": "8103.91",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8103.91"
+            ]
+          },
+          {
+            "raw": "8104.19",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8104.19"
+            ]
+          },
+          {
+            "raw": ".30",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8104.30"
+            ]
+          },
+          {
+            "raw": ".90",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8104.90"
+            ]
+          },
+          {
+            "raw": "8105.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8105.90"
+            ]
+          },
+          {
+            "raw": "8108.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8108.90"
+            ]
+          },
+          {
+            "raw": "8109.91",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8109.91"
+            ]
+          },
+          {
+            "raw": ".99",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8109.99"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8101.96",
+          "HS:2022:8101.99",
+          "HS:2022:8102.95",
+          "HS:2022:8102.96",
+          "HS:2022:8102.99",
+          "HS:2022:8103.91",
+          "HS:2022:8104.19",
+          "HS:2022:8104.30",
+          "HS:2022:8104.90",
+          "HS:2022:8105.90",
+          "HS:2022:8108.90",
+          "HS:2022:8109.91",
+          "HS:2022:8109.99"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:41609:HS2022:C:1",
         "cpc_id": "CPC:3.0:41609",
         "hs_edition": "2022",
         "kind": "definition",
@@ -616,9 +1751,83 @@
         "row": 2073,
         "column": "C",
         "line": 1,
-        "text_sha256": "a96fbcd12f33014e10b999feccbaf363d51a8487e3442843dc91ba87adcf86e1"
+        "text_sha256": "a96fbcd12f33014e10b999feccbaf363d51a8487e3442843dc91ba87adcf86e1",
+        "terms": [
+          {
+            "raw": "8101.97",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8101.97"
+            ]
+          },
+          {
+            "raw": "8102.97",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8102.97"
+            ]
+          },
+          {
+            "raw": "8103.30",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8103.30"
+            ]
+          },
+          {
+            "raw": "8104.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8104.20"
+            ]
+          },
+          {
+            "raw": "8105.30.",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8105.30"
+            ]
+          },
+          {
+            "raw": "8108.30",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8108.30"
+            ]
+          },
+          {
+            "raw": "8109.31",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8109.31"
+            ]
+          },
+          {
+            "raw": ".39",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8109.39"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8101.97",
+          "HS:2022:8102.97",
+          "HS:2022:8103.30",
+          "HS:2022:8104.20",
+          "HS:2022:8105.30",
+          "HS:2022:8108.30",
+          "HS:2022:8109.31",
+          "HS:2022:8109.39"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "notation_reviewed",
+          "finding": "8105.30 后的句点用于分隔紧邻的两个完整代码，HS 工作表中两者各为独立的废料子目。"
+        }
       },
       {
+        "id": "CPC:3.0:43561:HS2022:C:1",
         "cpc_id": "CPC:3.0:43561",
         "hs_edition": "2022",
         "kind": "definition",
@@ -627,9 +1836,31 @@
         "row": 2196,
         "column": "C",
         "line": 1,
-        "text_sha256": "02be49ab96874a3e5080b1770740178990ec97befc92a7ad001b60800a3acce0"
+        "text_sha256": "02be49ab96874a3e5080b1770740178990ec97befc92a7ad001b60800a3acce0",
+        "terms": [
+          {
+            "raw": "8428.70",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8428.70"
+            ]
+          },
+          {
+            "raw": "8479.50",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8479.50"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8428.70",
+          "HS:2022:8479.50"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:43562:HS2022:C:1",
         "cpc_id": "CPC:3.0:43562",
         "hs_edition": "2022",
         "kind": "definition",
@@ -638,9 +1869,87 @@
         "row": 2197,
         "column": "C",
         "line": 1,
-        "text_sha256": "7c41767781549978ad61e7a56a1ff734c34e7299c11a6345418c349359ce56e1"
+        "text_sha256": "7c41767781549978ad61e7a56a1ff734c34e7299c11a6345418c349359ce56e1",
+        "terms": [
+          {
+            "raw": "8428.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8428.10"
+            ]
+          },
+          {
+            "raw": ".20",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8428.20"
+            ]
+          },
+          {
+            "raw": ".31",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8428.31"
+            ]
+          },
+          {
+            "raw": ".32",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8428.32"
+            ]
+          },
+          {
+            "raw": ".33",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8428.33"
+            ]
+          },
+          {
+            "raw": ".39",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8428.39"
+            ]
+          },
+          {
+            "raw": ".40",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8428.40"
+            ]
+          },
+          {
+            "raw": ".60",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8428.60"
+            ]
+          },
+          {
+            "raw": ".90",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8428.90"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8428.10",
+          "HS:2022:8428.20",
+          "HS:2022:8428.31",
+          "HS:2022:8428.32",
+          "HS:2022:8428.33",
+          "HS:2022:8428.39",
+          "HS:2022:8428.40",
+          "HS:2022:8428.60",
+          "HS:2022:8428.90"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44826:HS2022:C:1",
         "cpc_id": "CPC:3.0:44826",
         "hs_edition": "2022",
         "kind": "definition",
@@ -649,9 +1958,23 @@
         "row": 2369,
         "column": "C",
         "line": 1,
-        "text_sha256": "87159359355cb2299765dd1d2c901d93378493924c3c4661e25b9e54fce379fa"
+        "text_sha256": "87159359355cb2299765dd1d2c901d93378493924c3c4661e25b9e54fce379fa",
+        "terms": [
+          {
+            "raw": "8419.12",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8419.12"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8419.12"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44827:HS2022:C:1",
         "cpc_id": "CPC:3.0:44827",
         "hs_edition": "2022",
         "kind": "definition",
@@ -660,9 +1983,31 @@
         "row": 2370,
         "column": "C",
         "line": 1,
-        "text_sha256": "3a8e1daa5e655aa0e871357c4de4cf97799c9f36c8e1c63669a0fb888b69960e"
+        "text_sha256": "3a8e1daa5e655aa0e871357c4de4cf97799c9f36c8e1c63669a0fb888b69960e",
+        "terms": [
+          {
+            "raw": "8419.11",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8419.11"
+            ]
+          },
+          {
+            "raw": ".19",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8419.19"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8419.11",
+          "HS:2022:8419.19"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44920:HS2022:C:1",
         "cpc_id": "CPC:3.0:44920",
         "hs_edition": "2022",
         "kind": "definition",
@@ -671,9 +2016,23 @@
         "row": 2386,
         "column": "C",
         "line": 1,
-        "text_sha256": "5172e8ebf2292a65bb93331277d3c65a6c4d8620dd9f09590e56c500c241ff96"
+        "text_sha256": "5172e8ebf2292a65bb93331277d3c65a6c4d8620dd9f09590e56c500c241ff96",
+        "terms": [
+          {
+            "raw": "8485",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8485"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8485"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44930:HS2022:C:2",
         "cpc_id": "CPC:3.0:44930",
         "hs_edition": "2022",
         "kind": "inclusion",
@@ -682,9 +2041,23 @@
         "row": 2388,
         "column": "C",
         "line": 2,
-        "text_sha256": "6843dade573fff621c39df9e712fdb4a58ad9e46d9339f6615678325415054c5"
+        "text_sha256": "6843dade573fff621c39df9e712fdb4a58ad9e46d9339f6615678325415054c5",
+        "terms": [
+          {
+            "raw": "8401.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8401.20"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8401.20"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44930:HS2022:C:3",
         "cpc_id": "CPC:3.0:44930",
         "hs_edition": "2022",
         "kind": "inclusion",
@@ -693,9 +2066,23 @@
         "row": 2388,
         "column": "C",
         "line": 3,
-        "text_sha256": "60fdbf566df4ffb6be99361a4c2c4c881a46a061ce776837adc9f7de57758e6b"
+        "text_sha256": "60fdbf566df4ffb6be99361a4c2c4c881a46a061ce776837adc9f7de57758e6b",
+        "terms": [
+          {
+            "raw": "8475.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8475.10"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8475.10"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44930:HS2022:C:4",
         "cpc_id": "CPC:3.0:44930",
         "hs_edition": "2022",
         "kind": "inclusion",
@@ -704,9 +2091,31 @@
         "row": 2388,
         "column": "C",
         "line": 4,
-        "text_sha256": "b61a899b3475be91431087d7c3a2e865911c8006d564b8ef96fafe5daf7ee2b4"
+        "text_sha256": "b61a899b3475be91431087d7c3a2e865911c8006d564b8ef96fafe5daf7ee2b4",
+        "terms": [
+          {
+            "raw": "8475.21",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8475.21"
+            ]
+          },
+          {
+            "raw": ".29",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8475.29"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8475.21",
+          "HS:2022:8475.29"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44930:HS2022:C:5",
         "cpc_id": "CPC:3.0:44930",
         "hs_edition": "2022",
         "kind": "inclusion",
@@ -715,9 +2124,23 @@
         "row": 2388,
         "column": "C",
         "line": 5,
-        "text_sha256": "4306d02d53cbf8dab208db9c7d91d6b607d3b48de145afb444fb7e848a46418f"
+        "text_sha256": "4306d02d53cbf8dab208db9c7d91d6b607d3b48de145afb444fb7e848a46418f",
+        "terms": [
+          {
+            "raw": "8479.40",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8479.40"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8479.40"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44941:HS2022:C:1",
         "cpc_id": "CPC:3.0:44941",
         "hs_edition": "2022",
         "kind": "definition",
@@ -726,9 +2149,39 @@
         "row": 2390,
         "column": "C",
         "line": 1,
-        "text_sha256": "a3bb454587491b145ec905b9ffa2d89450468504dc06ca2dcb1b49c94d51b0ec"
+        "text_sha256": "a3bb454587491b145ec905b9ffa2d89450468504dc06ca2dcb1b49c94d51b0ec",
+        "terms": [
+          {
+            "raw": "8439.91",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8439.91"
+            ]
+          },
+          {
+            "raw": ".99",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8439.99"
+            ]
+          },
+          {
+            "raw": "8441.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8441.90"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8439.91",
+          "HS:2022:8439.99",
+          "HS:2022:8441.90"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44942:HS2022:C:1",
         "cpc_id": "CPC:3.0:44942",
         "hs_edition": "2022",
         "kind": "definition",
@@ -737,9 +2190,41 @@
         "row": 2391,
         "column": "C",
         "line": 1,
-        "text_sha256": "59cf3b9f333cf709497995477b9eb5c425fc1c3e483e9e8f077e5ad2791deaa5"
+        "text_sha256": "59cf3b9f333cf709497995477b9eb5c425fc1c3e483e9e8f077e5ad2791deaa5",
+        "terms": [
+          {
+            "raw": "8440.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8440.90"
+            ]
+          },
+          {
+            "raw": "8442.40",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8442.40"
+            ]
+          },
+          {
+            "raw": "8443.91 - .99",
+            "form": "range",
+            "target_ids": [
+              "HS:2022:8443.91",
+              "HS:2022:8443.99"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8440.90",
+          "HS:2022:8442.40",
+          "HS:2022:8443.91",
+          "HS:2022:8443.99"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44943:HS2022:C:1",
         "cpc_id": "CPC:3.0:44943",
         "hs_edition": "2022",
         "kind": "definition",
@@ -748,9 +2233,23 @@
         "row": 2392,
         "column": "C",
         "line": 1,
-        "text_sha256": "67fdef58ceef86ca8b38ac07364cb71091c1ce6edb456781b087028cc9534a63"
+        "text_sha256": "67fdef58ceef86ca8b38ac07364cb71091c1ce6edb456781b087028cc9534a63",
+        "terms": [
+          {
+            "raw": "8486.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8486.90"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8486.90"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:44949:HS2022:C:1",
         "cpc_id": "CPC:3.0:44949",
         "hs_edition": "2022",
         "kind": "definition",
@@ -759,9 +2258,39 @@
         "row": 2393,
         "column": "C",
         "line": 1,
-        "text_sha256": "61092125256d41ea9f2ab5d7ed39ecd7f11e86d524bc5e81f29b9e60a85847b7"
+        "text_sha256": "61092125256d41ea9f2ab5d7ed39ecd7f11e86d524bc5e81f29b9e60a85847b7",
+        "terms": [
+          {
+            "raw": "8475.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8475.90"
+            ]
+          },
+          {
+            "raw": "8477.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8477.90"
+            ]
+          },
+          {
+            "raw": "8479.90",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8479.90"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8475.90",
+          "HS:2022:8477.90",
+          "HS:2022:8479.90"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:46111:HS2022:C:1",
         "cpc_id": "CPC:3.0:46111",
         "hs_edition": "2022",
         "kind": "definition",
@@ -770,9 +2299,37 @@
         "row": 2439,
         "column": "C",
         "line": 1,
-        "text_sha256": "fcb3e0520d3dae62528286d24caabf47d43054088a6ac9d3f75bc2785bf75864"
+        "text_sha256": "fcb3e0520d3dae62528286d24caabf47d43054088a6ac9d3f75bc2785bf75864",
+        "terms": [
+          {
+            "raw": "8501.10",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8501.10"
+            ]
+          },
+          {
+            "raw": ".31 - .34",
+            "form": "range",
+            "target_ids": [
+              "HS:2022:8501.31",
+              "HS:2022:8501.32",
+              "HS:2022:8501.33",
+              "HS:2022:8501.34"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8501.10",
+          "HS:2022:8501.31",
+          "HS:2022:8501.32",
+          "HS:2022:8501.33",
+          "HS:2022:8501.34"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:46112:HS2022:C:1",
         "cpc_id": "CPC:3.0:46112",
         "hs_edition": "2022",
         "kind": "definition",
@@ -781,9 +2338,51 @@
         "row": 2440,
         "column": "C",
         "line": 1,
-        "text_sha256": "8508ceca3cc5755c610a403de3f234875550a735c69e7b21c434f4d6c93edc48"
+        "text_sha256": "8508ceca3cc5755c610a403de3f234875550a735c69e7b21c434f4d6c93edc48",
+        "terms": [
+          {
+            "raw": "8501.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8501.20"
+            ]
+          },
+          {
+            "raw": ".40 - .53",
+            "form": "range",
+            "target_ids": [
+              "HS:2022:8501.40",
+              "HS:2022:8501.51",
+              "HS:2022:8501.52",
+              "HS:2022:8501.53"
+            ]
+          },
+          {
+            "raw": ".61 - .64",
+            "form": "range",
+            "target_ids": [
+              "HS:2022:8501.61",
+              "HS:2022:8501.62",
+              "HS:2022:8501.63",
+              "HS:2022:8501.64"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8501.20",
+          "HS:2022:8501.40",
+          "HS:2022:8501.51",
+          "HS:2022:8501.52",
+          "HS:2022:8501.53",
+          "HS:2022:8501.61",
+          "HS:2022:8501.62",
+          "HS:2022:8501.63",
+          "HS:2022:8501.64"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:46113:HS2022:C:1",
         "cpc_id": "CPC:3.0:46113",
         "hs_edition": "2022",
         "kind": "definition",
@@ -792,9 +2391,39 @@
         "row": 2441,
         "column": "C",
         "line": 1,
-        "text_sha256": "40a30498b528060ad4dfc61a2c7ee7db00c1e8538b294761f273294873f85a5d"
+        "text_sha256": "40a30498b528060ad4dfc61a2c7ee7db00c1e8538b294761f273294873f85a5d",
+        "terms": [
+          {
+            "raw": "8501.71",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8501.71"
+            ]
+          },
+          {
+            "raw": ".72",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8501.72"
+            ]
+          },
+          {
+            "raw": ".80",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8501.80"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8501.71",
+          "HS:2022:8501.72",
+          "HS:2022:8501.80"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:46114:HS2022:C:1",
         "cpc_id": "CPC:3.0:46114",
         "hs_edition": "2022",
         "kind": "definition",
@@ -803,9 +2432,23 @@
         "row": 2442,
         "column": "C",
         "line": 1,
-        "text_sha256": "1b36d9b538a3406d08e4d671cc9c48f0d54a15d6b441b51899cfdd05bd3a2ae6"
+        "text_sha256": "1b36d9b538a3406d08e4d671cc9c48f0d54a15d6b441b51899cfdd05bd3a2ae6",
+        "terms": [
+          {
+            "raw": "8502",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8502"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8502"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:46532:HS2022:C:1",
         "cpc_id": "CPC:3.0:46532",
         "hs_edition": "2022",
         "kind": "definition",
@@ -814,9 +2457,23 @@
         "row": 2483,
         "column": "C",
         "line": 1,
-        "text_sha256": "c08143b6403157f60c1573e13faece436cb899e4bed817cb21ae924463c397ec"
+        "text_sha256": "c08143b6403157f60c1573e13faece436cb899e4bed817cb21ae924463c397ec",
+        "terms": [
+          {
+            "raw": "9405.39",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:9405.39"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:9405.39"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:46532:HS2022:D:1",
         "cpc_id": "CPC:3.0:46532",
         "hs_edition": "2022",
         "kind": "exclusion",
@@ -825,9 +2482,38 @@
         "row": 2483,
         "column": "D",
         "line": 1,
-        "text_sha256": "e4035914f03e3d283b1f0adbc0c6733dea65d8086d82ea1e696d901e07af3f82"
+        "text_sha256": "e4035914f03e3d283b1f0adbc0c6733dea65d8086d82ea1e696d901e07af3f82",
+        "terms": [
+          {
+            "raw": "9405.31",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:9405.31"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:9405.31"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "scope_reviewed",
+          "finding": "9405.31 在此处为排除，在 CPC 46533 是定义引用。",
+          "evidence": {
+            "resource_id": "hs2022-chapter94",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+            "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+            "publication_date": null,
+            "pdf_page": 4,
+            "lines": [
+              8
+            ]
+          }
+        }
       },
       {
+        "id": "CPC:3.0:46533:HS2022:C:1",
         "cpc_id": "CPC:3.0:46533",
         "hs_edition": "2022",
         "kind": "definition",
@@ -836,9 +2522,63 @@
         "row": 2484,
         "column": "C",
         "line": 1,
-        "text_sha256": "25e1560119c873d5f01d4246797963042e05fd4562605f39527c27e6b30fda0f"
+        "text_sha256": "25e1560119c873d5f01d4246797963042e05fd4562605f39527c27e6b30fda0f",
+        "terms": [
+          {
+            "raw": "9405.11",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:9405.11"
+            ]
+          },
+          {
+            "raw": ".21",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:9405.21"
+            ]
+          },
+          {
+            "raw": "31",
+            "form": "bare_suffix",
+            "target_ids": [
+              "HS:2022:9405.31"
+            ]
+          },
+          {
+            "raw": "41",
+            "form": "bare_suffix",
+            "target_ids": [
+              "HS:2022:9405.41"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:9405.11",
+          "HS:2022:9405.21",
+          "HS:2022:9405.31",
+          "HS:2022:9405.41"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "notation_reviewed",
+          "finding": "裸后缀 31 和 41 沿用 9405。两个代码另在 CPC 46532、46539 分别出现为排除。",
+          "evidence": {
+            "resource_id": "hs2022-chapter94",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+            "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+            "publication_date": null,
+            "pdf_page": 4,
+            "lines": [
+              8,
+              12
+            ]
+          }
+        }
       },
       {
+        "id": "CPC:3.0:46539:HS2022:C:1",
         "cpc_id": "CPC:3.0:46539",
         "hs_edition": "2022",
         "kind": "definition",
@@ -847,9 +2587,23 @@
         "row": 2485,
         "column": "C",
         "line": 1,
-        "text_sha256": "5513f1faa84894e6a63278b54d74879a72028df455ddfc6bb66731e05c7862fc"
+        "text_sha256": "5513f1faa84894e6a63278b54d74879a72028df455ddfc6bb66731e05c7862fc",
+        "terms": [
+          {
+            "raw": "9405.42",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:9405.42"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:9405.42"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:46539:HS2022:D:1",
         "cpc_id": "CPC:3.0:46539",
         "hs_edition": "2022",
         "kind": "exclusion",
@@ -858,9 +2612,38 @@
         "row": 2485,
         "column": "D",
         "line": 1,
-        "text_sha256": "914646f9c90ee5b05fc3df488d15debe8383b397f1eb4f6866951d1112067685"
+        "text_sha256": "914646f9c90ee5b05fc3df488d15debe8383b397f1eb4f6866951d1112067685",
+        "terms": [
+          {
+            "raw": "9405.41",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:9405.41"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:9405.41"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "scope_reviewed",
+          "finding": "9405.41 在此处为排除，在 CPC 46533 是定义引用。",
+          "evidence": {
+            "resource_id": "hs2022-chapter94",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+            "sha256": "5d7de6851b7848251c798871ba60281079bb4f11686f42bb943804f2bd81f911",
+            "publication_date": null,
+            "pdf_page": 4,
+            "lines": [
+              12
+            ]
+          }
+        }
       },
       {
+        "id": "CPC:3.0:49113:HS2022:C:1",
         "cpc_id": "CPC:3.0:49113",
         "hs_edition": "2022",
         "kind": "definition",
@@ -869,9 +2652,47 @@
         "row": 2674,
         "column": "C",
         "line": 1,
-        "text_sha256": "021cad0aa543f8acbdf17080506f47573f4f08f872c0c98257ce519d32680de8"
+        "text_sha256": "021cad0aa543f8acbdf17080506f47573f4f08f872c0c98257ce519d32680de8",
+        "terms": [
+          {
+            "raw": "8703.21 - .90",
+            "form": "range",
+            "target_ids": [
+              "HS:2022:8703.21",
+              "HS:2022:8703.22",
+              "HS:2022:8703.23",
+              "HS:2022:8703.24",
+              "HS:2022:8703.31",
+              "HS:2022:8703.32",
+              "HS:2022:8703.33",
+              "HS:2022:8703.40",
+              "HS:2022:8703.50",
+              "HS:2022:8703.60",
+              "HS:2022:8703.70",
+              "HS:2022:8703.80",
+              "HS:2022:8703.90"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8703.21",
+          "HS:2022:8703.22",
+          "HS:2022:8703.23",
+          "HS:2022:8703.24",
+          "HS:2022:8703.31",
+          "HS:2022:8703.32",
+          "HS:2022:8703.33",
+          "HS:2022:8703.40",
+          "HS:2022:8703.50",
+          "HS:2022:8703.60",
+          "HS:2022:8703.70",
+          "HS:2022:8703.80",
+          "HS:2022:8703.90"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:49621:HS2022:C:1",
         "cpc_id": "CPC:3.0:49621",
         "hs_edition": "2022",
         "kind": "definition",
@@ -880,9 +2701,31 @@
         "row": 2727,
         "column": "C",
         "line": 1,
-        "text_sha256": "57ff4db9f8f676da851e757a95615a455849ef27abe276aa1312386fa79644ba"
+        "text_sha256": "57ff4db9f8f676da851e757a95615a455849ef27abe276aa1312386fa79644ba",
+        "terms": [
+          {
+            "raw": "8802.11",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8802.11"
+            ]
+          },
+          {
+            "raw": ".12",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8802.12"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8802.11",
+          "HS:2022:8802.12"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:49622:HS2022:C:1",
         "cpc_id": "CPC:3.0:49622",
         "hs_edition": "2022",
         "kind": "definition",
@@ -891,9 +2734,23 @@
         "row": 2728,
         "column": "C",
         "line": 1,
-        "text_sha256": "149855ad8b4cd9f5df8bbcefad9f31a037dcf5a69d2159fd533ce967b32b89b1"
+        "text_sha256": "149855ad8b4cd9f5df8bbcefad9f31a037dcf5a69d2159fd533ce967b32b89b1",
+        "terms": [
+          {
+            "raw": "8802.20",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8802.20"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8802.20"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:49623:HS2022:C:1",
         "cpc_id": "CPC:3.0:49623",
         "hs_edition": "2022",
         "kind": "definition",
@@ -902,9 +2759,31 @@
         "row": 2729,
         "column": "C",
         "line": 1,
-        "text_sha256": "d13e5e7669ba36327d7a5b0ba2077f04d3b1e80ea549023c9dd41cd0d81d3e99"
+        "text_sha256": "d13e5e7669ba36327d7a5b0ba2077f04d3b1e80ea549023c9dd41cd0d81d3e99",
+        "terms": [
+          {
+            "raw": "8802.30",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8802.30"
+            ]
+          },
+          {
+            "raw": ".40",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8802.40"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8802.30",
+          "HS:2022:8802.40"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:49624:HS2022:C:1",
         "cpc_id": "CPC:3.0:49624",
         "hs_edition": "2022",
         "kind": "definition",
@@ -913,9 +2792,23 @@
         "row": 2730,
         "column": "C",
         "line": 1,
-        "text_sha256": "b9a664edcd409eb6696f40051a85df49f2a45dda2b73b84d4f3b0b9ec7208f61"
+        "text_sha256": "b9a664edcd409eb6696f40051a85df49f2a45dda2b73b84d4f3b0b9ec7208f61",
+        "terms": [
+          {
+            "raw": "8806",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8806"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8806"
+        ],
+        "resolution_status": "verified_codes"
       },
       {
+        "id": "CPC:3.0:49913:HS2022:C:1",
         "cpc_id": "CPC:3.0:49913",
         "hs_edition": "2022",
         "kind": "inclusion",
@@ -924,9 +2817,71 @@
         "row": 2739,
         "column": "C",
         "line": 1,
-        "text_sha256": "e9f15e17584222342479ab331953e6280e9952c4ece9908bf7cad3ba9812c90b"
+        "text_sha256": "e9f15e17584222342479ab331953e6280e9952c4ece9908bf7cad3ba9812c90b",
+        "terms": [
+          {
+            "raw": "8711.60",
+            "form": "code",
+            "target_ids": [
+              "HS:2022:8711.60"
+            ]
+          },
+          {
+            "raw": ".90",
+            "form": "suffix",
+            "target_ids": [
+              "HS:2022:8711.90"
+            ]
+          }
+        ],
+        "target_ids": [
+          "HS:2022:8711.60",
+          "HS:2022:8711.90"
+        ],
+        "resolution_status": "verified_codes",
+        "review": {
+          "status": "scope_pending",
+          "finding": "纳入句点名电驱动，HS 8711.60 明列电驱动，8711.90 是其他项。保留两处引用，8711.90 的具体范围待核。",
+          "evidence": {
+            "resource_id": "hs2022-chapter87",
+            "edition": "2022",
+            "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+            "sha256": "e806a55e1f9808e54b60304de9b77ba6cc15b4a36022f48357e8098654020904",
+            "publication_date": null,
+            "pdf_page": 5,
+            "lines": [
+              7,
+              8
+            ]
+          }
+        }
       }
     ],
+    "official_note_reference_counts": {
+      "by_kind": {
+        "definition": 60,
+        "inclusion": 7,
+        "exclusion": 2
+      },
+      "by_resolution": {
+        "verified_codes": 68,
+        "pending": 1
+      },
+      "terms_by_form": {
+        "code": 111,
+        "suffix": 36,
+        "range": 7,
+        "slash_list": 1,
+        "bare_suffix": 2
+      },
+      "resolved_links": 184,
+      "unique_hs_targets": 181,
+      "links_by_kind": {
+        "definition": 173,
+        "inclusion": 9,
+        "exclusion": 2
+      }
+    },
     "workbook_review_rows": {
       "27190": {
         "row": 1058,
@@ -968,9 +2923,82 @@
         ]
       }
     },
-    "hs": {
+    "hs_structure": {
+      "quality": {
+        "node_count": 6957,
+        "unique_codes": 6957,
+        "duplicate_codes": [],
+        "edge_count": 6936,
+        "orphan_parents": [],
+        "self_links": [],
+        "cycles": [],
+        "levels": {
+          "1": 21,
+          "2": 96,
+          "3": 1228,
+          "4": 5612
+        },
+        "roots": 21,
+        "leaves": 5612,
+        "definitions": 0,
+        "deprecated_or_alias_status": "not_supplied_by_these_adapters",
+        "polyhierarchy_nodes": 0
+      },
+      "source_rows": 6940,
+      "statistical_rows": {
+        "99": {
+          "source_row": 6938,
+          "source_parent": "TOTAL",
+          "source_level": "2"
+        },
+        "9999": {
+          "source_row": 6939,
+          "source_parent": "99",
+          "source_level": "4"
+        },
+        "999999": {
+          "source_row": 6940,
+          "source_parent": "9999",
+          "source_level": "6"
+        },
+        "TOTAL": {
+          "source_row": 6941,
+          "source_parent": null,
+          "source_level": "0"
+        }
+      },
+      "reserved_chapters": {
+        "77": {
+          "pdf_page": 4,
+          "pdf_line": 29
+        },
+        "98": {
+          "pdf_page": 5,
+          "pdf_line": 50
+        },
+        "99": {
+          "pdf_page": 5,
+          "pdf_line": 51
+        }
+      },
+      "workbook": {
+        "resource_id": "hs2022-unsd-structure",
+        "edition": "2022",
+        "url": "https://unstats.un.org/unsd/classifications/Econ/download/In%20Text/HSCodeandDescription.xlsx",
+        "sha256": "668700216dd7ba6811e0bcda4b3f6cfb69c2b40d8015730669d0c95d094d6409",
+        "publication_date": null,
+        "sheet": "HS22"
+      },
+      "contents": {
+        "resource_id": "hs2022-wco-contents",
+        "edition": "2022",
+        "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/table-of-contents_2022e_rev.pdf?la=en",
+        "sha256": "84c08b4b37240417e6eed19c900a1a1e3887f6bf589e120670482fb0ae777143",
+        "publication_date": null
+      }
+    },
+    "hs_scope": {
       "4818.90": {
-        "id": "HS:2022:4818.90",
         "label": "纸或纤维素口罩示例（多数国家）",
         "source_kind": "classification_guidance",
         "evidence": {
@@ -988,7 +3016,6 @@
         }
       },
       "6307.90": {
-        "id": "HS:2022:6307.90",
         "label": "无机械部件或可更换滤芯的纺织口罩示例",
         "source_kind": "classification_guidance",
         "evidence": {
@@ -1006,7 +3033,6 @@
         }
       },
       "9020.00": {
-        "id": "HS:2022:9020.00",
         "label": "带机械部件或可更换滤芯的防毒面具示例",
         "source_kind": "classification_guidance",
         "evidence": {
@@ -1024,7 +3050,6 @@
         }
       },
       "6815.11": {
-        "id": "HS:2022:6815.11",
         "label": "碳纤维本体",
         "source_kind": "nomenclature_chapter",
         "evidence": {
@@ -1042,7 +3067,6 @@
         }
       },
       "6815.12": {
-        "id": "HS:2022:6815.12",
         "label": "碳纤维织物",
         "source_kind": "nomenclature_chapter",
         "evidence": {
@@ -1060,7 +3084,6 @@
         }
       },
       "6815.13": {
-        "id": "HS:2022:6815.13",
         "label": "其他碳纤维制品（该组限非电气用途）",
         "source_kind": "nomenclature_chapter",
         "evidence": {
@@ -1078,7 +3101,6 @@
         }
       },
       "6815.19": {
-        "id": "HS:2022:6815.19",
         "label": "该非电气用组中的其他项",
         "source_kind": "nomenclature_chapter",
         "evidence": {
@@ -1094,12 +3116,6 @@
           ],
           "text_sha256": "c96bf041084ce468224bc27f8eedfe3e5f9577dce6999d016fb8b18b0ee3afaa"
         }
-      },
-      "4818": {
-        "id": "HS:2022:4818",
-        "label": "CPC 3.0 注释引用的品目",
-        "source_kind": "official_cpc_note",
-        "note_cpc_id": "CPC:3.0:32193"
       }
     },
     "reviews": {
@@ -1476,14 +3492,29 @@
       "has_explanatory_text": true,
       "scope_review_status": "pending",
       "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:21267",
+      "csv_row": 633,
+      "pdf_page": 79,
+      "has_explanatory_text": true,
+      "scope_review_status": null,
+      "excluded_to": [
+        "04471",
+        "21280",
+        "21291",
+        "21299"
+      ]
     }
   ],
   "reproducibility": {
     "pdftotext": "pdftotext version 26.04.0",
     "parser_sha256": {
-      "cpc_view.html": "23f29d1877b766007960b585b618df8f46d9a0e2e1ad6589f039540120ef48d1",
-      "cpc.py": "34cc167ea69daa737675370800d4296a0165d2da641d15aef76f3e619141fa65",
-      "cpc_hs.py": "286caa7786b5555e5b8ca66e37aa8a490c12d17bcb78ef635e967fa85e588e5f"
+      "cpc_view.html": "e1c4c68835fcb27255afbca76ca6828612ffdf9e7c03cc565a4b41bf462449d5",
+      "cpc.py": "2d7341fac2fd155a995a98de552ecbf2cecbcf26eb22610f004ae021e4cf112f",
+      "cpc_hs.py": "8d1ec3d79c9ce36d8148ea1b5d8c41f22bac09add47157c7cdde7f269264a654",
+      "hs.py": "91dfda8e348af870767622b825b26d8b3f842b409dfb073631dbe49f34b3fc82",
+      "hs_reference.py": "fced54e61263385f5ff7c3968fec0d35cc248e48a3a9de764ab0a722875f63a3"
     }
   }
 }

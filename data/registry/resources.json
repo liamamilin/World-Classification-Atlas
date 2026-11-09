@@ -1316,5 +1316,152 @@
       "license": "UN download terms; public redistribution unresolved",
       "evidence_url": "https://unstats.un.org/unsd/classifications/econ/"
     }
+  },
+  {
+    "id": "hs2022-unsd-structure",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://unstats.un.org/unsd/classifications/Econ/download/In%20Text/HSCodeandDescription.xlsx",
+    "filename": "hs2022-unsd-structure.xlsx",
+    "format": "xlsx",
+    "role": "structure",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": null,
+      "license": "UNSD official workbook; public redistribution unresolved",
+      "evidence_url": "https://unstats.un.org/unsd/classifications/Econ/"
+    }
+  },
+  {
+    "id": "hs2022-wco-contents",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/table-of-contents_2022e_rev.pdf?la=en",
+    "filename": "hs2022-wco-contents.pdf",
+    "format": "pdf",
+    "role": "nomenclature_contents",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
+  },
+  {
+    "id": "hs2022-chapter27",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0527_2022e.pdf",
+    "filename": "hs2022-chapter27.pdf",
+    "format": "pdf",
+    "role": "nomenclature_chapter",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
+  },
+  {
+    "id": "hs2022-chapter30",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0630_2022e.pdf?la=en",
+    "filename": "hs2022-chapter30.pdf",
+    "format": "pdf",
+    "role": "nomenclature_chapter",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
+  },
+  {
+    "id": "hs2022-chapter87",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/1787_2022e.pdf?la=en",
+    "filename": "hs2022-chapter87.pdf",
+    "format": "pdf",
+    "role": "nomenclature_chapter",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
+  },
+  {
+    "id": "hs2022-chapter94",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/2094_2022e.pdf?la=en",
+    "filename": "hs2022-chapter94.pdf",
+    "format": "pdf",
+    "role": "nomenclature_chapter",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
+  },
+  {
+    "id": "hs2022-chapter03",
+    "source_id": "HS",
+    "edition": "2022",
+    "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/2022/0103_2022e.pdf?la=en",
+    "filename": "hs2022-chapter03.pdf",
+    "format": "pdf",
+    "role": "nomenclature_chapter",
+    "language": "en",
+    "publication_date": null,
+    "encoding": null,
+    "parser": null,
+    "expected_rows": null,
+    "rights": {
+      "download": true,
+      "local_processing": true,
+      "redistribute": false,
+      "license": "WCO copyright; local reference only",
+      "evidence_url": "https://www.wcoomd.org/en/copyright.aspx"
+    }
   }
 ]
