@@ -18,6 +18,8 @@ TABLE_I = "hs2022-to-hs2017-wco-table-i"
 TABLE_II = "hs2017-to-hs2022-wco-table-ii"
 LEGACY = "cpc21-hs2017-unsd-correspondence"
 REVIEW_CHAPTERS = ("03", "27", "30", "87", "94")
+LIGHTING_TITLE_ONLY = ("46510", "46531", "46939")
+LIGHTING_LEGACY_HS = {"8539.50", "8539.90", "8543.70", "9405.10", "9405.20", "9405.30", "9405.40"}
 REQUIRED = (WORKBOOK, LISTING, STATUS, CHAPTER, GUIDANCE, TABLE_I, TABLE_II, LEGACY,
             hs.STRUCTURE, hs.CONTENTS, *(f"hs2022-chapter{code}" for code in REVIEW_CHAPTERS),
             *cpc_hs_followup.REQUIRED)
@@ -110,7 +112,10 @@ def workbook_references(asset, by_code):
                     "row": row["row"], "column": column, "line": number,
                     "text_sha256": sha256(line.encode("utf-8")), "text": line,
                 })
-    selected = {r["cells"]["A"]: r for r in rows[1:] if r["cells"]["A"] in REVIEWS}
+    selected_codes = {*REVIEWS, *LIGHTING_TITLE_ONLY}
+    selected = {r["cells"]["A"]: r for r in rows[1:] if r["cells"]["A"] in selected_codes}
+    if any(selected[code]["cells"]["B"] != by_code[code]["label"] for code in LIGHTING_TITLE_ONLY):
+        raise ValueError("CPC lighting titles differ between the structure and note workbook")
     checked = {
         code: {"row": row["row"], "explicit_hs2022_reference": any(
                    ref["cpc_id"] == by_code[code]["id"] for ref in references),
@@ -197,7 +202,7 @@ def legacy_correspondences(asset):
         ):
             raise ValueError(f"invalid historical correspondence at CSV line {rows.line_num}")
         count[f"HS={hs_partial};CPC={cpc_partial}"] += 1
-        if cpc in REVIEWS or cpc in cpc_hs_followup.HISTORICAL_CODES or cpc == "46539" or (
+        if cpc in REVIEWS or cpc in cpc_hs_followup.HISTORICAL_CODES or hs in LIGHTING_LEGACY_HS or (
             cpc == "32193" and hs == "4818.90"
         ):
             selected.setdefault(cpc, []).append({

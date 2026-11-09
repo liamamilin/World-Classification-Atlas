@@ -57,6 +57,9 @@ LEAVES = (
     ("led-light-source-modules", "lighting", "LED 光源模块",
      "由 LED 和电路等构成的光源模块。按 HS 章注，模块没有便于在灯具中装卸并建立机械和电气接触的灯头。",
      "8539.51", "led-modules", ()),
+    ("led-light-source-lamps", "lighting", "带灯头的 LED 光源灯",
+     "由一个或多个 LED 模块等构成，带有可在灯具中方便装卸并建立机械和电气接触的灯头。",
+     "8539.52", "led-modules", ()),
     ("frozen-octopus-candidate", "seafood", "冷冻章鱼对应待核",
      "核查冷冻章鱼部分。章鱼粉、粗粉及团粒另有 HS 章注边界。", "0307.52", "octopus",
      (("21267", "C", "definition", None, "CPC 原句写 0307.53。0307.52 有冷冻章鱼税则依据，保留为候选。"),)),
@@ -84,11 +87,11 @@ def build(assets, by_code, hs_review, structure, notes):
         "wco-ceiling-wall-lights": pdf_excerpt(
             assets, "hs2022-chapter94", 3, 37, 42,
             ("ceiling or wall lighting fittings", "excluding those", "thoroughfares",
-             "9405.11 -- Designed for use solely", "9405.19"),
+             "9405.11 -- Designed for use solely", "9405.19 -- Other"),
         ),
         "wco-table-floor-lights": pdf_excerpt(
             assets, "hs2022-chapter94", 4, 3, 6,
-            ("table, desk, bedside or floor-standing", "9405.21 -- Designed for use solely", "9405.29"),
+            ("table, desk, bedside or floor-standing", "9405.21 -- Designed for use solely", "9405.29 -- Other"),
         ),
         "wco-christmas-strings": pdf_excerpt(
             assets, "hs2022-chapter94", 4, 7, 10,
@@ -132,7 +135,7 @@ def build(assets, by_code, hs_review, structure, notes):
         nodes.append(node)
         return node
 
-    def bind(node, source_id, relation, reason, evidence_ids, clause_id=None):
+    def bind(node, source_id, relation, reason, evidence_ids, clause_id=None, **scope_review):
         binding_id = stable_id("mapping", node["id"] + ":" + source_id)
         if binding_id in bindings:
             raise ValueError(f"duplicate Atlas goods binding: {binding_id}")
@@ -140,6 +143,7 @@ def build(assets, by_code, hs_review, structure, notes):
             "id": binding_id, "concept_id": node["id"], "source_id": source_id,
             "status": "reviewed" if relation else "pending", "relation": relation, "reason": reason,
             "evidence_ids": evidence_ids, "source_clause_id": clause_id,
+            **scope_review,
         }
         node["binding_ids"].append(binding_id)
         source_index.setdefault(source_id, []).append(binding_id)
@@ -149,8 +153,6 @@ def build(assets, by_code, hs_review, structure, notes):
     for code, parent, label, scope, hs_code, passage, cpc_bindings in LEAVES:
         reviewed = all(relation for _, _, _, relation, _ in cpc_bindings)
         node = add_node(code, parent, label, scope, "reviewed" if reviewed else "pending")
-        if not cpc_bindings:
-            node["cpc_scope_status"] = "not_reviewed"
         hs_id = "HS:2022:" + hs_code
         proof = ["wco-" + passage, *supplement.get(passage, [])]
         if hs_id not in hs_ids or hs_code not in evidence[proof[0]]["text"]:
@@ -158,6 +160,12 @@ def build(assets, by_code, hs_review, structure, notes):
         bind(node, hs_id, "exact" if reviewed else None,
              "Atlas 样本范围取自该 WCO 子目及上级分组。" if reviewed else "此 HS 子目为范围核查证据。",
              proof)
+        allocation = lighting["allocation_reviews"].get(hs_id)
+        if allocation:
+            node["cpc_scope_status"] = allocation["allocation_status"]
+            bind(node, allocation["cpc_id"], allocation["relation"], allocation["finding"],
+                 [*proof, *allocation["evidence_ids"]], basis=allocation["basis"],
+                 allocation_status=allocation["allocation_status"])
         for cpc_code, column, kind, relation, reason in cpc_bindings:
             cpc_id = by_code[cpc_code]["id"]
             ref_id = f"{cpc_id}:HS2022:{column}:1"

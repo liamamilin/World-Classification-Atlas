@@ -1,11 +1,11 @@
-"""Current CPC lighting evidence and the separate WCO split of HS 2017 9405.40."""
+"""Current CPC lighting evidence and separate WCO and UNSD historical records."""
 import re
 from html import escape
 
-from .cpc_hs import TABLE_I, TABLE_II
+from .cpc_hs import LIGHTING_TITLE_ONLY, TABLE_I, TABLE_II
 from .cpc_hs_followup import pdf_excerpt
 
-DETAILS = {code: f"cpc3-detail-{code}-20261109" for code in ("46533", "46539")}
+DETAILS = {code: f"cpc3-detail-{code}-20261109" for code in ("46533", "46539", *LIGHTING_TITLE_ONLY)}
 OLD_CHAPTER = "hs2017-chapter94"
 MODULES_CHAPTER = "hs2022-chapter85"
 REQUIRED = (*DETAILS.values(), OLD_CHAPTER, MODULES_CHAPTER)
@@ -15,6 +15,33 @@ EXCLUSION_CLAUSE = "CPC:3.0:46539:HS2022:D:1"
 OLD_ID = "HS:2017:9405.40"
 OLD_TITLE = "Other electric lamps and lighting fittings"
 CANDIDATES = {LED_CLAUSE: "HS:2022:9405.42", LITERAL_CLAUSE: "HS:2022:9405.49"}
+
+# Old code as printed in Table I, page and line in Table I, page and source/target
+# lines in Table II. The raw target is checked before attaching the legacy CPC row.
+SCOPE_HISTORY = {
+    "9405.19": (("ex9405.10", 33, 8, 23, 30, 32, "9405.19"),),
+    "9405.29": (("ex9405.20", 33, 12, 23, 34, 36, "9405.29"),),
+    "8539.51": (
+        ("ex8539.90", 27, 41, 20, 8, 8, "ex8539.51"),
+        ("ex8543.70", 27, 42, 20, 26, 26, "ex8539.51"),
+        ("ex9405.10", 27, 43, 23, 30, 30, "ex8539.51"),
+        ("ex9405.20", 27, 44, 23, 34, 34, "ex8539.51"),
+        ("ex9405.30", 27, 45, 23, 38, 38, "ex8539.51"),
+        ("ex9405.40", 27, 46, 23, 42, 42, "ex8539.51"),
+    ),
+    "8539.52": (("8539.50", 27, 48, 20, 5, 5, "8539.52"),),
+}
+
+ALLOCATION_FINDINGS = {
+    "9405.19": ("46531", "source_broader", "current_title_scope",
+                "CPC 标题明列天花板或墙壁电灯具，且同样排除公共开放场所或道路照明。HS 仅取该组的非 LED 专用残余项。"),
+    "9405.29": ("46531", "source_broader", "current_title_scope",
+                "CPC 标题明列电气台灯、书桌灯、床头灯和落地灯，未限定光源设计。HS 仅取该组的非 LED 专用残余项。"),
+    "8539.51": ("46939", None, "historical_candidate",
+                "旧 8543.70 的一部分转入 LED 模块，旧表将该码连至 CPC 2.1 的 46939。其余旧码来源不同，现行 46939 只作部分范围候选。46510 标题列的是灯丝灯、放电灯及弧光灯。"),
+    "8539.52": ("46939", None, "historical_candidate",
+                "WCO 两表将旧 LED 灯 8539.50 对应到 8539.52，UNSD 旧表将前者连到 CPC 2.1 的 46939。现行同码标题是其他电气设备，未点名 LED 灯。46510 标题列的是灯丝灯、放电灯及弧光灯。"),
+}
 
 
 def history(assets, hs_review):
@@ -75,6 +102,60 @@ def history(assets, hs_review):
     }, evidence
 
 
+def allocation_reviews(assets, hs_review, evidence, references):
+    for rid, pages in ((TABLE_I, {27: (41, 48), 33: (6, 12)}), (TABLE_II, {20: (5, 26), 23: (30, 42)})):
+        for page, (first, last) in pages.items():
+            key = f"{rid}-p{page}-lighting"
+            label = "打开 WCO 表 I" if rid == TABLE_I else "打开 WCO 表 II"
+            evidence[key] = {**pdf_excerpt(assets, rid, page, first, last, ()), "label": label}
+    legacy = hs_review["historical_cpc_hs"]
+    legacy_by_hs = {}
+    for rows in legacy["selected"].values():
+        for row in rows:
+            legacy_by_hs.setdefault(row["hs_id"], []).append(row)
+    evidence["unsd-lighting-historical-csv"] = {**legacy["evidence"],
+                                                "label": "下载 UNSD 历史对应 CSV"}
+    official_targets = {target for ref in references.values() for target in ref["target_ids"]}
+    reviews = {}
+    for code, (cpc, relation, basis, finding) in ALLOCATION_FINDINGS.items():
+        hs_id = f"HS:2022:{code}"
+        if hs_id in official_targets:
+            raise ValueError(f"new explicit CPC workbook reference for {hs_id}; reassess the scope review")
+        history_rows = []
+        for old, i_page, i_line, ii_page, ii_start, ii_line, new in SCOPE_HISTORY[code]:
+            old_code = old.removeprefix("ex")
+            old_id = f"HS:2017:{old_code}"
+            first_key = f"{TABLE_I}-p{i_page}-lighting"
+            second_key = f"{TABLE_II}-p{ii_page}-lighting"
+            first = evidence[first_key]["text"].splitlines()
+            first_offset = evidence[first_key]["lines"][0]
+            first_row = first[i_line - first_offset].split()
+            second = evidence[second_key]["text"].splitlines()
+            second_offset = evidence[second_key]["lines"][0]
+            second_start = second[ii_start - second_offset].split()
+            second_row = second[ii_line - second_offset].split()
+            if not (
+                (first[0].split()[0] == code if code == "8539.51" else first_row[0] == code)
+                and old in first_row and second_start[0] == old_code and second_row[-1] == new
+            ):
+                raise ValueError(f"changed WCO history for {old_id} → {hs_id}")
+            history_rows.append({
+                "id": f"{old_id}:WCO:{hs_id}", "hs_2017_id": old_id,
+                "table_i": {"hs_2017": old, "hs_2022": code, "evidence_id": first_key, "line": i_line},
+                "table_ii": {"hs_2017": old_code, "hs_2022": new, "evidence_id": second_key,
+                             "line": ii_line, "source_line": ii_start},
+                "historical_cpc21": legacy_by_hs[old_id],
+            })
+        proof = [f"cpc-{cpc}-workbook-title", f"cpc-{cpc}-pdf", f"cpc-{cpc}-online",
+                 "unsd-cpc3-correspondence"]
+        if cpc == "46939":
+            proof.extend(("cpc-46510-workbook-title", "cpc-46510-pdf", "cpc-46510-online"))
+        reviews[hs_id] = {"cpc_id": f"CPC:3.0:{cpc}", "relation": relation, "basis": basis,
+                          "allocation_status": "pending", "finding": finding,
+                          "evidence_ids": proof, "history": history_rows}
+    return reviews
+
+
 def build(assets, by_code, hs_review, structure, notes, references):
     corrections = hs_review["scope_followup"]["corrigendum_audit"]
     split, evidence = history(assets, hs_review)
@@ -99,6 +180,15 @@ def build(assets, by_code, hs_review, structure, notes, references):
             if ref["target_ids"] != [f"HS:2022:{target}" for target in codes]:
                 raise ValueError(f"changed CPC lighting clause targets: {clause_id}")
             statements.append(ref["text"])
+        if code in LIGHTING_TITLE_ONLY:
+            workbook_row = hs_review["workbook_review_rows"][code]
+            if (workbook_row["empty_note_columns"] != ["C", "D"] or note["text"] or
+                    not re.search(r'<h4>Explanatory note</h4></div>\s*'
+                                  r'(?:<div class="DtlCol2-[12] Dtl(?:Title|Cell)"></div>\s*){4}<br', html)):
+                raise ValueError(f"CPC {code} no longer has title-only evidence")
+            evidence[f"cpc-{code}-workbook-title"] = {
+                **hs_review["workbook"], "sheet": "CPC3", "column": "B", "row": workbook_row["row"],
+            }
         if (
             not all(line in note["text"].splitlines() for line in statements)
             or not all(escape(value, quote=False) in html for value in (
@@ -114,6 +204,11 @@ def build(assets, by_code, hs_review, structure, notes, references):
         "designed for use solely with light-emitting diode (LED) light sources" not in by_code["46533"]["label"]
     ):
         raise ValueError("CPC lighting titles changed; review LED scope")
+    if not all(segment in by_code["46531"]["label"] for segment in (
+        "electric ceiling or wall lighting fittings (except those for lighting public open spaces or thorough-fares)",
+        "electric table, desk, bedside or floor-standing lamps",
+    )):
+        raise ValueError("CPC 46531 fixture scopes changed; review the title comparison")
     return {
         "status": "scope_conflict_pending", "cpc_id": by_code["46539"]["id"],
         "literal_clause_id": LITERAL_CLAUSE, "literal_hs_id": "HS:2022:9405.42",
@@ -130,4 +225,5 @@ def build(assets, by_code, hs_review, structure, notes, references):
                          LITERAL_CLAUSE, EXCLUSION_CLAUSE, "wco-other-electric-lighting",
                          "cpc-46533-pdf", "cpc-46533-online", LED_CLAUSE, "unsd-cpc3-correspondence"],
         "hs_history": split,
+        "allocation_reviews": allocation_reviews(assets, hs_review, evidence, references),
     }, evidence

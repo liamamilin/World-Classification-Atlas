@@ -197,6 +197,30 @@
       "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46539-20261109/1a879230763a1b45495301076723189cadb60c07c2cff77497002ee720110cc4/cpc3-detail-46539-20261109.html"
     },
     {
+      "resource_id": "cpc3-detail-46510-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46510",
+      "sha256": "bb842197c124a0b81faee9a0e94811508a6e8e079965adb1ad2e8957916550eb",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46510-20261109/bb842197c124a0b81faee9a0e94811508a6e8e079965adb1ad2e8957916550eb/cpc3-detail-46510-20261109.html"
+    },
+    {
+      "resource_id": "cpc3-detail-46531-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46531",
+      "sha256": "edfacab70dc86483d00746b11c47124320d44e14f2d0a7d98853cd02035a75cc",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46531-20261109/edfacab70dc86483d00746b11c47124320d44e14f2d0a7d98853cd02035a75cc/cpc3-detail-46531-20261109.html"
+    },
+    {
+      "resource_id": "cpc3-detail-46939-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46939",
+      "sha256": "ede5456f23387a3334be84e429e62bdff10e4c9dae91a49bec85205d3fdd0d95",
+      "publication_date": null,
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46939-20261109/ede5456f23387a3334be84e429e62bdff10e4c9dae91a49bec85205d3fdd0d95/cpc3-detail-46939-20261109.html"
+    },
+    {
       "resource_id": "hs2017-chapter94",
       "edition": "2017",
       "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2017/2017/2094_2017e.pdf?la=en",
@@ -234,7 +258,7 @@
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
-  "view_sha256": "0b9e3e1e4359af966c2bbaf7fa4cd59f73c6f740a8f4fdab41178ee8cb3b198f",
+  "view_sha256": "6d4ca5e55ee2eae1747f4cfb36437bc47b4630daa32de6e604b89c3ff969d701",
   "hs_review": {
     "audit": {
       "status": "standalone_table_not_located_in_checked_listing",
@@ -2989,6 +3013,30 @@
           "D"
         ]
       },
+      "46510": {
+        "row": 2480,
+        "explicit_hs2022_reference": false,
+        "empty_note_columns": [
+          "C",
+          "D"
+        ]
+      },
+      "46531": {
+        "row": 2482,
+        "explicit_hs2022_reference": false,
+        "empty_note_columns": [
+          "C",
+          "D"
+        ]
+      },
+      "46939": {
+        "row": 2498,
+        "explicit_hs2022_reference": false,
+        "empty_note_columns": [
+          "C",
+          "D"
+        ]
+      },
       "46950": {
         "row": 2502,
         "explicit_hs2022_reference": false,
@@ -3500,6 +3548,31 @@
             "csv_line": 5827
           }
         ],
+        "46939": [
+          {
+            "hs_id": "HS:2017:8539.50",
+            "cpc_id": "CPC:2.1:46939",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5274
+          },
+          {
+            "hs_id": "HS:2017:8543.70",
+            "cpc_id": "CPC:2.1:46939",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5303
+          }
+        ],
+        "46541": [
+          {
+            "hs_id": "HS:2017:8539.90",
+            "cpc_id": "CPC:2.1:46541",
+            "hs_partial": "0",
+            "cpc_partial": "0",
+            "csv_line": 5275
+          }
+        ],
         "46950": [
           {
             "hs_id": "HS:2017:8545.11",
@@ -3567,6 +3640,31 @@
             "hs_partial": "0",
             "cpc_partial": "1",
             "csv_line": 5547
+          }
+        ],
+        "46531": [
+          {
+            "hs_id": "HS:2017:9405.10",
+            "cpc_id": "CPC:2.1:46531",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5727
+          },
+          {
+            "hs_id": "HS:2017:9405.20",
+            "cpc_id": "CPC:2.1:46531",
+            "hs_partial": "0",
+            "cpc_partial": "1",
+            "csv_line": 5728
+          }
+        ],
+        "46532": [
+          {
+            "hs_id": "HS:2017:9405.30",
+            "cpc_id": "CPC:2.1:46532",
+            "hs_partial": "0",
+            "cpc_partial": "0",
+            "csv_line": 5729
           }
         ],
         "46539": [
@@ -4007,43 +4105,43 @@
   },
   "trade_goods": {
     "path": "data/atlas/products/trade-goods-directory.json",
-    "sha256": "1d4d37dceb59984243cbde122e23e09eaaf5cf1181525f82c410c5d3406dd8fb",
+    "sha256": "52453ebb59c46915b7ca92d3b56a95e5984777d9ad9c00420ee03b71bac727be",
     "hierarchy": {
-      "node_count": 22,
-      "unique_codes": 22,
+      "node_count": 23,
+      "unique_codes": 23,
       "duplicate_codes": [],
-      "edge_count": 21,
+      "edge_count": 22,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 1,
         "2": 4,
-        "3": 11,
+        "3": 12,
         "4": 6
       },
       "roots": 1,
-      "leaves": 14,
+      "leaves": 15,
       "definitions": 0,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
     "node_status": {
       "navigation": 8,
-      "reviewed": 9,
+      "reviewed": 10,
       "pending": 5
     },
     "binding_status": {
-      "reviewed": 17,
-      "pending": 12
+      "reviewed": 20,
+      "pending": 14
     },
     "reviewed_relations": {
-      "exact": 10,
-      "source_broader": 5,
+      "exact": 11,
+      "source_broader": 7,
       "excluded": 2
     },
-    "source_nodes": 21,
-    "evidence_records": 34
+    "source_nodes": 24,
+    "evidence_records": 48
   },
   "note_entries": [
     {
@@ -4165,19 +4263,43 @@
       "has_explanatory_text": true,
       "scope_review_status": null,
       "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:46510",
+      "csv_row": 2480,
+      "pdf_page": 252,
+      "has_explanatory_text": false,
+      "scope_review_status": null,
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:46531",
+      "csv_row": 2482,
+      "pdf_page": 253,
+      "has_explanatory_text": false,
+      "scope_review_status": null,
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:46939",
+      "csv_row": 2498,
+      "pdf_page": 254,
+      "has_explanatory_text": false,
+      "scope_review_status": null,
+      "excluded_to": []
     }
   ],
   "reproducibility": {
     "pdftotext": "pdftotext version 26.04.0",
     "parser_sha256": {
-      "cpc_view.html": "ec870e64566f6a54d2d2779c64ed0c73859e4a7dfd935d3bc9b1293573949bf0",
-      "cpc.py": "85b2bf06f3ac068f9385d0c871966cfafbaedad243547583af20acbc85402b34",
-      "cpc_hs.py": "0029d41f83f4c6e0b199846f190dcb6455378a113cc6dae0e98e9d6d0cd056cb",
+      "cpc_view.html": "85d33301cc1074e0d0523e71e9a958433b07e4ea249dc4b43cce46405574898a",
+      "cpc.py": "c16311743b3048d72ea76e9687e631c25b858eeeac702c00a023103eada542c3",
+      "cpc_hs.py": "2fa91e6d53f1f28477db7175803a8ef2470ce755431a64d08a5b9c91103dcea9",
       "cpc_hs_followup.py": "21f4f701cd65a077f7994695129b1620d33d741e4297ebc773b651f8ebec60b4",
       "hs.py": "e351af4ef5538322334e3d7d38857c6e980713bdfb1bdb2e4596e395a48ae9eb",
       "hs_reference.py": "fced54e61263385f5ff7c3968fec0d35cc248e48a3a9de764ab0a722875f63a3",
-      "cpc_lighting.py": "2ae8a231cd757c073f57a1f215bec53aac46560a28367eb3d57aae5614a46e90",
-      "trade_goods.py": "d09e3108d54d0ef95ee6e0a726fd90373182b6cc29396fd71ee080172067b41c"
+      "cpc_lighting.py": "99c9a29e21ef4f6e2c72050caa98a406bfa22a3042e4215778bad623cda9bbd1",
+      "trade_goods.py": "d6d238c717dcf45227606df2921725b2b4600eda9c135f5709215b3abba1e242"
     }
   }
 }

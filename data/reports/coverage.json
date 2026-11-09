@@ -165,13 +165,13 @@
     }
   ],
   "unsd_family_discovered_candidates": 149,
-  "planned_resources": 77,
-  "pinned_resources": 75,
+  "planned_resources": 80,
+  "pinned_resources": 78,
   "sources_with_local_files": 12,
   "parsed_resources": 8,
   "resource_status": {
     "parsed": 8,
-    "format_checked_only": 67,
+    "format_checked_only": 70,
     "blocked_rights": 2
   },
   "economic_activity_research": {
@@ -2365,6 +2365,39 @@
       "sha256": "04548d7714823c73a25e8fffc3bb5839171a361495bf8b11b25f61a764e5af95",
       "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46533-20261109/04548d7714823c73a25e8fffc3bb5839171a361495bf8b11b25f61a764e5af95/cpc3-detail-46533-20261109.html",
       "bytes": 38335,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "cpc3-detail-46531-20261109",
+      "source_id": "UN_CPC",
+      "edition": "3.0",
+      "role": "publisher_code_detail",
+      "sha256": "edfacab70dc86483d00746b11c47124320d44e14f2d0a7d98853cd02035a75cc",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46531-20261109/edfacab70dc86483d00746b11c47124320d44e14f2d0a7d98853cd02035a75cc/cpc3-detail-46531-20261109.html",
+      "bytes": 38514,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "cpc3-detail-46939-20261109",
+      "source_id": "UN_CPC",
+      "edition": "3.0",
+      "role": "publisher_code_detail",
+      "sha256": "ede5456f23387a3334be84e429e62bdff10e4c9dae91a49bec85205d3fdd0d95",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46939-20261109/ede5456f23387a3334be84e429e62bdff10e4c9dae91a49bec85205d3fdd0d95/cpc3-detail-46939-20261109.html",
+      "bytes": 38635,
+      "status": "format_checked_only",
+      "note": "No semantic adapter; no node counts or edition confirmation inferred."
+    },
+    {
+      "resource_id": "cpc3-detail-46510-20261109",
+      "source_id": "UN_CPC",
+      "edition": "3.0",
+      "role": "publisher_code_detail",
+      "sha256": "bb842197c124a0b81faee9a0e94811508a6e8e079965adb1ad2e8957916550eb",
+      "path": "data/local/raw/UN_CPC/3.0/cpc3-detail-46510-20261109/bb842197c124a0b81faee9a0e94811508a6e8e079965adb1ad2e8957916550eb/cpc3-detail-46510-20261109.html",
+      "bytes": 38207,
       "status": "format_checked_only",
       "note": "No semantic adapter; no node counts or edition confirmation inferred."
     },

@@ -146,9 +146,10 @@
       "scope": "该组扣除 LED 专用灯具后的范围。上级分组排除公共开放场所或道路照明灯具。",
       "status": "reviewed",
       "binding_ids": [
-        "urn:atlas:mapping:c92bdc39-c9f9-52e2-9191-011771addf63"
+        "urn:atlas:mapping:c92bdc39-c9f9-52e2-9191-011771addf63",
+        "urn:atlas:mapping:4726a495-1621-5694-a113-8c63d95a54f3"
       ],
-      "cpc_scope_status": "not_reviewed"
+      "cpc_scope_status": "pending"
     },
     {
       "id": "urn:atlas:concept:da655577-b54e-5fca-93b0-8e89d71ed303",
@@ -174,9 +175,10 @@
       "scope": "该组扣除 LED 专用灯具后的范围。",
       "status": "reviewed",
       "binding_ids": [
-        "urn:atlas:mapping:eba5f710-756b-5c6e-88e5-285e0f9f6e29"
+        "urn:atlas:mapping:eba5f710-756b-5c6e-88e5-285e0f9f6e29",
+        "urn:atlas:mapping:9c81a323-a51e-5cc3-8734-7d2fe12de7ea"
       ],
-      "cpc_scope_status": "not_reviewed"
+      "cpc_scope_status": "pending"
     },
     {
       "id": "urn:atlas:concept:098b3467-6fb9-5096-be3f-1ffa3c5462ff",
@@ -232,9 +234,25 @@
       "scope": "由 LED 和电路等构成的光源模块。按 HS 章注，模块没有便于在灯具中装卸并建立机械和电气接触的灯头。",
       "status": "reviewed",
       "binding_ids": [
-        "urn:atlas:mapping:b856bf71-4dba-5590-91df-07553f092198"
+        "urn:atlas:mapping:b856bf71-4dba-5590-91df-07553f092198",
+        "urn:atlas:mapping:c7d1325f-cab3-5ed1-98a3-2408e307be21"
       ],
-      "cpc_scope_status": "not_reviewed"
+      "cpc_scope_status": "pending"
+    },
+    {
+      "id": "urn:atlas:concept:bed62067-a155-5449-93e3-3fe30c5724d2",
+      "code": "led-light-source-lamps",
+      "label": "带灯头的 LED 光源灯",
+      "parents": [
+        "lighting"
+      ],
+      "scope": "由一个或多个 LED 模块等构成，带有可在灯具中方便装卸并建立机械和电气接触的灯头。",
+      "status": "reviewed",
+      "binding_ids": [
+        "urn:atlas:mapping:0b79a41e-1fcb-505d-9123-895b23f8c015",
+        "urn:atlas:mapping:3f3c814c-7423-57f7-9e85-2c74b15462ea"
+      ],
+      "cpc_scope_status": "pending"
     },
     {
       "id": "urn:atlas:concept:60a52f22-c9f2-5207-b07c-d92da75b1c44",
@@ -395,6 +413,24 @@
       ],
       "source_clause_id": null
     },
+    "urn:atlas:mapping:4726a495-1621-5694-a113-8c63d95a54f3": {
+      "id": "urn:atlas:mapping:4726a495-1621-5694-a113-8c63d95a54f3",
+      "concept_id": "urn:atlas:concept:2cbdfd1c-6570-5605-ae36-81a88a161f44",
+      "source_id": "CPC:3.0:46531",
+      "status": "reviewed",
+      "relation": "source_broader",
+      "reason": "CPC 标题明列天花板或墙壁电灯具，且同样排除公共开放场所或道路照明。HS 仅取该组的非 LED 专用残余项。",
+      "evidence_ids": [
+        "wco-ceiling-wall-lights",
+        "cpc-46531-workbook-title",
+        "cpc-46531-pdf",
+        "cpc-46531-online",
+        "unsd-cpc3-correspondence"
+      ],
+      "source_clause_id": null,
+      "basis": "current_title_scope",
+      "allocation_status": "pending"
+    },
     "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318": {
       "id": "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318",
       "concept_id": "urn:atlas:concept:da655577-b54e-5fca-93b0-8e89d71ed303",
@@ -431,6 +467,24 @@
         "wco-table-floor-lights"
       ],
       "source_clause_id": null
+    },
+    "urn:atlas:mapping:9c81a323-a51e-5cc3-8734-7d2fe12de7ea": {
+      "id": "urn:atlas:mapping:9c81a323-a51e-5cc3-8734-7d2fe12de7ea",
+      "concept_id": "urn:atlas:concept:cad72f3a-c8b8-57b0-a1db-a1b30e1f43fe",
+      "source_id": "CPC:3.0:46531",
+      "status": "reviewed",
+      "relation": "source_broader",
+      "reason": "CPC 标题明列电气台灯、书桌灯、床头灯和落地灯，未限定光源设计。HS 仅取该组的非 LED 专用残余项。",
+      "evidence_ids": [
+        "wco-table-floor-lights",
+        "cpc-46531-workbook-title",
+        "cpc-46531-pdf",
+        "cpc-46531-online",
+        "unsd-cpc3-correspondence"
+      ],
+      "source_clause_id": null,
+      "basis": "current_title_scope",
+      "allocation_status": "pending"
     },
     "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db": {
       "id": "urn:atlas:mapping:2ba3bfd3-87f7-5c57-a08c-477edc1ed0db",
@@ -559,6 +613,63 @@
         "wco-led-source-note"
       ],
       "source_clause_id": null
+    },
+    "urn:atlas:mapping:c7d1325f-cab3-5ed1-98a3-2408e307be21": {
+      "id": "urn:atlas:mapping:c7d1325f-cab3-5ed1-98a3-2408e307be21",
+      "concept_id": "urn:atlas:concept:cc809a69-8125-59af-83d7-5716ef690cad",
+      "source_id": "CPC:3.0:46939",
+      "status": "pending",
+      "relation": null,
+      "reason": "旧 8543.70 的一部分转入 LED 模块，旧表将该码连至 CPC 2.1 的 46939。其余旧码来源不同，现行 46939 只作部分范围候选。46510 标题列的是灯丝灯、放电灯及弧光灯。",
+      "evidence_ids": [
+        "wco-led-modules",
+        "wco-led-source-note",
+        "cpc-46939-workbook-title",
+        "cpc-46939-pdf",
+        "cpc-46939-online",
+        "unsd-cpc3-correspondence",
+        "cpc-46510-workbook-title",
+        "cpc-46510-pdf",
+        "cpc-46510-online"
+      ],
+      "source_clause_id": null,
+      "basis": "historical_candidate",
+      "allocation_status": "pending"
+    },
+    "urn:atlas:mapping:0b79a41e-1fcb-505d-9123-895b23f8c015": {
+      "id": "urn:atlas:mapping:0b79a41e-1fcb-505d-9123-895b23f8c015",
+      "concept_id": "urn:atlas:concept:bed62067-a155-5449-93e3-3fe30c5724d2",
+      "source_id": "HS:2022:8539.52",
+      "status": "reviewed",
+      "relation": "exact",
+      "reason": "Atlas 样本范围取自该 WCO 子目及上级分组。",
+      "evidence_ids": [
+        "wco-led-modules",
+        "wco-led-source-note"
+      ],
+      "source_clause_id": null
+    },
+    "urn:atlas:mapping:3f3c814c-7423-57f7-9e85-2c74b15462ea": {
+      "id": "urn:atlas:mapping:3f3c814c-7423-57f7-9e85-2c74b15462ea",
+      "concept_id": "urn:atlas:concept:bed62067-a155-5449-93e3-3fe30c5724d2",
+      "source_id": "CPC:3.0:46939",
+      "status": "pending",
+      "relation": null,
+      "reason": "WCO 两表将旧 LED 灯 8539.50 对应到 8539.52，UNSD 旧表将前者连到 CPC 2.1 的 46939。现行同码标题是其他电气设备，未点名 LED 灯。46510 标题列的是灯丝灯、放电灯及弧光灯。",
+      "evidence_ids": [
+        "wco-led-modules",
+        "wco-led-source-note",
+        "cpc-46939-workbook-title",
+        "cpc-46939-pdf",
+        "cpc-46939-online",
+        "unsd-cpc3-correspondence",
+        "cpc-46510-workbook-title",
+        "cpc-46510-pdf",
+        "cpc-46510-online"
+      ],
+      "source_clause_id": null,
+      "basis": "historical_candidate",
+      "allocation_status": "pending"
     },
     "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66": {
       "id": "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66",
@@ -709,6 +820,10 @@
     "HS:2022:9405.19": [
       "urn:atlas:mapping:c92bdc39-c9f9-52e2-9191-011771addf63"
     ],
+    "CPC:3.0:46531": [
+      "urn:atlas:mapping:4726a495-1621-5694-a113-8c63d95a54f3",
+      "urn:atlas:mapping:9c81a323-a51e-5cc3-8734-7d2fe12de7ea"
+    ],
     "HS:2022:9405.21": [
       "urn:atlas:mapping:e7dfb404-a0cc-57c6-b6af-10f5f686d318"
     ],
@@ -731,6 +846,13 @@
     ],
     "HS:2022:8539.51": [
       "urn:atlas:mapping:b856bf71-4dba-5590-91df-07553f092198"
+    ],
+    "CPC:3.0:46939": [
+      "urn:atlas:mapping:c7d1325f-cab3-5ed1-98a3-2408e307be21",
+      "urn:atlas:mapping:3f3c814c-7423-57f7-9e85-2c74b15462ea"
+    ],
+    "HS:2022:8539.52": [
+      "urn:atlas:mapping:0b79a41e-1fcb-505d-9123-895b23f8c015"
     ],
     "HS:2022:0307.52": [
       "urn:atlas:mapping:b2ab886d-1614-5179-a583-9ac53cc5cc66"
@@ -881,6 +1003,308 @@
         "cpc_partial": "0",
         "csv_line": 5730,
         "evidence_id": "unsd-hs2017-cpc21-lighting"
+      }
+    },
+    "allocation_reviews": {
+      "HS:2022:9405.19": {
+        "cpc_id": "CPC:3.0:46531",
+        "relation": "source_broader",
+        "basis": "current_title_scope",
+        "allocation_status": "pending",
+        "finding": "CPC 标题明列天花板或墙壁电灯具，且同样排除公共开放场所或道路照明。HS 仅取该组的非 LED 专用残余项。",
+        "evidence_ids": [
+          "cpc-46531-workbook-title",
+          "cpc-46531-pdf",
+          "cpc-46531-online",
+          "unsd-cpc3-correspondence"
+        ],
+        "history": [
+          {
+            "id": "HS:2017:9405.10:WCO:HS:2022:9405.19",
+            "hs_2017_id": "HS:2017:9405.10",
+            "table_i": {
+              "hs_2017": "ex9405.10",
+              "hs_2022": "9405.19",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p33-lighting",
+              "line": 8
+            },
+            "table_ii": {
+              "hs_2017": "9405.10",
+              "hs_2022": "9405.19",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p23-lighting",
+              "line": 32,
+              "source_line": 30
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:9405.10",
+                "cpc_id": "CPC:2.1:46531",
+                "hs_partial": "0",
+                "cpc_partial": "1",
+                "csv_line": 5727
+              }
+            ]
+          }
+        ]
+      },
+      "HS:2022:9405.29": {
+        "cpc_id": "CPC:3.0:46531",
+        "relation": "source_broader",
+        "basis": "current_title_scope",
+        "allocation_status": "pending",
+        "finding": "CPC 标题明列电气台灯、书桌灯、床头灯和落地灯，未限定光源设计。HS 仅取该组的非 LED 专用残余项。",
+        "evidence_ids": [
+          "cpc-46531-workbook-title",
+          "cpc-46531-pdf",
+          "cpc-46531-online",
+          "unsd-cpc3-correspondence"
+        ],
+        "history": [
+          {
+            "id": "HS:2017:9405.20:WCO:HS:2022:9405.29",
+            "hs_2017_id": "HS:2017:9405.20",
+            "table_i": {
+              "hs_2017": "ex9405.20",
+              "hs_2022": "9405.29",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p33-lighting",
+              "line": 12
+            },
+            "table_ii": {
+              "hs_2017": "9405.20",
+              "hs_2022": "9405.29",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p23-lighting",
+              "line": 36,
+              "source_line": 34
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:9405.20",
+                "cpc_id": "CPC:2.1:46531",
+                "hs_partial": "0",
+                "cpc_partial": "1",
+                "csv_line": 5728
+              }
+            ]
+          }
+        ]
+      },
+      "HS:2022:8539.51": {
+        "cpc_id": "CPC:3.0:46939",
+        "relation": null,
+        "basis": "historical_candidate",
+        "allocation_status": "pending",
+        "finding": "旧 8543.70 的一部分转入 LED 模块，旧表将该码连至 CPC 2.1 的 46939。其余旧码来源不同，现行 46939 只作部分范围候选。46510 标题列的是灯丝灯、放电灯及弧光灯。",
+        "evidence_ids": [
+          "cpc-46939-workbook-title",
+          "cpc-46939-pdf",
+          "cpc-46939-online",
+          "unsd-cpc3-correspondence",
+          "cpc-46510-workbook-title",
+          "cpc-46510-pdf",
+          "cpc-46510-online"
+        ],
+        "history": [
+          {
+            "id": "HS:2017:8539.90:WCO:HS:2022:8539.51",
+            "hs_2017_id": "HS:2017:8539.90",
+            "table_i": {
+              "hs_2017": "ex8539.90",
+              "hs_2022": "8539.51",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p27-lighting",
+              "line": 41
+            },
+            "table_ii": {
+              "hs_2017": "8539.90",
+              "hs_2022": "ex8539.51",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p20-lighting",
+              "line": 8,
+              "source_line": 8
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:8539.90",
+                "cpc_id": "CPC:2.1:46541",
+                "hs_partial": "0",
+                "cpc_partial": "0",
+                "csv_line": 5275
+              }
+            ]
+          },
+          {
+            "id": "HS:2017:8543.70:WCO:HS:2022:8539.51",
+            "hs_2017_id": "HS:2017:8543.70",
+            "table_i": {
+              "hs_2017": "ex8543.70",
+              "hs_2022": "8539.51",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p27-lighting",
+              "line": 42
+            },
+            "table_ii": {
+              "hs_2017": "8543.70",
+              "hs_2022": "ex8539.51",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p20-lighting",
+              "line": 26,
+              "source_line": 26
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:8543.70",
+                "cpc_id": "CPC:2.1:46939",
+                "hs_partial": "0",
+                "cpc_partial": "1",
+                "csv_line": 5303
+              }
+            ]
+          },
+          {
+            "id": "HS:2017:9405.10:WCO:HS:2022:8539.51",
+            "hs_2017_id": "HS:2017:9405.10",
+            "table_i": {
+              "hs_2017": "ex9405.10",
+              "hs_2022": "8539.51",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p27-lighting",
+              "line": 43
+            },
+            "table_ii": {
+              "hs_2017": "9405.10",
+              "hs_2022": "ex8539.51",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p23-lighting",
+              "line": 30,
+              "source_line": 30
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:9405.10",
+                "cpc_id": "CPC:2.1:46531",
+                "hs_partial": "0",
+                "cpc_partial": "1",
+                "csv_line": 5727
+              }
+            ]
+          },
+          {
+            "id": "HS:2017:9405.20:WCO:HS:2022:8539.51",
+            "hs_2017_id": "HS:2017:9405.20",
+            "table_i": {
+              "hs_2017": "ex9405.20",
+              "hs_2022": "8539.51",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p27-lighting",
+              "line": 44
+            },
+            "table_ii": {
+              "hs_2017": "9405.20",
+              "hs_2022": "ex8539.51",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p23-lighting",
+              "line": 34,
+              "source_line": 34
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:9405.20",
+                "cpc_id": "CPC:2.1:46531",
+                "hs_partial": "0",
+                "cpc_partial": "1",
+                "csv_line": 5728
+              }
+            ]
+          },
+          {
+            "id": "HS:2017:9405.30:WCO:HS:2022:8539.51",
+            "hs_2017_id": "HS:2017:9405.30",
+            "table_i": {
+              "hs_2017": "ex9405.30",
+              "hs_2022": "8539.51",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p27-lighting",
+              "line": 45
+            },
+            "table_ii": {
+              "hs_2017": "9405.30",
+              "hs_2022": "ex8539.51",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p23-lighting",
+              "line": 38,
+              "source_line": 38
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:9405.30",
+                "cpc_id": "CPC:2.1:46532",
+                "hs_partial": "0",
+                "cpc_partial": "0",
+                "csv_line": 5729
+              }
+            ]
+          },
+          {
+            "id": "HS:2017:9405.40:WCO:HS:2022:8539.51",
+            "hs_2017_id": "HS:2017:9405.40",
+            "table_i": {
+              "hs_2017": "ex9405.40",
+              "hs_2022": "8539.51",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p27-lighting",
+              "line": 46
+            },
+            "table_ii": {
+              "hs_2017": "9405.40",
+              "hs_2022": "ex8539.51",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p23-lighting",
+              "line": 42,
+              "source_line": 42
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:9405.40",
+                "cpc_id": "CPC:2.1:46539",
+                "hs_partial": "0",
+                "cpc_partial": "0",
+                "csv_line": 5730
+              }
+            ]
+          }
+        ]
+      },
+      "HS:2022:8539.52": {
+        "cpc_id": "CPC:3.0:46939",
+        "relation": null,
+        "basis": "historical_candidate",
+        "allocation_status": "pending",
+        "finding": "WCO 两表将旧 LED 灯 8539.50 对应到 8539.52，UNSD 旧表将前者连到 CPC 2.1 的 46939。现行同码标题是其他电气设备，未点名 LED 灯。46510 标题列的是灯丝灯、放电灯及弧光灯。",
+        "evidence_ids": [
+          "cpc-46939-workbook-title",
+          "cpc-46939-pdf",
+          "cpc-46939-online",
+          "unsd-cpc3-correspondence",
+          "cpc-46510-workbook-title",
+          "cpc-46510-pdf",
+          "cpc-46510-online"
+        ],
+        "history": [
+          {
+            "id": "HS:2017:8539.50:WCO:HS:2022:8539.52",
+            "hs_2017_id": "HS:2017:8539.50",
+            "table_i": {
+              "hs_2017": "8539.50",
+              "hs_2022": "8539.52",
+              "evidence_id": "hs2022-to-hs2017-wco-table-i-p27-lighting",
+              "line": 48
+            },
+            "table_ii": {
+              "hs_2017": "8539.50",
+              "hs_2022": "8539.52",
+              "evidence_id": "hs2017-to-hs2022-wco-table-ii-p20-lighting",
+              "line": 5,
+              "source_line": 5
+            },
+            "historical_cpc21": [
+              {
+                "hs_id": "HS:2017:8539.50",
+                "cpc_id": "CPC:2.1:46939",
+                "hs_partial": "0",
+                "cpc_partial": "1",
+                "csv_line": 5274
+              }
+            ]
+          }
+        ]
       }
     }
   },
@@ -1045,6 +1469,154 @@
       "publication_date": null,
       "element_id": "PrintDivID",
       "label": "打开 UNSD 在线条目 46539 快照"
+    },
+    "cpc-46510-workbook-title": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "column": "B",
+      "row": 2480
+    },
+    "cpc-46510-pdf": {
+      "resource_id": "cpc3-notes-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+      "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+      "publication_date": "2025-06-30",
+      "pdf_page": 252,
+      "label": "打开 CPC 3.0 说明 PDF"
+    },
+    "cpc-46510-online": {
+      "resource_id": "cpc3-detail-46510-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46510",
+      "sha256": "bb842197c124a0b81faee9a0e94811508a6e8e079965adb1ad2e8957916550eb",
+      "publication_date": null,
+      "element_id": "PrintDivID",
+      "label": "打开 UNSD 在线条目 46510 快照"
+    },
+    "cpc-46531-workbook-title": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "column": "B",
+      "row": 2482
+    },
+    "cpc-46531-pdf": {
+      "resource_id": "cpc3-notes-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+      "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+      "publication_date": "2025-06-30",
+      "pdf_page": 253,
+      "label": "打开 CPC 3.0 说明 PDF"
+    },
+    "cpc-46531-online": {
+      "resource_id": "cpc3-detail-46531-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46531",
+      "sha256": "edfacab70dc86483d00746b11c47124320d44e14f2d0a7d98853cd02035a75cc",
+      "publication_date": null,
+      "element_id": "PrintDivID",
+      "label": "打开 UNSD 在线条目 46531 快照"
+    },
+    "cpc-46939-workbook-title": {
+      "resource_id": "cpc3-notes-xlsx-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.xlsx",
+      "sha256": "fbfbcdcb40d2cb99edc31cb97df5349d78095c19992fac3f863c65436d4fc97b",
+      "publication_date": "2025-06-30",
+      "sheet": "CPC3",
+      "column": "B",
+      "row": 2498
+    },
+    "cpc-46939-pdf": {
+      "resource_id": "cpc3-notes-20250630",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Download/In%20Text/CPC_Ver_3.0_Exp_Notes_30Jun2025.pdf",
+      "sha256": "c515e7be1bb4ff6cd4c40d4d5e7d2f44d6b9a7fc9330efa133bf49c1e5c2b4e1",
+      "publication_date": "2025-06-30",
+      "pdf_page": 254,
+      "label": "打开 CPC 3.0 说明 PDF"
+    },
+    "cpc-46939-online": {
+      "resource_id": "cpc3-detail-46939-20261109",
+      "edition": "3.0",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/Structure/Detail/EN/2100/46939",
+      "sha256": "ede5456f23387a3334be84e429e62bdff10e4c9dae91a49bec85205d3fdd0d95",
+      "publication_date": null,
+      "element_id": "PrintDivID",
+      "label": "打开 UNSD 在线条目 46939 快照"
+    },
+    "hs2022-to-hs2017-wco-table-i-p27-lighting": {
+      "resource_id": "hs2022-to-hs2017-wco-table-i",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-i_en.pdf?la=en",
+      "sha256": "e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361",
+      "publication_date": null,
+      "pdf_page": 27,
+      "lines": [
+        41,
+        48
+      ],
+      "text_sha256": "1a6f4fd6b7857bdb45bd98fd15ccc2fd241857df81d9268ea492d7f89e9e79b3",
+      "label": "打开 WCO 表 I"
+    },
+    "hs2022-to-hs2017-wco-table-i-p33-lighting": {
+      "resource_id": "hs2022-to-hs2017-wco-table-i",
+      "edition": "2022",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-i_en.pdf?la=en",
+      "sha256": "e6aa91163b993bee6d7bf77c2a5e01914c6a9794829f9164491442ec2b1c1361",
+      "publication_date": null,
+      "pdf_page": 33,
+      "lines": [
+        6,
+        12
+      ],
+      "text_sha256": "7d2bdbf480c14ea32830f15fd0ea75b767868a9eddc32455d2b87dfdf3a5c9d0",
+      "label": "打开 WCO 表 I"
+    },
+    "hs2017-to-hs2022-wco-table-ii-p20-lighting": {
+      "resource_id": "hs2017-to-hs2022-wco-table-ii",
+      "edition": "2017",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-ii_en.pdf?la=en",
+      "sha256": "2ca3c6fdd0e18f274c5458cc2f73fc8dc47ebe2bac4c821afdb179d1c848e1bc",
+      "publication_date": null,
+      "pdf_page": 20,
+      "lines": [
+        5,
+        26
+      ],
+      "text_sha256": "79a7cd240057f94e0a8947d0f47833d3a1ed9ca00339b605bb21468f949121cf",
+      "label": "打开 WCO 表 II"
+    },
+    "hs2017-to-hs2022-wco-table-ii-p23-lighting": {
+      "resource_id": "hs2017-to-hs2022-wco-table-ii",
+      "edition": "2017",
+      "url": "https://www.wcoomd.org/-/media/wco/public/global/pdf/topics/nomenclature/instruments-and-tools/hs-nomenclature-2022/table-ii_en.pdf?la=en",
+      "sha256": "2ca3c6fdd0e18f274c5458cc2f73fc8dc47ebe2bac4c821afdb179d1c848e1bc",
+      "publication_date": null,
+      "pdf_page": 23,
+      "lines": [
+        30,
+        42
+      ],
+      "text_sha256": "ac735c3e5763058436b992ab2514a55d61c179cc514d976a60f5f0166c7a8425",
+      "label": "打开 WCO 表 II"
+    },
+    "unsd-lighting-historical-csv": {
+      "resource_id": "cpc21-hs2017-unsd-correspondence",
+      "edition": "2.1",
+      "url": "https://unstats.un.org/unsd/classifications/Econ/tables/CPC/CPCv21_HS2017/CPC21-HS2017.csv",
+      "sha256": "a8a4e088e637fd253f6c329f98c7a2f288a23ac2fee79d6529f238c0569f3c5c",
+      "publication_date": null,
+      "label": "下载 UNSD 历史对应 CSV"
     },
     "wco-ceiling-wall-lights": {
       "resource_id": "hs2022-chapter94",
@@ -1338,40 +1910,40 @@
   },
   "summary": {
     "hierarchy": {
-      "node_count": 22,
-      "unique_codes": 22,
+      "node_count": 23,
+      "unique_codes": 23,
       "duplicate_codes": [],
-      "edge_count": 21,
+      "edge_count": 22,
       "orphan_parents": [],
       "self_links": [],
       "cycles": [],
       "levels": {
         "1": 1,
         "2": 4,
-        "3": 11,
+        "3": 12,
         "4": 6
       },
       "roots": 1,
-      "leaves": 14,
+      "leaves": 15,
       "definitions": 0,
       "deprecated_or_alias_status": "not_supplied_by_these_adapters",
       "polyhierarchy_nodes": 0
     },
     "node_status": {
       "navigation": 8,
-      "reviewed": 9,
+      "reviewed": 10,
       "pending": 5
     },
     "binding_status": {
-      "reviewed": 17,
-      "pending": 12
+      "reviewed": 20,
+      "pending": 14
     },
     "reviewed_relations": {
-      "exact": 10,
-      "source_broader": 5,
+      "exact": 11,
+      "source_broader": 7,
       "excluded": 2
     },
-    "source_nodes": 21,
-    "evidence_records": 34
+    "source_nodes": 24,
+    "evidence_records": 48
   }
 }

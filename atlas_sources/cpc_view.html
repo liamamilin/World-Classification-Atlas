@@ -125,12 +125,15 @@ function download(parent, evidence, label) {
 }
 const goodsRelations = {exact: '已审 · 范围等价', source_broader: '已审 · 来源范围更宽', excluded: '已审 · 排除'};
 function goodsRelation(binding) {
+  if (binding.basis === 'current_title_scope') return '已审 · CPC 标题范围较宽 · 归属待核';
+  if (binding.basis === 'historical_candidate') return '待核 · 历史线索候选';
   return goodsRelations[binding.relation] || '待核 · 范围证据';
 }
 function renderGoodsEvidence(out, evidence) {
   if (evidence.sheet) {
-    download(out, evidence, '下载 CPC 3.0 工作簿 · ' + evidence.sheet + '!' + evidence.column +
-      evidence.row + ' · 单元格内第 ' + evidence.line + ' 行');
+    const address = evidence.sheet + '!' + evidence.column + evidence.row;
+    const line = evidence.line ? ' · 单元格内第 ' + evidence.line + ' 行' : ' · 标题';
+    download(out, evidence, '下载 CPC 3.0 工作簿 · ' + address + line);
   } else if (evidence.csv_row) {
     download(out, evidence, '下载 CPC 3.0 结构 CSV · 第 ' + evidence.csv_row + ' 行');
   } else if (evidence.pdf_page) {
@@ -146,8 +149,8 @@ function renderGoods(out, node) {
   const states = {navigation: 'Atlas 导航', reviewed: '已审商品范围', pending: '待核范围'};
   make('p', states[node.status], out).id = 'atlas-node-status';
   make('p', node.scope, out);
-  if (node.cpc_scope_status === 'not_reviewed') {
-    make('p', '已审状态适用于 HS 2022 商品范围。现行 CPC 对应尚未审定。', out);
+  if (node.cpc_scope_status === 'pending') {
+    make('p', 'HS 2022 商品范围已审。现行 CPC 对应尚未审定。', out);
   }
   if (node.code === 'trade-goods') {
     const counts = goods.summary.node_status;
@@ -335,6 +338,39 @@ function renderLightingHistory(out) {
   const evidence = goods.evidence[legacy.evidence_id];
   download(out, evidence, evidence.label).id = 'lighting-legacy-csv';
 }
+function renderLightingAllocation(out, node) {
+  const review = goods.lighting_review.allocation_reviews[node.id];
+  if (!review) return;
+  const scope = make('div', undefined, out);
+  scope.id = 'lighting-allocation';
+  if (node.code === '8539.51' || node.code === '8539.52') {
+    make('h3', 'HS 2022 LED 光源边界', scope);
+    make('p', '第 85 章章注 11 以便于装卸并建立机械和电气接触的灯头区分 LED 灯与模块。', scope);
+    hsLink(scope, hsByCode.get(node.code === '8539.51' ? '8539.52' : '8539.51'));
+    renderGoodsEvidence(scope, goods.evidence['wco-led-source-note']);
+  }
+  const history = make('details', undefined, scope);
+  history.id = 'lighting-allocation-history';
+  make('summary', 'WCO 版本对应及 UNSD 历史 CPC 行', history);
+  const list = make('ul', undefined, history);
+  for (const row of review.history) {
+    const item = make('li', undefined, list);
+    item.dataset.historyId = row.id;
+    make('strong', row.hs_2017_id, item);
+    make('p', '表 I · ' + row.table_i.hs_2022 + ' → ' + row.table_i.hs_2017 +
+      ' · 表 II · ' + row.table_ii.hs_2017 + ' → ' + row.table_ii.hs_2022, item);
+    for (const table of [row.table_i, row.table_ii]) {
+      const evidence = goods.evidence[table.evidence_id];
+      original(item, evidence, evidence.label + ' · 第 ' + evidence.pdf_page + ' 页 · 提取行 ' + table.line);
+    }
+    for (const legacy of row.historical_cpc21) {
+      make('p', legacy.cpc_id + ' · HS partial=' + legacy.hs_partial + ' · CPC partial=' +
+        legacy.cpc_partial + ' · CSV 第 ' + legacy.csv_line + ' 行', item);
+    }
+  }
+  const evidence = goods.evidence['unsd-lighting-historical-csv'];
+  download(history, evidence, evidence.label);
+}
 function renderHs(out, node) {
   const scope = hsReview.hs_scope[node.code];
   make('h2', 'HS 2022 ' + node.code + ' · ' + (scope?.label || node.label), out);
@@ -366,6 +402,7 @@ function renderHs(out, node) {
     nodeLink(lightingHistory.hs_2017, historical, '回查 HS 2017 9405.40');
     make('p', '表 I 原码 ' + split.table_i.hs_2017 + ' · 表 II 原码 ' + split.table_ii.hs_2022, historical);
   }
+  renderLightingAllocation(out, node);
   const correlations = hsReview.carbon_correlations;
   const row = correlations.rows[node.code];
   if (row) {
