@@ -1,4 +1,4 @@
-"""CPC 3.0 source catalogue with two page-verified explanatory notes entries."""
+"""CPC 3.0 source catalogue with selected, page-verified explanatory notes."""
 import json
 import re
 import subprocess
@@ -15,23 +15,55 @@ NOTES = "cpc3-notes-20250630"
 REQUIRED = (STRUCTURE, NOTES)
 LOCAL = "data/local/products/cpc"
 REPORT = "data/reports/cpc-offline.json"
-NOTE_PAGES = {"17400": 63, "22270": 101}
+NOTE_PAGES = {
+    "17400": 63, "22270": 101, "34210": 160,
+    "48160": 264, "27190": 127,
+    "37990": 187, "46950": 254, "89200": 487,
+}
+PENDING_SCOPE = {
+    "48160": "原题排除同时没有机械部件和可更换滤芯的防护口罩。这类口罩的具体 CPC 子类待核。",
+    "27190": "原题列举其他制成纺织品。具体防护口罩在该子类的归属待核。",
+    "37990": "原题涵盖非电气用石墨或其他碳制品。碳纤维织物及具体制品的归属待核。",
+    "46950": "原题列举电气用石墨或其他碳制品。具体电气用碳纤维制品的归属待核。",
+    "89200": "原文列受托塑料件制造服务，工艺可包含碳纤维增强。产出制品的产品子类待核。",
+}
 
 
 def selected_note(asset, node, page):
-    lines = subprocess.check_output([
-        "pdftotext", "-f", str(page), "-l", str(page), "-layout", str(asset["path"]), "-"
-    ]).decode("utf-8").splitlines()
-    heading = re.compile(rf"{node['code']}[ \t]+{re.escape(node['label'])}[ \t]*")
-    matches = [i for i, line in enumerate(lines) if heading.fullmatch(line)]
+    # Read ahead to verify the boundary when the selected heading ends its page.
+    layout = subprocess.check_output([
+        "pdftotext", "-f", str(page), "-l", str(page + 1), "-layout", str(asset["path"]), "-"
+    ]).decode("utf-8")
+    pages = []
+    for physical_page, content in enumerate(layout.split("\f")[:2], page):
+        lines = content.rstrip().splitlines()
+        if not lines or lines[-1].strip() != str(physical_page):
+            raise ValueError(f"CPC physical page {physical_page} footer not found")
+        pages.append(lines[:-1])
+    if len(pages) != 2:
+        raise ValueError(f"CPC physical page {page} and its following page are required")
+    prefix = re.compile(rf"{node['code']}[ \t]+")
+    matches = [i for i, line in enumerate(pages[0]) if prefix.match(line)]
     if len(matches) != 1:
         raise ValueError(f"CPC {node['code']} heading not unique on physical page {page}")
     start = matches[0]
-    end = next((i for i in range(start + 1, len(lines))
-                if re.match(r"\d{1,5}[ \t]+[A-Za-z]", lines[i])), None)
-    if end is None:
+    lines = pages[0] + pages[1]
+    title_end = start + 1
+    title = " ".join(prefix.sub("", lines[start], count=1).split())
+    label = " ".join(node["label"].split())
+    while title != label:
+        if title_end == len(lines) or not lines[title_end].strip() or not label.startswith(title):
+            raise ValueError(f"CPC {node['code']} PDF heading differs from its structure title")
+        continuation = " ".join(lines[title_end].split())
+        title += ("" if title.endswith("-") else " ") + continuation
+        title_end += 1
+    boundary = next((i for i in range(title_end, len(lines))
+                     if re.match(r"\d{1,5}[ \t]+[A-Za-z]", lines[i])), None)
+    if boundary is None:
         raise ValueError(f"CPC {node['code']} note boundary not found on physical page {page}")
-    body = "\n".join(lines[start + 1:end]).strip()
+    if any(line.strip() for line in lines[len(pages[0]):boundary]):
+        raise ValueError(f"CPC {node['code']} note extends past its recorded physical page")
+    body = "\n".join(lines[title_end:boundary]).strip()
     exclusions = body.partition("This subclass does not include:")[2]
     return {"text": body, "excluded_to": re.findall(r"\bcf\. (\d{5})\b", exclusions),
             "evidence": {**asset["evidence"], "pdf_page": page}}
@@ -57,6 +89,7 @@ def build(root, resources):
     inputs = [{**a["evidence"], "path": a["path"].relative_to(root).as_posix()} for a in assets.values()]
     payload = {
         "nodes": nodes, "notes": notes, "levels": quality["levels"],
+        "pending_scope": PENDING_SCOPE,
         "original_files": {rid: Path(relpath(asset["path"], output)).as_posix()
                            for rid, asset in assets.items()},
         "structure_evidence": structure["evidence"],
@@ -72,6 +105,7 @@ def build(root, resources):
         "structure": quality, "view_sha256": sha256(view),
         "note_entries": [{"id": by_code[code]["id"], "csv_row": by_code[code]["source_row"],
                           "pdf_page": note["evidence"]["pdf_page"], "has_explanatory_text": bool(note["text"]),
+                          "scope_review_status": "pending" if code in PENDING_SCOPE else None,
                           "excluded_to": note["excluded_to"]} for code, note in notes.items()],
         "reproducibility": {
             "pdftotext": subprocess.check_output(["pdftotext", "-v"], stderr=subprocess.STDOUT).decode().splitlines()[0],

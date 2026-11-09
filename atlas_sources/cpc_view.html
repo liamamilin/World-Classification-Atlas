@@ -150,6 +150,11 @@ function detail(focus = false) {
   } else {
     make('p', '此条目的说明尚未纳入试点。', out).id = 'note-status';
   }
+  const review = data.pending_scope[node.code];
+  if (review) {
+    make('h3', 'Atlas 范围待核', out);
+    make('p', review, out).id = 'pending-scope';
+  }
   const referencing = Object.entries(data.notes).filter(([, source]) => source.excluded_to.includes(node.code));
   if (referencing.length) {
     make('h3', '试点中排除指向此处的条目', out);

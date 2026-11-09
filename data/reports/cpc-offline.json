@@ -42,13 +42,14 @@
     "deprecated_or_alias_status": "not_supplied_by_these_adapters",
     "polyhierarchy_nodes": 0
   },
-  "view_sha256": "7300154ba982ad394a71fd2bd49343ed561b2959e7eea4804df4b77b9fca3f1c",
+  "view_sha256": "3df7830a1b02d96e6f7ca23b06b5bbd3cb0230299a41856be3d75e87008fb152",
   "note_entries": [
     {
       "id": "CPC:3.0:17400",
       "csv_row": 531,
       "pdf_page": 63,
       "has_explanatory_text": true,
+      "scope_review_status": null,
       "excluded_to": [
         "22270",
         "34210"
@@ -59,14 +60,63 @@
       "csv_row": 781,
       "pdf_page": 101,
       "has_explanatory_text": false,
+      "scope_review_status": null,
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:34210",
+      "csv_row": 1419,
+      "pdf_page": 160,
+      "has_explanatory_text": false,
+      "scope_review_status": null,
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:48160",
+      "csv_row": 2598,
+      "pdf_page": 264,
+      "has_explanatory_text": false,
+      "scope_review_status": "pending",
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:27190",
+      "csv_row": 1058,
+      "pdf_page": 127,
+      "has_explanatory_text": false,
+      "scope_review_status": "pending",
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:37990",
+      "csv_row": 1741,
+      "pdf_page": 187,
+      "has_explanatory_text": false,
+      "scope_review_status": "pending",
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:46950",
+      "csv_row": 2502,
+      "pdf_page": 254,
+      "has_explanatory_text": false,
+      "scope_review_status": "pending",
+      "excluded_to": []
+    },
+    {
+      "id": "CPC:3.0:89200",
+      "csv_row": 4241,
+      "pdf_page": 487,
+      "has_explanatory_text": true,
+      "scope_review_status": "pending",
       "excluded_to": []
     }
   ],
   "reproducibility": {
     "pdftotext": "pdftotext version 26.04.0",
     "parser_sha256": {
-      "cpc_view.html": "25d7f5b4d9337e496fbfbcc071331a241b3e312acbb162ecabbdaf24185cffd5",
-      "cpc.py": "fa71ab7d2cf3997937debefa3b7e9f4b21393d851887c8e3b12e6f1649d69766"
+      "cpc_view.html": "22987f77a818f48558bf4fca9d1dccb18b67325100d9b5404987cc872faee396",
+      "cpc.py": "5976f28a4fca29a211f38a14d0df9b4cdaa5fd226c6e1de6821095351573d625"
     }
   }
 }
